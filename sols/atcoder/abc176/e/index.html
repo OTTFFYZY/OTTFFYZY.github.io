@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  AtCoder Beginner Contest 176 E - Bomber &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="E - Bomber 题目大意 给出一个 $H \times W$ 的矩阵，上面有 $M$ 个点，选出一行一列使得覆盖到的点最多。问最多是多少。 其中 $H,W,M &amp;lt;= 3 \times 10^5$ 简要题解 注意到一定会贪心的选某个数量最多的行和列。设其行列数量分别 $mx$，$my$，则答|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://gohugo.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/solutions">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">AtCoder Beginner Contest 176 E - Bomber</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/solutions' class="muted-link">
+  <span class="Label Label--gray-darker">Solutions</span>
+</a>
+
+
+
+<a href='/ojs/atcoder' class="muted-link">
+  <span class="Label Label--gray-darker">Atcoder</span>
+</a>
+
+
+
+<a href='/tags/%E8%B4%AA%E5%BF%83' class="muted-link">
+  <span class="Label Label--gray">贪心</span>
+</a>
+
+
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2020-09-08. Published at: 2020-09-08.">
+        
+          Published: 2020-09-08 Tue 00:36:26
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="e---bomberhttpsatcoderjpcontestsabc176"><a href="https://atcoder.jp/contests/abc176">E - Bomber</a></h2>
+<h2 id="题目大意">题目大意</h2>
+<p>给出一个 $H \times W$ 的矩阵，上面有 $M$ 个点，选出一行一列使得覆盖到的点最多。问最多是多少。</p>
+<p>其中 $H,W,M &lt;= 3 \times 10^5$</p>
+<h2 id="简要题解">简要题解</h2>
+<p>注意到一定会贪心的选某个数量最多的行和列。设其行列数量分别 $mx$，$my$，则答案只可能是 $mx + my$ 或 $mx + my - 1$。则只需验证所有数量为 $mx$ 的行和所有数量为 $my$ 的列是否有点，这里注意到最多只会有 $M$ 个点，因此如果行和列交点特别多的情况，必然在前 $M+1$ 次 $check$ 会有一次是不存在点的，算法就会终止。</p>
+<p><strong>复杂度</strong></p>
+<p>$T$：$O(H+W+MlogM)$ 这里可以使用 hash 进一步降低复杂度，不过 set 已经足够快了</p>
+<p>$S$：$O(H+W+M)$</p>
+<p><strong>代码实现</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">PII</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">M</span><span class="o">=</span><span class="mf">3e5</span><span class="o">+</span><span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">cntx</span><span class="p">[</span><span class="n">M</span><span class="p">],</span><span class="n">cnty</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+
+<span class="n">set</span><span class="o">&lt;</span><span class="n">PII</span><span class="o">&gt;</span> <span class="n">se</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">h</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">m</span><span class="p">;</span> <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d%d%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">h</span><span class="p">,</span><span class="o">&amp;</span><span class="n">w</span><span class="p">,</span><span class="o">&amp;</span><span class="n">m</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="o">&amp;</span><span class="n">y</span><span class="p">);</span>
+        <span class="n">cntx</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">cnty</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">se</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">mx</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">my</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">h</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="n">mx</span><span class="o">=</span><span class="n">max</span><span class="p">(</span><span class="n">mx</span><span class="p">,</span><span class="n">cntx</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">w</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="n">my</span><span class="o">=</span><span class="n">max</span><span class="p">(</span><span class="n">my</span><span class="p">,</span><span class="n">cnty</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vx</span><span class="p">,</span><span class="n">vy</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">h</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">cntx</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">mx</span><span class="p">)</span> <span class="n">vx</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">w</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">cnty</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">my</span><span class="p">)</span> <span class="n">vy</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="n">f</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">ans</span><span class="o">=</span><span class="n">mx</span><span class="o">+</span><span class="n">my</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="nl">i</span><span class="p">:</span><span class="n">vx</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="nl">j</span><span class="p">:</span><span class="n">vy</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">se</span><span class="p">.</span><span class="n">count</span><span class="p">({</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">}))</span>
+            <span class="p">{</span>
+                <span class="n">ans</span><span class="o">=</span><span class="n">mx</span><span class="o">+</span><span class="n">my</span><span class="p">;</span>
+                <span class="n">f</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">ans</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+  </section>
+
+  <section>
+    
+        <a href="/sols/leetcode/p1575/" class="previous_page">Prev: LeetCode 1575. Count All Possible Routes </a>
+    
+     <br> 
+    
+        <a href="/notes/assemblylanguage/c1/" class="next_page">Next: 《汇编语言》 笔记 第 1 章 基础知识 </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>AtCoder Beginner Contest 176 E - Bomber</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#e---bomberhttpsatcoderjpcontestsabc176"><a href="https://atcoder.jp/contests/abc176">E - Bomber</a></a></li>
+    <li><a href="#题目大意">题目大意</a></li>
+    <li><a href="#简要题解">简要题解</a></li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+      hljs.configure({tabReplace: '    '});
+    </script>
+  </body>
+</html>

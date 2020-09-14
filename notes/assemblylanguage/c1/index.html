@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  《汇编语言》 笔记 第 1 章 基础知识 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="第 1 章 基础知识 1.1 机器语言 CPU 提供机器指令集也就是机器语言。 早期卡片打孔就是使用的机器语言。 机器语言难于书写阅读查错于是产生了汇编语言 1.2 汇编语言的产生 汇编语言的主题是汇编指令。汇编指令采用了更便于人类书写|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://gohugo.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/solutions">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">《汇编语言》 笔记 第 1 章 基础知识</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+<a href='/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80' class="muted-link">
+  <span class="Label Label--gray">汇编语言</span>
+</a>
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2020-09-08. Published at: 2020-09-08.">
+        
+          Published: 2020-09-08 Tue 18:01:38
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="第-1-章-基础知识">第 1 章 基础知识</h2>
+<h2 id="11-机器语言">1.1 机器语言</h2>
+<p>CPU 提供机器指令集也就是机器语言。</p>
+<p>早期卡片打孔就是使用的机器语言。</p>
+<p>机器语言难于书写阅读查错于是产生了汇编语言</p>
+<h2 id="12-汇编语言的产生">1.2 汇编语言的产生</h2>
+<p>汇编语言的主题是汇编指令。汇编指令采用了更便于人类书写记忆的格式。</p>
+<p>汇编指令 -&gt; 编译器 -&gt; 机器码</p>
+<h2 id="13-汇编语言的组成">1.3 汇编语言的组成</h2>
+<ol>
+<li>汇编指令：机器码的助记符，有对应的机器码</li>
+<li>伪指令：没有对应的机器码，由编译器执行，计算机不执行</li>
+<li>其他符号：由编译器识别，没有对应机器码</li>
+</ol>
+<h2 id="14-储存器">1.4 储存器</h2>
+<p>指令和数据在储存器中存放。</p>
+<h2 id="15-指令和数据">1.5 指令和数据</h2>
+<p>内存和磁盘上，指令和数据都是二进制信息，他们只是应用上的区分。</p>
+<h2 id="16-存储单元">1.6 存储单元</h2>
+<p>储存器被分为多个存储单元，从 $0$ 开始标号。</p>
+<p>每个存储单元可以存储 $1 Byte = 8 bit$。</p>
+<h2 id="17-cpu-对存储器的读写">1.7 CPU 对存储器的读写</h2>
+<p>CPU 要读写数据需要：</p>
+<ol>
+<li>存储单元的地址（地址信息）</li>
+<li>器件，读或写的命令（控制信息）</li>
+<li>读或写的数据（数据信息）</li>
+</ol>
+<p>CPU 通过总线与其他芯片链接</p>
+<p>按照逻辑，总线分为 $3$ 类：</p>
+<ol>
+<li>地址总线</li>
+<li>控制总线</li>
+<li>数据总线</li>
+</ol>
+<h2 id="18-地址总线">1.8 地址总线</h2>
+<p>一个 CPU 有 $N$ 根地址线，则可以说 CPU 的地址总线宽度为 $N$，最多可以寻找 $2^N$ 个内存单元。</p>
+<h2 id="19-数据总线">1.9 数据总线</h2>
+<p>数据总线宽度决定了数据的传送速度。</p>
+<h2 id="110-控制总线">1.10 控制总线</h2>
+<p>控制总线是不同控制线的集合。</p>
+<h2 id="113-接口卡">1.13 接口卡</h2>
+<p>CPU 通过控制接口卡，间接控制外部设备。</p>
+<h2 id="114-各类存储器芯片">1.14 各类存储器芯片</h2>
+<p>一台 PC 中有多个存储器芯片，这些芯片从物理链接上看是独立，不同的器件。</p>
+<p>存储器从读写属性上分：随机存储器（RAM） 和只读存储器（ROM）。
+随机存储器可读写但必须带电存储，关机后存储内容丢失。只读存储器只能读取，关机后内容不丢失。</p>
+<p>存储器从功能和链接上分：</p>
+<ol>
+<li>随机存储器主板上的 RAM 和扩展插槽上的 RAM</li>
+<li>装有 BIOS(Basic Input/Output System) 的 ROM</li>
+<li>接口卡上的 RAM 如显卡的显存</li>
+</ol>
+<h2 id="115-内存地址空间">1.15 内存地址空间</h2>
+<p>CPU 操纵上述存储器时，都当做内存对待。CPU 将他们看成一个由若干单元组成的逻辑存储器，这个逻辑存储器就是内存地址空间。
+汇编面对的就是内存地址空间。</p>
+<p>每个物理存储器在逻辑存储器中占有一个地址段，CPU 在这个地址段读写就对应了在相对应的实际物理存储器中读写数据。</p>
+<p>在基于计算机硬件系统编程时，需要知道每类存储器第一个单元的地址和最后一个单元的地址
+。</p>
+
+  </section>
+
+  <section>
+    
+        <a href="/sols/atcoder/abc176/e/" class="previous_page">Prev: AtCoder Beginner Contest 176 E - Bomber </a>
+    
+     <br> 
+    
+        <a href="/sols/luogu/p4588/" class="next_page">Next: P4588 [TJOI2018]数学计算 </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>《汇编语言》 笔记 第 1 章 基础知识</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#第-1-章-基础知识">第 1 章 基础知识</a></li>
+    <li><a href="#11-机器语言">1.1 机器语言</a></li>
+    <li><a href="#12-汇编语言的产生">1.2 汇编语言的产生</a></li>
+    <li><a href="#13-汇编语言的组成">1.3 汇编语言的组成</a></li>
+    <li><a href="#14-储存器">1.4 储存器</a></li>
+    <li><a href="#15-指令和数据">1.5 指令和数据</a></li>
+    <li><a href="#16-存储单元">1.6 存储单元</a></li>
+    <li><a href="#17-cpu-对存储器的读写">1.7 CPU 对存储器的读写</a></li>
+    <li><a href="#18-地址总线">1.8 地址总线</a></li>
+    <li><a href="#19-数据总线">1.9 数据总线</a></li>
+    <li><a href="#110-控制总线">1.10 控制总线</a></li>
+    <li><a href="#113-接口卡">1.13 接口卡</a></li>
+    <li><a href="#114-各类存储器芯片">1.14 各类存储器芯片</a></li>
+    <li><a href="#115-内存地址空间">1.15 内存地址空间</a></li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+      hljs.configure({tabReplace: '    '});
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on OTTFF&#39;s Blog</title>
+    <link>https://gohugo.io/notes/</link>
+    <description>Recent content in Notes on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 10 Sep 2020 19:08:42 -0400</lastBuildDate>
+    
+	<atom:link href="https://gohugo.io/notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>《汇编语言》 笔记  实验 1 查看 CPU 和内存，用机器指令和汇编指令编程</title>
+      <link>https://gohugo.io/notes/assemblylanguage/e1/</link>
+      <pubDate>Thu, 10 Sep 2020 19:08:42 -0400</pubDate>
+      
+      <guid>https://gohugo.io/notes/assemblylanguage/e1/</guid>
+      <description>实验 1 查看 CPU 和内存，用机器指令和汇编指令编程 想在 win10 上玩这个需要自己下载 DOSBox 和 debug.exe。 之后用 DOSBox 运行 debug 即可开始书中的实验。 R 命令：查看、修改寄存器 进入 debug 模式后输入 $r$ 回车后可以查看 CPU 寄存器内容。 输</description>
+    </item>
+    
+    <item>
+      <title>《汇编语言》 笔记 第 1 章 基础知识</title>
+      <link>https://gohugo.io/notes/assemblylanguage/c1/</link>
+      <pubDate>Tue, 08 Sep 2020 18:01:38 -0400</pubDate>
+      
+      <guid>https://gohugo.io/notes/assemblylanguage/c1/</guid>
+      <description>第 1 章 基础知识 1.1 机器语言 CPU 提供机器指令集也就是机器语言。 早期卡片打孔就是使用的机器语言。 机器语言难于书写阅读查错于是产生了汇编语言 1.2 汇编语言的产生 汇编语言的主题是汇编指令。汇编指令采用了更便于人类书写</description>
+    </item>
+    
+    <item>
+      <title>使用 Typora 写 Markdown</title>
+      <link>https://gohugo.io/notes/markdown/</link>
+      <pubDate>Thu, 03 Sep 2020 21:53:13 -0400</pubDate>
+      
+      <guid>https://gohugo.io/notes/markdown/</guid>
+      <description>0 简介 Markdown 与 Typora 什么是 Markdown？ Markdown 是一种轻量级标记语言，可以通过格式标记把普通文本变成带有格式的富文本。 什么是 Typora？ Typora 是使用 Markdown 语言的一个编辑器。与其他 Markdown 编辑器不同的是，Markdown 的效</description>
+    </item>
+    
+  </channel>
+</rss>

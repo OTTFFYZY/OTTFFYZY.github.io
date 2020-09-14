@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  《汇编语言》 笔记  实验 1 查看 CPU 和内存，用机器指令和汇编指令编程 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="实验 1 查看 CPU 和内存，用机器指令和汇编指令编程 想在 win10 上玩这个需要自己下载 DOSBox 和 debug.exe。 之后用 DOSBox 运行 debug 即可开始书中的实验。 R 命令：查看、修改寄存器 进入 debug 模式后输入 $r$ 回车后可以查看 CPU 寄存器内容。 输|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://gohugo.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/solutions">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">《汇编语言》 笔记  实验 1 查看 CPU 和内存，用机器指令和汇编指令编程</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+<a href='/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80' class="muted-link">
+  <span class="Label Label--gray">汇编语言</span>
+</a>
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2020-09-10. Published at: 2020-09-10.">
+        
+          Published: 2020-09-10 Thu 19:08:42
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="实验-1-查看-cpu-和内存用机器指令和汇编指令编程">实验 1 查看 CPU 和内存，用机器指令和汇编指令编程</h2>
+<p>想在 win10 上玩这个需要自己下载 DOSBox 和 debug.exe。</p>
+<p>之后用 DOSBox 运行 debug 即可开始书中的实验。</p>
+<h3 id="r-命令查看修改寄存器">R 命令：查看、修改寄存器</h3>
+<p>进入 debug 模式后输入 $r$ 回车后可以查看 CPU 寄存器内容。</p>
+<p>输入</p>
+<pre><code class="language-dos" data-lang="dos">-r &lt;寄存器名字&gt;
+</code></pre><p>则会出现 &lsquo;:&rsquo; 可以修改对应寄存器的内容</p>
+<h3 id="d-命令查看内存">D 命令：查看内存</h3>
+<p>可以使用如下命令查看某个地址的数据。</p>
+<pre><code class="language-dos" data-lang="dos">-d &lt;段地址&gt;:&lt;偏移地址&gt;
+</code></pre><p>每行左侧是起始地址，中间会显示 $16$ 个单元的内容，右侧为对应每个单元的 ASCII 码。</p>
+<h3 id="e-命令修改内存">E 命令：修改内存</h3>
+<p>可以用如下命令改写对应位置的内存</p>
+<pre><code class="language-dos" data-lang="dos">-e &lt;段地址&gt;:&lt;偏移地址&gt;
+</code></pre><p>命令行将会依次询问从对应地址开始的每一个单元是否修改（不修改按空格否则输入要修改的内容，所有修改结束按回车键）</p>
+<p>也可以使用如下格式</p>
+<pre><code class="language-dos" data-lang="dos">-e &lt;段地址&gt;:&lt;偏移地址&gt; &lt;内容...&gt;
+</code></pre><p>&lt;内容&hellip;&gt; 部分是一些用空格间隔的 $16$ 进制数，&lsquo;&lsquo;包裹的字符，或&quot;&ldquo;包裹的字符串（ 字符和字符串将存储对应的 ACSII 码）</p>
+<h3 id="u-命令查看内存对应的汇编指令">U 命令：查看内存对应的汇编指令</h3>
+<pre><code class="language-dos" data-lang="dos">-u &lt;段地址&gt;:&lt;偏移地址&gt;
+</code></pre><p>此命令的显示分为三个部分。左侧为地址，中间为机器码，右侧为对应的汇编指令。</p>
+<h3 id="t-命令执行-csip-指向的命令">T 命令：执行 CS:IP 指向的命令</h3>
+<h3 id="a-命令修改汇编指令">A 命令：修改汇编指令</h3>
+<pre><code class="language-dos" data-lang="dos">-a &lt;段地址&gt;:&lt;偏移地址&gt;
+</code></pre><p>输入该指令后命令行将会提示从给定地址开始输入汇编指令（某个地址给出后直接输入回车将停止输入）。</p>
+
+  </section>
+
+  <section>
+    
+        <a href="/sols/luogu/p4588/" class="previous_page">Prev: P4588 [TJOI2018]数学计算 </a>
+    
+    
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>《汇编语言》 笔记  实验 1 查看 CPU 和内存，用机器指令和汇编指令编程</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#实验-1-查看-cpu-和内存用机器指令和汇编指令编程">实验 1 查看 CPU 和内存，用机器指令和汇编指令编程</a>
+      <ul>
+        <li><a href="#r-命令查看修改寄存器">R 命令：查看、修改寄存器</a></li>
+        <li><a href="#d-命令查看内存">D 命令：查看内存</a></li>
+        <li><a href="#e-命令修改内存">E 命令：修改内存</a></li>
+        <li><a href="#u-命令查看内存对应的汇编指令">U 命令：查看内存对应的汇编指令</a></li>
+        <li><a href="#t-命令执行-csip-指向的命令">T 命令：执行 CS:IP 指向的命令</a></li>
+        <li><a href="#a-命令修改汇编指令">A 命令：修改汇编指令</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+      hljs.configure({tabReplace: '    '});
+    </script>
+  </body>
+</html>

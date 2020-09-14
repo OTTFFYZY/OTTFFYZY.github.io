@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>线段树 on OTTFF&#39;s Blog</title>
+    <link>https://gohugo.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/</link>
+    <description>Recent content in 线段树 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 09 Sep 2020 01:48:20 -0400</lastBuildDate>
+    
+	<atom:link href="https://gohugo.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>P4588 [TJOI2018]数学计算</title>
+      <link>https://gohugo.io/sols/luogu/p4588/</link>
+      <pubDate>Wed, 09 Sep 2020 01:48:20 -0400</pubDate>
+      
+      <guid>https://gohugo.io/sols/luogu/p4588/</guid>
+      <description>P4588 [TJOI2018]数学计算 题目大意 给定 $x = 1$ 和某个模数 $MO$，有两种操作（共 $Q \le 10^5$ 次） 操作 $1$：把 $x = x*v % MO$ 操作 $2$：取消第 $k$ 次操作（取消的必为操作 $1$，且某个操作 $1$ 只会最多被取消一次） 每</description>
+    </item>
+    
+    <item>
+      <title>AtCoder Beginner Contest 177 F - I hate Shortest Path Problem</title>
+      <link>https://gohugo.io/sols/atcoder/abc177/f/</link>
+      <pubDate>Fri, 04 Sep 2020 02:37:10 -0400</pubDate>
+      
+      <guid>https://gohugo.io/sols/atcoder/abc177/f/</guid>
+      <description>F - I hate Shortest Path Problem 题目大意 给出一个 $(h+1) \times w$ 的二维矩阵，初始位置可以是第 $0$ 行的任意位置。 每一个格只能往右或下方向移动 每一行 $i$ 区间 $L_{i}$ 到 $R_{i}$ 的格子不能向下走，问到达每一行的最小可能步数 简要题解 $dp[i][j]$ 为到达 $(i,j)$ 位置的最小步</description>
+    </item>
+    
+  </channel>
+</rss>

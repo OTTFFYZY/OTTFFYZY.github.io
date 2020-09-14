@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  AtCoder Beginner Contest 177 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="比赛简述 ABC 中比较简单的一场，题目也都比较常规 AtCoder Beginner Contest 177 A - Don&amp;rsquo;t be late 代码实现 #include &amp;lt;bits/stdc&#43;&#43;.h&amp;gt; using namespace std; int main() { int d,t,s; scanf(&amp;#34;%d%d%d&amp;#34;,&amp;amp;d,&amp;amp;t,&amp;amp;s); printf(&amp;#34;%s\n&amp;#34;,t*s&amp;gt;=d ? &amp;#34;Yes&amp;#34; : &amp;#34;No&amp;#34;); return 0; } B - Substring 题目大意 给出两个串 $S$ 和 $T$，问 $S$ 至少替换多少字符可以使 $T$ 是 $S$ 的子串。 Tag: 暴力 简要题解 $S$|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://gohugo.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/solutions">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">AtCoder Beginner Contest 177</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/contests' class="muted-link">
+  <span class="Label Label--gray-darker">Contests</span>
+</a>
+
+
+
+<a href='/ojs/atcoder' class="muted-link">
+  <span class="Label Label--gray-darker">Atcoder</span>
+</a>
+
+
+
+<a href='/tags/%E6%9A%B4%E5%8A%9B' class="muted-link">
+  <span class="Label Label--gray">暴力</span>
+</a>
+
+<a href='/tags/%E5%89%8D%E7%BC%80%E5%92%8C' class="muted-link">
+  <span class="Label Label--gray">前缀和</span>
+</a>
+
+<a href='/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86' class="muted-link">
+  <span class="Label Label--gray">并查集</span>
+</a>
+
+
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2020-09-05. Published at: 2020-09-05.">
+        
+          Published: 2020-09-05 Sat 01:26:32
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="比赛简述">比赛简述</h2>
+<p>ABC 中比较简单的一场，题目也都比较常规</p>
+<p><a href="https://atcoder.jp/contests/abc177">AtCoder Beginner Contest 177</a></p>
+<h2 id="a---dont-be-late">A - Don&rsquo;t be late</h2>
+<p><strong>代码实现</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">d</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">s</span><span class="p">;</span>
+	<span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d%d%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">d</span><span class="p">,</span><span class="o">&amp;</span><span class="n">t</span><span class="p">,</span><span class="o">&amp;</span><span class="n">s</span><span class="p">);</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;%s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">t</span><span class="o">*</span><span class="n">s</span><span class="o">&gt;=</span><span class="n">d</span> <span class="o">?</span> <span class="s">&#34;Yes&#34;</span> <span class="o">:</span> <span class="s">&#34;No&#34;</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="b---substring">B - Substring</h2>
+<p><strong>题目大意</strong></p>
+<p>给出两个串 $S$ 和 $T$，问 $S$ 至少替换多少字符可以使 $T$ 是 $S$ 的子串。</p>
+<p><strong>Tag:</strong> 暴力</p>
+<p><strong>简要题解</strong></p>
+<p>$S$ $T$ 长度都只有 1000，直接枚举 $T$ 的所有匹配位置即可。</p>
+<p><strong>代码实现</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">const</span> <span class="kt">int</span> <span class="n">M</span><span class="o">=</span><span class="mi">1005</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="n">M</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%s%s&#34;</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">t</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">n</span><span class="o">=</span><span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">),</span><span class="n">m</span><span class="o">=</span><span class="n">strlen</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">ans</span><span class="o">=</span><span class="n">m</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">+</span><span class="n">m</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">nans</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">m</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">nans</span><span class="o">+=</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">]</span><span class="o">!=</span><span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+		<span class="n">ans</span><span class="o">=</span><span class="n">min</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span><span class="n">nans</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">ans</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="c---sum-of-product-of-pairs">C - Sum of product of pairs</h2>
+<p><strong>题目大意</strong></p>
+<p>给出 $n$ 长数组 $A$ 求</p>
+<p>求 $ \sum_{i=1}^{n-1} \sum_{j=i+1}^{n} A_{i} A_{j} $ 模 $(10^9 + 7)$</p>
+<p><strong>Tag:</strong> 前缀和</p>
+<p><strong>代码实现</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">const</span> <span class="kt">int</span> <span class="n">M</span><span class="o">=</span><span class="mi">1005</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="n">M</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%s%s&#34;</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">t</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">n</span><span class="o">=</span><span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">),</span><span class="n">m</span><span class="o">=</span><span class="n">strlen</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">ans</span><span class="o">=</span><span class="n">m</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">+</span><span class="n">m</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">nans</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">m</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">nans</span><span class="o">+=</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">]</span><span class="o">!=</span><span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+		<span class="n">ans</span><span class="o">=</span><span class="n">min</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span><span class="n">nans</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">ans</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="d---friends">D - Friends</h2>
+<p><strong>题目大意</strong></p>
+<p>给出 $n$ 个人，$m$ 组朋友关系，朋友关系可传递，问至少分多少组，可以使得每组中的人彼此都不是朋友。</p>
+<p><strong>Tag:</strong> 并查集</p>
+<p><strong>简要题解</strong></p>
+<p>显然可以用并查集维护各个朋友圈子的大小，答案最终为最大的圈子。</p>
+<p><strong>代码实现</strong></p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">const</span> <span class="kt">int</span> <span class="n">M</span><span class="o">=</span><span class="mi">1005</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="n">M</span><span class="p">],</span><span class="n">t</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%s%s&#34;</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">t</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">n</span><span class="o">=</span><span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">),</span><span class="n">m</span><span class="o">=</span><span class="n">strlen</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">ans</span><span class="o">=</span><span class="n">m</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">+</span><span class="n">m</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="kt">int</span> <span class="n">nans</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">m</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+			<span class="n">nans</span><span class="o">+=</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">]</span><span class="o">!=</span><span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+		<span class="n">ans</span><span class="o">=</span><span class="n">min</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span><span class="n">nans</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">ans</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="e---coprime">E - Coprime</h2>
+<p><a href="/sols/atcoder/abc177/e/">详细题解</a></p>
+<h2 id="f---i-hate-shortest-path-problem">F - I hate Shortest Path Problem</h2>
+<p><a href="/sols/atcoder/abc177/f/">详细题解</a></p>
+
+  </section>
+
+  <section>
+    
+        <a href="/sols/atcoder/abc177/f/" class="previous_page">Prev: AtCoder Beginner Contest 177 F - I hate Shortest Path Problem </a>
+    
+     <br> 
+    
+        <a href="/sols/atcoder/abc177/e/" class="next_page">Next: AtCoder Beginner Contest 177 E - Coprime </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>AtCoder Beginner Contest 177</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#比赛简述">比赛简述</a></li>
+    <li><a href="#a---dont-be-late">A - Don&rsquo;t be late</a></li>
+    <li><a href="#b---substring">B - Substring</a></li>
+    <li><a href="#c---sum-of-product-of-pairs">C - Sum of product of pairs</a></li>
+    <li><a href="#d---friends">D - Friends</a></li>
+    <li><a href="#e---coprime">E - Coprime</a></li>
+    <li><a href="#f---i-hate-shortest-path-problem">F - I hate Shortest Path Problem</a></li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+      hljs.configure({tabReplace: '    '});
+    </script>
+  </body>
+</html>

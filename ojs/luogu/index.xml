@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Luogu on OTTFF&#39;s Blog</title>
+    <link>https://gohugo.io/ojs/luogu/</link>
+    <description>Recent content in Luogu on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 09 Sep 2020 01:48:20 -0400</lastBuildDate>
+    
+	<atom:link href="https://gohugo.io/ojs/luogu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>P4588 [TJOI2018]数学计算</title>
+      <link>https://gohugo.io/sols/luogu/p4588/</link>
+      <pubDate>Wed, 09 Sep 2020 01:48:20 -0400</pubDate>
+      
+      <guid>https://gohugo.io/sols/luogu/p4588/</guid>
+      <description>P4588 [TJOI2018]数学计算 题目大意 给定 $x = 1$ 和某个模数 $MO$，有两种操作（共 $Q \le 10^5$ 次） 操作 $1$：把 $x = x*v % MO$ 操作 $2$：取消第 $k$ 次操作（取消的必为操作 $1$，且某个操作 $1$ 只会最多被取消一次） 每</description>
+    </item>
+    
+  </channel>
+</rss>

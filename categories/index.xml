@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on OTTFF&#39;s Blog</title>
+    <link>https://gohugo.io/categories/</link>
+    <description>Recent content in Categories on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 10 Sep 2020 19:08:42 -0400</lastBuildDate>
+    
+	<atom:link href="https://gohugo.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Notes</title>
+      <link>https://gohugo.io/categories/notes/</link>
+      <pubDate>Thu, 10 Sep 2020 19:08:42 -0400</pubDate>
+      
+      <guid>https://gohugo.io/categories/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Solutions</title>
+      <link>https://gohugo.io/categories/solutions/</link>
+      <pubDate>Wed, 09 Sep 2020 01:48:20 -0400</pubDate>
+      
+      <guid>https://gohugo.io/categories/solutions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contests</title>
+      <link>https://gohugo.io/categories/contests/</link>
+      <pubDate>Sat, 05 Sep 2020 01:26:32 -0400</pubDate>
+      
+      <guid>https://gohugo.io/categories/contests/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Others</title>
+      <link>https://gohugo.io/categories/others/</link>
+      <pubDate>Thu, 03 Sep 2020 21:08:19 -0400</pubDate>
+      
+      <guid>https://gohugo.io/categories/others/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

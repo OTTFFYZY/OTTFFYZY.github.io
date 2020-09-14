@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on OTTFF&#39;s Blog</title>
+    <link>https://gohugo.io/series/</link>
+    <description>Recent content in Series on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 10 Sep 2020 19:08:42 -0400</lastBuildDate>
+    
+	<atom:link href="https://gohugo.io/series/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>汇编语言</title>
+      <link>https://gohugo.io/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/</link>
+      <pubDate>Thu, 10 Sep 2020 19:08:42 -0400</pubDate>
+      
+      <guid>https://gohugo.io/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>https://gohugo.io/series/markdown/</link>
+      <pubDate>Thu, 03 Sep 2020 21:53:13 -0400</pubDate>
+      
+      <guid>https://gohugo.io/series/markdown/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
