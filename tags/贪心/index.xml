@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>贪心 on OTTFF&#39;s Blog</title>
-    <link>https://gohugo.io/tags/%E8%B4%AA%E5%BF%83/</link>
+    <link>https://ottffyzy.github.io/tags/%E8%B4%AA%E5%BF%83/</link>
     <description>Recent content in 贪心 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 08 Sep 2020 00:36:26 -0400</lastBuildDate>
     
-	<atom:link href="https://gohugo.io/tags/%E8%B4%AA%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ottffyzy.github.io/tags/%E8%B4%AA%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>AtCoder Beginner Contest 176 E - Bomber</title>
-      <link>https://gohugo.io/sols/atcoder/abc176/e/</link>
+      <link>https://ottffyzy.github.io/sols/atcoder/abc176/e/</link>
       <pubDate>Tue, 08 Sep 2020 00:36:26 -0400</pubDate>
       
-      <guid>https://gohugo.io/sols/atcoder/abc176/e/</guid>
+      <guid>https://ottffyzy.github.io/sols/atcoder/abc176/e/</guid>
       <description>E - Bomber 题目大意 给出一个 $H \times W$ 的矩阵，上面有 $M$ 个点，选出一行一列使得覆盖到的点最多。问最多是多少。 其中 $H,W,M &amp;lt;= 3 \times 10^5$ 简要题解 注意到一定会贪心的选某个数量最多的行和列。设其行列数量分别 $mx$，$my$，则答</description>
     </item>
     

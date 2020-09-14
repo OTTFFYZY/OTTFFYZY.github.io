@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Others on OTTFF&#39;s Blog</title>
-    <link>https://gohugo.io/others/</link>
+    <link>https://ottffyzy.github.io/others/</link>
     <description>Recent content in Others on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Thu, 03 Sep 2020 21:08:19 -0400</lastBuildDate>
     
-	<atom:link href="https://gohugo.io/others/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ottffyzy.github.io/others/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>OTTFF 的新 Blog</title>
-      <link>https://gohugo.io/others/helloworld/</link>
+      <link>https://ottffyzy.github.io/others/helloworld/</link>
       <pubDate>Thu, 03 Sep 2020 21:08:19 -0400</pubDate>
       
-      <guid>https://gohugo.io/others/helloworld/</guid>
+      <guid>https://ottffyzy.github.io/others/helloworld/</guid>
       <description>OTTFF 的新 Blog 很久之前我有一个 xxdn 的 Blog，但是随着自己越来越懒其广告等不重要的信息越来越多，于是弃坑多年。 读到一些大牛自建的博客之后，也萌生了自己搭建一个界面简单干净而又功能强大的 Blog 的想法。 经过研究，大概</description>
     </item>
     

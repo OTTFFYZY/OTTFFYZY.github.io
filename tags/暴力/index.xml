@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>暴力 on OTTFF&#39;s Blog</title>
-    <link>https://gohugo.io/tags/%E6%9A%B4%E5%8A%9B/</link>
+    <link>https://ottffyzy.github.io/tags/%E6%9A%B4%E5%8A%9B/</link>
     <description>Recent content in 暴力 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Sat, 05 Sep 2020 01:26:32 -0400</lastBuildDate>
     
-	<atom:link href="https://gohugo.io/tags/%E6%9A%B4%E5%8A%9B/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ottffyzy.github.io/tags/%E6%9A%B4%E5%8A%9B/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>AtCoder Beginner Contest 177</title>
-      <link>https://gohugo.io/contests/atcoder/abc177/</link>
+      <link>https://ottffyzy.github.io/contests/atcoder/abc177/</link>
       <pubDate>Sat, 05 Sep 2020 01:26:32 -0400</pubDate>
       
-      <guid>https://gohugo.io/contests/atcoder/abc177/</guid>
+      <guid>https://ottffyzy.github.io/contests/atcoder/abc177/</guid>
       <description>比赛简述 ABC 中比较简单的一场，题目也都比较常规 AtCoder Beginner Contest 177 A - Don&amp;rsquo;t be late 代码实现 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; int main() { int d,t,s; scanf(&amp;#34;%d%d%d&amp;#34;,&amp;amp;d,&amp;amp;t,&amp;amp;s); printf(&amp;#34;%s\n&amp;#34;,t*s&amp;gt;=d ? &amp;#34;Yes&amp;#34; : &amp;#34;No&amp;#34;); return 0; } B - Substring 题目大意 给出两个串 $S$ 和 $T$，问 $S$ 至少替换多少字符可以使 $T$ 是 $S$ 的子串。 Tag: 暴力 简要题解 $S$</description>
     </item>
     

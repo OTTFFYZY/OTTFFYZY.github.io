@@ -2,102 +2,111 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2020-09 on OTTFF&#39;s Blog</title>
-    <link>https://gohugo.io/archives/2020-09/</link>
+    <link>https://ottffyzy.github.io/archives/2020-09/</link>
     <description>Recent content in 2020-09 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Thu, 10 Sep 2020 19:08:42 -0400</lastBuildDate>
     
-	<atom:link href="https://gohugo.io/archives/2020-09/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ottffyzy.github.io/archives/2020-09/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>《汇编语言》 笔记  实验 1 查看 CPU 和内存，用机器指令和汇编指令编程</title>
-      <link>https://gohugo.io/notes/assemblylanguage/e1/</link>
+      <link>https://ottffyzy.github.io/notes/assemblylanguage/e1/</link>
       <pubDate>Thu, 10 Sep 2020 19:08:42 -0400</pubDate>
       
-      <guid>https://gohugo.io/notes/assemblylanguage/e1/</guid>
+      <guid>https://ottffyzy.github.io/notes/assemblylanguage/e1/</guid>
       <description>实验 1 查看 CPU 和内存，用机器指令和汇编指令编程 想在 win10 上玩这个需要自己下载 DOSBox 和 debug.exe。 之后用 DOSBox 运行 debug 即可开始书中的实验。 R 命令：查看、修改寄存器 进入 debug 模式后输入 $r$ 回车后可以查看 CPU 寄存器内容。 输</description>
     </item>
     
     <item>
       <title>P4588 [TJOI2018]数学计算</title>
-      <link>https://gohugo.io/sols/luogu/p4588/</link>
+      <link>https://ottffyzy.github.io/sols/luogu/p4588/</link>
       <pubDate>Wed, 09 Sep 2020 01:48:20 -0400</pubDate>
       
-      <guid>https://gohugo.io/sols/luogu/p4588/</guid>
+      <guid>https://ottffyzy.github.io/sols/luogu/p4588/</guid>
       <description>P4588 [TJOI2018]数学计算 题目大意 给定 $x = 1$ 和某个模数 $MO$，有两种操作（共 $Q \le 10^5$ 次） 操作 $1$：把 $x = x*v % MO$ 操作 $2$：取消第 $k$ 次操作（取消的必为操作 $1$，且某个操作 $1$ 只会最多被取消一次） 每</description>
     </item>
     
     <item>
+      <title>《汇编语言》 笔记 第 2 章 寄存器</title>
+      <link>https://ottffyzy.github.io/notes/assemblylanguage/c2/</link>
+      <pubDate>Tue, 08 Sep 2020 18:44:17 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/assemblylanguage/c2/</guid>
+      <description>第 2 章 寄存器 在 CPU 中： 运算器处理信息 寄存器储存信息 控制器控制各种器件 内部总线连接各种器件，在他们之间传输数据 对汇编程序员最重要的部件就是寄存器，寄存器是程序员可以用指令读写的部件，程序员通过改变寄存器中</description>
+    </item>
+    
+    <item>
       <title>《汇编语言》 笔记 第 1 章 基础知识</title>
-      <link>https://gohugo.io/notes/assemblylanguage/c1/</link>
+      <link>https://ottffyzy.github.io/notes/assemblylanguage/c1/</link>
       <pubDate>Tue, 08 Sep 2020 18:01:38 -0400</pubDate>
       
-      <guid>https://gohugo.io/notes/assemblylanguage/c1/</guid>
+      <guid>https://ottffyzy.github.io/notes/assemblylanguage/c1/</guid>
       <description>第 1 章 基础知识 1.1 机器语言 CPU 提供机器指令集也就是机器语言。 早期卡片打孔就是使用的机器语言。 机器语言难于书写阅读查错于是产生了汇编语言 1.2 汇编语言的产生 汇编语言的主题是汇编指令。汇编指令采用了更便于人类书写</description>
     </item>
     
     <item>
       <title>AtCoder Beginner Contest 176 E - Bomber</title>
-      <link>https://gohugo.io/sols/atcoder/abc176/e/</link>
+      <link>https://ottffyzy.github.io/sols/atcoder/abc176/e/</link>
       <pubDate>Tue, 08 Sep 2020 00:36:26 -0400</pubDate>
       
-      <guid>https://gohugo.io/sols/atcoder/abc176/e/</guid>
+      <guid>https://ottffyzy.github.io/sols/atcoder/abc176/e/</guid>
       <description>E - Bomber 题目大意 给出一个 $H \times W$ 的矩阵，上面有 $M$ 个点，选出一行一列使得覆盖到的点最多。问最多是多少。 其中 $H,W,M &amp;lt;= 3 \times 10^5$ 简要题解 注意到一定会贪心的选某个数量最多的行和列。设其行列数量分别 $mx$，$my$，则答</description>
     </item>
     
     <item>
       <title>LeetCode 1575. Count All Possible Routes</title>
-      <link>https://gohugo.io/sols/leetcode/p1575/</link>
+      <link>https://ottffyzy.github.io/sols/leetcode/p1575/</link>
       <pubDate>Mon, 07 Sep 2020 23:19:19 -0400</pubDate>
       
-      <guid>https://gohugo.io/sols/leetcode/p1575/</guid>
+      <guid>https://ottffyzy.github.io/sols/leetcode/p1575/</guid>
       <description>1575. Count All Possible Routes 题目大意 给定一些不同的位置 $(N \le 100)$，给定起点和终点位置的标号，给定起始油量 $(F \le 200)$。 每次可以选择从当前位置走到任意其他位置花费每单位距离 $1$ 单位油。油量不能为负。 问，从起点到终点总</description>
     </item>
     
     <item>
       <title>AtCoder Beginner Contest 177 E - Coprime</title>
-      <link>https://gohugo.io/sols/atcoder/abc177/e/</link>
+      <link>https://ottffyzy.github.io/sols/atcoder/abc177/e/</link>
       <pubDate>Sat, 05 Sep 2020 01:40:51 -0400</pubDate>
       
-      <guid>https://gohugo.io/sols/atcoder/abc177/e/</guid>
+      <guid>https://ottffyzy.github.io/sols/atcoder/abc177/e/</guid>
       <description>E - Coprime 题目大意 给出数组 $A$ 如果其中数字两两互质则返回 “pairwise coprime”，如果整个数组 $gcd$ 为 $1$ 则返回 “setwise coprime”，其他情况返回 “not coprime” 简要题解 显然 setwise 很好判</description>
     </item>
     
     <item>
       <title>AtCoder Beginner Contest 177</title>
-      <link>https://gohugo.io/contests/atcoder/abc177/</link>
+      <link>https://ottffyzy.github.io/contests/atcoder/abc177/</link>
       <pubDate>Sat, 05 Sep 2020 01:26:32 -0400</pubDate>
       
-      <guid>https://gohugo.io/contests/atcoder/abc177/</guid>
+      <guid>https://ottffyzy.github.io/contests/atcoder/abc177/</guid>
       <description>比赛简述 ABC 中比较简单的一场，题目也都比较常规 AtCoder Beginner Contest 177 A - Don&amp;rsquo;t be late 代码实现 #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; int main() { int d,t,s; scanf(&amp;#34;%d%d%d&amp;#34;,&amp;amp;d,&amp;amp;t,&amp;amp;s); printf(&amp;#34;%s\n&amp;#34;,t*s&amp;gt;=d ? &amp;#34;Yes&amp;#34; : &amp;#34;No&amp;#34;); return 0; } B - Substring 题目大意 给出两个串 $S$ 和 $T$，问 $S$ 至少替换多少字符可以使 $T$ 是 $S$ 的子串。 Tag: 暴力 简要题解 $S$</description>
     </item>
     
     <item>
       <title>AtCoder Beginner Contest 177 F - I hate Shortest Path Problem</title>
-      <link>https://gohugo.io/sols/atcoder/abc177/f/</link>
+      <link>https://ottffyzy.github.io/sols/atcoder/abc177/f/</link>
       <pubDate>Fri, 04 Sep 2020 02:37:10 -0400</pubDate>
       
-      <guid>https://gohugo.io/sols/atcoder/abc177/f/</guid>
+      <guid>https://ottffyzy.github.io/sols/atcoder/abc177/f/</guid>
       <description>F - I hate Shortest Path Problem 题目大意 给出一个 $(h+1) \times w$ 的二维矩阵，初始位置可以是第 $0$ 行的任意位置。 每一个格只能往右或下方向移动 每一行 $i$ 区间 $L_{i}$ 到 $R_{i}$ 的格子不能向下走，问到达每一行的最小可能步数 简要题解 $dp[i][j]$ 为到达 $(i,j)$ 位置的最小步</description>
     </item>
     
     <item>
       <title>使用 Typora 写 Markdown</title>
-      <link>https://gohugo.io/notes/markdown/</link>
+      <link>https://ottffyzy.github.io/notes/markdown/</link>
       <pubDate>Thu, 03 Sep 2020 21:53:13 -0400</pubDate>
       
-      <guid>https://gohugo.io/notes/markdown/</guid>
+      <guid>https://ottffyzy.github.io/notes/markdown/</guid>
       <description>0 简介 Markdown 与 Typora 什么是 Markdown？ Markdown 是一种轻量级标记语言，可以通过格式标记把普通文本变成带有格式的富文本。 什么是 Typora？ Typora 是使用 Markdown 语言的一个编辑器。与其他 Markdown 编辑器不同的是，Markdown 的效</description>
     </item>
     
     <item>
       <title>OTTFF 的新 Blog</title>
-      <link>https://gohugo.io/others/helloworld/</link>
+      <link>https://ottffyzy.github.io/others/helloworld/</link>
       <pubDate>Thu, 03 Sep 2020 21:08:19 -0400</pubDate>
       
-      <guid>https://gohugo.io/others/helloworld/</guid>
+      <guid>https://ottffyzy.github.io/others/helloworld/</guid>
       <description>OTTFF 的新 Blog 很久之前我有一个 xxdn 的 Blog，但是随着自己越来越懒其广告等不重要的信息越来越多，于是弃坑多年。 读到一些大牛自建的博客之后，也萌生了自己搭建一个界面简单干净而又功能强大的 Blog 的想法。 经过研究，大概</description>
     </item>
     
