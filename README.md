@@ -1,3 +1,3 @@
 # OTTFF's Blog
 
-[ottffyzy.github.io](ottffyzy.github.io)
+[ottffyzy.github.io](https://ottffyzy.github.io)
