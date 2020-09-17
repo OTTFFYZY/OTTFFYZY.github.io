@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Effective Cpp on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/series/effective-cpp/</link>
+    <description>Recent content in Effective Cpp on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 13 Sep 2020 22:07:50 -0400</lastBuildDate>
+    
+	<atom:link href="https://ottffyzy.github.io/series/effective-cpp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>《Effective C&#43;&#43;》 笔记 1. 让自己习惯 C&#43;&#43;</title>
+      <link>https://ottffyzy.github.io/notes/effectivecpp/c1/</link>
+      <pubDate>Sun, 13 Sep 2020 22:07:50 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/effectivecpp/c1/</guid>
+      <description>1. 让自己习惯 C++ 条款 01：视 C++ 为一个语言联邦 C++ 是一个多重泛型编程语言（multiparadigm programming language）。 C++ 同时支持过程（procedural）形式、面向对象（object-oriented</description>
+    </item>
+    
+  </channel>
+</rss>

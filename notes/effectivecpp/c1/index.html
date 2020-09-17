@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  《Effective C&#43;&#43;》 笔记 1. 让自己习惯 C&#43;&#43; &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="1. 让自己习惯 C&#43;&#43; 条款 01：视 C&#43;&#43; 为一个语言联邦 C&#43;&#43; 是一个多重泛型编程语言（multiparadigm programming language）。 C&#43;&#43; 同时支持过程（procedural）形式、面向对象（object-oriented|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/solutions">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">《Effective C&#43;&#43;》 笔记 1. 让自己习惯 C&#43;&#43;</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+
+
+
+
+
+
+<a href='/series/effective-cpp' class="muted-link">
+  <span class="Label Label--gray">Effective Cpp</span>
+</a>
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2020-09-13. Published at: 2020-09-13.">
+        
+          Published: 2020-09-13 Sun 22:07:50
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="1-让自己习惯-c">1. 让自己习惯 C++</h2>
+<h2 id="条款-01视-c-为一个语言联邦">条款 01：视 C++ 为一个语言联邦</h2>
+<p>C++ 是一个<strong>多重泛型编程语言（multiparadigm programming language）</strong>。</p>
+<p>C++ 同时支持<strong>过程</strong>（<strong>procedural</strong>）形式、<strong>面向对象</strong>（<strong>object-oriented</strong>）形式、<strong>函数</strong>（<strong>functional</strong>）形式、<strong>泛型</strong>（<strong>generic</strong>）形式、<strong>元编程</strong>（<strong>metaprogramming</strong>）形式的语言。</p>
+<p>C++ 的<strong>次语言</strong>（<strong>sublanguage</strong>）：</p>
+<ol>
+<li>C</li>
+<li>Object-Oriented C++</li>
+<li>Template C++</li>
+<li>STL</li>
+</ol>
+<p>每个次语言有自己的规约。</p>
+<h2 id="条款-02尽量以-constenuminline-替换-define">条款 02：尽量以 const，enum，inline 替换 #define</h2>
+<p>因为 #define 是预处理器处理的部分，编译器不会认识对应的符号，则对应的符号不会进入<strong>符号表</strong>（<strong>symbol table</strong>），这样在 debug 时就会变得难以追踪。</p>
+<h3 id="字符串常量">字符串常量</h3>
+<p>用 const 定义 char-based 字符串常量的指针需要写两遍 const</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="k">const</span> <span class="n">str</span> <span class="o">=</span> <span class="s">&#34;str&#34;</span><span class="p">;</span>
+</code></pre></div><p>通常这种情况下 string 会好一些</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">str</span><span class="p">(</span><span class="s">&#34;str&#34;</span><span class="p">);</span>
+</code></pre></div><h3 id="类的常量成员可以定义为">类的常量成员可以定义为</h3>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">C</span> <span class="p">{</span>
+    <span class="k">static</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">M</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+<span class="p">};</span>
+</code></pre></div><p>上面是 M 的声明式，而非定义式。对于整数类型（integral type）的类的常成员，如果只使用值则不需要给出定义式，否则需要提供如下的定义式。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">const</span> <span class="kt">int</span> <span class="n">C</span><span class="o">::</span><span class="n">M</span><span class="p">;</span>
+</code></pre></div><p>将这个式子放入实现文件，而非头文件，因为在声明时已经有初值，一次此处不能再设值。</p>
+<p>#define 无法定义 class 的专属常量，因为 #define 不重视作用域（scope），也不能提供任何封装性。</p>
+<p>旧式编译器如果不支持上述语法，那么需要如下写法</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// 头文件中
+</span><span class="c1"></span><span class="k">class</span> <span class="nc">C</span> <span class="p">{</span>
+    <span class="k">static</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">M</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="c1">// 实现文件中
+</span><span class="c1"></span><span class="k">const</span> <span class="kt">int</span> <span class="n">C</span><span class="o">::</span><span class="n">M</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</code></pre></div><h3 id="the-enum-hack">the enum hack</h3>
+<p>一个属于枚举类型的数值可以充当 int 使用。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">C</span> <span class="p">{</span>
+    <span class="k">enum</span> <span class="p">{</span> <span class="n">M</span> <span class="o">=</span> <span class="mi">5</span> <span class="p">};</span>
+    <span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+<span class="p">};</span>
+</code></pre></div><p>有时需要这种手段，因为无法取到一个 enum 的地址（通常 #define 也无法取到地址，但 const 的变量是可能取到地址的）。enum 也不会产生非必要的内存。</p>
+<p>同时这也是模板元编程的基础。</p>
+<h3 id="define-实现宏">#define 实现宏</h3>
+<p>#macros 经常被用来实现宏，但对于</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#define CALL_WITH_MAX(a, b) f((a) &gt; (b) ? (a) : (b))
+</span></code></pre></div><p>需要很多括号保证不会发生一些意外。但即便有括号还是会发生意外。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">CALL_WITH_MAX</span><span class="p">(</span><span class="o">++</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+</code></pre></div><p>这会变成如下代码</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">f</span><span class="p">((</span><span class="o">++</span><span class="n">a</span><span class="p">)</span> <span class="o">&gt;</span> <span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">?</span> <span class="p">(</span><span class="o">++</span><span class="n">a</span><span class="p">)</span> <span class="o">:</span> <span class="p">(</span><span class="n">b</span><span class="p">));</span>
+</code></pre></div><p>a 和 b 的大小关系导致了 a 不同的自增数量。</p>
+<p>此时可以选择使用</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="kr">inline</span> <span class="kt">void</span> <span class="n">callWithMax</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">f</span><span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="o">?</span> <span class="nl">a</span> <span class="p">:</span> <span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="预处理器的其他重要功能">预处理器的其他重要功能</h3>
+<p>#define 的上述功能可以被替代，但其他问题中预处理器依然扮演重要的角色，不能被替换。</p>
+<p>#include #ifdef #ifndef</p>
+<h2 id="条款-03尽可能使用-const">条款 03：尽可能使用 const</h2>
+<p>尽量指定不想更改的东西是 const 的。</p>
+<h3 id="const-作用于指针">const 作用于指针</h3>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">char</span> <span class="n">str</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&#34;str&#34;</span><span class="p">;</span>
+<span class="kt">char</span><span class="o">*</span> <span class="n">p</span> <span class="o">=</span> <span class="n">str</span><span class="p">;</span>             <span class="c1">// non-const pointer, non-const data
+</span><span class="c1"></span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">p</span> <span class="o">=</span> <span class="n">str</span><span class="p">;</span>       <span class="c1">// non-const pointer, const data
+</span><span class="c1"></span><span class="kt">char</span><span class="o">*</span> <span class="k">const</span> <span class="n">p</span> <span class="o">=</span> <span class="n">str</span><span class="p">;</span>       <span class="c1">// const pointer, non-const data
+</span><span class="c1"></span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="k">const</span> <span class="n">p</span> <span class="o">=</span> <span class="n">str</span><span class="p">;</span> <span class="c1">// const pointer, const data
+</span><span class="c1"></span>
+<span class="kt">void</span> <span class="nf">f1</span><span class="p">(</span><span class="k">const</span> <span class="n">C</span><span class="o">*</span> <span class="n">p</span><span class="p">);</span> <span class="c1">// 指向常量的指针
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">f2</span><span class="p">(</span><span class="n">C</span> <span class="k">const</span><span class="o">*</span> <span class="n">p</span><span class="p">);</span> <span class="c1">// 指向常量的指针
+</span></code></pre></div><h3 id="const-作用于-stl-迭代器">const 作用于 STL 迭代器</h3>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// 迭代器不得指向别的东西，但可以更改迭代器指向对象的内容
+</span><span class="c1">// 例如不能 ++it
+</span><span class="c1"></span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> 
+
+<span class="c1">// 迭代器所指向的内容不能更改，但可以更改指向的内容
+</span><span class="c1">// ++it 是可以的
+</span><span class="c1"></span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">const_iterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span> 
+</code></pre></div><h3 id="令函数返回值是常量">令函数返回值是常量</h3>
+<p>令函数返回值是常量可以避免修改函数的返回值。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">const</span> <span class="n">A</span> <span class="nf">f</span><span class="p">();</span>
+<span class="c1">// 避免本意想书写 if(f() == b) 但写成了如下形式 
+</span><span class="c1"></span><span class="k">if</span><span class="p">(</span><span class="n">f</span><span class="p">()</span> <span class="o">=</span> <span class="n">b</span><span class="p">)</span> 
+</code></pre></div><h3 id="const-成员函数">const 成员函数</h3>
+<p>注意两个<strong>常量性</strong>（<strong>constness</strong>）不同的函数是可以被重载的。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">C</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">&amp;</span> <span class="k">operator</span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">size_t</span> <span class="n">pos</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">text</span><span class="p">[</span><span class="n">pos</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="kt">char</span><span class="o">&amp;</span> <span class="k">operator</span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">size_t</span> <span class="n">pos</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">text</span><span class="p">[</span><span class="n">pos</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">text</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">C</span> <span class="nf">c</span><span class="p">();</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="c1">// 调用 char&amp; C::operator[]()
+</span><span class="c1"></span>
+<span class="k">const</span> <span class="n">C</span> <span class="nf">cc</span><span class="p">();</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">cc</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="c1">// 调用 const  char&amp; C::operator[]()
+</span><span class="c1"></span>
+<span class="kt">void</span> <span class="nf">print</span><span class="p">(</span><span class="k">const</span> <span class="n">C</span><span class="o">&amp;</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="c1">// 调用 const  char&amp; C::operator[]()
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><h3 id="bitwise-const-与-logical-constness">bitwise const 与 logical constness</h3>
+<p>bitwise const 又称 physical constness：成员函数不改变任何（static以外）的成员变量时才可以说是 const 的。这也是 C++ 对常量性的定义。</p>
+<p>但是很多函数可以通过 bitwise 测试却不是真的具有 const 的特性。例如一个更改了“指针所指物”的成员函数，虽然不符合 const，但只要“所指物”不属于对象，则可以通过 bitwise 测试。</p>
+<p>例如</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">C</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">C</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">pText</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">char</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+        <span class="n">pText</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;A&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 这里虽然用了 const 但是实际上 pText 指向的内容可改
+</span><span class="c1"></span>    <span class="kt">char</span><span class="o">&amp;</span> <span class="k">operator</span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">size_t</span> <span class="n">pos</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">pText</span><span class="p">[</span><span class="n">pos</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+    <span class="kt">char</span><span class="o">*</span> <span class="n">pText</span><span class="p">;</span> 
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="n">C</span> <span class="n">obj</span><span class="p">;</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span> <span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+    <span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;Z&#39;</span><span class="p">;</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span> <span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>logical constness：一个 const 成员函数可以修改它所处理的对象内的某些 bits，但只有在客户端监测不出的时候才行。</p>
+<p>例如</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">C</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">size_t</span> <span class="n">length</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">lenIsValid</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">len</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">strlen</span><span class="p">(</span><span class="n">pText</span><span class="p">);</span>
+            <span class="n">lenIsValid</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">len</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+    <span class="kt">char</span><span class="o">*</span> <span class="n">pText</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">size_t</span> <span class="n">len</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="n">lenIsValid</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div><p>但是上述代码显然不是 bitwise constness，因此无法使用 const 关键字。</p>
+<p>此时可以使用 mutable 关键字释放掉 non-static 成员变量的 bitwise constness。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">C</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">size_t</span> <span class="n">length</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">lenIsValid</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">len</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">strlen</span><span class="p">(</span><span class="n">pText</span><span class="p">);</span>
+            <span class="n">lenIsValid</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">len</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+    <span class="kt">char</span><span class="o">*</span> <span class="n">pText</span><span class="p">;</span>
+    <span class="k">mutable</span> <span class="n">std</span><span class="o">::</span><span class="n">size_t</span> <span class="n">len</span><span class="p">;</span>
+    <span class="k">mutable</span> <span class="kt">bool</span> <span class="n">lenIsValid</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div><h3 id="两个版本的-operator-的重复代码">两个版本的 operator[] 的重复代码</h3>
+<p>注意只相差 const 的两个版本的函数可能包含很多重复操作。例如 operator[] 中其实可能包含边界检查（bounds checking）、日志访问（log access data）、检验数据完整性（verify data integrity）等等。此时我们需要常量性移除（casting away constness）。这样我们就可以用一个版本调用另一个版本了。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">C</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">C</span><span class="p">(){</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="s">&#34;ABC&#34;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">&amp;</span> <span class="k">operator</span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">size_t</span> <span class="n">pos</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">text</span><span class="p">[</span><span class="n">pos</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="kt">char</span><span class="o">&amp;</span> <span class="k">operator</span><span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">size_t</span> <span class="n">pos</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span>
+            <span class="k">const_cast</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&amp;&gt;</span><span class="p">(</span>               <span class="c1">// 将 operator[] 返回值的 const 移除
+</span><span class="c1"></span>                <span class="k">static_cast</span><span class="o">&lt;</span><span class="k">const</span> <span class="n">C</span><span class="o">&amp;&gt;</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">)</span> <span class="c1">// 为 *this 加上 const
+</span><span class="c1"></span>                    <span class="p">[</span><span class="n">pos</span><span class="p">]</span>
+            <span class="p">);</span>
+    <span class="p">}</span>
+<span class="k">private</span><span class="o">:</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">text</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="n">C</span> <span class="n">const_obj</span><span class="p">;</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span> <span class="n">const_obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+    <span class="c1">// obj[0] = &#39;B&#39;; cannot compile
+</span><span class="c1"></span>
+    <span class="n">C</span> <span class="n">obj</span><span class="p">;</span>
+    <span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;B&#39;</span><span class="p">;</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span> <span class="n">obj</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>这里注意不要用 const 调用 non-const。因为 non-const 并不保证不更改任何东西。</p>
+<p>编写代码时尽量要使用概念上的常量性（conceptual constness）。这样我们就可以用一个版本调用另一个版本了。</p>
+<h2 id="条款-04确定对象被使用前已先被初始化">条款 04：确定对象被使用前已先被初始化</h2>
+<p>永远在使用对象前进行初始化。</p>
+<p>对于内置类型，必须手工完成，其他类型初始化由构造函数完成。</p>
+<p>注意赋值（assignment）和初始化（initialization）的区别。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">C</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">C</span><span class="p">(</span><span class="kt">int</span> <span class="n">a_</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">a_</span><span class="p">;</span> <span class="c1">// 赋值 而非 初始化
+</span><span class="c1"></span>    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><p>应该使用成员初值列表（member initialization list）。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">C</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">C</span><span class="p">(</span><span class="kt">int</span> <span class="n">a_</span><span class="p">)</span>
+        <span class="o">:</span> <span class="n">a</span><span class="p">(</span><span class="n">a_</span><span class="p">)</span>
+    <span class="p">{</span> <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><p>虽然两个构造函数最终结果相同，但是通常后者效率较高。</p>
+<p>编译器会对没有在成员初值列表的用户自定义类型（user-defined types）的成员变量自动调用默认构造函数。因此如果采用赋值方式，则这些变量会先被默认构造，之后再被赋值。</p>
+<p>C++ 总有固定的初始化顺序。基类（base classes）总是先于派生类（derived classes）被初始化。成员变量按照声明次序被初始化，因此成员初值列表最好以声明顺序排列。</p>
+<h3 id="初始化-non-local-static-对象">初始化 non-local static 对象</h3>
+<p>static 对象包括：</p>
+<ul>
+<li>global 对象</li>
+<li>定义于 namespace 作用域内的对象</li>
+<li>在 class 内，函数内，file 作用域内被声明为 static 的对象</li>
+</ul>
+<p>其中除了函数内的 static 对象称为 local static （对函数是 local 的），其他的对象称为 non-local static。</p>
+<p>程序结束，也就是 main 函数结束时 static 对象的析构函数将会被调用。</p>
+<p><strong>编译单元</strong>（translation unit）：产出单一目标文件（single object file）的源码，基本上它是单一源码文件加上其所含入的头文件。</p>
+<p>如果一个编译单元的 non-local static 对象初始化时调用了另一编译单元的 non-local static 对象，则所用的对象可能尚未初始化，C++ 对定义于不同编译单元内的 non-local static 对象的初始化相对次序无明确定义。</p>
+<p>可以将每个 non-local static 对象搬到自己的专属函数内，这些函数返回一个 reference 指向它所包含的对象。用户使用函数而不直接使用对象。这是 Singleton 模式的常见实现手法。</p>
+<p>C++ 保证函数内的 local static 对象会在该函数被调用期间，首次遇上该对象定义式时被初始化。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// file A
+</span><span class="c1"></span><span class="k">class</span> <span class="nc">FS</span> <span class="p">{</span> <span class="p">...</span> <span class="p">};</span>
+<span class="n">FS</span> <span class="o">&amp;</span> <span class="n">tfs</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">static</span> <span class="n">FS</span> <span class="n">fs</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">fs</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// file B
+</span><span class="c1"></span><span class="k">class</span> <span class="nc">Dir</span> <span class="p">{</span> <span class="p">...</span> <span class="p">};</span>
+<span class="n">Dir</span><span class="o">::</span><span class="n">Dir</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">tfs</span><span class="p">().</span><span class="n">f</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="n">Dir</span><span class="o">&amp;</span> <span class="n">tmpDir</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">static</span> <span class="n">Dir</span> <span class="n">td</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">td</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>注意所有的 non-const static 对象，在多线程环境都会有和初始化有关的<strong>竞速形式</strong>（race condition）。一个麻烦的做法是，可以早单线程启动阶段（single-threaded startup portion）手工调用所有的 reference-returning 函数。</p>
+<p>当然单线程中的初始化次序必须是合理的，不能存在相互依赖的初始化。</p>
+
+  </section>
+
+  <section>
+    
+        <a href="/notes/assemblylanguage/e1/" class="previous_page">Prev: 《汇编语言》 笔记  实验 1 查看 CPU 和内存，用机器指令和汇编指令编程 </a>
+    
+    
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>《Effective C&#43;&#43;》 笔记 1. 让自己习惯 C&#43;&#43;</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-让自己习惯-c">1. 让自己习惯 C++</a></li>
+    <li><a href="#条款-01视-c-为一个语言联邦">条款 01：视 C++ 为一个语言联邦</a></li>
+    <li><a href="#条款-02尽量以-constenuminline-替换-define">条款 02：尽量以 const，enum，inline 替换 #define</a>
+      <ul>
+        <li><a href="#字符串常量">字符串常量</a></li>
+        <li><a href="#类的常量成员可以定义为">类的常量成员可以定义为</a></li>
+        <li><a href="#the-enum-hack">the enum hack</a></li>
+        <li><a href="#define-实现宏">#define 实现宏</a></li>
+        <li><a href="#预处理器的其他重要功能">预处理器的其他重要功能</a></li>
+      </ul>
+    </li>
+    <li><a href="#条款-03尽可能使用-const">条款 03：尽可能使用 const</a>
+      <ul>
+        <li><a href="#const-作用于指针">const 作用于指针</a></li>
+        <li><a href="#const-作用于-stl-迭代器">const 作用于 STL 迭代器</a></li>
+        <li><a href="#令函数返回值是常量">令函数返回值是常量</a></li>
+        <li><a href="#const-成员函数">const 成员函数</a></li>
+        <li><a href="#bitwise-const-与-logical-constness">bitwise const 与 logical constness</a></li>
+        <li><a href="#两个版本的-operator-的重复代码">两个版本的 operator[] 的重复代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#条款-04确定对象被使用前已先被初始化">条款 04：确定对象被使用前已先被初始化</a>
+      <ul>
+        <li><a href="#初始化-non-local-static-对象">初始化 non-local static 对象</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+      hljs.configure({tabReplace: '    '});
+    </script>
+  </body>
+</html>

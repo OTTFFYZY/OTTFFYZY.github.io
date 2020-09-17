@@ -2,8 +2,8 @@
 html,
 body {
   background-image: url(/img/Saber0.jpg);
-  background-size:cover;
-  background-attachment:fixed;
+  background-size: cover;
+  background-attachment: fixed;
   height: 100%;
 }
 
@@ -24,7 +24,7 @@ body {
     "header header"
     "main side"
     "footer side";
-  opacity:0.85;
+  opacity: 0.95;
 }
 #header {
   grid-area: header;

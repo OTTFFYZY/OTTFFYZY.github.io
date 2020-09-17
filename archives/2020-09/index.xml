@@ -6,10 +6,19 @@
     <description>Recent content in 2020-09 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 10 Sep 2020 19:08:42 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2020 22:07:50 -0400</lastBuildDate>
     
 	<atom:link href="https://ottffyzy.github.io/archives/2020-09/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>《Effective C&#43;&#43;》 笔记 1. 让自己习惯 C&#43;&#43;</title>
+      <link>https://ottffyzy.github.io/notes/effectivecpp/c1/</link>
+      <pubDate>Sun, 13 Sep 2020 22:07:50 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/effectivecpp/c1/</guid>
+      <description>1. 让自己习惯 C++ 条款 01：视 C++ 为一个语言联邦 C++ 是一个多重泛型编程语言（multiparadigm programming language）。 C++ 同时支持过程（procedural）形式、面向对象（object-oriented</description>
+    </item>
     
     <item>
       <title>《汇编语言》 笔记  实验 1 查看 CPU 和内存，用机器指令和汇编指令编程</title>
