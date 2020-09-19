@@ -4,12 +4,67 @@
   
   <url>
     <loc>https://ottffyzy.github.io/archives/2020-09/</loc>
-    <lastmod>2020-09-13T22:07:50-04:00</lastmod>
+    <lastmod>2020-09-18T22:10:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/sols/leetcode/lcp21/</loc>
+    <lastmod>2020-09-18T22:10:05-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ottffyzy.github.io/archives/</loc>
-    <lastmod>2020-09-13T22:07:50-04:00</lastmod>
+    <lastmod>2020-09-18T22:10:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/tags/bfs/</loc>
+    <lastmod>2020-09-18T22:10:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/categories/</loc>
+    <lastmod>2020-09-18T22:10:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/tags/dfs/</loc>
+    <lastmod>2020-09-18T22:10:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/ojs/leetcode/</loc>
+    <lastmod>2020-09-18T22:10:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/ojs/</loc>
+    <lastmod>2020-09-18T22:10:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/</loc>
+    <lastmod>2020-09-18T22:10:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/sols/</loc>
+    <lastmod>2020-09-18T22:10:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/categories/solutions/</loc>
+    <lastmod>2020-09-18T22:10:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/tags/</loc>
+    <lastmod>2020-09-18T22:10:05-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/tags/%E5%9F%BA%E7%8E%AF%E6%A0%91/</loc>
+    <lastmod>2020-09-18T22:10:05-04:00</lastmod>
   </url>
   
   <url>
@@ -18,12 +73,12 @@
   </url>
   
   <url>
-    <loc>https://ottffyzy.github.io/notes/</loc>
+    <loc>https://ottffyzy.github.io/categories/notes/</loc>
     <lastmod>2020-09-13T22:07:50-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ottffyzy.github.io/</loc>
+    <loc>https://ottffyzy.github.io/notes/</loc>
     <lastmod>2020-09-13T22:07:50-04:00</lastmod>
   </url>
   
@@ -35,16 +90,6 @@
   <url>
     <loc>https://ottffyzy.github.io/notes/effectivecpp/c1/</loc>
     <lastmod>2020-09-13T22:07:50-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ottffyzy.github.io/categories/</loc>
-    <lastmod>2020-09-10T19:08:42-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ottffyzy.github.io/categories/notes/</loc>
-    <lastmod>2020-09-10T19:08:42-04:00</lastmod>
   </url>
   
   <url>
@@ -63,27 +108,7 @@
   </url>
   
   <url>
-    <loc>https://ottffyzy.github.io/ojs/</loc>
-    <lastmod>2020-09-09T01:48:20-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ottffyzy.github.io/sols/luogu/p4588/</loc>
-    <lastmod>2020-09-09T01:48:20-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ottffyzy.github.io/sols/</loc>
-    <lastmod>2020-09-09T01:48:20-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ottffyzy.github.io/categories/solutions/</loc>
-    <lastmod>2020-09-09T01:48:20-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ottffyzy.github.io/tags/</loc>
     <lastmod>2020-09-09T01:48:20-04:00</lastmod>
   </url>
   
@@ -103,12 +128,12 @@
   </url>
   
   <url>
-    <loc>https://ottffyzy.github.io/ojs/atcoder/</loc>
+    <loc>https://ottffyzy.github.io/sols/atcoder/abc176/e/</loc>
     <lastmod>2020-09-08T00:36:26-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ottffyzy.github.io/sols/atcoder/abc176/e/</loc>
+    <loc>https://ottffyzy.github.io/ojs/atcoder/</loc>
     <lastmod>2020-09-08T00:36:26-04:00</lastmod>
   </url>
   
@@ -118,22 +143,17 @@
   </url>
   
   <url>
+    <loc>https://ottffyzy.github.io/sols/leetcode/p1575/</loc>
+    <lastmod>2020-09-07T23:19:19-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ottffyzy.github.io/tags/dp/</loc>
     <lastmod>2020-09-07T23:19:19-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ottffyzy.github.io/tags/dp%E4%BC%98%E5%8C%96/</loc>
-    <lastmod>2020-09-07T23:19:19-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ottffyzy.github.io/ojs/leetcode/</loc>
-    <lastmod>2020-09-07T23:19:19-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ottffyzy.github.io/sols/leetcode/p1575/</loc>
     <lastmod>2020-09-07T23:19:19-04:00</lastmod>
   </url>
   

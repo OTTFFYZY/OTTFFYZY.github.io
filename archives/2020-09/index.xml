@@ -6,10 +6,19 @@
     <description>Recent content in 2020-09 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 13 Sep 2020 22:07:50 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2020 22:10:05 -0400</lastBuildDate>
     
 	<atom:link href="https://ottffyzy.github.io/archives/2020-09/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[LeetCode] LCP 21. 追逐游戏</title>
+      <link>https://ottffyzy.github.io/sols/leetcode/lcp21/</link>
+      <pubDate>Fri, 18 Sep 2020 22:10:05 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/leetcode/lcp21/</guid>
+      <description>LCP 21. 追逐游戏 题目大意 给定一棵 $N$ 个点的基环树（环套树）。给定图上两个起始位置 $A$ 和 $B$ ($A \neq B$)。每一轮 $A$ 先移动，$B$ 后移动。每次移动可以移动到图上当前点的相邻点或者保持不动。任意时刻如果 $A$ 和 $B$ 处在同一位</description>
+    </item>
     
     <item>
       <title>《Effective C&#43;&#43;》 笔记 1. 让自己习惯 C&#43;&#43;</title>
@@ -57,7 +66,7 @@
     </item>
     
     <item>
-      <title>AtCoder Beginner Contest 176 E - Bomber</title>
+      <title>[AtCoder] Beginner Contest 176 E - Bomber</title>
       <link>https://ottffyzy.github.io/sols/atcoder/abc176/e/</link>
       <pubDate>Tue, 08 Sep 2020 00:36:26 -0400</pubDate>
       
@@ -66,7 +75,7 @@
     </item>
     
     <item>
-      <title>LeetCode 1575. Count All Possible Routes</title>
+      <title>[LeetCode] 1575. Count All Possible Routes</title>
       <link>https://ottffyzy.github.io/sols/leetcode/p1575/</link>
       <pubDate>Mon, 07 Sep 2020 23:19:19 -0400</pubDate>
       
@@ -75,7 +84,7 @@
     </item>
     
     <item>
-      <title>AtCoder Beginner Contest 177 E - Coprime</title>
+      <title>[AtCoder] Beginner Contest 177 E - Coprime</title>
       <link>https://ottffyzy.github.io/sols/atcoder/abc177/e/</link>
       <pubDate>Sat, 05 Sep 2020 01:40:51 -0400</pubDate>
       
@@ -93,7 +102,7 @@
     </item>
     
     <item>
-      <title>AtCoder Beginner Contest 177 F - I hate Shortest Path Problem</title>
+      <title>[AtCoder] Beginner Contest 177 F - I hate Shortest Path Problem</title>
       <link>https://ottffyzy.github.io/sols/atcoder/abc177/f/</link>
       <pubDate>Fri, 04 Sep 2020 02:37:10 -0400</pubDate>
       
