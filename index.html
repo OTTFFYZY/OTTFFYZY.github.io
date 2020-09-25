@@ -53,6 +53,14 @@
     
       
       
+      <a class="UnderlineNav-item " href="/categories/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
       <a class="UnderlineNav-item " href="/categories/contests">
         
         <span>Contests</span>
@@ -89,6 +97,74 @@
   <h1>Posts</h1>
   
 
+  
+  <div>
+    <div>
+      <a href="/templates/gt/dijkstra/">
+        <h3>[模板][图论] 迪杰斯特拉 Dijkstra</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF' class="muted-link">
+  <span class="Label Label--gray">最短路</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-09-24
+      </div>
+    </div>
+    迪杰斯特拉 Dijkstra 模板（priority_queue） // T must define &lt; // V: max number of vertex [0~V-1] template&lt;typename T,size_t V,T INF=T(0x3f3f3f3f),T ZERO=T(0)&gt; struct SP { typedef pair&lt;T,int&gt; PTI; vector&lt;PTI&gt; g[V]; T dis[V]; int vis[V]; int n; void init(int n_) { n=n_; for(int i=0;i&lt;n;i++) g[i].clear(); } void addedge(int u,int v,T w) { g[u].emplace_back(w,v); // g[v].emplace_back(w,u); undirected } void dijkstra(int st,int ed=-1) // ed=-1 no destination { for(int i=0;i&lt;n;i++) dis[i]=INF,vis[i]=0; priority_queue&lt;PTI,vector&lt;PTI&gt;,greater&lt;PTI&gt; &gt; qu; dis[st]=ZERO; qu.emplace(ZERO,st); while(!qu.empty()) { PTI p=qu.top(); qu.pop(); int u=p.second; if(vis[u])
+  </div>
+  
+  <div>
+    <div>
+      <a href="/templates/ds/binaryheap/">
+        <h3>[模板][数据结构] 二叉堆 Binary Heap</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E4%BA%8C%E5%8F%89%E5%A0%86' class="muted-link">
+  <span class="Label Label--gray">二叉堆</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-09-23
+      </div>
+    </div>
+    二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &lt; // min heap // M: max size of heap template&lt;typename T,size_t M&gt; struct Heap { T h[M+1]; int n; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() // check n&gt;=1 { return h[1]; } int size() { return n; } bool empty() { return n==0; } /* Helper
+  </div>
   
   <div>
     <div>
@@ -131,7 +207,6 @@
       <div class="float-md-right">
         
         2020-09-18
-        }
       </div>
     </div>
     LCP 21. 追逐游戏 题目大意 给定一棵 $N$ 个点的基环树（环套树）。给定图上两个起始位置 $A$ 和 $B$ ($A \neq B$)。每一轮 $A$ 先移动，$B$ 后移动。每次移动可以移动到图上当前点的相邻点或者保持不动。任意时刻如果 $A$ 和 $B$ 处在同一位
@@ -166,7 +241,6 @@
       <div class="float-md-right">
         
         2020-09-13
-        }
       </div>
     </div>
     1. 让自己习惯 C++ 条款 01：视 C++ 为一个语言联邦 C++ 是一个多重泛型编程语言（multiparadigm programming language）。 C++ 同时支持过程（procedural）形式、面向对象（object-oriented
@@ -201,7 +275,6 @@
       <div class="float-md-right">
         
         2020-09-10
-        }
       </div>
     </div>
     实验 1 查看 CPU 和内存，用机器指令和汇编指令编程 想在 win10 上玩这个需要自己下载 DOSBox 和 debug.exe。 之后用 DOSBox 运行 debug 即可开始书中的实验。 R 命令：查看、修改寄存器 进入 debug 模式后输入 $r$ 回车后可以查看 CPU 寄存器内容。 输
@@ -210,7 +283,7 @@
   <div>
     <div>
       <a href="/sols/luogu/p4588/">
-        <h3>P4588 [TJOI2018]数学计算</h3>
+        <h3>[Luogu] P4588 [TJOI2018]数学计算</h3>
       </a>
       
       
@@ -240,7 +313,6 @@
       <div class="float-md-right">
         
         2020-09-09
-        }
       </div>
     </div>
     P4588 [TJOI2018]数学计算 题目大意 给定 $x = 1$ 和某个模数 $MO$，有两种操作（共 $Q \le 10^5$ 次） 操作 $1$：把 $x = x*v % MO$ 操作 $2$：取消第 $k$ 次操作（取消的必为操作 $1$，且某个操作 $1$ 只会最多被取消一次） 每
@@ -275,7 +347,6 @@
       <div class="float-md-right">
         
         2020-09-08
-        }
       </div>
     </div>
     第 2 章 寄存器 在 CPU 中： 运算器处理信息 寄存器储存信息 控制器控制各种器件 内部总线连接各种器件，在他们之间传输数据 对汇编程序员最重要的部件就是寄存器，寄存器是程序员可以用指令读写的部件，程序员通过改变寄存器中
@@ -310,7 +381,6 @@
       <div class="float-md-right">
         
         2020-09-08
-        }
       </div>
     </div>
     第 1 章 基础知识 1.1 机器语言 CPU 提供机器指令集也就是机器语言。 早期卡片打孔就是使用的机器语言。 机器语言难于书写阅读查错于是产生了汇编语言 1.2 汇编语言的产生 汇编语言的主题是汇编指令。汇编指令采用了更便于人类书写
@@ -349,7 +419,6 @@
       <div class="float-md-right">
         
         2020-09-08
-        }
       </div>
     </div>
     E - Bomber 题目大意 给出一个 $H \times W$ 的矩阵，上面有 $M$ 个点，选出一行一列使得覆盖到的点最多。问最多是多少。 其中 $H,W,M &lt;= 3 \times 10^5$ 简要题解 注意到一定会贪心的选某个数量最多的行和列。设其行列数量分别 $mx$，$my$，则答
@@ -392,100 +461,9 @@
       <div class="float-md-right">
         
         2020-09-07
-        }
       </div>
     </div>
     1575. Count All Possible Routes 题目大意 给定一些不同的位置 $(N \le 100)$，给定起点和终点位置的标号，给定起始油量 $(F \le 200)$。 每次可以选择从当前位置走到任意其他位置花费每单位距离 $1$ 单位油。油量不能为负。 问，从起点到终点总
-  </div>
-  
-  <div>
-    <div>
-      <a href="/sols/atcoder/abc177/e/">
-        <h3>[AtCoder] Beginner Contest 177 E - Coprime</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/solutions' class="muted-link">
-  <span class="Label Label--gray-darker">Solutions</span>
-</a>
-
-
-
-<a href='/ojs/atcoder' class="muted-link">
-  <span class="Label Label--gray-darker">Atcoder</span>
-</a>
-
-
-
-<a href='/tags/%E6%95%B0%E8%AE%BA' class="muted-link">
-  <span class="Label Label--gray">数论</span>
-</a>
-
-<a href='/tags/%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3' class="muted-link">
-  <span class="Label Label--gray">质因数分解</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-09-05
-        }
-      </div>
-    </div>
-    E - Coprime 题目大意 给出数组 $A$ 如果其中数字两两互质则返回 “pairwise coprime”，如果整个数组 $gcd$ 为 $1$ 则返回 “setwise coprime”，其他情况返回 “not coprime” 简要题解 显然 setwise 很好判
-  </div>
-  
-  <div>
-    <div>
-      <a href="/contests/atcoder/abc177/">
-        <h3>AtCoder Beginner Contest 177</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/contests' class="muted-link">
-  <span class="Label Label--gray-darker">Contests</span>
-</a>
-
-
-
-<a href='/ojs/atcoder' class="muted-link">
-  <span class="Label Label--gray-darker">Atcoder</span>
-</a>
-
-
-
-<a href='/tags/%E6%9A%B4%E5%8A%9B' class="muted-link">
-  <span class="Label Label--gray">暴力</span>
-</a>
-
-<a href='/tags/%E5%89%8D%E7%BC%80%E5%92%8C' class="muted-link">
-  <span class="Label Label--gray">前缀和</span>
-</a>
-
-<a href='/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86' class="muted-link">
-  <span class="Label Label--gray">并查集</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-09-05
-        }
-      </div>
-    </div>
-    比赛简述 ABC 中比较简单的一场，题目也都比较常规 AtCoder Beginner Contest 177 A - Don&rsquo;t be late 代码实现 #include &lt;bits/stdc++.h&gt; using namespace std; int main() { int d,t,s; scanf(&#34;%d%d%d&#34;,&amp;d,&amp;t,&amp;s); printf(&#34;%s\n&#34;,t*s&gt;=d ? &#34;Yes&#34; : &#34;No&#34;); return 0; } B - Substring 题目大意 给出两个串 $S$ 和 $T$，问 $S$ 至少替换多少字符可以使 $T$ 是 $S$ 的子串。 Tag: 暴力 简要题解 $S$
   </div>
   
 
@@ -551,6 +529,31 @@
       <span class="text-right Counter">6</span>
     </span>
     
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
+      <span class="text-right Counter">2</span>
+    </span>
+    
+  </div>
+
+
+
+
+  <div class="Box Box--blue p-2 mb-3">
+    <a href="/templates/" class="link-gray-dark">
+      <h4>Template</h4>
+    </a>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/templates/%e5%9b%be%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">图论</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/templates/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="link-gray text-emphasized css-truncate-target"><span class="">数据结构</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
   </div>
 
 
@@ -607,6 +610,11 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e4%ba%8c%e5%8f%89%e5%a0%86" class="link-gray text-emphasized css-truncate-target"><span class="">二叉堆</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e5%89%8d%e7%bc%80%e5%92%8c" class="link-gray text-emphasized css-truncate-target"><span class="">前缀和</span></a>
       <span class="text-right Counter">1</span>
     </span>
@@ -628,6 +636,11 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e6%9a%b4%e5%8a%9b" class="link-gray text-emphasized css-truncate-target"><span class="">暴力</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e6%9c%80%e7%9f%ad%e8%b7%af" class="link-gray text-emphasized css-truncate-target"><span class="">最短路</span></a>
       <span class="text-right Counter">1</span>
     </span>
     
@@ -688,7 +701,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-09" class="link-gray text-emphasized css-truncate-target"><span class="">2020 09</span></a>
-      <span class="text-right Counter">13</span>
+      <span class="text-right Counter">15</span>
     </span>
     
   </div>
