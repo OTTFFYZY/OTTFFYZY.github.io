@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  [模板][数据结构] 并查集 Union Find / Disjoint Set Union &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="并查集 Union Find / Disjoint Set Union 路径压缩和按 size 合并 Union by Size // M: max number of set // id is in [0~M-1] template&amp;lt;size_t M&amp;gt; struct UF { int uf[M],sz[M]; int n; int ns; // number of set void init(int n_) { n=ns=n_; for(int i=0;i&amp;lt;n;i&#43;&#43;) uf[i]=i,sz[i]=1; } int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } bool same(int x,int y) { return find(x)==find(y); } bool merge(int x,int y) { x=find(x); y=find(y); if(x==y) return false; if(sz[x]&amp;gt;sz[y]) swap(x,y); sz[y]&#43;=sz[x]; uf[x]=y; ns--; return true; } }; Debug: void show() { cout&amp;lt;&amp;lt;&amp;#34;UnionFind:----------------------\n&amp;#34;; cout&amp;lt;&amp;lt;&amp;#34;id:&amp;#34;; for(int i=0;i&amp;lt;n;i&#43;&#43;) cout&amp;lt;&amp;lt;&amp;#39;\t&amp;#39;&amp;lt;&amp;lt;i; cout&amp;lt;&amp;lt;&amp;#39;\n&amp;#39;;|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/solutions">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">[模板][数据结构] 并查集 Union Find / Disjoint Set Union</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86' class="muted-link">
+  <span class="Label Label--gray">并查集</span>
+</a>
+
+
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2020-09-24. Published at: 2020-09-24.">
+        
+          Published: 2020-09-24 Thu 23:18:06
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="并查集-union-find--disjoint-set-union">并查集 Union Find / Disjoint Set Union</h2>
+<h3 id="路径压缩和按-size-合并-union-by-size">路径压缩和按 size 合并 Union by Size</h3>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// M: max number of set
+</span><span class="c1">// id is in [0~M-1]
+</span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="n">size_t</span> <span class="n">M</span><span class="o">&gt;</span>
+<span class="k">struct</span> <span class="nc">UF</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">uf</span><span class="p">[</span><span class="n">M</span><span class="p">],</span><span class="n">sz</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+	<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">ns</span><span class="p">;</span> <span class="c1">// number of set
+</span><span class="c1"></span>	<span class="kt">void</span> <span class="nf">init</span><span class="p">(</span><span class="kt">int</span> <span class="n">n_</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">n</span><span class="o">=</span><span class="n">ns</span><span class="o">=</span><span class="n">n_</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">uf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">i</span><span class="p">,</span><span class="n">sz</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="kt">int</span> <span class="nf">find</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">return</span> <span class="n">x</span><span class="o">==</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">?</span><span class="nl">x</span><span class="p">:</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]);</span>
+	<span class="p">}</span>
+    <span class="kt">bool</span> <span class="nf">same</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">==</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+    <span class="p">}</span>
+	<span class="kt">bool</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">x</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="n">y</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="n">y</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">sz</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">&gt;</span><span class="n">sz</span><span class="p">[</span><span class="n">y</span><span class="p">])</span> <span class="n">swap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+        <span class="n">sz</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">+=</span><span class="n">sz</span><span class="p">[</span><span class="n">x</span><span class="p">];</span> <span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">y</span><span class="p">;</span> <span class="n">ns</span><span class="o">--</span><span class="p">;</span>
+		<span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><p>Debug:</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++">    <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;id:&#34;</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;uf:&#34;</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">uf</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;sz:&#34;</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">sz</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div><h3 id="路径压缩按size合并和集合额外信息">路径压缩按size合并和集合额外信息</h3>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// T must define +=
+</span><span class="c1">// M: max number of set
+</span><span class="c1">// id is in [0~M-1]
+</span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">M</span><span class="o">&gt;</span>
+<span class="k">struct</span> <span class="nc">UF</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">uf</span><span class="p">[</span><span class="n">M</span><span class="p">],</span><span class="n">sz</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+    <span class="n">T</span> <span class="n">info</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="kt">void</span> <span class="nf">init</span><span class="p">(</span><span class="kt">int</span> <span class="n">n_</span><span class="p">,</span><span class="n">T</span> <span class="n">info_</span><span class="p">[])</span>
+    <span class="p">{</span>
+        <span class="n">n</span><span class="o">=</span><span class="n">n_</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">uf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">i</span><span class="p">,</span><span class="n">sz</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">info</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">info_</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="nf">find</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">x</span><span class="o">==</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">?</span><span class="nl">x</span><span class="p">:</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]);</span>
+    <span class="p">}</span>
+    <span class="kt">bool</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="n">y</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="n">y</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">sz</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">&gt;</span><span class="n">sz</span><span class="p">[</span><span class="n">y</span><span class="p">])</span> <span class="n">swap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+        <span class="n">sz</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">+=</span><span class="n">sz</span><span class="p">[</span><span class="n">x</span><span class="p">];</span> <span class="n">info</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">+=</span><span class="n">info</span><span class="p">[</span><span class="n">x</span><span class="p">];</span> <span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">y</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">bool</span> <span class="nf">same</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">==</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">// get the info of the set contained x
+</span><span class="c1"></span>    <span class="n">T</span><span class="o">&amp;</span> <span class="n">getinfo</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> 
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">info</span><span class="p">[</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)];</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><p>Debug:</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++">    <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;id:&#34;</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;uf:&#34;</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">uf</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;info:&#34;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">info</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div><h3 id="按-size-合并及回滚-rollback">按 size 合并及回滚 Rollback</h3>
+<p>回滚部分未测试</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// M: max number of set
+</span><span class="c1">// id is in [0~M-1]
+</span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="n">size_t</span> <span class="n">M</span><span class="o">&gt;</span>
+<span class="k">struct</span> <span class="nc">UF</span>
+<span class="p">{</span>
+    <span class="k">typedef</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">PII</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">uf</span><span class="p">[</span><span class="n">M</span><span class="p">],</span><span class="n">sz</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+	<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="n">stack</span><span class="o">&lt;</span><span class="n">PII</span><span class="o">&gt;</span> <span class="n">st</span><span class="p">;</span>
+	<span class="kt">void</span> <span class="nf">init</span><span class="p">(</span><span class="kt">int</span> <span class="n">n_</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">n</span><span class="o">=</span><span class="n">n_</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">st</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="n">st</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">uf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">i</span><span class="p">,</span><span class="n">sz</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="kt">int</span> <span class="nf">find</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">return</span> <span class="n">x</span><span class="o">==</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">?</span><span class="nl">x</span><span class="p">:</span><span class="n">find</span><span class="p">(</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]);</span>
+	<span class="p">}</span>
+	<span class="kt">bool</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">x</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="n">y</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="n">y</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">st</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="nb">false</span><span class="p">;</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">sz</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">&gt;</span><span class="n">sz</span><span class="p">[</span><span class="n">y</span><span class="p">])</span> <span class="n">swap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+        <span class="n">sz</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">+=</span><span class="n">sz</span><span class="p">[</span><span class="n">x</span><span class="p">];</span> <span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">y</span><span class="p">;</span> <span class="n">st</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span> <span class="c1">// x-&gt;y
+</span><span class="c1"></span>		<span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+	<span class="p">}</span>
+    <span class="kt">bool</span> <span class="nf">rollback</span><span class="p">()</span> <span class="c1">// check st.empty()
+</span><span class="c1"></span>    <span class="p">{</span>
+        <span class="n">PII</span> <span class="n">p</span><span class="o">=</span><span class="n">st</span><span class="p">.</span><span class="n">top</span><span class="p">();</span> <span class="n">st</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+        <span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="n">p</span><span class="p">.</span><span class="n">first</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">p</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">==-</span><span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="n">sz</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">-=</span><span class="n">sz</span><span class="p">[</span><span class="n">x</span><span class="p">];</span> <span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">x</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+	<span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
+	<span class="p">{</span>
+		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;id:&#34;</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">;</span>
+		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;uf:&#34;</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">uf</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><h3 id="路径压缩和按秩合并-union-by-rank">路径压缩和按秩合并 Union by Rank</h3>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// M: max number of set
+</span><span class="c1">// id is in [0~M-1]
+</span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="n">size_t</span> <span class="n">M</span><span class="o">&gt;</span>
+<span class="k">struct</span> <span class="nc">UF</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">uf</span><span class="p">[</span><span class="n">M</span><span class="p">],</span><span class="n">rk</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="kt">void</span> <span class="nf">init</span><span class="p">(</span><span class="kt">int</span> <span class="n">n_</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">n</span><span class="o">=</span><span class="n">n_</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">uf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">i</span><span class="p">,</span><span class="n">rk</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="nf">find</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">x</span><span class="o">==</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">?</span><span class="nl">x</span><span class="p">:</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]);</span>
+    <span class="p">}</span>
+    <span class="kt">bool</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="n">y</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="n">y</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">rk</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">&lt;</span><span class="n">rk</span><span class="p">[</span><span class="n">y</span><span class="p">])</span> <span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">y</span><span class="p">;</span>
+        <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">rk</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">&gt;</span><span class="n">rk</span><span class="p">[</span><span class="n">y</span><span class="p">])</span> <span class="n">uf</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">=</span><span class="n">x</span><span class="p">;</span>
+        <span class="k">else</span> <span class="n">uf</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">=</span><span class="n">x</span><span class="p">,</span><span class="n">rk</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;id:&#34;</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;uf:&#34;</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">uf</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;rk:&#34;</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">rk</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><h3 id="路径压缩-path-compression">路径压缩 Path Compression</h3>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// M: max number of set
+</span><span class="c1">// id is in [0~M-1]
+</span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="n">size_t</span> <span class="n">M</span><span class="o">&gt;</span>
+<span class="k">struct</span> <span class="nc">UF</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">uf</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="kt">void</span> <span class="nf">init</span><span class="p">(</span><span class="kt">int</span> <span class="n">n_</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">n</span><span class="o">=</span><span class="n">n_</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">uf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="nf">find</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">x</span><span class="o">==</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">?</span><span class="nl">x</span><span class="p">:</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]);</span>
+    <span class="p">}</span>
+    <span class="kt">bool</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="n">y</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="n">y</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">y</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;id:&#34;</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;uf:&#34;</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">uf</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><h3 id="测试">测试</h3>
+<p>全部测试未开 O2 优化，感觉 P3367 数据量不是特别够，所以结果也不是很有参考价值</p>
+<table>
+<thead>
+<tr>
+<th>题目</th>
+<th>写法</th>
+<th>时间（ms）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Luogu P3367 【模板】并查集</td>
+<td>路径压缩</td>
+<td>240</td>
+</tr>
+<tr>
+<td>Luogu P3367</td>
+<td>按秩合并</td>
+<td>275</td>
+</tr>
+<tr>
+<td>Luogu P3367</td>
+<td>路径压缩按秩合并</td>
+<td>249</td>
+</tr>
+<tr>
+<td>Luogu P3367</td>
+<td>按 size 合并</td>
+<td>288</td>
+</tr>
+<tr>
+<td>Luogu P3367</td>
+<td>路径压缩按 size 合并</td>
+<td>223</td>
+</tr>
+</tbody>
+</table>
+
+  </section>
+
+  <section>
+    
+        <a href="/templates/gt/dijkstra/" class="previous_page">Prev: [模板][图论] 迪杰斯特拉 Dijkstra </a>
+    
+     <br> 
+    
+        <a href="/templates/gt/floyd/" class="next_page">Next: [模板][图论] 弗洛伊德 Floyd </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>[模板][数据结构] 并查集 Union Find / Disjoint Set Union</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#并查集-union-find--disjoint-set-union">并查集 Union Find / Disjoint Set Union</a>
+      <ul>
+        <li><a href="#路径压缩和按-size-合并-union-by-size">路径压缩和按 size 合并 Union by Size</a></li>
+        <li><a href="#路径压缩按size合并和集合额外信息">路径压缩按size合并和集合额外信息</a></li>
+        <li><a href="#按-size-合并及回滚-rollback">按 size 合并及回滚 Rollback</a></li>
+        <li><a href="#路径压缩和按秩合并-union-by-rank">路径压缩和按秩合并 Union by Rank</a></li>
+        <li><a href="#路径压缩-path-compression">路径压缩 Path Compression</a></li>
+        <li><a href="#测试">测试</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+  </body>
+</html>

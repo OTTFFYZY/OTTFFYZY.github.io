@@ -102,6 +102,46 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
+      <a href="/templates/ds/unionfind/">
+        <div class="h2 mt-1 mb-1">[模板][数据结构] 并查集 Union Find / Disjoint Set Union</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86' class="muted-link">
+  <span class="Label Label--gray">并查集</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        <span>2020-09-24</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    并查集 Union Find / Disjoint Set Union 路径压缩和按 size 合并 Union by Size // M: max number of set // id is in [0~M-1] template&lt;size_t M&gt; struct UF { int uf[M],sz[M]; int n; int ns; // number of set void init(int n_) { n=ns=n_; for(int i=0;i&lt;n;i++) uf[i]=i,sz[i]=1; } int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } bool same(int x,int y) { return find(x)==find(y); } bool merge(int x,int y) { x=find(x); y=find(y); if(x==y) return false; if(sz[x]&gt;sz[y]) swap(x,y); sz[y]+=sz[x]; uf[x]=y; ns--; return true; } }; Debug: void show() { cout&lt;&lt;&#34;UnionFind:----------------------\n&#34;; cout&lt;&lt;&#34;id:&#34;; for(int i=0;i&lt;n;i++) cout&lt;&lt;&#39;\t&#39;&lt;&lt;i; cout&lt;&lt;&#39;\n&#39;;
+    <a class="muted-link" href="/templates/ds/unionfind/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
       <a href="/contests/atcoder/abc177/">
         <div class="h2 mt-1 mb-1">[AtCoder] Beginner Contest 177</div>
       </a>
@@ -193,7 +233,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">6</span>
     </span>
     
   </div>
@@ -208,11 +248,16 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e5%9b%be%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">图论</span></a>
-      <span class="text-right Counter">1</span>
+      <span class="text-right Counter">3</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="link-gray text-emphasized css-truncate-target"><span class="">数据结构</span></a>
+      <span class="text-right Counter">2</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/templates/%e6%95%b0%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">数论</span></a>
       <span class="text-right Counter">1</span>
     </span>
     
@@ -272,6 +317,11 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/mst" class="link-gray text-emphasized css-truncate-target"><span class="">Mst</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e4%ba%8c%e5%8f%89%e5%a0%86" class="link-gray text-emphasized css-truncate-target"><span class="">二叉堆</span></a>
       <span class="text-right Counter">1</span>
     </span>
@@ -288,7 +338,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e5%b9%b6%e6%9f%a5%e9%9b%86" class="link-gray text-emphasized css-truncate-target"><span class="">并查集</span></a>
-      <span class="text-right Counter">1</span>
+      <span class="text-right Counter">2</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -303,7 +353,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e6%9c%80%e7%9f%ad%e8%b7%af" class="link-gray text-emphasized css-truncate-target"><span class="">最短路</span></a>
-      <span class="text-right Counter">1</span>
+      <span class="text-right Counter">2</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -363,7 +413,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-09" class="link-gray text-emphasized css-truncate-target"><span class="">2020 09</span></a>
-      <span class="text-right Counter">15</span>
+      <span class="text-right Counter">19</span>
     </span>
     
   </div>

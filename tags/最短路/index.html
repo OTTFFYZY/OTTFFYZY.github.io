@@ -102,6 +102,46 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
+      <a href="/templates/gt/floyd/">
+        <div class="h2 mt-1 mb-1">[模板][图论] 弗洛伊德 Floyd</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF' class="muted-link">
+  <span class="Label Label--gray">最短路</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        <span>2020-09-25</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    弗洛伊德 Floyd // T must define &lt; and + template&lt;typename T,size_t V,T INF=T(0x3f3f3f3f)&gt; struct Floyd { T g[V][V]; int n; void cmin(T &amp;x,T y) { if(y&lt;x) x=y; } void init(int n_) { n=n_; for(int i=0;i&lt;n;i++) for(int j=0;j&lt;n;j++) g[i][j]=INF; } void init(int n_,int g_[V][V]) { n=n_; for(int i=0;i&lt;n;i++) for(int j=0;j&lt;n;j++) g[i][j]=g_[i][j]; } void addedge(int u,int v,T w) // check multi-edges { g[u][v]=w; // g[v][u]=w; } void floyd() { for(int k=0;k&lt;n;k++) for(int i=0;i&lt;n;i++) for(int j=0;j&lt;n;j++) cmin(g[i][j],g[i][k]+g[k][j]); } };
+    <a class="muted-link" href="/templates/gt/floyd/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
       <a href="/templates/gt/dijkstra/">
         <div class="h2 mt-1 mb-1">[模板][图论] 迪杰斯特拉 Dijkstra</div>
       </a>
@@ -131,7 +171,7 @@
   </div>
   <div class="text-gray">
     
-    迪杰斯特拉 Dijkstra 模板（priority_queue） // T must define &lt; // V: max number of vertex [0~V-1] template&lt;typename T,size_t V,T INF=T(0x3f3f3f3f),T ZERO=T(0)&gt; struct SP { typedef pair&lt;T,int&gt; PTI; vector&lt;PTI&gt; g[V]; T dis[V]; int vis[V]; int n; void init(int n_) { n=n_; for(int i=0;i&lt;n;i++) g[i].clear(); } void addedge(int u,int v,T w) { g[u].emplace_back(w,v); // g[v].emplace_back(w,u); undirected } void dijkstra(int st,int ed=-1) // ed=-1 no destination { for(int i=0;i&lt;n;i++) dis[i]=INF,vis[i]=0; priority_queue&lt;PTI,vector&lt;PTI&gt;,greater&lt;PTI&gt; &gt; qu; dis[st]=ZERO; qu.emplace(ZERO,st); while(!qu.empty()) { PTI p=qu.top(); qu.pop(); int u=p.second; if(vis[u])
+    迪杰斯特拉 Dijkstra 模板（priority_queue） // T must define &lt; and + // V: max number of vertex [0~V-1] template&lt;typename T,size_t V,T INF=T(0x3f3f3f3f),T ZERO=T(0)&gt; struct Dijkstra { typedef pair&lt;T,int&gt; PTI; vector&lt;PTI&gt; g[V]; T dis[V]; int vis[V]; int n; void init(int n_) { n=n_; for(int i=0;i&lt;n;i++) g[i].clear(); } void addedge(int u,int v,T w) { g[u].emplace_back(w,v); // g[v].emplace_back(w,u); undirected } void solve(int st,int ed=-1) // ed=-1 no destination { for(int i=0;i&lt;n;i++) dis[i]=INF,vis[i]=0; priority_queue&lt;PTI,vector&lt;PTI&gt;,greater&lt;PTI&gt; &gt; qu; dis[st]=ZERO; qu.emplace(ZERO,st); while(!qu.empty()) { PTI p=qu.top(); qu.pop(); int
     <a class="muted-link" href="/templates/gt/dijkstra/">…</a>
   </div>
 </div>
@@ -181,7 +221,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">6</span>
     </span>
     
   </div>
@@ -196,11 +236,16 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e5%9b%be%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">图论</span></a>
-      <span class="text-right Counter">1</span>
+      <span class="text-right Counter">3</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="link-gray text-emphasized css-truncate-target"><span class="">数据结构</span></a>
+      <span class="text-right Counter">2</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/templates/%e6%95%b0%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">数论</span></a>
       <span class="text-right Counter">1</span>
     </span>
     
@@ -260,6 +305,11 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/mst" class="link-gray text-emphasized css-truncate-target"><span class="">Mst</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e4%ba%8c%e5%8f%89%e5%a0%86" class="link-gray text-emphasized css-truncate-target"><span class="">二叉堆</span></a>
       <span class="text-right Counter">1</span>
     </span>
@@ -276,7 +326,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e5%b9%b6%e6%9f%a5%e9%9b%86" class="link-gray text-emphasized css-truncate-target"><span class="">并查集</span></a>
-      <span class="text-right Counter">1</span>
+      <span class="text-right Counter">2</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -291,7 +341,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e6%9c%80%e7%9f%ad%e8%b7%af" class="link-gray text-emphasized css-truncate-target"><span class="">最短路</span></a>
-      <span class="text-right Counter">1</span>
+      <span class="text-right Counter">2</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -351,7 +401,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-09" class="link-gray text-emphasized css-truncate-target"><span class="">2020 09</span></a>
-      <span class="text-right Counter">15</span>
+      <span class="text-right Counter">19</span>
     </span>
     
   </div>

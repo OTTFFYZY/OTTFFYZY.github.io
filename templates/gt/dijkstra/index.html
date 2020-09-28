@@ -11,7 +11,7 @@
     </title>
     
     
-    <meta name="description" property="og:description" content="迪杰斯特拉 Dijkstra 模板（priority_queue） // T must define &amp;lt; // V: max number of vertex [0~V-1] template&amp;lt;typename T,size_t V,T INF=T(0x3f3f3f3f),T ZERO=T(0)&amp;gt; struct SP { typedef pair&amp;lt;T,int&amp;gt; PTI; vector&amp;lt;PTI&amp;gt; g[V]; T dis[V]; int vis[V]; int n; void init(int n_) { n=n_; for(int i=0;i&amp;lt;n;i&#43;&#43;) g[i].clear(); } void addedge(int u,int v,T w) { g[u].emplace_back(w,v); // g[v].emplace_back(w,u); undirected } void dijkstra(int st,int ed=-1) // ed=-1 no destination { for(int i=0;i&amp;lt;n;i&#43;&#43;) dis[i]=INF,vis[i]=0; priority_queue&amp;lt;PTI,vector&amp;lt;PTI&amp;gt;,greater&amp;lt;PTI&amp;gt; &amp;gt; qu; dis[st]=ZERO; qu.emplace(ZERO,st); while(!qu.empty()) { PTI p=qu.top(); qu.pop(); int u=p.second; if(vis[u])|OTTFF&#39;s Blog">
+    <meta name="description" property="og:description" content="迪杰斯特拉 Dijkstra 模板（priority_queue） // T must define &amp;lt; and &#43; // V: max number of vertex [0~V-1] template&amp;lt;typename T,size_t V,T INF=T(0x3f3f3f3f),T ZERO=T(0)&amp;gt; struct Dijkstra { typedef pair&amp;lt;T,int&amp;gt; PTI; vector&amp;lt;PTI&amp;gt; g[V]; T dis[V]; int vis[V]; int n; void init(int n_) { n=n_; for(int i=0;i&amp;lt;n;i&#43;&#43;) g[i].clear(); } void addedge(int u,int v,T w) { g[u].emplace_back(w,v); // g[v].emplace_back(w,u); undirected } void solve(int st,int ed=-1) // ed=-1 no destination { for(int i=0;i&amp;lt;n;i&#43;&#43;) dis[i]=INF,vis[i]=0; priority_queue&amp;lt;PTI,vector&amp;lt;PTI&amp;gt;,greater&amp;lt;PTI&amp;gt; &amp;gt; qu; dis[st]=ZERO; qu.emplace(ZERO,st); while(!qu.empty()) { PTI p=qu.top(); qu.pop(); int|OTTFF&#39;s Blog">
     
 
     <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
@@ -130,10 +130,10 @@
   <section class="pb-6 mb-3 border-bottom markdown">
       <h2 id="迪杰斯特拉-dijkstra">迪杰斯特拉 Dijkstra</h2>
 <h3 id="模板priority_queue">模板（priority_queue）</h3>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// T must define &lt;
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// T must define &lt; and +
 </span><span class="c1">// V: max number of vertex [0~V-1]
 </span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span><span class="n">size_t</span> <span class="n">V</span><span class="p">,</span><span class="n">T</span> <span class="n">INF</span><span class="o">=</span><span class="n">T</span><span class="p">(</span><span class="mh">0x3f3f3f3f</span><span class="p">),</span><span class="n">T</span> <span class="n">ZERO</span><span class="o">=</span><span class="n">T</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">&gt;</span>
-<span class="k">struct</span> <span class="nc">SP</span> <span class="p">{</span>
+<span class="k">struct</span> <span class="nc">Dijkstra</span> <span class="p">{</span>
     <span class="k">typedef</span> <span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">PTI</span><span class="p">;</span>
     <span class="n">vector</span><span class="o">&lt;</span><span class="n">PTI</span><span class="o">&gt;</span> <span class="n">g</span><span class="p">[</span><span class="n">V</span><span class="p">];</span>
     <span class="n">T</span> <span class="n">dis</span><span class="p">[</span><span class="n">V</span><span class="p">];</span>
@@ -149,7 +149,7 @@
         <span class="n">g</span><span class="p">[</span><span class="n">u</span><span class="p">].</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">v</span><span class="p">);</span>
         <span class="c1">// g[v].emplace_back(w,u); undirected
 </span><span class="c1"></span>    <span class="p">}</span>
-    <span class="kt">void</span> <span class="nf">dijkstra</span><span class="p">(</span><span class="kt">int</span> <span class="n">st</span><span class="p">,</span><span class="kt">int</span> <span class="n">ed</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// ed=-1 no destination
+    <span class="kt">void</span> <span class="nf">solve</span><span class="p">(</span><span class="kt">int</span> <span class="n">st</span><span class="p">,</span><span class="kt">int</span> <span class="n">ed</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// ed=-1 no destination
 </span><span class="c1"></span>    <span class="p">{</span>
         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">dis</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">INF</span><span class="p">,</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
         <span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">PTI</span><span class="p">,</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PTI</span><span class="o">&gt;</span><span class="p">,</span><span class="n">greater</span><span class="o">&lt;</span><span class="n">PTI</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">qu</span><span class="p">;</span>
@@ -252,7 +252,7 @@
 <span class="c1">// T must define &lt;
 </span><span class="c1">// V: max number of vertex [0~V-1]
 </span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span><span class="n">size_t</span> <span class="n">V</span><span class="p">,</span><span class="n">T</span> <span class="n">INF</span><span class="o">=</span><span class="n">T</span><span class="p">(</span><span class="mh">0x3f3f3f3f</span><span class="p">),</span><span class="n">T</span> <span class="n">ZERO</span><span class="o">=</span><span class="n">T</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">&gt;</span>
-<span class="k">struct</span> <span class="nc">SP</span> <span class="p">{</span>
+<span class="k">struct</span> <span class="nc">Dijkstra</span> <span class="p">{</span>
 	<span class="k">typedef</span> <span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">PTI</span><span class="p">;</span>
 	<span class="n">vector</span><span class="o">&lt;</span><span class="n">PTI</span><span class="o">&gt;</span> <span class="n">g</span><span class="p">[</span><span class="n">V</span><span class="p">];</span>
 	<span class="n">T</span> <span class="n">dis</span><span class="p">[</span><span class="n">V</span><span class="p">];</span>
@@ -269,7 +269,7 @@
 		<span class="n">g</span><span class="p">[</span><span class="n">u</span><span class="p">].</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">v</span><span class="p">);</span>
 		<span class="c1">// g[v].emplace_back(w,u); undirected
 </span><span class="c1"></span>	<span class="p">}</span>
-	<span class="kt">void</span> <span class="nf">dijkstra</span><span class="p">(</span><span class="kt">int</span> <span class="n">st</span><span class="p">,</span><span class="kt">int</span> <span class="n">ed</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// ed=-1 no destination
+	<span class="kt">void</span> <span class="nf">solve</span><span class="p">(</span><span class="kt">int</span> <span class="n">st</span><span class="p">,</span><span class="kt">int</span> <span class="n">ed</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span> <span class="c1">// ed=-1 no destination
 </span><span class="c1"></span>	<span class="p">{</span>
 		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">dis</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">INF</span><span class="p">,</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
 		<span class="n">heap</span><span class="p">.</span><span class="n">init</span><span class="p">();</span>
@@ -363,7 +363,9 @@
     
         <a href="/templates/ds/binaryheap/" class="previous_page">Prev: [模板][数据结构] 二叉堆 Binary Heap </a>
     
+     <br> 
     
+        <a href="/templates/ds/unionfind/" class="next_page">Next: [模板][数据结构] 并查集 Union Find / Disjoint Set Union </a>
     
   </section>
 

@@ -6,15 +6,24 @@
     <description>Recent content in Templates on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 24 Sep 2020 19:10:04 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2020 23:19:53 -0400</lastBuildDate>
     
 	<atom:link href="https://ottffyzy.github.io/templates/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>数论</title>
+      <link>https://ottffyzy.github.io/templates/%E6%95%B0%E8%AE%BA/</link>
+      <pubDate>Sun, 27 Sep 2020 23:19:53 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/templates/%E6%95%B0%E8%AE%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>图论</title>
       <link>https://ottffyzy.github.io/templates/%E5%9B%BE%E8%AE%BA/</link>
-      <pubDate>Thu, 24 Sep 2020 19:10:04 -0400</pubDate>
+      <pubDate>Fri, 25 Sep 2020 16:25:48 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/templates/%E5%9B%BE%E8%AE%BA/</guid>
       <description></description>
@@ -23,7 +32,7 @@
     <item>
       <title>数据结构</title>
       <link>https://ottffyzy.github.io/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
-      <pubDate>Wed, 23 Sep 2020 23:12:58 -0400</pubDate>
+      <pubDate>Thu, 24 Sep 2020 23:18:06 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
       <description></description>

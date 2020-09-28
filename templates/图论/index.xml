@@ -6,10 +6,28 @@
     <description>Recent content in 图论 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 24 Sep 2020 19:10:04 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2020 16:25:48 -0400</lastBuildDate>
     
 	<atom:link href="https://ottffyzy.github.io/templates/%E5%9B%BE%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[模板][图论] 克鲁斯卡尔 Kruskal</title>
+      <link>https://ottffyzy.github.io/templates/gt/kruskal/</link>
+      <pubDate>Fri, 25 Sep 2020 16:25:48 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/templates/gt/kruskal/</guid>
+      <description>克鲁斯卡尔 Kruskal template&amp;lt;typename T,size_t V,size_t E&amp;gt; struct Kruskal { typedef tuple&amp;lt;T,int,int&amp;gt; Edge; typedef pair&amp;lt;T,int&amp;gt; PTI; Edge edges[E]; int inmst[E]; int n; // number of vertex int m; // number of edge int uf[V]; int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } void init(int n_) { n=n_; m=0; } void addedge(int u,int v,T w) { edges[m++]=Edge(w,u,v); } PTI solve(int cc=1) // number of connected component { int cnt=n; T sum=0; int u,v; T w; for(int i=0;i&amp;lt;n;i++) uf[i]=i; sort(edges,edges+m); for(int i=0;i&amp;lt;m&amp;amp;&amp;amp;cnt&amp;gt;cc;i++) { tie(w,u,v)=edges[i]; u=find(u); v=find(v); if(u==v) continue; uf[u]=v; cnt--; sum=sum+w; } return {sum,cnt==cc}; } };</description>
+    </item>
+    
+    <item>
+      <title>[模板][图论] 弗洛伊德 Floyd</title>
+      <link>https://ottffyzy.github.io/templates/gt/floyd/</link>
+      <pubDate>Fri, 25 Sep 2020 15:07:23 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/templates/gt/floyd/</guid>
+      <description>弗洛伊德 Floyd // T must define &amp;lt; and + template&amp;lt;typename T,size_t V,T INF=T(0x3f3f3f3f)&amp;gt; struct Floyd { T g[V][V]; int n; void cmin(T &amp;amp;x,T y) { if(y&amp;lt;x) x=y; } void init(int n_) { n=n_; for(int i=0;i&amp;lt;n;i++) for(int j=0;j&amp;lt;n;j++) g[i][j]=INF; } void init(int n_,int g_[V][V]) { n=n_; for(int i=0;i&amp;lt;n;i++) for(int j=0;j&amp;lt;n;j++) g[i][j]=g_[i][j]; } void addedge(int u,int v,T w) // check multi-edges { g[u][v]=w; // g[v][u]=w; } void floyd() { for(int k=0;k&amp;lt;n;k++) for(int i=0;i&amp;lt;n;i++) for(int j=0;j&amp;lt;n;j++) cmin(g[i][j],g[i][k]+g[k][j]); } };</description>
+    </item>
     
     <item>
       <title>[模板][图论] 迪杰斯特拉 Dijkstra</title>
@@ -17,7 +35,7 @@
       <pubDate>Thu, 24 Sep 2020 19:10:04 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/templates/gt/dijkstra/</guid>
-      <description>迪杰斯特拉 Dijkstra 模板（priority_queue） // T must define &amp;lt; // V: max number of vertex [0~V-1] template&amp;lt;typename T,size_t V,T INF=T(0x3f3f3f3f),T ZERO=T(0)&amp;gt; struct SP { typedef pair&amp;lt;T,int&amp;gt; PTI; vector&amp;lt;PTI&amp;gt; g[V]; T dis[V]; int vis[V]; int n; void init(int n_) { n=n_; for(int i=0;i&amp;lt;n;i++) g[i].clear(); } void addedge(int u,int v,T w) { g[u].emplace_back(w,v); // g[v].emplace_back(w,u); undirected } void dijkstra(int st,int ed=-1) // ed=-1 no destination { for(int i=0;i&amp;lt;n;i++) dis[i]=INF,vis[i]=0; priority_queue&amp;lt;PTI,vector&amp;lt;PTI&amp;gt;,greater&amp;lt;PTI&amp;gt; &amp;gt; qu; dis[st]=ZERO; qu.emplace(ZERO,st); while(!qu.empty()) { PTI p=qu.top(); qu.pop(); int u=p.second; if(vis[u])</description>
+      <description>迪杰斯特拉 Dijkstra 模板（priority_queue） // T must define &amp;lt; and + // V: max number of vertex [0~V-1] template&amp;lt;typename T,size_t V,T INF=T(0x3f3f3f3f),T ZERO=T(0)&amp;gt; struct Dijkstra { typedef pair&amp;lt;T,int&amp;gt; PTI; vector&amp;lt;PTI&amp;gt; g[V]; T dis[V]; int vis[V]; int n; void init(int n_) { n=n_; for(int i=0;i&amp;lt;n;i++) g[i].clear(); } void addedge(int u,int v,T w) { g[u].emplace_back(w,v); // g[v].emplace_back(w,u); undirected } void solve(int st,int ed=-1) // ed=-1 no destination { for(int i=0;i&amp;lt;n;i++) dis[i]=INF,vis[i]=0; priority_queue&amp;lt;PTI,vector&amp;lt;PTI&amp;gt;,greater&amp;lt;PTI&amp;gt; &amp;gt; qu; dis[st]=ZERO; qu.emplace(ZERO,st); while(!qu.empty()) { PTI p=qu.top(); qu.pop(); int</description>
     </item>
     
   </channel>

@@ -4,56 +4,96 @@
   
   <url>
     <loc>https://ottffyzy.github.io/archives/2020-09/</loc>
-    <lastmod>2020-09-24T19:10:04-04:00</lastmod>
+    <lastmod>2020-09-27T23:19:53-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ottffyzy.github.io/templates/gt/dijkstra/</loc>
-    <lastmod>2020-09-24T19:10:04-04:00</lastmod>
+    <loc>https://ottffyzy.github.io/templates/nt/mod/</loc>
+    <lastmod>2020-09-27T23:19:53-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ottffyzy.github.io/archives/</loc>
-    <lastmod>2020-09-24T19:10:04-04:00</lastmod>
+    <lastmod>2020-09-27T23:19:53-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ottffyzy.github.io/categories/</loc>
-    <lastmod>2020-09-24T19:10:04-04:00</lastmod>
+    <lastmod>2020-09-27T23:19:53-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ottffyzy.github.io/</loc>
-    <lastmod>2020-09-24T19:10:04-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ottffyzy.github.io/tags/</loc>
-    <lastmod>2020-09-24T19:10:04-04:00</lastmod>
+    <lastmod>2020-09-27T23:19:53-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ottffyzy.github.io/templates/</loc>
-    <lastmod>2020-09-24T19:10:04-04:00</lastmod>
+    <lastmod>2020-09-27T23:19:53-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ottffyzy.github.io/categories/templates/</loc>
-    <lastmod>2020-09-24T19:10:04-04:00</lastmod>
+    <lastmod>2020-09-27T23:19:53-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ottffyzy.github.io/templates/</loc>
-    <lastmod>2020-09-24T19:10:04-04:00</lastmod>
+    <lastmod>2020-09-27T23:19:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/templates/%E6%95%B0%E8%AE%BA/</loc>
+    <lastmod>2020-09-27T23:19:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/templates/gt/kruskal/</loc>
+    <lastmod>2020-09-25T16:25:48-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/tags/mst/</loc>
+    <lastmod>2020-09-25T16:25:48-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/tags/</loc>
+    <lastmod>2020-09-25T16:25:48-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ottffyzy.github.io/templates/%E5%9B%BE%E8%AE%BA/</loc>
-    <lastmod>2020-09-24T19:10:04-04:00</lastmod>
+    <lastmod>2020-09-25T16:25:48-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/templates/gt/floyd/</loc>
+    <lastmod>2020-09-25T15:07:23-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ottffyzy.github.io/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/</loc>
+    <lastmod>2020-09-25T15:07:23-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/templates/ds/unionfind/</loc>
+    <lastmod>2020-09-24T23:18:06-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/</loc>
+    <lastmod>2020-09-24T23:18:06-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2020-09-24T23:18:06-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/templates/gt/dijkstra/</loc>
     <lastmod>2020-09-24T19:10:04-04:00</lastmod>
   </url>
   
@@ -64,11 +104,6 @@
   
   <url>
     <loc>https://ottffyzy.github.io/tags/%E4%BA%8C%E5%8F%89%E5%A0%86/</loc>
-    <lastmod>2020-09-23T23:12:58-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ottffyzy.github.io/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2020-09-23T23:12:58-04:00</lastmod>
   </url>
   
@@ -234,11 +269,6 @@
   
   <url>
     <loc>https://ottffyzy.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/</loc>
-    <lastmod>2020-09-05T01:26:32-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ottffyzy.github.io/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/</loc>
     <lastmod>2020-09-05T01:26:32-04:00</lastmod>
   </url>
   
