@@ -174,7 +174,9 @@
             <span class="p">}</span>
         <span class="p">}</span>
     <span class="p">}</span>
-    <span class="cm">/* Debug ------------------------------------ 
+<span class="p">};</span>
+</code></pre></div><p>Debug:</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++">    <span class="cm">/* Debug ------------------------------------ 
 </span><span class="cm">       T need to define function
 </span><span class="cm">       ostream&amp; operator&lt;&lt;(ostream&amp; out, T rhs);  */</span>
     <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
@@ -191,7 +193,6 @@
         <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
         <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;-------------------------------</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">;</span>
     <span class="p">}</span>
-<span class="p">};</span>
 </code></pre></div><h3 id="模板-heap">模板 (Heap)</h3>
 <div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// must define &lt; for T
 </span><span class="c1">// M: max size of heap
@@ -295,24 +296,25 @@
 			<span class="p">}</span>
 		<span class="p">}</span>
 	<span class="p">}</span>
-	<span class="cm">/* Debug ------------------------------------ 
+<span class="p">};</span>
+</code></pre></div><p>Debug:</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++">    <span class="cm">/* Debug ------------------------------------ 
 </span><span class="cm">       T need to define friend function
 </span><span class="cm">       ostream&amp; operator&lt;&lt;(ostream&amp; out, T rhs);  */</span>
     <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
     <span class="p">{</span>
-    	<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;Dijkstra:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
-    	<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;id:&#34;</span><span class="p">;</span>
-    	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">;</span>
-    	<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
-	    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;dis:&#34;</span><span class="p">;</span>
-	    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">dis</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-	    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
-		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;vis:&#34;</span><span class="p">;</span>
-		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
-	    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;-------------------------------</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;Dijkstra:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;id:&#34;</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;dis:&#34;</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">dis</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;vis:&#34;</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;-------------------------------</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">;</span>
     <span class="p">}</span>
-<span class="p">};</span>
 </code></pre></div><h3 id="测试">测试</h3>
 <table>
 <thead>

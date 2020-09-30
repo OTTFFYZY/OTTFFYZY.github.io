@@ -266,18 +266,19 @@
         <span class="n">sz</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">-=</span><span class="n">sz</span><span class="p">[</span><span class="n">x</span><span class="p">];</span> <span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">x</span><span class="p">;</span>
         <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
     <span class="p">}</span>
-	<span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
-	<span class="p">{</span>
-		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
-		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;id:&#34;</span><span class="p">;</span>
-		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">;</span>
-		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
-		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;uf:&#34;</span><span class="p">;</span>
-		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">uf</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
-		<span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
-	<span class="p">}</span>
 <span class="p">};</span>
+</code></pre></div><p>Debug:</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++">    <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;id:&#34;</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;uf:&#34;</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">uf</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+    <span class="p">}</span>
 </code></pre></div><h3 id="路径压缩和按秩合并-union-by-rank">路径压缩和按秩合并 Union by Rank</h3>
 <div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// M: max number of set
 </span><span class="c1">// id is in [0~M-1]
@@ -304,7 +305,9 @@
         <span class="k">else</span> <span class="n">uf</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">=</span><span class="n">x</span><span class="p">,</span><span class="n">rk</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
         <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
+<span class="p">};</span>
+</code></pre></div><p>Debug:</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++">    <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
     <span class="p">{</span>
         <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
         <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;id:&#34;</span><span class="p">;</span>
@@ -318,7 +321,6 @@
         <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
         <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
     <span class="p">}</span>
-<span class="p">};</span>
 </code></pre></div><h3 id="路径压缩-path-compression">路径压缩 Path Compression</h3>
 <div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// M: max number of set
 </span><span class="c1">// id is in [0~M-1]
@@ -343,7 +345,9 @@
         <span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">y</span><span class="p">;</span>
         <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
+<span class="p">};</span>
+</code></pre></div><p>Debug:</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++">    <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
     <span class="p">{</span>
         <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
         <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;id:&#34;</span><span class="p">;</span>
@@ -354,7 +358,6 @@
         <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
         <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
     <span class="p">}</span>
-<span class="p">};</span>
 </code></pre></div><h3 id="测试">测试</h3>
 <p>全部测试未开 O2 优化，感觉 P3367 数据量不是特别够，所以结果也不是很有参考价值</p>
 <table>
