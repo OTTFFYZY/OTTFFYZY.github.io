@@ -6,10 +6,19 @@
     <description>Recent content in Tags on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 27 Sep 2020 23:19:53 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2020 22:00:50 -0400</lastBuildDate>
     
 	<atom:link href="https://ottffyzy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hash</title>
+      <link>https://ottffyzy.github.io/tags/hash/</link>
+      <pubDate>Mon, 28 Sep 2020 22:00:50 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/hash/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>数论</title>
@@ -17,6 +26,15 @@
       <pubDate>Sun, 27 Sep 2020 23:19:53 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tags/%E6%95%B0%E8%AE%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>左偏树</title>
+      <link>https://ottffyzy.github.io/tags/%E5%B7%A6%E5%81%8F%E6%A0%91/</link>
+      <pubDate>Sun, 27 Sep 2020 19:07:04 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E5%B7%A6%E5%81%8F%E6%A0%91/</guid>
       <description></description>
     </item>
     

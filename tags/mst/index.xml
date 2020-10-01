@@ -17,7 +17,7 @@
       <pubDate>Fri, 25 Sep 2020 16:25:48 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/templates/gt/kruskal/</guid>
-      <description>克鲁斯卡尔 Kruskal template&amp;lt;typename T,size_t V,size_t E&amp;gt; struct Kruskal { typedef tuple&amp;lt;T,int,int&amp;gt; Edge; typedef pair&amp;lt;T,int&amp;gt; PTI; Edge edges[E]; int inmst[E]; int n; // number of vertex int m; // number of edge int uf[V]; int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } void init(int n_) { n=n_; m=0; } void addedge(int u,int v,T w) { edges[m++]=Edge(w,u,v); } PTI solve(int cc=1) // number of connected component { int cnt=n; T sum=0; int u,v; T w; for(int i=0;i&amp;lt;n;i++) uf[i]=i; sort(edges,edges+m); for(int i=0;i&amp;lt;m&amp;amp;&amp;amp;cnt&amp;gt;cc;i++) { tie(w,u,v)=edges[i]; u=find(u); v=find(v); if(u==v) continue; uf[u]=v; cnt--; sum=sum+w; } return {sum,cnt==cc}; } };</description>
+      <description>克鲁斯卡尔 Kruskal template&amp;lt;typename T,size_t V,size_t E&amp;gt; struct Kruskal { typedef tuple&amp;lt;T,int,int&amp;gt; Edge; typedef pair&amp;lt;T,int&amp;gt; PTI; Edge edges[E]; int inmst[E]; int n; // number of vertex int m; // number of edge int uf[V]; int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } void init(int n_) { n=n_; m=0; } void addedge(int u,int v,T w) { edges[m++]={w,u,v}; } PTI solve() { int cnt=n; // number of connected component T sum=0; int u,v; T w; for(int i=0;i&amp;lt;n;i++) uf[i]=i; sort(edges,edges+m); for(int i=0;i&amp;lt;m&amp;amp;&amp;amp;cnt&amp;gt;1;i++) { tie(w,u,v)=edges[i]; u=find(u); v=find(v); if(u==v) continue; inmst[i]=1; sum=sum+w; cnt--; uf[u]=v; } return {sum,cnt==1}; // {totval in mst, ismst} }</description>
     </item>
     
   </channel>

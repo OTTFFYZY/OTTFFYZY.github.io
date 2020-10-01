@@ -102,6 +102,122 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
+      <a href="/templates/others/cppmain/">
+        <div class="h2 mt-1 mb-1">[模板] C&#43;&#43; 日常使用</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+
+
+
+
+
+      <div class="float-md-right">
+        <span>2020-09-29</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    C++ 日常使用 // #include &lt;bits/stdc++.h&gt; #include &lt;cstdio&gt; #include &lt;cstring&gt; #include &lt;cstdlib&gt; #include &lt;climits&gt; #include &lt;cmath&gt; #include &lt;iostream&gt; #include &lt;iomanip&gt; #include &lt;string&gt; #include &lt;algorithm&gt; #include &lt;numeric&gt; #include &lt;utility&gt; #include &lt;functional&gt; #include &lt;vector&gt; #include &lt;list&gt; #include &lt;stack&gt; #include &lt;queue&gt; #include &lt;deque&gt; #include &lt;set&gt; #include &lt;map&gt; #include &lt;bitset&gt; #include &lt;complex&gt; #include &lt;random&gt; #include &lt;chrono&gt; #include &lt;array&gt; #include &lt;unordered_set&gt; #include &lt;unordered_map&gt; #include &lt;tuple&gt; using namespace std; using LL = long long; using ULL = unsigned long long; using LD = long double; using PII = pair&lt;int,int&gt;; using VI = vector&lt;int&gt;; using MII = map&lt;int,int&gt;; template&lt;typename T&gt; void cmin(T &amp;x,const T &amp;y)
+    <a class="muted-link" href="/templates/others/cppmain/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
+      <a href="/summaries/lcgoodproblem/">
+        <div class="h2 mt-1 mb-1">[LeetCode] 值得一做的题目列表</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/summaries' class="muted-link">
+  <span class="Label Label--gray-darker">Summaries</span>
+</a>
+
+
+
+<a href='/ojs/leetcode' class="muted-link">
+  <span class="Label Label--gray-darker">LeetCode</span>
+</a>
+
+
+
+
+
+
+      <div class="float-md-right">
+        <span>2020-09-29</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    前 总结一下 LeetCode 上比较好的题目（部分题可能并不是很好，但是实现细节复杂，面试需要特别注意也囊括进来了）。 推荐指数 $1-5$ 是按照可能已经掌握的知识层次进行排序的，竞赛选手推荐刷推荐指数 $3$ 以上的题目。推荐指数和难度
+    <a class="muted-link" href="/summaries/lcgoodproblem/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
+      <a href="/templates/hash/safehash/">
+        <div class="h2 mt-1 mb-1">[模板][Hash] 安全哈希函数</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+
+
+<a href='/tags/hash' class="muted-link">
+  <span class="Label Label--gray">Hash</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        <span>2020-09-28</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    安全哈希函数 struct custom_hash { static uint64_t splitmix64(uint64_t x) { // http://xorshift.di.unimi.it/splitmix64.c x += 0x9e3779b97f4a7c15; x = (x ^ (x &gt;&gt; 30)) * 0xbf58476d1ce4e5b9; x = (x ^ (x &gt;&gt; 27)) * 0x94d049bb133111eb; return x ^ (x &gt;&gt; 31); } size_t operator()(uint64_t x) const { static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count(); return splitmix64(x + FIXED_RANDOM); } }; 用这个函数作为 unordered_set 的第二个参数或 unordered_map 的第三个参数。
+    <a class="muted-link" href="/templates/hash/safehash/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
       <a href="/templates/nt/mod/">
         <div class="h2 mt-1 mb-1">[模板][数论] 模下计算</div>
       </a>
@@ -131,8 +247,48 @@
   </div>
   <div class="text-gray">
     
-    模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;x,int y) { x+=y; if(x&gt;=MO) x-=MO; } inline void subv(int &amp;x,int y) { x-=y; if(x&lt;0) x+=MO; } inline void mulv(int &amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;1) mulv(ans,x); mulv(x,x); n&gt;&gt;=1; } return ans; } Mint template&lt;size_t MO=1000000007&gt; struct Mint { int x; Mint(int x=0):x(x){} void read() {
+    模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;x,int y) { x+=y; if(x&gt;=MO) x-=MO; } inline void subv(int &amp;x,int y) { x-=y; if(x&lt;0) x+=MO; } inline void mulv(int &amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;1) mulv(ans,x); mulv(x,x); n&gt;&gt;=1; } return ans; } Mint template&lt;size_t MO=1000000007&gt; struct Mint { int x; Mint(int x=0):x(x){ norm(); } void
     <a class="muted-link" href="/templates/nt/mod/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
+      <a href="/templates/ds/leftist/">
+        <div class="h2 mt-1 mb-1">[模板][数据结构] 左偏树 Leftist Tree</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E5%B7%A6%E5%81%8F%E6%A0%91' class="muted-link">
+  <span class="Label Label--gray">左偏树</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        <span>2020-09-27</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    左偏树 Leftist Tree // min leftist tree // T must define &lt; // M: the size of the heap template&lt;typename T,size_t M,typename Cmp=less&lt;&gt;&gt; struct Leftist { T val[M]; int l[M],r[M],d[M]; int nn; // number of node Cmp cmp; void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&lt;int&gt; qu; for(int i=1;i&lt;=n;i++) qu.push(i); int u,v; while(qu.size()&gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[++nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;x,int y) // merge tree
+    <a class="muted-link" href="/templates/ds/leftist/">…</a>
   </div>
 </div>
 
@@ -171,7 +327,7 @@
   </div>
   <div class="text-gray">
     
-    克鲁斯卡尔 Kruskal template&lt;typename T,size_t V,size_t E&gt; struct Kruskal { typedef tuple&lt;T,int,int&gt; Edge; typedef pair&lt;T,int&gt; PTI; Edge edges[E]; int inmst[E]; int n; // number of vertex int m; // number of edge int uf[V]; int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } void init(int n_) { n=n_; m=0; } void addedge(int u,int v,T w) { edges[m++]=Edge(w,u,v); } PTI solve(int cc=1) // number of connected component { int cnt=n; T sum=0; int u,v; T w; for(int i=0;i&lt;n;i++) uf[i]=i; sort(edges,edges+m); for(int i=0;i&lt;m&amp;&amp;cnt&gt;cc;i++) { tie(w,u,v)=edges[i]; u=find(u); v=find(v); if(u==v) continue; uf[u]=v; cnt--; sum=sum+w; } return {sum,cnt==cc}; } };
+    克鲁斯卡尔 Kruskal template&lt;typename T,size_t V,size_t E&gt; struct Kruskal { typedef tuple&lt;T,int,int&gt; Edge; typedef pair&lt;T,int&gt; PTI; Edge edges[E]; int inmst[E]; int n; // number of vertex int m; // number of edge int uf[V]; int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } void init(int n_) { n=n_; m=0; } void addedge(int u,int v,T w) { edges[m++]={w,u,v}; } PTI solve() { int cnt=n; // number of connected component T sum=0; int u,v; T w; for(int i=0;i&lt;n;i++) uf[i]=i; sort(edges,edges+m); for(int i=0;i&lt;m&amp;&amp;cnt&gt;1;i++) { tie(w,u,v)=edges[i]; u=find(u); v=find(v); if(u==v) continue; inmst[i]=1; sum=sum+w; cnt--; uf[u]=v; } return {sum,cnt==1}; // {totval in mst, ismst} }
     <a class="muted-link" href="/templates/gt/kruskal/">…</a>
   </div>
 </div>
@@ -211,7 +367,7 @@
   </div>
   <div class="text-gray">
     
-    弗洛伊德 Floyd // T must define &lt; and + template&lt;typename T,size_t V,T INF=T(0x3f3f3f3f)&gt; struct Floyd { T g[V][V]; int n; void cmin(T &amp;x,T y) { if(y&lt;x) x=y; } void init(int n_) { n=n_; for(int i=0;i&lt;n;i++) for(int j=0;j&lt;n;j++) g[i][j]=INF; } void init(int n_,int g_[V][V]) { n=n_; for(int i=0;i&lt;n;i++) for(int j=0;j&lt;n;j++) g[i][j]=g_[i][j]; } void addedge(int u,int v,T w) // check multi-edges { g[u][v]=w; // g[v][u]=w; } void floyd() { for(int k=0;k&lt;n;k++) for(int i=0;i&lt;n;i++) for(int j=0;j&lt;n;j++) cmin(g[i][j],g[i][k]+g[k][j]); } };
+    弗洛伊德 Floyd // T must define &lt; and + template&lt;typename T,size_t V,bool Directed=true,T INF=T(0x3f3f3f3f)&gt; struct Floyd { T g[V][V]; int n; void init(int n_) { n=n_; for(int i=0;i&lt;n;i++) for(int j=0;j&lt;n;j++) g[i][j]=INF; } void addedge(int u,int v,T w) // check multi-edges { g[u][v]=w; if(!Directed) g[v][u]=w; } void cmin(T &amp;x,const T &amp;y) { if(y&lt;x) x=y; } void floyd(Upd =upd) { for(int k=0;k&lt;n;k++) for(int i=0;i&lt;n;i++) for(int j=0;j&lt;n;j++) cmin(g[i][j],g[i][k]+g[k][j]); } };
     <a class="muted-link" href="/templates/gt/floyd/">…</a>
   </div>
 </div>
@@ -291,7 +447,7 @@
   </div>
   <div class="text-gray">
     
-    迪杰斯特拉 Dijkstra 模板（priority_queue） // T must define &lt; and + // V: max number of vertex [0~V-1] template&lt;typename T,size_t V,T INF=T(0x3f3f3f3f),T ZERO=T(0)&gt; struct Dijkstra { typedef pair&lt;T,int&gt; PTI; vector&lt;PTI&gt; g[V]; T dis[V]; int vis[V]; int n; void init(int n_) { n=n_; for(int i=0;i&lt;n;i++) g[i].clear(); } void addedge(int u,int v,T w) { g[u].emplace_back(w,v); // g[v].emplace_back(w,u); undirected } void solve(int st,int ed=-1) // ed=-1 no destination { for(int i=0;i&lt;n;i++) dis[i]=INF,vis[i]=0; priority_queue&lt;PTI,vector&lt;PTI&gt;,greater&lt;PTI&gt; &gt; qu; dis[st]=ZERO; qu.emplace(ZERO,st); while(!qu.empty()) { PTI p=qu.top(); qu.pop(); int
+    迪杰斯特拉 Dijkstra 模板（priority_queue） // T must define &lt; and + // V: max number of vertex [0~V-1] template&lt;typename T,size_t V,bool Directed=true, T INF=T(0x3f3f3f3f),T ZERO=T(0)&gt; struct G { typedef pair&lt;T,int&gt; PTI; vector&lt;PTI&gt; g[V]; T dis[V]; int vis[V]; int n; void init(int n_) { n=n_; for(int i=0;i&lt;n;i++) g[i].clear(); } void addedge(int u,int v,T w) { g[u].emplace_back(w,v); if(!Directed) g[v].emplace_back(w,u); } void dijkstra(int st,int ed=-1) // ed=-1 no destination { for(int i=0;i&lt;n;i++) dis[i]=INF,vis[i]=0; priority_queue&lt;PTI,vector&lt;PTI&gt;,greater&lt;PTI&gt; &gt; qu; dis[st]=ZERO; qu.emplace(ZERO,st); while(!qu.empty()) { PTI p=qu.top(); qu.pop();
     <a class="muted-link" href="/templates/gt/dijkstra/">…</a>
   </div>
 </div>
@@ -331,184 +487,8 @@
   </div>
   <div class="text-gray">
     
-    二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &lt; // min heap // M: max size of heap template&lt;typename T,size_t M&gt; struct Heap { T h[M+1]; int n; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() // check n&gt;=1 { return h[1]; } int size() { return n; } bool empty() { return n==0; } /* Helper
+    二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &lt; // min heap // M: max size of heap template&lt;typename T,size_t M,typename Cmp=less&lt;&gt;&gt; struct Heap { T h[M+1]; int n; Cmp cmp; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() // check n&gt;=1 { return h[1]; } int size() { return n; } bool empty() { return n==0;
     <a class="muted-link" href="/templates/ds/binaryheap/">…</a>
-  </div>
-</div>
-
-  
-    
-    
-<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
-  <div class="Subhead mb-2">
-    <div class="Subhead-heading">
-      <a href="/sols/leetcode/lcp21/">
-        <div class="h2 mt-1 mb-1">[LeetCode] LCP 21. 追逐游戏</div>
-      </a>
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/solutions' class="muted-link">
-  <span class="Label Label--gray-darker">Solutions</span>
-</a>
-
-
-
-<a href='/ojs/leetcode' class="muted-link">
-  <span class="Label Label--gray-darker">LeetCode</span>
-</a>
-
-
-
-<a href='/tags/bfs' class="muted-link">
-  <span class="Label Label--gray">BFS</span>
-</a>
-
-<a href='/tags/dfs' class="muted-link">
-  <span class="Label Label--gray">DFS</span>
-</a>
-
-<a href='/tags/%E5%9F%BA%E7%8E%AF%E6%A0%91' class="muted-link">
-  <span class="Label Label--gray">基环树</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        <span>2020-09-18</span>
-      </div>
-    </div>
-  </div>
-  <div class="text-gray">
-    
-    LCP 21. 追逐游戏 题目大意 给定一棵 $N$ 个点的基环树（环套树）。给定图上两个起始位置 $A$ 和 $B$ ($A \neq B$)。每一轮 $A$ 先移动，$B$ 后移动。每次移动可以移动到图上当前点的相邻点或者保持不动。任意时刻如果 $A$ 和 $B$ 处在同一位
-    <a class="muted-link" href="/sols/leetcode/lcp21/">…</a>
-  </div>
-</div>
-
-  
-    
-    
-<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
-  <div class="Subhead mb-2">
-    <div class="Subhead-heading">
-      <a href="/notes/effectivecpp/c1/">
-        <div class="h2 mt-1 mb-1">《Effective C&#43;&#43;》 笔记 1. 让自己习惯 C&#43;&#43;</div>
-      </a>
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/notes' class="muted-link">
-  <span class="Label Label--gray-darker">Notes</span>
-</a>
-
-
-
-
-
-
-
-<a href='/series/effective-cpp' class="muted-link">
-  <span class="Label Label--gray">Effective Cpp</span>
-</a>
-
-
-      <div class="float-md-right">
-        <span>2020-09-13</span>
-      </div>
-    </div>
-  </div>
-  <div class="text-gray">
-    
-    1. 让自己习惯 C++ 条款 01：视 C++ 为一个语言联邦 C++ 是一个多重泛型编程语言（multiparadigm programming language）。 C++ 同时支持过程（procedural）形式、面向对象（object-oriented
-    <a class="muted-link" href="/notes/effectivecpp/c1/">…</a>
-  </div>
-</div>
-
-  
-    
-    
-<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
-  <div class="Subhead mb-2">
-    <div class="Subhead-heading">
-      <a href="/notes/assemblylanguage/e1/">
-        <div class="h2 mt-1 mb-1">《汇编语言》 笔记  实验 1 查看 CPU 和内存，用机器指令和汇编指令编程</div>
-      </a>
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/notes' class="muted-link">
-  <span class="Label Label--gray-darker">Notes</span>
-</a>
-
-
-
-
-
-
-
-<a href='/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80' class="muted-link">
-  <span class="Label Label--gray">汇编语言</span>
-</a>
-
-
-      <div class="float-md-right">
-        <span>2020-09-10</span>
-      </div>
-    </div>
-  </div>
-  <div class="text-gray">
-    
-    实验 1 查看 CPU 和内存，用机器指令和汇编指令编程 想在 win10 上玩这个需要自己下载 DOSBox 和 debug.exe。 之后用 DOSBox 运行 debug 即可开始书中的实验。 R 命令：查看、修改寄存器 进入 debug 模式后输入 $r$ 回车后可以查看 CPU 寄存器内容。 输
-    <a class="muted-link" href="/notes/assemblylanguage/e1/">…</a>
-  </div>
-</div>
-
-  
-    
-    
-<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
-  <div class="Subhead mb-2">
-    <div class="Subhead-heading">
-      <a href="/sols/luogu/p4588/">
-        <div class="h2 mt-1 mb-1">[Luogu] P4588 [TJOI2018]数学计算</div>
-      </a>
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/solutions' class="muted-link">
-  <span class="Label Label--gray-darker">Solutions</span>
-</a>
-
-
-
-<a href='/ojs/luogu' class="muted-link">
-  <span class="Label Label--gray-darker">Luogu</span>
-</a>
-
-
-
-<a href='/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91' class="muted-link">
-  <span class="Label Label--gray">线段树</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        <span>2020-09-09</span>
-      </div>
-    </div>
-  </div>
-  <div class="text-gray">
-    
-    P4588 [TJOI2018]数学计算 题目大意 给定 $x = 1$ 和某个模数 $MO$，有两种操作（共 $Q \le 10^5$ 次） 操作 $1$：把 $x = x*v % MO$ 操作 $2$：取消第 $k$ 次操作（取消的必为操作 $1$，且某个操作 $1$ 只会最多被取消一次） 每
-    <a class="muted-link" href="/sols/luogu/p4588/">…</a>
   </div>
 </div>
 
@@ -549,6 +529,20 @@
             
               
               <a href="/archives/2020-09/page/2/">2</a>
+            
+          
+      
+          
+          
+          
+          
+              
+              
+          
+          
+            
+              
+              <a href="/archives/2020-09/page/3/">3</a>
             
           
       
@@ -599,8 +593,13 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/categories/summaries" class="link-gray text-emphasized css-truncate-target"><span class="">Summaries</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
-      <span class="text-right Counter">6</span>
+      <span class="text-right Counter">10</span>
     </span>
     
   </div>
@@ -614,13 +613,23 @@
     </a>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/templates/hash" class="link-gray text-emphasized css-truncate-target"><span class="">Hash</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/templates/%e5%85%b6%e4%bb%96" class="link-gray text-emphasized css-truncate-target"><span class="">其他</span></a>
+      <span class="text-right Counter">2</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e5%9b%be%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">图论</span></a>
       <span class="text-right Counter">3</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="link-gray text-emphasized css-truncate-target"><span class="">数据结构</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">3</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -645,7 +654,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/ojs/leetcode" class="link-gray text-emphasized css-truncate-target"><span class="">Leetcode</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">3</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -684,6 +693,11 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/hash" class="link-gray text-emphasized css-truncate-target"><span class="">Hash</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/mst" class="link-gray text-emphasized css-truncate-target"><span class="">Mst</span></a>
       <span class="text-right Counter">1</span>
     </span>
@@ -700,6 +714,11 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e5%9f%ba%e7%8e%af%e6%a0%91" class="link-gray text-emphasized css-truncate-target"><span class="">基环树</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e5%b7%a6%e5%81%8f%e6%a0%91" class="link-gray text-emphasized css-truncate-target"><span class="">左偏树</span></a>
       <span class="text-right Counter">1</span>
     </span>
     
@@ -780,7 +799,12 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-09" class="link-gray text-emphasized css-truncate-target"><span class="">2020 09</span></a>
-      <span class="text-right Counter">19</span>
+      <span class="text-right Counter">23</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2020-10" class="link-gray text-emphasized css-truncate-target"><span class="">2020 10</span></a>
+      <span class="text-right Counter">1</span>
     </span>
     
   </div>

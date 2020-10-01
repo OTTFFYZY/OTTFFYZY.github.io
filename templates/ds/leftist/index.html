@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  [模板][数据结构] 左偏树 Leftist Tree &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="左偏树 Leftist Tree // min leftist tree // T must define &amp;lt; // M: the size of the heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;&amp;gt;&amp;gt; struct Leftist { T val[M]; int l[M],r[M],d[M]; int nn; // number of node Cmp cmp; void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&amp;lt;int&amp;gt; qu; for(int i=1;i&amp;lt;=n;i&#43;&#43;) qu.push(i); int u,v; while(qu.size()&amp;gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[&#43;&#43;nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;amp;x,int y) // merge tree|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/solutions">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">[模板][数据结构] 左偏树 Leftist Tree</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E5%B7%A6%E5%81%8F%E6%A0%91' class="muted-link">
+  <span class="Label Label--gray">左偏树</span>
+</a>
+
+
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2020-09-27. Published at: 2020-09-27.">
+        
+          Published: 2020-09-27 Sun 19:07:04
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="左偏树-leftist-tree">左偏树 Leftist Tree</h2>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// min leftist tree
+</span><span class="c1">// T must define &lt;
+</span><span class="c1">// M: the size of the heap
+</span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span><span class="n">size_t</span> <span class="n">M</span><span class="p">,</span><span class="k">typename</span> <span class="n">Cmp</span><span class="o">=</span><span class="n">less</span><span class="o">&lt;&gt;&gt;</span>
+<span class="k">struct</span> <span class="nc">Leftist</span>
+<span class="p">{</span>
+    <span class="n">T</span> <span class="n">val</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">l</span><span class="p">[</span><span class="n">M</span><span class="p">],</span><span class="n">r</span><span class="p">[</span><span class="n">M</span><span class="p">],</span><span class="n">d</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="n">nn</span><span class="p">;</span> <span class="c1">// number of node
+</span><span class="c1"></span>    <span class="n">Cmp</span> <span class="n">cmp</span><span class="p">;</span>
+    <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span> <span class="n">nn</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+    <span class="c1">// using val to build a leftist tree
+</span><span class="c1"></span>    <span class="c1">// return the id of the root
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="nf">build</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span><span class="n">T</span> <span class="n">val_</span><span class="p">[])</span> 
+    <span class="p">{</span>
+        <span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">qu</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">qu</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">qu</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">u</span><span class="o">=</span><span class="n">qu</span><span class="p">.</span><span class="n">front</span><span class="p">();</span> <span class="n">qu</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+            <span class="n">v</span><span class="o">=</span><span class="n">qu</span><span class="p">.</span><span class="n">front</span><span class="p">();</span> <span class="n">qu</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+            <span class="n">merge</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">);</span> <span class="n">qu</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">qu</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="nf">newtree</span><span class="p">(</span><span class="n">T</span> <span class="n">v</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">val</span><span class="p">[</span><span class="o">++</span><span class="n">nn</span><span class="p">]</span><span class="o">=</span><span class="n">v</span><span class="p">;</span>
+        <span class="n">r</span><span class="p">[</span><span class="n">nn</span><span class="p">]</span><span class="o">=</span><span class="n">l</span><span class="p">[</span><span class="n">nn</span><span class="p">]</span><span class="o">=</span><span class="n">d</span><span class="p">[</span><span class="n">nn</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">nn</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">void</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="c1">// merge tree x and tree y
+</span><span class="c1"></span>    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">x</span><span class="o">||!</span><span class="n">y</span><span class="p">)</span> <span class="k">return</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span><span class="kt">void</span><span class="p">();</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">cmp</span><span class="p">(</span><span class="n">val</span><span class="p">[</span><span class="n">y</span><span class="p">],</span><span class="n">val</span><span class="p">[</span><span class="n">x</span><span class="p">]))</span> <span class="n">swap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+        <span class="n">merge</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">x</span><span class="p">],</span><span class="n">y</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">l</span><span class="p">[</span><span class="n">x</span><span class="p">]]</span><span class="o">&lt;</span><span class="n">d</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="n">x</span><span class="p">]])</span> <span class="n">swap</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="n">x</span><span class="p">],</span><span class="n">r</span><span class="p">[</span><span class="n">x</span><span class="p">]);</span>
+        <span class="n">d</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">d</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="n">x</span><span class="p">]]</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">void</span> <span class="nf">insert</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">rt</span><span class="p">,</span><span class="n">T</span> <span class="n">v</span><span class="p">)</span> <span class="c1">// insert v into tree rt
+</span><span class="c1"></span>    <span class="p">{</span> <span class="n">merge</span><span class="p">(</span><span class="n">rt</span><span class="p">,</span><span class="n">newtree</span><span class="p">(</span><span class="n">v</span><span class="p">));</span> <span class="p">}</span>
+    <span class="n">T</span> <span class="nf">top</span><span class="p">(</span><span class="kt">int</span> <span class="n">rt</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">val</span><span class="p">[</span><span class="n">rt</span><span class="p">];</span> <span class="p">}</span>
+    <span class="kt">void</span> <span class="nf">pop</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">rt</span><span class="p">)</span>
+    <span class="p">{</span> <span class="kt">int</span> <span class="n">rs</span><span class="o">=</span><span class="n">r</span><span class="p">[</span><span class="n">rt</span><span class="p">];</span> <span class="n">rt</span><span class="o">=</span><span class="n">l</span><span class="p">[</span><span class="n">rt</span><span class="p">];</span> <span class="n">merge</span><span class="p">(</span><span class="n">rt</span><span class="p">,</span><span class="n">rs</span><span class="p">);</span> <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+  </section>
+
+  <section>
+    
+        <a href="/templates/gt/kruskal/" class="previous_page">Prev: [模板][图论] 克鲁斯卡尔 Kruskal </a>
+    
+     <br> 
+    
+        <a href="/templates/nt/mod/" class="next_page">Next: [模板][数论] 模下计算 </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>[模板][数据结构] 左偏树 Leftist Tree</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#左偏树-leftist-tree">左偏树 Leftist Tree</a></li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+  </body>
+</html>

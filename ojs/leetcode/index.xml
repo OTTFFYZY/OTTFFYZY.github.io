@@ -6,10 +6,19 @@
     <description>Recent content in LeetCode on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 18 Sep 2020 22:10:05 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2020 13:56:21 -0400</lastBuildDate>
     
 	<atom:link href="https://ottffyzy.github.io/ojs/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[LeetCode] 值得一做的题目列表</title>
+      <link>https://ottffyzy.github.io/summaries/lcgoodproblem/</link>
+      <pubDate>Tue, 29 Sep 2020 13:56:21 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/summaries/lcgoodproblem/</guid>
+      <description>前 总结一下 LeetCode 上比较好的题目（部分题可能并不是很好，但是实现细节复杂，面试需要特别注意也囊括进来了）。 推荐指数 $1-5$ 是按照可能已经掌握的知识层次进行排序的，竞赛选手推荐刷推荐指数 $3$ 以上的题目。推荐指数和难度</description>
+    </item>
     
     <item>
       <title>[LeetCode] LCP 21. 追逐游戏</title>

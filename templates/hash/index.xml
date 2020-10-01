@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hash on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/templates/hash/</link>
+    <description>Recent content in Hash on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 28 Sep 2020 22:00:50 -0400</lastBuildDate>
+    
+	<atom:link href="https://ottffyzy.github.io/templates/hash/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[模板][Hash] 安全哈希函数</title>
+      <link>https://ottffyzy.github.io/templates/hash/safehash/</link>
+      <pubDate>Mon, 28 Sep 2020 22:00:50 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/templates/hash/safehash/</guid>
+      <description>安全哈希函数 struct custom_hash { static uint64_t splitmix64(uint64_t x) { // http://xorshift.di.unimi.it/splitmix64.c x += 0x9e3779b97f4a7c15; x = (x ^ (x &amp;gt;&amp;gt; 30)) * 0xbf58476d1ce4e5b9; x = (x ^ (x &amp;gt;&amp;gt; 27)) * 0x94d049bb133111eb; return x ^ (x &amp;gt;&amp;gt; 31); } size_t operator()(uint64_t x) const { static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count(); return splitmix64(x + FIXED_RANDOM); } }; 用这个函数作为 unordered_set 的第二个参数或 unordered_map 的第三个参数。</description>
+    </item>
+    
+  </channel>
+</rss>

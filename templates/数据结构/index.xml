@@ -6,10 +6,19 @@
     <description>Recent content in 数据结构 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 24 Sep 2020 23:18:06 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2020 19:07:04 -0400</lastBuildDate>
     
 	<atom:link href="https://ottffyzy.github.io/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[模板][数据结构] 左偏树 Leftist Tree</title>
+      <link>https://ottffyzy.github.io/templates/ds/leftist/</link>
+      <pubDate>Sun, 27 Sep 2020 19:07:04 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/templates/ds/leftist/</guid>
+      <description>左偏树 Leftist Tree // min leftist tree // T must define &amp;lt; // M: the size of the heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;&amp;gt;&amp;gt; struct Leftist { T val[M]; int l[M],r[M],d[M]; int nn; // number of node Cmp cmp; void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&amp;lt;int&amp;gt; qu; for(int i=1;i&amp;lt;=n;i++) qu.push(i); int u,v; while(qu.size()&amp;gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[++nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;amp;x,int y) // merge tree</description>
+    </item>
     
     <item>
       <title>[模板][数据结构] 并查集 Union Find / Disjoint Set Union</title>
@@ -26,7 +35,7 @@
       <pubDate>Wed, 23 Sep 2020 23:12:58 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/templates/ds/binaryheap/</guid>
-      <description>二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &amp;lt; // min heap // M: max size of heap template&amp;lt;typename T,size_t M&amp;gt; struct Heap { T h[M+1]; int n; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&amp;lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() // check n&amp;gt;=1 { return h[1]; } int size() { return n; } bool empty() { return n==0; } /* Helper</description>
+      <description>二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &amp;lt; // min heap // M: max size of heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;&amp;gt;&amp;gt; struct Heap { T h[M+1]; int n; Cmp cmp; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&amp;lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() // check n&amp;gt;=1 { return h[1]; } int size() { return n; } bool empty() { return n==0;</description>
     </item>
     
   </channel>

@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  [LeetCode] 值得一做的题目列表 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="前 总结一下 LeetCode 上比较好的题目（部分题可能并不是很好，但是实现细节复杂，面试需要特别注意也囊括进来了）。 推荐指数 $1-5$ 是按照可能已经掌握的知识层次进行排序的，竞赛选手推荐刷推荐指数 $3$ 以上的题目。推荐指数和难度|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/solutions">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">[LeetCode] 值得一做的题目列表</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/summaries' class="muted-link">
+  <span class="Label Label--gray-darker">Summaries</span>
+</a>
+
+
+
+<a href='/ojs/leetcode' class="muted-link">
+  <span class="Label Label--gray-darker">LeetCode</span>
+</a>
+
+
+
+
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2020-09-29. Published at: 2020-09-29.">
+        
+          Published: 2020-09-29 Tue 13:56:21
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="前">前</h2>
+<p>总结一下 LeetCode 上比较好的题目（部分题可能并不是很好，但是实现细节复杂，面试需要特别注意也囊括进来了）。</p>
+<p>推荐指数 $1-5$ 是按照可能已经掌握的知识层次进行排序的，竞赛选手推荐刷推荐指数 $3$ 以上的题目。推荐指数和难度存在个人差，仅供参考。</p>
+<h2 id="1---50">1 - 50</h2>
+<table>
+<thead>
+<tr>
+<th>题号</th>
+<th>题目</th>
+<th>Tag</th>
+<th>难度</th>
+<th>推荐指数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="https://leetcode.com/problems/two-sum">Two Sum</a></td>
+<td>hash_map / 二分 / Two Pointers</td>
+<td>E-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="https://leetcode.com/problems/add-two-numbers">Add Two Numbers</a></td>
+<td>大数加法</td>
+<td>E-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters">Longest Substring Without Repeating Characters</a></td>
+<td>Two Pointers</td>
+<td>E+</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="https://leetcode.com/problems/median-of-two-sorted-arrays">Median of Two Sorted Arrays</a></td>
+<td>二分</td>
+<td>H</td>
+<td>5</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="https://leetcode.com/problems/longest-palindromic-substring">Longest Palindromic Substring</a></td>
+<td>Manacher</td>
+<td>M</td>
+<td>3</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="https://leetcode.com/problems/string-to-integer-atoi">String to Integer (atoi)</a></td>
+<td>Parser</td>
+<td>M</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="https://leetcode.com/problems/regular-expression-matching">Regular Expression Matching</a></td>
+<td>DP</td>
+<td>M+</td>
+<td>5</td>
+</tr>
+<tr>
+<td>11</td>
+<td><a href="https://leetcode.com/problems/container-with-most-water">Container With Most Water</a></td>
+<td>Two Pointers</td>
+<td>M-</td>
+<td>5</td>
+</tr>
+<tr>
+<td>12</td>
+<td><a href="https://leetcode.com/problems/integer-to-roman">Integer to Roman</a></td>
+<td>Parser</td>
+<td>E+</td>
+<td>2</td>
+</tr>
+<tr>
+<td>16</td>
+<td><a href="https://leetcode.com/problems/3sum-closest">3Sum Closest</a></td>
+<td>Two Pointers</td>
+<td>M+</td>
+<td>5</td>
+</tr>
+<tr>
+<td>17</td>
+<td><a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number">Letter Combinations of a Phone Number</a></td>
+<td>DFS</td>
+<td>E+</td>
+<td>2</td>
+</tr>
+<tr>
+<td>20</td>
+<td><a href="https://leetcode.com/problems/valid-parentheses">Valid Parentheses</a></td>
+<td>Stack</td>
+<td>E-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>21</td>
+<td><a href="https://leetcode.com/problems/merge-two-sorted-lists">Merge Two Sorted Lists</a></td>
+<td>Linked List</td>
+<td>E-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>22</td>
+<td><a href="https://leetcode.com/problems/generate-parentheses">Generate Parentheses</a></td>
+<td>DFS</td>
+<td>E</td>
+<td>2</td>
+</tr>
+<tr>
+<td>23</td>
+<td><a href="https://leetcode.com/problems/merge-k-sorted-lists">Merge k Sorted Lists</a></td>
+<td>Heap</td>
+<td>M</td>
+<td>3</td>
+</tr>
+<tr>
+<td>25</td>
+<td><a href="https://leetcode.com/problems/reverse-nodes-in-k-group">Reverse Nodes in k-Group</a></td>
+<td>Linked List</td>
+<td>M+</td>
+<td>4</td>
+</tr>
+<tr>
+<td>26</td>
+<td><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array">Remove Duplicates from Sorted Array</a></td>
+<td>Two Pointers</td>
+<td>E-</td>
+<td>2</td>
+</tr>
+<tr>
+<td>28</td>
+<td><a href="https://leetcode.com/problems/implement-strstr">Implement strStr()</a></td>
+<td>KMP</td>
+<td>M-</td>
+<td>3</td>
+</tr>
+<tr>
+<td>29</td>
+<td><a href="https://leetcode.com/problems/divide-two-integers">Divide Two Integers</a></td>
+<td>快速幂</td>
+<td>M-</td>
+<td>3</td>
+</tr>
+<tr>
+<td>30</td>
+<td><a href="https://leetcode.com/problems/substring-with-concatenation-of-all-words">Substring with Concatenation of All Words</a></td>
+<td>KMP DP</td>
+<td>H</td>
+<td>4</td>
+</tr>
+<tr>
+<td>31</td>
+<td><a href="https://leetcode.com/problems/next-permutation">Next Permutation</a></td>
+<td>Ad hoc</td>
+<td>M</td>
+<td>4</td>
+</tr>
+<tr>
+<td>32</td>
+<td><a href="https://leetcode.com/problems/longest-valid-parentheses">Longest Valid Parentheses</a></td>
+<td>DP</td>
+<td>M</td>
+<td>3</td>
+</tr>
+<tr>
+<td>33</td>
+<td><a href="https://leetcode.com/problems/search-in-rotated-sorted-array">Search in Rotated Sorted Array</a></td>
+<td>二分</td>
+<td>M-</td>
+<td>4</td>
+</tr>
+<tr>
+<td>34</td>
+<td><a href="https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array">Find First and Last Position of Element in Sorted Array</a></td>
+<td>二分</td>
+<td>E+</td>
+<td>2</td>
+</tr>
+<tr>
+<td>37</td>
+<td><a href="https://leetcode.com/problems/sudoku-solver">Sudoku Solver</a></td>
+<td>DFS / DLX</td>
+<td>M/H+</td>
+<td>3</td>
+</tr>
+<tr>
+<td>39</td>
+<td><a href="https://leetcode.com/problems/combination-sum">Combination Sum</a></td>
+<td>DFS</td>
+<td>E+</td>
+<td>2</td>
+</tr>
+<tr>
+<td>40</td>
+<td><a href="https://leetcode.com/problems/combination-sum-ii">Combination Sum II</a></td>
+<td>DFS</td>
+<td>M-</td>
+<td>3</td>
+</tr>
+<tr>
+<td>41</td>
+<td><a href="https://leetcode.com/problems/first-missing-positive">First Missing Positive</a></td>
+<td>Ad hoc</td>
+<td>M-</td>
+<td>3</td>
+</tr>
+<tr>
+<td>42</td>
+<td><a href="https://leetcode.com/problems/trapping-rain-water">Trapping Rain Water</a></td>
+<td>单调栈 / Two Pointers</td>
+<td>M+</td>
+<td>5</td>
+</tr>
+<tr>
+<td>43</td>
+<td><a href="https://leetcode.com/problems/multiply-strings">Multiply Strings</a></td>
+<td>大数乘法</td>
+<td>E+</td>
+<td>3</td>
+</tr>
+<tr>
+<td>44</td>
+<td><a href="https://leetcode.com/problems/wildcard-matching">Wildcard Matching</a></td>
+<td>DP</td>
+<td>M+</td>
+<td>5</td>
+</tr>
+<tr>
+<td>45</td>
+<td><a href="https://leetcode.com/problems/jump-game-ii">Jump Game II</a></td>
+<td>DP / BFS</td>
+<td>M-</td>
+<td>2</td>
+</tr>
+<tr>
+<td>46</td>
+<td><a href="https://leetcode.com/problems/permutations">Permutations</a></td>
+<td>DFS</td>
+<td>M-</td>
+<td>3</td>
+</tr>
+<tr>
+<td>47</td>
+<td><a href="https://leetcode.com/problems/permutations-ii">Permutations II</a></td>
+<td>DFS</td>
+<td>M-</td>
+<td>3</td>
+</tr>
+<tr>
+<td>48</td>
+<td><a href="https://leetcode.com/problems/rotate-image">Rotate Image</a></td>
+<td>Ad hoc</td>
+<td>M-</td>
+<td>2</td>
+</tr>
+<tr>
+<td>50</td>
+<td><a href="https://leetcode.com/problems/powx-n">Pow(x, n)</a></td>
+<td>快速幂</td>
+<td>E</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="51-100">51-100</h2>
+<table>
+<thead>
+<tr>
+<th>题号</th>
+<th>题目</th>
+<th>Tag</th>
+<th>难度</th>
+<th>推荐指数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>51</td>
+<td><a href="https://leetcode.com/problems/n-queens">N-Queens</a></td>
+<td>DFS Bitmask</td>
+<td>E</td>
+<td>3</td>
+</tr>
+<tr>
+<td>53</td>
+<td><a href="https://leetcode.com/problems/maximum-subarray">Maximum Subarray</a></td>
+<td>DP</td>
+<td>E</td>
+<td>3</td>
+</tr>
+<tr>
+<td>56</td>
+<td><a href="https://leetcode.com/problems/merge-intervals">Merge Intervals</a></td>
+<td>扫描线</td>
+<td>E</td>
+<td>3</td>
+</tr>
+<tr>
+<td>57</td>
+<td><a href="https://leetcode.com/problems/insert-interval">Insert Interval</a></td>
+<td>扫描线</td>
+<td>M</td>
+<td>4</td>
+</tr>
+<tr>
+<td>60</td>
+<td><a href="https://leetcode.com/problems/permutation-sequence">Permutation Sequence</a></td>
+<td>DFS / 康托展开</td>
+<td>E / H</td>
+<td>5</td>
+</tr>
+<tr>
+<td>62</td>
+<td><a href="https://leetcode.com/problems/unique-paths">Unique Paths</a></td>
+<td>组合数学</td>
+<td>E</td>
+<td>1</td>
+</tr>
+<tr>
+<td>63</td>
+<td><a href="https://leetcode.com/problems/unique-paths-ii">Unique Paths II</a></td>
+<td>DP</td>
+<td>E</td>
+<td>2</td>
+</tr>
+<tr>
+<td>65</td>
+<td><a href="https://leetcode.com/problems/valid-number">Valid Number</a></td>
+<td>Parser</td>
+<td>M+</td>
+<td>3</td>
+</tr>
+<tr>
+<td>68</td>
+<td><a href="https://leetcode.com/problems/text-justification">Text Justification</a></td>
+<td>字符串处理</td>
+<td>M</td>
+<td>2</td>
+</tr>
+<tr>
+<td>70</td>
+<td><a href="https://leetcode.com/problems/climbing-stairs">Climbing Stairs</a></td>
+<td>递推</td>
+<td>E-</td>
+<td>1</td>
+</tr>
+<tr>
+<td>71</td>
+<td><a href="https://leetcode.com/problems/simplify-path">Simplify Path</a></td>
+<td>Stack</td>
+<td>E</td>
+<td>2</td>
+</tr>
+<tr>
+<td>72</td>
+<td><a href="https://leetcode.com/problems/edit-distance">Edit Distance</a></td>
+<td>DP</td>
+<td>H-</td>
+<td>3</td>
+</tr>
+<tr>
+<td>73</td>
+<td><a href="https://leetcode.com/problems/set-matrix-zeroes">Set Matrix Zeroes</a></td>
+<td>Ad-hoc</td>
+<td>E</td>
+<td>1</td>
+</tr>
+<tr>
+<td>75</td>
+<td><a href="https://leetcode.com/problems/sort-colors">Sort Colors</a></td>
+<td>Ad-hoc</td>
+<td>M</td>
+<td>3</td>
+</tr>
+<tr>
+<td>76</td>
+<td><a href="https://leetcode.com/problems/minimum-window-substring">Minimum Window Substring</a></td>
+<td>Two Pointers</td>
+<td>M</td>
+<td>3</td>
+</tr>
+<tr>
+<td>77</td>
+<td><a href="https://leetcode.com/problems/combinations">Combinations</a></td>
+<td>DFS</td>
+<td>E</td>
+<td>2</td>
+</tr>
+<tr>
+<td>78</td>
+<td><a href="https://leetcode.com/problems/subsets">Subsets</a></td>
+<td>DFS / Bitmask</td>
+<td>E</td>
+<td>2</td>
+</tr>
+<tr>
+<td>79</td>
+<td><a href="https://leetcode.com/problems/word-search">Word Search</a></td>
+<td>DFS</td>
+<td>E+</td>
+<td>2</td>
+</tr>
+<tr>
+<td>82</td>
+<td><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii">Remove Duplicates from Sorted List II</a></td>
+<td>Linked List</td>
+<td>M</td>
+<td>3</td>
+</tr>
+<tr>
+<td>84</td>
+<td><a href="https://leetcode.com/problems/largest-rectangle-in-histogram">Largest Rectangle in Histogram</a></td>
+<td>单调栈</td>
+<td>M+</td>
+<td>4</td>
+</tr>
+<tr>
+<td>85</td>
+<td><a href="https://leetcode.com/problems/maximal-rectangle">Maximal Rectangle</a></td>
+<td>单调栈 DP</td>
+<td>H-</td>
+<td>5</td>
+</tr>
+<tr>
+<td>87</td>
+<td><a href="https://leetcode.com/problems/scramble-string">Scramble String</a></td>
+<td>DFS</td>
+<td>M+</td>
+<td>3</td>
+</tr>
+<tr>
+<td>89</td>
+<td><a href="https://leetcode.com/problems/gray-code">Gray Code</a></td>
+<td>Ad-hoc 分治</td>
+<td>E+</td>
+<td>2</td>
+</tr>
+<tr>
+<td>90</td>
+<td><a href="https://leetcode.com/problems/subsets-ii">Subsets II</a></td>
+<td>DFS</td>
+<td>E</td>
+<td>2</td>
+</tr>
+<tr>
+<td>91</td>
+<td><a href="https://leetcode.com/problems/decode-ways">Decode Ways</a></td>
+<td>DP</td>
+<td>E+</td>
+<td>1</td>
+</tr>
+<tr>
+<td>93</td>
+<td><a href="https://leetcode.com/problems/restore-ip-addresses">Restore IP Addresses</a></td>
+<td>DFS</td>
+<td>M-</td>
+<td>2</td>
+</tr>
+<tr>
+<td>94</td>
+<td><a href="https://leetcode.com/problems/binary-tree-inorder-traversal">Binary Tree Inorder Traversal</a></td>
+<td>中序遍历 / Morris</td>
+<td>E- / M</td>
+<td>1/3</td>
+</tr>
+<tr>
+<td>95</td>
+<td><a href="https://leetcode.com/problems/unique-binary-search-trees-ii">Unique Binary Search Trees II</a></td>
+<td>DFS</td>
+<td>M</td>
+<td>3</td>
+</tr>
+<tr>
+<td>96</td>
+<td><a href="https://leetcode.com/problems/unique-binary-search-trees">Unique Binary Search Trees</a></td>
+<td>DP / Catalan</td>
+<td>M-</td>
+<td>3</td>
+</tr>
+<tr>
+<td>97</td>
+<td><a href="https://leetcode.com/problems/interleaving-string">Interleaving String</a></td>
+<td>DP</td>
+<td>M-</td>
+<td>3</td>
+</tr>
+<tr>
+<td>98</td>
+<td><a href="https://leetcode.com/problems/validate-binary-search-tree">Validate Binary Search Tree</a></td>
+<td>DFS</td>
+<td>E</td>
+<td>2</td>
+</tr>
+<tr>
+<td>99</td>
+<td><a href="https://leetcode.com/problems/recover-binary-search-tree">Recover Binary Search Tree</a></td>
+<td>DFS</td>
+<td>M</td>
+<td>3</td>
+</tr>
+<tr>
+<td>100</td>
+<td><a href="https://leetcode.com/problems/same-tree">Same Tree</a></td>
+<td>DFS</td>
+<td>E</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="101-150">101-150</h2>
+<table>
+<thead>
+<tr>
+<th>题号</th>
+<th>题目</th>
+<th>Tag</th>
+<th>难度</th>
+<th>推荐指数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+  </section>
+
+  <section>
+    
+        <a href="/templates/hash/safehash/" class="previous_page">Prev: [模板][Hash] 安全哈希函数 </a>
+    
+     <br> 
+    
+        <a href="/templates/others/cppmain/" class="next_page">Next: [模板] C&#43;&#43; 日常使用 </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>[LeetCode] 值得一做的题目列表</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前">前</a></li>
+    <li><a href="#1---50">1 - 50</a></li>
+    <li><a href="#51-100">51-100</a></li>
+    <li><a href="#101-150">101-150</a></li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+  </body>
+</html>

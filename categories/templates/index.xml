@@ -6,10 +6,37 @@
     <description>Recent content in Templates on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 27 Sep 2020 23:19:53 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2020 00:08:34 -0400</lastBuildDate>
     
 	<atom:link href="https://ottffyzy.github.io/categories/templates/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[模板] 计时 Timing</title>
+      <link>https://ottffyzy.github.io/templates/others/timing/</link>
+      <pubDate>Thu, 01 Oct 2020 00:08:34 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/templates/others/timing/</guid>
+      <description>计时 Timing chrono class Timing { private: typedef chrono::time_point&amp;lt;std::chrono::high_resolution_clock&amp;gt; TP; TP current_time() { return chrono::high_resolution_clock::now(); } TP st,ed; public: void start() { st=current_time(); } void end() { ed=current_time(); } void print() { cout&amp;lt;&amp;lt;chrono::duration_cast&amp;lt;chrono::microseconds&amp;gt;(ed-st).count() &amp;lt;&amp;lt;&amp;#34;ms\n&amp;#34;; } }timing;</description>
+    </item>
+    
+    <item>
+      <title>[模板] C&#43;&#43; 日常使用</title>
+      <link>https://ottffyzy.github.io/templates/others/cppmain/</link>
+      <pubDate>Tue, 29 Sep 2020 14:34:12 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/templates/others/cppmain/</guid>
+      <description>C++ 日常使用 // #include &amp;lt;bits/stdc++.h&amp;gt; #include &amp;lt;cstdio&amp;gt; #include &amp;lt;cstring&amp;gt; #include &amp;lt;cstdlib&amp;gt; #include &amp;lt;climits&amp;gt; #include &amp;lt;cmath&amp;gt; #include &amp;lt;iostream&amp;gt; #include &amp;lt;iomanip&amp;gt; #include &amp;lt;string&amp;gt; #include &amp;lt;algorithm&amp;gt; #include &amp;lt;numeric&amp;gt; #include &amp;lt;utility&amp;gt; #include &amp;lt;functional&amp;gt; #include &amp;lt;vector&amp;gt; #include &amp;lt;list&amp;gt; #include &amp;lt;stack&amp;gt; #include &amp;lt;queue&amp;gt; #include &amp;lt;deque&amp;gt; #include &amp;lt;set&amp;gt; #include &amp;lt;map&amp;gt; #include &amp;lt;bitset&amp;gt; #include &amp;lt;complex&amp;gt; #include &amp;lt;random&amp;gt; #include &amp;lt;chrono&amp;gt; #include &amp;lt;array&amp;gt; #include &amp;lt;unordered_set&amp;gt; #include &amp;lt;unordered_map&amp;gt; #include &amp;lt;tuple&amp;gt; using namespace std; using LL = long long; using ULL = unsigned long long; using LD = long double; using PII = pair&amp;lt;int,int&amp;gt;; using VI = vector&amp;lt;int&amp;gt;; using MII = map&amp;lt;int,int&amp;gt;; template&amp;lt;typename T&amp;gt; void cmin(T &amp;amp;x,const T &amp;amp;y)</description>
+    </item>
+    
+    <item>
+      <title>[模板][Hash] 安全哈希函数</title>
+      <link>https://ottffyzy.github.io/templates/hash/safehash/</link>
+      <pubDate>Mon, 28 Sep 2020 22:00:50 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/templates/hash/safehash/</guid>
+      <description>安全哈希函数 struct custom_hash { static uint64_t splitmix64(uint64_t x) { // http://xorshift.di.unimi.it/splitmix64.c x += 0x9e3779b97f4a7c15; x = (x ^ (x &amp;gt;&amp;gt; 30)) * 0xbf58476d1ce4e5b9; x = (x ^ (x &amp;gt;&amp;gt; 27)) * 0x94d049bb133111eb; return x ^ (x &amp;gt;&amp;gt; 31); } size_t operator()(uint64_t x) const { static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count(); return splitmix64(x + FIXED_RANDOM); } }; 用这个函数作为 unordered_set 的第二个参数或 unordered_map 的第三个参数。</description>
+    </item>
     
     <item>
       <title>[模板][数论] 模下计算</title>
@@ -17,7 +44,16 @@
       <pubDate>Sun, 27 Sep 2020 23:19:53 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/templates/nt/mod/</guid>
-      <description>模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&amp;gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&amp;lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;amp;x,int y) { x+=y; if(x&amp;gt;=MO) x-=MO; } inline void subv(int &amp;amp;x,int y) { x-=y; if(x&amp;lt;0) x+=MO; } inline void mulv(int &amp;amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;amp;1) mulv(ans,x); mulv(x,x); n&amp;gt;&amp;gt;=1; } return ans; } Mint template&amp;lt;size_t MO=1000000007&amp;gt; struct Mint { int x; Mint(int x=0):x(x){} void read() {</description>
+      <description>模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&amp;gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&amp;lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;amp;x,int y) { x+=y; if(x&amp;gt;=MO) x-=MO; } inline void subv(int &amp;amp;x,int y) { x-=y; if(x&amp;lt;0) x+=MO; } inline void mulv(int &amp;amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;amp;1) mulv(ans,x); mulv(x,x); n&amp;gt;&amp;gt;=1; } return ans; } Mint template&amp;lt;size_t MO=1000000007&amp;gt; struct Mint { int x; Mint(int x=0):x(x){ norm(); } void</description>
+    </item>
+    
+    <item>
+      <title>[模板][数据结构] 左偏树 Leftist Tree</title>
+      <link>https://ottffyzy.github.io/templates/ds/leftist/</link>
+      <pubDate>Sun, 27 Sep 2020 19:07:04 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/templates/ds/leftist/</guid>
+      <description>左偏树 Leftist Tree // min leftist tree // T must define &amp;lt; // M: the size of the heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;&amp;gt;&amp;gt; struct Leftist { T val[M]; int l[M],r[M],d[M]; int nn; // number of node Cmp cmp; void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&amp;lt;int&amp;gt; qu; for(int i=1;i&amp;lt;=n;i++) qu.push(i); int u,v; while(qu.size()&amp;gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[++nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;amp;x,int y) // merge tree</description>
     </item>
     
     <item>
@@ -26,7 +62,7 @@
       <pubDate>Fri, 25 Sep 2020 16:25:48 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/templates/gt/kruskal/</guid>
-      <description>克鲁斯卡尔 Kruskal template&amp;lt;typename T,size_t V,size_t E&amp;gt; struct Kruskal { typedef tuple&amp;lt;T,int,int&amp;gt; Edge; typedef pair&amp;lt;T,int&amp;gt; PTI; Edge edges[E]; int inmst[E]; int n; // number of vertex int m; // number of edge int uf[V]; int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } void init(int n_) { n=n_; m=0; } void addedge(int u,int v,T w) { edges[m++]=Edge(w,u,v); } PTI solve(int cc=1) // number of connected component { int cnt=n; T sum=0; int u,v; T w; for(int i=0;i&amp;lt;n;i++) uf[i]=i; sort(edges,edges+m); for(int i=0;i&amp;lt;m&amp;amp;&amp;amp;cnt&amp;gt;cc;i++) { tie(w,u,v)=edges[i]; u=find(u); v=find(v); if(u==v) continue; uf[u]=v; cnt--; sum=sum+w; } return {sum,cnt==cc}; } };</description>
+      <description>克鲁斯卡尔 Kruskal template&amp;lt;typename T,size_t V,size_t E&amp;gt; struct Kruskal { typedef tuple&amp;lt;T,int,int&amp;gt; Edge; typedef pair&amp;lt;T,int&amp;gt; PTI; Edge edges[E]; int inmst[E]; int n; // number of vertex int m; // number of edge int uf[V]; int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } void init(int n_) { n=n_; m=0; } void addedge(int u,int v,T w) { edges[m++]={w,u,v}; } PTI solve() { int cnt=n; // number of connected component T sum=0; int u,v; T w; for(int i=0;i&amp;lt;n;i++) uf[i]=i; sort(edges,edges+m); for(int i=0;i&amp;lt;m&amp;amp;&amp;amp;cnt&amp;gt;1;i++) { tie(w,u,v)=edges[i]; u=find(u); v=find(v); if(u==v) continue; inmst[i]=1; sum=sum+w; cnt--; uf[u]=v; } return {sum,cnt==1}; // {totval in mst, ismst} }</description>
     </item>
     
     <item>
@@ -35,7 +71,7 @@
       <pubDate>Fri, 25 Sep 2020 15:07:23 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/templates/gt/floyd/</guid>
-      <description>弗洛伊德 Floyd // T must define &amp;lt; and + template&amp;lt;typename T,size_t V,T INF=T(0x3f3f3f3f)&amp;gt; struct Floyd { T g[V][V]; int n; void cmin(T &amp;amp;x,T y) { if(y&amp;lt;x) x=y; } void init(int n_) { n=n_; for(int i=0;i&amp;lt;n;i++) for(int j=0;j&amp;lt;n;j++) g[i][j]=INF; } void init(int n_,int g_[V][V]) { n=n_; for(int i=0;i&amp;lt;n;i++) for(int j=0;j&amp;lt;n;j++) g[i][j]=g_[i][j]; } void addedge(int u,int v,T w) // check multi-edges { g[u][v]=w; // g[v][u]=w; } void floyd() { for(int k=0;k&amp;lt;n;k++) for(int i=0;i&amp;lt;n;i++) for(int j=0;j&amp;lt;n;j++) cmin(g[i][j],g[i][k]+g[k][j]); } };</description>
+      <description>弗洛伊德 Floyd // T must define &amp;lt; and + template&amp;lt;typename T,size_t V,bool Directed=true,T INF=T(0x3f3f3f3f)&amp;gt; struct Floyd { T g[V][V]; int n; void init(int n_) { n=n_; for(int i=0;i&amp;lt;n;i++) for(int j=0;j&amp;lt;n;j++) g[i][j]=INF; } void addedge(int u,int v,T w) // check multi-edges { g[u][v]=w; if(!Directed) g[v][u]=w; } void cmin(T &amp;amp;x,const T &amp;amp;y) { if(y&amp;lt;x) x=y; } void floyd(Upd =upd) { for(int k=0;k&amp;lt;n;k++) for(int i=0;i&amp;lt;n;i++) for(int j=0;j&amp;lt;n;j++) cmin(g[i][j],g[i][k]+g[k][j]); } };</description>
     </item>
     
     <item>
@@ -53,7 +89,7 @@
       <pubDate>Thu, 24 Sep 2020 19:10:04 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/templates/gt/dijkstra/</guid>
-      <description>迪杰斯特拉 Dijkstra 模板（priority_queue） // T must define &amp;lt; and + // V: max number of vertex [0~V-1] template&amp;lt;typename T,size_t V,T INF=T(0x3f3f3f3f),T ZERO=T(0)&amp;gt; struct Dijkstra { typedef pair&amp;lt;T,int&amp;gt; PTI; vector&amp;lt;PTI&amp;gt; g[V]; T dis[V]; int vis[V]; int n; void init(int n_) { n=n_; for(int i=0;i&amp;lt;n;i++) g[i].clear(); } void addedge(int u,int v,T w) { g[u].emplace_back(w,v); // g[v].emplace_back(w,u); undirected } void solve(int st,int ed=-1) // ed=-1 no destination { for(int i=0;i&amp;lt;n;i++) dis[i]=INF,vis[i]=0; priority_queue&amp;lt;PTI,vector&amp;lt;PTI&amp;gt;,greater&amp;lt;PTI&amp;gt; &amp;gt; qu; dis[st]=ZERO; qu.emplace(ZERO,st); while(!qu.empty()) { PTI p=qu.top(); qu.pop(); int</description>
+      <description>迪杰斯特拉 Dijkstra 模板（priority_queue） // T must define &amp;lt; and + // V: max number of vertex [0~V-1] template&amp;lt;typename T,size_t V,bool Directed=true, T INF=T(0x3f3f3f3f),T ZERO=T(0)&amp;gt; struct G { typedef pair&amp;lt;T,int&amp;gt; PTI; vector&amp;lt;PTI&amp;gt; g[V]; T dis[V]; int vis[V]; int n; void init(int n_) { n=n_; for(int i=0;i&amp;lt;n;i++) g[i].clear(); } void addedge(int u,int v,T w) { g[u].emplace_back(w,v); if(!Directed) g[v].emplace_back(w,u); } void dijkstra(int st,int ed=-1) // ed=-1 no destination { for(int i=0;i&amp;lt;n;i++) dis[i]=INF,vis[i]=0; priority_queue&amp;lt;PTI,vector&amp;lt;PTI&amp;gt;,greater&amp;lt;PTI&amp;gt; &amp;gt; qu; dis[st]=ZERO; qu.emplace(ZERO,st); while(!qu.empty()) { PTI p=qu.top(); qu.pop();</description>
     </item>
     
     <item>
@@ -62,7 +98,7 @@
       <pubDate>Wed, 23 Sep 2020 23:12:58 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/templates/ds/binaryheap/</guid>
-      <description>二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &amp;lt; // min heap // M: max size of heap template&amp;lt;typename T,size_t M&amp;gt; struct Heap { T h[M+1]; int n; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&amp;lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() // check n&amp;gt;=1 { return h[1]; } int size() { return n; } bool empty() { return n==0; } /* Helper</description>
+      <description>二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &amp;lt; // min heap // M: max size of heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;&amp;gt;&amp;gt; struct Heap { T h[M+1]; int n; Cmp cmp; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&amp;lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() // check n&amp;gt;=1 { return h[1]; } int size() { return n; } bool empty() { return n==0;</description>
     </item>
     
   </channel>

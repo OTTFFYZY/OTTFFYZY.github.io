@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  其他 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/solutions">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div>
+
+  <h1>其他</h1>
+  
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
+      <a href="/templates/others/timing/">
+        <div class="h2 mt-1 mb-1">[模板] 计时 Timing</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+
+
+
+
+
+      <div class="float-md-right">
+        <span>2020-10-01</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    计时 Timing chrono class Timing { private: typedef chrono::time_point&lt;std::chrono::high_resolution_clock&gt; TP; TP current_time() { return chrono::high_resolution_clock::now(); } TP st,ed; public: void start() { st=current_time(); } void end() { ed=current_time(); } void print() { cout&lt;&lt;chrono::duration_cast&lt;chrono::microseconds&gt;(ed-st).count() &lt;&lt;&#34;ms\n&#34;; } }timing;
+    <a class="muted-link" href="/templates/others/timing/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
+      <a href="/templates/others/cppmain/">
+        <div class="h2 mt-1 mb-1">[模板] C&#43;&#43; 日常使用</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+
+
+
+
+
+      <div class="float-md-right">
+        <span>2020-09-29</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    C++ 日常使用 // #include &lt;bits/stdc++.h&gt; #include &lt;cstdio&gt; #include &lt;cstring&gt; #include &lt;cstdlib&gt; #include &lt;climits&gt; #include &lt;cmath&gt; #include &lt;iostream&gt; #include &lt;iomanip&gt; #include &lt;string&gt; #include &lt;algorithm&gt; #include &lt;numeric&gt; #include &lt;utility&gt; #include &lt;functional&gt; #include &lt;vector&gt; #include &lt;list&gt; #include &lt;stack&gt; #include &lt;queue&gt; #include &lt;deque&gt; #include &lt;set&gt; #include &lt;map&gt; #include &lt;bitset&gt; #include &lt;complex&gt; #include &lt;random&gt; #include &lt;chrono&gt; #include &lt;array&gt; #include &lt;unordered_set&gt; #include &lt;unordered_map&gt; #include &lt;tuple&gt; using namespace std; using LL = long long; using ULL = unsigned long long; using LD = long double; using PII = pair&lt;int,int&gt;; using VI = vector&lt;int&gt;; using MII = map&lt;int,int&gt;; template&lt;typename T&gt; void cmin(T &amp;x,const T &amp;y)
+    <a class="muted-link" href="/templates/others/cppmain/">…</a>
+  </div>
+</div>
+
+  
+
+  
+  
+
+
+
+
+</div>
+
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+
+  <div class="Box Box--blue p-2 mb-3 mt-5">
+    <a href="/categories/" class="link-gray-dark">
+      <h4>Categories</h4>
+    </a>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/categories/contests" class="link-gray text-emphasized css-truncate-target"><span class="">Contests</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/categories/notes" class="link-gray text-emphasized css-truncate-target"><span class="">Notes</span></a>
+      <span class="text-right Counter">5</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/categories/others" class="link-gray text-emphasized css-truncate-target"><span class="">Others</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/categories/solutions" class="link-gray text-emphasized css-truncate-target"><span class="">Solutions</span></a>
+      <span class="text-right Counter">6</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/categories/summaries" class="link-gray text-emphasized css-truncate-target"><span class="">Summaries</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
+      <span class="text-right Counter">10</span>
+    </span>
+    
+  </div>
+
+
+
+
+  <div class="Box Box--blue p-2 mb-3">
+    <a href="/templates/" class="link-gray-dark">
+      <h4>Template</h4>
+    </a>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/templates/hash" class="link-gray text-emphasized css-truncate-target"><span class="">Hash</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/templates/%e5%85%b6%e4%bb%96" class="link-gray text-emphasized css-truncate-target"><span class="">其他</span></a>
+      <span class="text-right Counter">2</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/templates/%e5%9b%be%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">图论</span></a>
+      <span class="text-right Counter">3</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/templates/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="link-gray text-emphasized css-truncate-target"><span class="">数据结构</span></a>
+      <span class="text-right Counter">3</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/templates/%e6%95%b0%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">数论</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+  </div>
+
+
+
+
+  <div class="Box Box--blue p-2 mb-3">
+    <a href="/ojs/" class="link-gray-dark">
+      <h4>OJ</h4>
+    </a>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/ojs/atcoder" class="link-gray text-emphasized css-truncate-target"><span class="">Atcoder</span></a>
+      <span class="text-right Counter">4</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/ojs/leetcode" class="link-gray text-emphasized css-truncate-target"><span class="">Leetcode</span></a>
+      <span class="text-right Counter">3</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/ojs/luogu" class="link-gray text-emphasized css-truncate-target"><span class="">Luogu</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+  </div>
+
+
+
+
+  <div class="Box Box--blue p-2 mb-3">
+    <a href="/tags/" class="link-gray-dark">
+      <h4>Tags</h4>
+    </a>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/bfs" class="link-gray text-emphasized css-truncate-target"><span class="">Bfs</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/dfs" class="link-gray text-emphasized css-truncate-target"><span class="">Dfs</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/dp" class="link-gray text-emphasized css-truncate-target"><span class="">Dp</span></a>
+      <span class="text-right Counter">2</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/dp%e4%bc%98%e5%8c%96" class="link-gray text-emphasized css-truncate-target"><span class="">Dp优化</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/hash" class="link-gray text-emphasized css-truncate-target"><span class="">Hash</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/mst" class="link-gray text-emphasized css-truncate-target"><span class="">Mst</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e4%ba%8c%e5%8f%89%e5%a0%86" class="link-gray text-emphasized css-truncate-target"><span class="">二叉堆</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e5%89%8d%e7%bc%80%e5%92%8c" class="link-gray text-emphasized css-truncate-target"><span class="">前缀和</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e5%9f%ba%e7%8e%af%e6%a0%91" class="link-gray text-emphasized css-truncate-target"><span class="">基环树</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e5%b7%a6%e5%81%8f%e6%a0%91" class="link-gray text-emphasized css-truncate-target"><span class="">左偏树</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e5%b9%b6%e6%9f%a5%e9%9b%86" class="link-gray text-emphasized css-truncate-target"><span class="">并查集</span></a>
+      <span class="text-right Counter">2</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e6%95%b0%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">数论</span></a>
+      <span class="text-right Counter">2</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e6%9a%b4%e5%8a%9b" class="link-gray text-emphasized css-truncate-target"><span class="">暴力</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e6%9c%80%e7%9f%ad%e8%b7%af" class="link-gray text-emphasized css-truncate-target"><span class="">最短路</span></a>
+      <span class="text-right Counter">2</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e7%ba%bf%e6%ae%b5%e6%a0%91" class="link-gray text-emphasized css-truncate-target"><span class="">线段树</span></a>
+      <span class="text-right Counter">2</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e7%ba%bf%e6%ae%b5%e6%a0%91%e4%bc%98%e5%8c%96dp" class="link-gray text-emphasized css-truncate-target"><span class="">线段树优化dp</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e8%b4%a8%e5%9b%a0%e6%95%b0%e5%88%86%e8%a7%a3" class="link-gray text-emphasized css-truncate-target"><span class="">质因数分解</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e8%b4%aa%e5%bf%83" class="link-gray text-emphasized css-truncate-target"><span class="">贪心</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+  </div>
+
+
+
+
+  <div class="Box Box--blue p-2 mb-3">
+    <a href="/series/" class="link-gray-dark">
+      <h4>Series</h4>
+    </a>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/series/effective-cpp" class="link-gray text-emphasized css-truncate-target"><span class="">Effective cpp</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/series/markdown" class="link-gray text-emphasized css-truncate-target"><span class="">Markdown</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/series/%e6%b1%87%e7%bc%96%e8%af%ad%e8%a8%80" class="link-gray text-emphasized css-truncate-target"><span class="">汇编语言</span></a>
+      <span class="text-right Counter">3</span>
+    </span>
+    
+  </div>
+
+
+
+
+  <div class="Box Box--blue p-2 mb-3">
+    <a href="/archives/" class="link-gray-dark">
+      <h4>Archives</h4>
+    </a>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2020-09" class="link-gray text-emphasized css-truncate-target"><span class="">2020 09</span></a>
+      <span class="text-right Counter">23</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2020-10" class="link-gray text-emphasized css-truncate-target"><span class="">2020 10</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+  </div>
+
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+  </body>
+</html>
