@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
       
-  线段树 &ndash; OTTFF&#39;s Blog
+  Templates &ndash; OTTFF&#39;s Blog
 
     </title>
     
@@ -93,7 +93,7 @@
 
 <div>
 
-  <h1>线段树</h1>
+  <h1>Templates</h1>
   
 
   
@@ -102,93 +102,37 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
-      <a href="/sols/luogu/p4588/">
-        <div class="h2 mt-1 mb-1">[Luogu] P4588 [TJOI2018]数学计算</div>
+      <a href="/templates/ds/binaryheap/">
+        <div class="h2 mt-1 mb-1">[模板][数据结构] 二叉堆 Binary Heap</div>
       </a>
     </div>
     <div class="Subhead-description">
       
 
-<a href='/categories/solutions' class="muted-link">
-  <span class="Label Label--gray-darker">Solutions</span>
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
 </a>
 
 
 
-<a href='/ojs/luogu' class="muted-link">
-  <span class="Label Label--gray-darker">Luogu</span>
-</a>
 
 
-
-<a href='/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91' class="muted-link">
-  <span class="Label Label--gray">线段树</span>
+<a href='/tags/%E4%BA%8C%E5%8F%89%E5%A0%86' class="muted-link">
+  <span class="Label Label--gray">二叉堆</span>
 </a>
 
 
 
 
       <div class="float-md-right">
-        <span>2020-09-09</span>
+        <span>2020-09-23</span>
       </div>
     </div>
   </div>
   <div class="text-gray">
     
-    P4588 [TJOI2018]数学计算 题目大意 给定 $x = 1$ 和某个模数 $MO$，有两种操作（共 $Q \le 10^5$ 次） 操作 $1$：把 $x = x*v % MO$ 操作 $2$：取消第 $k$ 次操作（取消的必为操作 $1$，且某个操作 $1$ 只会最多被取消一次） 每
-    <a class="muted-link" href="/sols/luogu/p4588/">…</a>
-  </div>
-</div>
-
-  
-    
-    
-<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
-  <div class="Subhead mb-2">
-    <div class="Subhead-heading">
-      <a href="/sols/atcoder/abc177/f/">
-        <div class="h2 mt-1 mb-1">[AtCoder] Beginner Contest 177 F - I hate Shortest Path Problem</div>
-      </a>
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/solutions' class="muted-link">
-  <span class="Label Label--gray-darker">Solutions</span>
-</a>
-
-
-
-<a href='/ojs/atcoder' class="muted-link">
-  <span class="Label Label--gray-darker">Atcoder</span>
-</a>
-
-
-
-<a href='/tags/dp' class="muted-link">
-  <span class="Label Label--gray">DP</span>
-</a>
-
-<a href='/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91' class="muted-link">
-  <span class="Label Label--gray">线段树</span>
-</a>
-
-<a href='/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91%E4%BC%98%E5%8C%96dp' class="muted-link">
-  <span class="Label Label--gray">线段树优化DP</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        <span>2020-09-04</span>
-      </div>
-    </div>
-  </div>
-  <div class="text-gray">
-    
-    F - I hate Shortest Path Problem 题目大意 给出一个 $(h+1) \times w$ 的二维矩阵，初始位置可以是第 $0$ 行的任意位置。 每一个格只能往右或下方向移动 每一行 $i$ 区间 $L_{i}$ 到 $R_{i}$ 的格子不能向下走，问到达每一行的最小可能步数 简要题解 $dp[i][j]$ 为到达 $(i,j)$ 位置的最小步
-    <a class="muted-link" href="/sols/atcoder/abc177/f/">…</a>
+    二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &lt; // min heap // M: max size of heap template&lt;typename T,size_t M,typename Cmp=less&lt;&gt;&gt; struct Heap { T h[M+1]; int n; Cmp cmp; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() // check n&gt;=1 { return h[1]; } int size() { return n; } bool empty() { return n==0;
+    <a class="muted-link" href="/templates/ds/binaryheap/">…</a>
   </div>
 </div>
 
@@ -196,6 +140,49 @@
 
   
   
+
+<nav class="paginate-container">
+  <div class="pagination">
+    <ul>
+      
+      <a href="/categories/templates/" class="previous_page">Prev</a>
+      
+
+      
+          
+          
+          
+          
+              
+              
+          
+          
+            
+              
+              <a href="/categories/templates/">1</a>
+            
+          
+      
+          
+          
+          
+          
+              
+              
+          
+          
+            
+              <em class="current selected" aria-current="true">2</em>
+            
+          
+      
+
+      
+      <span class="next_page disabled">Next</span>
+      
+    </ul>
+  </div>
+</nav>
 
 
 

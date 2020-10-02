@@ -100,6 +100,40 @@
   
   <div>
     <div>
+      <a href="/templates/gt/dijkstra/">
+        <h3>[模板][图论] 迪杰斯特拉 Dijkstra</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF' class="muted-link">
+  <span class="Label Label--gray">最短路</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-09-24
+      </div>
+    </div>
+    迪杰斯特拉 Dijkstra 模板（priority_queue） // T must define &lt; and + // V: max number of vertex [0~V-1] template&lt;typename T,size_t V,bool Directed=true, T INF=T(0x3f3f3f3f),T ZERO=T(0)&gt; struct G { typedef pair&lt;T,int&gt; PTI; vector&lt;PTI&gt; g[V]; T dis[V]; int vis[V]; int n; void init(int n_) { n=n_; for(int i=0;i&lt;n;i++) g[i].clear(); } void addedge(int u,int v,T w) { g[u].emplace_back(w,v); if(!Directed) g[v].emplace_back(w,u); } void dijkstra(int st,int ed=-1) // ed=-1 no destination { for(int i=0;i&lt;n;i++) dis[i]=INF,vis[i]=0; priority_queue&lt;PTI,vector&lt;PTI&gt;,greater&lt;PTI&gt; &gt; qu; dis[st]=ZERO; qu.emplace(ZERO,st); while(!qu.empty()) { PTI p=qu.top(); qu.pop();
+  </div>
+  
+  <div>
+    <div>
       <a href="/templates/ds/binaryheap/">
         <h3>[模板][数据结构] 二叉堆 Binary Heap</h3>
       </a>
@@ -432,48 +466,6 @@
     1575. Count All Possible Routes 题目大意 给定一些不同的位置 $(N \le 100)$，给定起点和终点位置的标号，给定起始油量 $(F \le 200)$。 每次可以选择从当前位置走到任意其他位置花费每单位距离 $1$ 单位油。油量不能为负。 问，从起点到终点总
   </div>
   
-  <div>
-    <div>
-      <a href="/sols/atcoder/abc177/e/">
-        <h3>[AtCoder] Beginner Contest 177 E - Coprime</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/solutions' class="muted-link">
-  <span class="Label Label--gray-darker">Solutions</span>
-</a>
-
-
-
-<a href='/ojs/atcoder' class="muted-link">
-  <span class="Label Label--gray-darker">Atcoder</span>
-</a>
-
-
-
-<a href='/tags/%E6%95%B0%E8%AE%BA' class="muted-link">
-  <span class="Label Label--gray">数论</span>
-</a>
-
-<a href='/tags/%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3' class="muted-link">
-  <span class="Label Label--gray">质因数分解</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-09-05
-      </div>
-    </div>
-    E - Coprime 题目大意 给出数组 $A$ 如果其中数字两两互质则返回 “pairwise coprime”，如果整个数组 $gcd$ 为 $1$ 则返回 “setwise coprime”，其他情况返回 “not coprime” 简要题解 显然 setwise 很好判
-  </div>
-  
 
   
   <nav class="paginate-container">
@@ -548,7 +540,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
-      <span class="text-right Counter">10</span>
+      <span class="text-right Counter">11</span>
     </span>
     
   </div>
@@ -578,7 +570,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="link-gray text-emphasized css-truncate-target"><span class="">数据结构</span></a>
-      <span class="text-right Counter">3</span>
+      <span class="text-right Counter">4</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -623,6 +615,11 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/bfs" class="link-gray text-emphasized css-truncate-target"><span class="">Bfs</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/bit" class="link-gray text-emphasized css-truncate-target"><span class="">Bit</span></a>
       <span class="text-right Counter">1</span>
     </span>
     
@@ -753,7 +750,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-10" class="link-gray text-emphasized css-truncate-target"><span class="">2020 10</span></a>
-      <span class="text-right Counter">1</span>
+      <span class="text-right Counter">2</span>
     </span>
     
   </div>
