@@ -11,7 +11,7 @@
     </title>
     
     
-    <meta name="description" property="og:description" content="树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // id 0~n-1 template&amp;lt;typename T,size_t M,typename OpPlus=plus&amp;lt;T&amp;gt;,typename OpMinus=minus&amp;lt;T&amp;gt;&amp;gt; struct BIT { static int lowbit(int x) { return x&amp;amp;(-x); } T tree[M&#43;1]; T tmp[M&#43;1]; OpPlus opp; OpMinus opm; int n; void init(int n_) { n=n_; for(int i=1;i&amp;lt;=n;i&#43;&#43;) tree[i]=T(0); } void init(int n_,T[] v) { n=n_; tmp[0]=T(0); for(int i=0;i&amp;lt;n;i&#43;&#43;) tmp[i&#43;1]=opp(tmp[i],v[i]); for(int i=1;i&amp;lt;=n;i&#43;&#43;) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); } void add(int p,T V) { for(p=p&#43;1;p&amp;lt;=n;p&#43;=lowbit(p)) tree[i]=opp(tree[i],V); } T sum(int p) { T ans(0); for(p=p&#43;1;p;p-=lowbit(p)) ans=opp(ans,tree[p]); return ans; } T sum(int l,int r) { return opm(sum(r),sum(l-1)); } };|OTTFF&#39;s Blog">
+    <meta name="description" property="og:description" content="树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // id 0~n-1 template&amp;lt;typename T,size_t M,typename OpPlus=plus&amp;lt;T&amp;gt;,typename OpMinus=minus&amp;lt;T&amp;gt;&amp;gt; struct BIT { static int lowbit(int x) { return x&amp;amp;(-x); } T tree[M&#43;1]; // tree[i] -&amp;gt; [i-lowbit(i)&#43;1,i] T tmp[M&#43;1]; OpPlus opp; OpMinus opm; int n; void init(int n_) { n=n_; for(int i=1;i&amp;lt;=n;i&#43;&#43;) tree[i]=T(0); } void init(int n_,T[] v) { n=n_; tmp[0]=T(0); for(int i=0;i&amp;lt;n;i&#43;&#43;) tmp[i&#43;1]=opp(tmp[i],v[i]); for(int i=1;i&amp;lt;=n;i&#43;&#43;) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&amp;lt;n;i&#43;&#43;) add(i,v[i]); } void add(int p,T V) { for(p=p&#43;1;p&amp;lt;=n;p&#43;=lowbit(p)) tree[i]=opp(tree[i],V); } T sum(int p) { T ans(0); for(p=p&#43;1;p;p-=lowbit(p)) ans=opp(ans,tree[p]); return ans; } T sum(int l,int|OTTFF&#39;s Blog">
     
 
     <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
@@ -137,8 +137,8 @@
 <span class="p">{</span>
     <span class="k">static</span> <span class="kt">int</span> <span class="nf">lowbit</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span><span class="o">&amp;</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">);</span> <span class="p">}</span>
 
-    <span class="n">T</span> <span class="n">tree</span><span class="p">[</span><span class="n">M</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
-    <span class="n">T</span> <span class="n">tmp</span><span class="p">[</span><span class="n">M</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+    <span class="n">T</span> <span class="n">tree</span><span class="p">[</span><span class="n">M</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span> <span class="c1">// tree[i] -&gt; [i-lowbit(i)+1,i]
+</span><span class="c1"></span>    <span class="n">T</span> <span class="n">tmp</span><span class="p">[</span><span class="n">M</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
     <span class="n">OpPlus</span> <span class="n">opp</span><span class="p">;</span>
     <span class="n">OpMinus</span> <span class="n">opm</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
@@ -153,7 +153,8 @@
         <span class="n">tmp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">T</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">tmp</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">opp</span><span class="p">(</span><span class="n">tmp</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">tree</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">opm</span><span class="p">(</span><span class="n">tmp</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">tmp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">lowbit</span><span class="p">(</span><span class="n">i</span><span class="p">)]);</span>
-    <span class="p">}</span>
+        <span class="c1">// for(int i=0;i&lt;n;i++) add(i,v[i]);
+</span><span class="c1"></span>    <span class="p">}</span>
     <span class="kt">void</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">p</span><span class="p">,</span><span class="n">T</span> <span class="n">V</span><span class="p">)</span>
     <span class="p">{</span> <span class="k">for</span><span class="p">(</span><span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">p</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">p</span><span class="o">+=</span><span class="n">lowbit</span><span class="p">(</span><span class="n">p</span><span class="p">))</span> <span class="n">tree</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">opp</span><span class="p">(</span><span class="n">tree</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">V</span><span class="p">);</span> <span class="p">}</span>
     <span class="n">T</span> <span class="nf">sum</span><span class="p">(</span><span class="kt">int</span> <span class="n">p</span><span class="p">)</span>
@@ -172,7 +173,9 @@
     
         <a href="/templates/others/timing/" class="previous_page">Prev: [模板] 计时 Timing </a>
     
+     <br> 
     
+        <a href="/templates/others/checker/" class="next_page">Next: [模板] 对拍程序 </a>
     
   </section>
 

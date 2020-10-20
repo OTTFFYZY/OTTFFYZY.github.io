@@ -132,7 +132,7 @@
   </div>
   <div class="text-gray">
     
-    树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // id 0~n-1 template&lt;typename T,size_t M,typename OpPlus=plus&lt;T&gt;,typename OpMinus=minus&lt;T&gt;&gt; struct BIT { static int lowbit(int x) { return x&amp;(-x); } T tree[M+1]; T tmp[M+1]; OpPlus opp; OpMinus opm; int n; void init(int n_) { n=n_; for(int i=1;i&lt;=n;i++) tree[i]=T(0); } void init(int n_,T[] v) { n=n_; tmp[0]=T(0); for(int i=0;i&lt;n;i++) tmp[i+1]=opp(tmp[i],v[i]); for(int i=1;i&lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); } void add(int p,T V) { for(p=p+1;p&lt;=n;p+=lowbit(p)) tree[i]=opp(tree[i],V); } T sum(int p) { T ans(0); for(p=p+1;p;p-=lowbit(p)) ans=opp(ans,tree[p]); return ans; } T sum(int l,int r) { return opm(sum(r),sum(l-1)); } };
+    树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // id 0~n-1 template&lt;typename T,size_t M,typename OpPlus=plus&lt;T&gt;,typename OpMinus=minus&lt;T&gt;&gt; struct BIT { static int lowbit(int x) { return x&amp;(-x); } T tree[M+1]; // tree[i] -&gt; [i-lowbit(i)+1,i] T tmp[M+1]; OpPlus opp; OpMinus opm; int n; void init(int n_) { n=n_; for(int i=1;i&lt;=n;i++) tree[i]=T(0); } void init(int n_,T[] v) { n=n_; tmp[0]=T(0); for(int i=0;i&lt;n;i++) tmp[i+1]=opp(tmp[i],v[i]); for(int i=1;i&lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(p=p+1;p&lt;=n;p+=lowbit(p)) tree[i]=opp(tree[i],V); } T sum(int p) { T ans(0); for(p=p+1;p;p-=lowbit(p)) ans=opp(ans,tree[p]); return ans; } T sum(int l,int
     <a class="muted-link" href="/templates/ds/bit/">…</a>
   </div>
 </div>
@@ -187,7 +187,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
-      <span class="text-right Counter">11</span>
+      <span class="text-right Counter">12</span>
     </span>
     
   </div>
@@ -207,7 +207,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e5%85%b6%e4%bb%96" class="link-gray text-emphasized css-truncate-target"><span class="">其他</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">3</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -397,7 +397,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-10" class="link-gray text-emphasized css-truncate-target"><span class="">2020 10</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">3</span>
     </span>
     
   </div>

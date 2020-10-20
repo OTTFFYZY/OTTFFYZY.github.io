@@ -101,6 +101,36 @@
   
   <div>
     <div>
+      <a href="/templates/others/checker/">
+        <h3>[模板] 对拍程序</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-10-20
+      </div>
+    </div>
+    Title from os import system tc=0 while True: system(&#34;python data.py &gt; data.in&#34;) system(&#34;std.exe &lt; data.in &gt; std.out&#34;) system(&#34;my.exe &lt; data.in &gt; my.out&#34;) # system(&#34;diff std.out my.out &gt; diff.out&#34;): if system(&#34;fc std.out my.out &gt; diff.out&#34;): print(&#34;WA&#34;) break else: tc += 1 print(&#34;AC #%d&#34;%tc) print(&#34;-------------------- data.in --------------------&#34;) # system(&#34;cat data.in&#34;) system(&#34;type data.in&#34;) print(&#34;-------------------- std.out --------------------&#34;) system(&#34;type std.out&#34;) print(&#34;-------------------- my.out ---------------------&#34;) system(&#34;type my.out&#34;) #include &lt;bits/stdc++.h&gt; using namespace std; int main() { int tc=0; while(1) { system(&#34;data.exe &gt; data.in&#34;); // system(&#34;python data.py &gt; data.in&#34;); system(&#34;std.exe &lt; data.in &gt; std.out&#34;); system(&#34;my.exe &lt; data.in &gt; my.out&#34;); // system(&#34;diff std.out my.out &gt; diff.out&#34;): if(system(&#34;fc std.out my.out &gt;
+  </div>
+  
+  <div>
+    <div>
       <a href="/templates/ds/bit/">
         <h3>[模板][数据结构] 树状数组 Binary Index Tree/Fenwick Tree</h3>
       </a>
@@ -130,7 +160,7 @@
         2020-10-01
       </div>
     </div>
-    树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // id 0~n-1 template&lt;typename T,size_t M,typename OpPlus=plus&lt;T&gt;,typename OpMinus=minus&lt;T&gt;&gt; struct BIT { static int lowbit(int x) { return x&amp;(-x); } T tree[M+1]; T tmp[M+1]; OpPlus opp; OpMinus opm; int n; void init(int n_) { n=n_; for(int i=1;i&lt;=n;i++) tree[i]=T(0); } void init(int n_,T[] v) { n=n_; tmp[0]=T(0); for(int i=0;i&lt;n;i++) tmp[i+1]=opp(tmp[i],v[i]); for(int i=1;i&lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); } void add(int p,T V) { for(p=p+1;p&lt;=n;p+=lowbit(p)) tree[i]=opp(tree[i],V); } T sum(int p) { T ans(0); for(p=p+1;p;p-=lowbit(p)) ans=opp(ans,tree[p]); return ans; } T sum(int l,int r) { return opm(sum(r),sum(l-1)); } };
+    树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // id 0~n-1 template&lt;typename T,size_t M,typename OpPlus=plus&lt;T&gt;,typename OpMinus=minus&lt;T&gt;&gt; struct BIT { static int lowbit(int x) { return x&amp;(-x); } T tree[M+1]; // tree[i] -&gt; [i-lowbit(i)+1,i] T tmp[M+1]; OpPlus opp; OpMinus opm; int n; void init(int n_) { n=n_; for(int i=1;i&lt;=n;i++) tree[i]=T(0); } void init(int n_,T[] v) { n=n_; tmp[0]=T(0); for(int i=0;i&lt;n;i++) tmp[i+1]=opp(tmp[i],v[i]); for(int i=1;i&lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(p=p+1;p&lt;=n;p+=lowbit(p)) tree[i]=opp(tree[i],V); } T sum(int p) { T ans(0); for(p=p+1;p;p-=lowbit(p)) ans=opp(ans,tree[p]); return ans; } T sum(int l,int
   </div>
   
   <div>
@@ -397,40 +427,6 @@
     弗洛伊德 Floyd // T must define &lt; and + template&lt;typename T,size_t V,bool Directed=true,T INF=T(0x3f3f3f3f)&gt; struct Floyd { T g[V][V]; int n; void init(int n_) { n=n_; for(int i=0;i&lt;n;i++) for(int j=0;j&lt;n;j++) g[i][j]=INF; } void addedge(int u,int v,T w) // check multi-edges { g[u][v]=w; if(!Directed) g[v][u]=w; } void cmin(T &amp;x,const T &amp;y) { if(y&lt;x) x=y; } void floyd(Upd =upd) { for(int k=0;k&lt;n;k++) for(int i=0;i&lt;n;i++) for(int j=0;j&lt;n;j++) cmin(g[i][j],g[i][k]+g[k][j]); } };
   </div>
   
-  <div>
-    <div>
-      <a href="/templates/ds/unionfind/">
-        <h3>[模板][数据结构] 并查集 Union Find / Disjoint Set Union</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/templates' class="muted-link">
-  <span class="Label Label--gray-darker">Templates</span>
-</a>
-
-
-
-
-
-<a href='/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86' class="muted-link">
-  <span class="Label Label--gray">并查集</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-09-24
-      </div>
-    </div>
-    并查集 Union Find / Disjoint Set Union 路径压缩和按 size 合并 Union by Size // M: max number of set // id is in [0~M-1] template&lt;size_t M&gt; struct UF { int uf[M],sz[M]; int n; int ns; // number of set void init(int n_) { n=ns=n_; for(int i=0;i&lt;n;i++) uf[i]=i,sz[i]=1; } int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } bool same(int x,int y) { return find(x)==find(y); } bool merge(int x,int y) { x=find(x); y=find(y); if(x==y) return false; if(sz[x]&gt;sz[y]) swap(x,y); sz[y]+=sz[x]; uf[x]=y; ns--; return true; } }; Debug: void show() { cout&lt;&lt;&#34;UnionFind:----------------------\n&#34;; cout&lt;&lt;&#34;id:&#34;; for(int i=0;i&lt;n;i++) cout&lt;&lt;&#39;\t&#39;&lt;&lt;i; cout&lt;&lt;&#39;\n&#39;;
-  </div>
-  
 
   
   <nav class="paginate-container">
@@ -505,7 +501,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
-      <span class="text-right Counter">11</span>
+      <span class="text-right Counter">12</span>
     </span>
     
   </div>
@@ -525,7 +521,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e5%85%b6%e4%bb%96" class="link-gray text-emphasized css-truncate-target"><span class="">其他</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">3</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -715,7 +711,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-10" class="link-gray text-emphasized css-truncate-target"><span class="">2020 10</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">3</span>
     </span>
     
   </div>
