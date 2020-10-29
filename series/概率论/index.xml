@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>概率论 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/series/%E6%A6%82%E7%8E%87%E8%AE%BA/</link>
+    <description>Recent content in 概率论 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 15 Sep 2020 14:13:07 -0400</lastBuildDate>
+    
+	<atom:link href="https://ottffyzy.github.io/series/%E6%A6%82%E7%8E%87%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>《概率、统计与随机过程》 笔记 第 1 章 概率论导论</title>
+      <link>https://ottffyzy.github.io/notes/probabilitysrp4e/c1/</link>
+      <pubDate>Tue, 15 Sep 2020 14:13:07 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/probabilitysrp4e/c1/</guid>
+      <description>第 1 章 概率论导论 1.2 概率的不同类型 直观概率：基于直观来处理判断 古典概率：事件概率不是实验性的，通过预先计算事件 $E$ 可能发生的次数 $n_E$ 形成一个比值 $n_E / n$ 其中 $n$ 是所有可能的结果。此时需要所有的结果是等可能的。 古</description>
+    </item>
+    
+  </channel>
+</rss>

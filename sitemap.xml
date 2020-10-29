@@ -4,41 +4,71 @@
   
   <url>
     <loc>https://ottffyzy.github.io/archives/2020-10/</loc>
-    <lastmod>2020-10-20T00:10:35-04:00</lastmod>
+    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ottffyzy.github.io/templates/others/checker/</loc>
-    <lastmod>2020-10-20T00:10:35-04:00</lastmod>
+    <loc>https://ottffyzy.github.io/templates/ds/bitset/</loc>
+    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ottffyzy.github.io/archives/</loc>
-    <lastmod>2020-10-20T00:10:35-04:00</lastmod>
+    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/tags/bit/</loc>
+    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/tags/bitset/</loc>
+    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ottffyzy.github.io/categories/</loc>
-    <lastmod>2020-10-20T00:10:35-04:00</lastmod>
+    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ottffyzy.github.io/</loc>
-    <lastmod>2020-10-20T00:10:35-04:00</lastmod>
+    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/templates/stl/</loc>
+    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/tags/</loc>
+    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ottffyzy.github.io/templates/</loc>
-    <lastmod>2020-10-20T00:10:35-04:00</lastmod>
+    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ottffyzy.github.io/categories/templates/</loc>
-    <lastmod>2020-10-20T00:10:35-04:00</lastmod>
+    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ottffyzy.github.io/templates/</loc>
+    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/templates/others/checker/</loc>
     <lastmod>2020-10-20T00:10:35-04:00</lastmod>
   </url>
   
@@ -49,21 +79,6 @@
   
   <url>
     <loc>https://ottffyzy.github.io/templates/ds/bit/</loc>
-    <lastmod>2020-10-01T12:09:44-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ottffyzy.github.io/tags/bit/</loc>
-    <lastmod>2020-10-01T12:09:44-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ottffyzy.github.io/tags/</loc>
-    <lastmod>2020-10-01T12:09:44-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ottffyzy.github.io/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2020-10-01T12:09:44-04:00</lastmod>
   </url>
   
@@ -228,22 +243,32 @@
   </url>
   
   <url>
-    <loc>https://ottffyzy.github.io/series/effective-cpp/</loc>
-    <lastmod>2020-09-13T22:07:50-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ottffyzy.github.io/categories/notes/</loc>
-    <lastmod>2020-09-13T22:07:50-04:00</lastmod>
+    <lastmod>2020-09-15T14:13:07-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ottffyzy.github.io/notes/</loc>
-    <lastmod>2020-09-13T22:07:50-04:00</lastmod>
+    <lastmod>2020-09-15T14:13:07-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://ottffyzy.github.io/series/</loc>
+    <lastmod>2020-09-15T14:13:07-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/notes/probabilitysrp4e/c1/</loc>
+    <lastmod>2020-09-15T14:13:07-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/series/%E6%A6%82%E7%8E%87%E8%AE%BA/</loc>
+    <lastmod>2020-09-15T14:13:07-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/series/effective-cpp/</loc>
     <lastmod>2020-09-13T22:07:50-04:00</lastmod>
   </url>
   

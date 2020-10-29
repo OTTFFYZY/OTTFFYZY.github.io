@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  《概率、统计与随机过程》 笔记 第 1 章 概率论导论 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="第 1 章 概率论导论 1.2 概率的不同类型 直观概率：基于直观来处理判断 古典概率：事件概率不是实验性的，通过预先计算事件 $E$ 可能发生的次数 $n_E$ 形成一个比值 $n_E / n$ 其中 $n$ 是所有可能的结果。此时需要所有的结果是等可能的。 古|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/solutions">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">《概率、统计与随机过程》 笔记 第 1 章 概率论导论</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+<a href='/series/%E6%A6%82%E7%8E%87%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray">概率论</span>
+</a>
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2020-09-15. Published at: 2020-09-15.">
+        
+          Published: 2020-09-15 Tue 14:13:07
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="第-1-章-概率论导论">第 1 章 概率论导论</h2>
+<h2 id="12-概率的不同类型">1.2 概率的不同类型</h2>
+<p>直观概率：基于直观来处理判断</p>
+<p>古典概率：事件概率不是实验性的，通过预先计算事件 $E$ 可能发生的次数 $n_E$ 形成一个比值 $n_E / n$ 其中 $n$ 是所有可能的结果。此时需要所有的结果是等可能的。</p>
+<p>古典概率不能处理实验结果不是等可能的情况，不能处理实验结果是无穷大的情况。</p>
+<p>频率作为概率的测度：</p>
+$$P[E] = \lim_{n \to \infty} \frac{n_E}{n}$$
+<p>但注意到 $n$ 不可能是无穷大，因此引入基于公理化理论的概率。</p>
+<h2 id="14-集合域和事件">1.4 集合、域和事件</h2>
+<p><strong>样本空间</strong>：所有实验结果的集合 $\Omega$</p>
+<p><strong>事件</strong>：样本空间的子集</p>
+<p>单一实验结果：$\zeta$</p>
+<p>$\Omega$ 本身也称<strong>必然事件</strong>，空集 $\phi$ 也称<strong>零事件</strong>。</p>
+<p>如果 $\Omega = \lbrace \zeta_{1},\zeta_{1},\dots,\zeta_{N} \rbrace$ 则其子集有 $2^N$ 个。</p>
+<p><strong>德摩根（De Morgan）定律</strong>：</p>
+$$\complement_{U}\left[\bigcup_{i=1}^{n} E_i\right] = \bigcap_{i=1}^{n} \complement_{U} E_i$$
+$$\complement_{U}\left[\bigcap_{i=1}^{n} E_i\right] = \bigcup_{i=1}^{n} \complement_{U} E_i$$
+<p><strong>$\sigma$ 域</strong>：考虑一个全集 $\Omega$ 和 $\Omega$ 的子集构成的集合簇，另 $E$ 和 $F$ 是这个簇中的任意两个子集，如果</p>
+<p>(1) $\phi \in \mathscr{M}$ ，$\Omega \in \mathscr{M}$</p>
+<p>(2) 如果 $E \in \mathscr{M}$ 和 $F \in \mathscr{M}$，那么 $E \cup F \in \mathscr{M}$ 和 $E \cap F \in \mathscr{M}$</p>
+<p>(3) 如果 $E \in \mathscr{M}$ ，则  $\complement_{\Omega} E \in \mathscr{M}$</p>
+<p>则该集合簇形成了一个域 $\mathscr{M}$。</p>
+<p>当 $\Omega$ 是不可数的，并非每个子集都能以一致的方式赋予概率（可测的），必须使用较小的集合簇来形成 $\sigma$ 域。比如当 $\Omega = R^1$ 即实数直线时，并非 $\Omega$ 的每个子集都能以一致的方式赋予概率（可测的）。我们可以从所有的开或闭区间生成一个 $\sigma$ 域，即实数直线上的事件的博雷尔（Borel）域，这个域包含了所有感兴趣的工程和科学中的子集。</p>
+<h2 id="15-概率的公理化定义">1.5 概率的公理化定义</h2>
+<p><strong>概率</strong>是一个集合函数 $P[\ \cdot \ ]$ 它对每个事件 $E \in \scr{F}$ 指定一个数 $P[E]$，这个数称为事件 $E$ 的概率，它满足：</p>
+<p>(1) $P[E] \ge 0$</p>
+<p>(2) $P[\Omega] = 1$</p>
+<p>(3) $P[E \cup F] = P[E] + P[F]$ 如果 $E \cap F = \phi$</p>
+<p>一些推论</p>
+<p>(4) $P[\phi] = 0$</p>
+<p>(5) $P[E \cap \left(\complement_{\Omega} F \right)] = P[E] - P[EF]$</p>
+<p>(6) $P[E] = 1 - P[\complement_{\Omega} E]$</p>
+<p>(7) $P[E \cup F] = P[E] + P[F] - P[EF]$</p>
+<p>(8) $P \left[ \cup_{i=1}^{n} E_i \right] = \sum_{i=1}^{n} P[E_i]$ 如果 $\forall \ i \ne j, E_i E_j = \phi$</p>
+<p>(9) $P \left[ \cup_{i=1}^{n} E_i \right] \le \sum_{i=1}^{n} P[E_i]$</p>
+<p>在一给定实验中，事件 $E_1, E_2, \cdots, E_n$ 至少有一个发生的概率可以用容斥原理来求。</p>
+<h2 id="16-联合概率条件概率全概率和独立性">1.6 联合概率、条件概率、全概率和独立性</h2>
+<p><strong>联合概率</strong>：多个事件同时发生的概率。如 $P[AB]$</p>
+<p><strong>条件概率</strong>：某事件 $A$ 已经发生时 $B$ 发生的概率。</p>
+$$P[B|A] = \frac{P[AB]}{P[A]}$$
+<p><strong>事件独立</strong>：如果 $A \in \scr{F}$，$B \in \scr{F}$，且 $P[A] &gt; 0$，$P[B]&gt;0$，当且仅当 $P[AB] = P[A]P[B]$ 时，称事件 $A$ 和 $B$ 是独立的。</p>
+<p>一般的，对于独立事件 $P[A|B] = P[A]$，$P[B|A]=P[B]$</p>
+<p><strong>联合独立</strong>：令 $A_i(i=1,\cdots,n) \in \scr{F}$ 当且仅当</p>
+<p>$P[A_i A_j] = P[A_i] P[A_j]$</p>
+<p>$P[A_i A_j A_k] = P[A_i] P[A_j] P[A_k]$</p>
+<p>$\vdots$</p>
+<p>$P[A_1 \cdots A_n] = P[A_1] \cdots P[A_n]$</p>
+<p>对所有下标 $1\le i &lt; j &lt; k &lt; \cdots \le n$ 成立时，我们说所有的 $A_i$ 是联合独立。</p>
+<p><strong>独立实验</strong>：一个实验的结果不受另一个的过去、现在和将来的实验结果的影响。</p>
+<p>对于两个实验，如果：</p>
+<p>(1) 对于互积事件 $E = E_1 E_2$，我们能够写成</p>
+$$P[E] = P_1[E_1] P_2[E_2]$$
+<p>(2) 在复合实验中，一般事件 $E$ 的概率能够根据单一事件的概率来表示</p>
+$$P[E] = \sum_{(\zeta_1, \zeta_2) \in E} P_1[\{ \zeta_1 \}] P_2[\{ \zeta_2 \}]$$
+<p>则称两个实验是独立的。</p>
+<p>推广到 $n$ 个实验的组合，则复合实验的样本空间为</p>
+$$\begin{align} \Omega =&amp; \bigotimes_{i=1}^{n} \Omega_i \\ =&amp; \Omega_1 \times \Omega_2 \times \cdots \times \Omega_n \end{align}$$
+<p>实验结果是一个 $n$ 维向量 $\zeta = (\zeta_1, \zeta_2, \cdots , \zeta_n) \in E \subseteq \Omega$。</p>
+<p>事件是独立的，指对于复合实验中的任意事件 $E$</p>
+$$P[E] = \sum_{i=1}^{k} P_1[E_{1,i}] P_2[E_{2,i}] $$
+<p>其中 $E = \bigcup_{i=1}^{k} E_{1,i} \times E_{2,i}$，是一个互不相交的并集，因此概率具有可加性。</p>
+<p><strong>非独立实验</strong>：第二个实验的概率依赖于第一个实验发生的事件。第二个实验的概率测度需要添加与第一个实验结果相关的下标 $E_{2,i}$。此时对于复合事件 $E$，另 $E_1 = \cup_{i} {\zeta_{1,i}}$</p>
+$$P[E] = \sum_{i} P[{\zeta_{1,i}}] P_{2,i}[E_2]$$
+<p><strong>全概率定理</strong>：</p>
+<p>令 $A_1, A_2, \cdots, A_n$ 是 $n$ 个互斥的事件，且 $\bigcup_{i=1}^{n} A_i = \Omega$，令 $B$ 是任何一个定义在 $A_i$ 的概率空间上的事件，那么对于所有 $i$，$P[A_i] \neq 0$，有</p>
+$$P[B] = \sum_{i=1}^{n} P[B|A_i] P[A_i]$$
+<h2 id="17-贝叶斯定理及其应用">1.7 贝叶斯定理及其应用</h2>
+<p><strong>贝叶斯定理(Bayes’ Theorem)</strong>：令 $A_i(i=1,2,\cdots,n)$ 是定义在概率空间 $\scr{P}$ 上的一个事件集合，且对于所有的 $i \neq j$，$\bigcup_{i=1}^{n} A_i = \Omega$ 且 $A_i A_j = \phi$。有一个定义在 $\scr{P}$ 上的事件 $B$，$P[B] &gt; 0$ 和对所有 $i$，$P[A_i] \neq 0$，有</p>
+$$P[A_j|B] = \frac{P[B|A_j]P[A_j]}{\sum_{i=1}^{n} P[B|A_i] P[A_i]}$$
+<p>可以发现</p>
+$$\frac{P[B|A_j]P[A_j]}{\sum_{i=1}^{n} P[B|A_i] P[A_i]} = \frac{P[A_j B]}{P[B]}$$
+<h2 id="18-组合">1.8 组合</h2>
+<p>容量为 $r$ 的有序样本：$n$ 个元素 $a_1, a_2, \cdots, a_n$ 的任何有序排列 $a_{k_1}, a_{k_2}, \cdots, a_{k_r}$，其中每个 $k_i$ 可以是 $1$ 到 $n$ 的任意值。</p>
+<p>重复抽样能够形成 $n^r$ 个不同的有序样本。</p>
+<p>无重复抽样能够形成</p>
+$$(n)_r = \frac{n!}{(n-r)!} = C_n^r \cdot r!$$
+<p>对于组合数 $C_n^r$ 由于其也为二项式系数，也记作</p>
+$$C_n^r = \binom{n}{r}$$
+<p>由于 $n$ 个元素自己的数目是 $2^n$ 个，因此</p>
+$$\sum_{r=0}^{n} \binom{n}{r} = 2^n$$
+<p>把 $n$ 个元素集合划分成 $l$ 个大小为 $r_1, r_2, \cdots, r_l$ （$\sum_{i=1}^{l} r_i = n$）的不同集合的方案数有</p>
+$$\binom{n}{r_1}\binom{n-r_1}{r_2} \cdots \binom{n-r_1-r_2-\cdots - r_{l-1}}{r_l} = \frac{n!}{r_1! \cdot r_2! \cdots r_l!} = \binom{n}{r1 \ r2 \ \cdots \ r_l}$$
+<p><strong>入住问题</strong>：$r$ 个球放入 $n$ 个盒子，</p>
+<ol>
+<li>
+<p>盒子可辩别，球可辩别，方案数为 $n^r$</p>
+</li>
+<li>
+<p>盒子可辩别，球不可辩别。考虑隔板法，即在 $r$ 个球前后及之间的空隙插入 $n-1$ 个隔板。由于隔板和球都是不可区分的，而隔板和球的顺序可以是任意的，这相当于从 $n-1+r$ 个隔板或球中选出球或隔板，即：</p>
+</li>
+</ol>
+$$\binom{n&#43;r-1}{r} = \binom{n&#43;r-1}{n-1}$$
+<ol start="3">
+<li>盒子可辩别，球不可辩别，盒子不能为空。此时隔板之间必须有球，相当于直接向隔板之间的空隙插入球即可，即</li>
+</ol>
+$$\binom{r-1}{n-1}$$
+<p><strong>生日碰撞</strong>：</p>
+<p>记一年天数为 $n$，一个组中有 $r$ 个人，用 $P_0(r,n)$ 表示一组中没有人生日相同的概率，则</p>
+$$P_0(r,n) = \frac{n(n-1)(n-2)\cdots(n-r&#43;1)}{n^r} = \prod_{i=1}^{r-1} (1-\frac{i}{n})$$
+<h2 id="19-伯努利试验bernoulli-trials二项式和多项式的概率分布">1.9 伯努利试验（Bernoulli Trials）：二项式和多项式的概率分布</h2>
+<p><strong>伯努利试验（Bernoulli Trials）</strong>：只有成功 $s$ 失败 $f$ 两种可能，有 $P[s] = p,P[f]=q$，其中 $0&lt;p&lt;1,q=1-p$</p>
+<p>假定该试验做了 $n$ 次，则样本空间为：</p>
+$$\Omega_n = {a_1,\cdots, a_M}$$
+<p>其中 $M=2^n$，$a_i$ 是一个有序的 $n$ 元组。</p>
+<p>$n$ 试验 $k$ 次成功的概率，即二项式概率分布律</p>
+$$b(k;n,p) = \binom{n}{k} p^k q^{n-k}$$
+<p>$n$ 试验小于等于 $k$ 次成功的概率，即二项式分布函数</p>
+$$B(k;n,p) = \sum_{i=0}^{k} b(i;n,p) = \sum_{i=0}^{k} \binom{n}{k} p^i q^{n-i}$$
+<p><strong>多项式概率分布</strong></p>
+<p>多项式概率分布是二项式概率分布的推广。假设某次试验有 $l$ 个结果，对应结果 $\zeta_i$ 的概率为 $p_i$， 那么有，$p_i \ge 0, \sum_{i=1}^{l} p_i = 1$</p>
+<p>$n$ 次试验结果构成一个 $n$ 长的有序串，其中 $\zeta_i$ 出现 $r_i$ 次，则此实验结果出现的概率为</p>
+$$\prod_{i=1}^{n} p_i^{r_i}$$
+<p>如果忽略结果的有序性，只在乎每种 $\zeta_i$ 的出现次数为 $r_i$ 次，则概率为</p>
+$$\binom{n}{r1 \ r2 \ \cdots \ r_l}\prod_{i=1}^{n} p_i^{r_i}$$
+<h2 id="110-二项式概率分布的渐进特性泊松分布poisson-law">1.10 二项式概率分布的渐进特性：泊松分布（Poisson Law）</h2>
+<p>假定二项式函数 $b(k;n,p)$ 中 $n \gg 1, p \ll 1$， 但 $np = \mu$ 保持一个常数，则</p>
+$$b(k;n,p) = \binom{n}{k} p^k q^{n-k} \approx \frac{1}{k!} \mu^k \left(1-\frac{\mu}{n} \right)^{n-k}$$
+<p>当 $n \rightarrow \infty$ 时，</p>
+$$\frac{1}{k!} \mu^k (1-\frac{\mu}{n})^{n-k} \rightarrow \frac{\mu^k}{k!} e^{-\mu}$$
+<p>参数为 $\mu &gt; 0$ 的泊松分布为</p>
+$$\frac{\mu^k}{k!} e^{-\mu}, \quad 0 \le k &lt; \infty$$
+<h2 id="111-二项式分布近似为正态分布">1.11 二项式分布近似为正态分布</h2>
+<p>定义 $f_{SN}(x)$ 为标准正态分布，</p>
+$$f_{SN}(x) = \frac{1}{\sqrt{2\pi}} \exp \left(-\frac{1}{2}x^2 \right) $$
+<p>当 $n$ 很大时，尤其是 $npq \gg 1$ 时，</p>
+$$b(k;n,p) \approx \frac{1}{\sqrt{npq}} f_{SN} \left(\frac{k-np}{\sqrt{npq}} \right) $$
+
+  </section>
+
+  <section>
+    
+        <a href="/notes/effectivecpp/c1/" class="previous_page">Prev: 《Effective C&#43;&#43;》 笔记 1. 让自己习惯 C&#43;&#43; </a>
+    
+     <br> 
+    
+        <a href="/sols/leetcode/lcp21/" class="next_page">Next: [LeetCode] LCP 21. 追逐游戏 </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>《概率、统计与随机过程》 笔记 第 1 章 概率论导论</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#第-1-章-概率论导论">第 1 章 概率论导论</a></li>
+    <li><a href="#12-概率的不同类型">1.2 概率的不同类型</a></li>
+    <li><a href="#14-集合域和事件">1.4 集合、域和事件</a></li>
+    <li><a href="#15-概率的公理化定义">1.5 概率的公理化定义</a></li>
+    <li><a href="#16-联合概率条件概率全概率和独立性">1.6 联合概率、条件概率、全概率和独立性</a></li>
+    <li><a href="#17-贝叶斯定理及其应用">1.7 贝叶斯定理及其应用</a></li>
+    <li><a href="#18-组合">1.8 组合</a></li>
+    <li><a href="#19-伯努利试验bernoulli-trials二项式和多项式的概率分布">1.9 伯努利试验（Bernoulli Trials）：二项式和多项式的概率分布</a></li>
+    <li><a href="#110-二项式概率分布的渐进特性泊松分布poisson-law">1.10 二项式概率分布的渐进特性：泊松分布（Poisson Law）</a></li>
+    <li><a href="#111-二项式分布近似为正态分布">1.11 二项式分布近似为正态分布</a></li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>

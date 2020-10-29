@@ -6,10 +6,19 @@
     <description>Recent content in 2020-10 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 20 Oct 2020 00:10:35 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2020 18:03:19 -0400</lastBuildDate>
     
 	<atom:link href="https://ottffyzy.github.io/archives/2020-10/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[模板] bitset &amp; 位图</title>
+      <link>https://ottffyzy.github.io/templates/ds/bitset/</link>
+      <pubDate>Thu, 22 Oct 2020 18:03:19 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/templates/ds/bitset/</guid>
+      <description>std::bitset #include &amp;lt;bitset&amp;gt; bitset&amp;lt;M&amp;gt; bs; bs[i]; // access bs.test(i); // access bs.count(i); // count 1 bs.size(); bs.any(); bs.none(); bs.all(); // cpp11 bs.set(); bs.set(i); // set i-th bit to 1 bs.reset(); bs.reset(i); bs.flip(); bs.flip(i); bs.to_string(); bs.to_ulong(); bs.to_ullong(); // cpp11 cout&amp;lt;&amp;lt;bs&amp;lt;&amp;lt;endl; 手写位图 Bitmap template&amp;lt;size_t M&amp;gt; struct BitMap { typedef unsigned int UI; UI map[M/32+1]; void reset() { memset(map,0,sizeof(map)); } void set() { memset(map,0xff,sizeof(map)); } void set(int i) { map[i&amp;gt;&amp;gt;5]|=1U&amp;lt;&amp;lt;(i&amp;amp;31); } void reset(int i) { map[i&amp;gt;&amp;gt;5]&amp;amp;=~(1U&amp;lt;&amp;lt;(i&amp;amp;31)); } void flip(int i) { map[i&amp;gt;&amp;gt;5]^=1U&amp;lt;&amp;lt;(i&amp;amp;31); } bool test(int i) { return map[i&amp;gt;&amp;gt;5]&amp;amp;(1U&amp;lt;&amp;lt;(i&amp;amp;31)); } };</description>
+    </item>
     
     <item>
       <title>[模板] 对拍程序</title>

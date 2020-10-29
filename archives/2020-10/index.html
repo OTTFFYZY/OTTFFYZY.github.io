@@ -103,6 +103,46 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
+      <a href="/templates/ds/bitset/">
+        <div class="h2 mt-1 mb-1">[模板] bitset &amp; 位图</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+
+
+<a href='/tags/bitset' class="muted-link">
+  <span class="Label Label--gray">bitset</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        <span>2020-10-22</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    std::bitset #include &lt;bitset&gt; bitset&lt;M&gt; bs; bs[i]; // access bs.test(i); // access bs.count(i); // count 1 bs.size(); bs.any(); bs.none(); bs.all(); // cpp11 bs.set(); bs.set(i); // set i-th bit to 1 bs.reset(); bs.reset(i); bs.flip(); bs.flip(i); bs.to_string(); bs.to_ulong(); bs.to_ullong(); // cpp11 cout&lt;&lt;bs&lt;&lt;endl; 手写位图 Bitmap template&lt;size_t M&gt; struct BitMap { typedef unsigned int UI; UI map[M/32+1]; void reset() { memset(map,0,sizeof(map)); } void set() { memset(map,0xff,sizeof(map)); } void set(int i) { map[i&gt;&gt;5]|=1U&lt;&lt;(i&amp;31); } void reset(int i) { map[i&gt;&gt;5]&amp;=~(1U&lt;&lt;(i&amp;31)); } void flip(int i) { map[i&gt;&gt;5]^=1U&lt;&lt;(i&amp;31); } bool test(int i) { return map[i&gt;&gt;5]&amp;(1U&lt;&lt;(i&amp;31)); } };
+    <a class="muted-link" href="/templates/ds/bitset/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
       <a href="/templates/others/checker/">
         <div class="h2 mt-1 mb-1">[模板] 对拍程序</div>
       </a>
@@ -239,7 +279,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/notes" class="link-gray text-emphasized css-truncate-target"><span class="">Notes</span></a>
-      <span class="text-right Counter">5</span>
+      <span class="text-right Counter">6</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -259,7 +299,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
-      <span class="text-right Counter">12</span>
+      <span class="text-right Counter">13</span>
     </span>
     
   </div>
@@ -278,6 +318,11 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/templates/stl" class="link-gray text-emphasized css-truncate-target"><span class="">Stl</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e5%85%b6%e4%bb%96" class="link-gray text-emphasized css-truncate-target"><span class="">其他</span></a>
       <span class="text-right Counter">3</span>
     </span>
@@ -289,7 +334,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="link-gray text-emphasized css-truncate-target"><span class="">数据结构</span></a>
-      <span class="text-right Counter">4</span>
+      <span class="text-right Counter">5</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -339,6 +384,11 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/bit" class="link-gray text-emphasized css-truncate-target"><span class="">Bit</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/bitset" class="link-gray text-emphasized css-truncate-target"><span class="">Bitset</span></a>
       <span class="text-right Counter">1</span>
     </span>
     
@@ -448,6 +498,11 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/series/%e6%a6%82%e7%8e%87%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">概率论</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/series/%e6%b1%87%e7%bc%96%e8%af%ad%e8%a8%80" class="link-gray text-emphasized css-truncate-target"><span class="">汇编语言</span></a>
       <span class="text-right Counter">3</span>
     </span>
@@ -464,12 +519,12 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-09" class="link-gray text-emphasized css-truncate-target"><span class="">2020 09</span></a>
-      <span class="text-right Counter">23</span>
+      <span class="text-right Counter">24</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-10" class="link-gray text-emphasized css-truncate-target"><span class="">2020 10</span></a>
-      <span class="text-right Counter">3</span>
+      <span class="text-right Counter">4</span>
     </span>
     
   </div>

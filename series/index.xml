@@ -6,10 +6,19 @@
     <description>Recent content in Series on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 13 Sep 2020 22:07:50 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2020 14:13:07 -0400</lastBuildDate>
     
 	<atom:link href="https://ottffyzy.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>概率论</title>
+      <link>https://ottffyzy.github.io/series/%E6%A6%82%E7%8E%87%E8%AE%BA/</link>
+      <pubDate>Tue, 15 Sep 2020 14:13:07 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/series/%E6%A6%82%E7%8E%87%E8%AE%BA/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Effective Cpp</title>
