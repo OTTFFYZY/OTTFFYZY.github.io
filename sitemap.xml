@@ -3,17 +3,97 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://ottffyzy.github.io/archives/2020-10/</loc>
-    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
+    <loc>https://ottffyzy.github.io/archives/2020-11/</loc>
+    <lastmod>2020-11-01T22:38:49-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ottffyzy.github.io/templates/ds/bitset/</loc>
-    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
+    <loc>https://ottffyzy.github.io/templates/nt/exgcd/</loc>
+    <lastmod>2020-11-01T22:38:49-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://ottffyzy.github.io/archives/</loc>
+    <lastmod>2020-11-01T22:38:49-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/categories/</loc>
+    <lastmod>2020-11-01T22:38:49-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/tags/exgcd/</loc>
+    <lastmod>2020-11-01T22:38:49-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/</loc>
+    <lastmod>2020-11-01T22:38:49-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/tags/</loc>
+    <lastmod>2020-11-01T22:38:49-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/templates/</loc>
+    <lastmod>2020-11-01T22:38:49-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/categories/templates/</loc>
+    <lastmod>2020-11-01T22:38:49-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/templates/</loc>
+    <lastmod>2020-11-01T22:38:49-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/templates/%E6%95%B0%E8%AE%BA/</loc>
+    <lastmod>2020-11-01T22:38:49-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/tags/%E6%95%B0%E8%AE%BA/</loc>
+    <lastmod>2020-11-01T22:38:49-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/algos/nt/exgcd/</loc>
+    <lastmod>2020-11-01T10:02:34-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/algos/</loc>
+    <lastmod>2020-11-01T10:02:34-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/categories/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2020-11-01T10:02:34-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/archives/2020-10/</loc>
+    <lastmod>2020-10-31T00:53:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/algos/nt/gcd/</loc>
+    <lastmod>2020-10-31T00:53:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/tags/gcd/</loc>
+    <lastmod>2020-10-31T00:53:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ottffyzy.github.io/templates/ds/bitset/</loc>
     <lastmod>2020-10-22T18:03:19-04:00</lastmod>
   </url>
   
@@ -28,37 +108,7 @@
   </url>
   
   <url>
-    <loc>https://ottffyzy.github.io/categories/</loc>
-    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ottffyzy.github.io/</loc>
-    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ottffyzy.github.io/templates/stl/</loc>
-    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ottffyzy.github.io/tags/</loc>
-    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ottffyzy.github.io/templates/</loc>
-    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ottffyzy.github.io/categories/templates/</loc>
-    <lastmod>2020-10-22T18:03:19-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ottffyzy.github.io/templates/</loc>
     <lastmod>2020-10-22T18:03:19-04:00</lastmod>
   </url>
   
@@ -139,16 +189,6 @@
   
   <url>
     <loc>https://ottffyzy.github.io/templates/nt/mod/</loc>
-    <lastmod>2020-09-27T23:19:53-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ottffyzy.github.io/templates/%E6%95%B0%E8%AE%BA/</loc>
-    <lastmod>2020-09-27T23:19:53-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ottffyzy.github.io/tags/%E6%95%B0%E8%AE%BA/</loc>
     <lastmod>2020-09-27T23:19:53-04:00</lastmod>
   </url>
   

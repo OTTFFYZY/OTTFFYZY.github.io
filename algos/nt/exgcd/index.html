@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  [算法][数论] 扩展欧几里得算法 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="扩展欧几里得算法 有时我们需要求解类似于 $ax&#43;by=m$ 的不定方程（丢番图方程），扩展欧几里得算法就是求解这样方程的利器。 除此以外我们可以通过简单地变形处理模逆元和线性同余方程。 裴蜀定理/贝祖定理（Bezout&amp;rs|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/solutions">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">[算法][数论] 扩展欧几里得算法</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/%E7%AE%97%E6%B3%95' class="muted-link">
+  <span class="Label Label--gray-darker">算法</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E6%95%B0%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray">数论</span>
+</a>
+
+<a href='/tags/exgcd' class="muted-link">
+  <span class="Label Label--gray">ExGCD</span>
+</a>
+
+
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2020-11-01. Published at: 2020-11-01.">
+        
+          Published: 2020-11-01 Sun 10:02:34
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="扩展欧几里得算法">扩展欧几里得算法</h2>
+<p>有时我们需要求解类似于 $ax+by=m$ 的不定方程（丢番图方程），扩展欧几里得算法就是求解这样方程的利器。</p>
+<p>除此以外我们可以通过简单地变形处理模逆元和线性同余方程。</p>
+<h3 id="裴蜀定理贝祖定理bezouts-lemma">裴蜀定理/贝祖定理（Bezout&rsquo;s Lemma）</h3>
+<p>$\forall a,b \in \mathbb{Z}$ 且 $a,b$ 不同时为零，方程</p>
+$$ax &#43; by = m$$
+<p>有整数解，当且仅当</p>
+$$(a,b) \mid m$$
+<p><strong>证明：</strong></p>
+<p>当 $a,b$ 其一为 $0$ 时，假设 $a=0$ 则 $(a,b)=b$ 显然只有 $b \mid m$ 时 $0x + by=m$ 有解，且为无穷多解（$x$ 为任意值）。</p>
+<p>当 $a,b$ 全不为 $0$ 时，设</p>
+$$A = \{xa&#43;yb; (x,y)\in \mathbb{Z}^2\}$$
+<p>我们知道 $A \cap \mathbb{N}^+$ 是非空的（其中至少有 $|a|$，$|b|$），由于 $\mathbb{N}^+$ 是良序的，因此我们设 $A \cap \mathbb{N}^+$ 的最小元为</p>
+$$d_0 = x_0 a &#43; y_0 b$$
+<p>考虑 $A$ 中任意元素 $p=x_1 a + y_1 b$ 对 $d_0$ 的带余除法，则</p>
+$$p = qd_0 &#43;r$$
+<p>其中 $q&gt;0,0 \le r &lt; d_0$。</p>
+<p>此时</p>
+$$\begin{align} r =&amp; p - qd_0 \\ =&amp; x_1 a &#43; y_1 b - q(x_0 a &#43; y_0 b) \\ =&amp; (x_1-x_0q )a &#43; (y_1 - y_0q)b \quad \in A \end{align}$$
+<p>由 $d_0$ 是 $A$ 中最小正元，而 $0 \le r &lt; d_0$ 且 $r \in A$ 则 $r=0$</p>
+<p>也就是说</p>
+$$d_0 \mid p$$
+<p>由 $p$ 是 $A$ 中任意元素，则 $d_0 \mid a$，$d_0 \mid b$，从而得出</p>
+$$d_0 \mid (a,b)$$
+<p>又有 $(a,b)\mid a,(a,b) \mid b$，则</p>
+$$(a,b) \mid x_0a &#43; y_0b = d_0$$
+<p>从而得出</p>
+$$d_0 = (a,b)$$
+<p><strong>必要性：</strong></p>
+<p>当 $ax+by=m$ 有解，则由 $(a,b) \mid a,(a,b) \mid b$ 得出 $(a,b) \mid m=xa+yb$</p>
+<p><strong>充分性：</strong></p>
+<p>当 $(a,b) \mid m$，此时我们知道 $m=m_0 d_0$，</p>
+<p>由 $d_0 = x_0a+y_0b$</p>
+<p>则我们至少有解 $x=x_0m_0, y=y_0 m_0$。</p>
+<p>如果还想进一步证明解是无数多的，可以看通解形式部分。</p>
+<h3 id="通解形式">通解形式</h3>
+<p>考虑构造解。 $x$ 增加 $\Delta x$，</p>
+$$\begin{align} a(x_0m_0&#43;\Delta x) &#43; b(y_0m_0&#43; \Delta y) &amp;= m \\ a \cdot \Delta x &#43; b \cdot \Delta y &amp;= 0 \\ \Delta y &amp;= -\frac{a}{b} \Delta x \end{align}$$
+<p>由于最终 $x,y \in \mathbb{Z}$ ，而我们已知 $x_0m_0,y_0m_0 \in \mathbb{Z}$，也就是说我们需要 $\Delta x, \Delta y \in \mathbb{Z}$。</p>
+<p>对于 $\frac{a}{b}$ 我们可以考虑把分子分母的最大公因数 $(a,b) = d_0$ 除掉得到 $\frac{a&rsquo;}{b&rsquo;}$。</p>
+<p>此时要满足</p>
+$$\Delta x, \Delta y = -\frac{a&#39;}{b&#39;} \Delta x \in \mathbb{Z}$$
+<p>由 $(a&rsquo;,b&rsquo;) = 1$ 则</p>
+$$\Delta x = k b&#39; = k \cdot \frac{b}{d_0}$$
+<p>于是我们得到其通解</p>
+$$x=x_0m_0&#43;k \cdot \frac{b}{(a,b)}, y=y_0m_0-k \cdot \frac{a}{(a,b)} \quad (k \in Z)$$
+<p>都是方程的解，且彼此不同（$a,b$ 均不为 $0$ 则显然 $x$ 彼此不同），即解有无穷组。</p>
+<h3 id="构造一组特解">构造一组特解</h3>
+<p>上述过程中我们只是证明了解的存在性和解之间的关系，但其实有一个重点问题没有解决，我们如何找到一组 $x_0,y_0$，满足不定方程 $ax+by=(a,b)$。</p>
+<p>扩展欧几里得算法算法首次接触难以理解的一个原因是因为这是一个构造算法，因此思维上存在一定的跳跃性。它巧妙地利用了欧几里得算法的过程推导出了一条特解。</p>
+<p>首先我们设 $g=(a,b)$</p>
+<p>（1）考虑方程 $g \cdot x+0 \cdot y=g$ 我们可以不假思索的给出一组特解</p>
+$$x_0=1,y_0=0$$
+<p>而对应的系数 $a_0,b_0$ 刚好是我们在辗转相除求 $(a,b)$ 过程中的最后一步的系数。其实 $y_0$ 可以选择任意整数，但是选择 $0$ 我们可以将特解限制在较小的范围，见下。</p>
+<p>（2）我们发现对于辗转相除的过程，如果 $a'=b,b'=a%b$ 我们发现对于这两组系数，我们有相同的最大公约数 $g$，则</p>
+$$ax&#43;by=g=a&#39;x&#39;&#43;b&#39;y&#39;$$
+<p>我们递归知道 $x&rsquo;,y'$ 的值之后，可以反过来构造 $x,y$ 则</p>
+
+$$
+\begin{align} 
+ax&#43;by &amp;= a&#39;x&#39;&#43;b&#39;y&#39; \\ 
+ax&#43;by &amp;= bx&#39;&#43;(a\%b) y&#39; \\ 
+ax&#43;by &amp;= bx&#39;&#43;(a-\lfloor \frac{a}{b} \rfloor \cdot b) y&#39;  \\ 
+ax&#43;by &amp;= bx&#39;&#43;ay&#39;-\lfloor \frac{a}{b} \rfloor \cdot b y&#39; \\
+ax&#43;by &amp;= a \cdot y&#39; &#43; b (x&#39; - \lfloor \frac{a}{b} \rfloor \cdot y&#39;) 
+\end{align}
+$$
+
+<p>通过比较系数，我们可以得到一组 $x,y$</p>
+$$\begin{align} x &amp;= y&#39; \\ y &amp;= x&#39; - \lfloor \frac{a}{b} \rfloor \cdot y&#39; \end{align} $$
+<p>因此我们只需要递归求解 $(a,b)$ 然后回溯时求解 $x,y$ 就可以得出原不定方程的一组解了。</p>
+<h3 id="特解的范围">特解的范围</h3>
+<p>这里我们可以进一步研究一下特解的范围，因为反推的过程如果构造的特解过大，就可能因为溢出而无法使用。</p>
+<p>我们发现当 $a=0$ 或 $b=0$ 时递归只会进行不超过两层，这样最终解的值为 $x=0,y=1(a=0)$ 或 $x=1, y=0(b=0)$。</p>
+<p>同样如果输入 $a=b$ 时递归只会进行两层，这样最终得出的值为 $x=0,y=1$。</p>
+<p>如果输入的 $a,b$ 不同，则取模操作不会让两个参数在递归的过程中变得相同（总会是一个比另一个更小）这里我们假设输入的 $a&gt;0,b&gt;0,a\neq b$，来看一下对应的 $a,b,x,y$ 的值：</p>
+<table>
+<thead>
+<tr>
+<th>No.</th>
+<th>a</th>
+<th>b</th>
+<th>x</th>
+<th>y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>$g$</td>
+<td>$0$</td>
+<td>$1$</td>
+<td>$0$</td>
+</tr>
+<tr>
+<td>1</td>
+<td>$kg \quad (k &gt; 1)$</td>
+<td>$g$</td>
+<td>$0$</td>
+<td>$1$</td>
+</tr>
+<tr>
+<td>2</td>
+<td>$jk g+g \quad (k&gt;1,j \ge 1)$</td>
+<td>$kg$</td>
+<td>$1$</td>
+<td>$-j$</td>
+</tr>
+<tr>
+<td>3</td>
+<td>$i(jkg+g) + kg=(ij+1)kg+ig \quad (k&gt;1,j \ge 1, i \ge 1)$</td>
+<td>$jk g+g$</td>
+<td>$-j$</td>
+<td>$1+ij$</td>
+</tr>
+</tbody>
+</table>
+<p>我们发现除了第 $0$ 行，总有 $|x|&lt;b,|y|&lt;a$ 成立。</p>
+<p>这里可以尝试证明一下，假设 $a&rsquo;,b&rsquo;,x&rsquo;,y'$ 是上一层递归的参数和结果，则假设 $|x'| &lt; b&rsquo;, |y'| &lt; a'$ 成立。</p>
+<p>我们有</p>
+
+$$
+\begin{align} 
+a&#39; &amp;= b \\
+b&#39; &amp;= a\%b = a - \lfloor \frac{a}{b}\rfloor \cdot b \\
+x &amp;= y&#39; \\ 
+y &amp;= x&#39; - \lfloor \frac{a}{b} \rfloor \cdot y&#39; \\
+\end{align}
+$$
+
+<p>对于 $x$，有</p>
+$$|x| = |y&#39;| &lt; a&#39;=b$$
+<p>对于 $y$, 有</p>
+$$|y| = |x&#39; - \lfloor \frac{a}{b} \rfloor \cdot y&#39;|$$
+<p>如果 $x'$ 与 $y'$ 同号则</p>
+
+$$
+\begin{align} 
+|y| &amp;= |x&#39; - \lfloor \frac{a}{b} \rfloor \cdot y&#39;| \\
+&amp;\le \left| |x&#39;| &#43; \left|\lfloor \frac{a}{b} \rfloor \cdot y&#39; \right| \right| 
+\quad (考虑 x&#39;,y&#39; 同号异号两种情况)\\
+&amp;\le  |x&#39;| &#43; \left|\lfloor \frac{a}{b} \rfloor \cdot y&#39; \right| \\
+&amp;\le  |x&#39;| &#43; \lfloor \frac{a}{b} \rfloor \cdot |y&#39;| \\
+&amp;&lt; b&#39; &#43; \lfloor \frac{a}{b} \rfloor \cdot a&#39; \\
+&amp;&lt; (a - \lfloor \frac{a}{b}\rfloor \cdot b) &#43; \lfloor \frac{a}{b} \rfloor \cdot (b) \\
+&amp;&lt; a
+\end{align}
+$$
+
+<p>得证。</p>
+<p>至此我们终于可以书写代码了。</p>
+<h3 id="代码">代码</h3>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">exgcd</span><span class="p">(</span><span class="n">LL</span> <span class="n">a</span><span class="p">,</span><span class="n">LL</span> <span class="n">b</span><span class="p">,</span><span class="n">LL</span> <span class="o">&amp;</span><span class="n">g</span><span class="p">,</span><span class="n">LL</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="n">LL</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">b</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">g</span><span class="o">=</span><span class="n">a</span><span class="p">;</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+	<span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">exgcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">);</span> <span class="c1">// 巧妙地利用参数顺序，调整好了对应的 x,y
+</span><span class="c1"></span>        <span class="n">y</span><span class="o">-=</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="o">*</span><span class="n">x</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="扩展欧几里得算法的应用">扩展欧几里得算法的应用</h2>
+<h3 id="求解不定方程">求解不定方程</h3>
+<p>显然这个算法可以用来求解形如 $ax+by=m$ 的不定方程嘛。</p>
+<p>不过做题的过程一般情况是问解是否存在，寻找 $x,y$ 满足某些条件的特解，或者是问 $x,y$ 满足某些条件时的解的个数。</p>
+<p>解是否存在的问题其实根据裴蜀定理和 GCD 就已经足够求解了。对于满足某些条件的特解，相当于我们要先将通解的形式写出来，然后求解通解符合条件的方案。</p>
+<h3 id="求解线性同余方程">求解线性同余方程</h3>
+<p>对于线性同余方程 $ax \equiv b \pmod m$ 我们可以简单的变形为</p>
+$$ax&#43;my=b$$
+<p>之后进行求解。我们也可以知道这个方程有解的条件是 $b|(a,m)$。以及根据我们推导的结论，求出的 $|x|$ 会在 $[0,m)$。</p>
+<h3 id="求解逆元">求解逆元</h3>
+<p>更进一步的，其实我们令上面同余方程中的 $b = 1$，于是根据模下乘法逆元的定义求出的 $x$ 即为模下逆元（注意可能是负的，需要调整到 $[0,m)$）。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">LL</span> <span class="nf">inv</span><span class="p">(</span><span class="n">LL</span> <span class="n">a</span><span class="p">,</span><span class="n">LL</span> <span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">LL</span> <span class="n">g</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">;</span>
+    <span class="n">exgcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">g</span><span class="o">!=</span><span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="c1">// no inverse element
+</span><span class="c1"></span>    <span class="n">x</span><span class="o">%=</span><span class="n">m</span><span class="p">;</span> <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span> <span class="n">x</span><span class="o">+=</span><span class="n">m</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+  </section>
+
+  <section>
+    
+        <a href="/algos/nt/gcd/" class="previous_page">Prev: [算法][数论] 最大公约数（GCD）与欧几里得算法 </a>
+    
+     <br> 
+    
+        <a href="/templates/nt/exgcd/" class="next_page">Next: [模板][数论] 扩展欧几里得算法（ExGCD） </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>[算法][数论] 扩展欧几里得算法</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#扩展欧几里得算法">扩展欧几里得算法</a>
+      <ul>
+        <li><a href="#裴蜀定理贝祖定理bezouts-lemma">裴蜀定理/贝祖定理（Bezout&rsquo;s Lemma）</a></li>
+        <li><a href="#通解形式">通解形式</a></li>
+        <li><a href="#构造一组特解">构造一组特解</a></li>
+        <li><a href="#特解的范围">特解的范围</a></li>
+        <li><a href="#代码">代码</a></li>
+      </ul>
+    </li>
+    <li><a href="#扩展欧几里得算法的应用">扩展欧几里得算法的应用</a>
+      <ul>
+        <li><a href="#求解不定方程">求解不定方程</a></li>
+        <li><a href="#求解线性同余方程">求解线性同余方程</a></li>
+        <li><a href="#求解逆元">求解逆元</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>

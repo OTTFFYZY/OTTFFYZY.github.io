@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2020-11 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/archives/2020-11/</link>
+    <description>Recent content in 2020-11 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 01 Nov 2020 22:38:49 -0500</lastBuildDate>
+    
+	<atom:link href="https://ottffyzy.github.io/archives/2020-11/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[模板][数论] 扩展欧几里得算法（ExGCD）</title>
+      <link>https://ottffyzy.github.io/templates/nt/exgcd/</link>
+      <pubDate>Sun, 01 Nov 2020 22:38:49 -0500</pubDate>
+      
+      <guid>https://ottffyzy.github.io/templates/nt/exgcd/</guid>
+      <description>扩展欧几里得算法（ExGCD） // ax+by=gcd(a,b)=g // check a&amp;gt;0 b&amp;gt;0 // if a != b, |x|&amp;lt;b, |y|&amp;lt;a template&amp;lt;typename T&amp;gt; void exgcd(T a,T b,T &amp;amp;g,T &amp;amp;x,T &amp;amp;y) { if(!b) { g=a; x=1; y=0; } else { exgcd(b,a%b,g,y,x); y-=a/b*x; } } 求逆元 template&amp;lt;typename T&amp;gt; void exgcd(T a,T b,T &amp;amp;g,T &amp;amp;x,T &amp;amp;y) { if(!b) { g=a; x=1; y=0; } else { exgcd(b,a%b,g,y,x); y-=a/b*x; } } template&amp;lt;typename T&amp;gt; T inv(T a,T m) { T g,x,y; exgcd(a,m,g,x,y); if(g!=1) return -1; // no inverse element if(x&amp;lt;0) x+=m; return x; } 不定方</description>
+    </item>
+    
+    <item>
+      <title>[算法][数论] 扩展欧几里得算法</title>
+      <link>https://ottffyzy.github.io/algos/nt/exgcd/</link>
+      <pubDate>Sun, 01 Nov 2020 10:02:34 -0500</pubDate>
+      
+      <guid>https://ottffyzy.github.io/algos/nt/exgcd/</guid>
+      <description>扩展欧几里得算法 有时我们需要求解类似于 $ax+by=m$ 的不定方程（丢番图方程），扩展欧几里得算法就是求解这样方程的利器。 除此以外我们可以通过简单地变形处理模逆元和线性同余方程。 裴蜀定理/贝祖定理（Bezout&amp;rs</description>
+    </item>
+    
+  </channel>
+</rss>

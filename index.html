@@ -101,6 +101,120 @@
   
   <div>
     <div>
+      <a href="/templates/nt/exgcd/">
+        <h3>[模板][数论] 扩展欧几里得算法（ExGCD）</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E6%95%B0%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray">数论</span>
+</a>
+
+<a href='/tags/exgcd' class="muted-link">
+  <span class="Label Label--gray">ExGCD</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-11-01
+      </div>
+    </div>
+    扩展欧几里得算法（ExGCD） // ax+by=gcd(a,b)=g // check a&gt;0 b&gt;0 // if a != b, |x|&lt;b, |y|&lt;a template&lt;typename T&gt; void exgcd(T a,T b,T &amp;g,T &amp;x,T &amp;y) { if(!b) { g=a; x=1; y=0; } else { exgcd(b,a%b,g,y,x); y-=a/b*x; } } 求逆元 template&lt;typename T&gt; void exgcd(T a,T b,T &amp;g,T &amp;x,T &amp;y) { if(!b) { g=a; x=1; y=0; } else { exgcd(b,a%b,g,y,x); y-=a/b*x; } } template&lt;typename T&gt; T inv(T a,T m) { T g,x,y; exgcd(a,m,g,x,y); if(g!=1) return -1; // no inverse element if(x&lt;0) x+=m; return x; } 不定方
+  </div>
+  
+  <div>
+    <div>
+      <a href="/algos/nt/exgcd/">
+        <h3>[算法][数论] 扩展欧几里得算法</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/%E7%AE%97%E6%B3%95' class="muted-link">
+  <span class="Label Label--gray-darker">算法</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E6%95%B0%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray">数论</span>
+</a>
+
+<a href='/tags/exgcd' class="muted-link">
+  <span class="Label Label--gray">ExGCD</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-11-01
+      </div>
+    </div>
+    扩展欧几里得算法 有时我们需要求解类似于 $ax+by=m$ 的不定方程（丢番图方程），扩展欧几里得算法就是求解这样方程的利器。 除此以外我们可以通过简单地变形处理模逆元和线性同余方程。 裴蜀定理/贝祖定理（Bezout&rs
+  </div>
+  
+  <div>
+    <div>
+      <a href="/algos/nt/gcd/">
+        <h3>[算法][数论] 最大公约数（GCD）与欧几里得算法</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/%E7%AE%97%E6%B3%95' class="muted-link">
+  <span class="Label Label--gray-darker">算法</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E6%95%B0%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray">数论</span>
+</a>
+
+<a href='/tags/gcd' class="muted-link">
+  <span class="Label Label--gray">GCD</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-10-31
+      </div>
+    </div>
+    最大公约数（GCD）与欧几里得算法 最大公约数（Greatest Common Divisor，GCD） 两个数最大公约数顾名思义，两个数的所有公约数中最大的。 若正整数 $a,b$ 的质因数分解为 $$a = \prod_{i} p_i ^ {e_{a,i}}$$ $$b = \prod_{i} p_i ^ {e_{b,i}}$$ 则其最大公
+  </div>
+  
+  <div>
+    <div>
       <a href="/templates/ds/bitset/">
         <h3>[模板] bitset &amp; 位图</h3>
       </a>
@@ -160,7 +274,7 @@
         2020-10-20
       </div>
     </div>
-    Title from os import system tc=0 while True: system(&#34;python data.py &gt; data.in&#34;) system(&#34;std.exe &lt; data.in &gt; std.out&#34;) system(&#34;my.exe &lt; data.in &gt; my.out&#34;) # system(&#34;diff std.out my.out &gt; diff.out&#34;): if system(&#34;fc std.out my.out &gt; diff.out&#34;): print(&#34;WA&#34;) break else: tc += 1 print(&#34;AC #%d&#34;%tc) print(&#34;-------------------- data.in --------------------&#34;) # system(&#34;cat data.in&#34;) system(&#34;type data.in&#34;) print(&#34;-------------------- std.out --------------------&#34;) system(&#34;type std.out&#34;) print(&#34;-------------------- my.out ---------------------&#34;) system(&#34;type my.out&#34;) #include &lt;bits/stdc++.h&gt; using namespace std; int main() { int tc=0; while(1) { system(&#34;data.exe &gt; data.in&#34;); // system(&#34;python data.py &gt; data.in&#34;); system(&#34;std.exe &lt; data.in &gt; std.out&#34;); system(&#34;my.exe &lt; data.in &gt; my.out&#34;); // system(&#34;diff std.out my.out &gt; diff.out&#34;): if(system(&#34;fc std.out my.out &gt;
+    对拍程序 from os import system tc=0 while True: system(&#34;python data.py &gt; data.in&#34;) system(&#34;std.exe &lt; data.in &gt; std.out&#34;) system(&#34;my.exe &lt; data.in &gt; my.out&#34;) # system(&#34;diff std.out my.out &gt; diff.out&#34;): if system(&#34;fc std.out my.out &gt; diff.out&#34;): print(&#34;WA&#34;) break else: tc += 1 print(&#34;AC #%d&#34;%tc) print(&#34;-------------------- data.in --------------------&#34;) # system(&#34;cat data.in&#34;) system(&#34;type data.in&#34;) print(&#34;-------------------- std.out --------------------&#34;) system(&#34;type std.out&#34;) print(&#34;-------------------- my.out ---------------------&#34;) system(&#34;type my.out&#34;) #include &lt;bits/stdc++.h&gt; using namespace std; int main() { int tc=0; while(1) { system(&#34;data.exe &gt; data.in&#34;); // system(&#34;python data.py &gt; data.in&#34;); system(&#34;std.exe &lt; data.in &gt; std.out&#34;); system(&#34;my.exe &lt; data.in &gt; my.out&#34;); // system(&#34;diff std.out my.out &gt; diff.out&#34;): if(system(&#34;fc
   </div>
   
   <div>
@@ -325,108 +439,6 @@
     安全哈希函数 struct custom_hash { static uint64_t splitmix64(uint64_t x) { // http://xorshift.di.unimi.it/splitmix64.c x += 0x9e3779b97f4a7c15; x = (x ^ (x &gt;&gt; 30)) * 0xbf58476d1ce4e5b9; x = (x ^ (x &gt;&gt; 27)) * 0x94d049bb133111eb; return x ^ (x &gt;&gt; 31); } size_t operator()(uint64_t x) const { static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count(); return splitmix64(x + FIXED_RANDOM); } }; 用这个函数作为 unordered_set 的第二个参数或 unordered_map 的第三个参数。
   </div>
   
-  <div>
-    <div>
-      <a href="/templates/nt/mod/">
-        <h3>[模板][数论] 模下计算</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/templates' class="muted-link">
-  <span class="Label Label--gray-darker">Templates</span>
-</a>
-
-
-
-
-
-<a href='/tags/%E6%95%B0%E8%AE%BA' class="muted-link">
-  <span class="Label Label--gray">数论</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-09-27
-      </div>
-    </div>
-    模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;x,int y) { x+=y; if(x&gt;=MO) x-=MO; } inline void subv(int &amp;x,int y) { x-=y; if(x&lt;0) x+=MO; } inline void mulv(int &amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;1) mulv(ans,x); mulv(x,x); n&gt;&gt;=1; } return ans; } Mint template&lt;size_t MO=1000000007&gt; struct Mint { int x; Mint(int x=0):x(x){ norm(); } void
-  </div>
-  
-  <div>
-    <div>
-      <a href="/templates/ds/leftist/">
-        <h3>[模板][数据结构] 左偏树 Leftist Tree</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/templates' class="muted-link">
-  <span class="Label Label--gray-darker">Templates</span>
-</a>
-
-
-
-
-
-<a href='/tags/%E5%B7%A6%E5%81%8F%E6%A0%91' class="muted-link">
-  <span class="Label Label--gray">左偏树</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-09-27
-      </div>
-    </div>
-    左偏树 Leftist Tree // min leftist tree // T must define &lt; // M: the size of the heap template&lt;typename T,size_t M,typename Cmp=less&lt;&gt;&gt; struct Leftist { T val[M]; int l[M],r[M],d[M]; int nn; // number of node Cmp cmp; void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&lt;int&gt; qu; for(int i=1;i&lt;=n;i++) qu.push(i); int u,v; while(qu.size()&gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[++nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;x,int y) // merge tree
-  </div>
-  
-  <div>
-    <div>
-      <a href="/templates/gt/kruskal/">
-        <h3>[模板][图论] 克鲁斯卡尔 Kruskal</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/templates' class="muted-link">
-  <span class="Label Label--gray-darker">Templates</span>
-</a>
-
-
-
-
-
-<a href='/tags/mst' class="muted-link">
-  <span class="Label Label--gray">MST</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-09-25
-      </div>
-    </div>
-    克鲁斯卡尔 Kruskal template&lt;typename T,size_t V,size_t E&gt; struct Kruskal { typedef tuple&lt;T,int,int&gt; Edge; typedef pair&lt;T,int&gt; PTI; Edge edges[E]; int inmst[E]; int n; // number of vertex int m; // number of edge int uf[V]; int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } void init(int n_) { n=n_; m=0; } void addedge(int u,int v,T w) { edges[m++]={w,u,v}; } PTI solve() { int cnt=n; // number of connected component T sum=0; int u,v; T w; for(int i=0;i&lt;n;i++) uf[i]=i; sort(edges,edges+m); for(int i=0;i&lt;m&amp;&amp;cnt&gt;1;i++) { tie(w,u,v)=edges[i]; u=find(u); v=find(v); if(u==v) continue; inmst[i]=1; sum=sum+w; cnt--; uf[u]=v; } return {sum,cnt==1}; // {totval in mst, ismst} }
-  </div>
-  
 
   
   <nav class="paginate-container">
@@ -447,6 +459,10 @@
         
           <a href="/page/3/">
             3
+          </a>
+        
+          <a href="/page/4/">
+            4
           </a>
         
 
@@ -501,7 +517,12 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
-      <span class="text-right Counter">13</span>
+      <span class="text-right Counter">14</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/categories/%e7%ae%97%e6%b3%95" class="link-gray text-emphasized css-truncate-target"><span class="">算法</span></a>
+      <span class="text-right Counter">2</span>
     </span>
     
   </div>
@@ -541,7 +562,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">数论</span></a>
-      <span class="text-right Counter">1</span>
+      <span class="text-right Counter">2</span>
     </span>
     
   </div>
@@ -610,6 +631,16 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/exgcd" class="link-gray text-emphasized css-truncate-target"><span class="">Exgcd</span></a>
+      <span class="text-right Counter">2</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/gcd" class="link-gray text-emphasized css-truncate-target"><span class="">Gcd</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/hash" class="link-gray text-emphasized css-truncate-target"><span class="">Hash</span></a>
       <span class="text-right Counter">1</span>
     </span>
@@ -646,7 +677,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e6%95%b0%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">数论</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">5</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -726,7 +757,12 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-10" class="link-gray text-emphasized css-truncate-target"><span class="">2020 10</span></a>
-      <span class="text-right Counter">4</span>
+      <span class="text-right Counter">5</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2020-11" class="link-gray text-emphasized css-truncate-target"><span class="">2020 11</span></a>
+      <span class="text-right Counter">2</span>
     </span>
     
   </div>

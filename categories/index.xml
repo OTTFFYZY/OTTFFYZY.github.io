@@ -6,7 +6,7 @@
     <description>Recent content in Categories on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 22 Oct 2020 18:03:19 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2020 22:38:49 -0500</lastBuildDate>
     
 	<atom:link href="https://ottffyzy.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>Templates</title>
       <link>https://ottffyzy.github.io/categories/templates/</link>
-      <pubDate>Thu, 22 Oct 2020 18:03:19 -0400</pubDate>
+      <pubDate>Sun, 01 Nov 2020 22:38:49 -0500</pubDate>
       
       <guid>https://ottffyzy.github.io/categories/templates/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>算法</title>
+      <link>https://ottffyzy.github.io/categories/%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Sun, 01 Nov 2020 10:02:34 -0500</pubDate>
+      
+      <guid>https://ottffyzy.github.io/categories/%E7%AE%97%E6%B3%95/</guid>
       <description></description>
     </item>
     

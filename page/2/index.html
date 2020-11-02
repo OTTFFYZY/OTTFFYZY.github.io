@@ -101,6 +101,108 @@
   
   <div>
     <div>
+      <a href="/templates/nt/mod/">
+        <h3>[模板][数论] 模下计算</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E6%95%B0%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray">数论</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-09-27
+      </div>
+    </div>
+    模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;x,int y) { x+=y; if(x&gt;=MO) x-=MO; } inline void subv(int &amp;x,int y) { x-=y; if(x&lt;0) x+=MO; } inline void mulv(int &amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;1) { mulv(ans,x); } mulv(x,x); n&gt;&gt;=1; } return ans; } Mint template&lt;size_t MO=1000000007&gt; struct Mint { int x; Mint(int x=0):x(x){ norm();
+  </div>
+  
+  <div>
+    <div>
+      <a href="/templates/ds/leftist/">
+        <h3>[模板][数据结构] 左偏树 Leftist Tree</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E5%B7%A6%E5%81%8F%E6%A0%91' class="muted-link">
+  <span class="Label Label--gray">左偏树</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-09-27
+      </div>
+    </div>
+    左偏树 Leftist Tree // min leftist tree // T must define &lt; // M: the size of the heap template&lt;typename T,size_t M,typename Cmp=less&lt;&gt;&gt; struct Leftist { T val[M]; int l[M],r[M],d[M]; int nn; // number of node Cmp cmp; void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&lt;int&gt; qu; for(int i=1;i&lt;=n;i++) qu.push(i); int u,v; while(qu.size()&gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[++nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;x,int y) // merge tree
+  </div>
+  
+  <div>
+    <div>
+      <a href="/templates/gt/kruskal/">
+        <h3>[模板][图论] 克鲁斯卡尔 Kruskal</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+
+
+<a href='/tags/mst' class="muted-link">
+  <span class="Label Label--gray">MST</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-09-25
+      </div>
+    </div>
+    克鲁斯卡尔 Kruskal template&lt;typename T,size_t V,size_t E&gt; struct Kruskal { typedef tuple&lt;T,int,int&gt; Edge; typedef pair&lt;T,int&gt; PTI; Edge edges[E]; int inmst[E]; int n; // number of vertex int m; // number of edge int uf[V]; int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } void init(int n_) { n=n_; m=0; } void addedge(int u,int v,T w) { edges[m++]={w,u,v}; } PTI solve() { int cnt=n; // number of connected component T sum=0; int u,v; T w; for(int i=0;i&lt;n;i++) uf[i]=i; sort(edges,edges+m); for(int i=0;i&lt;m&amp;&amp;cnt&gt;1;i++) { tie(w,u,v)=edges[i]; u=find(u); v=find(v); if(u==v) continue; inmst[i]=1; sum=sum+w; cnt--; uf[u]=v; } return {sum,cnt==1}; // {totval in mst, ismst} }
+  </div>
+  
+  <div>
+    <div>
       <a href="/templates/gt/floyd/">
         <h3>[模板][图论] 弗洛伊德 Floyd</h3>
       </a>
@@ -349,112 +451,6 @@
     1. 让自己习惯 C++ 条款 01：视 C++ 为一个语言联邦 C++ 是一个多重泛型编程语言（multiparadigm programming language）。 C++ 同时支持过程（procedural）形式、面向对象（object-oriented
   </div>
   
-  <div>
-    <div>
-      <a href="/notes/assemblylanguage/e1/">
-        <h3>《汇编语言》 笔记  实验 1 查看 CPU 和内存，用机器指令和汇编指令编程</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/notes' class="muted-link">
-  <span class="Label Label--gray-darker">Notes</span>
-</a>
-
-
-
-
-
-
-
-<a href='/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80' class="muted-link">
-  <span class="Label Label--gray">汇编语言</span>
-</a>
-
-
-      <div class="float-md-right">
-        
-        2020-09-10
-      </div>
-    </div>
-    实验 1 查看 CPU 和内存，用机器指令和汇编指令编程 想在 win10 上玩这个需要自己下载 DOSBox 和 debug.exe。 之后用 DOSBox 运行 debug 即可开始书中的实验。 R 命令：查看、修改寄存器 进入 debug 模式后输入 $r$ 回车后可以查看 CPU 寄存器内容。 输
-  </div>
-  
-  <div>
-    <div>
-      <a href="/sols/luogu/p4588/">
-        <h3>[Luogu] P4588 [TJOI2018]数学计算</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/solutions' class="muted-link">
-  <span class="Label Label--gray-darker">Solutions</span>
-</a>
-
-
-
-<a href='/ojs/luogu' class="muted-link">
-  <span class="Label Label--gray-darker">Luogu</span>
-</a>
-
-
-
-<a href='/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91' class="muted-link">
-  <span class="Label Label--gray">线段树</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-09-09
-      </div>
-    </div>
-    P4588 [TJOI2018]数学计算 题目大意 给定 $x = 1$ 和某个模数 $MO$，有两种操作（共 $Q \le 10^5$ 次） 操作 $1$：把 $x = x*v % MO$ 操作 $2$：取消第 $k$ 次操作（取消的必为操作 $1$，且某个操作 $1$ 只会最多被取消一次） 每
-  </div>
-  
-  <div>
-    <div>
-      <a href="/notes/assemblylanguage/c2/">
-        <h3>《汇编语言》 笔记 第 2 章 寄存器</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/notes' class="muted-link">
-  <span class="Label Label--gray-darker">Notes</span>
-</a>
-
-
-
-
-
-
-
-<a href='/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80' class="muted-link">
-  <span class="Label Label--gray">汇编语言</span>
-</a>
-
-
-      <div class="float-md-right">
-        
-        2020-09-08
-      </div>
-    </div>
-    第 2 章 寄存器 在 CPU 中： 运算器处理信息 寄存器储存信息 控制器控制各种器件 内部总线连接各种器件，在他们之间传输数据 对汇编程序员最重要的部件就是寄存器，寄存器是程序员可以用指令读写的部件，程序员通过改变寄存器中
-  </div>
-  
 
   
   <nav class="paginate-container">
@@ -475,6 +471,10 @@
         
           <a href="/page/3/">
             3
+          </a>
+        
+          <a href="/page/4/">
+            4
           </a>
         
 
@@ -529,7 +529,12 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
-      <span class="text-right Counter">13</span>
+      <span class="text-right Counter">14</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/categories/%e7%ae%97%e6%b3%95" class="link-gray text-emphasized css-truncate-target"><span class="">算法</span></a>
+      <span class="text-right Counter">2</span>
     </span>
     
   </div>
@@ -569,7 +574,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">数论</span></a>
-      <span class="text-right Counter">1</span>
+      <span class="text-right Counter">2</span>
     </span>
     
   </div>
@@ -638,6 +643,16 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/exgcd" class="link-gray text-emphasized css-truncate-target"><span class="">Exgcd</span></a>
+      <span class="text-right Counter">2</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/gcd" class="link-gray text-emphasized css-truncate-target"><span class="">Gcd</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/hash" class="link-gray text-emphasized css-truncate-target"><span class="">Hash</span></a>
       <span class="text-right Counter">1</span>
     </span>
@@ -674,7 +689,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e6%95%b0%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">数论</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">5</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -754,7 +769,12 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-10" class="link-gray text-emphasized css-truncate-target"><span class="">2020 10</span></a>
-      <span class="text-right Counter">4</span>
+      <span class="text-right Counter">5</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2020-11" class="link-gray text-emphasized css-truncate-target"><span class="">2020 11</span></a>
+      <span class="text-right Counter">2</span>
     </span>
     
   </div>

@@ -11,7 +11,7 @@
     </title>
     
     
-    <meta name="description" property="og:description" content="模下计算 普通 const int MO=1e9&#43;7; inline int add(int x,int y) { x&#43;=y; if(x&amp;gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&amp;lt;0) x&#43;=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;amp;x,int y) { x&#43;=y; if(x&amp;gt;=MO) x-=MO; } inline void subv(int &amp;amp;x,int y) { x-=y; if(x&amp;lt;0) x&#43;=MO; } inline void mulv(int &amp;amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;amp;1) mulv(ans,x); mulv(x,x); n&amp;gt;&amp;gt;=1; } return ans; } Mint template&amp;lt;size_t MO=1000000007&amp;gt; struct Mint { int x; Mint(int x=0):x(x){ norm(); } void|OTTFF&#39;s Blog">
+    <meta name="description" property="og:description" content="模下计算 普通 const int MO=1e9&#43;7; inline int add(int x,int y) { x&#43;=y; if(x&amp;gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&amp;lt;0) x&#43;=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;amp;x,int y) { x&#43;=y; if(x&amp;gt;=MO) x-=MO; } inline void subv(int &amp;amp;x,int y) { x-=y; if(x&amp;lt;0) x&#43;=MO; } inline void mulv(int &amp;amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;amp;1) { mulv(ans,x); } mulv(x,x); n&amp;gt;&amp;gt;=1; } return ans; } Mint template&amp;lt;size_t MO=1000000007&amp;gt; struct Mint { int x; Mint(int x=0):x(x){ norm();|OTTFF&#39;s Blog">
     
 
     <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
@@ -132,45 +132,16 @@
       <h2 id="模下计算">模下计算</h2>
 <h3 id="普通">普通</h3>
 <div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">const</span> <span class="kt">int</span> <span class="n">MO</span><span class="o">=</span><span class="mf">1e9</span><span class="o">+</span><span class="mi">7</span><span class="p">;</span>
-<span class="kr">inline</span> <span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">x</span><span class="o">+=</span><span class="n">y</span><span class="p">;</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;=</span><span class="n">MO</span><span class="p">)</span> <span class="n">x</span><span class="o">-=</span><span class="n">MO</span><span class="p">;</span>
-    <span class="k">return</span> <span class="n">x</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="kr">inline</span> <span class="kt">int</span> <span class="nf">sub</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">x</span><span class="o">-=</span><span class="n">y</span><span class="p">;</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span> <span class="n">x</span><span class="o">+=</span><span class="n">MO</span><span class="p">;</span>
-    <span class="k">return</span> <span class="n">x</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="kr">inline</span> <span class="kt">int</span> <span class="nf">mul</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">return</span> <span class="mi">1LL</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="o">%</span><span class="n">MO</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="kr">inline</span> <span class="kt">void</span> <span class="nf">addv</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">x</span><span class="o">+=</span><span class="n">y</span><span class="p">;</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;=</span><span class="n">MO</span><span class="p">)</span> <span class="n">x</span><span class="o">-=</span><span class="n">MO</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="kr">inline</span> <span class="kt">void</span> <span class="nf">subv</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">x</span><span class="o">-=</span><span class="n">y</span><span class="p">;</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span> <span class="n">x</span><span class="o">+=</span><span class="n">MO</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="kr">inline</span> <span class="kt">void</span> <span class="nf">mulv</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">x</span><span class="o">=</span><span class="mi">1LL</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="o">%</span><span class="n">MO</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="kr">inline</span> <span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="n">x</span><span class="o">+=</span><span class="n">y</span><span class="p">;</span> <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;=</span><span class="n">MO</span><span class="p">)</span> <span class="n">x</span><span class="o">-=</span><span class="n">MO</span><span class="p">;</span> <span class="k">return</span> <span class="n">x</span><span class="p">;</span> <span class="p">}</span>
+<span class="kr">inline</span> <span class="kt">int</span> <span class="nf">sub</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="n">x</span><span class="o">-=</span><span class="n">y</span><span class="p">;</span> <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span> <span class="n">x</span><span class="o">+=</span><span class="n">MO</span><span class="p">;</span> <span class="k">return</span> <span class="n">x</span><span class="p">;</span> <span class="p">}</span>
+<span class="kr">inline</span> <span class="kt">int</span> <span class="nf">mul</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">1LL</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="o">%</span><span class="n">MO</span><span class="p">;</span> <span class="p">}</span>
+<span class="kr">inline</span> <span class="kt">void</span> <span class="nf">addv</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="n">x</span><span class="o">+=</span><span class="n">y</span><span class="p">;</span> <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;=</span><span class="n">MO</span><span class="p">)</span> <span class="n">x</span><span class="o">-=</span><span class="n">MO</span><span class="p">;</span> <span class="p">}</span>
+<span class="kr">inline</span> <span class="kt">void</span> <span class="nf">subv</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="n">x</span><span class="o">-=</span><span class="n">y</span><span class="p">;</span> <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span> <span class="n">x</span><span class="o">+=</span><span class="n">MO</span><span class="p">;</span> <span class="p">}</span>
+<span class="kr">inline</span> <span class="kt">void</span> <span class="nf">mulv</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="n">x</span><span class="o">=</span><span class="mi">1LL</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="o">%</span><span class="n">MO</span><span class="p">;</span> <span class="p">}</span>
 <span class="kt">int</span> <span class="nf">qp</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">ans</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-    <span class="k">while</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span> <span class="n">mulv</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
-        <span class="n">mulv</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
-        <span class="n">n</span><span class="o">&gt;&gt;=</span><span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="n">mulv</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span><span class="n">x</span><span class="p">);</span> <span class="p">}</span> <span class="n">mulv</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="p">);</span> <span class="n">n</span><span class="o">&gt;&gt;=</span><span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
     <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="mint">Mint</h3>

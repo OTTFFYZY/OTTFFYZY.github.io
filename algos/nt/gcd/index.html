@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  [算法][数论] 最大公约数（GCD）与欧几里得算法 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="最大公约数（GCD）与欧几里得算法 最大公约数（Greatest Common Divisor，GCD） 两个数最大公约数顾名思义，两个数的所有公约数中最大的。 若正整数 $a,b$ 的质因数分解为 $$a = \prod_{i} p_i ^ {e_{a,i}}$$ $$b = \prod_{i} p_i ^ {e_{b,i}}$$ 则其最大公|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/solutions">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">[算法][数论] 最大公约数（GCD）与欧几里得算法</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/%E7%AE%97%E6%B3%95' class="muted-link">
+  <span class="Label Label--gray-darker">算法</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E6%95%B0%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray">数论</span>
+</a>
+
+<a href='/tags/gcd' class="muted-link">
+  <span class="Label Label--gray">GCD</span>
+</a>
+
+
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2020-10-31. Published at: 2020-10-31.">
+        
+          Published: 2020-10-31 Sat 00:53:37
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="最大公约数gcd与欧几里得算法">最大公约数（GCD）与欧几里得算法</h2>
+<h2 id="最大公约数greatest-common-divisorgcd">最大公约数（Greatest Common Divisor，GCD）</h2>
+<p>两个数最大公约数顾名思义，两个数的所有公约数中最大的。</p>
+<p>若正整数 $a,b$ 的质因数分解为</p>
+$$a = \prod_{i} p_i ^ {e_{a,i}}$$
+$$b = \prod_{i} p_i ^ {e_{b,i}}$$
+<p>则其最大公约数为</p>
+$$b = \prod_{i} p_i ^ {\min(e_{a,i}, e_{b,i})}$$
+<p>两个数 $a$ 与 $b$ 的最大公约数通常记作</p>
+$$gcd(a,b)$$
+<p>或直接记作</p>
+$$(a,b)$$
+<p>假定 $a \ge b&gt;0$ 显然两个数的最大公约数不会超过较小的数字 $b$，</p>
+<p>于是我们得到了一种枚举的方式得到最大公约数，只要枚举 $b$ 到 $1$ 之间的所有值即可得到 $a$，$b$ 的最大公约数。但这显然太慢了，考虑 $(a,b) = 1$ 的情况我们要花费 $O(\min(a,b))$ 的时间这是完全无法接受的。</p>
+<h2 id="辗转相减">辗转相减</h2>
+<p>设 $(a,b) = g$，</p>
+<p>如果 $a = b$ 则 $a = b = g$，</p>
+<p>此外的情况，假定 $a &gt; b$，</p>
+<p>则我们发现 $g|a$ 又 $g|b$ 则 $g|(a-b)$</p>
+<p>也就是说 $(b,a-b) \ge g$</p>
+<p>假设 $(b,a-b) = c &gt; g$，</p>
+<p>则 $c|(a-b), c|b$ 从而 $c|(a-b+b)$ 则 $c|a$。</p>
+<p>注意到此时 $c$ 是 $a$ 与 $b$ 的公因子且大于 $g$ 这与 $(a,b) = g$ 矛盾，因此，</p>
+$$(b,a-b) = c = g = (a,b)$$
+<p>我们知道 $(a,b) \ge 1$，而算法每运行一次，总会使得两个数的总值严格下降，直到 $a=b$。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="p">)</span> <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">&lt;</span><span class="n">b</span><span class="p">)</span> <span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">,</span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><p>我们已经得到了一个“非常好”的递归算法。但求 $(2,10^{18})$ 不就爆炸了吗。</p>
+<h2 id="欧几里得算法-辗转相除">欧几里得算法 辗转相除</h2>
+<p>此时我们注意到，我们总是把一个较大的数减到小于等于较小的数为止，然后才会换减数。</p>
+<p>这个过程像极了<del>爱情</del>除法。我们用整数除法把较大的数 $a$ 除以较小的数 $b$，如果能整除说明较小的数$b = (a,b)$，否则我们会从 $a$ 里减掉最多次数的 $b$，即从 $a$ 中减掉 $\left\lfloor \frac{a}{b} \right\rfloor $ 次 $b$，得到</p>
+$$a&#39; = a - \left\lfloor \frac{a}{b} \right\rfloor  \cdot b$$
+<p>而这个结果相当于 $a$ 对 $b$ 取模（取余）。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">&lt;</span><span class="n">b</span><span class="p">)</span> <span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="n">b</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">,</span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="辗转相除的复杂度">辗转相除的复杂度</h3>
+<p>设 $a \ge b$, 若 b|a，则已经得出答案 $T(a,b) = O(1)$</p>
+<p>若 $b \nmid a$ 则 $a \neq b$，$a&rsquo; = a \ \mathrm{mod} \ b$。由 $a &gt; b$ 则 $a-a&rsquo; &gt; b$ 而 $a&rsquo; &lt; b$</p>
+<p>从而得出结论 $a&rsquo; &lt; \frac{a}{2}$</p>
+<p>也就是说每次取模操作必然使得较大的数字减半则</p>
+$$T(a,b) = \log(a) &#43; \log(b) = \log(ab)$$
+<p>也就是说我们已经得到了对数级别的优秀算法。</p>
+<p>但是这个界其实不是紧界，实际上我们可以通过构造序列证明一个更紧的界。</p>
+<p>这里我们考虑让迭代次数尽可能多，<del>这显然就是让 $a$ $b$ 为斐波那契数列的相邻两项嘛</del></p>
+<p>考虑 $a, b(a \ge b)$ 一共需要 $n$ 次取模操作才能得到 $(a,b)$。</p>
+<p>令 $A_{n+2} = a, A_{n+1} = b$</p>
+<p>则 $A_{i} = A_{i+2} \ \mathrm{mod} \ A_{i+1} ( 0 \le i \le n)$</p>
+<p>此时 $A_1 = (a,b) \ge 1$，$A_0 = 0$</p>
+<p>考虑斐波那契数列 $F_0 = 0, F_1 = 1, F_i = F_{i-1} + F_{i-2} (i \ge2)$</p>
+<p>有</p>
+$$F_0 \le A_0, F_1 \le A_1$$
+<p>假设 $\forall 0 \le i \le k, F_i \le A_i$ 成立则</p>
+$$F_{k&#43;1} = F_{k}&#43;F_{k-1} \le A_k &#43; A_{k-1} \le A_{k&#43;1}$$
+<p>于是对于 $b = A_{n+1} \ge F_{n+1}$</p>
+<p>换句话说如果较小的数 $b &lt; F_{n+1}$ 则需要的次数将不会超过 $n$ 次。（这里可以采用反证法，考虑存在一个 $b&lt;F_{n+1}$ 且需要次数大于 $m&gt;n$ 的情况，此时我们知道对于 $m$ 次操作而言，$A_{m+1} \ge F_{m+1}$ 而这与假设 $b=A_{m+1} &lt; F_{m+1}$ 相违背）</p>
+<p>我们知道对于 $F_{n+1}=N$，$n$ 是 $O(\log(N))$ 的因此对于辗转相除而言复杂度是 $O(\log(\min(a,b)))$ 的。</p>
+<h3 id="关于--运算">关于 % 运算</h3>
+<p>首先我们可以发现，当我们运行</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">return</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+</code></pre></div><p>时，其实我们已经知道第一个参数不会大等第二个参数了，因此我们可以考虑将这个语句写成</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">return</span> <span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">)</span>
+</code></pre></div><p>来尽量减少 swap 操作。</p>
+<p>其实</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">&lt;</span><span class="n">b</span><span class="p">)</span> <span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+</code></pre></div><p>这个语句是不必要的，因为如果如果大小关系是反的，经过一次我们修改过的取模操作，那么就会得到正确的大小关系。</p>
+<p>注意到如果已经得到 $b|a$ 的一组输入了，其实我们这时知道了 $(a,b) = b$ 但是每次递归中检查</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="n">b</span><span class="p">;</span>
+</code></pre></div><p>这里取模再判断的操作是一个非常昂贵的操作。如果我们对于这样的 $a,b$ 如果再多递归一次的话，我们会发现我们总会得到一组 $(b,0)$ 这样的输入，换句话说，我们可以考虑将循环终止条件改为判断</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+</code></pre></div><p>至此我们可以写出一个简短而优美的版本</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">b</span> <span class="o">?</span> <span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">)</span> <span class="o">:</span> <span class="n">a</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="非递归">非递归</h3>
+<p>虽然我们知道对于 gcd 而言递归深度不会很深，但是递归依旧存在。此时我们可以考虑进一步优化这个递归为迭代形式。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">t</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">t</span><span class="o">=</span><span class="n">b</span><span class="p">;</span> 
+        <span class="n">b</span><span class="o">=</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">;</span> 
+        <span class="n">a</span><span class="o">=</span><span class="n">t</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+  </section>
+
+  <section>
+    
+        <a href="/templates/ds/bitset/" class="previous_page">Prev: [模板] bitset &amp; 位图 </a>
+    
+     <br> 
+    
+        <a href="/algos/nt/exgcd/" class="next_page">Next: [算法][数论] 扩展欧几里得算法 </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>[算法][数论] 最大公约数（GCD）与欧几里得算法</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#最大公约数gcd与欧几里得算法">最大公约数（GCD）与欧几里得算法</a></li>
+    <li><a href="#最大公约数greatest-common-divisorgcd">最大公约数（Greatest Common Divisor，GCD）</a></li>
+    <li><a href="#辗转相减">辗转相减</a></li>
+    <li><a href="#欧几里得算法-辗转相除">欧几里得算法 辗转相除</a>
+      <ul>
+        <li><a href="#辗转相除的复杂度">辗转相除的复杂度</a></li>
+        <li><a href="#关于--运算">关于 % 运算</a></li>
+        <li><a href="#非递归">非递归</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>

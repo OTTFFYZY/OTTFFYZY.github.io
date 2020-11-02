@@ -6,10 +6,19 @@
     <description>Recent content in 数论 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 27 Sep 2020 23:19:53 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2020 22:38:49 -0500</lastBuildDate>
     
 	<atom:link href="https://ottffyzy.github.io/templates/%E6%95%B0%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[模板][数论] 扩展欧几里得算法（ExGCD）</title>
+      <link>https://ottffyzy.github.io/templates/nt/exgcd/</link>
+      <pubDate>Sun, 01 Nov 2020 22:38:49 -0500</pubDate>
+      
+      <guid>https://ottffyzy.github.io/templates/nt/exgcd/</guid>
+      <description>扩展欧几里得算法（ExGCD） // ax+by=gcd(a,b)=g // check a&amp;gt;0 b&amp;gt;0 // if a != b, |x|&amp;lt;b, |y|&amp;lt;a template&amp;lt;typename T&amp;gt; void exgcd(T a,T b,T &amp;amp;g,T &amp;amp;x,T &amp;amp;y) { if(!b) { g=a; x=1; y=0; } else { exgcd(b,a%b,g,y,x); y-=a/b*x; } } 求逆元 template&amp;lt;typename T&amp;gt; void exgcd(T a,T b,T &amp;amp;g,T &amp;amp;x,T &amp;amp;y) { if(!b) { g=a; x=1; y=0; } else { exgcd(b,a%b,g,y,x); y-=a/b*x; } } template&amp;lt;typename T&amp;gt; T inv(T a,T m) { T g,x,y; exgcd(a,m,g,x,y); if(g!=1) return -1; // no inverse element if(x&amp;lt;0) x+=m; return x; } 不定方</description>
+    </item>
     
     <item>
       <title>[模板][数论] 模下计算</title>
@@ -17,7 +26,7 @@
       <pubDate>Sun, 27 Sep 2020 23:19:53 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/templates/nt/mod/</guid>
-      <description>模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&amp;gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&amp;lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;amp;x,int y) { x+=y; if(x&amp;gt;=MO) x-=MO; } inline void subv(int &amp;amp;x,int y) { x-=y; if(x&amp;lt;0) x+=MO; } inline void mulv(int &amp;amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;amp;1) mulv(ans,x); mulv(x,x); n&amp;gt;&amp;gt;=1; } return ans; } Mint template&amp;lt;size_t MO=1000000007&amp;gt; struct Mint { int x; Mint(int x=0):x(x){ norm(); } void</description>
+      <description>模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&amp;gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&amp;lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;amp;x,int y) { x+=y; if(x&amp;gt;=MO) x-=MO; } inline void subv(int &amp;amp;x,int y) { x-=y; if(x&amp;lt;0) x+=MO; } inline void mulv(int &amp;amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;amp;1) { mulv(ans,x); } mulv(x,x); n&amp;gt;&amp;gt;=1; } return ans; } Mint template&amp;lt;size_t MO=1000000007&amp;gt; struct Mint { int x; Mint(int x=0):x(x){ norm();</description>
     </item>
     
   </channel>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数论，ExGCD on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E6%95%B0%E8%AE%BAexgcd/</link>
+    <description>Recent content in 数论，ExGCD on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 01 Nov 2020 10:02:34 -0500</lastBuildDate>
+    
+	<atom:link href="https://ottffyzy.github.io/tags/%E6%95%B0%E8%AE%BAexgcd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[算法][数论] 扩展欧几里得算法</title>
+      <link>https://ottffyzy.github.io/algos/nt/exgcd/</link>
+      <pubDate>Sun, 01 Nov 2020 10:02:34 -0500</pubDate>
+      
+      <guid>https://ottffyzy.github.io/algos/nt/exgcd/</guid>
+      <description>扩展欧几里得算法 有时我们需要求解类似于 $ax+by=m$ 的不定方程（丢番图方程），扩展欧几里得算法就是求解这样方程的利器。 除此以外我们可以通过简单地变形处理模逆元和线性同余方程。 裴蜀定理/贝祖定理（Bezout&amp;rs</description>
+    </item>
+    
+  </channel>
+</rss>

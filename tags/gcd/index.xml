@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GCD on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/gcd/</link>
+    <description>Recent content in GCD on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 31 Oct 2020 00:53:37 -0400</lastBuildDate>
+    
+	<atom:link href="https://ottffyzy.github.io/tags/gcd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[算法][数论] 最大公约数（GCD）与欧几里得算法</title>
+      <link>https://ottffyzy.github.io/algos/nt/gcd/</link>
+      <pubDate>Sat, 31 Oct 2020 00:53:37 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/algos/nt/gcd/</guid>
+      <description>最大公约数（GCD）与欧几里得算法 最大公约数（Greatest Common Divisor，GCD） 两个数最大公约数顾名思义，两个数的所有公约数中最大的。 若正整数 $a,b$ 的质因数分解为 $$a = \prod_{i} p_i ^ {e_{a,i}}$$ $$b = \prod_{i} p_i ^ {e_{b,i}}$$ 则其最大公</description>
+    </item>
+    
+  </channel>
+</rss>

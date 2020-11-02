@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  [模板][数论] 扩展欧几里得算法（ExGCD） &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="扩展欧几里得算法（ExGCD） // ax&#43;by=gcd(a,b)=g // check a&amp;gt;0 b&amp;gt;0 // if a != b, |x|&amp;lt;b, |y|&amp;lt;a template&amp;lt;typename T&amp;gt; void exgcd(T a,T b,T &amp;amp;g,T &amp;amp;x,T &amp;amp;y) { if(!b) { g=a; x=1; y=0; } else { exgcd(b,a%b,g,y,x); y-=a/b*x; } } 求逆元 template&amp;lt;typename T&amp;gt; void exgcd(T a,T b,T &amp;amp;g,T &amp;amp;x,T &amp;amp;y) { if(!b) { g=a; x=1; y=0; } else { exgcd(b,a%b,g,y,x); y-=a/b*x; } } template&amp;lt;typename T&amp;gt; T inv(T a,T m) { T g,x,y; exgcd(a,m,g,x,y); if(g!=1) return -1; // no inverse element if(x&amp;lt;0) x&#43;=m; return x; } 不定方|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/solutions">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">[模板][数论] 扩展欧几里得算法（ExGCD）</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E6%95%B0%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray">数论</span>
+</a>
+
+<a href='/tags/exgcd' class="muted-link">
+  <span class="Label Label--gray">ExGCD</span>
+</a>
+
+
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2020-11-01. Published at: 2020-11-01.">
+        
+          Published: 2020-11-01 Sun 22:38:49
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="扩展欧几里得算法exgcd">扩展欧几里得算法（ExGCD）</h2>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// ax+by=gcd(a,b)=g
+</span><span class="c1">// check a&gt;0 b&gt;0
+</span><span class="c1">// if a != b, |x|&lt;b, |y|&lt;a
+</span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">exgcd</span><span class="p">(</span><span class="n">T</span> <span class="n">a</span><span class="p">,</span><span class="n">T</span> <span class="n">b</span><span class="p">,</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">g</span><span class="p">,</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="n">g</span><span class="o">=</span><span class="n">a</span><span class="p">;</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span> <span class="n">exgcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">);</span> <span class="n">y</span><span class="o">-=</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="o">*</span><span class="n">x</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="求逆元">求逆元</h2>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">exgcd</span><span class="p">(</span><span class="n">T</span> <span class="n">a</span><span class="p">,</span><span class="n">T</span> <span class="n">b</span><span class="p">,</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">g</span><span class="p">,</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="n">g</span><span class="o">=</span><span class="n">a</span><span class="p">;</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span> <span class="n">exgcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">);</span> <span class="n">y</span><span class="o">-=</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="o">*</span><span class="n">x</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <span class="n">inv</span><span class="p">(</span><span class="n">T</span> <span class="n">a</span><span class="p">,</span><span class="n">T</span> <span class="n">m</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">T</span> <span class="n">g</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">;</span> <span class="n">exgcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">g</span><span class="o">!=</span><span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="c1">// no inverse element
+</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span> <span class="n">x</span><span class="o">+=</span><span class="n">m</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="不定方程">不定方程</h2>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="n">T</span> <span class="n">INF</span><span class="o">=</span><span class="n">T</span><span class="p">(</span><span class="mh">0x3f3f3f3f</span><span class="p">)</span><span class="o">&gt;</span>
+<span class="k">struct</span> <span class="nc">Diophantine</span>
+<span class="p">{</span>
+    <span class="k">typedef</span> <span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">PTI</span><span class="p">;</span>
+    <span class="c1">// floor
+</span><span class="c1"></span>    <span class="n">T</span> <span class="nf">fl</span><span class="p">(</span><span class="n">T</span> <span class="n">a</span><span class="p">,</span><span class="n">T</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="n">b</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span> <span class="o">?</span> <span class="n">a</span><span class="o">/</span><span class="nl">b</span> <span class="p">:</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span> <span class="o">-</span> <span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="o">!=</span><span class="mi">0</span><span class="p">);</span> <span class="p">}</span>
+    <span class="c1">// ceiling
+</span><span class="c1"></span>    <span class="n">T</span> <span class="nf">cl</span><span class="p">(</span><span class="n">T</span> <span class="n">a</span><span class="p">,</span><span class="n">T</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="p">(</span><span class="n">a</span><span class="o">^</span><span class="n">b</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span> <span class="o">?</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span> <span class="o">:</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">;</span> <span class="p">}</span>
+    <span class="kt">void</span> <span class="nf">exgcd</span><span class="p">(</span><span class="n">T</span> <span class="n">a</span><span class="p">,</span><span class="n">T</span> <span class="n">b</span><span class="p">,</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">g</span><span class="p">,</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="n">g</span><span class="o">=</span><span class="n">a</span><span class="p">;</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span> <span class="n">exgcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">);</span> <span class="n">y</span><span class="o">-=</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="o">*</span><span class="n">x</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">// solve ax+by=m 
+</span><span class="c1"></span>    <span class="c1">// |a|x0 + |b|y0 = (a,b) = g
+</span><span class="c1"></span>    <span class="c1">// |a| * m/g * x0 + |b| * m/g * y0 = m
+</span><span class="c1"></span>    <span class="c1">// |a|*(m*x0/g + i * |b|/g) + |b|*(m*y0/g - i * |a|/g) = m
+</span><span class="c1"></span>    <span class="c1">// if the solution x,y exist return true
+</span><span class="c1"></span>    <span class="c1">// general solution is xi=x0 + i*dx_sgn*b, yi=y0-i*dy_sgn*a
+</span><span class="c1"></span>    <span class="n">T</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">dx_sgn</span><span class="p">,</span> <span class="n">dy_sgn</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="nf">solve</span><span class="p">(</span><span class="n">T</span> <span class="n">a_</span><span class="p">,</span><span class="n">T</span> <span class="n">b_</span><span class="p">,</span><span class="n">T</span> <span class="n">m</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">a</span><span class="o">=</span><span class="n">a_</span><span class="p">;</span> <span class="n">b</span><span class="o">=</span><span class="n">b_</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mi">0</span><span class="o">&amp;&amp;</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="k">return</span> <span class="n">m</span><span class="o">==</span><span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">y</span><span class="o">=</span><span class="n">m</span><span class="o">/</span><span class="n">b</span><span class="p">;</span> <span class="k">return</span> <span class="n">m</span><span class="o">%</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">x</span><span class="o">=</span><span class="n">m</span><span class="o">/</span><span class="n">a</span><span class="p">;</span> <span class="k">return</span> <span class="n">m</span><span class="o">%</span><span class="n">a</span><span class="o">==</span><span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+        <span class="n">exgcd</span><span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="n">abs</span><span class="p">(</span><span class="n">b</span><span class="p">),</span><span class="n">g</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
+        <span class="c1">// print();
+</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span><span class="n">m</span><span class="o">%</span><span class="n">g</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="n">x</span><span class="o">*=</span><span class="n">m</span><span class="o">/</span><span class="n">g</span><span class="p">;</span> <span class="n">y</span><span class="o">*=</span><span class="n">m</span><span class="o">/</span><span class="n">g</span><span class="p">;</span>
+        <span class="n">b</span><span class="o">/=</span><span class="n">g</span><span class="p">;</span> <span class="n">a</span><span class="o">/=</span><span class="n">g</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="n">a</span><span class="o">=-</span><span class="n">a</span><span class="p">;</span> <span class="n">x</span><span class="o">=-</span><span class="n">x</span><span class="p">;</span> <span class="n">dx_sgn</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="n">dx_sgn</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="n">b</span><span class="o">=-</span><span class="n">b</span><span class="p">;</span> <span class="n">y</span><span class="o">=-</span><span class="n">y</span><span class="p">;</span> <span class="n">dy_sgn</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="n">dy_sgn</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// a!=0 b!=0 
+</span><span class="c1"></span>    <span class="c1">// op = -1 : xlim &lt;= x + i*sgn*b
+</span><span class="c1"></span>    <span class="c1">// op =  1 : xlim &gt;= x + i*sgn*b
+</span><span class="c1"></span>    <span class="c1">// return {ilim, op} 
+</span><span class="c1"></span>    <span class="c1">// op = -1, i &lt;= ilim
+</span><span class="c1"></span>    <span class="c1">// op =  1, i &gt;= ilim 
+</span><span class="c1"></span>    <span class="n">PTI</span> <span class="nf">x_to_i</span><span class="p">(</span><span class="n">T</span> <span class="n">xlim</span><span class="p">,</span><span class="kt">int</span> <span class="n">op</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">dx_sgn</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">op</span><span class="o">==-</span><span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="p">{</span><span class="n">cl</span><span class="p">(</span><span class="n">xlim</span><span class="o">-</span><span class="n">x</span><span class="p">,</span><span class="n">b</span><span class="p">),</span><span class="mi">1</span><span class="p">};</span> <span class="c1">// i&gt;=(xlim-x)/b
+</span><span class="c1"></span>            <span class="k">else</span> <span class="k">return</span> <span class="p">{</span><span class="n">fl</span><span class="p">(</span><span class="n">xlim</span><span class="o">-</span><span class="n">x</span><span class="p">,</span><span class="n">b</span><span class="p">),</span><span class="o">-</span><span class="mi">1</span><span class="p">};</span>      <span class="c1">// i&lt;=(xlim-x)/b
+</span><span class="c1"></span>        <span class="p">}</span>
+        <span class="k">else</span> <span class="c1">//sgn==-1
+</span><span class="c1"></span>        <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">op</span><span class="o">==-</span><span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="p">{</span><span class="n">fl</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">xlim</span><span class="p">,</span><span class="n">b</span><span class="p">),</span><span class="o">-</span><span class="mi">1</span><span class="p">};</span> <span class="c1">// i&lt;=(x-xlim)/b
+</span><span class="c1"></span>            <span class="k">else</span> <span class="k">return</span> <span class="p">{</span><span class="n">cl</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">xlim</span><span class="p">,</span><span class="n">b</span><span class="p">),</span><span class="mi">1</span><span class="p">};</span>        <span class="c1">// i&gt;=(x-xlim)/b 
+</span><span class="c1"></span>        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">// a!=0 b!=0 
+</span><span class="c1"></span>    <span class="c1">// op = -1 : ylim &lt;= y - i*sgn*a
+</span><span class="c1"></span>    <span class="c1">// op =  1 : ylim &gt;= y - i*sgn*a
+</span><span class="c1"></span>    <span class="c1">// return {ilim, op} 
+</span><span class="c1"></span>    <span class="c1">// op = -1, i &lt;= ilim
+</span><span class="c1"></span>    <span class="c1">// op =  1, i &gt;= ilim 
+</span><span class="c1"></span>    <span class="n">PTI</span> <span class="nf">y_to_i</span><span class="p">(</span><span class="n">T</span> <span class="n">ylim</span><span class="p">,</span><span class="kt">int</span> <span class="n">op</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">dy_sgn</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">op</span><span class="o">==-</span><span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="p">{</span><span class="n">fl</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">ylim</span><span class="p">,</span><span class="n">a</span><span class="p">),</span><span class="o">-</span><span class="mi">1</span><span class="p">};</span> <span class="c1">// i&lt;=(y-ylim)/a
+</span><span class="c1"></span>            <span class="k">else</span> <span class="k">return</span> <span class="p">{</span><span class="n">cl</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">ylim</span><span class="p">,</span><span class="n">a</span><span class="p">),</span><span class="mi">1</span><span class="p">};</span>        <span class="c1">// i&gt;=(y-ylim)/a 
+</span><span class="c1"></span>        <span class="p">}</span>
+        <span class="k">else</span> <span class="c1">//sgn==-1
+</span><span class="c1"></span>        <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">op</span><span class="o">==-</span><span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="p">{</span><span class="n">cl</span><span class="p">(</span><span class="n">ylim</span><span class="o">-</span><span class="n">y</span><span class="p">,</span><span class="n">a</span><span class="p">),</span><span class="mi">1</span><span class="p">};</span> <span class="c1">// i&gt;=(ylim-y)/a
+</span><span class="c1"></span>            <span class="k">else</span> <span class="k">return</span> <span class="p">{</span><span class="n">fl</span><span class="p">(</span><span class="n">ylim</span><span class="o">-</span><span class="n">y</span><span class="p">,</span><span class="n">a</span><span class="p">),</span><span class="o">-</span><span class="mi">1</span><span class="p">};</span>      <span class="c1">// i&lt;=(ylim-y)/a
+</span><span class="c1"></span>        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="kt">void</span> <span class="nf">print</span><span class="p">()</span>
+    <span class="p">{</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;a=&#34;</span><span class="o">&lt;&lt;</span><span class="n">a</span><span class="o">&lt;&lt;</span><span class="s">&#34;, b=&#34;</span><span class="o">&lt;&lt;</span><span class="n">b</span><span class="o">&lt;&lt;</span><span class="s">&#34;, g=&#34;</span><span class="o">&lt;&lt;</span><span class="n">g</span><span class="o">&lt;&lt;</span><span class="s">&#34;, x=&#34;</span><span class="o">&lt;&lt;</span><span class="n">x</span><span class="o">&lt;&lt;</span><span class="s">&#34;, y=&#34;</span><span class="o">&lt;&lt;</span><span class="n">y</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div>
+  </section>
+
+  <section>
+    
+        <a href="/algos/nt/exgcd/" class="previous_page">Prev: [算法][数论] 扩展欧几里得算法 </a>
+    
+    
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>[模板][数论] 扩展欧几里得算法（ExGCD）</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#扩展欧几里得算法exgcd">扩展欧几里得算法（ExGCD）</a></li>
+    <li><a href="#求逆元">求逆元</a></li>
+    <li><a href="#不定方程">不定方程</a></li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>
