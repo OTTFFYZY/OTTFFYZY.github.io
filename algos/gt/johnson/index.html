@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  [算法][图论] 约翰逊 Johnson 算法 全源最短路 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="约翰逊 Johnson 算法 全源最短路 对于最短路问题，我们的常用算法是 Dijkstra 算法或 Bellman-Ford 算法。但这两个算法经常解决的是单源最短路问题。 对于多源（全源）最短路问题，我们有一个基于动态规划的优秀算法，Floyd-Warshall|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/solutions">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">[算法][图论] 约翰逊 Johnson 算法 全源最短路</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/%E5%9B%BE%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray-darker">图论</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E5%9B%BE%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray">图论</span>
+</a>
+
+<a href='/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF' class="muted-link">
+  <span class="Label Label--gray">最短路</span>
+</a>
+
+
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2020-11-18. Published at: 2020-11-18.">
+        
+          Published: 2020-11-18 Wed 13:33:50
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="约翰逊-johnson-算法-全源最短路">约翰逊 Johnson 算法 全源最短路</h2>
+<p>对于最短路问题，我们的常用算法是 Dijkstra 算法或 Bellman-Ford 算法。但这两个算法经常解决的是单源最短路问题。</p>
+<p>对于多源（全源）最短路问题，我们有一个基于动态规划的优秀算法，Floyd-Warshall 算法。</p>
+<p>但 Floyd-Warshall 算法是一个更适合稠密图的算法，若设 $V$ 表示图中点数 $E$ 为图中边数，则复杂度为 $O(V^3)$ 是一个与边无关的量。</p>
+<p>对于稀疏图，$E$ 与 $V$ 同阶的情形，此时我们发现如果图是非负权图，我们可以用以每个点为起点的方式跑 $V$ 次 Dijkstra 算法，从而得到一个时间复杂度更好的算法。考虑 $E$ 和 $V$ 都是 $O(N)$ 的，则用 std::priority_queue 优化的 Dijkstra 跑 $V$ 次的时间复杂度为 $O(V((E+V) \log E)) = O(N^2 \log N)$ 是明显优于 Floyd-Warshall 的 $O(V^3) = O(N^3)$ 的。</p>
+<p>所以此时问题来了，Floyd-Warshall 是适用于有负权图的，那么对于稀疏带负权的图我们能得到一个更好的复杂度的算法吗？</p>
+<h3 id="spfa-它又死了">SPFA 它又死了</h3>
+<p>我们知道 Bellman-Ford 算法有一个队列优化的版本叫 Shortest Path <del>Fast</del> Foolish Algorithm，它的复杂度并不是 $O(kV)$ 的，而我们总可以通过构造数据（网格图）使得它跑到 $O(VE)$。所以跑 $V$ 轮 Bellman-Ford 不会取得更好的时间复杂度，$O(VVE) = O(N^3)$。</p>
+<p>所以我们还得想办法让 Dijkstra 能用，或者是发明新算法。</p>
+<h3 id="修改边权赐予-dijkstra-战胜负权图的力量">修改边权赐予 Dijkstra 战胜负权图的力量</h3>
+<p>Johnson 算法的一个核心就是对所有边权重新标记。新标号的边权是非负的从而使得 Dijkstra 在新图上可用。</p>
+<p>首先我们知道，简单的给所有的边加上最小权重的相反数这个肯定是行不通的，这样我们会引入边数这个新的影响因素，例如以前最短路可能是一条边数很多但边权和很小的路径，比如权重和为 $sum_0$ 边数为 $n_0$，考虑另一路径，权重和为 $sum_1$ 边数为 $n_1$，且 $sum_1 \ge sum_0$，$n_1 \le n_2$。在权重都增加 $\delta &gt; 0$ 后有 $sum_0&rsquo; = sum_0 + n_0\delta$， $sum_1&rsquo; = sum_1 + n_1\delta$，此时我们发现 $sum_0'$ 和 $sum_1'$ 的大小关系是不确定的，也就是原图的最短路未必对应新图的最短路，也就是说这样的标号方案是不正确的。</p>
+<p>那么如何修改边权能不改变原图的最短路呢？</p>
+<p>这里我们引入一个类似势能和每个点绑定的值 $h[i]$。</p>
+<p>考虑边 $&lt;u,v&gt;$ 权重为 $w(u,v)$，重新标记边权为</p>
+$$w&#39;(u,v) = w(u,v) &#43; h[u] - h[v]$$
+<p>这样标记的好处是对于一条路径 $v_0, v_1, v_2, \cdots,v_n$，原图上的长度为，</p>
+$$sum = w(v_0,v_1) &#43; w(v_1,v_2) &#43; \cdots &#43; w(v_{n-1},v_{n})$$
+<p>而新图上的长度是</p>
+
+$$
+\begin{align}
+sum&#39; =&amp; w&#39;(v_0,v_1) &#43; w&#39;(v_1,v_2) &#43; \cdots &#43; w&#39;(v_{n-1},v_{n}) \\ 
+=&amp; (w(v_0,v_1)&#43;h[v_0]-h[v_1]) &#43; (w(v_1,v_2)&#43;h[v_1]-h[v_2]) &#43; \cdots &#43; (w(v_{n-1},v_n)&#43;h[v_{n-1}]-h[v_n]) \\
+=&amp; (w(v_0,v_1) &#43; w(v_0,v_1) &#43; \cdots &#43; w(v_{n-1},v_n)) &#43; (h[v_0]-h[v_1]&#43;h[v_1]-h[v_2]&#43; \cdots &#43;h[v_{n-1}]-h[v_n]) \\
+=&amp; sum &#43; h[v_0] - h[v_n]
+\end{align}
+$$
+
+<p>我们发现原图与新图路径长度的差值其实只与起止位置有关，与路径无关。此时我们发现原图最短路和新图的最短路的选择是等价的。</p>
+<p>假设原图上 $v_0$ 到 $v_n$ 的最短路之一是路径 $v_0, v_1, v_2, \cdots,v_n$ 其权值和是 $sum_0$，此时新图上显然也可以选取这一路径得到 $sum_0&rsquo; = sum_0 + h[v_0] - h[v_n]$。我们只需证明这个在新图上也是最短路即可。假设这条路径在新图上并非最短路，新图有一条更短的路径 $v_0, u_1, u_2, \cdots, v_n$ 其权重为 $sum_1&rsquo; &lt; sum_0'$ 这时我们发现，必然在原图上这条路径可以得到</p>
+$$sum_1 = sum_1&#39;-(h[v_0]-h[v_n]) &lt; sum_0&#39; - (h[v_0]-h[v_n]) = sum_0$$
+<p>也就是说我们在原图上得到了一条比最短路更短的路径，这显然与假设是相违背的。</p>
+<p>现在的问题就变成了，我们怎么能推算一套 $h[i]$ 使得所有的 $w&rsquo;(u,v) \ge 0$。</p>
+<p>这相当于我们要</p>
+$$w&#39;(u,v) = w(u,v) &#43; h[u] - h[v] \ge 0$$
+<p>即</p>
+$$w(u,v) \ge h[v] - h[u]$$
+<p>仔细盯着这个式子观察，发现，这不就是最短路跑完时边与距离的三角不等式么！</p>
+$$w(u,v) \ge dis[v] - dis[u]$$
+<p>那我们用最短路的结果 $dis[i]$ 当做 $h[i]$ 标号就好了么。</p>
+<p>但，我们不是要做的就是最短路吗，这不是坑爹么！</p>
+<p>也对，但也不对，此最短路非彼最短路。因为标号只需要一次就够了，我们随便做一次可以跑到所有点的最短路即可。而我们最终要求的全源最短路需要跑 $V$ 轮。</p>
+<p>于是，</p>
+<h3 id="bellman-ford-它还活着">Bellman-Ford 它还活着</h3>
+<p>我们可以加一个超级源点 $src$ 向所有点连权重为 $0$ 的边，然后跑一遍 Bellman-Ford，得到 $h$ 数组。这样我们就能够处理负权图了。</p>
+<p>一次 Bellman-Ford 算法的复杂度虽然高，但是 Dijkstra 要跑 $V$ 轮，这部分才是主导时间复杂度的部分。这也是为什么我们无法通过这种标号的方法使得在一般最短路问题中 Dijkstra 算法可用。</p>
+<p>这里特别注意的是，由于有负环图 Bellman-Ford 算法其实是结束不了的（最短路不存在），因此对于这样的图是没法进行标号的。</p>
+<p>至此我们得到了一个完美的稀疏图上的全源最短路算法 $Johnson$ 算法。</p>
+<h2 id="johnson-算法">Johnson 算法</h2>
+<h3 id="算法流程">算法流程</h3>
+<ol>
+<li>建立超级源点 $src$ 向所有的点连一条权重为 $0$ 的有向边。</li>
+<li>跑 Bellman-Ford 确定图中是否有负环，有负环直接结束</li>
+<li>以每一个原图中的点为起点，以 $w(u,v) + h[u] - h[v]$ 为边的权重跑 $V$ 次 Dijkstra</li>
+<li>得到的距离数组 $dis[u][v]$ 需要 $-h[u]+h[v]$ 才能得出真实的距离，注意特殊处理无法走到的情况的值</li>
+</ol>
+<h3 id="复杂度">复杂度</h3>
+<p>空间复杂度：Bellman-Ford 我们只需要一个额外的 $h$ 数组，Dijkstra 需要 $O(V)$ 的空间不赘述。如果每一轮我们都直接将求出的最短路都输出而不是存在一个 $O(V^2)$ 的数组中的话，那么额外空间就是 $O(V)$ 的，存图的空间为 $O(V+E)$ 总复杂度为 $O(V+E)$。</p>
+<p>时间复杂度：Bellman-Ford 为 $O(VE)$ 。如果使用 std::priority_queue 优化的 Dijkstra 则总复杂度为 $O(V(E+V)\log E)$。</p>
+<h3 id="例题及代码">例题及代码</h3>
+<p>Luogu P5905</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">LL</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">PII</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">M</span><span class="o">=</span><span class="mi">3005</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">INF</span><span class="o">=</span><span class="mf">1e9</span><span class="p">;</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="n">PII</span><span class="o">&gt;</span> <span class="n">g</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">h</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">src</span><span class="p">;</span>
+
+<span class="kt">bool</span> <span class="nf">bellman_ford</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="n">h</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">INF</span><span class="p">;</span>
+	<span class="n">h</span><span class="p">[</span><span class="n">src</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">u</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">u</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">u</span><span class="o">++</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">h</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">==</span><span class="n">INF</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+			<span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="p">[</span><span class="n">v</span><span class="p">,</span><span class="n">w</span><span class="p">]</span><span class="o">:</span><span class="n">g</span><span class="p">[</span><span class="n">u</span><span class="p">])</span> <span class="n">h</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">=</span><span class="n">min</span><span class="p">(</span><span class="n">h</span><span class="p">[</span><span class="n">v</span><span class="p">],</span><span class="n">h</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">+</span><span class="n">w</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="kt">int</span> <span class="n">f</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">u</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">u</span><span class="o">&lt;=</span><span class="n">n</span><span class="o">&amp;&amp;</span><span class="n">f</span><span class="p">;</span><span class="n">u</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">h</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">==</span><span class="n">INF</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="p">[</span><span class="n">v</span><span class="p">,</span><span class="n">w</span><span class="p">]</span><span class="o">:</span><span class="n">g</span><span class="p">[</span><span class="n">u</span><span class="p">])</span> <span class="k">if</span><span class="p">(</span><span class="n">h</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">&gt;</span><span class="n">h</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">+</span><span class="n">w</span><span class="p">)</span> <span class="p">{</span> <span class="n">f</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="k">break</span><span class="p">;</span> <span class="p">}</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="n">f</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">dis</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">vis</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
+<span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">PII</span><span class="p">,</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PII</span><span class="o">&gt;</span><span class="p">,</span><span class="n">greater</span><span class="o">&lt;</span><span class="n">PII</span><span class="o">&gt;&gt;</span> <span class="n">qu</span><span class="p">;</span>
+<span class="n">LL</span> <span class="nf">dijkstra</span><span class="p">(</span><span class="kt">int</span> <span class="n">st</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="n">dis</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">INF</span><span class="p">,</span><span class="n">vis</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+	<span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">qu</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span> <span class="n">qu</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+	<span class="n">qu</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">st</span><span class="p">);</span>
+	<span class="n">dis</span><span class="p">[</span><span class="n">st</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+	<span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">qu</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+	<span class="p">{</span>
+		<span class="n">PII</span> <span class="n">p</span><span class="o">=</span><span class="n">qu</span><span class="p">.</span><span class="n">top</span><span class="p">();</span> <span class="n">qu</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+		<span class="kt">int</span> <span class="n">u</span><span class="o">=</span><span class="n">p</span><span class="p">.</span><span class="n">second</span><span class="p">;</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">vis</span><span class="p">[</span><span class="n">u</span><span class="p">])</span> <span class="k">continue</span><span class="p">;</span>
+		<span class="n">vis</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="p">[</span><span class="n">v</span><span class="p">,</span><span class="n">w</span><span class="p">]</span><span class="o">:</span><span class="n">g</span><span class="p">[</span><span class="n">u</span><span class="p">])</span>
+		<span class="p">{</span>
+			<span class="n">w</span><span class="o">+=</span><span class="n">h</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">-</span><span class="n">h</span><span class="p">[</span><span class="n">v</span><span class="p">];</span>
+			<span class="c1">// cout&lt;&lt;w&lt;&lt;endl;
+</span><span class="c1"></span>			<span class="k">if</span><span class="p">(</span><span class="n">vis</span><span class="p">[</span><span class="n">v</span><span class="p">])</span> <span class="k">continue</span><span class="p">;</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">dis</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">&gt;</span><span class="n">dis</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">+</span><span class="n">w</span><span class="p">)</span>
+			<span class="p">{</span>
+				<span class="n">dis</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">=</span><span class="n">dis</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="o">+</span><span class="n">w</span><span class="p">;</span>
+				<span class="n">qu</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="n">dis</span><span class="p">[</span><span class="n">v</span><span class="p">],</span><span class="n">v</span><span class="p">);</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="n">LL</span> <span class="n">ans</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">dis</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">INF</span><span class="p">)</span> <span class="n">ans</span><span class="o">+=</span><span class="mi">1LL</span><span class="o">*</span><span class="n">i</span><span class="o">*</span><span class="n">INF</span><span class="p">;</span>
+		<span class="k">else</span> <span class="n">ans</span><span class="o">+=</span><span class="mi">1LL</span><span class="o">*</span><span class="n">i</span><span class="o">*</span><span class="p">(</span><span class="n">dis</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">h</span><span class="p">[</span><span class="n">st</span><span class="p">]</span><span class="o">+</span><span class="n">h</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+	<span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">n</span><span class="p">,</span><span class="o">&amp;</span><span class="n">m</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">w</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">m</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d%d%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">u</span><span class="p">,</span><span class="o">&amp;</span><span class="n">v</span><span class="p">,</span><span class="o">&amp;</span><span class="n">w</span><span class="p">);</span>
+		<span class="n">g</span><span class="p">[</span><span class="n">u</span><span class="p">].</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">w</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="n">src</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">g</span><span class="p">[</span><span class="n">src</span><span class="p">].</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">bellman_ford</span><span class="p">())</span>
+	<span class="p">{</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">&#34;-1</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+		<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">&#34;%lld</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">dijkstra</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+  </section>
+
+  <section>
+    
+        <a href="/templates/nt/exgcd/" class="previous_page">Prev: [模板][数论] 扩展欧几里得算法（ExGCD） </a>
+    
+    
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>[算法][图论] 约翰逊 Johnson 算法 全源最短路</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#约翰逊-johnson-算法-全源最短路">约翰逊 Johnson 算法 全源最短路</a>
+      <ul>
+        <li><a href="#spfa-它又死了">SPFA 它又死了</a></li>
+        <li><a href="#修改边权赐予-dijkstra-战胜负权图的力量">修改边权赐予 Dijkstra 战胜负权图的力量</a></li>
+        <li><a href="#bellman-ford-它还活着">Bellman-Ford 它还活着</a></li>
+      </ul>
+    </li>
+    <li><a href="#johnson-算法">Johnson 算法</a>
+      <ul>
+        <li><a href="#算法流程">算法流程</a></li>
+        <li><a href="#复杂度">复杂度</a></li>
+        <li><a href="#例题及代码">例题及代码</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>

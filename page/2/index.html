@@ -101,6 +101,40 @@
   
   <div>
     <div>
+      <a href="/templates/hash/safehash/">
+        <h3>[模板][Hash] 安全哈希函数</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+
+
+<a href='/tags/hash' class="muted-link">
+  <span class="Label Label--gray">Hash</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-09-28
+      </div>
+    </div>
+    安全哈希函数 struct custom_hash { static uint64_t splitmix64(uint64_t x) { // http://xorshift.di.unimi.it/splitmix64.c x += 0x9e3779b97f4a7c15; x = (x ^ (x &gt;&gt; 30)) * 0xbf58476d1ce4e5b9; x = (x ^ (x &gt;&gt; 27)) * 0x94d049bb133111eb; return x ^ (x &gt;&gt; 31); } size_t operator()(uint64_t x) const { static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count(); return splitmix64(x + FIXED_RANDOM); } }; 用这个函数作为 unordered_set 的第二个参数或 unordered_map 的第三个参数。
+  </div>
+  
+  <div>
+    <div>
       <a href="/templates/nt/mod/">
         <h3>[模板][数论] 模下计算</h3>
       </a>
@@ -417,40 +451,6 @@
     第 1 章 概率论导论 1.2 概率的不同类型 直观概率：基于直观来处理判断 古典概率：事件概率不是实验性的，通过预先计算事件 $E$ 可能发生的次数 $n_E$ 形成一个比值 $n_E / n$ 其中 $n$ 是所有可能的结果。此时需要所有的结果是等可能的。 古
   </div>
   
-  <div>
-    <div>
-      <a href="/notes/effectivecpp/c1/">
-        <h3>《Effective C&#43;&#43;》 笔记 1. 让自己习惯 C&#43;&#43;</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/notes' class="muted-link">
-  <span class="Label Label--gray-darker">Notes</span>
-</a>
-
-
-
-
-
-
-
-<a href='/series/effective-cpp' class="muted-link">
-  <span class="Label Label--gray">Effective Cpp</span>
-</a>
-
-
-      <div class="float-md-right">
-        
-        2020-09-13
-      </div>
-    </div>
-    1. 让自己习惯 C++ 条款 01：视 C++ 为一个语言联邦 C++ 是一个多重泛型编程语言（multiparadigm programming language）。 C++ 同时支持过程（procedural）形式、面向对象（object-oriented
-  </div>
-  
 
   
   <nav class="paginate-container">
@@ -530,6 +530,11 @@
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
       <span class="text-right Counter">14</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/categories/%e5%9b%be%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">图论</span></a>
+      <span class="text-right Counter">1</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -673,6 +678,11 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e5%9b%be%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">图论</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e5%9f%ba%e7%8e%af%e6%a0%91" class="link-gray text-emphasized css-truncate-target"><span class="">基环树</span></a>
       <span class="text-right Counter">1</span>
     </span>
@@ -699,7 +709,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e6%9c%80%e7%9f%ad%e8%b7%af" class="link-gray text-emphasized css-truncate-target"><span class="">最短路</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">3</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -774,7 +784,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-11" class="link-gray text-emphasized css-truncate-target"><span class="">2020 11</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">3</span>
     </span>
     
   </div>
