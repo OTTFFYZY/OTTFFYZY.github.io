@@ -54,7 +54,7 @@
     
       
       
-      <a class="UnderlineNav-item " href="/categories/templates">
+      <a class="UnderlineNav-item " href="/templates">
         
         <span>Templates</span>
       </a>
@@ -70,7 +70,7 @@
     
       
       
-      <a class="UnderlineNav-item " href="/categories/solutions">
+      <a class="UnderlineNav-item " href="/sols">
         
         <span>Solutions</span>
       </a>
@@ -101,6 +101,46 @@
   
   <div>
     <div>
+      <a href="/tpls/ds/discretization/">
+        <h3>[模板][数据结构] 离散化 Discretization</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
+  <span class="Label Label--gray-darker">数据结构</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E7%A6%BB%E6%95%A3%E5%8C%96' class="muted-link">
+  <span class="Label Label--gray">离散化</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2021-01-20
+      </div>
+    </div>
+    离散化 Discretization template&lt;typename T, int IdFrom = 0, typename OpLs=less&lt;T&gt;, typename OpEq=equal_to&lt;T&gt;&gt; struct Dctz { static OpLs ls; static OpEq eq; vector&lt;T&gt; x; void add(T v) { x.push_back(v); } void init() { sort(x.begin(),x.end(),ls); x.erase(unique(x.begin(),x.end(),eq),x.end()); } int id(const T &amp;v) { return lower_bound(x.begin(),x.end(),v,ls)-x.begin()+IdFrom; } }; Dctz&lt;int&gt; dc;
+  </div>
+  
+  <div>
+    <div>
       <a href="/algos/gt/johnson/">
         <h3>[算法][图论] 约翰逊 Johnson 算法 全源最短路</h3>
       </a>
@@ -110,9 +150,11 @@
     <div class="Subhead-description">
       
 
-<a href='/categories/%E5%9B%BE%E8%AE%BA' class="muted-link">
-  <span class="Label Label--gray-darker">图论</span>
+<a href='/categories/%E7%AE%97%E6%B3%95' class="muted-link">
+  <span class="Label Label--gray-darker">算法</span>
 </a>
+
+
 
 
 
@@ -139,7 +181,7 @@
   
   <div>
     <div>
-      <a href="/templates/nt/exgcd/">
+      <a href="/tpls/nt/exgcd/">
         <h3>[模板][数论] 扩展欧几里得算法（ExGCD）</h3>
       </a>
       
@@ -150,6 +192,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray-darker">数论</span>
 </a>
 
 
@@ -194,6 +242,8 @@
 
 
 
+
+
 <a href='/tags/%E6%95%B0%E8%AE%BA' class="muted-link">
   <span class="Label Label--gray">数论</span>
 </a>
@@ -232,6 +282,8 @@
 
 
 
+
+
 <a href='/tags/%E6%95%B0%E8%AE%BA' class="muted-link">
   <span class="Label Label--gray">数论</span>
 </a>
@@ -253,7 +305,7 @@
   
   <div>
     <div>
-      <a href="/templates/ds/bitset/">
+      <a href="/tpls/ds/bitset/">
         <h3>[模板] bitset &amp; 位图</h3>
       </a>
       
@@ -264,6 +316,16 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
+  <span class="Label Label--gray-darker">数据结构</span>
+</a>
+
+<a href='/templates/stl' class="muted-link">
+  <span class="Label Label--gray-darker">STL</span>
 </a>
 
 
@@ -287,7 +349,7 @@
   
   <div>
     <div>
-      <a href="/templates/others/checker/">
+      <a href="/tpls/others/checker/">
         <h3>[模板] 对拍程序</h3>
       </a>
       
@@ -298,6 +360,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E5%85%B6%E4%BB%96' class="muted-link">
+  <span class="Label Label--gray-darker">其他</span>
 </a>
 
 
@@ -317,7 +385,7 @@
   
   <div>
     <div>
-      <a href="/templates/ds/bit/">
+      <a href="/tpls/ds/bit/">
         <h3>[模板][数据结构] 树状数组 Binary Index Tree/Fenwick Tree</h3>
       </a>
       
@@ -328,6 +396,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
+  <span class="Label Label--gray-darker">数据结构</span>
 </a>
 
 
@@ -346,12 +420,12 @@
         2020-10-01
       </div>
     </div>
-    树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // id 0~n-1 template&lt;typename T,size_t M,typename OpPlus=plus&lt;T&gt;,typename OpMinus=minus&lt;T&gt;&gt; struct BIT { static int lowbit(int x) { return x&amp;(-x); } T tree[M+1]; // tree[i] -&gt; sum of [i-lowbit(i)+1,i] T tmp[M+1]; OpPlus opp; OpMinus opm; int n; void init(int n_) { n=n_; for(int i=1;i&lt;=n;i++) tree[i]=T(0); } void init(int n_,T v[]) { n=n_; tmp[0]=T(0); for(int i=0;i&lt;n;i++) tmp[i+1]=opp(tmp[i],v[i]); for(int i=1;i&lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(p=p+1;p&lt;=n;p+=lowbit(p)) tree[p]=opp(tree[p],V); } T sum(int p) { T ans(0); for(p=p+1;p;p-=lowbit(p)) ans=opp(ans,tree[p]); return ans; } T
+    树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // id 1~n template&lt;typename T,size_t M,typename OpPlus=plus&lt;T&gt;,typename OpMinus=minus&lt;T&gt;&gt; struct BIT { static int lowbit(int x) { return x&amp;(-x); } static OpPlus opp; static OpMinus opm; T tree[M+1]; // tree[i] -&gt; sum of [i-lowbit(i)+1,i] T tmp[M+1]; int n; void init(int n_) { n=n_; for(int i=1;i&lt;=n;i++) tree[i]=T(0); } void init(int n_,T v[]) // v[0 ~ n_-1] { n=n_; tmp[0]=T(0); for(int i=1;i&lt;=n;i++) tmp[i]=opp(tmp[i-1],v[i]); for(int i=1;i&lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(;p&lt;=n;p+=lowbit(p)) tree[p]=opp(tree[p],V); } T sum(int p) { T ans(0);
   </div>
   
   <div>
     <div>
-      <a href="/templates/others/timing/">
+      <a href="/tpls/others/timing/">
         <h3>[模板] 计时 Timing</h3>
       </a>
       
@@ -362,6 +436,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E5%85%B6%E4%BB%96' class="muted-link">
+  <span class="Label Label--gray-darker">其他</span>
 </a>
 
 
@@ -381,7 +461,7 @@
   
   <div>
     <div>
-      <a href="/templates/others/cppmain/">
+      <a href="/tpls/others/cppmain/">
         <h3>[模板] C&#43;&#43; 日常使用</h3>
       </a>
       
@@ -392,6 +472,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E5%85%B6%E4%BB%96' class="muted-link">
+  <span class="Label Label--gray-darker">其他</span>
 </a>
 
 
@@ -426,6 +512,8 @@
 
 
 
+
+
 <a href='/ojs/leetcode' class="muted-link">
   <span class="Label Label--gray-darker">LeetCode</span>
 </a>
@@ -441,6 +529,374 @@
       </div>
     </div>
     前 总结一下 LeetCode 上比较好的题目（部分题可能并不是很好，但是实现细节复杂，面试需要特别注意也囊括进来了）。 推荐指数 $1-5$ 是按照可能已经掌握的知识层次进行排序的，竞赛选手推荐刷推荐指数 $3$ 以上的题目。推荐指数和难度
+  </div>
+  
+  <div>
+    <div>
+      <a href="/tpls/hash/safehash/">
+        <h3>[模板][Hash] 安全哈希函数</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/hash' class="muted-link">
+  <span class="Label Label--gray-darker">Hash</span>
+</a>
+
+
+
+
+
+<a href='/tags/hash' class="muted-link">
+  <span class="Label Label--gray">Hash</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-09-28
+      </div>
+    </div>
+    安全哈希函数 struct custom_hash { static uint64_t splitmix64(uint64_t x) { // http://xorshift.di.unimi.it/splitmix64.c x += 0x9e3779b97f4a7c15; x = (x ^ (x &gt;&gt; 30)) * 0xbf58476d1ce4e5b9; x = (x ^ (x &gt;&gt; 27)) * 0x94d049bb133111eb; return x ^ (x &gt;&gt; 31); } size_t operator()(uint64_t x) const { static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count(); return splitmix64(x + FIXED_RANDOM); } }; 用这个函数作为 unordered_set 的第二个参数或 unordered_map 的第三个参数。
+  </div>
+  
+  <div>
+    <div>
+      <a href="/tpls/nt/mod/">
+        <h3>[模板][数论] 模下计算</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray-darker">数论</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E6%95%B0%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray">数论</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-09-27
+      </div>
+    </div>
+    模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;x,int y) { x+=y; if(x&gt;=MO) x-=MO; } inline void subv(int &amp;x,int y) { x-=y; if(x&lt;0) x+=MO; } inline void mulv(int &amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;1) { mulv(ans,x); } mulv(x,x); n&gt;&gt;=1; } return ans; } Mint template&lt;size_t MO=1000000007&gt; struct Mint { int x; Mint(int x=0):x(x){ norm();
+  </div>
+  
+  <div>
+    <div>
+      <a href="/tpls/ds/leftist/">
+        <h3>[模板][数据结构] 左偏树 Leftist Tree</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
+  <span class="Label Label--gray-darker">数据结构</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E5%B7%A6%E5%81%8F%E6%A0%91' class="muted-link">
+  <span class="Label Label--gray">左偏树</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-09-27
+      </div>
+    </div>
+    左偏树 Leftist Tree // min leftist tree // T must define &lt; // M: the size of the heap template&lt;typename T,size_t M,typename Cmp=less&lt;&gt;&gt; struct Leftist { T val[M]; int l[M],r[M],d[M]; int nn; // number of node Cmp cmp; void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&lt;int&gt; qu; for(int i=1;i&lt;=n;i++) qu.push(i); int u,v; while(qu.size()&gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[++nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;x,int y) // merge tree
+  </div>
+  
+  <div>
+    <div>
+      <a href="/tpls/gt/kruskal/">
+        <h3>[模板][图论] 克鲁斯卡尔 Kruskal</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E5%9B%BE%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray-darker">图论</span>
+</a>
+
+
+
+
+
+<a href='/tags/mst' class="muted-link">
+  <span class="Label Label--gray">MST</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-09-25
+      </div>
+    </div>
+    克鲁斯卡尔 Kruskal template&lt;typename T,size_t V,size_t E&gt; struct Kruskal { typedef tuple&lt;T,int,int&gt; Edge; typedef pair&lt;T,int&gt; PTI; Edge edges[E]; int inmst[E]; int n; // number of vertex int m; // number of edge int uf[V]; int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } void init(int n_) { n=n_; m=0; } void addedge(int u,int v,T w) { edges[m++]={w,u,v}; } PTI solve() { int cnt=n; // number of connected component T sum=0; int u,v; T w; for(int i=0;i&lt;n;i++) uf[i]=i; sort(edges,edges+m); for(int i=0;i&lt;m&amp;&amp;cnt&gt;1;i++) { tie(w,u,v)=edges[i]; u=find(u); v=find(v); if(u==v) continue; inmst[i]=1; sum=sum+w; cnt--; uf[u]=v; } return {sum,cnt==1}; // {totval in mst, ismst} }
+  </div>
+  
+  <div>
+    <div>
+      <a href="/tpls/gt/floyd/">
+        <h3>[模板][图论] 弗洛伊德 Floyd</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E5%9B%BE%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray-darker">图论</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF' class="muted-link">
+  <span class="Label Label--gray">最短路</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-09-25
+      </div>
+    </div>
+    弗洛伊德 Floyd // T must define &lt; and + template&lt;typename T,size_t V,bool Directed=true,T INF=T(0x3f3f3f3f)&gt; struct Floyd { T g[V][V]; int n; void init(int n_) { n=n_; for(int i=0;i&lt;n;i++) for(int j=0;j&lt;n;j++) g[i][j]=INF; } void addedge(int u,int v,T w) // check multi-edges { g[u][v]=w; if(!Directed) g[v][u]=w; } void cmin(T &amp;x,const T &amp;y) { if(y&lt;x) x=y; } void floyd(Upd =upd) { for(int k=0;k&lt;n;k++) for(int i=0;i&lt;n;i++) for(int j=0;j&lt;n;j++) cmin(g[i][j],g[i][k]+g[k][j]); } };
+  </div>
+  
+  <div>
+    <div>
+      <a href="/tpls/ds/unionfind/">
+        <h3>[模板][数据结构] 并查集 Union Find / Disjoint Set Union</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
+  <span class="Label Label--gray-darker">数据结构</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86' class="muted-link">
+  <span class="Label Label--gray">并查集</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-09-24
+      </div>
+    </div>
+    并查集 Union Find / Disjoint Set Union 路径压缩和按 size 合并 Union by Size // M: max number of set // id is in [0~M-1] template&lt;size_t M&gt; struct UF { int uf[M],sz[M]; int n; int ns; // number of set void init(int n_) { n=ns=n_; for(int i=0;i&lt;n;i++) uf[i]=i,sz[i]=1; } int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } bool same(int x,int y) { return find(x)==find(y); } bool merge(int x,int y) { x=find(x); y=find(y); if(x==y) return false; if(sz[x]&gt;sz[y]) swap(x,y); sz[y]+=sz[x]; uf[x]=y; ns--; return true; } }; Debug: void show() { cout&lt;&lt;&#34;UnionFind:----------------------\n&#34;; cout&lt;&lt;&#34;id:&#34;; for(int i=0;i&lt;n;i++) cout&lt;&lt;&#39;\t&#39;&lt;&lt;i; cout&lt;&lt;&#39;\n&#39;;
+  </div>
+  
+  <div>
+    <div>
+      <a href="/tpls/gt/dijkstra/">
+        <h3>[模板][图论] 迪杰斯特拉 Dijkstra</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E5%9B%BE%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray-darker">图论</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF' class="muted-link">
+  <span class="Label Label--gray">最短路</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-09-24
+      </div>
+    </div>
+    迪杰斯特拉 Dijkstra 模板（priority_queue） // T must define &lt; and + // V: max number of vertex [0~V-1] template&lt;typename T,size_t V,bool Directed=true, T INF=T(0x3f3f3f3f),T ZERO=T(0)&gt; struct G { typedef pair&lt;T,int&gt; PTI; vector&lt;PTI&gt; g[V]; T dis[V]; int vis[V]; int n; void init(int n_) { n=n_; for(int i=0;i&lt;n;i++) g[i].clear(); } void addedge(int u,int v,T w) { g[u].emplace_back(w,v); if(!Directed) g[v].emplace_back(w,u); } void dijkstra(int st,int ed=-1) // ed=-1 no destination { for(int i=0;i&lt;n;i++) dis[i]=INF,vis[i]=0; priority_queue&lt;PTI,vector&lt;PTI&gt;,greater&lt;PTI&gt; &gt; qu; dis[st]=ZERO; qu.emplace(ZERO,st); while(!qu.empty()) { PTI p=qu.top(); qu.pop();
+  </div>
+  
+  <div>
+    <div>
+      <a href="/tpls/ds/binaryheap/">
+        <h3>[模板][数据结构] 二叉堆 Binary Heap</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
+  <span class="Label Label--gray-darker">数据结构</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E4%BA%8C%E5%8F%89%E5%A0%86' class="muted-link">
+  <span class="Label Label--gray">二叉堆</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-09-23
+      </div>
+    </div>
+    二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &lt; // min heap // M: max size of heap template&lt;typename T,size_t M,typename Cmp=less&lt;&gt;&gt; struct Heap { T h[M+1]; int n; Cmp cmp; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() { return h[1]; } // check n&gt;=1 int size() { return n; } bool empty() { return n==0;
+  </div>
+  
+  <div>
+    <div>
+      <a href="/sols/leetcode/lcp21/">
+        <h3>[LeetCode] LCP 21. 追逐游戏</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/solutions' class="muted-link">
+  <span class="Label Label--gray-darker">Solutions</span>
+</a>
+
+
+
+
+
+<a href='/ojs/leetcode' class="muted-link">
+  <span class="Label Label--gray-darker">LeetCode</span>
+</a>
+
+
+
+<a href='/tags/bfs' class="muted-link">
+  <span class="Label Label--gray">BFS</span>
+</a>
+
+<a href='/tags/dfs' class="muted-link">
+  <span class="Label Label--gray">DFS</span>
+</a>
+
+<a href='/tags/%E5%9F%BA%E7%8E%AF%E6%A0%91' class="muted-link">
+  <span class="Label Label--gray">基环树</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-09-18
+      </div>
+    </div>
+    LCP 21. 追逐游戏 题目大意 给定一棵 $N$ 个点的基环树（环套树）。给定图上两个起始位置 $A$ 和 $B$ ($A \neq B$)。每一轮 $A$ 先移动，$B$ 后移动。每次移动可以移动到图上当前点的相邻点或者保持不动。任意时刻如果 $A$ 和 $B$ 处在同一位
   </div>
   
 
@@ -459,14 +915,6 @@
         
           <a href="/page/2/">
             2
-          </a>
-        
-          <a href="/page/3/">
-            3
-          </a>
-        
-          <a href="/page/4/">
-            4
           </a>
         
 
@@ -521,17 +969,12 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
-      <span class="text-right Counter">14</span>
-    </span>
-    
-    <span class="css-truncate no-wrap m-1 pl-1">
-      <a href="/categories/%e5%9b%be%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">图论</span></a>
-      <span class="text-right Counter">1</span>
+      <span class="text-right Counter">15</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/%e7%ae%97%e6%b3%95" class="link-gray text-emphasized css-truncate-target"><span class="">算法</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">3</span>
     </span>
     
   </div>
@@ -566,7 +1009,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="link-gray text-emphasized css-truncate-target"><span class="">数据结构</span></a>
-      <span class="text-right Counter">5</span>
+      <span class="text-right Counter">6</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -705,6 +1148,11 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e7%a6%bb%e6%95%a3%e5%8c%96" class="link-gray text-emphasized css-truncate-target"><span class="">离散化</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e7%ba%bf%e6%ae%b5%e6%a0%91" class="link-gray text-emphasized css-truncate-target"><span class="">线段树</span></a>
       <span class="text-right Counter">2</span>
     </span>
@@ -777,6 +1225,11 @@
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-11" class="link-gray text-emphasized css-truncate-target"><span class="">2020 11</span></a>
       <span class="text-right Counter">3</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2021-01" class="link-gray text-emphasized css-truncate-target"><span class="">2021 01</span></a>
+      <span class="text-right Counter">1</span>
     </span>
     
   </div>

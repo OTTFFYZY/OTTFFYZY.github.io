@@ -53,7 +53,7 @@
     
       
       
-      <a class="UnderlineNav-item " href="/categories/templates">
+      <a class="UnderlineNav-item " href="/templates">
         
         <span>Templates</span>
       </a>
@@ -69,7 +69,7 @@
     
       
       
-      <a class="UnderlineNav-item " href="/categories/solutions">
+      <a class="UnderlineNav-item " href="/sols">
         
         <span>Solutions</span>
       </a>
@@ -103,7 +103,7 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
-      <a href="/templates/others/cppmain/">
+      <a href="/tpls/others/cppmain/">
         <div class="h2 mt-1 mb-1">[模板] C&#43;&#43; 日常使用</div>
       </a>
     </div>
@@ -112,6 +112,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E5%85%B6%E4%BB%96' class="muted-link">
+  <span class="Label Label--gray-darker">其他</span>
 </a>
 
 
@@ -129,7 +135,7 @@
   <div class="text-gray">
     
     C++ 日常使用 // #include &lt;bits/stdc++.h&gt; #include &lt;cstdio&gt; #include &lt;cstring&gt; #include &lt;cstdlib&gt; #include &lt;climits&gt; #include &lt;cmath&gt; #include &lt;iostream&gt; #include &lt;iomanip&gt; #include &lt;string&gt; #include &lt;algorithm&gt; #include &lt;numeric&gt; #include &lt;utility&gt; #include &lt;functional&gt; #include &lt;vector&gt; #include &lt;list&gt; #include &lt;stack&gt; #include &lt;queue&gt; #include &lt;deque&gt; #include &lt;set&gt; #include &lt;map&gt; #include &lt;bitset&gt; #include &lt;complex&gt; #include &lt;random&gt; #include &lt;chrono&gt; #include &lt;array&gt; #include &lt;unordered_set&gt; #include &lt;unordered_map&gt; #include &lt;tuple&gt; using namespace std; using LL = long long; using ULL = unsigned long long; using LD = long double; using PII = pair&lt;int,int&gt;; using VI = vector&lt;int&gt;; using MII = map&lt;int,int&gt;; template&lt;typename T&gt; void cmin(T &amp;x,const T &amp;y)
-    <a class="muted-link" href="/templates/others/cppmain/">…</a>
+    <a class="muted-link" href="/tpls/others/cppmain/">…</a>
   </div>
 </div>
 
@@ -149,6 +155,8 @@
 <a href='/categories/summaries' class="muted-link">
   <span class="Label Label--gray-darker">Summaries</span>
 </a>
+
+
 
 
 
@@ -179,7 +187,7 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
-      <a href="/templates/hash/safehash/">
+      <a href="/tpls/hash/safehash/">
         <div class="h2 mt-1 mb-1">[模板][Hash] 安全哈希函数</div>
       </a>
     </div>
@@ -188,6 +196,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/hash' class="muted-link">
+  <span class="Label Label--gray-darker">Hash</span>
 </a>
 
 
@@ -209,7 +223,7 @@
   <div class="text-gray">
     
     安全哈希函数 struct custom_hash { static uint64_t splitmix64(uint64_t x) { // http://xorshift.di.unimi.it/splitmix64.c x += 0x9e3779b97f4a7c15; x = (x ^ (x &gt;&gt; 30)) * 0xbf58476d1ce4e5b9; x = (x ^ (x &gt;&gt; 27)) * 0x94d049bb133111eb; return x ^ (x &gt;&gt; 31); } size_t operator()(uint64_t x) const { static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count(); return splitmix64(x + FIXED_RANDOM); } }; 用这个函数作为 unordered_set 的第二个参数或 unordered_map 的第三个参数。
-    <a class="muted-link" href="/templates/hash/safehash/">…</a>
+    <a class="muted-link" href="/tpls/hash/safehash/">…</a>
   </div>
 </div>
 
@@ -219,7 +233,7 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
-      <a href="/templates/nt/mod/">
+      <a href="/tpls/nt/mod/">
         <div class="h2 mt-1 mb-1">[模板][数论] 模下计算</div>
       </a>
     </div>
@@ -228,6 +242,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray-darker">数论</span>
 </a>
 
 
@@ -249,7 +269,7 @@
   <div class="text-gray">
     
     模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;x,int y) { x+=y; if(x&gt;=MO) x-=MO; } inline void subv(int &amp;x,int y) { x-=y; if(x&lt;0) x+=MO; } inline void mulv(int &amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;1) { mulv(ans,x); } mulv(x,x); n&gt;&gt;=1; } return ans; } Mint template&lt;size_t MO=1000000007&gt; struct Mint { int x; Mint(int x=0):x(x){ norm();
-    <a class="muted-link" href="/templates/nt/mod/">…</a>
+    <a class="muted-link" href="/tpls/nt/mod/">…</a>
   </div>
 </div>
 
@@ -259,7 +279,7 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
-      <a href="/templates/ds/leftist/">
+      <a href="/tpls/ds/leftist/">
         <div class="h2 mt-1 mb-1">[模板][数据结构] 左偏树 Leftist Tree</div>
       </a>
     </div>
@@ -268,6 +288,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
+  <span class="Label Label--gray-darker">数据结构</span>
 </a>
 
 
@@ -289,7 +315,7 @@
   <div class="text-gray">
     
     左偏树 Leftist Tree // min leftist tree // T must define &lt; // M: the size of the heap template&lt;typename T,size_t M,typename Cmp=less&lt;&gt;&gt; struct Leftist { T val[M]; int l[M],r[M],d[M]; int nn; // number of node Cmp cmp; void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&lt;int&gt; qu; for(int i=1;i&lt;=n;i++) qu.push(i); int u,v; while(qu.size()&gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[++nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;x,int y) // merge tree
-    <a class="muted-link" href="/templates/ds/leftist/">…</a>
+    <a class="muted-link" href="/tpls/ds/leftist/">…</a>
   </div>
 </div>
 
@@ -299,7 +325,7 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
-      <a href="/templates/gt/kruskal/">
+      <a href="/tpls/gt/kruskal/">
         <div class="h2 mt-1 mb-1">[模板][图论] 克鲁斯卡尔 Kruskal</div>
       </a>
     </div>
@@ -308,6 +334,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E5%9B%BE%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray-darker">图论</span>
 </a>
 
 
@@ -329,7 +361,7 @@
   <div class="text-gray">
     
     克鲁斯卡尔 Kruskal template&lt;typename T,size_t V,size_t E&gt; struct Kruskal { typedef tuple&lt;T,int,int&gt; Edge; typedef pair&lt;T,int&gt; PTI; Edge edges[E]; int inmst[E]; int n; // number of vertex int m; // number of edge int uf[V]; int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } void init(int n_) { n=n_; m=0; } void addedge(int u,int v,T w) { edges[m++]={w,u,v}; } PTI solve() { int cnt=n; // number of connected component T sum=0; int u,v; T w; for(int i=0;i&lt;n;i++) uf[i]=i; sort(edges,edges+m); for(int i=0;i&lt;m&amp;&amp;cnt&gt;1;i++) { tie(w,u,v)=edges[i]; u=find(u); v=find(v); if(u==v) continue; inmst[i]=1; sum=sum+w; cnt--; uf[u]=v; } return {sum,cnt==1}; // {totval in mst, ismst} }
-    <a class="muted-link" href="/templates/gt/kruskal/">…</a>
+    <a class="muted-link" href="/tpls/gt/kruskal/">…</a>
   </div>
 </div>
 
@@ -339,7 +371,7 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
-      <a href="/templates/gt/floyd/">
+      <a href="/tpls/gt/floyd/">
         <div class="h2 mt-1 mb-1">[模板][图论] 弗洛伊德 Floyd</div>
       </a>
     </div>
@@ -348,6 +380,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E5%9B%BE%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray-darker">图论</span>
 </a>
 
 
@@ -369,7 +407,7 @@
   <div class="text-gray">
     
     弗洛伊德 Floyd // T must define &lt; and + template&lt;typename T,size_t V,bool Directed=true,T INF=T(0x3f3f3f3f)&gt; struct Floyd { T g[V][V]; int n; void init(int n_) { n=n_; for(int i=0;i&lt;n;i++) for(int j=0;j&lt;n;j++) g[i][j]=INF; } void addedge(int u,int v,T w) // check multi-edges { g[u][v]=w; if(!Directed) g[v][u]=w; } void cmin(T &amp;x,const T &amp;y) { if(y&lt;x) x=y; } void floyd(Upd =upd) { for(int k=0;k&lt;n;k++) for(int i=0;i&lt;n;i++) for(int j=0;j&lt;n;j++) cmin(g[i][j],g[i][k]+g[k][j]); } };
-    <a class="muted-link" href="/templates/gt/floyd/">…</a>
+    <a class="muted-link" href="/tpls/gt/floyd/">…</a>
   </div>
 </div>
 
@@ -379,7 +417,7 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
-      <a href="/templates/ds/unionfind/">
+      <a href="/tpls/ds/unionfind/">
         <div class="h2 mt-1 mb-1">[模板][数据结构] 并查集 Union Find / Disjoint Set Union</div>
       </a>
     </div>
@@ -388,6 +426,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
+  <span class="Label Label--gray-darker">数据结构</span>
 </a>
 
 
@@ -409,7 +453,7 @@
   <div class="text-gray">
     
     并查集 Union Find / Disjoint Set Union 路径压缩和按 size 合并 Union by Size // M: max number of set // id is in [0~M-1] template&lt;size_t M&gt; struct UF { int uf[M],sz[M]; int n; int ns; // number of set void init(int n_) { n=ns=n_; for(int i=0;i&lt;n;i++) uf[i]=i,sz[i]=1; } int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } bool same(int x,int y) { return find(x)==find(y); } bool merge(int x,int y) { x=find(x); y=find(y); if(x==y) return false; if(sz[x]&gt;sz[y]) swap(x,y); sz[y]+=sz[x]; uf[x]=y; ns--; return true; } }; Debug: void show() { cout&lt;&lt;&#34;UnionFind:----------------------\n&#34;; cout&lt;&lt;&#34;id:&#34;; for(int i=0;i&lt;n;i++) cout&lt;&lt;&#39;\t&#39;&lt;&lt;i; cout&lt;&lt;&#39;\n&#39;;
-    <a class="muted-link" href="/templates/ds/unionfind/">…</a>
+    <a class="muted-link" href="/tpls/ds/unionfind/">…</a>
   </div>
 </div>
 
@@ -419,7 +463,7 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
-      <a href="/templates/gt/dijkstra/">
+      <a href="/tpls/gt/dijkstra/">
         <div class="h2 mt-1 mb-1">[模板][图论] 迪杰斯特拉 Dijkstra</div>
       </a>
     </div>
@@ -428,6 +472,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E5%9B%BE%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray-darker">图论</span>
 </a>
 
 
@@ -449,7 +499,7 @@
   <div class="text-gray">
     
     迪杰斯特拉 Dijkstra 模板（priority_queue） // T must define &lt; and + // V: max number of vertex [0~V-1] template&lt;typename T,size_t V,bool Directed=true, T INF=T(0x3f3f3f3f),T ZERO=T(0)&gt; struct G { typedef pair&lt;T,int&gt; PTI; vector&lt;PTI&gt; g[V]; T dis[V]; int vis[V]; int n; void init(int n_) { n=n_; for(int i=0;i&lt;n;i++) g[i].clear(); } void addedge(int u,int v,T w) { g[u].emplace_back(w,v); if(!Directed) g[v].emplace_back(w,u); } void dijkstra(int st,int ed=-1) // ed=-1 no destination { for(int i=0;i&lt;n;i++) dis[i]=INF,vis[i]=0; priority_queue&lt;PTI,vector&lt;PTI&gt;,greater&lt;PTI&gt; &gt; qu; dis[st]=ZERO; qu.emplace(ZERO,st); while(!qu.empty()) { PTI p=qu.top(); qu.pop();
-    <a class="muted-link" href="/templates/gt/dijkstra/">…</a>
+    <a class="muted-link" href="/tpls/gt/dijkstra/">…</a>
   </div>
 </div>
 
@@ -459,7 +509,7 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
-      <a href="/templates/ds/binaryheap/">
+      <a href="/tpls/ds/binaryheap/">
         <div class="h2 mt-1 mb-1">[模板][数据结构] 二叉堆 Binary Heap</div>
       </a>
     </div>
@@ -468,6 +518,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
+  <span class="Label Label--gray-darker">数据结构</span>
 </a>
 
 
@@ -488,8 +544,464 @@
   </div>
   <div class="text-gray">
     
-    二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &lt; // min heap // M: max size of heap template&lt;typename T,size_t M,typename Cmp=less&lt;&gt;&gt; struct Heap { T h[M+1]; int n; Cmp cmp; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() // check n&gt;=1 { return h[1]; } int size() { return n; } bool empty() { return n==0;
-    <a class="muted-link" href="/templates/ds/binaryheap/">…</a>
+    二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &lt; // min heap // M: max size of heap template&lt;typename T,size_t M,typename Cmp=less&lt;&gt;&gt; struct Heap { T h[M+1]; int n; Cmp cmp; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() { return h[1]; } // check n&gt;=1 int size() { return n; } bool empty() { return n==0;
+    <a class="muted-link" href="/tpls/ds/binaryheap/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
+      <a href="/sols/leetcode/lcp21/">
+        <div class="h2 mt-1 mb-1">[LeetCode] LCP 21. 追逐游戏</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/solutions' class="muted-link">
+  <span class="Label Label--gray-darker">Solutions</span>
+</a>
+
+
+
+
+
+<a href='/ojs/leetcode' class="muted-link">
+  <span class="Label Label--gray-darker">LeetCode</span>
+</a>
+
+
+
+<a href='/tags/bfs' class="muted-link">
+  <span class="Label Label--gray">BFS</span>
+</a>
+
+<a href='/tags/dfs' class="muted-link">
+  <span class="Label Label--gray">DFS</span>
+</a>
+
+<a href='/tags/%E5%9F%BA%E7%8E%AF%E6%A0%91' class="muted-link">
+  <span class="Label Label--gray">基环树</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        <span>2020-09-18</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    LCP 21. 追逐游戏 题目大意 给定一棵 $N$ 个点的基环树（环套树）。给定图上两个起始位置 $A$ 和 $B$ ($A \neq B$)。每一轮 $A$ 先移动，$B$ 后移动。每次移动可以移动到图上当前点的相邻点或者保持不动。任意时刻如果 $A$ 和 $B$ 处在同一位
+    <a class="muted-link" href="/sols/leetcode/lcp21/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
+      <a href="/notes/probabilitysrp4e/c1/">
+        <div class="h2 mt-1 mb-1">《概率、统计与随机过程》 笔记 第 1 章 概率论导论</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/%E6%A6%82%E7%8E%87%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray">概率论</span>
+</a>
+
+
+      <div class="float-md-right">
+        <span>2020-09-15</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    第 1 章 概率论导论 1.2 概率的不同类型 直观概率：基于直观来处理判断 古典概率：事件概率不是实验性的，通过预先计算事件 $E$ 可能发生的次数 $n_E$ 形成一个比值 $n_E / n$ 其中 $n$ 是所有可能的结果。此时需要所有的结果是等可能的。 古
+    <a class="muted-link" href="/notes/probabilitysrp4e/c1/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
+      <a href="/notes/effectivecpp/c1/">
+        <div class="h2 mt-1 mb-1">《Effective C&#43;&#43;》 笔记 1. 让自己习惯 C&#43;&#43;</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/effective-cpp' class="muted-link">
+  <span class="Label Label--gray">Effective Cpp</span>
+</a>
+
+
+      <div class="float-md-right">
+        <span>2020-09-13</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    1. 让自己习惯 C++ 条款 01：视 C++ 为一个语言联邦 C++ 是一个多重泛型编程语言（multiparadigm programming language）。 C++ 同时支持过程（procedural）形式、面向对象（object-oriented
+    <a class="muted-link" href="/notes/effectivecpp/c1/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
+      <a href="/notes/assemblylanguage/e1/">
+        <div class="h2 mt-1 mb-1">《汇编语言》 笔记  实验 1 查看 CPU 和内存，用机器指令和汇编指令编程</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80' class="muted-link">
+  <span class="Label Label--gray">汇编语言</span>
+</a>
+
+
+      <div class="float-md-right">
+        <span>2020-09-10</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    实验 1 查看 CPU 和内存，用机器指令和汇编指令编程 想在 win10 上玩这个需要自己下载 DOSBox 和 debug.exe。 之后用 DOSBox 运行 debug 即可开始书中的实验。 R 命令：查看、修改寄存器 进入 debug 模式后输入 $r$ 回车后可以查看 CPU 寄存器内容。 输
+    <a class="muted-link" href="/notes/assemblylanguage/e1/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
+      <a href="/sols/luogu/p4588/">
+        <div class="h2 mt-1 mb-1">[Luogu] P4588 [TJOI2018]数学计算</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/solutions' class="muted-link">
+  <span class="Label Label--gray-darker">Solutions</span>
+</a>
+
+
+
+
+
+<a href='/ojs/luogu' class="muted-link">
+  <span class="Label Label--gray-darker">Luogu</span>
+</a>
+
+
+
+<a href='/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91' class="muted-link">
+  <span class="Label Label--gray">线段树</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        <span>2020-09-09</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    P4588 [TJOI2018]数学计算 题目大意 给定 $x = 1$ 和某个模数 $MO$，有两种操作（共 $Q \le 10^5$ 次） 操作 $1$：把 $x = x*v % MO$ 操作 $2$：取消第 $k$ 次操作（取消的必为操作 $1$，且某个操作 $1$ 只会最多被取消一次） 每
+    <a class="muted-link" href="/sols/luogu/p4588/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
+      <a href="/notes/assemblylanguage/c2/">
+        <div class="h2 mt-1 mb-1">《汇编语言》 笔记 第 2 章 寄存器</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80' class="muted-link">
+  <span class="Label Label--gray">汇编语言</span>
+</a>
+
+
+      <div class="float-md-right">
+        <span>2020-09-08</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    第 2 章 寄存器 在 CPU 中： 运算器处理信息 寄存器储存信息 控制器控制各种器件 内部总线连接各种器件，在他们之间传输数据 对汇编程序员最重要的部件就是寄存器，寄存器是程序员可以用指令读写的部件，程序员通过改变寄存器中
+    <a class="muted-link" href="/notes/assemblylanguage/c2/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
+      <a href="/notes/assemblylanguage/c1/">
+        <div class="h2 mt-1 mb-1">《汇编语言》 笔记 第 1 章 基础知识</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80' class="muted-link">
+  <span class="Label Label--gray">汇编语言</span>
+</a>
+
+
+      <div class="float-md-right">
+        <span>2020-09-08</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    第 1 章 基础知识 1.1 机器语言 CPU 提供机器指令集也就是机器语言。 早期卡片打孔就是使用的机器语言。 机器语言难于书写阅读查错于是产生了汇编语言 1.2 汇编语言的产生 汇编语言的主题是汇编指令。汇编指令采用了更便于人类书写
+    <a class="muted-link" href="/notes/assemblylanguage/c1/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
+      <a href="/sols/atcoder/abc176/e/">
+        <div class="h2 mt-1 mb-1">[AtCoder] Beginner Contest 176 E - Bomber</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/solutions' class="muted-link">
+  <span class="Label Label--gray-darker">Solutions</span>
+</a>
+
+
+
+
+
+<a href='/ojs/atcoder' class="muted-link">
+  <span class="Label Label--gray-darker">Atcoder</span>
+</a>
+
+
+
+<a href='/tags/%E8%B4%AA%E5%BF%83' class="muted-link">
+  <span class="Label Label--gray">贪心</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        <span>2020-09-08</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    E - Bomber 题目大意 给出一个 $H \times W$ 的矩阵，上面有 $M$ 个点，选出一行一列使得覆盖到的点最多。问最多是多少。 其中 $H,W,M &lt;= 3 \times 10^5$ 简要题解 注意到一定会贪心的选某个数量最多的行和列。设其行列数量分别 $mx$，$my$，则答
+    <a class="muted-link" href="/sols/atcoder/abc176/e/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
+      <a href="/sols/leetcode/p1575/">
+        <div class="h2 mt-1 mb-1">[LeetCode] 1575. Count All Possible Routes</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/solutions' class="muted-link">
+  <span class="Label Label--gray-darker">Solutions</span>
+</a>
+
+
+
+
+
+<a href='/ojs/leetcode' class="muted-link">
+  <span class="Label Label--gray-darker">LeetCode</span>
+</a>
+
+
+
+<a href='/tags/dp' class="muted-link">
+  <span class="Label Label--gray">DP</span>
+</a>
+
+<a href='/tags/dp%E4%BC%98%E5%8C%96' class="muted-link">
+  <span class="Label Label--gray">DP优化</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        <span>2020-09-07</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    1575. Count All Possible Routes 题目大意 给定一些不同的位置 $(N \le 100)$，给定起点和终点位置的标号，给定起始油量 $(F \le 200)$。 每次可以选择从当前位置走到任意其他位置花费每单位距离 $1$ 单位油。油量不能为负。 问，从起点到终点总
+    <a class="muted-link" href="/sols/leetcode/p1575/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
+      <a href="/sols/atcoder/abc177/e/">
+        <div class="h2 mt-1 mb-1">[AtCoder] Beginner Contest 177 E - Coprime</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/solutions' class="muted-link">
+  <span class="Label Label--gray-darker">Solutions</span>
+</a>
+
+
+
+
+
+<a href='/ojs/atcoder' class="muted-link">
+  <span class="Label Label--gray-darker">Atcoder</span>
+</a>
+
+
+
+<a href='/tags/%E6%95%B0%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray">数论</span>
+</a>
+
+<a href='/tags/%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3' class="muted-link">
+  <span class="Label Label--gray">质因数分解</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        <span>2020-09-05</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    E - Coprime 题目大意 给出数组 $A$ 如果其中数字两两互质则返回 “pairwise coprime”，如果整个数组 $gcd$ 为 $1$ 则返回 “setwise coprime”，其他情况返回 “not coprime” 简要题解 显然 setwise 很好判
+    <a class="muted-link" href="/sols/atcoder/abc177/e/">…</a>
   </div>
 </div>
 
@@ -530,20 +1042,6 @@
             
               
               <a href="/archives/2020-09/page/2/">2</a>
-            
-          
-      
-          
-          
-          
-          
-              
-              
-          
-          
-            
-              
-              <a href="/archives/2020-09/page/3/">3</a>
             
           
       
@@ -600,17 +1098,12 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
-      <span class="text-right Counter">14</span>
-    </span>
-    
-    <span class="css-truncate no-wrap m-1 pl-1">
-      <a href="/categories/%e5%9b%be%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">图论</span></a>
-      <span class="text-right Counter">1</span>
+      <span class="text-right Counter">15</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/%e7%ae%97%e6%b3%95" class="link-gray text-emphasized css-truncate-target"><span class="">算法</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">3</span>
     </span>
     
   </div>
@@ -645,7 +1138,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="link-gray text-emphasized css-truncate-target"><span class="">数据结构</span></a>
-      <span class="text-right Counter">5</span>
+      <span class="text-right Counter">6</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -784,6 +1277,11 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e7%a6%bb%e6%95%a3%e5%8c%96" class="link-gray text-emphasized css-truncate-target"><span class="">离散化</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e7%ba%bf%e6%ae%b5%e6%a0%91" class="link-gray text-emphasized css-truncate-target"><span class="">线段树</span></a>
       <span class="text-right Counter">2</span>
     </span>
@@ -856,6 +1354,11 @@
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-11" class="link-gray text-emphasized css-truncate-target"><span class="">2020 11</span></a>
       <span class="text-right Counter">3</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2021-01" class="link-gray text-emphasized css-truncate-target"><span class="">2021 01</span></a>
+      <span class="text-right Counter">1</span>
     </span>
     
   </div>

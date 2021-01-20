@@ -53,7 +53,7 @@
     
       
       
-      <a class="UnderlineNav-item " href="/categories/templates">
+      <a class="UnderlineNav-item " href="/templates">
         
         <span>Templates</span>
       </a>
@@ -69,7 +69,7 @@
     
       
       
-      <a class="UnderlineNav-item " href="/categories/solutions">
+      <a class="UnderlineNav-item " href="/sols">
         
         <span>Solutions</span>
       </a>
@@ -103,7 +103,7 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
-      <a href="/templates/ds/binaryheap/">
+      <a href="/tpls/ds/binaryheap/">
         <div class="h2 mt-1 mb-1">[模板][数据结构] 二叉堆 Binary Heap</div>
       </a>
     </div>
@@ -112,6 +112,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
+  <span class="Label Label--gray-darker">数据结构</span>
 </a>
 
 
@@ -132,8 +138,8 @@
   </div>
   <div class="text-gray">
     
-    二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &lt; // min heap // M: max size of heap template&lt;typename T,size_t M,typename Cmp=less&lt;&gt;&gt; struct Heap { T h[M+1]; int n; Cmp cmp; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() // check n&gt;=1 { return h[1]; } int size() { return n; } bool empty() { return n==0;
-    <a class="muted-link" href="/templates/ds/binaryheap/">…</a>
+    二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &lt; // min heap // M: max size of heap template&lt;typename T,size_t M,typename Cmp=less&lt;&gt;&gt; struct Heap { T h[M+1]; int n; Cmp cmp; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() { return h[1]; } // check n&gt;=1 int size() { return n; } bool empty() { return n==0;
+    <a class="muted-link" href="/tpls/ds/binaryheap/">…</a>
   </div>
 </div>
 
@@ -187,17 +193,12 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
-      <span class="text-right Counter">14</span>
-    </span>
-    
-    <span class="css-truncate no-wrap m-1 pl-1">
-      <a href="/categories/%e5%9b%be%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">图论</span></a>
-      <span class="text-right Counter">1</span>
+      <span class="text-right Counter">15</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/%e7%ae%97%e6%b3%95" class="link-gray text-emphasized css-truncate-target"><span class="">算法</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">3</span>
     </span>
     
   </div>
@@ -232,7 +233,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="link-gray text-emphasized css-truncate-target"><span class="">数据结构</span></a>
-      <span class="text-right Counter">5</span>
+      <span class="text-right Counter">6</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -371,6 +372,11 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e7%a6%bb%e6%95%a3%e5%8c%96" class="link-gray text-emphasized css-truncate-target"><span class="">离散化</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e7%ba%bf%e6%ae%b5%e6%a0%91" class="link-gray text-emphasized css-truncate-target"><span class="">线段树</span></a>
       <span class="text-right Counter">2</span>
     </span>
@@ -443,6 +449,11 @@
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-11" class="link-gray text-emphasized css-truncate-target"><span class="">2020 11</span></a>
       <span class="text-right Counter">3</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2021-01" class="link-gray text-emphasized css-truncate-target"><span class="">2021 01</span></a>
+      <span class="text-right Counter">1</span>
     </span>
     
   </div>

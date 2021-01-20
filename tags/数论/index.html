@@ -53,7 +53,7 @@
     
       
       
-      <a class="UnderlineNav-item " href="/categories/templates">
+      <a class="UnderlineNav-item " href="/templates">
         
         <span>Templates</span>
       </a>
@@ -69,7 +69,7 @@
     
       
       
-      <a class="UnderlineNav-item " href="/categories/solutions">
+      <a class="UnderlineNav-item " href="/sols">
         
         <span>Solutions</span>
       </a>
@@ -103,7 +103,7 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
-      <a href="/templates/nt/exgcd/">
+      <a href="/tpls/nt/exgcd/">
         <div class="h2 mt-1 mb-1">[模板][数论] 扩展欧几里得算法（ExGCD）</div>
       </a>
     </div>
@@ -112,6 +112,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray-darker">数论</span>
 </a>
 
 
@@ -137,7 +143,7 @@
   <div class="text-gray">
     
     扩展欧几里得算法（ExGCD） // ax+by=gcd(a,b)=g // check a&gt;0 b&gt;0 // if a != b, |x|&lt;b, |y|&lt;a template&lt;typename T&gt; void exgcd(T a,T b,T &amp;g,T &amp;x,T &amp;y) { if(!b) { g=a; x=1; y=0; } else { exgcd(b,a%b,g,y,x); y-=a/b*x; } } 求逆元 template&lt;typename T&gt; void exgcd(T a,T b,T &amp;g,T &amp;x,T &amp;y) { if(!b) { g=a; x=1; y=0; } else { exgcd(b,a%b,g,y,x); y-=a/b*x; } } template&lt;typename T&gt; T inv(T a,T m) { T g,x,y; exgcd(a,m,g,x,y); if(g!=1) return -1; // no inverse element if(x&lt;0) x+=m; return x; } 不定方
-    <a class="muted-link" href="/templates/nt/exgcd/">…</a>
+    <a class="muted-link" href="/tpls/nt/exgcd/">…</a>
   </div>
 </div>
 
@@ -157,6 +163,8 @@
 <a href='/categories/%E7%AE%97%E6%B3%95' class="muted-link">
   <span class="Label Label--gray-darker">算法</span>
 </a>
+
+
 
 
 
@@ -206,6 +214,8 @@
 
 
 
+
+
 <a href='/tags/%E6%95%B0%E8%AE%BA' class="muted-link">
   <span class="Label Label--gray">数论</span>
 </a>
@@ -235,7 +245,7 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
-      <a href="/templates/nt/mod/">
+      <a href="/tpls/nt/mod/">
         <div class="h2 mt-1 mb-1">[模板][数论] 模下计算</div>
       </a>
     </div>
@@ -244,6 +254,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray-darker">数论</span>
 </a>
 
 
@@ -265,7 +281,7 @@
   <div class="text-gray">
     
     模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;x,int y) { x+=y; if(x&gt;=MO) x-=MO; } inline void subv(int &amp;x,int y) { x-=y; if(x&lt;0) x+=MO; } inline void mulv(int &amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;1) { mulv(ans,x); } mulv(x,x); n&gt;&gt;=1; } return ans; } Mint template&lt;size_t MO=1000000007&gt; struct Mint { int x; Mint(int x=0):x(x){ norm();
-    <a class="muted-link" href="/templates/nt/mod/">…</a>
+    <a class="muted-link" href="/tpls/nt/mod/">…</a>
   </div>
 </div>
 
@@ -285,6 +301,8 @@
 <a href='/categories/solutions' class="muted-link">
   <span class="Label Label--gray-darker">Solutions</span>
 </a>
+
+
 
 
 
@@ -367,17 +385,12 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
-      <span class="text-right Counter">14</span>
-    </span>
-    
-    <span class="css-truncate no-wrap m-1 pl-1">
-      <a href="/categories/%e5%9b%be%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">图论</span></a>
-      <span class="text-right Counter">1</span>
+      <span class="text-right Counter">15</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/%e7%ae%97%e6%b3%95" class="link-gray text-emphasized css-truncate-target"><span class="">算法</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">3</span>
     </span>
     
   </div>
@@ -412,7 +425,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="link-gray text-emphasized css-truncate-target"><span class="">数据结构</span></a>
-      <span class="text-right Counter">5</span>
+      <span class="text-right Counter">6</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -551,6 +564,11 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e7%a6%bb%e6%95%a3%e5%8c%96" class="link-gray text-emphasized css-truncate-target"><span class="">离散化</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e7%ba%bf%e6%ae%b5%e6%a0%91" class="link-gray text-emphasized css-truncate-target"><span class="">线段树</span></a>
       <span class="text-right Counter">2</span>
     </span>
@@ -623,6 +641,11 @@
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-11" class="link-gray text-emphasized css-truncate-target"><span class="">2020 11</span></a>
       <span class="text-right Counter">3</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2021-01" class="link-gray text-emphasized css-truncate-target"><span class="">2021 01</span></a>
+      <span class="text-right Counter">1</span>
     </span>
     
   </div>

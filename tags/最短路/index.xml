@@ -22,19 +22,19 @@
     
     <item>
       <title>[模板][图论] 弗洛伊德 Floyd</title>
-      <link>https://ottffyzy.github.io/templates/gt/floyd/</link>
+      <link>https://ottffyzy.github.io/tpls/gt/floyd/</link>
       <pubDate>Fri, 25 Sep 2020 15:07:23 -0400</pubDate>
       
-      <guid>https://ottffyzy.github.io/templates/gt/floyd/</guid>
+      <guid>https://ottffyzy.github.io/tpls/gt/floyd/</guid>
       <description>弗洛伊德 Floyd // T must define &amp;lt; and + template&amp;lt;typename T,size_t V,bool Directed=true,T INF=T(0x3f3f3f3f)&amp;gt; struct Floyd { T g[V][V]; int n; void init(int n_) { n=n_; for(int i=0;i&amp;lt;n;i++) for(int j=0;j&amp;lt;n;j++) g[i][j]=INF; } void addedge(int u,int v,T w) // check multi-edges { g[u][v]=w; if(!Directed) g[v][u]=w; } void cmin(T &amp;amp;x,const T &amp;amp;y) { if(y&amp;lt;x) x=y; } void floyd(Upd =upd) { for(int k=0;k&amp;lt;n;k++) for(int i=0;i&amp;lt;n;i++) for(int j=0;j&amp;lt;n;j++) cmin(g[i][j],g[i][k]+g[k][j]); } };</description>
     </item>
     
     <item>
       <title>[模板][图论] 迪杰斯特拉 Dijkstra</title>
-      <link>https://ottffyzy.github.io/templates/gt/dijkstra/</link>
+      <link>https://ottffyzy.github.io/tpls/gt/dijkstra/</link>
       <pubDate>Thu, 24 Sep 2020 19:10:04 -0400</pubDate>
       
-      <guid>https://ottffyzy.github.io/templates/gt/dijkstra/</guid>
+      <guid>https://ottffyzy.github.io/tpls/gt/dijkstra/</guid>
       <description>迪杰斯特拉 Dijkstra 模板（priority_queue） // T must define &amp;lt; and + // V: max number of vertex [0~V-1] template&amp;lt;typename T,size_t V,bool Directed=true, T INF=T(0x3f3f3f3f),T ZERO=T(0)&amp;gt; struct G { typedef pair&amp;lt;T,int&amp;gt; PTI; vector&amp;lt;PTI&amp;gt; g[V]; T dis[V]; int vis[V]; int n; void init(int n_) { n=n_; for(int i=0;i&amp;lt;n;i++) g[i].clear(); } void addedge(int u,int v,T w) { g[u].emplace_back(w,v); if(!Directed) g[v].emplace_back(w,u); } void dijkstra(int st,int ed=-1) // ed=-1 no destination { for(int i=0;i&amp;lt;n;i++) dis[i]=INF,vis[i]=0; priority_queue&amp;lt;PTI,vector&amp;lt;PTI&amp;gt;,greater&amp;lt;PTI&amp;gt; &amp;gt; qu; dis[st]=ZERO; qu.emplace(ZERO,st); while(!qu.empty()) { PTI p=qu.top(); qu.pop();</description>
     </item>
     

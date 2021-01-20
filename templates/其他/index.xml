@@ -13,28 +13,28 @@
     
     <item>
       <title>[模板] 对拍程序</title>
-      <link>https://ottffyzy.github.io/templates/others/checker/</link>
+      <link>https://ottffyzy.github.io/tpls/others/checker/</link>
       <pubDate>Tue, 20 Oct 2020 00:10:35 -0400</pubDate>
       
-      <guid>https://ottffyzy.github.io/templates/others/checker/</guid>
+      <guid>https://ottffyzy.github.io/tpls/others/checker/</guid>
       <description>对拍程序 from os import system tc=0 while True: system(&amp;#34;python data.py &amp;gt; data.in&amp;#34;) system(&amp;#34;std.exe &amp;lt; data.in &amp;gt; std.out&amp;#34;) system(&amp;#34;my.exe &amp;lt; data.in &amp;gt; my.out&amp;#34;) # system(&amp;#34;diff std.out my.out &amp;gt; diff.out&amp;#34;): if system(&amp;#34;fc std.out my.out &amp;gt; diff.out&amp;#34;): print(&amp;#34;WA&amp;#34;) break else: tc += 1 print(&amp;#34;AC #%d&amp;#34;%tc) print(&amp;#34;-------------------- data.in --------------------&amp;#34;) # system(&amp;#34;cat data.in&amp;#34;) system(&amp;#34;type data.in&amp;#34;) print(&amp;#34;-------------------- std.out --------------------&amp;#34;) system(&amp;#34;type std.out&amp;#34;) print(&amp;#34;-------------------- my.out ---------------------&amp;#34;) system(&amp;#34;type my.out&amp;#34;) #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; int main() { int tc=0; while(1) { system(&amp;#34;data.exe &amp;gt; data.in&amp;#34;); // system(&amp;#34;python data.py &amp;gt; data.in&amp;#34;); system(&amp;#34;std.exe &amp;lt; data.in &amp;gt; std.out&amp;#34;); system(&amp;#34;my.exe &amp;lt; data.in &amp;gt; my.out&amp;#34;); // system(&amp;#34;diff std.out my.out &amp;gt; diff.out&amp;#34;): if(system(&amp;#34;fc</description>
     </item>
     
     <item>
       <title>[模板] 计时 Timing</title>
-      <link>https://ottffyzy.github.io/templates/others/timing/</link>
+      <link>https://ottffyzy.github.io/tpls/others/timing/</link>
       <pubDate>Thu, 01 Oct 2020 00:08:34 -0400</pubDate>
       
-      <guid>https://ottffyzy.github.io/templates/others/timing/</guid>
+      <guid>https://ottffyzy.github.io/tpls/others/timing/</guid>
       <description>计时 Timing chrono class Timing { private: typedef chrono::time_point&amp;lt;std::chrono::high_resolution_clock&amp;gt; TP; TP current_time() { return chrono::high_resolution_clock::now(); } TP st,ed; public: void start() { st=current_time(); } void end() { ed=current_time(); } void print() { cout&amp;lt;&amp;lt;chrono::duration_cast&amp;lt;chrono::microseconds&amp;gt;(ed-st).count() &amp;lt;&amp;lt;&amp;#34;ms\n&amp;#34;; } }timing;</description>
     </item>
     
     <item>
       <title>[模板] C&#43;&#43; 日常使用</title>
-      <link>https://ottffyzy.github.io/templates/others/cppmain/</link>
+      <link>https://ottffyzy.github.io/tpls/others/cppmain/</link>
       <pubDate>Tue, 29 Sep 2020 14:34:12 -0400</pubDate>
       
-      <guid>https://ottffyzy.github.io/templates/others/cppmain/</guid>
+      <guid>https://ottffyzy.github.io/tpls/others/cppmain/</guid>
       <description>C++ 日常使用 // #include &amp;lt;bits/stdc++.h&amp;gt; #include &amp;lt;cstdio&amp;gt; #include &amp;lt;cstring&amp;gt; #include &amp;lt;cstdlib&amp;gt; #include &amp;lt;climits&amp;gt; #include &amp;lt;cmath&amp;gt; #include &amp;lt;iostream&amp;gt; #include &amp;lt;iomanip&amp;gt; #include &amp;lt;string&amp;gt; #include &amp;lt;algorithm&amp;gt; #include &amp;lt;numeric&amp;gt; #include &amp;lt;utility&amp;gt; #include &amp;lt;functional&amp;gt; #include &amp;lt;vector&amp;gt; #include &amp;lt;list&amp;gt; #include &amp;lt;stack&amp;gt; #include &amp;lt;queue&amp;gt; #include &amp;lt;deque&amp;gt; #include &amp;lt;set&amp;gt; #include &amp;lt;map&amp;gt; #include &amp;lt;bitset&amp;gt; #include &amp;lt;complex&amp;gt; #include &amp;lt;random&amp;gt; #include &amp;lt;chrono&amp;gt; #include &amp;lt;array&amp;gt; #include &amp;lt;unordered_set&amp;gt; #include &amp;lt;unordered_map&amp;gt; #include &amp;lt;tuple&amp;gt; using namespace std; using LL = long long; using ULL = unsigned long long; using LD = long double; using PII = pair&amp;lt;int,int&amp;gt;; using VI = vector&amp;lt;int&amp;gt;; using MII = map&amp;lt;int,int&amp;gt;; template&amp;lt;typename T&amp;gt; void cmin(T &amp;amp;x,const T &amp;amp;y)</description>
     </item>
     

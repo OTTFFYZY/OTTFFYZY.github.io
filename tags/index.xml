@@ -6,10 +6,19 @@
     <description>Recent content in Tags on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 18 Nov 2020 13:33:50 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 20 Jan 2021 11:39:32 -0800</lastBuildDate>
     
 	<atom:link href="https://ottffyzy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>离散化</title>
+      <link>https://ottffyzy.github.io/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/</link>
+      <pubDate>Wed, 20 Jan 2021 11:39:32 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>图论</title>

@@ -53,7 +53,7 @@
     
       
       
-      <a class="UnderlineNav-item " href="/categories/templates">
+      <a class="UnderlineNav-item " href="/templates">
         
         <span>Templates</span>
       </a>
@@ -69,7 +69,7 @@
     
       
       
-      <a class="UnderlineNav-item " href="/categories/solutions">
+      <a class="UnderlineNav-item " href="/sols">
         
         <span>Solutions</span>
       </a>
@@ -103,7 +103,7 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
-      <a href="/templates/gt/kruskal/">
+      <a href="/tpls/gt/kruskal/">
         <div class="h2 mt-1 mb-1">[模板][图论] 克鲁斯卡尔 Kruskal</div>
       </a>
     </div>
@@ -112,6 +112,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E5%9B%BE%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray-darker">图论</span>
 </a>
 
 
@@ -133,7 +139,7 @@
   <div class="text-gray">
     
     克鲁斯卡尔 Kruskal template&lt;typename T,size_t V,size_t E&gt; struct Kruskal { typedef tuple&lt;T,int,int&gt; Edge; typedef pair&lt;T,int&gt; PTI; Edge edges[E]; int inmst[E]; int n; // number of vertex int m; // number of edge int uf[V]; int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } void init(int n_) { n=n_; m=0; } void addedge(int u,int v,T w) { edges[m++]={w,u,v}; } PTI solve() { int cnt=n; // number of connected component T sum=0; int u,v; T w; for(int i=0;i&lt;n;i++) uf[i]=i; sort(edges,edges+m); for(int i=0;i&lt;m&amp;&amp;cnt&gt;1;i++) { tie(w,u,v)=edges[i]; u=find(u); v=find(v); if(u==v) continue; inmst[i]=1; sum=sum+w; cnt--; uf[u]=v; } return {sum,cnt==1}; // {totval in mst, ismst} }
-    <a class="muted-link" href="/templates/gt/kruskal/">…</a>
+    <a class="muted-link" href="/tpls/gt/kruskal/">…</a>
   </div>
 </div>
 
@@ -187,17 +193,12 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
-      <span class="text-right Counter">14</span>
-    </span>
-    
-    <span class="css-truncate no-wrap m-1 pl-1">
-      <a href="/categories/%e5%9b%be%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">图论</span></a>
-      <span class="text-right Counter">1</span>
+      <span class="text-right Counter">15</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/%e7%ae%97%e6%b3%95" class="link-gray text-emphasized css-truncate-target"><span class="">算法</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">3</span>
     </span>
     
   </div>
@@ -232,7 +233,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="link-gray text-emphasized css-truncate-target"><span class="">数据结构</span></a>
-      <span class="text-right Counter">5</span>
+      <span class="text-right Counter">6</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -371,6 +372,11 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e7%a6%bb%e6%95%a3%e5%8c%96" class="link-gray text-emphasized css-truncate-target"><span class="">离散化</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e7%ba%bf%e6%ae%b5%e6%a0%91" class="link-gray text-emphasized css-truncate-target"><span class="">线段树</span></a>
       <span class="text-right Counter">2</span>
     </span>
@@ -443,6 +449,11 @@
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-11" class="link-gray text-emphasized css-truncate-target"><span class="">2020 11</span></a>
       <span class="text-right Counter">3</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2021-01" class="link-gray text-emphasized css-truncate-target"><span class="">2021 01</span></a>
+      <span class="text-right Counter">1</span>
     </span>
     
   </div>

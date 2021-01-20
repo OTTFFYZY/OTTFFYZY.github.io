@@ -53,7 +53,7 @@
     
       
       
-      <a class="UnderlineNav-item " href="/categories/templates">
+      <a class="UnderlineNav-item " href="/templates">
         
         <span>Templates</span>
       </a>
@@ -69,7 +69,7 @@
     
       
       
-      <a class="UnderlineNav-item " href="/categories/solutions">
+      <a class="UnderlineNav-item " href="/sols">
         
         <span>Solutions</span>
       </a>
@@ -103,7 +103,7 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
-      <a href="/templates/ds/unionfind/">
+      <a href="/tpls/ds/unionfind/">
         <div class="h2 mt-1 mb-1">[模板][数据结构] 并查集 Union Find / Disjoint Set Union</div>
       </a>
     </div>
@@ -112,6 +112,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
+  <span class="Label Label--gray-darker">数据结构</span>
 </a>
 
 
@@ -133,7 +139,7 @@
   <div class="text-gray">
     
     并查集 Union Find / Disjoint Set Union 路径压缩和按 size 合并 Union by Size // M: max number of set // id is in [0~M-1] template&lt;size_t M&gt; struct UF { int uf[M],sz[M]; int n; int ns; // number of set void init(int n_) { n=ns=n_; for(int i=0;i&lt;n;i++) uf[i]=i,sz[i]=1; } int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } bool same(int x,int y) { return find(x)==find(y); } bool merge(int x,int y) { x=find(x); y=find(y); if(x==y) return false; if(sz[x]&gt;sz[y]) swap(x,y); sz[y]+=sz[x]; uf[x]=y; ns--; return true; } }; Debug: void show() { cout&lt;&lt;&#34;UnionFind:----------------------\n&#34;; cout&lt;&lt;&#34;id:&#34;; for(int i=0;i&lt;n;i++) cout&lt;&lt;&#39;\t&#39;&lt;&lt;i; cout&lt;&lt;&#39;\n&#39;;
-    <a class="muted-link" href="/templates/ds/unionfind/">…</a>
+    <a class="muted-link" href="/tpls/ds/unionfind/">…</a>
   </div>
 </div>
 
@@ -153,6 +159,8 @@
 <a href='/categories/contests' class="muted-link">
   <span class="Label Label--gray-darker">Contests</span>
 </a>
+
+
 
 
 
@@ -239,17 +247,12 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
-      <span class="text-right Counter">14</span>
-    </span>
-    
-    <span class="css-truncate no-wrap m-1 pl-1">
-      <a href="/categories/%e5%9b%be%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">图论</span></a>
-      <span class="text-right Counter">1</span>
+      <span class="text-right Counter">15</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/%e7%ae%97%e6%b3%95" class="link-gray text-emphasized css-truncate-target"><span class="">算法</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">3</span>
     </span>
     
   </div>
@@ -284,7 +287,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="link-gray text-emphasized css-truncate-target"><span class="">数据结构</span></a>
-      <span class="text-right Counter">5</span>
+      <span class="text-right Counter">6</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -423,6 +426,11 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e7%a6%bb%e6%95%a3%e5%8c%96" class="link-gray text-emphasized css-truncate-target"><span class="">离散化</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e7%ba%bf%e6%ae%b5%e6%a0%91" class="link-gray text-emphasized css-truncate-target"><span class="">线段树</span></a>
       <span class="text-right Counter">2</span>
     </span>
@@ -495,6 +503,11 @@
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-11" class="link-gray text-emphasized css-truncate-target"><span class="">2020 11</span></a>
       <span class="text-right Counter">3</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2021-01" class="link-gray text-emphasized css-truncate-target"><span class="">2021 01</span></a>
+      <span class="text-right Counter">1</span>
     </span>
     
   </div>

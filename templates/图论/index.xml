@@ -13,28 +13,28 @@
     
     <item>
       <title>[模板][图论] 克鲁斯卡尔 Kruskal</title>
-      <link>https://ottffyzy.github.io/templates/gt/kruskal/</link>
+      <link>https://ottffyzy.github.io/tpls/gt/kruskal/</link>
       <pubDate>Fri, 25 Sep 2020 16:25:48 -0400</pubDate>
       
-      <guid>https://ottffyzy.github.io/templates/gt/kruskal/</guid>
+      <guid>https://ottffyzy.github.io/tpls/gt/kruskal/</guid>
       <description>克鲁斯卡尔 Kruskal template&amp;lt;typename T,size_t V,size_t E&amp;gt; struct Kruskal { typedef tuple&amp;lt;T,int,int&amp;gt; Edge; typedef pair&amp;lt;T,int&amp;gt; PTI; Edge edges[E]; int inmst[E]; int n; // number of vertex int m; // number of edge int uf[V]; int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } void init(int n_) { n=n_; m=0; } void addedge(int u,int v,T w) { edges[m++]={w,u,v}; } PTI solve() { int cnt=n; // number of connected component T sum=0; int u,v; T w; for(int i=0;i&amp;lt;n;i++) uf[i]=i; sort(edges,edges+m); for(int i=0;i&amp;lt;m&amp;amp;&amp;amp;cnt&amp;gt;1;i++) { tie(w,u,v)=edges[i]; u=find(u); v=find(v); if(u==v) continue; inmst[i]=1; sum=sum+w; cnt--; uf[u]=v; } return {sum,cnt==1}; // {totval in mst, ismst} }</description>
     </item>
     
     <item>
       <title>[模板][图论] 弗洛伊德 Floyd</title>
-      <link>https://ottffyzy.github.io/templates/gt/floyd/</link>
+      <link>https://ottffyzy.github.io/tpls/gt/floyd/</link>
       <pubDate>Fri, 25 Sep 2020 15:07:23 -0400</pubDate>
       
-      <guid>https://ottffyzy.github.io/templates/gt/floyd/</guid>
+      <guid>https://ottffyzy.github.io/tpls/gt/floyd/</guid>
       <description>弗洛伊德 Floyd // T must define &amp;lt; and + template&amp;lt;typename T,size_t V,bool Directed=true,T INF=T(0x3f3f3f3f)&amp;gt; struct Floyd { T g[V][V]; int n; void init(int n_) { n=n_; for(int i=0;i&amp;lt;n;i++) for(int j=0;j&amp;lt;n;j++) g[i][j]=INF; } void addedge(int u,int v,T w) // check multi-edges { g[u][v]=w; if(!Directed) g[v][u]=w; } void cmin(T &amp;amp;x,const T &amp;amp;y) { if(y&amp;lt;x) x=y; } void floyd(Upd =upd) { for(int k=0;k&amp;lt;n;k++) for(int i=0;i&amp;lt;n;i++) for(int j=0;j&amp;lt;n;j++) cmin(g[i][j],g[i][k]+g[k][j]); } };</description>
     </item>
     
     <item>
       <title>[模板][图论] 迪杰斯特拉 Dijkstra</title>
-      <link>https://ottffyzy.github.io/templates/gt/dijkstra/</link>
+      <link>https://ottffyzy.github.io/tpls/gt/dijkstra/</link>
       <pubDate>Thu, 24 Sep 2020 19:10:04 -0400</pubDate>
       
-      <guid>https://ottffyzy.github.io/templates/gt/dijkstra/</guid>
+      <guid>https://ottffyzy.github.io/tpls/gt/dijkstra/</guid>
       <description>迪杰斯特拉 Dijkstra 模板（priority_queue） // T must define &amp;lt; and + // V: max number of vertex [0~V-1] template&amp;lt;typename T,size_t V,bool Directed=true, T INF=T(0x3f3f3f3f),T ZERO=T(0)&amp;gt; struct G { typedef pair&amp;lt;T,int&amp;gt; PTI; vector&amp;lt;PTI&amp;gt; g[V]; T dis[V]; int vis[V]; int n; void init(int n_) { n=n_; for(int i=0;i&amp;lt;n;i++) g[i].clear(); } void addedge(int u,int v,T w) { g[u].emplace_back(w,v); if(!Directed) g[v].emplace_back(w,u); } void dijkstra(int st,int ed=-1) // ed=-1 no destination { for(int i=0;i&amp;lt;n;i++) dis[i]=INF,vis[i]=0; priority_queue&amp;lt;PTI,vector&amp;lt;PTI&amp;gt;,greater&amp;lt;PTI&amp;gt; &amp;gt; qu; dis[st]=ZERO; qu.emplace(ZERO,st); while(!qu.empty()) { PTI p=qu.top(); qu.pop();</description>
     </item>
     

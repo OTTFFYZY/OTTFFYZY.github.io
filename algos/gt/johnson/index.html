@@ -53,7 +53,7 @@
     
       
       
-      <a class="UnderlineNav-item " href="/categories/templates">
+      <a class="UnderlineNav-item " href="/templates">
         
         <span>Templates</span>
       </a>
@@ -69,7 +69,7 @@
     
       
       
-      <a class="UnderlineNav-item " href="/categories/solutions">
+      <a class="UnderlineNav-item " href="/sols">
         
         <span>Solutions</span>
       </a>
@@ -99,9 +99,11 @@
   <div class="Subhead-description">
     
 
-<a href='/categories/%E5%9B%BE%E8%AE%BA' class="muted-link">
-  <span class="Label Label--gray-darker">图论</span>
+<a href='/categories/%E7%AE%97%E6%B3%95' class="muted-link">
+  <span class="Label Label--gray-darker">算法</span>
 </a>
+
+
 
 
 
@@ -185,11 +187,13 @@ $$w(u,v) \ge dis[v] - dis[u]$$
 <h2 id="johnson-算法">Johnson 算法</h2>
 <h3 id="算法流程">算法流程</h3>
 <ol>
-<li>建立超级源点 $src$ 向所有的点连一条权重为 $0$ 的有向边。</li>
-<li>跑 Bellman-Ford 确定图中是否有负环，有负环直接结束</li>
+<li>建立超级源点 $src$ 向所有的点连一条权重为 $0$ 的有向边（这样其他点不会走到 $src$）。</li>
+<li>以 $src$ 为源点跑 Bellman-Ford 确定图中是否有负环并确定 $h[i]$ 的值，有负环直接结束</li>
 <li>以每一个原图中的点为起点，以 $w(u,v) + h[u] - h[v]$ 为边的权重跑 $V$ 次 Dijkstra</li>
 <li>得到的距离数组 $dis[u][v]$ 需要 $-h[u]+h[v]$ 才能得出真实的距离，注意特殊处理无法走到的情况的值</li>
 </ol>
+<h3 id="标号及最短路长度范围">标号及最短路长度范围</h3>
+<p>注意原图可能存在非常长的负权路径，因此如果边权范围是 $[-C,C]$ 则 $h[i]$ 的范围可能达到 $[-C(V-1),0]$ 而 $w'$ 的范围则是 $[0,CV]$，不过虽然边权范围很宽，但新图上最短路的长度也并不会达到 $CV^2$，考虑原图最短路最长也就是 $C(V-1)$ 则新图最短路不会超过 $C(V-1) + h_{max} - h_{min} = 2 C(V-1)$。</p>
 <h3 id="复杂度">复杂度</h3>
 <p>空间复杂度：Bellman-Ford 我们只需要一个额外的 $h$ 数组，Dijkstra 需要 $O(V)$ 的空间不赘述。如果每一轮我们都直接将求出的最短路都输出而不是存在一个 $O(V^2)$ 的数组中的话，那么额外空间就是 $O(V)$ 的，存图的空间为 $O(V+E)$ 总复杂度为 $O(V+E)$。</p>
 <p>时间复杂度：Bellman-Ford 为 $O(VE)$ 。如果使用 std::priority_queue 优化的 Dijkstra 则总复杂度为 $O(V(E+V)\log E)$。</p>
@@ -290,9 +294,11 @@ $$w(u,v) \ge dis[v] - dis[u]$$
 
   <section>
     
-        <a href="/templates/nt/exgcd/" class="previous_page">Prev: [模板][数论] 扩展欧几里得算法（ExGCD） </a>
+        <a href="/tpls/nt/exgcd/" class="previous_page">Prev: [模板][数论] 扩展欧几里得算法（ExGCD） </a>
     
+     <br> 
     
+        <a href="/tpls/ds/discretization/" class="next_page">Next: [模板][数据结构] 离散化 Discretization </a>
     
   </section>
 
@@ -345,6 +351,7 @@ $$w(u,v) \ge dis[v] - dis[u]$$
     <li><a href="#johnson-算法">Johnson 算法</a>
       <ul>
         <li><a href="#算法流程">算法流程</a></li>
+        <li><a href="#标号及最短路长度范围">标号及最短路长度范围</a></li>
         <li><a href="#复杂度">复杂度</a></li>
         <li><a href="#例题及代码">例题及代码</a></li>
       </ul>

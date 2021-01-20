@@ -6,10 +6,19 @@
     <description>Recent content in 算法 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 01 Nov 2020 10:02:34 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2020 13:33:50 -0500</lastBuildDate>
     
 	<atom:link href="https://ottffyzy.github.io/categories/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[算法][图论] 约翰逊 Johnson 算法 全源最短路</title>
+      <link>https://ottffyzy.github.io/algos/gt/johnson/</link>
+      <pubDate>Wed, 18 Nov 2020 13:33:50 -0500</pubDate>
+      
+      <guid>https://ottffyzy.github.io/algos/gt/johnson/</guid>
+      <description>约翰逊 Johnson 算法 全源最短路 对于最短路问题，我们的常用算法是 Dijkstra 算法或 Bellman-Ford 算法。但这两个算法经常解决的是单源最短路问题。 对于多源（全源）最短路问题，我们有一个基于动态规划的优秀算法，Floyd-Warshall</description>
+    </item>
     
     <item>
       <title>[算法][数论] 扩展欧几里得算法</title>

@@ -22,10 +22,10 @@
     
     <item>
       <title>[模板][数论] 扩展欧几里得算法（ExGCD）</title>
-      <link>https://ottffyzy.github.io/templates/nt/exgcd/</link>
+      <link>https://ottffyzy.github.io/tpls/nt/exgcd/</link>
       <pubDate>Sun, 01 Nov 2020 22:38:49 -0500</pubDate>
       
-      <guid>https://ottffyzy.github.io/templates/nt/exgcd/</guid>
+      <guid>https://ottffyzy.github.io/tpls/nt/exgcd/</guid>
       <description>扩展欧几里得算法（ExGCD） // ax+by=gcd(a,b)=g // check a&amp;gt;0 b&amp;gt;0 // if a != b, |x|&amp;lt;b, |y|&amp;lt;a template&amp;lt;typename T&amp;gt; void exgcd(T a,T b,T &amp;amp;g,T &amp;amp;x,T &amp;amp;y) { if(!b) { g=a; x=1; y=0; } else { exgcd(b,a%b,g,y,x); y-=a/b*x; } } 求逆元 template&amp;lt;typename T&amp;gt; void exgcd(T a,T b,T &amp;amp;g,T &amp;amp;x,T &amp;amp;y) { if(!b) { g=a; x=1; y=0; } else { exgcd(b,a%b,g,y,x); y-=a/b*x; } } template&amp;lt;typename T&amp;gt; T inv(T a,T m) { T g,x,y; exgcd(a,m,g,x,y); if(g!=1) return -1; // no inverse element if(x&amp;lt;0) x+=m; return x; } 不定方</description>
     </item>
     

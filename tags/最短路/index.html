@@ -53,7 +53,7 @@
     
       
       
-      <a class="UnderlineNav-item " href="/categories/templates">
+      <a class="UnderlineNav-item " href="/templates">
         
         <span>Templates</span>
       </a>
@@ -69,7 +69,7 @@
     
       
       
-      <a class="UnderlineNav-item " href="/categories/solutions">
+      <a class="UnderlineNav-item " href="/sols">
         
         <span>Solutions</span>
       </a>
@@ -110,9 +110,11 @@
     <div class="Subhead-description">
       
 
-<a href='/categories/%E5%9B%BE%E8%AE%BA' class="muted-link">
-  <span class="Label Label--gray-darker">图论</span>
+<a href='/categories/%E7%AE%97%E6%B3%95' class="muted-link">
+  <span class="Label Label--gray-darker">算法</span>
 </a>
+
+
 
 
 
@@ -147,7 +149,7 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
-      <a href="/templates/gt/floyd/">
+      <a href="/tpls/gt/floyd/">
         <div class="h2 mt-1 mb-1">[模板][图论] 弗洛伊德 Floyd</div>
       </a>
     </div>
@@ -156,6 +158,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E5%9B%BE%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray-darker">图论</span>
 </a>
 
 
@@ -177,7 +185,7 @@
   <div class="text-gray">
     
     弗洛伊德 Floyd // T must define &lt; and + template&lt;typename T,size_t V,bool Directed=true,T INF=T(0x3f3f3f3f)&gt; struct Floyd { T g[V][V]; int n; void init(int n_) { n=n_; for(int i=0;i&lt;n;i++) for(int j=0;j&lt;n;j++) g[i][j]=INF; } void addedge(int u,int v,T w) // check multi-edges { g[u][v]=w; if(!Directed) g[v][u]=w; } void cmin(T &amp;x,const T &amp;y) { if(y&lt;x) x=y; } void floyd(Upd =upd) { for(int k=0;k&lt;n;k++) for(int i=0;i&lt;n;i++) for(int j=0;j&lt;n;j++) cmin(g[i][j],g[i][k]+g[k][j]); } };
-    <a class="muted-link" href="/templates/gt/floyd/">…</a>
+    <a class="muted-link" href="/tpls/gt/floyd/">…</a>
   </div>
 </div>
 
@@ -187,7 +195,7 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
-      <a href="/templates/gt/dijkstra/">
+      <a href="/tpls/gt/dijkstra/">
         <div class="h2 mt-1 mb-1">[模板][图论] 迪杰斯特拉 Dijkstra</div>
       </a>
     </div>
@@ -196,6 +204,12 @@
 
 <a href='/categories/templates' class="muted-link">
   <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E5%9B%BE%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray-darker">图论</span>
 </a>
 
 
@@ -217,7 +231,7 @@
   <div class="text-gray">
     
     迪杰斯特拉 Dijkstra 模板（priority_queue） // T must define &lt; and + // V: max number of vertex [0~V-1] template&lt;typename T,size_t V,bool Directed=true, T INF=T(0x3f3f3f3f),T ZERO=T(0)&gt; struct G { typedef pair&lt;T,int&gt; PTI; vector&lt;PTI&gt; g[V]; T dis[V]; int vis[V]; int n; void init(int n_) { n=n_; for(int i=0;i&lt;n;i++) g[i].clear(); } void addedge(int u,int v,T w) { g[u].emplace_back(w,v); if(!Directed) g[v].emplace_back(w,u); } void dijkstra(int st,int ed=-1) // ed=-1 no destination { for(int i=0;i&lt;n;i++) dis[i]=INF,vis[i]=0; priority_queue&lt;PTI,vector&lt;PTI&gt;,greater&lt;PTI&gt; &gt; qu; dis[st]=ZERO; qu.emplace(ZERO,st); while(!qu.empty()) { PTI p=qu.top(); qu.pop();
-    <a class="muted-link" href="/templates/gt/dijkstra/">…</a>
+    <a class="muted-link" href="/tpls/gt/dijkstra/">…</a>
   </div>
 </div>
 
@@ -271,17 +285,12 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
-      <span class="text-right Counter">14</span>
-    </span>
-    
-    <span class="css-truncate no-wrap m-1 pl-1">
-      <a href="/categories/%e5%9b%be%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">图论</span></a>
-      <span class="text-right Counter">1</span>
+      <span class="text-right Counter">15</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/%e7%ae%97%e6%b3%95" class="link-gray text-emphasized css-truncate-target"><span class="">算法</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">3</span>
     </span>
     
   </div>
@@ -316,7 +325,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="link-gray text-emphasized css-truncate-target"><span class="">数据结构</span></a>
-      <span class="text-right Counter">5</span>
+      <span class="text-right Counter">6</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -455,6 +464,11 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e7%a6%bb%e6%95%a3%e5%8c%96" class="link-gray text-emphasized css-truncate-target"><span class="">离散化</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e7%ba%bf%e6%ae%b5%e6%a0%91" class="link-gray text-emphasized css-truncate-target"><span class="">线段树</span></a>
       <span class="text-right Counter">2</span>
     </span>
@@ -527,6 +541,11 @@
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-11" class="link-gray text-emphasized css-truncate-target"><span class="">2020 11</span></a>
       <span class="text-right Counter">3</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2021-01" class="link-gray text-emphasized css-truncate-target"><span class="">2021 01</span></a>
+      <span class="text-right Counter">1</span>
     </span>
     
   </div>

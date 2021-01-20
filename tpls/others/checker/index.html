@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  [模板] 对拍程序 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="对拍程序 from os import system tc=0 while True: system(&amp;#34;python data.py &amp;gt; data.in&amp;#34;) system(&amp;#34;std.exe &amp;lt; data.in &amp;gt; std.out&amp;#34;) system(&amp;#34;my.exe &amp;lt; data.in &amp;gt; my.out&amp;#34;) # system(&amp;#34;diff std.out my.out &amp;gt; diff.out&amp;#34;): if system(&amp;#34;fc std.out my.out &amp;gt; diff.out&amp;#34;): print(&amp;#34;WA&amp;#34;) break else: tc &#43;= 1 print(&amp;#34;AC #%d&amp;#34;%tc) print(&amp;#34;-------------------- data.in --------------------&amp;#34;) # system(&amp;#34;cat data.in&amp;#34;) system(&amp;#34;type data.in&amp;#34;) print(&amp;#34;-------------------- std.out --------------------&amp;#34;) system(&amp;#34;type std.out&amp;#34;) print(&amp;#34;-------------------- my.out ---------------------&amp;#34;) system(&amp;#34;type my.out&amp;#34;) #include &amp;lt;bits/stdc&#43;&#43;.h&amp;gt; using namespace std; int main() { int tc=0; while(1) { system(&amp;#34;data.exe &amp;gt; data.in&amp;#34;); // system(&amp;#34;python data.py &amp;gt; data.in&amp;#34;); system(&amp;#34;std.exe &amp;lt; data.in &amp;gt; std.out&amp;#34;); system(&amp;#34;my.exe &amp;lt; data.in &amp;gt; my.out&amp;#34;); // system(&amp;#34;diff std.out my.out &amp;gt; diff.out&amp;#34;): if(system(&amp;#34;fc|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/sols">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">[模板] 对拍程序</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E5%85%B6%E4%BB%96' class="muted-link">
+  <span class="Label Label--gray-darker">其他</span>
+</a>
+
+
+
+
+
+
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2020-10-20. Published at: 2020-10-20.">
+        
+          Published: 2020-10-20 Tue 00:10:35
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="对拍程序">对拍程序</h2>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">system</span>
+
+<span class="n">tc</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">system</span><span class="p">(</span><span class="s2">&#34;python data.py &gt; data.in&#34;</span><span class="p">)</span>
+    <span class="n">system</span><span class="p">(</span><span class="s2">&#34;std.exe &lt; data.in &gt; std.out&#34;</span><span class="p">)</span>
+    <span class="n">system</span><span class="p">(</span><span class="s2">&#34;my.exe &lt; data.in &gt; my.out&#34;</span><span class="p">)</span>
+    <span class="c1"># system(&#34;diff std.out my.out &gt; diff.out&#34;):</span>
+    <span class="k">if</span> <span class="n">system</span><span class="p">(</span><span class="s2">&#34;fc std.out my.out &gt; diff.out&#34;</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;WA&#34;</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">tc</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&#34;AC #</span><span class="si">%d</span><span class="s2">&#34;</span><span class="o">%</span><span class="n">tc</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;-------------------- data.in --------------------&#34;</span><span class="p">)</span>
+<span class="c1"># system(&#34;cat data.in&#34;)</span>
+<span class="n">system</span><span class="p">(</span><span class="s2">&#34;type data.in&#34;</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;-------------------- std.out --------------------&#34;</span><span class="p">)</span>
+<span class="n">system</span><span class="p">(</span><span class="s2">&#34;type std.out&#34;</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&#34;-------------------- my.out ---------------------&#34;</span><span class="p">)</span>
+<span class="n">system</span><span class="p">(</span><span class="s2">&#34;type my.out&#34;</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">tc</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">system</span><span class="p">(</span><span class="s">&#34;data.exe &gt; data.in&#34;</span><span class="p">);</span>
+        <span class="c1">// system(&#34;python data.py &gt; data.in&#34;);
+</span><span class="c1"></span>        <span class="n">system</span><span class="p">(</span><span class="s">&#34;std.exe &lt; data.in &gt; std.out&#34;</span><span class="p">);</span>
+        <span class="n">system</span><span class="p">(</span><span class="s">&#34;my.exe &lt; data.in &gt; my.out&#34;</span><span class="p">);</span>
+        <span class="c1">// system(&#34;diff std.out my.out &gt; diff.out&#34;):
+</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span><span class="n">system</span><span class="p">(</span><span class="s">&#34;fc std.out my.out &gt; diff.out&#34;</span><span class="p">))</span> 
+        <span class="p">{</span>
+            <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;WA&#34;</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> 
+            <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;AC #&#34;</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="o">++</span><span class="n">tc</span><span class="p">)</span> <span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;-------------------- data.in --------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+    <span class="c1">// system(&#34;cat data.in&#34;);
+</span><span class="c1"></span>    <span class="n">system</span><span class="p">(</span><span class="s">&#34;type data.in&#34;</span><span class="p">);</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;-------------------- std.out --------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">&#34;type std.out&#34;</span><span class="p">);</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;-------------------- my.out ---------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">&#34;type my.out&#34;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+  </section>
+
+  <section>
+    
+        <a href="/tpls/ds/bit/" class="previous_page">Prev: [模板][数据结构] 树状数组 Binary Index Tree/Fenwick Tree </a>
+    
+     <br> 
+    
+        <a href="/tpls/ds/bitset/" class="next_page">Next: [模板] bitset &amp; 位图 </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>[模板] 对拍程序</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#对拍程序">对拍程序</a></li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>
