@@ -44,7 +44,7 @@
       <pubDate>Sun, 27 Sep 2020 23:19:53 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/nt/mod/</guid>
-      <description>模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&amp;gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&amp;lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;amp;x,int y) { x+=y; if(x&amp;gt;=MO) x-=MO; } inline void subv(int &amp;amp;x,int y) { x-=y; if(x&amp;lt;0) x+=MO; } inline void mulv(int &amp;amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;amp;1) { mulv(ans,x); } mulv(x,x); n&amp;gt;&amp;gt;=1; } return ans; } Mint template&amp;lt;size_t MO=1000000007&amp;gt; struct Mint { int x; Mint(int x=0):x(x){ norm();</description>
+      <description>模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&amp;gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&amp;lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;amp;x,int y) { x+=y; if(x&amp;gt;=MO) x-=MO; } inline void subv(int &amp;amp;x,int y) { x-=y; if(x&amp;lt;0) x+=MO; } inline void mulv(int &amp;amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;amp;1) { mulv(ans,x); } mulv(x,x); n&amp;gt;&amp;gt;=1; } return ans; } ModInt template&amp;lt;int MO=1000000007&amp;gt; struct ModInt { int x; ModInt(int x=0):x(x){ norm();</description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@
       <pubDate>Sun, 27 Sep 2020 19:07:04 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/ds/leftist/</guid>
-      <description>左偏树 Leftist Tree // min leftist tree // T must define &amp;lt; // M: the size of the heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;&amp;gt;&amp;gt; struct Leftist { T val[M]; int l[M],r[M],d[M]; int nn; // number of node Cmp cmp; void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&amp;lt;int&amp;gt; qu; for(int i=1;i&amp;lt;=n;i++) qu.push(i); int u,v; while(qu.size()&amp;gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[++nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;amp;x,int y) // merge tree</description>
+      <description>左偏树 Leftist Tree // min leftist tree // T must define &amp;lt; // M: the size of the heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;T&amp;gt;&amp;gt; struct Leftist { static Cmp cmp; T val[M]; int l[M],r[M],d[M]; int nn; // number of node void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&amp;lt;int&amp;gt; qu; for(int i=1;i&amp;lt;=n;i++) qu.push(i); int u,v; while(qu.size()&amp;gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[++nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;amp;x,int y) // merge</description>
     </item>
     
     <item>
@@ -98,7 +98,7 @@
       <pubDate>Wed, 23 Sep 2020 23:12:58 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/ds/binaryheap/</guid>
-      <description>二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &amp;lt; // min heap // M: max size of heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;&amp;gt;&amp;gt; struct Heap { T h[M+1]; int n; Cmp cmp; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&amp;lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() { return h[1]; } // check n&amp;gt;=1 int size() { return n; } bool empty() { return n==0;</description>
+      <description>二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &amp;lt; // min heap // M: max size of heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;T&amp;gt;&amp;gt; struct Heap { static Cmp cmp; T h[M+1]; int n; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&amp;lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() { return h[1]; } // check n&amp;gt;=1 int size() { return n; } bool empty() { return</description>
     </item>
     
     <item>
@@ -108,6 +108,15 @@
       
       <guid>https://ottffyzy.github.io/sols/leetcode/lcp21/</guid>
       <description>LCP 21. 追逐游戏 题目大意 给定一棵 $N$ 个点的基环树（环套树）。给定图上两个起始位置 $A$ 和 $B$ ($A \neq B$)。每一轮 $A$ 先移动，$B$ 后移动。每次移动可以移动到图上当前点的相邻点或者保持不动。任意时刻如果 $A$ 和 $B$ 处在同一位</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 1 章 开始</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c1/</link>
+      <pubDate>Thu, 17 Sep 2020 14:07:57 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c1/</guid>
+      <description>第 1 章 开始 1.1 查看程序返回值 当一个程序运行结束时，我们想知道 main 函数的返回值可以使用以下命令。 Win &amp;gt; echo %ERRORLEVEL% Unix $ echo $? 1.2 标准库有四个输入输出对象 cin // 标准输入 cout // 标准输出 cerr // 标准错误 clog // 输出程序运行时的一般信息 字面</description>
     </item>
     
     <item>

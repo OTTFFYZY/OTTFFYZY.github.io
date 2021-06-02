@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  《C&#43;&#43; Primer》 拾遗 第 5 章 语句 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="第 5 章 语句 一个表达式末尾加上分号就变成了表达式语句 expression statement。 空语句 null statement。 复合语句 compound statement 也称块 block 是用花括号括起来的语句和声明序列。在程序某个位置如果语法上需要一个语句，逻辑上需|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/sols">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">《C&#43;&#43; Primer》 拾遗 第 5 章 语句</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/cpp-primer' class="muted-link">
+  <span class="Label Label--gray">Cpp Primer</span>
+</a>
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2021-05-27. Published at: 2021-05-27.">
+        
+          Published: 2021-05-27 Thu 00:42:06
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="第-5-章-语句">第 5 章 语句</h2>
+<p>一个表达式末尾加上分号就变成了表达式语句 <code>expression statement</code>。</p>
+<p>空语句 <code>null statement</code>。</p>
+<p>复合语句 <code>compound statement</code> 也称块 <code>block</code> 是用花括号括起来的语句和声明序列。在程序某个位置如果语法上需要一个语句，逻辑上需要多个语句则应该使用块。</p>
+<h3 id="53-条件语句">5.3 条件语句</h3>
+<h4 id="532-switch-语句">5.3.2 switch 语句</h4>
+<h5 id="switch-内部的变量定义">switch 内部的变量定义</h5>
+<p>注意 switch 执行时可能跳过某些 case 标签，被跳过的标签可以含有变量声明，但不能进行显式的初始化。</p>
+<p>如果想为某个标签定义变量则应该把变量定义包裹在块内，使得其他标签都在其作用域外。</p>
+<h3 id="54-迭代语句">5.4 迭代语句</h3>
+<h4 id="543-范围-for-语句">5.4.3 范围 for 语句</h4>
+<p><code>range for statement</code>。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">for</span> <span class="p">(</span><span class="nl">declaration</span> <span class="p">:</span> <span class="n">expression</span><span class="p">)</span>
+    <span class="n">statement</span>
+</code></pre></div><p>范围 for 的 expression 可以是数组、可以是声明了 begin 和 end 的类。这两者都不是时会尝试调用 begin(expression) 和 end(expression)。</p>
+<p>这里注意，范围 for 虽然会在一开始得到首尾迭代器值，但不能用来翻倍 vector，因为在插入新元素的过程中旧的迭代器可能会失效。</p>
+<h3 id="56-try-语句块和异常处理">5.6 try 语句块和异常处理</h3>
+<p>异常处理包括：</p>
+<p>throw 表达式，异常检测部分使用 throw 表达式表示它遇到了无法处理的问题。我们说 throw 引发 <code>raise</code> 了异常。</p>
+<p>try 语句块，以 try 开始以一个或多个 catch 子句 <code>catch clause</code> 结束，try 中抛出的异常会被某几个 catch 子句处理。catch 子句被称为异常处理代码 <code>exception handler</code>。</p>
+<p>一套异常类 <code>exception class</code>，用于在 throw 表达式和相关的 catch 子句之间传递异常的具体信息。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;stdexcept&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">!=</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="n">runtime_error</span><span class="p">(</span><span class="s">&#34;a != b&#34;</span><span class="p">);</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">runtime_error</span> <span class="n">err</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">err</span><span class="p">.</span><span class="n">what</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">type Y to input a and b again</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+      <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
+      <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">c</span><span class="p">)</span> <span class="o">||</span> <span class="n">c</span> <span class="o">!=</span> <span class="sc">&#39;Y&#39;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;early quit</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;normal quit</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h4 id="563-标准异常">5.6.3 标准异常</h4>
+<p>&lt;exception&gt; 定义了最通用的异常类 exception。它只报告异常发生，不提供任何额外信息。</p>
+<p>&lt;stdexcept&gt; 中定义了以下异常类。</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">exception</span>          <span class="c1">// 常见问题
+</span><span class="c1"></span><span class="n">runtime_error</span>      <span class="c1">// 运行时错误 
+</span><span class="c1"></span><span class="n">range_error</span>        <span class="c1">// 运行时错误：结果超出有意义值的范围
+</span><span class="c1"></span><span class="n">overflow_error</span>     <span class="c1">// 运行时错误：上溢
+</span><span class="c1"></span><span class="n">underflow_error</span>    <span class="c1">// 运行时错误：下溢
+</span><span class="c1"></span><span class="n">logic_error</span>        <span class="c1">// 逻辑错误
+</span><span class="c1"></span><span class="n">domain_error</span>       <span class="c1">// 逻辑错误：参数对应的结果值不存在
+</span><span class="c1"></span><span class="n">invalid_argument</span>   <span class="c1">// 逻辑错误：无效参数
+</span><span class="c1"></span><span class="n">length_error</span>       <span class="c1">// 逻辑错误：试图创建一个超出该类型最大长度的对象
+</span><span class="c1"></span><span class="n">out_of_range</span>       <span class="c1">// 逻辑错误：使用一个超出有效范围的值
+</span></code></pre></div><p>&lt;new&gt; 中定义了 bad_alloc 异常类型。</p>
+<p>&lt;type_info&gt; 中定义了 bad_cast 异常类型。</p>
+<p>其中我们只能以默认初始化方式初始化 exception、bad_alloc、bad_cast 对象。</p>
+<p>其他异常类型则需要使用 string 或 C 风格字符串初始化。</p>
+<p>异常类型定义了一个成员函数 what()。返回值为一个 const char* 用来提供错误信息的文本。</p>
+
+  </section>
+
+  <section>
+    
+        <a href="/notes/cppprimer/c4/" class="previous_page">Prev: 《C&#43;&#43; Primer》 拾遗 第 4 章 表达式 </a>
+    
+     <br> 
+    
+        <a href="/notes/cppprimer/c6/" class="next_page">Next: 《C&#43;&#43; Primer》 拾遗 第 6 章 函数 </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>《C&#43;&#43; Primer》 拾遗 第 5 章 语句</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#第-5-章-语句">第 5 章 语句</a>
+      <ul>
+        <li><a href="#53-条件语句">5.3 条件语句</a></li>
+        <li><a href="#54-迭代语句">5.4 迭代语句</a></li>
+        <li><a href="#56-try-语句块和异常处理">5.6 try 语句块和异常处理</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>

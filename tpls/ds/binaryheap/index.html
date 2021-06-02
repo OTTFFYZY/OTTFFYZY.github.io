@@ -11,7 +11,7 @@
     </title>
     
     
-    <meta name="description" property="og:description" content="二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &amp;lt; // min heap // M: max size of heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;&amp;gt;&amp;gt; struct Heap { T h[M&#43;1]; int n; Cmp cmp; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&amp;lt;=n;i&#43;&#43;) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[&#43;&#43;n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() { return h[1]; } // check n&amp;gt;=1 int size() { return n; } bool empty() { return n==0;|OTTFF&#39;s Blog">
+    <meta name="description" property="og:description" content="二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &amp;lt; // min heap // M: max size of heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;T&amp;gt;&amp;gt; struct Heap { static Cmp cmp; T h[M&#43;1]; int n; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&amp;lt;=n;i&#43;&#43;) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[&#43;&#43;n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() { return h[1]; } // check n&amp;gt;=1 int size() { return n; } bool empty() { return|OTTFF&#39;s Blog">
     
 
     <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
@@ -140,12 +140,12 @@
 <div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// T must define &lt;
 </span><span class="c1">// min heap
 </span><span class="c1">// M: max size of heap
-</span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span><span class="n">size_t</span> <span class="n">M</span><span class="p">,</span><span class="k">typename</span> <span class="n">Cmp</span><span class="o">=</span><span class="n">less</span><span class="o">&lt;&gt;&gt;</span>
+</span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span><span class="n">size_t</span> <span class="n">M</span><span class="p">,</span><span class="k">typename</span> <span class="n">Cmp</span><span class="o">=</span><span class="n">less</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span>
 <span class="k">struct</span> <span class="nc">Heap</span>
 <span class="p">{</span>
+	<span class="k">static</span> <span class="n">Cmp</span> <span class="n">cmp</span><span class="p">;</span>
 	<span class="n">T</span> <span class="n">h</span><span class="p">[</span><span class="n">M</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
 	<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
-	<span class="n">Cmp</span> <span class="n">cmp</span><span class="p">;</span>
 	<span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span> <span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
 	<span class="kt">void</span> <span class="nf">init</span><span class="p">(</span><span class="n">T</span> <span class="n">h_</span><span class="p">[],</span><span class="kt">int</span> <span class="n">n_</span><span class="p">)</span> <span class="c1">// h[0~n-1]
 </span><span class="c1"></span>	<span class="p">{</span>

@@ -6,10 +6,64 @@
     <description>Recent content in Notes on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 15 Sep 2020 14:13:07 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 28 May 2021 11:50:51 -0700</lastBuildDate>
     
 	<atom:link href="https://ottffyzy.github.io/categories/notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 6 章 函数</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c6/</link>
+      <pubDate>Fri, 28 May 2021 11:50:51 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c6/</guid>
+      <description>第 6 章 函数 6.1 函数基础 我们可以通过调用运算符 call operator 来执行函数。 形参 parameter 实参 argument 主调函数 calling function 被调函数 called function 空形参列表可以是空的括号，或是 void void f1() {} void f2(void) {} 6.1.1 局部对象 C++ 中名字有作用域，对象有声明周期 lifetime。 名</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 5 章 语句</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c5/</link>
+      <pubDate>Thu, 27 May 2021 00:42:06 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c5/</guid>
+      <description>第 5 章 语句 一个表达式末尾加上分号就变成了表达式语句 expression statement。 空语句 null statement。 复合语句 compound statement 也称块 block 是用花括号括起来的语句和声明序列。在程序某个位置如果语法上需要一个语句，逻辑上需</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 4 章 表达式</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c4/</link>
+      <pubDate>Tue, 25 May 2021 22:00:23 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c4/</guid>
+      <description>第 4 章 表达式 表达式 expression 由一个或多个运算对象 operand 组成，对表达式求值将得到一个结果。字面值和变量是最简单的表达式，运算符 operator 将一个或多个对象组合起来可以生成复杂的表达式。 4.1 基础 4.1.1 基本概念 对于复杂的表达式，需要了</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 3 章 字符串、向量和数组</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c3/</link>
+      <pubDate>Thu, 20 May 2021 23:32:08 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c3/</guid>
+      <description>第 3 章 字符串、向量和数组 3.1 命名空间的 using 声明 using 声明 using declaration using namesapce::name; 头文件不应包含 using 声明。因为头文件会被包含到其他文件中去，使用 using 声明则可能带来名字冲突。 3.2 标准库类型 string 3.2.1 定义和初始化 string 对象 #include &amp;lt;iostream&amp;gt;#include &amp;lt;cassert&amp;gt;#include &amp;lt;iterator&amp;gt;#include &amp;lt;string&amp;gt;#include &amp;lt;cctype&amp;gt; int main() { { // string::string()</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 2 章 变量和基本类型</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c2/</link>
+      <pubDate>Mon, 17 May 2021 21:07:47 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c2/</guid>
+      <description>第 2 章 变量和基本类型 2.1 基本内置类型 基本内置类型分为算数类型 arithmetic type 和空类型 void 2.1.1 算数类型 整型 integral type 和浮点型 注意 C++ 只规定了每种算数类型的最小尺寸，所以不同机器上可能会有差异。 类型 含义 最小尺寸 bool 未定义 char 8 位 wchar_t 宽字</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 1 章 开始</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c1/</link>
+      <pubDate>Thu, 17 Sep 2020 14:07:57 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c1/</guid>
+      <description>第 1 章 开始 1.1 查看程序返回值 当一个程序运行结束时，我们想知道 main 函数的返回值可以使用以下命令。 Win &amp;gt; echo %ERRORLEVEL% Unix $ echo $? 1.2 标准库有四个输入输出对象 cin // 标准输入 cout // 标准输出 cerr // 标准错误 clog // 输出程序运行时的一般信息 字面</description>
+    </item>
     
     <item>
       <title>《概率、统计与随机过程》 笔记 第 1 章 概率论导论</title>

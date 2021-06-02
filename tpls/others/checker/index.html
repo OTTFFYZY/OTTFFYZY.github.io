@@ -162,15 +162,13 @@
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">tc</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-    <span class="p">{</span>
+    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">system</span><span class="p">(</span><span class="s">&#34;data.exe &gt; data.in&#34;</span><span class="p">);</span>
         <span class="c1">// system(&#34;python data.py &gt; data.in&#34;);
 </span><span class="c1"></span>        <span class="n">system</span><span class="p">(</span><span class="s">&#34;std.exe &lt; data.in &gt; std.out&#34;</span><span class="p">);</span>
         <span class="n">system</span><span class="p">(</span><span class="s">&#34;my.exe &lt; data.in &gt; my.out&#34;</span><span class="p">);</span>
         <span class="c1">// system(&#34;diff std.out my.out &gt; diff.out&#34;):
-</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span><span class="n">system</span><span class="p">(</span><span class="s">&#34;fc std.out my.out &gt; diff.out&#34;</span><span class="p">))</span> 
-        <span class="p">{</span>
+</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span><span class="n">system</span><span class="p">(</span><span class="s">&#34;fc std.out my.out &gt; diff.out&#34;</span><span class="p">))</span> <span class="p">{</span>
             <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;WA&#34;</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
             <span class="k">break</span><span class="p">;</span>
         <span class="p">}</span>

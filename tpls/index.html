@@ -104,6 +104,52 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
+      <a href="/tpls/others/rnd/">
+        <div class="h2 mt-1 mb-1">[模板] 随机数 Random</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E5%85%B6%E4%BB%96' class="muted-link">
+  <span class="Label Label--gray-darker">其他</span>
+</a>
+
+
+
+
+
+<a href='/tags/random' class="muted-link">
+  <span class="Label Label--gray">Random</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        <span>2021-04-25</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    随机数 Random #include &lt;bits/stdc++.h&gt; using namespace std; typedef long long LL; struct FastIO { FastIO() { ios::sync_with_stdio(false); cin.tie(nullptr); } }fastio; mt19937 rnd(chrono::system_clock::now().time_since_epoch().count()); mt19937_64 rnd_64(chrono::system_clock::now().time_since_epoch().count()); // [0,r) int rndi(int r) { return rnd()%r; } // [l,r] r-l+1&lt;=INT_MAX int rndi(int l,int r) { return rnd()%(r-l+1)+l; } LL rndll(LL l,LL r) { return rnd_64()%(r-l+1)+l; } char rndc() { return rndi(-128,127); } char rndc(const string &amp;s) { return s[rndi(s.length())]; } char rnd_lower() { return rndi(26)+&#39;a&#39;; } char rnd_upper() { return rndi(26)+&#39;A&#39;; } char rnd_digit() { return rndi(10)+&#39;0&#39;; } char rnd_alpha() { int r=rndi(52); return r&lt;26?(r+&#39;a&#39;):(r-26+&#39;A&#39;); } char rnd_alphadigit() { int r=rndi(62); if(r&lt;10)
+    <a class="muted-link" href="/tpls/others/rnd/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
       <a href="/tpls/ds/discretization/">
         <div class="h2 mt-1 mb-1">[模板][数据结构] 离散化 Discretization</div>
       </a>
@@ -139,7 +185,7 @@
   </div>
   <div class="text-gray">
     
-    离散化 Discretization template&lt;typename T, int IdFrom = 0, typename OpLs=less&lt;T&gt;, typename OpEq=equal_to&lt;T&gt;&gt; struct Dctz { static OpLs ls; static OpEq eq; vector&lt;T&gt; x; void add(T v) { x.push_back(v); } void init() { sort(x.begin(),x.end(),ls); x.erase(unique(x.begin(),x.end(),eq),x.end()); } int id(const T &amp;v) { return lower_bound(x.begin(),x.end(),v,ls)-x.begin()+IdFrom; } }; Dctz&lt;int&gt; dc;
+    离散化 Discretization template&lt;typename T, int IdFrom=0, typename OpLs=less&lt;T&gt;, typename OpEq=equal_to&lt;T&gt;&gt; struct Dctz { static OpLs ls; static OpEq eq; vector&lt;T&gt; x; void clear() { x.clear(); } void add(T v) { x.push_back(v); } void init() { sort(x.begin(),x.end(),ls); x.erase(unique(x.begin(),x.end(),eq),x.end()); } int size() { return x.size(); } int id(const T &amp;v) { return lower_bound(x.begin(),x.end(),v,ls)-x.begin()+IdFrom; } }; Dctz&lt;&gt; dc;
     <a class="muted-link" href="/tpls/ds/discretization/">…</a>
   </div>
 </div>
@@ -327,7 +373,7 @@
   </div>
   <div class="text-gray">
     
-    树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // id 1~n template&lt;typename T,size_t M,typename OpPlus=plus&lt;T&gt;,typename OpMinus=minus&lt;T&gt;&gt; struct BIT { static int lowbit(int x) { return x&amp;(-x); } static OpPlus opp; static OpMinus opm; T tree[M+1]; // tree[i] -&gt; sum of [i-lowbit(i)+1,i] T tmp[M+1]; int n; void init(int n_) { n=n_; for(int i=1;i&lt;=n;i++) tree[i]=T(0); } void init(int n_,T v[]) // v[0 ~ n_-1] { n=n_; tmp[0]=T(0); for(int i=1;i&lt;=n;i++) tmp[i]=opp(tmp[i-1],v[i]); for(int i=1;i&lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(;p&lt;=n;p+=lowbit(p)) tree[p]=opp(tree[p],V); } T sum(int p) { T ans(0);
+    树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // T must + - // id 1~n template&lt;typename T,size_t M,typename OpPlus=plus&lt;T&gt;,typename OpMinus=minus&lt;T&gt;&gt; struct BIT { static int lowbit(int x) { return x&amp;(-x); } static OpPlus opp; static OpMinus opm; static T tmp[M+1]; T tree[M+1]; // tree[i] -&gt; sum of [i-lowbit(i)+1,i] int n; void init(int n_) { n=n_; for(int i=1;i&lt;=n;i++) tree[i]=T(0); } void init(int n_,T v[]) // v[0 ~ n_-1] { n=n_; tmp[0]=T(0); for(int i=1;i&lt;=n;i++) tmp[i]=opp(tmp[i-1],v[i]); for(int i=1;i&lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(;p&lt;=n;p+=lowbit(p)) tree[p]=opp(tree[p],V); }
     <a class="muted-link" href="/tpls/ds/bit/">…</a>
   </div>
 </div>
@@ -503,7 +549,7 @@
   </div>
   <div class="text-gray">
     
-    模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;x,int y) { x+=y; if(x&gt;=MO) x-=MO; } inline void subv(int &amp;x,int y) { x-=y; if(x&lt;0) x+=MO; } inline void mulv(int &amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;1) { mulv(ans,x); } mulv(x,x); n&gt;&gt;=1; } return ans; } Mint template&lt;size_t MO=1000000007&gt; struct Mint { int x; Mint(int x=0):x(x){ norm();
+    模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;x,int y) { x+=y; if(x&gt;=MO) x-=MO; } inline void subv(int &amp;x,int y) { x-=y; if(x&lt;0) x+=MO; } inline void mulv(int &amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;1) { mulv(ans,x); } mulv(x,x); n&gt;&gt;=1; } return ans; } ModInt template&lt;int MO=1000000007&gt; struct ModInt { int x; ModInt(int x=0):x(x){ norm();
     <a class="muted-link" href="/tpls/nt/mod/">…</a>
   </div>
 </div>
@@ -549,7 +595,7 @@
   </div>
   <div class="text-gray">
     
-    左偏树 Leftist Tree // min leftist tree // T must define &lt; // M: the size of the heap template&lt;typename T,size_t M,typename Cmp=less&lt;&gt;&gt; struct Leftist { T val[M]; int l[M],r[M],d[M]; int nn; // number of node Cmp cmp; void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&lt;int&gt; qu; for(int i=1;i&lt;=n;i++) qu.push(i); int u,v; while(qu.size()&gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[++nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;x,int y) // merge tree
+    左偏树 Leftist Tree // min leftist tree // T must define &lt; // M: the size of the heap template&lt;typename T,size_t M,typename Cmp=less&lt;T&gt;&gt; struct Leftist { static Cmp cmp; T val[M]; int l[M],r[M],d[M]; int nn; // number of node void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&lt;int&gt; qu; for(int i=1;i&lt;=n;i++) qu.push(i); int u,v; while(qu.size()&gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[++nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;x,int y) // merge
     <a class="muted-link" href="/tpls/ds/leftist/">…</a>
   </div>
 </div>
@@ -779,7 +825,7 @@
   </div>
   <div class="text-gray">
     
-    二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &lt; // min heap // M: max size of heap template&lt;typename T,size_t M,typename Cmp=less&lt;&gt;&gt; struct Heap { T h[M+1]; int n; Cmp cmp; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() { return h[1]; } // check n&gt;=1 int size() { return n; } bool empty() { return n==0;
+    二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &lt; // min heap // M: max size of heap template&lt;typename T,size_t M,typename Cmp=less&lt;T&gt;&gt; struct Heap { static Cmp cmp; T h[M+1]; int n; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() { return h[1]; } // check n&gt;=1 int size() { return n; } bool empty() { return
     <a class="muted-link" href="/tpls/ds/binaryheap/">…</a>
   </div>
 </div>
@@ -814,7 +860,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/notes" class="link-gray text-emphasized css-truncate-target"><span class="">Notes</span></a>
-      <span class="text-right Counter">6</span>
+      <span class="text-right Counter">12</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -834,7 +880,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
-      <span class="text-right Counter">15</span>
+      <span class="text-right Counter">16</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -864,7 +910,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e5%85%b6%e4%bb%96" class="link-gray text-emphasized css-truncate-target"><span class="">其他</span></a>
-      <span class="text-right Counter">3</span>
+      <span class="text-right Counter">4</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -968,6 +1014,11 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/random" class="link-gray text-emphasized css-truncate-target"><span class="">Random</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e4%ba%8c%e5%8f%89%e5%a0%86" class="link-gray text-emphasized css-truncate-target"><span class="">二叉堆</span></a>
       <span class="text-right Counter">1</span>
     </span>
@@ -1048,6 +1099,11 @@
     </a>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/series/cpp-primer" class="link-gray text-emphasized css-truncate-target"><span class="">Cpp primer</span></a>
+      <span class="text-right Counter">6</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/series/effective-cpp" class="link-gray text-emphasized css-truncate-target"><span class="">Effective cpp</span></a>
       <span class="text-right Counter">1</span>
     </span>
@@ -1079,7 +1135,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-09" class="link-gray text-emphasized css-truncate-target"><span class="">2020 09</span></a>
-      <span class="text-right Counter">24</span>
+      <span class="text-right Counter">25</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -1095,6 +1151,16 @@
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2021-01" class="link-gray text-emphasized css-truncate-target"><span class="">2021 01</span></a>
       <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2021-04" class="link-gray text-emphasized css-truncate-target"><span class="">2021 04</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2021-05" class="link-gray text-emphasized css-truncate-target"><span class="">2021 05</span></a>
+      <span class="text-right Counter">5</span>
     </span>
     
   </div>

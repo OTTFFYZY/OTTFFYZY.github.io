@@ -17,7 +17,7 @@
       <pubDate>Wed, 23 Sep 2020 23:12:58 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/ds/binaryheap/</guid>
-      <description>二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &amp;lt; // min heap // M: max size of heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;&amp;gt;&amp;gt; struct Heap { T h[M+1]; int n; Cmp cmp; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&amp;lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() { return h[1]; } // check n&amp;gt;=1 int size() { return n; } bool empty() { return n==0;</description>
+      <description>二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &amp;lt; // min heap // M: max size of heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;T&amp;gt;&amp;gt; struct Heap { static Cmp cmp; T h[M+1]; int n; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&amp;lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() { return h[1]; } // check n&amp;gt;=1 int size() { return n; } bool empty() { return</description>
     </item>
     
   </channel>

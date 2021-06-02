@@ -6,10 +6,19 @@
     <description>Recent content in Tpls on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 20 Jan 2021 11:39:32 -0800</lastBuildDate>
+    <lastBuildDate>Sun, 25 Apr 2021 18:19:08 -0700</lastBuildDate>
     
 	<atom:link href="https://ottffyzy.github.io/tpls/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[模板] 随机数 Random</title>
+      <link>https://ottffyzy.github.io/tpls/others/rnd/</link>
+      <pubDate>Sun, 25 Apr 2021 18:19:08 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tpls/others/rnd/</guid>
+      <description>随机数 Random #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long LL; struct FastIO { FastIO() { ios::sync_with_stdio(false); cin.tie(nullptr); } }fastio; mt19937 rnd(chrono::system_clock::now().time_since_epoch().count()); mt19937_64 rnd_64(chrono::system_clock::now().time_since_epoch().count()); // [0,r) int rndi(int r) { return rnd()%r; } // [l,r] r-l+1&amp;lt;=INT_MAX int rndi(int l,int r) { return rnd()%(r-l+1)+l; } LL rndll(LL l,LL r) { return rnd_64()%(r-l+1)+l; } char rndc() { return rndi(-128,127); } char rndc(const string &amp;amp;s) { return s[rndi(s.length())]; } char rnd_lower() { return rndi(26)+&amp;#39;a&amp;#39;; } char rnd_upper() { return rndi(26)+&amp;#39;A&amp;#39;; } char rnd_digit() { return rndi(10)+&amp;#39;0&amp;#39;; } char rnd_alpha() { int r=rndi(52); return r&amp;lt;26?(r+&amp;#39;a&amp;#39;):(r-26+&amp;#39;A&amp;#39;); } char rnd_alphadigit() { int r=rndi(62); if(r&amp;lt;10)</description>
+    </item>
     
     <item>
       <title>[模板][数据结构] 离散化 Discretization</title>
@@ -17,7 +26,7 @@
       <pubDate>Wed, 20 Jan 2021 11:39:32 -0800</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/ds/discretization/</guid>
-      <description>离散化 Discretization template&amp;lt;typename T, int IdFrom = 0, typename OpLs=less&amp;lt;T&amp;gt;, typename OpEq=equal_to&amp;lt;T&amp;gt;&amp;gt; struct Dctz { static OpLs ls; static OpEq eq; vector&amp;lt;T&amp;gt; x; void add(T v) { x.push_back(v); } void init() { sort(x.begin(),x.end(),ls); x.erase(unique(x.begin(),x.end(),eq),x.end()); } int id(const T &amp;amp;v) { return lower_bound(x.begin(),x.end(),v,ls)-x.begin()+IdFrom; } }; Dctz&amp;lt;int&amp;gt; dc;</description>
+      <description>离散化 Discretization template&amp;lt;typename T, int IdFrom=0, typename OpLs=less&amp;lt;T&amp;gt;, typename OpEq=equal_to&amp;lt;T&amp;gt;&amp;gt; struct Dctz { static OpLs ls; static OpEq eq; vector&amp;lt;T&amp;gt; x; void clear() { x.clear(); } void add(T v) { x.push_back(v); } void init() { sort(x.begin(),x.end(),ls); x.erase(unique(x.begin(),x.end(),eq),x.end()); } int size() { return x.size(); } int id(const T &amp;amp;v) { return lower_bound(x.begin(),x.end(),v,ls)-x.begin()+IdFrom; } }; Dctz&amp;lt;&amp;gt; dc;</description>
     </item>
     
     <item>
@@ -53,7 +62,7 @@
       <pubDate>Thu, 01 Oct 2020 12:09:44 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/ds/bit/</guid>
-      <description>树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // id 1~n template&amp;lt;typename T,size_t M,typename OpPlus=plus&amp;lt;T&amp;gt;,typename OpMinus=minus&amp;lt;T&amp;gt;&amp;gt; struct BIT { static int lowbit(int x) { return x&amp;amp;(-x); } static OpPlus opp; static OpMinus opm; T tree[M+1]; // tree[i] -&amp;gt; sum of [i-lowbit(i)+1,i] T tmp[M+1]; int n; void init(int n_) { n=n_; for(int i=1;i&amp;lt;=n;i++) tree[i]=T(0); } void init(int n_,T v[]) // v[0 ~ n_-1] { n=n_; tmp[0]=T(0); for(int i=1;i&amp;lt;=n;i++) tmp[i]=opp(tmp[i-1],v[i]); for(int i=1;i&amp;lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&amp;lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(;p&amp;lt;=n;p+=lowbit(p)) tree[p]=opp(tree[p],V); } T sum(int p) { T ans(0);</description>
+      <description>树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // T must + - // id 1~n template&amp;lt;typename T,size_t M,typename OpPlus=plus&amp;lt;T&amp;gt;,typename OpMinus=minus&amp;lt;T&amp;gt;&amp;gt; struct BIT { static int lowbit(int x) { return x&amp;amp;(-x); } static OpPlus opp; static OpMinus opm; static T tmp[M+1]; T tree[M+1]; // tree[i] -&amp;gt; sum of [i-lowbit(i)+1,i] int n; void init(int n_) { n=n_; for(int i=1;i&amp;lt;=n;i++) tree[i]=T(0); } void init(int n_,T v[]) // v[0 ~ n_-1] { n=n_; tmp[0]=T(0); for(int i=1;i&amp;lt;=n;i++) tmp[i]=opp(tmp[i-1],v[i]); for(int i=1;i&amp;lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&amp;lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(;p&amp;lt;=n;p+=lowbit(p)) tree[p]=opp(tree[p],V); }</description>
     </item>
     
     <item>
@@ -89,7 +98,7 @@
       <pubDate>Sun, 27 Sep 2020 23:19:53 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/nt/mod/</guid>
-      <description>模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&amp;gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&amp;lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;amp;x,int y) { x+=y; if(x&amp;gt;=MO) x-=MO; } inline void subv(int &amp;amp;x,int y) { x-=y; if(x&amp;lt;0) x+=MO; } inline void mulv(int &amp;amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;amp;1) { mulv(ans,x); } mulv(x,x); n&amp;gt;&amp;gt;=1; } return ans; } Mint template&amp;lt;size_t MO=1000000007&amp;gt; struct Mint { int x; Mint(int x=0):x(x){ norm();</description>
+      <description>模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&amp;gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&amp;lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;amp;x,int y) { x+=y; if(x&amp;gt;=MO) x-=MO; } inline void subv(int &amp;amp;x,int y) { x-=y; if(x&amp;lt;0) x+=MO; } inline void mulv(int &amp;amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;amp;1) { mulv(ans,x); } mulv(x,x); n&amp;gt;&amp;gt;=1; } return ans; } ModInt template&amp;lt;int MO=1000000007&amp;gt; struct ModInt { int x; ModInt(int x=0):x(x){ norm();</description>
     </item>
     
     <item>
@@ -98,7 +107,7 @@
       <pubDate>Sun, 27 Sep 2020 19:07:04 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/ds/leftist/</guid>
-      <description>左偏树 Leftist Tree // min leftist tree // T must define &amp;lt; // M: the size of the heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;&amp;gt;&amp;gt; struct Leftist { T val[M]; int l[M],r[M],d[M]; int nn; // number of node Cmp cmp; void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&amp;lt;int&amp;gt; qu; for(int i=1;i&amp;lt;=n;i++) qu.push(i); int u,v; while(qu.size()&amp;gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[++nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;amp;x,int y) // merge tree</description>
+      <description>左偏树 Leftist Tree // min leftist tree // T must define &amp;lt; // M: the size of the heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;T&amp;gt;&amp;gt; struct Leftist { static Cmp cmp; T val[M]; int l[M],r[M],d[M]; int nn; // number of node void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&amp;lt;int&amp;gt; qu; for(int i=1;i&amp;lt;=n;i++) qu.push(i); int u,v; while(qu.size()&amp;gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[++nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;amp;x,int y) // merge</description>
     </item>
     
     <item>
@@ -143,7 +152,7 @@
       <pubDate>Wed, 23 Sep 2020 23:12:58 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/ds/binaryheap/</guid>
-      <description>二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &amp;lt; // min heap // M: max size of heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;&amp;gt;&amp;gt; struct Heap { T h[M+1]; int n; Cmp cmp; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&amp;lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() { return h[1]; } // check n&amp;gt;=1 int size() { return n; } bool empty() { return n==0;</description>
+      <description>二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &amp;lt; // min heap // M: max size of heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;T&amp;gt;&amp;gt; struct Heap { static Cmp cmp; T h[M+1]; int n; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&amp;lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() { return h[1]; } // check n&amp;gt;=1 int size() { return n; } bool empty() { return</description>
     </item>
     
   </channel>

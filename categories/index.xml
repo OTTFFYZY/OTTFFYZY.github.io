@@ -6,15 +6,24 @@
     <description>Recent content in Categories on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 20 Jan 2021 11:39:32 -0800</lastBuildDate>
+    <lastBuildDate>Fri, 28 May 2021 11:50:51 -0700</lastBuildDate>
     
 	<atom:link href="https://ottffyzy.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Notes</title>
+      <link>https://ottffyzy.github.io/categories/notes/</link>
+      <pubDate>Fri, 28 May 2021 11:50:51 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/categories/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Templates</title>
       <link>https://ottffyzy.github.io/categories/templates/</link>
-      <pubDate>Wed, 20 Jan 2021 11:39:32 -0800</pubDate>
+      <pubDate>Sun, 25 Apr 2021 18:19:08 -0700</pubDate>
       
       <guid>https://ottffyzy.github.io/categories/templates/</guid>
       <description></description>
@@ -44,15 +53,6 @@
       <pubDate>Fri, 18 Sep 2020 22:10:05 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/categories/solutions/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Notes</title>
-      <link>https://ottffyzy.github.io/categories/notes/</link>
-      <pubDate>Tue, 15 Sep 2020 14:13:07 -0400</pubDate>
-      
-      <guid>https://ottffyzy.github.io/categories/notes/</guid>
       <description></description>
     </item>
     

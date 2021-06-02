@@ -17,7 +17,7 @@
       <pubDate>Sun, 27 Sep 2020 19:07:04 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/ds/leftist/</guid>
-      <description>左偏树 Leftist Tree // min leftist tree // T must define &amp;lt; // M: the size of the heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;&amp;gt;&amp;gt; struct Leftist { T val[M]; int l[M],r[M],d[M]; int nn; // number of node Cmp cmp; void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&amp;lt;int&amp;gt; qu; for(int i=1;i&amp;lt;=n;i++) qu.push(i); int u,v; while(qu.size()&amp;gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[++nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;amp;x,int y) // merge tree</description>
+      <description>左偏树 Leftist Tree // min leftist tree // T must define &amp;lt; // M: the size of the heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;T&amp;gt;&amp;gt; struct Leftist { static Cmp cmp; T val[M]; int l[M],r[M],d[M]; int nn; // number of node void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&amp;lt;int&amp;gt; qu; for(int i=1;i&amp;lt;=n;i++) qu.push(i); int u,v; while(qu.size()&amp;gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[++nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;amp;x,int y) // merge</description>
     </item>
     
   </channel>

@@ -17,7 +17,7 @@
       <pubDate>Wed, 20 Jan 2021 11:39:32 -0800</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/ds/discretization/</guid>
-      <description>离散化 Discretization template&amp;lt;typename T, int IdFrom = 0, typename OpLs=less&amp;lt;T&amp;gt;, typename OpEq=equal_to&amp;lt;T&amp;gt;&amp;gt; struct Dctz { static OpLs ls; static OpEq eq; vector&amp;lt;T&amp;gt; x; void add(T v) { x.push_back(v); } void init() { sort(x.begin(),x.end(),ls); x.erase(unique(x.begin(),x.end(),eq),x.end()); } int id(const T &amp;amp;v) { return lower_bound(x.begin(),x.end(),v,ls)-x.begin()+IdFrom; } }; Dctz&amp;lt;int&amp;gt; dc;</description>
+      <description>离散化 Discretization template&amp;lt;typename T, int IdFrom=0, typename OpLs=less&amp;lt;T&amp;gt;, typename OpEq=equal_to&amp;lt;T&amp;gt;&amp;gt; struct Dctz { static OpLs ls; static OpEq eq; vector&amp;lt;T&amp;gt; x; void clear() { x.clear(); } void add(T v) { x.push_back(v); } void init() { sort(x.begin(),x.end(),ls); x.erase(unique(x.begin(),x.end(),eq),x.end()); } int size() { return x.size(); } int id(const T &amp;amp;v) { return lower_bound(x.begin(),x.end(),v,ls)-x.begin()+IdFrom; } }; Dctz&amp;lt;&amp;gt; dc;</description>
     </item>
     
   </channel>

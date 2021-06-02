@@ -17,7 +17,7 @@
       <pubDate>Thu, 01 Oct 2020 12:09:44 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/ds/bit/</guid>
-      <description>树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // id 1~n template&amp;lt;typename T,size_t M,typename OpPlus=plus&amp;lt;T&amp;gt;,typename OpMinus=minus&amp;lt;T&amp;gt;&amp;gt; struct BIT { static int lowbit(int x) { return x&amp;amp;(-x); } static OpPlus opp; static OpMinus opm; T tree[M+1]; // tree[i] -&amp;gt; sum of [i-lowbit(i)+1,i] T tmp[M+1]; int n; void init(int n_) { n=n_; for(int i=1;i&amp;lt;=n;i++) tree[i]=T(0); } void init(int n_,T v[]) // v[0 ~ n_-1] { n=n_; tmp[0]=T(0); for(int i=1;i&amp;lt;=n;i++) tmp[i]=opp(tmp[i-1],v[i]); for(int i=1;i&amp;lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&amp;lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(;p&amp;lt;=n;p+=lowbit(p)) tree[p]=opp(tree[p],V); } T sum(int p) { T ans(0);</description>
+      <description>树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // T must + - // id 1~n template&amp;lt;typename T,size_t M,typename OpPlus=plus&amp;lt;T&amp;gt;,typename OpMinus=minus&amp;lt;T&amp;gt;&amp;gt; struct BIT { static int lowbit(int x) { return x&amp;amp;(-x); } static OpPlus opp; static OpMinus opm; static T tmp[M+1]; T tree[M+1]; // tree[i] -&amp;gt; sum of [i-lowbit(i)+1,i] int n; void init(int n_) { n=n_; for(int i=1;i&amp;lt;=n;i++) tree[i]=T(0); } void init(int n_,T v[]) // v[0 ~ n_-1] { n=n_; tmp[0]=T(0); for(int i=1;i&amp;lt;=n;i++) tmp[i]=opp(tmp[i-1],v[i]); for(int i=1;i&amp;lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&amp;lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(;p&amp;lt;=n;p+=lowbit(p)) tree[p]=opp(tree[p],V); }</description>
     </item>
     
   </channel>

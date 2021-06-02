@@ -11,7 +11,7 @@
     </title>
     
     
-    <meta name="description" property="og:description" content="左偏树 Leftist Tree // min leftist tree // T must define &amp;lt; // M: the size of the heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;&amp;gt;&amp;gt; struct Leftist { T val[M]; int l[M],r[M],d[M]; int nn; // number of node Cmp cmp; void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&amp;lt;int&amp;gt; qu; for(int i=1;i&amp;lt;=n;i&#43;&#43;) qu.push(i); int u,v; while(qu.size()&amp;gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[&#43;&#43;nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;amp;x,int y) // merge tree|OTTFF&#39;s Blog">
+    <meta name="description" property="og:description" content="左偏树 Leftist Tree // min leftist tree // T must define &amp;lt; // M: the size of the heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;T&amp;gt;&amp;gt; struct Leftist { static Cmp cmp; T val[M]; int l[M],r[M],d[M]; int nn; // number of node void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&amp;lt;int&amp;gt; qu; for(int i=1;i&amp;lt;=n;i&#43;&#43;) qu.push(i); int u,v; while(qu.size()&amp;gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[&#43;&#43;nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;amp;x,int y) // merge|OTTFF&#39;s Blog">
     
 
     <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
@@ -139,14 +139,14 @@
 <div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// min leftist tree
 </span><span class="c1">// T must define &lt;
 </span><span class="c1">// M: the size of the heap
-</span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span><span class="n">size_t</span> <span class="n">M</span><span class="p">,</span><span class="k">typename</span> <span class="n">Cmp</span><span class="o">=</span><span class="n">less</span><span class="o">&lt;&gt;&gt;</span>
+</span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span><span class="n">size_t</span> <span class="n">M</span><span class="p">,</span><span class="k">typename</span> <span class="n">Cmp</span><span class="o">=</span><span class="n">less</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span>
 <span class="k">struct</span> <span class="nc">Leftist</span>
 <span class="p">{</span>
+    <span class="k">static</span> <span class="n">Cmp</span> <span class="n">cmp</span><span class="p">;</span>
     <span class="n">T</span> <span class="n">val</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
     <span class="kt">int</span> <span class="n">l</span><span class="p">[</span><span class="n">M</span><span class="p">],</span><span class="n">r</span><span class="p">[</span><span class="n">M</span><span class="p">],</span><span class="n">d</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
     <span class="kt">int</span> <span class="n">nn</span><span class="p">;</span> <span class="c1">// number of node
-</span><span class="c1"></span>    <span class="n">Cmp</span> <span class="n">cmp</span><span class="p">;</span>
-    <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span> <span class="n">nn</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+</span><span class="c1"></span>    <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span> <span class="n">nn</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
     <span class="c1">// using val to build a leftist tree
 </span><span class="c1"></span>    <span class="c1">// return the id of the root
 </span><span class="c1"></span>    <span class="kt">int</span> <span class="nf">build</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span><span class="n">T</span> <span class="n">val_</span><span class="p">[])</span> 

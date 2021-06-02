@@ -11,7 +11,7 @@
     </title>
     
     
-    <meta name="description" property="og:description" content="离散化 Discretization template&amp;lt;typename T, int IdFrom = 0, typename OpLs=less&amp;lt;T&amp;gt;, typename OpEq=equal_to&amp;lt;T&amp;gt;&amp;gt; struct Dctz { static OpLs ls; static OpEq eq; vector&amp;lt;T&amp;gt; x; void add(T v) { x.push_back(v); } void init() { sort(x.begin(),x.end(),ls); x.erase(unique(x.begin(),x.end(),eq),x.end()); } int id(const T &amp;amp;v) { return lower_bound(x.begin(),x.end(),v,ls)-x.begin()&#43;IdFrom; } }; Dctz&amp;lt;int&amp;gt; dc;|OTTFF&#39;s Blog">
+    <meta name="description" property="og:description" content="离散化 Discretization template&amp;lt;typename T, int IdFrom=0, typename OpLs=less&amp;lt;T&amp;gt;, typename OpEq=equal_to&amp;lt;T&amp;gt;&amp;gt; struct Dctz { static OpLs ls; static OpEq eq; vector&amp;lt;T&amp;gt; x; void clear() { x.clear(); } void add(T v) { x.push_back(v); } void init() { sort(x.begin(),x.end(),ls); x.erase(unique(x.begin(),x.end(),eq),x.end()); } int size() { return x.size(); } int id(const T &amp;amp;v) { return lower_bound(x.begin(),x.end(),v,ls)-x.begin()&#43;IdFrom; } }; Dctz&amp;lt;&amp;gt; dc;|OTTFF&#39;s Blog">
     
 
     <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
@@ -137,7 +137,7 @@
   <section class="pb-6 mb-3 border-bottom markdown">
       <h2 id="离散化-discretization">离散化 Discretization</h2>
 <div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span>
-         <span class="kt">int</span> <span class="n">IdFrom</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+         <span class="kt">int</span> <span class="n">IdFrom</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
          <span class="k">typename</span> <span class="n">OpLs</span><span class="o">=</span><span class="n">less</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span>
          <span class="k">typename</span> <span class="n">OpEq</span><span class="o">=</span><span class="n">equal_to</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span>
 <span class="k">struct</span> <span class="nc">Dctz</span>
@@ -145,16 +145,17 @@
     <span class="k">static</span> <span class="n">OpLs</span> <span class="n">ls</span><span class="p">;</span>
     <span class="k">static</span> <span class="n">OpEq</span> <span class="n">eq</span><span class="p">;</span>
     <span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">x</span><span class="p">;</span>
+    <span class="kt">void</span> <span class="nf">clear</span><span class="p">()</span> <span class="p">{</span> <span class="n">x</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span> <span class="p">}</span>
     <span class="kt">void</span> <span class="nf">add</span><span class="p">(</span><span class="n">T</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span> <span class="n">x</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">v</span><span class="p">);</span> <span class="p">}</span>
-    <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span>
-    <span class="p">{</span> 
+    <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span> 
         <span class="n">sort</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">x</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="n">ls</span><span class="p">);</span> 
         <span class="n">x</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">unique</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">x</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="n">eq</span><span class="p">),</span><span class="n">x</span><span class="p">.</span><span class="n">end</span><span class="p">());</span> 
     <span class="p">}</span>
-    <span class="kt">int</span> <span class="nf">id</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">v</span><span class="p">)</span> 
-    <span class="p">{</span> <span class="k">return</span> <span class="n">lower_bound</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">x</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="n">v</span><span class="p">,</span><span class="n">ls</span><span class="p">)</span><span class="o">-</span><span class="n">x</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="o">+</span><span class="n">IdFrom</span><span class="p">;</span> <span class="p">}</span>
+    <span class="kt">int</span> <span class="nf">size</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="p">}</span>
+    <span class="kt">int</span> <span class="nf">id</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">v</span><span class="p">)</span> <span class="p">{</span> 
+        <span class="k">return</span> <span class="n">lower_bound</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">x</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="n">v</span><span class="p">,</span><span class="n">ls</span><span class="p">)</span><span class="o">-</span><span class="n">x</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="o">+</span><span class="n">IdFrom</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">};</span>
-<span class="n">Dctz</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">dc</span><span class="p">;</span>
+<span class="n">Dctz</span><span class="o">&lt;&gt;</span> <span class="n">dc</span><span class="p">;</span>
 </code></pre></div>
   </section>
 
@@ -162,7 +163,9 @@
     
         <a href="/algos/gt/johnson/" class="previous_page">Prev: [算法][图论] 约翰逊 Johnson 算法 全源最短路 </a>
     
+     <br> 
     
+        <a href="/tpls/others/rnd/" class="next_page">Next: [模板] 随机数 Random </a>
     
   </section>
 

@@ -6,10 +6,64 @@
     <description>Recent content on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 20 Jan 2021 11:39:32 -0800</lastBuildDate>
+    <lastBuildDate>Fri, 28 May 2021 11:50:51 -0700</lastBuildDate>
     
 	<atom:link href="https://ottffyzy.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 6 章 函数</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c6/</link>
+      <pubDate>Fri, 28 May 2021 11:50:51 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c6/</guid>
+      <description>第 6 章 函数 6.1 函数基础 我们可以通过调用运算符 call operator 来执行函数。 形参 parameter 实参 argument 主调函数 calling function 被调函数 called function 空形参列表可以是空的括号，或是 void void f1() {} void f2(void) {} 6.1.1 局部对象 C++ 中名字有作用域，对象有声明周期 lifetime。 名</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 5 章 语句</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c5/</link>
+      <pubDate>Thu, 27 May 2021 00:42:06 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c5/</guid>
+      <description>第 5 章 语句 一个表达式末尾加上分号就变成了表达式语句 expression statement。 空语句 null statement。 复合语句 compound statement 也称块 block 是用花括号括起来的语句和声明序列。在程序某个位置如果语法上需要一个语句，逻辑上需</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 4 章 表达式</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c4/</link>
+      <pubDate>Tue, 25 May 2021 22:00:23 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c4/</guid>
+      <description>第 4 章 表达式 表达式 expression 由一个或多个运算对象 operand 组成，对表达式求值将得到一个结果。字面值和变量是最简单的表达式，运算符 operator 将一个或多个对象组合起来可以生成复杂的表达式。 4.1 基础 4.1.1 基本概念 对于复杂的表达式，需要了</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 3 章 字符串、向量和数组</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c3/</link>
+      <pubDate>Thu, 20 May 2021 23:32:08 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c3/</guid>
+      <description>第 3 章 字符串、向量和数组 3.1 命名空间的 using 声明 using 声明 using declaration using namesapce::name; 头文件不应包含 using 声明。因为头文件会被包含到其他文件中去，使用 using 声明则可能带来名字冲突。 3.2 标准库类型 string 3.2.1 定义和初始化 string 对象 #include &amp;lt;iostream&amp;gt;#include &amp;lt;cassert&amp;gt;#include &amp;lt;iterator&amp;gt;#include &amp;lt;string&amp;gt;#include &amp;lt;cctype&amp;gt; int main() { { // string::string()</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 2 章 变量和基本类型</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c2/</link>
+      <pubDate>Mon, 17 May 2021 21:07:47 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c2/</guid>
+      <description>第 2 章 变量和基本类型 2.1 基本内置类型 基本内置类型分为算数类型 arithmetic type 和空类型 void 2.1.1 算数类型 整型 integral type 和浮点型 注意 C++ 只规定了每种算数类型的最小尺寸，所以不同机器上可能会有差异。 类型 含义 最小尺寸 bool 未定义 char 8 位 wchar_t 宽字</description>
+    </item>
+    
+    <item>
+      <title>[模板] 随机数 Random</title>
+      <link>https://ottffyzy.github.io/tpls/others/rnd/</link>
+      <pubDate>Sun, 25 Apr 2021 18:19:08 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tpls/others/rnd/</guid>
+      <description>随机数 Random #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long LL; struct FastIO { FastIO() { ios::sync_with_stdio(false); cin.tie(nullptr); } }fastio; mt19937 rnd(chrono::system_clock::now().time_since_epoch().count()); mt19937_64 rnd_64(chrono::system_clock::now().time_since_epoch().count()); // [0,r) int rndi(int r) { return rnd()%r; } // [l,r] r-l+1&amp;lt;=INT_MAX int rndi(int l,int r) { return rnd()%(r-l+1)+l; } LL rndll(LL l,LL r) { return rnd_64()%(r-l+1)+l; } char rndc() { return rndi(-128,127); } char rndc(const string &amp;amp;s) { return s[rndi(s.length())]; } char rnd_lower() { return rndi(26)+&amp;#39;a&amp;#39;; } char rnd_upper() { return rndi(26)+&amp;#39;A&amp;#39;; } char rnd_digit() { return rndi(10)+&amp;#39;0&amp;#39;; } char rnd_alpha() { int r=rndi(52); return r&amp;lt;26?(r+&amp;#39;a&amp;#39;):(r-26+&amp;#39;A&amp;#39;); } char rnd_alphadigit() { int r=rndi(62); if(r&amp;lt;10)</description>
+    </item>
     
     <item>
       <title>[模板][数据结构] 离散化 Discretization</title>
@@ -17,7 +71,7 @@
       <pubDate>Wed, 20 Jan 2021 11:39:32 -0800</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/ds/discretization/</guid>
-      <description>离散化 Discretization template&amp;lt;typename T, int IdFrom = 0, typename OpLs=less&amp;lt;T&amp;gt;, typename OpEq=equal_to&amp;lt;T&amp;gt;&amp;gt; struct Dctz { static OpLs ls; static OpEq eq; vector&amp;lt;T&amp;gt; x; void add(T v) { x.push_back(v); } void init() { sort(x.begin(),x.end(),ls); x.erase(unique(x.begin(),x.end(),eq),x.end()); } int id(const T &amp;amp;v) { return lower_bound(x.begin(),x.end(),v,ls)-x.begin()+IdFrom; } }; Dctz&amp;lt;int&amp;gt; dc;</description>
+      <description>离散化 Discretization template&amp;lt;typename T, int IdFrom=0, typename OpLs=less&amp;lt;T&amp;gt;, typename OpEq=equal_to&amp;lt;T&amp;gt;&amp;gt; struct Dctz { static OpLs ls; static OpEq eq; vector&amp;lt;T&amp;gt; x; void clear() { x.clear(); } void add(T v) { x.push_back(v); } void init() { sort(x.begin(),x.end(),ls); x.erase(unique(x.begin(),x.end(),eq),x.end()); } int size() { return x.size(); } int id(const T &amp;amp;v) { return lower_bound(x.begin(),x.end(),v,ls)-x.begin()+IdFrom; } }; Dctz&amp;lt;&amp;gt; dc;</description>
     </item>
     
     <item>
@@ -80,7 +134,7 @@
       <pubDate>Thu, 01 Oct 2020 12:09:44 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/ds/bit/</guid>
-      <description>树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // id 1~n template&amp;lt;typename T,size_t M,typename OpPlus=plus&amp;lt;T&amp;gt;,typename OpMinus=minus&amp;lt;T&amp;gt;&amp;gt; struct BIT { static int lowbit(int x) { return x&amp;amp;(-x); } static OpPlus opp; static OpMinus opm; T tree[M+1]; // tree[i] -&amp;gt; sum of [i-lowbit(i)+1,i] T tmp[M+1]; int n; void init(int n_) { n=n_; for(int i=1;i&amp;lt;=n;i++) tree[i]=T(0); } void init(int n_,T v[]) // v[0 ~ n_-1] { n=n_; tmp[0]=T(0); for(int i=1;i&amp;lt;=n;i++) tmp[i]=opp(tmp[i-1],v[i]); for(int i=1;i&amp;lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&amp;lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(;p&amp;lt;=n;p+=lowbit(p)) tree[p]=opp(tree[p],V); } T sum(int p) { T ans(0);</description>
+      <description>树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // T must + - // id 1~n template&amp;lt;typename T,size_t M,typename OpPlus=plus&amp;lt;T&amp;gt;,typename OpMinus=minus&amp;lt;T&amp;gt;&amp;gt; struct BIT { static int lowbit(int x) { return x&amp;amp;(-x); } static OpPlus opp; static OpMinus opm; static T tmp[M+1]; T tree[M+1]; // tree[i] -&amp;gt; sum of [i-lowbit(i)+1,i] int n; void init(int n_) { n=n_; for(int i=1;i&amp;lt;=n;i++) tree[i]=T(0); } void init(int n_,T v[]) // v[0 ~ n_-1] { n=n_; tmp[0]=T(0); for(int i=1;i&amp;lt;=n;i++) tmp[i]=opp(tmp[i-1],v[i]); for(int i=1;i&amp;lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&amp;lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(;p&amp;lt;=n;p+=lowbit(p)) tree[p]=opp(tree[p],V); }</description>
     </item>
     
     <item>
@@ -125,7 +179,7 @@
       <pubDate>Sun, 27 Sep 2020 23:19:53 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/nt/mod/</guid>
-      <description>模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&amp;gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&amp;lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;amp;x,int y) { x+=y; if(x&amp;gt;=MO) x-=MO; } inline void subv(int &amp;amp;x,int y) { x-=y; if(x&amp;lt;0) x+=MO; } inline void mulv(int &amp;amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;amp;1) { mulv(ans,x); } mulv(x,x); n&amp;gt;&amp;gt;=1; } return ans; } Mint template&amp;lt;size_t MO=1000000007&amp;gt; struct Mint { int x; Mint(int x=0):x(x){ norm();</description>
+      <description>模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&amp;gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&amp;lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;amp;x,int y) { x+=y; if(x&amp;gt;=MO) x-=MO; } inline void subv(int &amp;amp;x,int y) { x-=y; if(x&amp;lt;0) x+=MO; } inline void mulv(int &amp;amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;amp;1) { mulv(ans,x); } mulv(x,x); n&amp;gt;&amp;gt;=1; } return ans; } ModInt template&amp;lt;int MO=1000000007&amp;gt; struct ModInt { int x; ModInt(int x=0):x(x){ norm();</description>
     </item>
     
     <item>
@@ -134,7 +188,7 @@
       <pubDate>Sun, 27 Sep 2020 19:07:04 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/ds/leftist/</guid>
-      <description>左偏树 Leftist Tree // min leftist tree // T must define &amp;lt; // M: the size of the heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;&amp;gt;&amp;gt; struct Leftist { T val[M]; int l[M],r[M],d[M]; int nn; // number of node Cmp cmp; void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&amp;lt;int&amp;gt; qu; for(int i=1;i&amp;lt;=n;i++) qu.push(i); int u,v; while(qu.size()&amp;gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[++nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;amp;x,int y) // merge tree</description>
+      <description>左偏树 Leftist Tree // min leftist tree // T must define &amp;lt; // M: the size of the heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;T&amp;gt;&amp;gt; struct Leftist { static Cmp cmp; T val[M]; int l[M],r[M],d[M]; int nn; // number of node void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&amp;lt;int&amp;gt; qu; for(int i=1;i&amp;lt;=n;i++) qu.push(i); int u,v; while(qu.size()&amp;gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[++nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;amp;x,int y) // merge</description>
     </item>
     
     <item>
@@ -179,7 +233,7 @@
       <pubDate>Wed, 23 Sep 2020 23:12:58 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/ds/binaryheap/</guid>
-      <description>二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &amp;lt; // min heap // M: max size of heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;&amp;gt;&amp;gt; struct Heap { T h[M+1]; int n; Cmp cmp; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&amp;lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() { return h[1]; } // check n&amp;gt;=1 int size() { return n; } bool empty() { return n==0;</description>
+      <description>二叉堆 Binary Heap 模板：普通二叉堆 Heap // T must define &amp;lt; // min heap // M: max size of heap template&amp;lt;typename T,size_t M,typename Cmp=less&amp;lt;T&amp;gt;&amp;gt; struct Heap { static Cmp cmp; T h[M+1]; int n; void init() { n=0; } void init(T h_[],int n_) // h[0~n-1] { n=n_; for(int i=1;i&amp;lt;=n;i++) h[i]=h_[i-1]; for(int i=n/2;i;i--) sink(i); // O(n) } void push(T x) { h[++n]=x; swim(n); } T pop() { T res=h[1]; h[1]=h[n--]; sink(1); return res; } T top() { return h[1]; } // check n&amp;gt;=1 int size() { return n; } bool empty() { return</description>
     </item>
     
     <item>
@@ -189,6 +243,15 @@
       
       <guid>https://ottffyzy.github.io/sols/leetcode/lcp21/</guid>
       <description>LCP 21. 追逐游戏 题目大意 给定一棵 $N$ 个点的基环树（环套树）。给定图上两个起始位置 $A$ 和 $B$ ($A \neq B$)。每一轮 $A$ 先移动，$B$ 后移动。每次移动可以移动到图上当前点的相邻点或者保持不动。任意时刻如果 $A$ 和 $B$ 处在同一位</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 1 章 开始</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c1/</link>
+      <pubDate>Thu, 17 Sep 2020 14:07:57 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c1/</guid>
+      <description>第 1 章 开始 1.1 查看程序返回值 当一个程序运行结束时，我们想知道 main 函数的返回值可以使用以下命令。 Win &amp;gt; echo %ERRORLEVEL% Unix $ echo $? 1.2 标准库有四个输入输出对象 cin // 标准输入 cout // 标准输出 cerr // 标准错误 clog // 输出程序运行时的一般信息 字面</description>
     </item>
     
     <item>
