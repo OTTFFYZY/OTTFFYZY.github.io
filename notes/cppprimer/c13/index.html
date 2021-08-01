@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  《C&#43;&#43; Primer》 拾遗 第 13 章 拷贝控制 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="第 13 章 拷贝控制 拷贝控制 copy control 操作包括： 拷贝构造函数 copy constructor 拷贝赋值运算符 copy-assignment operator 移动构造函数 move constructor 移动赋值运算符 move-assignment operator 析构函数 destructor 13.1 拷贝、赋值与销毁 合成拷贝构造函数 synthesized copy constructor #include &amp;lt;iostream&amp;gt;#include &amp;lt;string&amp;gt;using namespace std; class A { public: string name; A() : name(&amp;#34;&amp;#34;) { cout &amp;lt;&amp;lt; &amp;#34;default ctor&amp;#34; &amp;lt;&amp;lt; endl; } A(string|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/sols">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">《C&#43;&#43; Primer》 拾遗 第 13 章 拷贝控制</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/cpp-primer' class="muted-link">
+  <span class="Label Label--gray">Cpp Primer</span>
+</a>
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2021-07-21. Published at: 2021-07-21.">
+        
+          Published: 2021-07-21 Wed 22:57:24
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="第-13-章-拷贝控制">第 13 章 拷贝控制</h2>
+<p>拷贝控制 <code>copy control</code> 操作包括：</p>
+<p>拷贝构造函数 <code>copy constructor</code></p>
+<p>拷贝赋值运算符 <code>copy-assignment operator</code></p>
+<p>移动构造函数 <code>move constructor</code></p>
+<p>移动赋值运算符 <code>move-assignment operator</code></p>
+<p>析构函数 <code>destructor</code></p>
+<h3 id="131-拷贝赋值与销毁">13.1 拷贝、赋值与销毁</h3>
+<p>合成拷贝构造函数 <code>synthesized copy constructor</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">A</span> <span class="p">{</span>
+  <span class="k">public</span><span class="o">:</span>
+  	<span class="n">string</span> <span class="n">name</span><span class="p">;</span>
+	<span class="n">A</span><span class="p">()</span> <span class="o">:</span> <span class="n">name</span><span class="p">(</span><span class="s">&#34;&#34;</span><span class="p">)</span> <span class="p">{</span> 
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;default ctor&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> 
+	<span class="p">}</span>
+	<span class="n">A</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span> <span class="o">:</span> <span class="n">name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;ctor&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="n">A</span><span class="p">(</span><span class="k">const</span> <span class="n">A</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">)</span> <span class="o">:</span> <span class="n">name</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">name</span><span class="p">)</span> <span class="p">{</span> 
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;copy ctor&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> 
+	<span class="p">}</span>
+	<span class="kt">void</span> <span class="nf">print</span><span class="p">()</span> <span class="p">{</span>
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">name</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">};</span>
+<span class="n">A</span> <span class="nf">func</span><span class="p">(</span><span class="n">A</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;a&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="n">A</span> <span class="n">a</span> <span class="o">=</span> <span class="n">A</span><span class="p">();</span>  <span class="c1">// default ctor
+</span><span class="c1"></span>
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;b&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="n">A</span> <span class="n">b</span><span class="p">;</span>        <span class="c1">// default ctor
+</span><span class="c1"></span>
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;c&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="n">A</span> <span class="n">c</span><span class="p">(</span><span class="s">&#34;c&#34;</span><span class="p">);</span>  <span class="c1">// ctor
+</span><span class="c1"></span>
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;d&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="n">A</span> <span class="n">d</span> <span class="o">=</span> <span class="n">A</span><span class="p">(</span><span class="s">&#34;d&#34;</span><span class="p">);</span>  <span class="c1">// ctor
+</span><span class="c1"></span>
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;e&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="n">A</span> <span class="n">e</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>  <span class="c1">// copy ctor
+</span><span class="c1"></span>
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;f&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="n">A</span> <span class="n">f</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span> <span class="c1">// copy ctor
+</span><span class="c1"></span>    
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;g = f(a)&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="n">A</span> <span class="n">g</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">a</span><span class="p">);</span> <span class="c1">// copy ctor; copy ctor
+</span><span class="c1"></span>	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>关于 explicit 带来的变化</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">A</span> <span class="p">{</span>
+  <span class="k">public</span><span class="o">:</span>
+  	<span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">A</span><span class="p">()</span> <span class="p">{</span> 
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;default ctor&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> 
+	<span class="p">}</span>
+	<span class="n">A</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">)</span> <span class="o">:</span> <span class="n">id</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;ctor&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="n">A</span><span class="p">(</span><span class="k">const</span> <span class="n">A</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">)</span> <span class="o">:</span> <span class="n">id</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">id</span><span class="p">)</span> <span class="p">{</span> 
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;copy ctor&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> 
+	<span class="p">}</span>
+	<span class="kt">void</span> <span class="nf">print</span><span class="p">()</span> <span class="p">{</span>
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">id</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">};</span>
+<span class="n">A</span> <span class="nf">func</span><span class="p">(</span><span class="n">A</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">B</span> <span class="p">{</span>
+  <span class="k">public</span><span class="o">:</span>
+  	<span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">B</span><span class="p">()</span> <span class="p">{</span> 
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;default ctor&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> 
+	<span class="p">}</span>
+	<span class="k">explicit</span> <span class="nf">B</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">)</span> <span class="o">:</span> <span class="n">id</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;ctor&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="n">B</span><span class="p">(</span><span class="k">const</span> <span class="n">B</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">)</span> <span class="o">:</span> <span class="n">id</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">id</span><span class="p">)</span> <span class="p">{</span> 
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;copy ctor&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> 
+	<span class="p">}</span>
+	<span class="kt">void</span> <span class="nf">print</span><span class="p">()</span> <span class="p">{</span>
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">id</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">};</span>
+<span class="n">B</span> <span class="nf">funcb</span><span class="p">(</span><span class="n">B</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">A</span> <span class="n">a</span><span class="p">(</span><span class="mi">123</span><span class="p">);</span>              <span class="c1">// ctor
+</span><span class="c1"></span>	<span class="n">A</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">123</span><span class="p">;</span>             <span class="c1">// ctor
+</span><span class="c1"></span>	<span class="n">A</span> <span class="n">c</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>         <span class="c1">// copy ctor; copy ctor
+</span><span class="c1"></span>	<span class="n">A</span> <span class="n">d</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="mi">123</span><span class="p">);</span>       <span class="c1">// ctor; copy ctor
+</span><span class="c1"></span>
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;-------------------------&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+	<span class="n">B</span> <span class="n">ba</span><span class="p">(</span><span class="mi">123</span><span class="p">);</span>             <span class="c1">// ctor
+</span><span class="c1"></span>	<span class="c1">// B bb = 123;         // compile error
+</span><span class="c1"></span>	<span class="n">B</span> <span class="n">bc</span> <span class="o">=</span> <span class="n">funcb</span><span class="p">(</span><span class="n">ba</span><span class="p">);</span>      <span class="c1">// copy ctor; copy ctor
+</span><span class="c1"></span>	<span class="c1">// B bd = funcb(123);  // compile error
+</span><span class="c1"></span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h5 id="编译器可以绕过拷贝构造函数">编译器可以绕过拷贝构造函数</h5>
+<p>编译器可以（但不是必需）跳过拷贝/移动构造函数直接创建对象。这也就是上面的程序为什么很多都没有实际打印出 <code>copy ctor</code>。</p>
+<p>例如</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">string</span> <span class="n">s</span> <span class="o">=</span> <span class="s">&#34;abc&#34;</span><span class="p">;</span> <span class="c1">// 允许编译器改写为下面的代码
+</span><span class="c1"></span><span class="n">string</span> <span class="nf">s</span><span class="p">(</span><span class="s">&#34;abc&#34;</span><span class="p">);</span>
+</code></pre></div><p>虽然可以跳过，但是在这个程序点上，拷贝/移动构造函数必需是存在且可访问的。</p>
+<h4 id="1312-拷贝赋值运算符">13.1.2 拷贝赋值运算符</h4>
+<p>重载运算符 <code>overloaded operator</code>。</p>
+<p>重载运算符本质上是函数。</p>
+<p>合成拷贝赋值运算符 <code>synthesized copy-assignment operator</code> 类似于拷贝构造函数他会将右侧每个非 static 成员赋予左边对象的对应成员。对于数组成员，会逐个赋值数组元素。</p>
+<h4 id="1313-析构函数">13.1.3 析构函数</h4>
+<p>构造函数有一个初始化部分和一个函数体，析构函数也有一个函数体和析构部分。</p>
+<p>析构函数中，首先执行函数体，然后销毁成员。成员按初始化顺序的逆序销毁。</p>
+<p>析构函数中，不存在类似构造函数中初始化列表的东西来控制成员如何销毁。</p>
+<h5 id="什么时候会调用析构函数">什么时候会调用析构函数</h5>
+<p>变量离开作用域时被销毁。</p>
+<p>当对象被销毁时其成员被销毁。</p>
+<p>容器被销毁时，元素被销毁。</p>
+<p>动态分配的对象，指向它的指针应用 delete 运算符时被销毁。</p>
+<p>对临时对象，当创建它的完整表达式结束时被销毁。</p>
+<h4 id="1315-使用-default">13.1.5 使用 =default</h4>
+<p>我们可以通过将拷贝控制成员定义为 =default 来显式地要求编译器生成合成的版本。合成的函数将隐式的声明为内联的。如果不希望成员是内联函数，应该只对成员的类外定义使用 =default。</p>
+<h4 id="1316-阻止拷贝">13.1.6 阻止拷贝</h4>
+<p>我们可以通过将这些可能被自动合成的函数定义为删除的函数 <code>deleted function</code> 来阻止拷贝。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">struct</span> <span class="nc">NoCopy</span> <span class="p">{</span>
+    <span class="n">NoCopy</span><span class="p">(</span><span class="k">const</span> <span class="n">NoCopy</span><span class="o">&amp;</span><span class="p">)</span> <span class="o">=</span> <span class="k">delete</span><span class="p">;</span>
+    <span class="n">NoCopy</span> <span class="o">&amp;</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span> <span class="n">NoCopy</span><span class="o">&amp;</span><span class="p">)</span> <span class="o">=</span> <span class="k">delete</span><span class="p">;</span>
+    <span class="p">...</span>
+<span class="p">};</span>
+</code></pre></div><p>不同于 default 只能用于编译器能自动合成的函数，delete 关键字可以用于任何函数。有时需要利用 delete 引导编译器匹配正确的函数。</p>
+<p>析构函数不能是删除的成员。删除析构函数本身并不会带来编译错误，但会导致不能创建对象（可以通过 new 动态分配，但不能 delete）。</p>
+<h5 id="合成的拷贝控制成员可能是删除的">合成的拷贝控制成员可能是删除的</h5>
+<p>如果类某个成员的析构函数是删除的或不可访问的（如 private 的），则合成析构函数被定义为删除的。</p>
+<p>如果类的某个成员的拷贝构造函数/析构函数是删除的或不可访问的，则合成拷贝构造函数被定义为删除的。</p>
+<p>如果类的某个成员的拷贝赋值运算符时删除的，或类有一个 const 的或引用成员，则类的拷贝赋值运算符被定义为删除的。</p>
+<p>如果类的某个成员的析构函数是删除的或不可访问的，或是类有一个引用成员，它某有类内初始化器，或是类有一个 const 成员，他没有类内初始化器且其类型未显式定义某人构造函数，则该类的默认构造函数被定义为删除的。</p>
+<h5 id="private-拷贝控制">private 拷贝控制</h5>
+<p>新标准之前是靠把想删除的函数定义为 private 来实现拷贝控制的。</p>
+<p>但注意这种方式，友元函数和成员函数依旧可以拷贝对象。</p>
+<p>这里我们可以声明但不定义它们。这样我们如果尝试调用拷贝构造函数会导致一个链接时错误。</p>
+<h3 id="132-拷贝控制和资源管理">13.2 拷贝控制和资源管理</h3>
+<p>注意有的时候我们要让类的拷贝行为看起来像值，有的时候像指针，有的时候不能进行。</p>
+<p>编写赋值运算符时应该检查：</p>
+<p>一个对象赋值给自己时可以正常工作。</p>
+<p>大多数赋值运算符组合了析构函数和拷贝构造函数的工作。</p>
+<p>如果要一个类的拷贝行为看起来像指针，则我们需要实现一套引用计数机制，这时我们需要一个引用计数器。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">LikePointer</span> <span class="p">{</span>
+  <span class="k">private</span><span class="o">:</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">size_t</span> <span class="o">*</span><span class="n">ref_cnt</span><span class="p">;</span>
+  <span class="k">public</span><span class="o">:</span>
+    <span class="n">LikePointer</span><span class="p">()</span> <span class="o">:</span> <span class="n">ref_cnt</span><span class="p">(</span><span class="k">new</span> <span class="n">std</span><span class="o">::</span><span class="n">size_t</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="p">{}</span>
+    <span class="n">LikePointer</span><span class="p">(</span><span class="k">const</span> <span class="n">LikePointer</span> <span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span> <span class="o">:</span> <span class="n">ref_cnt</span><span class="p">(</span><span class="n">rhs</span><span class="p">.</span><span class="n">ref_cnt</span><span class="p">)</span> <span class="p">{</span>
+        <span class="o">++*</span><span class="n">ref_cnt</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">LikePointer</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span> <span class="n">LikePointer</span> <span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span> <span class="p">{</span>
+        <span class="o">++*</span><span class="n">rhs</span><span class="p">.</span><span class="n">ref_cnt</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!--*</span><span class="n">ref_cnt</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">delete</span> <span class="n">ref_cnt</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">ref_cnt</span> <span class="o">=</span> <span class="n">rhs</span><span class="p">.</span><span class="n">ref_cnt</span><span class="p">;</span>
+        <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="o">~</span><span class="n">LikePointer</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!--*</span><span class="n">ref_cnt</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">delete</span> <span class="n">ref_cnt</span><span class="p">;</span>
+            <span class="p">...</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><h3 id="133-交换操作">13.3 交换操作</h3>
+<p>swap 的定义并不是必须的，但是对于分配了资源的类这可能会极大的提升效率。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">HasPtr</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">*</span><span class="n">ps</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+    <span class="k">friend</span> <span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="n">HasPtr</span><span class="o">&amp;</span> <span class="n">lhs</span><span class="p">,</span> <span class="n">HasPtr</span><span class="o">&amp;</span> <span class="n">rhs</span><span class="p">);</span>
+<span class="p">};</span>
+<span class="kr">inline</span> <span class="kt">void</span> <span class="n">HasPtr</span><span class="o">::</span><span class="n">swap</span><span class="p">(</span><span class="n">HasPtr</span><span class="o">&amp;</span> <span class="n">lhs</span><span class="p">,</span> <span class="n">HasPtr</span><span class="o">&amp;</span> <span class="n">rhs</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">swap</span><span class="p">;</span>
+    <span class="n">swap</span><span class="p">(</span><span class="n">lhs</span><span class="p">.</span><span class="n">ps</span><span class="p">,</span> <span class="n">rhs</span><span class="p">.</span><span class="n">ps</span><span class="p">);</span>
+    <span class="n">swap</span><span class="p">(</span><span class="n">lhs</span><span class="p">.</span><span class="n">i</span><span class="p">,</span> <span class="n">rhs</span><span class="p">.</span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">class</span> <span class="nc">Foo</span> <span class="p">{</span>
+    <span class="n">HasPtr</span> <span class="n">h</span><span class="p">;</span>
+    <span class="k">friend</span> <span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="n">Foo</span> <span class="o">&amp;</span><span class="n">lhs</span><span class="p">,</span> <span class="n">Foo</span> <span class="o">&amp;</span><span class="n">rhs</span><span class="p">);</span>
+<span class="p">};</span>
+<span class="kt">void</span> <span class="n">Foo</span><span class="o">::</span><span class="n">swap</span><span class="p">(</span><span class="n">Foo</span> <span class="o">&amp;</span><span class="n">lhs</span><span class="p">,</span> <span class="n">Foo</span> <span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">swap</span><span class="p">;</span>
+    <span class="n">swap</span><span class="p">(</span><span class="n">lhs</span><span class="p">.</span><span class="n">h</span><span class="p">,</span> <span class="n">rhs</span><span class="p">.</span><span class="n">h</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><p>注意这里不要直接调用 std::swap。因为有些类型可能自己定义了 swap。</p>
+<p>注意这里的 using 声明并不会隐藏掉 HasPtr 版本的 swap 的声明。</p>
+<h5 id="在赋值运算符中使用-swap">在赋值运算符中使用 swap</h5>
+<p>这里有一个计数称为拷贝并交换 <code>copy and swap</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">HasPtr</span><span class="o">&amp;</span> <span class="n">HasPtr</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">HasPtr</span> <span class="n">rhs</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">swap</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">,</span> <span class="n">rhs</span><span class="p">);</span>
+    <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>注意这里参数不是引用。</p>
+<p>注意这里自动处理了自身赋值的情况。同样这个操作也是异常安全的，抛出异常只会发生在拷贝构造时，而这也是在修改左侧对象之前。</p>
+<h3 id="136-对象移动">13.6 对象移动</h3>
+<h4 id="1361-右值引用">13.6.1 右值引用</h4>
+<p>右值引用 <code>rvalue reference</code>：必须绑定到右值（一个将要销毁的对象）。</p>
+<p>我们可以自由地将一个右值引用的资源“移动”到另一个对象中。</p>
+<p>常规引用对应于右值称为左值引用 <code>lvalue reference</code>。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+<span class="kt">int</span> <span class="o">&amp;</span><span class="n">r</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+<span class="c1">// int &amp;&amp;rr = i; // 不能绑定到左值
+</span><span class="c1">// int &amp;r2 = i * 42; // 不能绑定到右值
+</span><span class="c1"></span><span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">r3</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">42</span><span class="p">;</span> <span class="c1">// 可以绑定到右值
+</span><span class="c1"></span><span class="kt">int</span> <span class="o">&amp;&amp;</span><span class="n">rr2</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">42</span><span class="p">;</span>
+</code></pre></div><p>左值有持久的状态，而右值要么是字面常量，要么是在表达式求值过程中创建的临时对象。</p>
+<p>变量是左值。不能将一个右值引用绑定到一个右值引用类型的变量上。</p>
+<h5 id="标准库-move-函数">标准库 move 函数</h5>
+<p>我们可以通过 move 函数将一个左值转化为右值使用。但使用 move 后意味着我们除了对其赋值或销毁外，不能再使用它。</p>
+<p>使用 move 的代码应当使用 std::move。</p>
+<h4 id="1362-移动构造函数和移动赋值运算符">13.6.2 移动构造函数和移动赋值运算符</h4>
+<p>移动构造函数需要保证移动后源对象处在“销毁无害”的状态。</p>
+<h5 id="移动操作标准库容器和异常">移动操作、标准库容器和异常</h5>
+<p>一般而言因为移动操作不需要分配资源因此不会抛出异常。</p>
+<p>此时我们可以声明 noexcept 来通知标准库。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">A</span> <span class="p">{</span>
+    <span class="n">A</span><span class="p">(</span><span class="n">A</span><span class="o">&amp;&amp;</span><span class="p">)</span> <span class="k">noexcept</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">A</span><span class="o">::</span><span class="n">A</span><span class="p">(</span><span class="n">A</span><span class="o">&amp;&amp;</span> <span class="n">rhs</span><span class="p">)</span> <span class="k">noexcept</span> <span class="p">{</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div><p>例如 vector 如果在 push_back 时发生异常则 vector 自身不会变化。</p>
+<p>但是对于移动构造函数，如果移动发生了一半，部分元素移动而不是全部元素移动后发生异常，旧空间的源元素已经被改变而新空间中未够早的元素尚不存在，则 vector 不能保证自身不变的要求。</p>
+<p>所以如果 vector 不知道元素移动构造函数不会抛出异常时，会使用拷贝构造函数。</p>
+<p>移动赋值运算符执行与析构函数和移动构造函数相同的工作。注意因为考虑 move 的情况，还是需要考虑自赋值的可能性。</p>
+<h5 id="合成的移动操作">合成的移动操作</h5>
+<p>如果一个类定义了自己的拷贝构造函数、拷贝赋值函数或析构函数，编译器就不会合成移动构造函数和移动赋值运算符了。</p>
+<p>只有当一个类没有定义任何拷贝控制成员，且每个非 static 数据成员都可以移动时，才会合成移动构造函数或移动赋值运算符。</p>
+<p>移动操作不会隐式定义为删除的函数。如果显式要求编译器生成 =default 的移动操作，且编译器不能移动所有成员，则编译器会奖移动操作定义为删除的函数。???</p>
+<h5 id="拷贝并交换赋值运算符和移动操作">拷贝并交换赋值运算符和移动操作</h5>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">HasPtr</span> <span class="p">{</span>
+  <span class="k">public</span><span class="o">:</span>
+    <span class="n">HasPtr</span><span class="p">(</span><span class="n">HasPtr</span> <span class="o">&amp;&amp;</span><span class="n">p</span><span class="p">)</span> <span class="k">noexcept</span> <span class="o">:</span> <span class="n">ps</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">ps</span><span class="p">),</span> <span class="n">i</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">p</span><span class="p">.</span><span class="n">ps</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">HasPtr</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">HasPtr</span> <span class="n">rhs</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">swap</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">,</span> <span class="n">rhs</span><span class="p">);</span>
+        <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div><p>注意这个 operator= 可以同时实现拷贝赋值和移动赋值。</p>
+<h5 id="移动迭代器">移动迭代器</h5>
+<p>我们可以用 make_move_iterator 函数将一个普通迭代器转换为一个移动迭代器。</p>
+<h4 id="1363-右值引用和成员函数">13.6.3 右值引用和成员函数</h4>
+<p>允许成员函数使用和拷贝、移动构造函数相同的参数模式。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">push_back</span><span class="p">(</span><span class="k">const</span> <span class="n">X</span><span class="o">&amp;</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">push_back</span><span class="p">(</span><span class="n">X</span><span class="o">&amp;&amp;</span><span class="p">);</span>
+</code></pre></div><p>有时我们限定一些成员函数只能在左值上使用，这样我们可以使用引用限定符 <code>reference qualifier</code>。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Foo</span> <span class="p">{</span>
+  <span class="k">public</span><span class="o">:</span>
+    <span class="n">Foo</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span> <span class="n">Foo</span><span class="o">&amp;</span><span class="p">)</span> <span class="o">&amp;</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">Foo</span> <span class="o">&amp;</span><span class="n">Foo</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span> <span class="n">Foo</span> <span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+</code></pre></div><p>注意限定符可以是 &amp; 也可以是 &amp;&amp; 分别表示限定为左值还是右值。应用限定符类似于 const 需要在声明和定义都包含。</p>
+<h5 id="重载和引用函数">重载和引用函数</h5>
+<p>可以同时使用 const 和引用限定，注意顺序</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">Foo</span> <span class="nf">func</span><span class="p">()</span> <span class="k">const</span> <span class="o">&amp;</span><span class="p">;</span>
+</code></pre></div><p>我们可以重载不同引用限定符的版本。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Foo</span> <span class="p">{</span>
+  <span class="k">public</span><span class="o">:</span>
+    <span class="n">Foo</span> <span class="n">sorted</span><span class="p">()</span> <span class="o">&amp;&amp;</span><span class="p">;</span>
+    <span class="n">Foo</span> <span class="nf">sorted</span><span class="p">()</span> <span class="k">const</span> <span class="o">&amp;</span><span class="p">;</span>
+  <span class="k">private</span><span class="o">:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">data</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">Foo</span> <span class="n">Foo</span><span class="o">::</span><span class="n">sorted</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="p">{</span>
+    <span class="n">sort</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">data</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+    <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">Foo</span> <span class="n">Foo</span><span class="o">::</span><span class="n">sorted</span><span class="p">()</span> <span class="k">const</span> <span class="o">&amp;</span> <span class="p">{</span>
+    <span class="n">Foo</span> <span class="nf">ret</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">);</span>
+    <span class="n">sort</span><span class="p">(</span><span class="n">ret</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">ret</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>注意对于多个相同参数列表的重载函数，要么都使用引用限定符，要么都不使用。</p>
+
+  </section>
+
+  <section>
+    
+        <a href="/notes/cppprimer/c12/" class="previous_page">Prev: 《C&#43;&#43; Primer》 拾遗 第 12 章 动态内存 </a>
+    
+     <br> 
+    
+        <a href="/tpls/ds/idpool/" class="next_page">Next: [模板][数据结构] 下标池 IdPool </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>《C&#43;&#43; Primer》 拾遗 第 13 章 拷贝控制</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#第-13-章-拷贝控制">第 13 章 拷贝控制</a>
+      <ul>
+        <li><a href="#131-拷贝赋值与销毁">13.1 拷贝、赋值与销毁</a></li>
+        <li><a href="#132-拷贝控制和资源管理">13.2 拷贝控制和资源管理</a></li>
+        <li><a href="#133-交换操作">13.3 交换操作</a></li>
+        <li><a href="#136-对象移动">13.6 对象移动</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>

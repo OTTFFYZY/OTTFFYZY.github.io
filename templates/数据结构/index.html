@@ -103,6 +103,48 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
+      <a href="/tpls/ds/idpool/">
+        <div class="h2 mt-1 mb-1">[模板][数据结构] 下标池 IdPool</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
+  <span class="Label Label--gray-darker">数据结构</span>
+</a>
+
+
+
+
+
+
+
+
+      <div class="float-md-right">
+        <span>2021-07-31</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    下标池 IdPool template&lt;typename T&gt; struct IdPool { map&lt;T, int&gt; idmap; vector&lt;T&gt; ett; void clear() { idmap.clear(); ett.clear(); } int getid(const T &amp;t) { auto it = idmap.find(t); if (it != idmap.end()) return it-&gt;second; int ans = ett.size(); ett.push_back(t); idmap[t] = ans; return ans; } T gett(int i) { return ett[i]; } int size() { return ett.size(); } }; IdPool&lt;int&gt; idp;
+    <a class="muted-link" href="/tpls/ds/idpool/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
       <a href="/tpls/ds/discretization/">
         <div class="h2 mt-1 mb-1">[模板][数据结构] 离散化 Discretization</div>
       </a>
@@ -407,7 +449,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/notes" class="link-gray text-emphasized css-truncate-target"><span class="">Notes</span></a>
-      <span class="text-right Counter">12</span>
+      <span class="text-right Counter">19</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -427,7 +469,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
-      <span class="text-right Counter">16</span>
+      <span class="text-right Counter">18</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -467,12 +509,17 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="link-gray text-emphasized css-truncate-target"><span class="">数据结构</span></a>
-      <span class="text-right Counter">6</span>
+      <span class="text-right Counter">7</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">数论</span></a>
       <span class="text-right Counter">2</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/templates/%e8%ae%a1%e7%ae%97%e5%87%a0%e4%bd%95" class="link-gray text-emphasized css-truncate-target"><span class="">计算几何</span></a>
+      <span class="text-right Counter">1</span>
     </span>
     
   </div>
@@ -626,6 +673,11 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e8%ae%a1%e7%ae%97%e5%87%a0%e4%bd%95" class="link-gray text-emphasized css-truncate-target"><span class="">计算几何</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e8%b4%a8%e5%9b%a0%e6%95%b0%e5%88%86%e8%a7%a3" class="link-gray text-emphasized css-truncate-target"><span class="">质因数分解</span></a>
       <span class="text-right Counter">1</span>
     </span>
@@ -647,7 +699,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/series/cpp-primer" class="link-gray text-emphasized css-truncate-target"><span class="">Cpp primer</span></a>
-      <span class="text-right Counter">6</span>
+      <span class="text-right Counter">13</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -707,6 +759,16 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2021-05" class="link-gray text-emphasized css-truncate-target"><span class="">2021 05</span></a>
+      <span class="text-right Counter">5</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2021-06" class="link-gray text-emphasized css-truncate-target"><span class="">2021 06</span></a>
+      <span class="text-right Counter">4</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2021-07" class="link-gray text-emphasized css-truncate-target"><span class="">2021 07</span></a>
       <span class="text-right Counter">5</span>
     </span>
     

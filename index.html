@@ -101,6 +101,334 @@
   
   <div>
     <div>
+      <a href="/tpls/ds/idpool/">
+        <h3>[模板][数据结构] 下标池 IdPool</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
+  <span class="Label Label--gray-darker">数据结构</span>
+</a>
+
+
+
+
+
+
+
+
+      <div class="float-md-right">
+        
+        2021-07-31
+      </div>
+    </div>
+    下标池 IdPool template&lt;typename T&gt; struct IdPool { map&lt;T, int&gt; idmap; vector&lt;T&gt; ett; void clear() { idmap.clear(); ett.clear(); } int getid(const T &amp;t) { auto it = idmap.find(t); if (it != idmap.end()) return it-&gt;second; int ans = ett.size(); ett.push_back(t); idmap[t] = ans; return ans; } T gett(int i) { return ett[i]; } int size() { return ett.size(); } }; IdPool&lt;int&gt; idp;
+  </div>
+  
+  <div>
+    <div>
+      <a href="/notes/cppprimer/c13/">
+        <h3>《C&#43;&#43; Primer》 拾遗 第 13 章 拷贝控制</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/cpp-primer' class="muted-link">
+  <span class="Label Label--gray">Cpp Primer</span>
+</a>
+
+
+      <div class="float-md-right">
+        
+        2021-07-21
+      </div>
+    </div>
+    第 13 章 拷贝控制 拷贝控制 copy control 操作包括： 拷贝构造函数 copy constructor 拷贝赋值运算符 copy-assignment operator 移动构造函数 move constructor 移动赋值运算符 move-assignment operator 析构函数 destructor 13.1 拷贝、赋值与销毁 合成拷贝构造函数 synthesized copy constructor #include &lt;iostream&gt;#include &lt;string&gt;using namespace std; class A { public: string name; A() : name(&#34;&#34;) { cout &lt;&lt; &#34;default ctor&#34; &lt;&lt; endl; } A(string
+  </div>
+  
+  <div>
+    <div>
+      <a href="/notes/cppprimer/c12/">
+        <h3>《C&#43;&#43; Primer》 拾遗 第 12 章 动态内存</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/cpp-primer' class="muted-link">
+  <span class="Label Label--gray">Cpp Primer</span>
+</a>
+
+
+      <div class="float-md-right">
+        
+        2021-07-07
+      </div>
+    </div>
+    第 12 章 动态内存 静态内存用来存储 局部 static 对象，类 static 成员，定义在任何函数之外的变量。 栈内存用来存储 定义在函数内的非 static 对象。 除了这两部分，程序还拥有一个内存池。这部分内存被称为自由空间 free store 或 堆 heap。程序用
+  </div>
+  
+  <div>
+    <div>
+      <a href="/notes/cppprimer/c11/">
+        <h3>《C&#43;&#43; Primer》 拾遗 第 11 章 关联容器</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/cpp-primer' class="muted-link">
+  <span class="Label Label--gray">Cpp Primer</span>
+</a>
+
+
+      <div class="float-md-right">
+        
+        2021-07-05
+      </div>
+    </div>
+    第 11 章 关联容器 关联容器 associative-container map set multimap multiset unordered_map unordered_set unordered_multimap unordered_multiset 11.1 使用关联容器 map 通常称为关联数组 associative array。 11.2 关联容器概述 有序容器的关键字类型 需要定义 &lt;，且该运算需要满足严格弱序 strict weak ordering。 11.2.3 pair 类型 pair 定义在
+  </div>
+  
+  <div>
+    <div>
+      <a href="/tpls/cg/nearestpair/">
+        <h3>[模板][计算几何] 平面最近点对</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95' class="muted-link">
+  <span class="Label Label--gray-darker">计算几何</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95' class="muted-link">
+  <span class="Label Label--gray">计算几何</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2021-07-03
+      </div>
+    </div>
+    Title typedef long long LL; typedef vector&lt;int&gt; VI; typedef vector&lt;VI&gt; VVI; const LL INF=0x3f3f3f3f3f3f3f3f; inline LL sqr(LL x){ return x*x; } inline LL dis(const VI &amp;a,const VI &amp;b) { return sqr(a[0]-b[0])+sqr(a[1]-b[1]); } bool cmp(const VI &amp;a, const VI &amp;b) { return a[1]&lt;b[1]; } VVI tmp; LL help(VVI &amp;ps,int l,int r) { int n=r-l+1; if(n&lt;=3) { LL ans=INF; for(int i=l;i&lt;=r;i++) { for(int j=i+1;j&lt;=r;j++) ans=min(ans,dis(ps[i],ps[j])); } sort(ps.begin()+l, ps.begin()+r+1, cmp); return ans; } int m=(l+r)&gt;&gt;1; int mp=ps[m][0]; LL ans=min(help(ps,l,m),help(ps,m+1,r)); int i=l,j=m+1,p=l; while(i&lt;=m || j&lt;=r) { if(i&gt;m || j&lt;=r&amp;&amp;cmp(ps[j],ps[i])) { tmp[p++]=ps[j++]; } else { tmp[p++]=ps[i++]; } } copy(tmp.begin()+l, tmp.begin()+r+1,ps.begin()+l); p=0; for(int i=l;i&lt;=r;i++) { if(sqr(ps[i][0]-mp)
+  </div>
+  
+  <div>
+    <div>
+      <a href="/notes/cppprimer/c10/">
+        <h3>《C&#43;&#43; Primer》 拾遗 第 10 章 泛型算法</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/cpp-primer' class="muted-link">
+  <span class="Label Label--gray">Cpp Primer</span>
+</a>
+
+
+      <div class="float-md-right">
+        
+        2021-06-21
+      </div>
+    </div>
+    第 10 章 泛型算法 泛型算法 generic algorithm 10.1 概述 大多数算法定义在头文件 algorithm 中。另外在 numeric 种定义了一组数值泛型算法。 一般来说这些算法并不直接操作容器，二十遍历由两个迭代器指定的一个元素范围来进行操作。 10.2 初识泛型算法 10.2.1 只读算
+  </div>
+  
+  <div>
+    <div>
+      <a href="/notes/cppprimer/c9/">
+        <h3>《C&#43;&#43; Primer》 拾遗 第 9 章 顺序容器</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/cpp-primer' class="muted-link">
+  <span class="Label Label--gray">Cpp Primer</span>
+</a>
+
+
+      <div class="float-md-right">
+        
+        2021-06-17
+      </div>
+    </div>
+    第 9 章 顺序容器 sequential container 9.1 顺序容器概述 vector deque list forward_list array string 9.2 容器库概览 类型别名 意义 iterator 迭代器类型 const_iterator 不能修改元素的迭代器类型 size_type 容器类型最大可能的大小 difference_type 两个迭代器间的距离 value_type 元素类型 reference 元素的左值类型与 value_type&amp; 相同 const_reference 元素的 const 左值类
+  </div>
+  
+  <div>
+    <div>
+      <a href="/notes/cppprimer/c8/">
+        <h3>《C&#43;&#43; Primer》 拾遗 第 8 章 IO 库</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/cpp-primer' class="muted-link">
+  <span class="Label Label--gray">Cpp Primer</span>
+</a>
+
+
+      <div class="float-md-right">
+        
+        2021-06-14
+      </div>
+    </div>
+    第 8 章 IO 库 8.1 IO 类 头文件 类型 作用 iostream istream, wistream 从流读 ostream, wostream 向流写 iostream,wiostream 读写流 fstream ifstream, wifstream 从文件读 ofstream, wofstream 向文件写 fstream, wfstream 读写文件 sstream istringstream, wistringstream 从 string 读 ostringstream, wostringstream 向 string 写 stringstream, wstringstream 读写 string ifstream 和 istringstream 继承自 istream ofstream 和 ostringstream 继承自 ostream IO 对象没有拷贝和赋值操作。 8.1.2 条件状态 IO 类定
+  </div>
+  
+  <div>
+    <div>
+      <a href="/notes/cppprimer/c7/">
+        <h3>《C&#43;&#43; Primer》 拾遗 第 7 章 类</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/cpp-primer' class="muted-link">
+  <span class="Label Label--gray">Cpp Primer</span>
+</a>
+
+
+      <div class="float-md-right">
+        
+        2021-06-01
+      </div>
+    </div>
+    第 7 章 类 类的基本思想是数据抽象 data abstraction 和封装 encapsulation。 数据抽象是一种依赖于接口 interface 和实现 implementation 分离的编程/设计技术。 7.1 定义抽象数据类型 引入 this this 是一个常量指针。 成员函数通过隐式参数 this 来访问调用它
+  </div>
+  
+  <div>
+    <div>
       <a href="/notes/cppprimer/c6/">
         <h3>《C&#43;&#43; Primer》 拾遗 第 6 章 函数</h3>
       </a>
@@ -523,354 +851,6 @@
     最大公约数（GCD）与欧几里得算法 最大公约数（Greatest Common Divisor，GCD） 两个数最大公约数顾名思义，两个数的所有公约数中最大的。 若正整数 $a,b$ 的质因数分解为 $$a = \prod_{i} p_i ^ {e_{a,i}}$$ $$b = \prod_{i} p_i ^ {e_{b,i}}$$ 则其最大公
   </div>
   
-  <div>
-    <div>
-      <a href="/tpls/ds/bitset/">
-        <h3>[模板] bitset &amp; 位图</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/templates' class="muted-link">
-  <span class="Label Label--gray-darker">Templates</span>
-</a>
-
-
-
-<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
-  <span class="Label Label--gray-darker">数据结构</span>
-</a>
-
-<a href='/templates/stl' class="muted-link">
-  <span class="Label Label--gray-darker">STL</span>
-</a>
-
-
-
-
-
-<a href='/tags/bitset' class="muted-link">
-  <span class="Label Label--gray">bitset</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-10-22
-      </div>
-    </div>
-    std::bitset #include &lt;bitset&gt; bitset&lt;M&gt; bs; bs[i]; // access bs.test(i); // access bs.count(i); // count 1 bs.size(); bs.any(); bs.none(); bs.all(); // cpp11 bs.set(); bs.set(i); // set i-th bit to 1 bs.reset(); bs.reset(i); bs.flip(); bs.flip(i); bs.to_string(); bs.to_ulong(); bs.to_ullong(); // cpp11 cout&lt;&lt;bs&lt;&lt;endl; 手写位图 Bitmap template&lt;size_t M&gt; struct BitMap { typedef unsigned int UI; UI map[M/32+1]; void reset() { memset(map,0,sizeof(map)); } void set() { memset(map,0xff,sizeof(map)); } void set(int i) { map[i&gt;&gt;5]|=1U&lt;&lt;(i&amp;31); } void reset(int i) { map[i&gt;&gt;5]&amp;=~(1U&lt;&lt;(i&amp;31)); } void flip(int i) { map[i&gt;&gt;5]^=1U&lt;&lt;(i&amp;31); } bool test(int i) { return map[i&gt;&gt;5]&amp;(1U&lt;&lt;(i&amp;31)); } };
-  </div>
-  
-  <div>
-    <div>
-      <a href="/tpls/others/checker/">
-        <h3>[模板] 对拍程序</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/templates' class="muted-link">
-  <span class="Label Label--gray-darker">Templates</span>
-</a>
-
-
-
-<a href='/templates/%E5%85%B6%E4%BB%96' class="muted-link">
-  <span class="Label Label--gray-darker">其他</span>
-</a>
-
-
-
-
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-10-20
-      </div>
-    </div>
-    对拍程序 from os import system tc=0 while True: system(&#34;python data.py &gt; data.in&#34;) system(&#34;std.exe &lt; data.in &gt; std.out&#34;) system(&#34;my.exe &lt; data.in &gt; my.out&#34;) # system(&#34;diff std.out my.out &gt; diff.out&#34;): if system(&#34;fc std.out my.out &gt; diff.out&#34;): print(&#34;WA&#34;) break else: tc += 1 print(&#34;AC #%d&#34;%tc) print(&#34;-------------------- data.in --------------------&#34;) # system(&#34;cat data.in&#34;) system(&#34;type data.in&#34;) print(&#34;-------------------- std.out --------------------&#34;) system(&#34;type std.out&#34;) print(&#34;-------------------- my.out ---------------------&#34;) system(&#34;type my.out&#34;) #include &lt;bits/stdc++.h&gt; using namespace std; int main() { int tc=0; while(1) { system(&#34;data.exe &gt; data.in&#34;); // system(&#34;python data.py &gt; data.in&#34;); system(&#34;std.exe &lt; data.in &gt; std.out&#34;); system(&#34;my.exe &lt; data.in &gt; my.out&#34;); // system(&#34;diff std.out my.out &gt; diff.out&#34;): if(system(&#34;fc
-  </div>
-  
-  <div>
-    <div>
-      <a href="/tpls/ds/bit/">
-        <h3>[模板][数据结构] 树状数组 Binary Index Tree/Fenwick Tree</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/templates' class="muted-link">
-  <span class="Label Label--gray-darker">Templates</span>
-</a>
-
-
-
-<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
-  <span class="Label Label--gray-darker">数据结构</span>
-</a>
-
-
-
-
-
-<a href='/tags/bit' class="muted-link">
-  <span class="Label Label--gray">BIT</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-10-01
-      </div>
-    </div>
-    树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // T must + - // id 1~n template&lt;typename T,size_t M,typename OpPlus=plus&lt;T&gt;,typename OpMinus=minus&lt;T&gt;&gt; struct BIT { static int lowbit(int x) { return x&amp;(-x); } static OpPlus opp; static OpMinus opm; static T tmp[M+1]; T tree[M+1]; // tree[i] -&gt; sum of [i-lowbit(i)+1,i] int n; void init(int n_) { n=n_; for(int i=1;i&lt;=n;i++) tree[i]=T(0); } void init(int n_,T v[]) // v[0 ~ n_-1] { n=n_; tmp[0]=T(0); for(int i=1;i&lt;=n;i++) tmp[i]=opp(tmp[i-1],v[i]); for(int i=1;i&lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(;p&lt;=n;p+=lowbit(p)) tree[p]=opp(tree[p],V); }
-  </div>
-  
-  <div>
-    <div>
-      <a href="/tpls/others/timing/">
-        <h3>[模板] 计时 Timing</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/templates' class="muted-link">
-  <span class="Label Label--gray-darker">Templates</span>
-</a>
-
-
-
-<a href='/templates/%E5%85%B6%E4%BB%96' class="muted-link">
-  <span class="Label Label--gray-darker">其他</span>
-</a>
-
-
-
-
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-10-01
-      </div>
-    </div>
-    计时 Timing chrono class Timing { private: typedef chrono::time_point&lt;std::chrono::high_resolution_clock&gt; TP; TP current_time() { return chrono::high_resolution_clock::now(); } TP st,ed; public: void start() { st=current_time(); } void end() { ed=current_time(); } void print() { cout&lt;&lt;chrono::duration_cast&lt;chrono::microseconds&gt;(ed-st).count() &lt;&lt;&#34;ms\n&#34;; } }timing;
-  </div>
-  
-  <div>
-    <div>
-      <a href="/tpls/others/cppmain/">
-        <h3>[模板] C&#43;&#43; 日常使用</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/templates' class="muted-link">
-  <span class="Label Label--gray-darker">Templates</span>
-</a>
-
-
-
-<a href='/templates/%E5%85%B6%E4%BB%96' class="muted-link">
-  <span class="Label Label--gray-darker">其他</span>
-</a>
-
-
-
-
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-09-29
-      </div>
-    </div>
-    C++ 日常使用 // #include &lt;bits/stdc++.h&gt; #include &lt;cstdio&gt; #include &lt;cstring&gt; #include &lt;cstdlib&gt; #include &lt;climits&gt; #include &lt;cmath&gt; #include &lt;iostream&gt; #include &lt;iomanip&gt; #include &lt;string&gt; #include &lt;algorithm&gt; #include &lt;numeric&gt; #include &lt;utility&gt; #include &lt;functional&gt; #include &lt;vector&gt; #include &lt;list&gt; #include &lt;stack&gt; #include &lt;queue&gt; #include &lt;deque&gt; #include &lt;set&gt; #include &lt;map&gt; #include &lt;bitset&gt; #include &lt;complex&gt; #include &lt;random&gt; #include &lt;chrono&gt; #include &lt;array&gt; #include &lt;unordered_set&gt; #include &lt;unordered_map&gt; #include &lt;tuple&gt; using namespace std; using LL = long long; using ULL = unsigned long long; using LD = long double; using PII = pair&lt;int,int&gt;; using VI = vector&lt;int&gt;; using MII = map&lt;int,int&gt;; template&lt;typename T&gt; void cmin(T &amp;x,const T &amp;y)
-  </div>
-  
-  <div>
-    <div>
-      <a href="/summaries/lcgoodproblem/">
-        <h3>[LeetCode] 值得一做的题目列表</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/summaries' class="muted-link">
-  <span class="Label Label--gray-darker">Summaries</span>
-</a>
-
-
-
-
-
-<a href='/ojs/leetcode' class="muted-link">
-  <span class="Label Label--gray-darker">LeetCode</span>
-</a>
-
-
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-09-29
-      </div>
-    </div>
-    前 总结一下 LeetCode 上比较好的题目（部分题可能并不是很好，但是实现细节复杂，面试需要特别注意也囊括进来了）。 推荐指数 $1-5$ 是按照可能已经掌握的知识层次进行排序的，竞赛选手推荐刷推荐指数 $3$ 以上的题目。推荐指数和难度
-  </div>
-  
-  <div>
-    <div>
-      <a href="/tpls/hash/safehash/">
-        <h3>[模板][Hash] 安全哈希函数</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/templates' class="muted-link">
-  <span class="Label Label--gray-darker">Templates</span>
-</a>
-
-
-
-<a href='/templates/hash' class="muted-link">
-  <span class="Label Label--gray-darker">Hash</span>
-</a>
-
-
-
-
-
-<a href='/tags/hash' class="muted-link">
-  <span class="Label Label--gray">Hash</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-09-28
-      </div>
-    </div>
-    安全哈希函数 struct custom_hash { static uint64_t splitmix64(uint64_t x) { // http://xorshift.di.unimi.it/splitmix64.c x += 0x9e3779b97f4a7c15; x = (x ^ (x &gt;&gt; 30)) * 0xbf58476d1ce4e5b9; x = (x ^ (x &gt;&gt; 27)) * 0x94d049bb133111eb; return x ^ (x &gt;&gt; 31); } size_t operator()(uint64_t x) const { static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count(); return splitmix64(x + FIXED_RANDOM); } }; 用这个函数作为 unordered_set 的第二个参数或 unordered_map 的第三个参数。
-  </div>
-  
-  <div>
-    <div>
-      <a href="/tpls/nt/mod/">
-        <h3>[模板][数论] 模下计算</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/templates' class="muted-link">
-  <span class="Label Label--gray-darker">Templates</span>
-</a>
-
-
-
-<a href='/templates/%E6%95%B0%E8%AE%BA' class="muted-link">
-  <span class="Label Label--gray-darker">数论</span>
-</a>
-
-
-
-
-
-<a href='/tags/%E6%95%B0%E8%AE%BA' class="muted-link">
-  <span class="Label Label--gray">数论</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-09-27
-      </div>
-    </div>
-    模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;x,int y) { x+=y; if(x&gt;=MO) x-=MO; } inline void subv(int &amp;x,int y) { x-=y; if(x&lt;0) x+=MO; } inline void mulv(int &amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;1) { mulv(ans,x); } mulv(x,x); n&gt;&gt;=1; } return ans; } ModInt template&lt;int MO=1000000007&gt; struct ModInt { int x; ModInt(int x=0):x(x){ norm();
-  </div>
-  
-  <div>
-    <div>
-      <a href="/tpls/ds/leftist/">
-        <h3>[模板][数据结构] 左偏树 Leftist Tree</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/templates' class="muted-link">
-  <span class="Label Label--gray-darker">Templates</span>
-</a>
-
-
-
-<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
-  <span class="Label Label--gray-darker">数据结构</span>
-</a>
-
-
-
-
-
-<a href='/tags/%E5%B7%A6%E5%81%8F%E6%A0%91' class="muted-link">
-  <span class="Label Label--gray">左偏树</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-09-27
-      </div>
-    </div>
-    左偏树 Leftist Tree // min leftist tree // T must define &lt; // M: the size of the heap template&lt;typename T,size_t M,typename Cmp=less&lt;T&gt;&gt; struct Leftist { static Cmp cmp; T val[M]; int l[M],r[M],d[M]; int nn; // number of node void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&lt;int&gt; qu; for(int i=1;i&lt;=n;i++) qu.push(i); int u,v; while(qu.size()&gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[++nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;x,int y) // merge
-  </div>
-  
 
   
   <nav class="paginate-container">
@@ -887,6 +867,10 @@
         
           <a href="/page/2/">
             2
+          </a>
+        
+          <a href="/page/3/">
+            3
           </a>
         
 
@@ -921,7 +905,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/notes" class="link-gray text-emphasized css-truncate-target"><span class="">Notes</span></a>
-      <span class="text-right Counter">12</span>
+      <span class="text-right Counter">19</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -941,7 +925,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/templates" class="link-gray text-emphasized css-truncate-target"><span class="">Templates</span></a>
-      <span class="text-right Counter">16</span>
+      <span class="text-right Counter">18</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -981,12 +965,17 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="link-gray text-emphasized css-truncate-target"><span class="">数据结构</span></a>
-      <span class="text-right Counter">6</span>
+      <span class="text-right Counter">7</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">数论</span></a>
       <span class="text-right Counter">2</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/templates/%e8%ae%a1%e7%ae%97%e5%87%a0%e4%bd%95" class="link-gray text-emphasized css-truncate-target"><span class="">计算几何</span></a>
+      <span class="text-right Counter">1</span>
     </span>
     
   </div>
@@ -1140,6 +1129,11 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/tags/%e8%ae%a1%e7%ae%97%e5%87%a0%e4%bd%95" class="link-gray text-emphasized css-truncate-target"><span class="">计算几何</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e8%b4%a8%e5%9b%a0%e6%95%b0%e5%88%86%e8%a7%a3" class="link-gray text-emphasized css-truncate-target"><span class="">质因数分解</span></a>
       <span class="text-right Counter">1</span>
     </span>
@@ -1161,7 +1155,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/series/cpp-primer" class="link-gray text-emphasized css-truncate-target"><span class="">Cpp primer</span></a>
-      <span class="text-right Counter">6</span>
+      <span class="text-right Counter">13</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -1221,6 +1215,16 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2021-05" class="link-gray text-emphasized css-truncate-target"><span class="">2021 05</span></a>
+      <span class="text-right Counter">5</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2021-06" class="link-gray text-emphasized css-truncate-target"><span class="">2021 06</span></a>
+      <span class="text-right Counter">4</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2021-07" class="link-gray text-emphasized css-truncate-target"><span class="">2021 07</span></a>
       <span class="text-right Counter">5</span>
     </span>
     

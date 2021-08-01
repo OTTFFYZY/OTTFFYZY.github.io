@@ -6,10 +6,73 @@
     <description>Recent content in Cpp Primer on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 28 May 2021 11:50:51 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 21 Jul 2021 22:57:24 -0700</lastBuildDate>
     
 	<atom:link href="https://ottffyzy.github.io/series/cpp-primer/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 13 章 拷贝控制</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c13/</link>
+      <pubDate>Wed, 21 Jul 2021 22:57:24 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c13/</guid>
+      <description>第 13 章 拷贝控制 拷贝控制 copy control 操作包括： 拷贝构造函数 copy constructor 拷贝赋值运算符 copy-assignment operator 移动构造函数 move constructor 移动赋值运算符 move-assignment operator 析构函数 destructor 13.1 拷贝、赋值与销毁 合成拷贝构造函数 synthesized copy constructor #include &amp;lt;iostream&amp;gt;#include &amp;lt;string&amp;gt;using namespace std; class A { public: string name; A() : name(&amp;#34;&amp;#34;) { cout &amp;lt;&amp;lt; &amp;#34;default ctor&amp;#34; &amp;lt;&amp;lt; endl; } A(string</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 12 章 动态内存</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c12/</link>
+      <pubDate>Wed, 07 Jul 2021 00:59:01 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c12/</guid>
+      <description>第 12 章 动态内存 静态内存用来存储 局部 static 对象，类 static 成员，定义在任何函数之外的变量。 栈内存用来存储 定义在函数内的非 static 对象。 除了这两部分，程序还拥有一个内存池。这部分内存被称为自由空间 free store 或 堆 heap。程序用</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 11 章 关联容器</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c11/</link>
+      <pubDate>Mon, 05 Jul 2021 00:50:38 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c11/</guid>
+      <description>第 11 章 关联容器 关联容器 associative-container map set multimap multiset unordered_map unordered_set unordered_multimap unordered_multiset 11.1 使用关联容器 map 通常称为关联数组 associative array。 11.2 关联容器概述 有序容器的关键字类型 需要定义 &amp;lt;，且该运算需要满足严格弱序 strict weak ordering。 11.2.3 pair 类型 pair 定义在</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 10 章 泛型算法</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c10/</link>
+      <pubDate>Mon, 21 Jun 2021 20:52:05 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c10/</guid>
+      <description>第 10 章 泛型算法 泛型算法 generic algorithm 10.1 概述 大多数算法定义在头文件 algorithm 中。另外在 numeric 种定义了一组数值泛型算法。 一般来说这些算法并不直接操作容器，二十遍历由两个迭代器指定的一个元素范围来进行操作。 10.2 初识泛型算法 10.2.1 只读算</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 9 章 顺序容器</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c9/</link>
+      <pubDate>Thu, 17 Jun 2021 22:49:43 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c9/</guid>
+      <description>第 9 章 顺序容器 sequential container 9.1 顺序容器概述 vector deque list forward_list array string 9.2 容器库概览 类型别名 意义 iterator 迭代器类型 const_iterator 不能修改元素的迭代器类型 size_type 容器类型最大可能的大小 difference_type 两个迭代器间的距离 value_type 元素类型 reference 元素的左值类型与 value_type&amp;amp; 相同 const_reference 元素的 const 左值类</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 8 章 IO 库</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c8/</link>
+      <pubDate>Mon, 14 Jun 2021 20:22:01 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c8/</guid>
+      <description>第 8 章 IO 库 8.1 IO 类 头文件 类型 作用 iostream istream, wistream 从流读 ostream, wostream 向流写 iostream,wiostream 读写流 fstream ifstream, wifstream 从文件读 ofstream, wofstream 向文件写 fstream, wfstream 读写文件 sstream istringstream, wistringstream 从 string 读 ostringstream, wostringstream 向 string 写 stringstream, wstringstream 读写 string ifstream 和 istringstream 继承自 istream ofstream 和 ostringstream 继承自 ostream IO 对象没有拷贝和赋值操作。 8.1.2 条件状态 IO 类定</description>
+    </item>
+    
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 7 章 类</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c7/</link>
+      <pubDate>Tue, 01 Jun 2021 22:41:30 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c7/</guid>
+      <description>第 7 章 类 类的基本思想是数据抽象 data abstraction 和封装 encapsulation。 数据抽象是一种依赖于接口 interface 和实现 implementation 分离的编程/设计技术。 7.1 定义抽象数据类型 引入 this this 是一个常量指针。 成员函数通过隐式参数 this 来访问调用它</description>
+    </item>
     
     <item>
       <title>《C&#43;&#43; Primer》 拾遗 第 6 章 函数</title>

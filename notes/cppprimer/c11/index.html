@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  《C&#43;&#43; Primer》 拾遗 第 11 章 关联容器 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="第 11 章 关联容器 关联容器 associative-container map set multimap multiset unordered_map unordered_set unordered_multimap unordered_multiset 11.1 使用关联容器 map 通常称为关联数组 associative array。 11.2 关联容器概述 有序容器的关键字类型 需要定义 &amp;lt;，且该运算需要满足严格弱序 strict weak ordering。 11.2.3 pair 类型 pair 定义在|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/sols">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">《C&#43;&#43; Primer》 拾遗 第 11 章 关联容器</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/cpp-primer' class="muted-link">
+  <span class="Label Label--gray">Cpp Primer</span>
+</a>
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2021-07-05. Published at: 2021-07-05.">
+        
+          Published: 2021-07-05 Mon 00:50:38
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="第-11-章-关联容器">第 11 章 关联容器</h2>
+<p>关联容器 <code>associative-container</code></p>
+<p>map</p>
+<p>set</p>
+<p>multimap</p>
+<p>multiset</p>
+<p>unordered_map</p>
+<p>unordered_set</p>
+<p>unordered_multimap</p>
+<p>unordered_multiset</p>
+<h3 id="111-使用关联容器">11.1 使用关联容器</h3>
+<p>map 通常称为关联数组 <code>associative array</code>。</p>
+<h3 id="112-关联容器概述">11.2 关联容器概述</h3>
+<h5 id="有序容器的关键字类型">有序容器的关键字类型</h5>
+<p>需要定义 <code>&lt;</code>，且该运算需要满足严格弱序 <code>strict weak ordering</code>。</p>
+<h4 id="1123-pair-类型">11.2.3 pair 类型</h4>
+<p>pair 定义在 utility 头文件中。</p>
+<h3 id="113-关联容器操作">11.3 关联容器操作</h3>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;::</span><span class="n">value_type</span> <span class="n">v1</span><span class="p">;</span> <span class="c1">// string
+</span><span class="c1"></span><span class="n">set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;::</span><span class="n">key_type</span> <span class="n">v2</span><span class="p">;</span>   <span class="c1">// string
+</span><span class="c1"></span><span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;::</span><span class="n">value_type</span> <span class="n">v3</span><span class="p">;</span>  <span class="c1">// pair&lt;const string, int&gt;
+</span><span class="c1"></span><span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;::</span><span class="n">key_type</span> <span class="n">v3</span><span class="p">;</span>    <span class="c1">// string
+</span><span class="c1"></span><span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;::</span><span class="n">mapped_type</span> <span class="n">v3</span><span class="p">;</span> <span class="c1">// int
+</span></code></pre></div><p>set 没有 mapped_type。</p>
+<h4 id="1131-关联容器迭代器">11.3.1 关联容器迭代器</h4>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">cnt</span><span class="p">;</span>
+<span class="k">auto</span> <span class="n">map_it</span> <span class="o">=</span> <span class="n">cnt</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+<span class="o">*</span><span class="n">map_it</span><span class="p">;</span> <span class="c1">// 指向 pair&lt;const string, int&gt; 的引用
+</span><span class="c1">// map_it-&gt;first = &#34;new key&#34; // 错误，不能更改 key
+</span><span class="c1"></span><span class="o">++</span><span class="n">map_it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">;</span> <span class="c1">// 可以修改 value 的值
+</span></code></pre></div><h5 id="set-的迭代器时-const-的">set 的迭代器时 const 的</h5>
+<p>set 虽然同时有 iterator 和 const_iterator 类型，但是都只能访问 set 中的元素。</p>
+<h5 id="关联容器和算法">关联容器和算法</h5>
+<p>通常不对关联容器使用泛型算法。</p>
+<p>多数时候关联容器本身的算法比泛型算法更好比如 （find）。</p>
+<p>关联容器更多地是作为源序列或者目标位置。可以调用 inserter 将一个插入器绑定到关联容器。</p>
+<h4 id="1132-添加元素">11.3.2 添加元素</h4>
+<h5 id="检查-insert-的返回值">检查 insert 的返回值</h5>
+<p>对于 set 和 map，insert 和 emplace 返回一个 pair。first 是插入的关键字的元素的迭代器，second 是 bool 表示是成功插入 （true） 还是已经存在 （false）。</p>
+<p>对于 multiset 和 multimap 因为插入一定会成功，因此只返回迭代器。</p>
+<h4 id="1133-删除元素">11.3.3 删除元素</h4>
+<p>erase(key) 将返回删除元素的个数。</p>
+<p>erase(it) 或 erase(b, e) 则返回被删除元素的下一个元素的迭代器。</p>
+<h4 id="1134-map-的下标操作">11.3.4 map 的下标操作</h4>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">c</span><span class="p">[</span><span class="n">k</span><span class="p">];</span> <span class="c1">// k 不存在时会添加一个 key 为 k 的元素
+</span><span class="c1"></span><span class="n">c</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">k</span><span class="p">);</span> <span class="c1">// k 不存在时会抛出 out_of_range 异常
+</span></code></pre></div><h4 id="1135-访问元素">11.3.5 访问元素</h4>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">c</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">k</span><span class="p">);</span> <span class="c1">// 指向等于 k 的第一个元素
+</span><span class="c1"></span><span class="n">c</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">k</span><span class="p">);</span>
+<span class="n">c</span><span class="p">.</span><span class="n">lower_bound</span><span class="p">(</span><span class="n">k</span><span class="p">);</span>
+<span class="n">c</span><span class="p">.</span><span class="n">upper_bound</span><span class="p">(</span><span class="n">k</span><span class="p">);</span>
+<span class="n">c</span><span class="p">.</span><span class="n">equal_range</span><span class="p">(</span><span class="n">k</span><span class="p">);</span> <span class="c1">// 返回一个迭代器 pair。k 不存在则返回一对 c.end()
+</span></code></pre></div><h3 id="114-无序容器">11.4 无序容器</h3>
+<p>无序关联容器不适用比较算符，使用哈希函数 <code>hash function</code> 和关键字类型的 <code>==</code> 算符。</p>
+<h5 id="桶管理">桶管理</h5>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">c</span><span class="p">.</span><span class="n">bucket_count</span><span class="p">();</span>     <span class="c1">// 正在使用的桶的数目
+</span><span class="c1"></span><span class="n">c</span><span class="p">.</span><span class="n">max_bucket_count</span><span class="p">();</span> <span class="c1">// 容器能容纳的最多的桶的数量
+</span><span class="c1"></span><span class="n">c</span><span class="p">.</span><span class="n">bucket_size</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>     <span class="c1">// 第 n 个桶中有多少个元素
+</span><span class="c1"></span><span class="n">c</span><span class="p">.</span><span class="n">bucket</span><span class="p">(</span><span class="n">k</span><span class="p">);</span>          <span class="c1">// 关键字为 k 的元素在哪个桶中
+</span><span class="c1"></span>
+<span class="n">local_iterator</span><span class="p">;</span>       <span class="c1">// 访问桶中元素的迭代器
+</span><span class="c1"></span><span class="n">const_local_iterator</span><span class="p">;</span> <span class="c1">// 桶迭代器的 const 版本
+</span><span class="c1"></span><span class="n">c</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">c</span><span class="p">.</span><span class="n">end</span><span class="p">(</span><span class="n">n</span><span class="p">);</span> <span class="c1">// 桶 n 的首尾迭代器
+</span><span class="c1"></span><span class="n">c</span><span class="p">.</span><span class="n">cbegin</span><span class="p">(</span><span class="n">n</span><span class="p">),</span> <span class="n">c</span><span class="p">.</span><span class="n">cend</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+
+<span class="n">c</span><span class="p">.</span><span class="n">load_factor</span><span class="p">();</span>      <span class="c1">// 每个桶的平均元素数量，返回 float 值
+</span><span class="c1"></span><span class="n">c</span><span class="p">.</span><span class="n">max_load_factor</span><span class="p">();</span>  <span class="c1">// c 试图维护的平均桶大小
+</span><span class="c1"></span><span class="n">c</span><span class="p">.</span><span class="n">rehash</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>          <span class="c1">// 使 bucket_count &gt;= n
+</span><span class="c1"></span><span class="n">c</span><span class="p">.</span><span class="n">reserve</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>         <span class="c1">// 使 c 可以保存 n 个元素且不必 rehash
+</span></code></pre></div><h5 id="无序容器对关键字类型的要求">无序容器对关键字类型的要求</h5>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">size_t</span> <span class="nf">hasher</span><span class="p">(</span><span class="k">const</span> <span class="n">A</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+<span class="kt">bool</span> <span class="nf">eq_op</span><span class="p">(</span><span class="k">const</span> <span class="n">A</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">A</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+<span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span> <span class="k">decltype</span><span class="p">(</span><span class="n">hasher</span><span class="p">)</span><span class="o">*</span><span class="p">,</span> <span class="k">decltype</span><span class="p">(</span><span class="n">eq_op</span><span class="p">)</span><span class="o">*&gt;</span> <span class="n">ma</span><span class="p">;</span>
+</code></pre></div>
+  </section>
+
+  <section>
+    
+        <a href="/tpls/cg/nearestpair/" class="previous_page">Prev: [模板][计算几何] 平面最近点对 </a>
+    
+     <br> 
+    
+        <a href="/notes/cppprimer/c12/" class="next_page">Next: 《C&#43;&#43; Primer》 拾遗 第 12 章 动态内存 </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>《C&#43;&#43; Primer》 拾遗 第 11 章 关联容器</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#第-11-章-关联容器">第 11 章 关联容器</a>
+      <ul>
+        <li><a href="#111-使用关联容器">11.1 使用关联容器</a></li>
+        <li><a href="#112-关联容器概述">11.2 关联容器概述</a></li>
+        <li><a href="#113-关联容器操作">11.3 关联容器操作</a></li>
+        <li><a href="#114-无序容器">11.4 无序容器</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>

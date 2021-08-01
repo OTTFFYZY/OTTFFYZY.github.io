@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  《C&#43;&#43; Primer》 拾遗 第 7 章 类 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="第 7 章 类 类的基本思想是数据抽象 data abstraction 和封装 encapsulation。 数据抽象是一种依赖于接口 interface 和实现 implementation 分离的编程/设计技术。 7.1 定义抽象数据类型 引入 this this 是一个常量指针。 成员函数通过隐式参数 this 来访问调用它|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/sols">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">《C&#43;&#43; Primer》 拾遗 第 7 章 类</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/cpp-primer' class="muted-link">
+  <span class="Label Label--gray">Cpp Primer</span>
+</a>
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2021-06-01. Published at: 2021-06-01.">
+        
+          Published: 2021-06-01 Tue 22:41:30
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="第-7-章-类">第 7 章 类</h2>
+<p>类的基本思想是数据抽象 <code>data abstraction</code> 和封装 <code>encapsulation</code>。</p>
+<p>数据抽象是一种依赖于接口 <code>interface</code> 和实现 <code>implementation</code> 分离的编程/设计技术。</p>
+<h3 id="71-定义抽象数据类型">7.1 定义抽象数据类型</h3>
+<h5 id="引入-this">引入 this</h5>
+<p>this 是一个常量指针。</p>
+<p>成员函数通过隐式参数 this 来访问调用它的对象。编译器负责将调用函数的对象的地址传给隐式形参 this。</p>
+<p>可以认为一个成员函数</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">A</span> <span class="p">{</span>
+ <span class="k">private</span><span class="o">:</span>
+  <span class="kt">int</span> <span class="n">a_</span><span class="p">;</span>
+ <span class="k">public</span><span class="o">:</span>
+  <span class="kt">void</span> <span class="n">set</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span> <span class="n">a_</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">};</span>
+<span class="n">A</span> <span class="n">obj</span><span class="p">;</span>
+<span class="n">obj</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</code></pre></div><p>是按照如下方式运作的</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">set</span><span class="p">(</span><span class="n">A</span> <span class="o">*</span><span class="k">const</span> <span class="k">this</span><span class="p">,</span> <span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">a_</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span> <span class="p">}</span>
+<span class="n">set</span><span class="p">(</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+</code></pre></div><h5 id="引入-const-成员函数">引入 const 成员函数</h5>
+<p>参数列表之后的 const 可以视作隐式修改了 this 指针的类型，增加了底层 const。</p>
+<p>因为 this 是常量指针，因此常量成员函数不能修改对象的内容，也不能调用非常量成员函数（因为不能把有底层 const 的 this 转化成没有底层 const 的 this）。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">A</span> <span class="p">{</span>
+ <span class="p">...</span>
+  <span class="kt">int</span> <span class="n">get</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">a_</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">};</span>
+<span class="n">A</span> <span class="n">obj</span><span class="p">;</span>
+<span class="n">obj</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
+</code></pre></div><p>可以认为是按照如下方式运作的</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">get</span><span class="p">(</span><span class="k">const</span> <span class="n">A</span> <span class="o">*</span><span class="k">const</span> <span class="k">this</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">a_</span><span class="p">;</span> <span class="p">}</span>
+<span class="n">get</span><span class="p">(</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">);</span>
+</code></pre></div><h4 id="714-构造函数">7.1.4 构造函数</h4>
+<p>没有参数的构造函数称为默认构造函数。</p>
+<p>如果类没有显式定义构造函数，则编译器会创建一个默认构造函数，这个构造函数也成为合成的默认构造函数 <code>synthesized default constructor</code>。对于大多数类其合成规则是：如果存在类内初始值，用它初始化成员，否则默认初始化成员。</p>
+<p>注意并不是所有类都可以依赖合成的默认初始化，定义在块内的内置类型或符合类型的对象被默认初始化，则它的值是未定义的。</p>
+<h5 id="-default-的含义">= default 的含义</h5>
+<p>= default 可以和声明出现也可以和作为定义出现在类外部。</p>
+<p>如果一些情况我们需要默认的行为，就可以使用 default。</p>
+<p>例如有其他构造函数时我们还需要默认构造函数，且这个函数行为与合成的默认构造函数一致，就可以使用 default。</p>
+<h5 id="构造函数初始值列表">构造函数初始值列表</h5>
+<p><code>constructor initialize list</code>。</p>
+<p>当一个成员没有出现在构造初始值列表，则它会以合成默认构造函数相同的方式初始化。构造函数不应该轻易覆盖掉类内的初始值。</p>
+<h4 id="715-拷贝赋值和析构">7.1.5 拷贝、赋值和析构</h4>
+<p>管理动态内存通常不能使用合成的拷贝、赋值和析构函数。</p>
+<p>但如果类成员是标准库中的一些成员，如 vector 或 string，则可以使用默认的行为的合成版本。</p>
+<h3 id="72-访问控制与封装">7.2 访问控制与封装</h3>
+<p>C++ 种使用访问说明符 <code>access specifiers</code> 加强类的封装性。</p>
+<p>使用 class 和 struct 定义类唯一的区别就是默认的访问权限。</p>
+<h4 id="721-友元">7.2.1 友元</h4>
+<p>类可以允许其他类或者函数访问它的非共有成员，方法是通过友元 <code>friend</code>。</p>
+<p>只需要增加一条 friend 开始的函数声明即可将函数声明为友元。</p>
+<p>友元不是类的成员也不受所在区域访问级别的约束。</p>
+<p>注意友元声明只是指定了访问权限，而非传统意义的函数声明。因此在友元函数的调用点之前，应当包含专门的声明。通常将这些声明与类本身放于同一头文件。注意部分编译器支持不需要友元函数有独立的声明就可以调用。</p>
+<h3 id="73-类的其他特性">7.3 类的其他特性</h3>
+<p>注意与其他成员不同 typedef 和 using 定义的类型必须先定义后使用。</p>
+<p>定义在类内部的成员函数是自动 inline 的。同样我们也可以在声明类外部定义的函数时显式指明 inline 或者是最好在类外部定义时使用 inline 关键字。</p>
+<h5 id="可变数据成员">可变数据成员</h5>
+<p>有时我们希望在 const 成员函数中修改某个数据成员，可以将其声明为 mutable。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">A</span> <span class="p">{</span>
+ <span class="k">private</span><span class="o">:</span>
+  <span class="k">mutable</span> <span class="kt">int</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+ <span class="k">public</span><span class="o">:</span>
+   <span class="kt">void</span> <span class="n">f</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> 
+   	<span class="n">cnt</span><span class="o">++</span><span class="p">;</span>
+   	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;call f()&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="kt">int</span> <span class="nf">get_cnt</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">cnt</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">A</span> <span class="n">obj</span><span class="p">;</span>
+  <span class="n">obj</span><span class="p">.</span><span class="n">f</span><span class="p">();</span>
+  <span class="n">obj</span><span class="p">.</span><span class="n">f</span><span class="p">();</span>
+  <span class="n">obj</span><span class="p">.</span><span class="n">f</span><span class="p">();</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">obj</span><span class="p">.</span><span class="n">get_cnt</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-txt" data-lang="txt">call f()
+call f()
+call f()
+3
+</code></pre></div><h4 id="732-返回-this-的成员函数">7.3.2 返回 *this 的成员函数</h4>
+<p>注意我们可以重载 const 和非 const 函数，因此我们也可以得到返回值是 const 和非 const 的 *this 的函数。</p>
+<h4 id="733-类类型">7.3.3 类类型</h4>
+<p>注意两个类即使成员完全一样，也是不同类型。</p>
+<p>可以直接使用类名，也可以跟在 class 和 struct 后使用。</p>
+<h5 id="类的声明">类的声明</h5>
+<p>我们也可以只声明类而暂时不定义它。这种声明称为前向声明 <code>forward declaration</code>。在它声明之后定义之前是一个不完全类型 <code>incomplete type</code>。</p>
+<p>不完全类型可以定义指向它的指针或者引用，也可以声明（不能定义）以它作为参数或者返回类型的函数。</p>
+<p>创建类对象之前，类必须被定义过。</p>
+<p>一个类名一旦出现就被认为是声明过了，因此可以在类内部定义指向自身类型的引用或者指针。</p>
+<h4 id="734-友元再探">7.3.4 友元再探</h4>
+<p>可以定义一个类为另一个类的友元。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">A</span> <span class="p">{</span>
+    <span class="k">friend</span> <span class="k">class</span> <span class="nc">B</span><span class="p">;</span>
+    <span class="p">...</span>
+<span class="p">};</span>
+</code></pre></div><p>则 B 可以直接访问 A 的私有成员。</p>
+<p>注意友元关系不具有传递性。</p>
+<p>可以只声明某个成员函数为友元</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">A</span> <span class="p">{</span>
+    <span class="k">friend</span> <span class="kt">void</span> <span class="n">B</span><span class="o">::</span><span class="n">f</span><span class="p">();</span>
+    <span class="p">...</span>
+<span class="p">};</span>
+</code></pre></div><p>这时我们要按照如下顺序编写程序</p>
+<p>声明 A。</p>
+<p>声明 B::f() ，但不能定义。</p>
+<p>定义 A 声明友元。</p>
+<p>定义 B::f()。</p>
+<h5 id="友元声明和作用域">友元声明和作用域</h5>
+<p>注意即便直接在类中定义友元函数，也不意味着在类外或者类中的其他函数可以不声明直接调用（虽然不是所有编译器都遵循这个规则）。</p>
+<h3 id="74-类的作用域">7.4 类的作用域</h3>
+<h4 id="741-名字查找与类的作用域">7.4.1 名字查找与类的作用域</h4>
+<p>对于类内部的定义的函数名字来说分两步：编译成员声明，当类全部可见后编译函数体。</p>
+<p>一般来说内层作用域可以重新定义外层作用域的名字。但是类中，如果成员使用了外层作用域中的名字，而该名字代表一个类型，则在类内不能重新定义该名字。注意一些编译器可以通过这样的代码。</p>
+<p>类中的名字被内层定义的名字屏蔽时，我们可以使用 this 指针或者加上类名强制访问类的成员。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">A</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="kt">void</span> <span class="n">print</span><span class="p">()</span> <span class="p">{</span>
+  	<span class="n">string</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&#34;123&#34;</span><span class="p">;</span>
+  	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">A</span><span class="o">::</span><span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">A</span><span class="p">().</span><span class="n">print</span><span class="p">();</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="75-构造函数再探">7.5 构造函数再探</h3>
+<h4 id="751-构造函数初始值列表">7.5.1 构造函数初始值列表</h4>
+<p>如果成员是 const、引用或者某个为提供默认构造函数的类类型对象，则必须通过构造函数初始值列表提供初始值。</p>
+<p>初始值列表只用来说明初始值，初始化顺序由类中出现的顺序决定。</p>
+<p>如果一个构造函数所有参数都提供了默认实参，则它实际上也定义了默认构造函数。</p>
+<h4 id="752-委托构造函数">7.5.2 委托构造函数</h4>
+<p><code>delegating constructor</code>：使用所属类的其他构造函数执行初始化。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">A</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+ <span class="k">public</span><span class="o">:</span>
+  <span class="n">A</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="o">:</span> <span class="n">a</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">b</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;A(a, b)&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="p">}</span>
+  <span class="n">A</span><span class="p">(</span><span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="o">:</span> <span class="n">A</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;A(b)&#34;</span> <span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span> <span class="p">}</span>
+  <span class="n">A</span><span class="p">()</span> <span class="o">:</span> <span class="n">A</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;A()&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">A</span> <span class="n">obj</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">A(a, b)
+A(b)
+A()
+</code></pre></div><h4 id="753-默认构造函数的作用">7.5.3 默认构造函数的作用</h4>
+<p>当对象被默认初始化或值初始化时会自动调用默认构造函数。</p>
+<p>默认初始化：</p>
+<p>块内作用域不适用任何初始值定义一个非静态变量。</p>
+<p>类本身含有类类型成员且使用合成的默认构造函数。</p>
+<p>当类类型成员没有在构造函数初始值列表显示初始化。</p>
+<p>值初始化：</p>
+<p>数组初始化提供的初始值小于数组大小。</p>
+<p>不使用初始值定义一个局部静态变量。</p>
+<p>通过书写形如 T() 的表达式显示的请求初始化是，其中 T 是类型名。</p>
+<p>多数情况是好判断的，但有如下情况</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">A</span> <span class="p">{</span>
+ <span class="k">public</span><span class="o">:</span>
+	<span class="n">A</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{}</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="nc">B</span> <span class="p">{</span>
+	<span class="n">A</span> <span class="n">obj</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// struct C {
+</span><span class="c1">//   A obj;
+</span><span class="c1">//   C() {}
+</span><span class="c1">// };
+</span><span class="c1"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// B obj;
+</span><span class="c1"></span>  <span class="n">B</span> <span class="n">obj</span><span class="p">{</span>
+  	<span class="p">.</span><span class="n">obj</span> <span class="o">=</span> <span class="n">A</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
+  <span class="p">};</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><h5 id="使用默认构造函数">使用默认构造函数</h5>
+<p>注意如下形式会被编译器认为是函数声明（声明了一个没有参数，返回类型为 A 的函数），而不是默认构造。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">A</span><span class="p">;</span>
+<span class="n">A</span> <span class="nf">obj</span><span class="p">();</span>
+</code></pre></div><p>默认构造要直接去掉括号</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">A</span> <span class="n">obj</span><span class="p">;</span>
+</code></pre></div><h4 id="754-隐式类型转换">7.5.4 隐式类型转换</h4>
+<p>我们可以为类定义隐式转换规则。</p>
+<p>如果构造函数只接受一个实参，则它实际上定义了转换为此类型的隐式转换机制。有时把这种构造函数称为转换构造函数 <code>converting constructor</code>。</p>
+<p>注意编译器只支持一步自动转换，而不能进行多步类型转换。</p>
+<p>我们可以在一个参数的构造函数处使用 explicit 阻止隐式类型转换。</p>
+<p>explicit 的构造函数只能用于直接形式的初始化，而不能用于拷贝形式的初始化。</p>
+<p>虽然不能用于隐式类型转化，但是我们可以使用 static_cast 进行显式的类型转换。</p>
+<h4 id="755-聚合类">7.5.5 聚合类</h4>
+<p>聚合类 <code>aggregate class</code> 满足所有成员都是 public 的，没有定义任何构造函数，没有类内初始值，没有基类，也没有 virtual 函数。</p>
+<p>我们可以用一个花括号括起来的成员初始值列表初始化聚合类，顺序要与声明顺序一致。</p>
+<h4 id="756-字面值常量类">7.5.6 字面值常量类</h4>
+<p>有些类也是字面值类型，这样的类可能包含 constexpr 函数成员，该成员需要符合所有 constexpr 函数的要求，且是隐式 const 的。</p>
+<p>数据成员都是字面值类型的聚合类是字面值常量类。如果一个类不是聚合类但符合以下要求也是字面值常量类：</p>
+<p>数据成员必须都是字面值类型。</p>
+<p>类必须至少含有一个 constexpr 构造函数。</p>
+<p>如果一个数据成员含有类内初始值，则内置类型成员的初始值必须是一条常量表达式，如果成员是某种类类型则初始值必须使用成员自己的 constexpr 构造函数。</p>
+<p>类必须使用析构函数的默认定义。</p>
+<h5 id="constexpr-构造函数">constexpr 构造函数</h5>
+<p>尽管构造函数不能是 const 的，但字面值常量类的构造函数可以是 constexpr 函数。</p>
+<p>字面值类型常量类至少要提供一个 constexpr 构造函数，其函数体一般为空。</p>
+<p>constexpr 函数可以声明为 =default或者是删除函数的形式。</p>
+<h3 id="76-类的静态成员">7.6 类的静态成员</h3>
+<p>静态成员函数不与任何对象绑定在一起，不包含 this 指针，也不能声明成 const 的。</p>
+<p>类外定义静态成员函数时不能重复 static 关键字。</p>
+<p>因为静态数据成员不属于对象，因此不是类对象初始化时定义的，也不是类的构造函数初始化的。一般来说不能在类内初始化静态成员，必须在类外部定义和初始化每个静态成员。</p>
+<p>类似于全局变量，景泰数据成员定义在任何函数之外，因此一旦被定义就存在于程序的整个生命周期。</p>
+<h5 id="静态成员的类内初始化">静态成员的类内初始化</h5>
+<p>通常静态成员不应该在类内初始化，可以为静态成员提供 const 整数类型的类内初始值，不过要求静态成员必须是字面值常量类型的 constexpr。</p>
+<p>如果某个静态成员的应用场景仅限于编译器可以替换它值的情况，则一个初始化的 const 或 constexpr static 不需要分别定义。</p>
+<p>即使一个成员在类内被初始化了，也应该在类外定义一下该成员。</p>
+<h5 id="静态成员能用于某些特殊场景">静态成员能用于某些特殊场景</h5>
+<p>静态类型可以是类本身的类型，但普通成员只能是指针或引用。</p>
+<p>静态成员可以作为默认实参。</p>
+
+  </section>
+
+  <section>
+    
+        <a href="/notes/cppprimer/c6/" class="previous_page">Prev: 《C&#43;&#43; Primer》 拾遗 第 6 章 函数 </a>
+    
+     <br> 
+    
+        <a href="/notes/cppprimer/c8/" class="next_page">Next: 《C&#43;&#43; Primer》 拾遗 第 8 章 IO 库 </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>《C&#43;&#43; Primer》 拾遗 第 7 章 类</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#第-7-章-类">第 7 章 类</a>
+      <ul>
+        <li><a href="#71-定义抽象数据类型">7.1 定义抽象数据类型</a></li>
+        <li><a href="#72-访问控制与封装">7.2 访问控制与封装</a></li>
+        <li><a href="#73-类的其他特性">7.3 类的其他特性</a></li>
+        <li><a href="#74-类的作用域">7.4 类的作用域</a></li>
+        <li><a href="#75-构造函数再探">7.5 构造函数再探</a></li>
+        <li><a href="#76-类的静态成员">7.6 类的静态成员</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  《C&#43;&#43; Primer》 拾遗 第 8 章 IO 库 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="第 8 章 IO 库 8.1 IO 类 头文件 类型 作用 iostream istream, wistream 从流读 ostream, wostream 向流写 iostream,wiostream 读写流 fstream ifstream, wifstream 从文件读 ofstream, wofstream 向文件写 fstream, wfstream 读写文件 sstream istringstream, wistringstream 从 string 读 ostringstream, wostringstream 向 string 写 stringstream, wstringstream 读写 string ifstream 和 istringstream 继承自 istream ofstream 和 ostringstream 继承自 ostream IO 对象没有拷贝和赋值操作。 8.1.2 条件状态 IO 类定|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/sols">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">《C&#43;&#43; Primer》 拾遗 第 8 章 IO 库</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/cpp-primer' class="muted-link">
+  <span class="Label Label--gray">Cpp Primer</span>
+</a>
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2021-06-14. Published at: 2021-06-14.">
+        
+          Published: 2021-06-14 Mon 20:22:01
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="第-8-章-io-库">第 8 章 IO 库</h2>
+<h3 id="81-io-类">8.1 IO 类</h3>
+<table>
+<thead>
+<tr>
+<th>头文件</th>
+<th>类型</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iostream</td>
+<td>istream, wistream</td>
+<td>从流读</td>
+</tr>
+<tr>
+<td></td>
+<td>ostream, wostream</td>
+<td>向流写</td>
+</tr>
+<tr>
+<td></td>
+<td>iostream,wiostream</td>
+<td>读写流</td>
+</tr>
+<tr>
+<td>fstream</td>
+<td>ifstream, wifstream</td>
+<td>从文件读</td>
+</tr>
+<tr>
+<td></td>
+<td>ofstream, wofstream</td>
+<td>向文件写</td>
+</tr>
+<tr>
+<td></td>
+<td>fstream, wfstream</td>
+<td>读写文件</td>
+</tr>
+<tr>
+<td>sstream</td>
+<td>istringstream, wistringstream</td>
+<td>从 string 读</td>
+</tr>
+<tr>
+<td></td>
+<td>ostringstream, wostringstream</td>
+<td>向 string 写</td>
+</tr>
+<tr>
+<td></td>
+<td>stringstream, wstringstream</td>
+<td>读写 string</td>
+</tr>
+</tbody>
+</table>
+<p>ifstream 和 istringstream 继承自 istream</p>
+<p>ofstream 和 ostringstream 继承自 ostream</p>
+<p>IO 对象没有拷贝和赋值操作。</p>
+<h4 id="812-条件状态">8.1.2 条件状态</h4>
+<p>IO 类定义的一些函数和标志，可以帮助访问和操纵流的条件状态 <code>condition state</code>。</p>
+<p>strm 代表某种 IO 类型。s 代表某个流对象。</p>
+<table>
+<thead>
+<tr>
+<th>标志或函数</th>
+<th>意义或作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>strm::iostate</td>
+<td>及其相关的类型，提供表达条件状态的完整功能</td>
+</tr>
+<tr>
+<td>strm::badbit</td>
+<td>流已经崩溃</td>
+</tr>
+<tr>
+<td>strm::failbit</td>
+<td>一个 IO 操作失败了</td>
+</tr>
+<tr>
+<td>strm::eofbit</td>
+<td>流达到文件为</td>
+</tr>
+<tr>
+<td>strm::goodbit</td>
+<td>流未处于错误状态，此值保证为 0</td>
+</tr>
+<tr>
+<td>s.eof()</td>
+<td>若 s 的 eofbit 置位则返回 true</td>
+</tr>
+<tr>
+<td>s.fail()</td>
+<td>若 s 的 failbit 置位则返回 true</td>
+</tr>
+<tr>
+<td>s.bad()</td>
+<td>若 s 的 badbit 置位则返回 true</td>
+</tr>
+<tr>
+<td>s.good()</td>
+<td>若 s 处于有效状态则返回 true</td>
+</tr>
+<tr>
+<td>s.clear()</td>
+<td>将 s 的条件状态复位，将流的状态设置为有效。返回 void</td>
+</tr>
+<tr>
+<td>s.clear(flags)</td>
+<td>根据给定的 flags 标志为，将流中对应状态位复位。flags 类型为 strm::iostate。返回 void</td>
+</tr>
+<tr>
+<td>s.setstate(flags)</td>
+<td>根据给定的 flags 标志为，将流中对应状态位置位。flags 类型为 strm::iostate。返回 void</td>
+</tr>
+<tr>
+<td>s.rdstate()</td>
+<td>返回流 s 的当前条件状态，返回值类型为 strm::iostate</td>
+</tr>
+</tbody>
+</table>
+<p>我们可以将流作为条件使用来检查它的状态。</p>
+<h4 id="813-管理输出缓冲">8.1.3 管理输出缓冲</h4>
+<p>输出的文本可能立即打印出来，也可能被保存到缓冲区随后再打印。</p>
+<p>导致缓冲刷新可能是以下原因：</p>
+<p>程序正常结束，作为 main 函数的 return 操作的一部分，缓冲刷新被执行。</p>
+<p>缓冲区满。</p>
+<p>可以使用 endl 等显式刷新缓冲区。</p>
+<p>每个输出操作后可以用 unitbuf 设置流的内部状态来清空缓冲区。默认情况下，对 cerr 是设置 unitbuf 的，因此写到 cerr 的内容都是立即刷新的。</p>
+<p>一个输出流可能被关联到另一个流。这种情况下，当读写被关联的流时，关联到的流的缓冲区会刷新。例如默认情况下，cin 和 cerr 都关联到 cout。因此读 cin 或写 cerr 都会导致 cout 的缓冲区被刷新。</p>
+<p>注意程序异常终止时输出缓冲区不会被刷新。</p>
+<h5 id="刷新输出缓冲区">刷新输出缓冲区</h5>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// 在缓冲区插入一个换行，然后刷新缓冲区
+</span><span class="c1"></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">flush</span><span class="p">;</span> <span class="c1">// 刷新缓冲区
+</span><span class="c1"></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ends</span><span class="p">;</span> <span class="c1">// 在缓冲区插入一个空字符，然后刷新缓冲区
+</span></code></pre></div><h5 id="unitbuf-操纵符">unitbuf 操纵符</h5>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">unitbuf</span><span class="p">;</span> <span class="c1">// 所有输出操作后都会立即刷新缓冲区
+</span><span class="c1"></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">nounitbuf</span><span class="p">;</span> <span class="c1">// 回到正常的缓冲方式
+</span></code></pre></div><h5 id="关联输入和输出流">关联输入和输出流</h5>
+<p>注意交互式系统通常应该关联输入流和输出流。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">();</span> <span class="c1">// 返回关联的输出流的指针，或未关联到流时返回空指针。
+</span><span class="c1"></span><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="n">postrm</span><span class="p">);</span> <span class="c1">// 传入一个指向 ostream 的指针使其关联到对应的输出流
+</span></code></pre></div><h3 id="82-文件输入输出">8.2 文件输入输出</h3>
+<p>fstream 特有的操作</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">fstream</span> <span class="n">fstrm</span><span class="p">;</span>    <span class="c1">// 创建未绑定的文件流。 
+</span><span class="c1"></span><span class="n">fstream</span> <span class="nf">fstrm</span><span class="p">(</span><span class="n">s</span><span class="p">);</span> <span class="c1">// 创建 fstream 并打开名为 s 的文件，
+</span><span class="c1"></span>				  <span class="c1">// s 可以是 string 或 c 风格字符串的指针
+</span><span class="c1"></span>                  <span class="c1">// 默认文件模式依赖于 fstream 的类型
+</span><span class="c1"></span><span class="n">fstream</span> <span class="nf">fstrm</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">mode</span><span class="p">);</span> <span class="c1">// 创建 fstream 并打开名为 s 的文件，
+</span><span class="c1"></span>                        <span class="c1">// 并指定 mode
+</span><span class="c1"></span><span class="n">fstrm</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>   <span class="c1">// 打开名为 s 的文件并将文件与 fstrm 绑定，
+</span><span class="c1"></span>                 <span class="c1">// mode 依赖于 fstream 类型。返回 void
+</span><span class="c1"></span><span class="n">fstrm</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>   <span class="c1">// 关闭与 fstrm 绑定的文件。返回 void。
+</span><span class="c1"></span><span class="n">fstrm</span><span class="p">.</span><span class="n">is_open</span><span class="p">();</span> <span class="c1">// 返回 bool 指出与 fstrm 关联的文件是否成功打开
+</span><span class="c1"></span>                 <span class="c1">// 且尚未关闭
+</span></code></pre></div><h4 id="821-使用文件流对象">8.2.1 使用文件流对象</h4>
+<p>可以使用 fstream 代替 iostream&amp;</p>
+<h5 id="成员函数-open-和-close">成员函数 open 和 close</h5>
+<p>注意 open 可能会失败，因此应该在使用前检查流状态。</p>
+<p>已经打开的文件流调用 open 会导致 failbit 被置位。</p>
+<p>可以将文件流关联到另外的文件，此时需要先关闭已经关联的文件，成功关闭后再关联到新的文件。</p>
+<p>当 fstream 对象被销毁时 close 会被自动调用。</p>
+<h4 id="822-文件模式">8.2.2 文件模式</h4>
+<p><code>file mode</code></p>
+<table>
+<thead>
+<tr>
+<th>标志</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>in</td>
+<td>以读方式打开</td>
+</tr>
+<tr>
+<td>out</td>
+<td>以写方式打开</td>
+</tr>
+<tr>
+<td>app</td>
+<td>每次写操作前均定位到文件尾</td>
+</tr>
+<tr>
+<td>ate</td>
+<td>打开文件后立即定位到文件尾</td>
+</tr>
+<tr>
+<td>trunc</td>
+<td>截断文件</td>
+</tr>
+<tr>
+<td>binary</td>
+<td>以二进制方式进行 IO</td>
+</tr>
+</tbody>
+</table>
+<p>只可以对 ifsteam 或 fstream 设定 in</p>
+<p>只可以对 ofstream 或 fstream 设定 out</p>
+<p>只有当 out 被设定时可以设定 trunc</p>
+<p>trunc 没被设定时可以设置 app。app 设定时即便没有 out 也总以输出方式打开。</p>
+<p>某人状况即便不指定 trunc，以 out 模式打开的文件也会被截断，想保留内容必须同时指定 app，或者同时制指定 in</p>
+<p>ate 和 binary 可以用于任何文件流对象。</p>
+<p>ifstream 默认 in</p>
+<p>ofstream 默认 out</p>
+<p>fstream 默认 in 和 out</p>
+<p>注意每次调用 open 时会重新确定打开模式。</p>
+<h3 id="83-string-流">8.3 string 流</h3>
+<p>sstream 头文件定义了 3 个类型来支持内存 IO。</p>
+<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">sstream</span> <span class="n">strm</span><span class="p">;</span>    <span class="c1">// 未绑定的 stringstream
+</span><span class="c1"></span><span class="n">sstream</span> <span class="nf">strm</span><span class="p">(</span><span class="n">s</span><span class="p">);</span> <span class="c1">// 保存 s 的拷贝
+</span><span class="c1"></span><span class="n">strm</span><span class="p">.</span><span class="n">str</span><span class="p">()</span>       <span class="c1">// 返回 strm 所保存的 string 的拷贝
+</span><span class="c1"></span><span class="n">strm</span><span class="p">.</span><span class="n">str</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>      <span class="c1">// 将 string s 拷贝到 strm 中，返回 void。
+</span></code></pre></div>
+  </section>
+
+  <section>
+    
+        <a href="/notes/cppprimer/c7/" class="previous_page">Prev: 《C&#43;&#43; Primer》 拾遗 第 7 章 类 </a>
+    
+     <br> 
+    
+        <a href="/notes/cppprimer/c9/" class="next_page">Next: 《C&#43;&#43; Primer》 拾遗 第 9 章 顺序容器 </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>《C&#43;&#43; Primer》 拾遗 第 8 章 IO 库</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#第-8-章-io-库">第 8 章 IO 库</a>
+      <ul>
+        <li><a href="#81-io-类">8.1 IO 类</a></li>
+        <li><a href="#82-文件输入输出">8.2 文件输入输出</a></li>
+        <li><a href="#83-string-流">8.3 string 流</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>
