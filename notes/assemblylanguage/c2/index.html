@@ -121,7 +121,7 @@
     <div class="float-md-right">
       <span title="Lastmod: 2020-09-08. Published at: 2020-09-08.">
         
-          Published: 2020-09-08 Tue 18:44:17
+          Published: 2020-09-08 周二 18:44:17
         
       </span>
     </div>
@@ -155,7 +155,7 @@
 <p>字节 byte -&gt; 8 bit</p>
 <p>字 work -&gt; 2 byte</p>
 <h2 id="23-几条汇编指令">2.3 几条汇编指令</h2>
-<div class="highlight"><pre class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">mov</span> <span class="no">ax</span><span class="p">,</span> <span class="mi">18</span> <span class="c">; AX = 18
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">mov</span> <span class="no">ax</span><span class="p">,</span> <span class="mi">18</span> <span class="c">; AX = 18
 </span><span class="c"></span><span class="no">mov</span> <span class="no">ah</span><span class="p">,</span> <span class="mi">78</span> <span class="c">; AH = 78
 </span><span class="c"></span><span class="no">add</span> <span class="no">ax</span><span class="p">,</span> <span class="mi">8</span>  <span class="c">; AX = AX + 8
 </span><span class="c"></span><span class="no">mov</span> <span class="no">ax</span><span class="p">,</span> <span class="no">bx</span> <span class="c">; AX = BX
@@ -194,7 +194,7 @@ $$物理地址 = 段地址 \times 16 &#43; 偏移量$$</p>
 <p>（3）执行指令。转到步骤（1）</p>
 <h2 id="211-修改-csip-的指令">2.11 修改 CS、IP 的指令</h2>
 <p>可以使用 jmp 指令修改 CS 和 IP 的值</p>
-<div class="highlight"><pre class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">jmp</span> <span class="mi">3</span><span class="p">:</span><span class="mi">0</span><span class="no">B16</span> <span class="c">; CS = 0003H, IP = 0B16H
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="nf">jmp</span> <span class="mi">3</span><span class="p">:</span><span class="mi">0</span><span class="no">B16</span> <span class="c">; CS = 0003H, IP = 0B16H
 </span><span class="c"></span><span class="no">imp</span> <span class="no">ax</span> <span class="c">; IP = AX
 </span></code></pre></div><h2 id="212-代码段">2.12 代码段</h2>
 <p>可以将一组内存单元设置为一个段，如果这个段是存放的执行代码，则称为代码段。</p>

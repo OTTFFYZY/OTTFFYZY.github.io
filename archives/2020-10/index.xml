@@ -6,11 +6,7 @@
     <description>Recent content in 2020-10 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 31 Oct 2020 00:53:37 -0400</lastBuildDate>
-    
-	<atom:link href="https://ottffyzy.github.io/archives/2020-10/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 31 Oct 2020 00:53:37 -0400</lastBuildDate><atom:link href="https://ottffyzy.github.io/archives/2020-10/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[算法][数论] 最大公约数（GCD）与欧几里得算法</title>
       <link>https://ottffyzy.github.io/algos/nt/gcd/</link>
@@ -21,21 +17,12 @@
     </item>
     
     <item>
-      <title>[模板] bitset &amp; 位图</title>
-      <link>https://ottffyzy.github.io/tpls/ds/bitset/</link>
-      <pubDate>Thu, 22 Oct 2020 18:03:19 -0400</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tpls/ds/bitset/</guid>
-      <description>std::bitset #include &amp;lt;bitset&amp;gt; bitset&amp;lt;M&amp;gt; bs; bs[i]; // access bs.test(i); // access bs.count(i); // count 1 bs.size(); bs.any(); bs.none(); bs.all(); // cpp11 bs.set(); bs.set(i); // set i-th bit to 1 bs.reset(); bs.reset(i); bs.flip(); bs.flip(i); bs.to_string(); bs.to_ulong(); bs.to_ullong(); // cpp11 cout&amp;lt;&amp;lt;bs&amp;lt;&amp;lt;endl; 手写位图 Bitmap template&amp;lt;size_t M&amp;gt; struct BitMap { typedef unsigned int UI; UI map[M/32+1]; void reset() { memset(map,0,sizeof(map)); } void set() { memset(map,0xff,sizeof(map)); } void set(int i) { map[i&amp;gt;&amp;gt;5]|=1U&amp;lt;&amp;lt;(i&amp;amp;31); } void reset(int i) { map[i&amp;gt;&amp;gt;5]&amp;amp;=~(1U&amp;lt;&amp;lt;(i&amp;amp;31)); } void flip(int i) { map[i&amp;gt;&amp;gt;5]^=1U&amp;lt;&amp;lt;(i&amp;amp;31); } bool test(int i) { return map[i&amp;gt;&amp;gt;5]&amp;amp;(1U&amp;lt;&amp;lt;(i&amp;amp;31)); } };</description>
-    </item>
-    
-    <item>
       <title>[模板] 对拍程序</title>
       <link>https://ottffyzy.github.io/tpls/others/checker/</link>
       <pubDate>Tue, 20 Oct 2020 00:10:35 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/others/checker/</guid>
-      <description>对拍程序 from os import system tc=0 while True: system(&amp;#34;python data.py &amp;gt; data.in&amp;#34;) system(&amp;#34;std.exe &amp;lt; data.in &amp;gt; std.out&amp;#34;) system(&amp;#34;my.exe &amp;lt; data.in &amp;gt; my.out&amp;#34;) # system(&amp;#34;diff std.out my.out &amp;gt; diff.out&amp;#34;): if system(&amp;#34;fc std.out my.out &amp;gt; diff.out&amp;#34;): print(&amp;#34;WA&amp;#34;) break else: tc += 1 print(&amp;#34;AC #%d&amp;#34;%tc) print(&amp;#34;-------------------- data.in --------------------&amp;#34;) # system(&amp;#34;cat data.in&amp;#34;) system(&amp;#34;type data.in&amp;#34;) print(&amp;#34;-------------------- std.out --------------------&amp;#34;) system(&amp;#34;type std.out&amp;#34;) print(&amp;#34;-------------------- my.out ---------------------&amp;#34;) system(&amp;#34;type my.out&amp;#34;) #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; int main() { int tc=0; while(1) { system(&amp;#34;data.exe &amp;gt; data.in&amp;#34;); // system(&amp;#34;python data.py &amp;gt; data.in&amp;#34;); system(&amp;#34;std.exe &amp;lt; data.in &amp;gt; std.out&amp;#34;); system(&amp;#34;my.exe &amp;lt; data.in &amp;gt; my.out&amp;#34;); // system(&amp;#34;diff std.out my.out &amp;gt; diff.out&amp;#34;): if(system(&amp;#34;fc</description>
+      <description>对拍程序 from os import system tc=0 while True: system(&amp;#34;python data.py &amp;gt; data.in&amp;#34;) system(&amp;#34;std.exe &amp;lt; data.in &amp;gt; std.out&amp;#34;) system(&amp;#34;my.exe &amp;lt; data.in &amp;gt; my.out&amp;#34;) # system(&amp;#34;diff std.out my.out &amp;gt; diff.out&amp;#34;): if system(&amp;#34;fc std.out my.out &amp;gt; diff.out&amp;#34;): print(&amp;#34;WA&amp;#34;) break else: tc += 1 print(&amp;#34;AC #%d&amp;#34;%tc) print(&amp;#34;-------------------- data.in --------------------&amp;#34;) # system(&amp;#34;cat data.in&amp;#34;) system(&amp;#34;type data.in&amp;#34;) print(&amp;#34;-------------------- std.out --------------------&amp;#34;) system(&amp;#34;type std.out&amp;#34;) print(&amp;#34;-------------------- my.out ---------------------&amp;#34;) system(&amp;#34;type my.out&amp;#34;) #include &amp;lt;bits/stdc++.h&amp;gt;using namespace std; int main() { int tc=0; while(1) { system(&amp;#34;data.exe &amp;gt; data.in&amp;#34;); // system(&amp;#34;python data.py &amp;gt; data.in&amp;#34;); system(&amp;#34;std.exe &amp;lt; data.in &amp;gt; std.out&amp;#34;); system(&amp;#34;my.exe &amp;lt; data.in &amp;gt; my.out&amp;#34;); // system(&amp;#34;diff std.out my.out &amp;gt; diff.out&amp;#34;): if(system(&amp;#34;fc std.out</description>
     </item>
     
     <item>
@@ -44,7 +31,7 @@
       <pubDate>Thu, 01 Oct 2020 12:09:44 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/ds/bit/</guid>
-      <description>树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // T must + - // id 1~n template&amp;lt;typename T,size_t M,typename OpPlus=plus&amp;lt;T&amp;gt;,typename OpMinus=minus&amp;lt;T&amp;gt;&amp;gt; struct BIT { static int lowbit(int x) { return x&amp;amp;(-x); } static OpPlus opp; static OpMinus opm; static T tmp[M+1]; T tree[M+1]; // tree[i] -&amp;gt; sum of [i-lowbit(i)+1,i] int n; void init(int n_) { n=n_; for(int i=1;i&amp;lt;=n;i++) tree[i]=T(0); } void init(int n_,T v[]) // v[0 ~ n_-1] { n=n_; tmp[0]=T(0); for(int i=1;i&amp;lt;=n;i++) tmp[i]=opp(tmp[i-1],v[i]); for(int i=1;i&amp;lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&amp;lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(;p&amp;lt;=n;p+=lowbit(p)) tree[p]=opp(tree[p],V); }</description>
+      <description>树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // T must + - // id 1~n template&amp;lt;typename T,size_t M,typename OpPlus=plus&amp;lt;T&amp;gt;,typename OpMinus=minus&amp;lt;T&amp;gt;&amp;gt; struct BIT { static int lowbit(int x) { return x&amp;amp;(-x); } constexpr static OpPlus opp{}; constexpr static OpMinus opm{}; static T tmp[M+1]; T tree[M+1]; // tree[i] -&amp;gt; sum of [i-lowbit(i)+1,i] int n; void init(int n_) { n=n_; for(int i=1;i&amp;lt;=n;i++) tree[i]=T(0); } void init(int n_,T v[]) // v[0 ~ n_-1] { n=n_; tmp[0]=T(0); for(int i=1;i&amp;lt;=n;i++) tmp[i]=opp(tmp[i-1],v[i]); for(int i=1;i&amp;lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&amp;lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(;p&amp;lt;=n;p+=lowbit(p))</description>
     </item>
     
     <item>

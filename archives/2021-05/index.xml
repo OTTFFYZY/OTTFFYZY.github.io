@@ -6,11 +6,7 @@
     <description>Recent content in 2021-05 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 28 May 2021 11:50:51 -0700</lastBuildDate>
-    
-	<atom:link href="https://ottffyzy.github.io/archives/2021-05/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 28 May 2021 11:50:51 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/archives/2021-05/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>《C&#43;&#43; Primer》 拾遗 第 6 章 函数</title>
       <link>https://ottffyzy.github.io/notes/cppprimer/c6/</link>

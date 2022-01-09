@@ -121,7 +121,7 @@
     <div class="float-md-right">
       <span title="Lastmod: 2020-09-10. Published at: 2020-09-10.">
         
-          Published: 2020-09-10 Thu 19:08:42
+          Published: 2020-09-10 周四 19:08:42
         
       </span>
     </div>
@@ -137,25 +137,25 @@
 <h3 id="r-命令查看修改寄存器">R 命令：查看、修改寄存器</h3>
 <p>进入 debug 模式后输入 $r$ 回车后可以查看 CPU 寄存器内容。</p>
 <p>输入</p>
-<pre><code class="language-dos" data-lang="dos">-r &lt;寄存器名字&gt;
+<pre tabindex="0"><code class="language-dos" data-lang="dos">-r &lt;寄存器名字&gt;
 </code></pre><p>则会出现 &lsquo;:&rsquo; 可以修改对应寄存器的内容</p>
 <h3 id="d-命令查看内存">D 命令：查看内存</h3>
 <p>可以使用如下命令查看某个地址的数据。</p>
-<pre><code class="language-dos" data-lang="dos">-d &lt;段地址&gt;:&lt;偏移地址&gt;
+<pre tabindex="0"><code class="language-dos" data-lang="dos">-d &lt;段地址&gt;:&lt;偏移地址&gt;
 </code></pre><p>每行左侧是起始地址，中间会显示 $16$ 个单元的内容，右侧为对应每个单元的 ASCII 码。</p>
 <h3 id="e-命令修改内存">E 命令：修改内存</h3>
 <p>可以用如下命令改写对应位置的内存</p>
-<pre><code class="language-dos" data-lang="dos">-e &lt;段地址&gt;:&lt;偏移地址&gt;
+<pre tabindex="0"><code class="language-dos" data-lang="dos">-e &lt;段地址&gt;:&lt;偏移地址&gt;
 </code></pre><p>命令行将会依次询问从对应地址开始的每一个单元是否修改（不修改按空格否则输入要修改的内容，所有修改结束按回车键）</p>
 <p>也可以使用如下格式</p>
-<pre><code class="language-dos" data-lang="dos">-e &lt;段地址&gt;:&lt;偏移地址&gt; &lt;内容...&gt;
+<pre tabindex="0"><code class="language-dos" data-lang="dos">-e &lt;段地址&gt;:&lt;偏移地址&gt; &lt;内容...&gt;
 </code></pre><p>&lt;内容&hellip;&gt; 部分是一些用空格间隔的 $16$ 进制数，&lsquo;&lsquo;包裹的字符，或&quot;&ldquo;包裹的字符串（ 字符和字符串将存储对应的 ACSII 码）</p>
 <h3 id="u-命令查看内存对应的汇编指令">U 命令：查看内存对应的汇编指令</h3>
-<pre><code class="language-dos" data-lang="dos">-u &lt;段地址&gt;:&lt;偏移地址&gt;
+<pre tabindex="0"><code class="language-dos" data-lang="dos">-u &lt;段地址&gt;:&lt;偏移地址&gt;
 </code></pre><p>此命令的显示分为三个部分。左侧为地址，中间为机器码，右侧为对应的汇编指令。</p>
 <h3 id="t-命令执行-csip-指向的命令">T 命令：执行 CS:IP 指向的命令</h3>
 <h3 id="a-命令修改汇编指令">A 命令：修改汇编指令</h3>
-<pre><code class="language-dos" data-lang="dos">-a &lt;段地址&gt;:&lt;偏移地址&gt;
+<pre tabindex="0"><code class="language-dos" data-lang="dos">-a &lt;段地址&gt;:&lt;偏移地址&gt;
 </code></pre><p>输入该指令后命令行将会提示从给定地址开始输入汇编指令（某个地址给出后直接输入回车将停止输入）。</p>
 
   </section>

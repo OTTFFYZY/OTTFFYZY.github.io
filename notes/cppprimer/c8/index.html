@@ -121,7 +121,7 @@
     <div class="float-md-right">
       <span title="Lastmod: 2021-06-14. Published at: 2021-06-14.">
         
-          Published: 2021-06-14 Mon 20:22:01
+          Published: 2021-06-14 周一 20:22:01
         
       </span>
     </div>
@@ -268,19 +268,19 @@
 <p>一个输出流可能被关联到另一个流。这种情况下，当读写被关联的流时，关联到的流的缓冲区会刷新。例如默认情况下，cin 和 cerr 都关联到 cout。因此读 cin 或写 cerr 都会导致 cout 的缓冲区被刷新。</p>
 <p>注意程序异常终止时输出缓冲区不会被刷新。</p>
 <h5 id="刷新输出缓冲区">刷新输出缓冲区</h5>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// 在缓冲区插入一个换行，然后刷新缓冲区
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span> <span class="c1">// 在缓冲区插入一个换行，然后刷新缓冲区
 </span><span class="c1"></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">flush</span><span class="p">;</span> <span class="c1">// 刷新缓冲区
 </span><span class="c1"></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ends</span><span class="p">;</span> <span class="c1">// 在缓冲区插入一个空字符，然后刷新缓冲区
 </span></code></pre></div><h5 id="unitbuf-操纵符">unitbuf 操纵符</h5>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">unitbuf</span><span class="p">;</span> <span class="c1">// 所有输出操作后都会立即刷新缓冲区
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">unitbuf</span><span class="p">;</span> <span class="c1">// 所有输出操作后都会立即刷新缓冲区
 </span><span class="c1"></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">nounitbuf</span><span class="p">;</span> <span class="c1">// 回到正常的缓冲方式
 </span></code></pre></div><h5 id="关联输入和输出流">关联输入和输出流</h5>
 <p>注意交互式系统通常应该关联输入流和输出流。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">();</span> <span class="c1">// 返回关联的输出流的指针，或未关联到流时返回空指针。
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">();</span> <span class="c1">// 返回关联的输出流的指针，或未关联到流时返回空指针。
 </span><span class="c1"></span><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="n">postrm</span><span class="p">);</span> <span class="c1">// 传入一个指向 ostream 的指针使其关联到对应的输出流
 </span></code></pre></div><h3 id="82-文件输入输出">8.2 文件输入输出</h3>
 <p>fstream 特有的操作</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">fstream</span> <span class="n">fstrm</span><span class="p">;</span>    <span class="c1">// 创建未绑定的文件流。 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">fstream</span> <span class="n">fstrm</span><span class="p">;</span>    <span class="c1">// 创建未绑定的文件流。 
 </span><span class="c1"></span><span class="n">fstream</span> <span class="nf">fstrm</span><span class="p">(</span><span class="n">s</span><span class="p">);</span> <span class="c1">// 创建 fstream 并打开名为 s 的文件，
 </span><span class="c1"></span>				  <span class="c1">// s 可以是 string 或 c 风格字符串的指针
 </span><span class="c1"></span>                  <span class="c1">// 默认文件模式依赖于 fstream 的类型
@@ -346,7 +346,7 @@
 <p>注意每次调用 open 时会重新确定打开模式。</p>
 <h3 id="83-string-流">8.3 string 流</h3>
 <p>sstream 头文件定义了 3 个类型来支持内存 IO。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">sstream</span> <span class="n">strm</span><span class="p">;</span>    <span class="c1">// 未绑定的 stringstream
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">sstream</span> <span class="n">strm</span><span class="p">;</span>    <span class="c1">// 未绑定的 stringstream
 </span><span class="c1"></span><span class="n">sstream</span> <span class="nf">strm</span><span class="p">(</span><span class="n">s</span><span class="p">);</span> <span class="c1">// 保存 s 的拷贝
 </span><span class="c1"></span><span class="n">strm</span><span class="p">.</span><span class="n">str</span><span class="p">()</span>       <span class="c1">// 返回 strm 所保存的 string 的拷贝
 </span><span class="c1"></span><span class="n">strm</span><span class="p">.</span><span class="n">str</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>      <span class="c1">// 将 string s 拷贝到 strm 中，返回 void。

@@ -125,7 +125,7 @@
     <div class="float-md-right">
       <span title="Lastmod: 2020-11-01. Published at: 2020-11-01.">
         
-          Published: 2020-11-01 Sun 10:02:34
+          Published: 2020-11-01 周日 10:02:34
         
       </span>
     </div>
@@ -174,10 +174,10 @@ $$d_0 = (a,b)$$
 <p>考虑构造解。 $x$ 增加 $\Delta x$，</p>
 $$\begin{align} a(x_0m_0&#43;\Delta x) &#43; b(y_0m_0&#43; \Delta y) &amp;= m \\ a \cdot \Delta x &#43; b \cdot \Delta y &amp;= 0 \\ \Delta y &amp;= -\frac{a}{b} \Delta x \end{align}$$
 <p>由于最终 $x,y \in \mathbb{Z}$ ，而我们已知 $x_0m_0,y_0m_0 \in \mathbb{Z}$，也就是说我们需要 $\Delta x, \Delta y \in \mathbb{Z}$。</p>
-<p>对于 $\frac{a}{b}$ 我们可以考虑把分子分母的最大公因数 $(a,b) = d_0$ 除掉得到 $\frac{a&rsquo;}{b&rsquo;}$。</p>
+<p>对于 $\frac{a}{b}$ 我们可以考虑把分子分母的最大公因数 $(a,b) = d_0$ 除掉得到 $\frac{a'}{b'}$。</p>
 <p>此时要满足</p>
 $$\Delta x, \Delta y = -\frac{a&#39;}{b&#39;} \Delta x \in \mathbb{Z}$$
-<p>由 $(a&rsquo;,b&rsquo;) = 1$ 则</p>
+<p>由 $(a',b') = 1$ 则</p>
 $$\Delta x = k b&#39; = k \cdot \frac{b}{d_0}$$
 <p>于是我们得到其通解</p>
 $$x=x_0m_0&#43;k \cdot \frac{b}{(a,b)}, y=y_0m_0-k \cdot \frac{a}{(a,b)} \quad (k \in Z)$$
@@ -191,7 +191,7 @@ $$x_0=1,y_0=0$$
 <p>而对应的系数 $a_0,b_0$ 刚好是我们在辗转相除求 $(a,b)$ 过程中的最后一步的系数。其实 $y_0$ 可以选择任意整数，但是选择 $0$ 我们可以将特解限制在较小的范围，见下。</p>
 <p>（2）我们发现对于辗转相除的过程，如果 $a'=b,b'=a%b$ 我们发现对于这两组系数，我们有相同的最大公约数 $g$，则</p>
 $$ax&#43;by=g=a&#39;x&#39;&#43;b&#39;y&#39;$$
-<p>我们递归知道 $x&rsquo;,y'$ 的值之后，可以反过来构造 $x,y$ 则</p>
+<p>我们递归知道 $x',y'$ 的值之后，可以反过来构造 $x,y$ 则</p>
 
 $$
 \begin{align} 
@@ -253,7 +253,7 @@ $$\begin{align} x &amp;= y&#39; \\ y &amp;= x&#39; - \lfloor \frac{a}{b} \rfloor
 </tbody>
 </table>
 <p>我们发现除了第 $0$ 行，总有 $|x|&lt;b,|y|&lt;a$ 成立。</p>
-<p>这里可以尝试证明一下，假设 $a&rsquo;,b&rsquo;,x&rsquo;,y'$ 是上一层递归的参数和结果，则假设 $|x'| &lt; b&rsquo;, |y'| &lt; a'$ 成立。</p>
+<p>这里可以尝试证明一下，假设 $a',b',x',y'$ 是上一层递归的参数和结果，则假设 $|x'| &lt; b', |y'| &lt; a'$ 成立。</p>
 <p>我们有</p>
 
 $$
@@ -287,7 +287,7 @@ $$
 <p>得证。</p>
 <p>至此我们终于可以书写代码了。</p>
 <h3 id="代码">代码</h3>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">exgcd</span><span class="p">(</span><span class="n">LL</span> <span class="n">a</span><span class="p">,</span><span class="n">LL</span> <span class="n">b</span><span class="p">,</span><span class="n">LL</span> <span class="o">&amp;</span><span class="n">g</span><span class="p">,</span><span class="n">LL</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="n">LL</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">exgcd</span><span class="p">(</span><span class="n">LL</span> <span class="n">a</span><span class="p">,</span><span class="n">LL</span> <span class="n">b</span><span class="p">,</span><span class="n">LL</span> <span class="o">&amp;</span><span class="n">g</span><span class="p">,</span><span class="n">LL</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="n">LL</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span>
 <span class="p">{</span>
 	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">b</span><span class="p">)</span>
     <span class="p">{</span>
@@ -310,7 +310,7 @@ $$ax&#43;my=b$$
 <p>之后进行求解。我们也可以知道这个方程有解的条件是 $b|(a,m)$。以及根据我们推导的结论，求出的 $|x|$ 会在 $[0,m)$。</p>
 <h3 id="求解逆元">求解逆元</h3>
 <p>更进一步的，其实我们令上面同余方程中的 $b = 1$，于是根据模下乘法逆元的定义求出的 $x$ 即为模下逆元（注意可能是负的，需要调整到 $[0,m)$）。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">LL</span> <span class="nf">inv</span><span class="p">(</span><span class="n">LL</span> <span class="n">a</span><span class="p">,</span><span class="n">LL</span> <span class="n">m</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">LL</span> <span class="nf">inv</span><span class="p">(</span><span class="n">LL</span> <span class="n">a</span><span class="p">,</span><span class="n">LL</span> <span class="n">m</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="n">LL</span> <span class="n">g</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">;</span>
     <span class="n">exgcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>

@@ -134,7 +134,7 @@
   </div>
   <div class="text-gray">
     
-    下标池 IdPool template&lt;typename T&gt; struct IdPool { map&lt;T, int&gt; idmap; vector&lt;T&gt; ett; void clear() { idmap.clear(); ett.clear(); } int getid(const T &amp;t) { auto it = idmap.find(t); if (it != idmap.end()) return it-&gt;second; int ans = ett.size(); ett.push_back(t); idmap[t] = ans; return ans; } T gett(int i) { return ett[i]; } int size() { return ett.size(); } }; IdPool&lt;int&gt; idp;
+    下标池 IdPool template&lt;typename T&gt; struct IdPool { map&lt;T, int&gt; idmap; vector&lt;T&gt; items; void clear() { idmap.clear(); items.clear(); } int getid(const T &amp;t) { auto it = idmap.find(t); if (it != idmap.end()) return it-&gt;second; int ans = items.size(); items.push_back(t); idmap[t] = ans; return ans; } T&amp; operator[](int i) { return items[i]; } int size() { return items.size(); } }; IdPool&lt;int&gt; idp;
     <a class="muted-link" href="/tpls/ds/idpool/">…</a>
   </div>
 </div>
@@ -341,7 +341,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/notes" class="link-gray text-emphasized css-truncate-target"><span class="">Notes</span></a>
-      <span class="text-right Counter">19</span>
+      <span class="text-right Counter">20</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -380,18 +380,18 @@
     </a>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/templates/a" class="link-gray text-emphasized css-truncate-target"><span class="">A</span></a>
+      <span class="text-right Counter">2</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/hash" class="link-gray text-emphasized css-truncate-target"><span class="">Hash</span></a>
       <span class="text-right Counter">1</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
-      <a href="/templates/stl" class="link-gray text-emphasized css-truncate-target"><span class="">Stl</span></a>
-      <span class="text-right Counter">1</span>
-    </span>
-    
-    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e5%85%b6%e4%bb%96" class="link-gray text-emphasized css-truncate-target"><span class="">其他</span></a>
-      <span class="text-right Counter">4</span>
+      <span class="text-right Counter">3</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -401,7 +401,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="link-gray text-emphasized css-truncate-target"><span class="">数据结构</span></a>
-      <span class="text-right Counter">7</span>
+      <span class="text-right Counter">6</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -456,11 +456,6 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/bit" class="link-gray text-emphasized css-truncate-target"><span class="">Bit</span></a>
-      <span class="text-right Counter">1</span>
-    </span>
-    
-    <span class="css-truncate no-wrap m-1 pl-1">
-      <a href="/tags/bitset" class="link-gray text-emphasized css-truncate-target"><span class="">Bitset</span></a>
       <span class="text-right Counter">1</span>
     </span>
     
@@ -591,7 +586,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/series/cpp-primer" class="link-gray text-emphasized css-truncate-target"><span class="">Cpp primer</span></a>
-      <span class="text-right Counter">13</span>
+      <span class="text-right Counter">14</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -626,12 +621,12 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-09" class="link-gray text-emphasized css-truncate-target"><span class="">2020 09</span></a>
-      <span class="text-right Counter">25</span>
+      <span class="text-right Counter">26</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-10" class="link-gray text-emphasized css-truncate-target"><span class="">2020 10</span></a>
-      <span class="text-right Counter">5</span>
+      <span class="text-right Counter">4</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -662,6 +657,11 @@
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2021-07" class="link-gray text-emphasized css-truncate-target"><span class="">2021 07</span></a>
       <span class="text-right Counter">5</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2021-08" class="link-gray text-emphasized css-truncate-target"><span class="">2021 08</span></a>
+      <span class="text-right Counter">1</span>
     </span>
     
   </div>

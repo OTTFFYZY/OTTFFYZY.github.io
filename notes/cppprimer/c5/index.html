@@ -121,7 +121,7 @@
     <div class="float-md-right">
       <span title="Lastmod: 2021-05-27. Published at: 2021-05-27.">
         
-          Published: 2021-05-27 Thu 00:42:06
+          Published: 2021-05-27 周四 00:42:06
         
       </span>
     </div>
@@ -143,7 +143,7 @@
 <h3 id="54-迭代语句">5.4 迭代语句</h3>
 <h4 id="543-范围-for-语句">5.4.3 范围 for 语句</h4>
 <p><code>range for statement</code>。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">for</span> <span class="p">(</span><span class="nl">declaration</span> <span class="p">:</span> <span class="n">expression</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">for</span> <span class="p">(</span><span class="nl">declaration</span> <span class="p">:</span> <span class="n">expression</span><span class="p">)</span>
     <span class="n">statement</span>
 </code></pre></div><p>范围 for 的 expression 可以是数组、可以是声明了 begin 和 end 的类。这两者都不是时会尝试调用 begin(expression) 和 end(expression)。</p>
 <p>这里注意，范围 for 虽然会在一开始得到首尾迭代器值，但不能用来翻倍 vector，因为在插入新元素的过程中旧的迭代器可能会失效。</p>
@@ -152,7 +152,7 @@
 <p>throw 表达式，异常检测部分使用 throw 表达式表示它遇到了无法处理的问题。我们说 throw 引发 <code>raise</code> 了异常。</p>
 <p>try 语句块，以 try 开始以一个或多个 catch 子句 <code>catch clause</code> 结束，try 中抛出的异常会被某几个 catch 子句处理。catch 子句被称为异常处理代码 <code>exception handler</code>。</p>
 <p>一套异常类 <code>exception class</code>，用于在 throw 表达式和相关的 catch 子句之间传递异常的具体信息。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp">#include</span> <span class="cpf">&lt;stdexcept&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
@@ -180,7 +180,7 @@
 </code></pre></div><h4 id="563-标准异常">5.6.3 标准异常</h4>
 <p>&lt;exception&gt; 定义了最通用的异常类 exception。它只报告异常发生，不提供任何额外信息。</p>
 <p>&lt;stdexcept&gt; 中定义了以下异常类。</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">exception</span>          <span class="c1">// 常见问题
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">exception</span>          <span class="c1">// 常见问题
 </span><span class="c1"></span><span class="n">runtime_error</span>      <span class="c1">// 运行时错误 
 </span><span class="c1"></span><span class="n">range_error</span>        <span class="c1">// 运行时错误：结果超出有意义值的范围
 </span><span class="c1"></span><span class="n">overflow_error</span>     <span class="c1">// 运行时错误：上溢

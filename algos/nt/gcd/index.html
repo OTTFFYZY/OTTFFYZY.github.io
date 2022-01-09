@@ -125,7 +125,7 @@
     <div class="float-md-right">
       <span title="Lastmod: 2020-10-31. Published at: 2020-10-31.">
         
-          Published: 2020-10-31 Sat 00:53:37
+          Published: 2020-10-31 周六 00:53:37
         
       </span>
     </div>
@@ -160,7 +160,7 @@ $$(a,b)$$
 <p>注意到此时 $c$ 是 $a$ 与 $b$ 的公因子且大于 $g$ 这与 $(a,b) = g$ 矛盾，因此，</p>
 $$(b,a-b) = c = g = (a,b)$$
 <p>我们知道 $(a,b) \ge 1$，而算法每运行一次，总会使得两个数的总值严格下降，直到 $a=b$。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="p">)</span> <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
     <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">&lt;</span><span class="n">b</span><span class="p">)</span> <span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">);</span>
@@ -172,7 +172,7 @@ $$(b,a-b) = c = g = (a,b)$$
 <p>这个过程像极了<del>爱情</del>除法。我们用整数除法把较大的数 $a$ 除以较小的数 $b$，如果能整除说明较小的数$b = (a,b)$，否则我们会从 $a$ 里减掉最多次数的 $b$，即从 $a$ 中减掉 $\left\lfloor \frac{a}{b} \right\rfloor $ 次 $b$，得到</p>
 $$a&#39; = a - \left\lfloor \frac{a}{b} \right\rfloor  \cdot b$$
 <p>而这个结果相当于 $a$ 对 $b$ 取模（取余）。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">&lt;</span><span class="n">b</span><span class="p">)</span> <span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">);</span>
     <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="n">b</span><span class="p">;</span>
@@ -180,8 +180,8 @@ $$a&#39; = a - \left\lfloor \frac{a}{b} \right\rfloor  \cdot b$$
 <span class="p">}</span>
 </code></pre></div><h3 id="辗转相除的复杂度">辗转相除的复杂度</h3>
 <p>设 $a \ge b$, 若 b|a，则已经得出答案 $T(a,b) = O(1)$</p>
-<p>若 $b \nmid a$ 则 $a \neq b$，$a&rsquo; = a \ \mathrm{mod} \ b$。由 $a &gt; b$ 则 $a-a&rsquo; &gt; b$ 而 $a&rsquo; &lt; b$</p>
-<p>从而得出结论 $a&rsquo; &lt; \frac{a}{2}$</p>
+<p>若 $b \nmid a$ 则 $a \neq b$，$a' = a \ \mathrm{mod} \ b$。由 $a &gt; b$ 则 $a-a' &gt; b$ 而 $a' &lt; b$</p>
+<p>从而得出结论 $a' &lt; \frac{a}{2}$</p>
 <p>也就是说每次取模操作必然使得较大的数字减半则</p>
 $$T(a,b) = \log(a) &#43; \log(b) = \log(ab)$$
 <p>也就是说我们已经得到了对数级别的优秀算法。</p>
@@ -201,25 +201,25 @@ $$F_{k&#43;1} = F_{k}&#43;F_{k-1} \le A_k &#43; A_{k-1} \le A_{k&#43;1}$$
 <p>我们知道对于 $F_{n+1}=N$，$n$ 是 $O(\log(N))$ 的因此对于辗转相除而言复杂度是 $O(\log(\min(a,b)))$ 的。</p>
 <h3 id="关于--运算">关于 % 运算</h3>
 <p>首先我们可以发现，当我们运行</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">return</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">return</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
 </code></pre></div><p>时，其实我们已经知道第一个参数不会大等第二个参数了，因此我们可以考虑将这个语句写成</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">return</span> <span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">return</span> <span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">)</span>
 </code></pre></div><p>来尽量减少 swap 操作。</p>
 <p>其实</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">&lt;</span><span class="n">b</span><span class="p">)</span> <span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">&lt;</span><span class="n">b</span><span class="p">)</span> <span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
 </code></pre></div><p>这个语句是不必要的，因为如果如果大小关系是反的，经过一次我们修改过的取模操作，那么就会得到正确的大小关系。</p>
 <p>注意到如果已经得到 $b|a$ 的一组输入了，其实我们这时知道了 $(a,b) = b$ 但是每次递归中检查</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="n">b</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="n">b</span><span class="p">;</span>
 </code></pre></div><p>这里取模再判断的操作是一个非常昂贵的操作。如果我们对于这样的 $a,b$ 如果再多递归一次的话，我们会发现我们总会得到一组 $(b,0)$ 这样的输入，换句话说，我们可以考虑将循环终止条件改为判断</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
 </code></pre></div><p>至此我们可以写出一个简短而优美的版本</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="k">return</span> <span class="n">b</span> <span class="o">?</span> <span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">)</span> <span class="o">:</span> <span class="n">a</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="非递归">非递归</h3>
 <p>虽然我们知道对于 gcd 而言递归深度不会很深，但是递归依旧存在。此时我们可以考虑进一步优化这个递归为迭代形式。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="kt">int</span> <span class="n">t</span><span class="p">;</span>
     <span class="k">while</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
@@ -235,7 +235,7 @@ $$F_{k&#43;1} = F_{k}&#43;F_{k-1} \le A_k &#43; A_{k-1} \le A_{k&#43;1}$$
 
   <section>
     
-        <a href="/tpls/ds/bitset/" class="previous_page">Prev: [模板] bitset &amp; 位图 </a>
+        <a href="/tpls/others/checker/" class="previous_page">Prev: [模板] 对拍程序 </a>
     
      <br> 
     

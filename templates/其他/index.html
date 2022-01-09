@@ -138,7 +138,7 @@
   </div>
   <div class="text-gray">
     
-    随机数 Random #include &lt;bits/stdc++.h&gt; using namespace std; typedef long long LL; struct FastIO { FastIO() { ios::sync_with_stdio(false); cin.tie(nullptr); } }fastio; mt19937 rnd(chrono::system_clock::now().time_since_epoch().count()); mt19937_64 rnd_64(chrono::system_clock::now().time_since_epoch().count()); // [0,r) int rndi(int r) { return rnd()%r; } // [l,r] r-l+1&lt;=INT_MAX int rndi(int l,int r) { return rnd()%(r-l+1)+l; } LL rndll(LL l,LL r) { return rnd_64()%(r-l+1)+l; } char rndc() { return rndi(-128,127); } char rndc(const string &amp;s) { return s[rndi(s.length())]; } char rnd_lower() { return rndi(26)+&#39;a&#39;; } char rnd_upper() { return rndi(26)+&#39;A&#39;; } char rnd_digit() { return rndi(10)+&#39;0&#39;; } char rnd_alpha() { int r=rndi(52); return r&lt;26?(r+&#39;a&#39;):(r-26+&#39;A&#39;); } char rnd_alphadigit() { int r=rndi(62); if(r&lt;10)
+    随机数 Random #include &lt;bits/stdc++.h&gt;using namespace std; typedef long long LL; struct FastIO { FastIO() { ios::sync_with_stdio(false); cin.tie(nullptr); } }fastio; mt19937 rnd(chrono::system_clock::now().time_since_epoch().count()); mt19937_64 rnd_64(chrono::system_clock::now().time_since_epoch().count()); // [0,r) int rndi(int r) { return rnd()%r; } // [l,r] r-l+1&lt;=INT_MAX int rndi(int l,int r) { return rnd()%(r-l+1)+l; } LL rndll(LL l,LL r) { return rnd_64()%(r-l+1)+l; } char rndc() { return rndi(-128,127); } char rndc(const string &amp;s) { return s[rndi(s.length())]; } char rnd_lower() { return rndi(26)+&#39;a&#39;; } char rnd_upper() { return rndi(26)+&#39;A&#39;; } char rnd_digit() { return rndi(10)+&#39;0&#39;; } char rnd_alpha() { int r=rndi(52); return r&lt;26?(r+&#39;a&#39;):(r-26+&#39;A&#39;); } char rnd_alphadigit() { int r=rndi(62); if(r&lt;10) return
     <a class="muted-link" href="/tpls/others/rnd/">…</a>
   </div>
 </div>
@@ -180,7 +180,7 @@
   </div>
   <div class="text-gray">
     
-    对拍程序 from os import system tc=0 while True: system(&#34;python data.py &gt; data.in&#34;) system(&#34;std.exe &lt; data.in &gt; std.out&#34;) system(&#34;my.exe &lt; data.in &gt; my.out&#34;) # system(&#34;diff std.out my.out &gt; diff.out&#34;): if system(&#34;fc std.out my.out &gt; diff.out&#34;): print(&#34;WA&#34;) break else: tc += 1 print(&#34;AC #%d&#34;%tc) print(&#34;-------------------- data.in --------------------&#34;) # system(&#34;cat data.in&#34;) system(&#34;type data.in&#34;) print(&#34;-------------------- std.out --------------------&#34;) system(&#34;type std.out&#34;) print(&#34;-------------------- my.out ---------------------&#34;) system(&#34;type my.out&#34;) #include &lt;bits/stdc++.h&gt; using namespace std; int main() { int tc=0; while(1) { system(&#34;data.exe &gt; data.in&#34;); // system(&#34;python data.py &gt; data.in&#34;); system(&#34;std.exe &lt; data.in &gt; std.out&#34;); system(&#34;my.exe &lt; data.in &gt; my.out&#34;); // system(&#34;diff std.out my.out &gt; diff.out&#34;): if(system(&#34;fc
+    对拍程序 from os import system tc=0 while True: system(&#34;python data.py &gt; data.in&#34;) system(&#34;std.exe &lt; data.in &gt; std.out&#34;) system(&#34;my.exe &lt; data.in &gt; my.out&#34;) # system(&#34;diff std.out my.out &gt; diff.out&#34;): if system(&#34;fc std.out my.out &gt; diff.out&#34;): print(&#34;WA&#34;) break else: tc += 1 print(&#34;AC #%d&#34;%tc) print(&#34;-------------------- data.in --------------------&#34;) # system(&#34;cat data.in&#34;) system(&#34;type data.in&#34;) print(&#34;-------------------- std.out --------------------&#34;) system(&#34;type std.out&#34;) print(&#34;-------------------- my.out ---------------------&#34;) system(&#34;type my.out&#34;) #include &lt;bits/stdc++.h&gt;using namespace std; int main() { int tc=0; while(1) { system(&#34;data.exe &gt; data.in&#34;); // system(&#34;python data.py &gt; data.in&#34;); system(&#34;std.exe &lt; data.in &gt; std.out&#34;); system(&#34;my.exe &lt; data.in &gt; my.out&#34;); // system(&#34;diff std.out my.out &gt; diff.out&#34;): if(system(&#34;fc std.out
     <a class="muted-link" href="/tpls/others/checker/">…</a>
   </div>
 </div>
@@ -228,48 +228,6 @@
 </div>
 
   
-    
-    
-<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
-  <div class="Subhead mb-2">
-    <div class="Subhead-heading">
-      <a href="/tpls/others/cppmain/">
-        <div class="h2 mt-1 mb-1">[模板] C&#43;&#43; 日常使用</div>
-      </a>
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/templates' class="muted-link">
-  <span class="Label Label--gray-darker">Templates</span>
-</a>
-
-
-
-<a href='/templates/%E5%85%B6%E4%BB%96' class="muted-link">
-  <span class="Label Label--gray-darker">其他</span>
-</a>
-
-
-
-
-
-
-
-
-      <div class="float-md-right">
-        <span>2020-09-29</span>
-      </div>
-    </div>
-  </div>
-  <div class="text-gray">
-    
-    C++ 日常使用 // #include &lt;bits/stdc++.h&gt; #include &lt;cstdio&gt; #include &lt;cstring&gt; #include &lt;cstdlib&gt; #include &lt;climits&gt; #include &lt;cmath&gt; #include &lt;iostream&gt; #include &lt;iomanip&gt; #include &lt;string&gt; #include &lt;algorithm&gt; #include &lt;numeric&gt; #include &lt;utility&gt; #include &lt;functional&gt; #include &lt;vector&gt; #include &lt;list&gt; #include &lt;stack&gt; #include &lt;queue&gt; #include &lt;deque&gt; #include &lt;set&gt; #include &lt;map&gt; #include &lt;bitset&gt; #include &lt;complex&gt; #include &lt;random&gt; #include &lt;chrono&gt; #include &lt;array&gt; #include &lt;unordered_set&gt; #include &lt;unordered_map&gt; #include &lt;tuple&gt; using namespace std; using LL = long long; using ULL = unsigned long long; using LD = long double; using PII = pair&lt;int,int&gt;; using VI = vector&lt;int&gt;; using MII = map&lt;int,int&gt;; template&lt;typename T&gt; void cmin(T &amp;x,const T &amp;y)
-    <a class="muted-link" href="/tpls/others/cppmain/">…</a>
-  </div>
-</div>
-
-  
 
   
   
@@ -299,7 +257,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/notes" class="link-gray text-emphasized css-truncate-target"><span class="">Notes</span></a>
-      <span class="text-right Counter">19</span>
+      <span class="text-right Counter">20</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -338,18 +296,18 @@
     </a>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/templates/a" class="link-gray text-emphasized css-truncate-target"><span class="">A</span></a>
+      <span class="text-right Counter">2</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/hash" class="link-gray text-emphasized css-truncate-target"><span class="">Hash</span></a>
       <span class="text-right Counter">1</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
-      <a href="/templates/stl" class="link-gray text-emphasized css-truncate-target"><span class="">Stl</span></a>
-      <span class="text-right Counter">1</span>
-    </span>
-    
-    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e5%85%b6%e4%bb%96" class="link-gray text-emphasized css-truncate-target"><span class="">其他</span></a>
-      <span class="text-right Counter">4</span>
+      <span class="text-right Counter">3</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -359,7 +317,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="link-gray text-emphasized css-truncate-target"><span class="">数据结构</span></a>
-      <span class="text-right Counter">7</span>
+      <span class="text-right Counter">6</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -414,11 +372,6 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/bit" class="link-gray text-emphasized css-truncate-target"><span class="">Bit</span></a>
-      <span class="text-right Counter">1</span>
-    </span>
-    
-    <span class="css-truncate no-wrap m-1 pl-1">
-      <a href="/tags/bitset" class="link-gray text-emphasized css-truncate-target"><span class="">Bitset</span></a>
       <span class="text-right Counter">1</span>
     </span>
     
@@ -549,7 +502,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/series/cpp-primer" class="link-gray text-emphasized css-truncate-target"><span class="">Cpp primer</span></a>
-      <span class="text-right Counter">13</span>
+      <span class="text-right Counter">14</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -584,12 +537,12 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-09" class="link-gray text-emphasized css-truncate-target"><span class="">2020 09</span></a>
-      <span class="text-right Counter">25</span>
+      <span class="text-right Counter">26</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-10" class="link-gray text-emphasized css-truncate-target"><span class="">2020 10</span></a>
-      <span class="text-right Counter">5</span>
+      <span class="text-right Counter">4</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -620,6 +573,11 @@
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2021-07" class="link-gray text-emphasized css-truncate-target"><span class="">2021 07</span></a>
       <span class="text-right Counter">5</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2021-08" class="link-gray text-emphasized css-truncate-target"><span class="">2021 08</span></a>
+      <span class="text-right Counter">1</span>
     </span>
     
   </div>

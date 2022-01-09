@@ -121,7 +121,7 @@
     <div class="float-md-right">
       <span title="Lastmod: 2021-07-21. Published at: 2021-07-21.">
         
-          Published: 2021-07-21 Wed 22:57:24
+          Published: 2021-07-21 周三 22:57:24
         
       </span>
     </div>
@@ -140,7 +140,7 @@
 <p>析构函数 <code>destructor</code></p>
 <h3 id="131-拷贝赋值与销毁">13.1 拷贝、赋值与销毁</h3>
 <p>合成拷贝构造函数 <code>synthesized copy constructor</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
@@ -187,7 +187,7 @@
 </span><span class="c1"></span>	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><p>关于 explicit 带来的变化</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
@@ -249,7 +249,7 @@
 </code></pre></div><h5 id="编译器可以绕过拷贝构造函数">编译器可以绕过拷贝构造函数</h5>
 <p>编译器可以（但不是必需）跳过拷贝/移动构造函数直接创建对象。这也就是上面的程序为什么很多都没有实际打印出 <code>copy ctor</code>。</p>
 <p>例如</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">string</span> <span class="n">s</span> <span class="o">=</span> <span class="s">&#34;abc&#34;</span><span class="p">;</span> <span class="c1">// 允许编译器改写为下面的代码
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">string</span> <span class="n">s</span> <span class="o">=</span> <span class="s">&#34;abc&#34;</span><span class="p">;</span> <span class="c1">// 允许编译器改写为下面的代码
 </span><span class="c1"></span><span class="n">string</span> <span class="nf">s</span><span class="p">(</span><span class="s">&#34;abc&#34;</span><span class="p">);</span>
 </code></pre></div><p>虽然可以跳过，但是在这个程序点上，拷贝/移动构造函数必需是存在且可访问的。</p>
 <h4 id="1312-拷贝赋值运算符">13.1.2 拷贝赋值运算符</h4>
@@ -270,7 +270,7 @@
 <p>我们可以通过将拷贝控制成员定义为 =default 来显式地要求编译器生成合成的版本。合成的函数将隐式的声明为内联的。如果不希望成员是内联函数，应该只对成员的类外定义使用 =default。</p>
 <h4 id="1316-阻止拷贝">13.1.6 阻止拷贝</h4>
 <p>我们可以通过将这些可能被自动合成的函数定义为删除的函数 <code>deleted function</code> 来阻止拷贝。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">struct</span> <span class="nc">NoCopy</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">struct</span> <span class="nc">NoCopy</span> <span class="p">{</span>
     <span class="n">NoCopy</span><span class="p">(</span><span class="k">const</span> <span class="n">NoCopy</span><span class="o">&amp;</span><span class="p">)</span> <span class="o">=</span> <span class="k">delete</span><span class="p">;</span>
     <span class="n">NoCopy</span> <span class="o">&amp;</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span> <span class="n">NoCopy</span><span class="o">&amp;</span><span class="p">)</span> <span class="o">=</span> <span class="k">delete</span><span class="p">;</span>
     <span class="p">...</span>
@@ -292,7 +292,7 @@
 <p>一个对象赋值给自己时可以正常工作。</p>
 <p>大多数赋值运算符组合了析构函数和拷贝构造函数的工作。</p>
 <p>如果要一个类的拷贝行为看起来像指针，则我们需要实现一套引用计数机制，这时我们需要一个引用计数器。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">LikePointer</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">LikePointer</span> <span class="p">{</span>
   <span class="k">private</span><span class="o">:</span>
     <span class="n">std</span><span class="o">::</span><span class="n">size_t</span> <span class="o">*</span><span class="n">ref_cnt</span><span class="p">;</span>
   <span class="k">public</span><span class="o">:</span>
@@ -317,7 +317,7 @@
 <span class="p">};</span>
 </code></pre></div><h3 id="133-交换操作">13.3 交换操作</h3>
 <p>swap 的定义并不是必须的，但是对于分配了资源的类这可能会极大的提升效率。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">HasPtr</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">HasPtr</span> <span class="p">{</span>
     <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="o">*</span><span class="n">ps</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
     <span class="k">friend</span> <span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="n">HasPtr</span><span class="o">&amp;</span> <span class="n">lhs</span><span class="p">,</span> <span class="n">HasPtr</span><span class="o">&amp;</span> <span class="n">rhs</span><span class="p">);</span>
@@ -339,7 +339,7 @@
 <p>注意这里的 using 声明并不会隐藏掉 HasPtr 版本的 swap 的声明。</p>
 <h5 id="在赋值运算符中使用-swap">在赋值运算符中使用 swap</h5>
 <p>这里有一个计数称为拷贝并交换 <code>copy and swap</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">HasPtr</span><span class="o">&amp;</span> <span class="n">HasPtr</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">HasPtr</span> <span class="n">rhs</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">HasPtr</span><span class="o">&amp;</span> <span class="n">HasPtr</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">HasPtr</span> <span class="n">rhs</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">swap</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">,</span> <span class="n">rhs</span><span class="p">);</span>
     <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
 <span class="p">}</span>
@@ -350,7 +350,7 @@
 <p>右值引用 <code>rvalue reference</code>：必须绑定到右值（一个将要销毁的对象）。</p>
 <p>我们可以自由地将一个右值引用的资源“移动”到另一个对象中。</p>
 <p>常规引用对应于右值称为左值引用 <code>lvalue reference</code>。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
 <span class="kt">int</span> <span class="o">&amp;</span><span class="n">r</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
 <span class="c1">// int &amp;&amp;rr = i; // 不能绑定到左值
 </span><span class="c1">// int &amp;r2 = i * 42; // 不能绑定到右值
@@ -366,7 +366,7 @@
 <h5 id="移动操作标准库容器和异常">移动操作、标准库容器和异常</h5>
 <p>一般而言因为移动操作不需要分配资源因此不会抛出异常。</p>
 <p>此时我们可以声明 noexcept 来通知标准库。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">A</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">A</span> <span class="p">{</span>
     <span class="n">A</span><span class="p">(</span><span class="n">A</span><span class="o">&amp;&amp;</span><span class="p">)</span> <span class="k">noexcept</span><span class="p">;</span>
 <span class="p">};</span>
 <span class="n">A</span><span class="o">::</span><span class="n">A</span><span class="p">(</span><span class="n">A</span><span class="o">&amp;&amp;</span> <span class="n">rhs</span><span class="p">)</span> <span class="k">noexcept</span> <span class="p">{</span>
@@ -381,7 +381,7 @@
 <p>只有当一个类没有定义任何拷贝控制成员，且每个非 static 数据成员都可以移动时，才会合成移动构造函数或移动赋值运算符。</p>
 <p>移动操作不会隐式定义为删除的函数。如果显式要求编译器生成 =default 的移动操作，且编译器不能移动所有成员，则编译器会奖移动操作定义为删除的函数。???</p>
 <h5 id="拷贝并交换赋值运算符和移动操作">拷贝并交换赋值运算符和移动操作</h5>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">HasPtr</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">HasPtr</span> <span class="p">{</span>
   <span class="k">public</span><span class="o">:</span>
     <span class="n">HasPtr</span><span class="p">(</span><span class="n">HasPtr</span> <span class="o">&amp;&amp;</span><span class="n">p</span><span class="p">)</span> <span class="k">noexcept</span> <span class="o">:</span> <span class="n">ps</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">ps</span><span class="p">),</span> <span class="n">i</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">p</span><span class="p">.</span><span class="n">ps</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
@@ -396,10 +396,10 @@
 <p>我们可以用 make_move_iterator 函数将一个普通迭代器转换为一个移动迭代器。</p>
 <h4 id="1363-右值引用和成员函数">13.6.3 右值引用和成员函数</h4>
 <p>允许成员函数使用和拷贝、移动构造函数相同的参数模式。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">push_back</span><span class="p">(</span><span class="k">const</span> <span class="n">X</span><span class="o">&amp;</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">push_back</span><span class="p">(</span><span class="k">const</span> <span class="n">X</span><span class="o">&amp;</span><span class="p">);</span>
 <span class="kt">void</span> <span class="nf">push_back</span><span class="p">(</span><span class="n">X</span><span class="o">&amp;&amp;</span><span class="p">);</span>
 </code></pre></div><p>有时我们限定一些成员函数只能在左值上使用，这样我们可以使用引用限定符 <code>reference qualifier</code>。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Foo</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Foo</span> <span class="p">{</span>
   <span class="k">public</span><span class="o">:</span>
     <span class="n">Foo</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span> <span class="n">Foo</span><span class="o">&amp;</span><span class="p">)</span> <span class="o">&amp;</span><span class="p">;</span>
 <span class="p">};</span>
@@ -407,9 +407,9 @@
 </code></pre></div><p>注意限定符可以是 &amp; 也可以是 &amp;&amp; 分别表示限定为左值还是右值。应用限定符类似于 const 需要在声明和定义都包含。</p>
 <h5 id="重载和引用函数">重载和引用函数</h5>
 <p>可以同时使用 const 和引用限定，注意顺序</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">Foo</span> <span class="nf">func</span><span class="p">()</span> <span class="k">const</span> <span class="o">&amp;</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">Foo</span> <span class="nf">func</span><span class="p">()</span> <span class="k">const</span> <span class="o">&amp;</span><span class="p">;</span>
 </code></pre></div><p>我们可以重载不同引用限定符的版本。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Foo</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Foo</span> <span class="p">{</span>
   <span class="k">public</span><span class="o">:</span>
     <span class="n">Foo</span> <span class="n">sorted</span><span class="p">()</span> <span class="o">&amp;&amp;</span><span class="p">;</span>
     <span class="n">Foo</span> <span class="nf">sorted</span><span class="p">()</span> <span class="k">const</span> <span class="o">&amp;</span><span class="p">;</span>

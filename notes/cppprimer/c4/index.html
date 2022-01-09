@@ -121,7 +121,7 @@
     <div class="float-md-right">
       <span title="Lastmod: 2021-05-25. Published at: 2021-05-25.">
         
-          Published: 2021-05-25 Tue 22:00:23
+          Published: 2021-05-25 周二 22:00:23
         
       </span>
     </div>
@@ -155,8 +155,8 @@
 <p>所有算符满足左结合律。</p>
 <p>C++11 规定整数商向 0 取整。</p>
 <p>对于取余，需要保证，对于非 0 的 n 有，</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="p">(</span><span class="n">m</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span> <span class="o">*</span> <span class="n">n</span> <span class="o">+</span> <span class="n">m</span> <span class="o">%</span> <span class="n">n</span> <span class="o">==</span> <span class="n">m</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="p">(</span><span class="n">m</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span> <span class="o">*</span> <span class="n">n</span> <span class="o">+</span> <span class="n">m</span> <span class="o">%</span> <span class="n">n</span> <span class="o">==</span> <span class="n">m</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
@@ -185,14 +185,14 @@
 	<span class="p">}</span>
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">a = 32, b = 5, a/b = 6, a%b = 2
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd">a = 32, b = 5, a/b = 6, a%b = 2
 a = 32, b = -5, a/b = -6, a%b = 2
 a = -32, b = 5, a/b = -6, a%b = -2
 a = -32, b = -5, a/b = 6, a%b = -2
 </code></pre></div><h3 id="43-逻辑和关系运算符">4.3 逻辑和关系运算符</h3>
 <p>短路求值 <code>short-circuit evaluation</code>。</p>
 <p>注意当比较运算符一侧的变量不是布尔类型时，不应使用 true 字面值作为比较对象，因为 true 会被自动转换成 1。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
@@ -209,18 +209,18 @@ a = -32, b = -5, a/b = 6, a%b = -2
 <h3 id="45-递增和递减运算符">4.5 递增和递减运算符</h3>
 <p>前置版本返回对象本身的左值，后置版本返回原始值的副本右值。</p>
 <p>注意经常会混用解引用和递增算符。此时递增算符的优先级更高。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="o">*</span><span class="n">p</span><span class="o">++</span> <span class="c1">// 相当于 *(p++)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="o">*</span><span class="n">p</span><span class="o">++</span> <span class="c1">// 相当于 *(p++)
 </span></code></pre></div><p>注意求值顺序可能是未定义的！这在有递增、递减算符的表达式中尤其重要。</p>
 <h3 id="46-成员访问运算符">4.6 成员访问运算符</h3>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">vec</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">vec</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
 <span class="n">pvec</span><span class="o">-&gt;</span><span class="n">size</span><span class="p">();</span>
 </code></pre></div><p>注意解引用算符的优先级比成员访问算符低，因此</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="p">(</span><span class="o">*</span><span class="n">pvec</span><span class="p">).</span><span class="n">size</span><span class="p">()</span> <span class="c1">// 等价于 pvec-&gt;size();
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="p">(</span><span class="o">*</span><span class="n">pvec</span><span class="p">).</span><span class="n">size</span><span class="p">()</span> <span class="c1">// 等价于 pvec-&gt;size();
 </span><span class="c1"></span><span class="o">*</span><span class="n">pvec</span><span class="p">.</span><span class="n">size</span><span class="p">()</span>   <span class="c1">// 则表示对于 pvec 对象先调用成员函数 size() 后解引用
 </span></code></pre></div><p>箭头运算符作用于一个指针类型的运算对象，结果将会是一个左值。</p>
 <p>点运算符，如果所属对象是左值则得到左值，反之得到右值。</p>
 <h3 id="47-条件运算符">4.7 条件运算符</h3>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">cond</span> <span class="o">?</span> <span class="nl">expr1</span> <span class="p">:</span> <span class="n">expr2</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">cond</span> <span class="o">?</span> <span class="nl">expr1</span> <span class="p">:</span> <span class="n">expr2</span>
 </code></pre></div><p>当 expr1 和 expr2 是左值或是能转换成同一左值类型时，运算结果是左值，否则结果是右值。</p>
 <p>条件运算符满足右结合律。</p>
 <p>注意条件算符优先及很低，和输出的 <code>&lt;&lt;</code> 混用时，需要加括号。</p>
@@ -230,10 +230,10 @@ a = -32, b = -5, a/b = 6, a%b = -2
 <p>如果符号位的值为负，则如何处理符号位依赖于机器。</p>
 <h3 id="49-sizeof-运算符">4.9 sizeof 运算符</h3>
 <p>sizeof 运算符返回一个表达式或一个类型名字所占的字节数。满足右结合律，其所得到的值是一个 size_t 类型的常量表达式。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">sizeof</span> <span class="p">(</span><span class="n">type</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">sizeof</span> <span class="p">(</span><span class="n">type</span><span class="p">)</span>
 <span class="k">sizeof</span> <span class="n">expr</span>
 </code></pre></div><p>注意 sizeof 并不实际计算运算对象的值！</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
 </span><span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -339,7 +339,7 @@ a = -32, b = -5, a/b = 6, a%b = -2
 <p>reinterpret_cast 为运算对象的位模式提供较低层次上的重新解释。</p>
 <p>dynamic_cast 支持运行时类型识别。</p>
 <h5 id="旧式的强制类型转换">旧式的强制类型转换</h5>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">type</span> <span class="p">(</span><span class="n">expr</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">type</span> <span class="p">(</span><span class="n">expr</span><span class="p">);</span>
 <span class="p">(</span><span class="n">type</span><span class="p">)</span> <span class="n">expr</span><span class="p">;</span>
 </code></pre></div><p>如果旧式类型转换换成 const_cast 或 static_cast 也合法，则其行为与对应的命名转换一致，否则其拥有 reinterpret_cast 类似的功能。</p>
 <h3 id="412-运算符优先级表">4.12 运算符优先级表</h3>
@@ -708,8 +708,8 @@ a = -32, b = -5, a/b = 6, a%b = -2
 <tr>
 <td>13</td>
 <td></td>
-<td><code>|</code></td>
-<td></td>
+<td>`</td>
+<td>`</td>
 <td></td>
 </tr>
 <tr>
@@ -722,9 +722,9 @@ a = -32, b = -5, a/b = 6, a%b = -2
 <tr>
 <td>15</td>
 <td></td>
-<td><code>||</code></td>
+<td>`</td>
 <td></td>
-<td></td>
+<td>`</td>
 </tr>
 <tr>
 <td>16</td>
@@ -743,8 +743,8 @@ a = -32, b = -5, a/b = 6, a%b = -2
 <tr>
 <td>18</td>
 <td>右</td>
-<td><code>*=</code>, <code>/=</code>, <code>*=</code>, <code>+=</code>, <code>-=</code>, <code>&lt;&lt;=</code>, <code>&gt;&gt;=</code>, <code>&amp;=</code>, <code>|=</code>, <code>^=</code></td>
-<td></td>
+<td><code>*=</code>, <code>/=</code>, <code>*=</code>, <code>+=</code>, <code>-=</code>, <code>&lt;&lt;=</code>, <code>&gt;&gt;=</code>, <code>&amp;=</code>, `</td>
+<td>=<code>, </code>^=`</td>
 <td></td>
 </tr>
 <tr>

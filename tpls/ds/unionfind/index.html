@@ -11,7 +11,7 @@
     </title>
     
     
-    <meta name="description" property="og:description" content="并查集 Union Find / Disjoint Set Union 路径压缩和按 size 合并 Union by Size // M: max number of set // id is in [0~M-1] template&amp;lt;size_t M&amp;gt; struct UF { int uf[M],sz[M]; int n; int ns; // number of set void init(int n_) { n=ns=n_; for(int i=0;i&amp;lt;n;i&#43;&#43;) uf[i]=i,sz[i]=1; } int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } bool same(int x,int y) { return find(x)==find(y); } bool merge(int x,int y) { x=find(x); y=find(y); if(x==y) return false; if(sz[x]&amp;gt;sz[y]) swap(x,y); sz[y]&#43;=sz[x]; uf[x]=y; ns--; return true; } }; Debug: void show() { cout&amp;lt;&amp;lt;&amp;#34;UnionFind:----------------------\n&amp;#34;; cout&amp;lt;&amp;lt;&amp;#34;id:&amp;#34;; for(int i=0;i&amp;lt;n;i&#43;&#43;) cout&amp;lt;&amp;lt;&amp;#39;\t&amp;#39;&amp;lt;&amp;lt;i; cout&amp;lt;&amp;lt;&amp;#39;\n&amp;#39;;|OTTFF&#39;s Blog">
+    <meta name="description" property="og:description" content="并查集 Union Find / Disjoint Set Union 路径压缩和按 size 合并 Union by Size // M: max number of set // id is in [0~M-1] template&amp;lt;size_t M&amp;gt; struct UF { int uf[M],sz[M]; int n; int ns; // number of set void init(int n_) { n=ns=n_; for(int i=0;i&amp;lt;n;i&#43;&#43;) uf[i]=i,sz[i]=1; } int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } bool same(int x,int y) { return find(x)==find(y); } bool merge(int x,int y) { x=find(x); y=find(y); if(x==y) return false; if(sz[x]&amp;gt;sz[y]) swap(x,y); sz[y]&#43;=sz[x]; uf[x]=y; ns--; return true; } }; Debug: void show() { cerr&amp;lt;&amp;lt;&amp;#34;UnionFind:----------------------\n&amp;#34;; cerr&amp;lt;&amp;lt;&amp;#34;id:&amp;#34;; for(int i=0;i&amp;lt;n;i&#43;&#43;) cerr&amp;lt;&amp;lt;&amp;#39;\t&amp;#39;&amp;lt;&amp;lt;i; cerr&amp;lt;&amp;lt;&amp;#39;\n&amp;#39;;|OTTFF&#39;s Blog">
     
 
     <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
@@ -125,7 +125,7 @@
     <div class="float-md-right">
       <span title="Lastmod: 2020-09-24. Published at: 2020-09-24.">
         
-          Published: 2020-09-24 Thu 23:18:06
+          Published: 2020-09-24 周四 23:18:06
         
       </span>
     </div>
@@ -137,24 +137,20 @@
   <section class="pb-6 mb-3 border-bottom markdown">
       <h2 id="并查集-union-find--disjoint-set-union">并查集 Union Find / Disjoint Set Union</h2>
 <h3 id="路径压缩和按-size-合并-union-by-size">路径压缩和按 size 合并 Union by Size</h3>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// M: max number of set
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// M: max number of set
 </span><span class="c1">// id is in [0~M-1]
 </span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="n">size_t</span> <span class="n">M</span><span class="o">&gt;</span>
-<span class="k">struct</span> <span class="nc">UF</span>
-<span class="p">{</span>
+<span class="k">struct</span> <span class="nc">UF</span> <span class="p">{</span>
 	<span class="kt">int</span> <span class="n">uf</span><span class="p">[</span><span class="n">M</span><span class="p">],</span><span class="n">sz</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
 	<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">ns</span><span class="p">;</span> <span class="c1">// number of set
-</span><span class="c1"></span>	<span class="kt">void</span> <span class="nf">init</span><span class="p">(</span><span class="kt">int</span> <span class="n">n_</span><span class="p">)</span>
-	<span class="p">{</span>
+</span><span class="c1"></span>	<span class="kt">void</span> <span class="nf">init</span><span class="p">(</span><span class="kt">int</span> <span class="n">n_</span><span class="p">)</span> <span class="p">{</span>
 		<span class="n">n</span><span class="o">=</span><span class="n">ns</span><span class="o">=</span><span class="n">n_</span><span class="p">;</span>
 		<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">uf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">i</span><span class="p">,</span><span class="n">sz</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
 	<span class="p">}</span>
-	<span class="kt">int</span> <span class="nf">find</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
-	<span class="p">{</span> <span class="k">return</span> <span class="n">x</span><span class="o">==</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">?</span><span class="nl">x</span><span class="p">:</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]);</span> <span class="p">}</span>
+	<span class="kt">int</span> <span class="nf">find</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span><span class="o">==</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">?</span><span class="nl">x</span><span class="p">:</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]);</span> <span class="p">}</span>
     <span class="kt">bool</span> <span class="nf">same</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">==</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">);</span> <span class="p">}</span>
-	<span class="kt">bool</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
-	<span class="p">{</span>
+	<span class="kt">bool</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
 		<span class="n">x</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="n">y</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
 		<span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="n">y</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
 		<span class="k">if</span><span class="p">(</span><span class="n">sz</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">&gt;</span><span class="n">sz</span><span class="p">[</span><span class="n">y</span><span class="p">])</span> <span class="n">swap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
@@ -163,41 +159,37 @@
 	<span class="p">}</span>
 <span class="p">};</span>
 </code></pre></div><p>Debug:</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++">    <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
-    <span class="p">{</span>
-        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
-        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;id:&#34;</span><span class="p">;</span>
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">;</span>
-        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
-        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;uf:&#34;</span><span class="p">;</span>
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">uf</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
-        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;sz:&#34;</span><span class="p">;</span>
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">sz</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
-        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++">    <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+        <span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="s">&#34;id:&#34;</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">;</span>
+        <span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="s">&#34;uf:&#34;</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">uf</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="s">&#34;sz:&#34;</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">sz</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="n">cerr</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
     <span class="p">}</span>
 </code></pre></div><h3 id="路径压缩按size合并和集合额外信息">路径压缩按size合并和集合额外信息</h3>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// T must define +
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// T must define +
 </span><span class="c1">// M: max number of set
 </span><span class="c1">// id is in [0~M-1]
-</span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">M</span><span class="p">,</span><span class="k">typename</span> <span class="n">Op</span><span class="o">=</span><span class="n">plus</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span>
+</span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">M</span><span class="p">,</span> <span class="k">typename</span> <span class="n">Op</span><span class="o">=</span><span class="n">plus</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span>
 <span class="k">struct</span> <span class="nc">UF</span>
 <span class="p">{</span>
+    <span class="k">static</span> <span class="n">Op</span> <span class="n">op</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">uf</span><span class="p">[</span><span class="n">M</span><span class="p">],</span><span class="n">sz</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
     <span class="n">T</span> <span class="n">info</span><span class="p">[</span><span class="n">M</span><span class="p">];</span>
     <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
-    <span class="n">Op</span> <span class="n">op</span><span class="p">;</span>
-    <span class="kt">void</span> <span class="nf">init</span><span class="p">(</span><span class="kt">int</span> <span class="n">n_</span><span class="p">,</span><span class="n">T</span> <span class="n">info_</span><span class="p">[])</span>
-    <span class="p">{</span>
+    <span class="kt">void</span> <span class="nf">init</span><span class="p">(</span><span class="kt">int</span> <span class="n">n_</span><span class="p">,</span><span class="n">T</span> <span class="n">info_</span><span class="p">[])</span> <span class="p">{</span>
         <span class="n">n</span><span class="o">=</span><span class="n">n_</span><span class="p">;</span>
         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">uf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">i</span><span class="p">,</span><span class="n">sz</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">info</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">info_</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
     <span class="p">}</span>
-    <span class="kt">int</span> <span class="nf">find</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
-    <span class="p">{</span> <span class="k">return</span> <span class="n">x</span><span class="o">==</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">?</span><span class="nl">x</span><span class="p">:</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]);</span> <span class="p">}</span>
-    <span class="kt">bool</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
-    <span class="p">{</span>
+    <span class="kt">int</span> <span class="nf">find</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span><span class="o">==</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">?</span><span class="nl">x</span><span class="p">:</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">uf</span><span class="p">[</span><span class="n">x</span><span class="p">]);</span> <span class="p">}</span>
+    <span class="kt">bool</span> <span class="nf">merge</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">y</span><span class="p">)</span> 
         <span class="n">x</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">);</span> <span class="n">y</span><span class="o">=</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
         <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="n">y</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
         <span class="k">if</span><span class="p">(</span><span class="n">sz</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">&gt;</span><span class="n">sz</span><span class="p">[</span><span class="n">y</span><span class="p">])</span> <span class="n">swap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">);</span>
@@ -210,8 +202,7 @@
 </span><span class="c1"></span>    <span class="n">T</span><span class="o">&amp;</span> <span class="n">getinfo</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">info</span><span class="p">[</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)];</span> <span class="p">}</span>
 <span class="p">};</span>
 </code></pre></div><p>Debug:</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++">    <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
-    <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++">    <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span> <span class="p">{</span>
         <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
         <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;id:&#34;</span><span class="p">;</span>
         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="sc">&#39;\t&#39;</span><span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">;</span>
@@ -226,7 +217,7 @@
     <span class="p">}</span>
 </code></pre></div><h3 id="按-size-合并及回滚-rollback">按 size 合并及回滚 Rollback</h3>
 <p>回滚部分未测试</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// M: max number of set
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// M: max number of set
 </span><span class="c1">// id is in [0~M-1]
 </span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="n">size_t</span> <span class="n">M</span><span class="o">&gt;</span>
 <span class="k">struct</span> <span class="nc">UF</span>
@@ -264,7 +255,7 @@
     <span class="p">}</span>
 <span class="p">};</span>
 </code></pre></div><p>Debug:</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++">    <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++">    <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
     <span class="p">{</span>
         <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
         <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;id:&#34;</span><span class="p">;</span>
@@ -276,7 +267,7 @@
         <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
     <span class="p">}</span>
 </code></pre></div><h3 id="路径压缩和按秩合并-union-by-rank">路径压缩和按秩合并 Union by Rank</h3>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// M: max number of set
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// M: max number of set
 </span><span class="c1">// id is in [0~M-1]
 </span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="n">size_t</span> <span class="n">M</span><span class="o">&gt;</span>
 <span class="k">struct</span> <span class="nc">UF</span>
@@ -303,7 +294,7 @@
     <span class="p">}</span>
 <span class="p">};</span>
 </code></pre></div><p>Debug:</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++">    <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++">    <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
     <span class="p">{</span>
         <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
         <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;id:&#34;</span><span class="p">;</span>
@@ -318,7 +309,7 @@
         <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
     <span class="p">}</span>
 </code></pre></div><h3 id="路径压缩-path-compression">路径压缩 Path Compression</h3>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// M: max number of set
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="c1">// M: max number of set
 </span><span class="c1">// id is in [0~M-1]
 </span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="n">size_t</span> <span class="n">M</span><span class="o">&gt;</span>
 <span class="k">struct</span> <span class="nc">UF</span>
@@ -343,7 +334,7 @@
     <span class="p">}</span>
 <span class="p">};</span>
 </code></pre></div><p>Debug:</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++">    <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++">    <span class="kt">void</span> <span class="nf">show</span><span class="p">()</span>
     <span class="p">{</span>
         <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;UnionFind:----------------------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
         <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s">&#34;id:&#34;</span><span class="p">;</span>

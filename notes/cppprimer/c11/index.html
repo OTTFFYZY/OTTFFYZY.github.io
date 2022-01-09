@@ -121,7 +121,7 @@
     <div class="float-md-right">
       <span title="Lastmod: 2021-07-05. Published at: 2021-07-05.">
         
-          Published: 2021-07-05 Mon 00:50:38
+          Published: 2021-07-05 周一 00:50:38
         
       </span>
     </div>
@@ -149,14 +149,14 @@
 <h4 id="1123-pair-类型">11.2.3 pair 类型</h4>
 <p>pair 定义在 utility 头文件中。</p>
 <h3 id="113-关联容器操作">11.3 关联容器操作</h3>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;::</span><span class="n">value_type</span> <span class="n">v1</span><span class="p">;</span> <span class="c1">// string
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;::</span><span class="n">value_type</span> <span class="n">v1</span><span class="p">;</span> <span class="c1">// string
 </span><span class="c1"></span><span class="n">set</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;::</span><span class="n">key_type</span> <span class="n">v2</span><span class="p">;</span>   <span class="c1">// string
 </span><span class="c1"></span><span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;::</span><span class="n">value_type</span> <span class="n">v3</span><span class="p">;</span>  <span class="c1">// pair&lt;const string, int&gt;
 </span><span class="c1"></span><span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;::</span><span class="n">key_type</span> <span class="n">v3</span><span class="p">;</span>    <span class="c1">// string
 </span><span class="c1"></span><span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;::</span><span class="n">mapped_type</span> <span class="n">v3</span><span class="p">;</span> <span class="c1">// int
 </span></code></pre></div><p>set 没有 mapped_type。</p>
 <h4 id="1131-关联容器迭代器">11.3.1 关联容器迭代器</h4>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">cnt</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">cnt</span><span class="p">;</span>
 <span class="k">auto</span> <span class="n">map_it</span> <span class="o">=</span> <span class="n">cnt</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
 <span class="o">*</span><span class="n">map_it</span><span class="p">;</span> <span class="c1">// 指向 pair&lt;const string, int&gt; 的引用
 </span><span class="c1">// map_it-&gt;first = &#34;new key&#34; // 错误，不能更改 key
@@ -175,10 +175,10 @@
 <p>erase(key) 将返回删除元素的个数。</p>
 <p>erase(it) 或 erase(b, e) 则返回被删除元素的下一个元素的迭代器。</p>
 <h4 id="1134-map-的下标操作">11.3.4 map 的下标操作</h4>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">c</span><span class="p">[</span><span class="n">k</span><span class="p">];</span> <span class="c1">// k 不存在时会添加一个 key 为 k 的元素
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">c</span><span class="p">[</span><span class="n">k</span><span class="p">];</span> <span class="c1">// k 不存在时会添加一个 key 为 k 的元素
 </span><span class="c1"></span><span class="n">c</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">k</span><span class="p">);</span> <span class="c1">// k 不存在时会抛出 out_of_range 异常
 </span></code></pre></div><h4 id="1135-访问元素">11.3.5 访问元素</h4>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">c</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">k</span><span class="p">);</span> <span class="c1">// 指向等于 k 的第一个元素
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">c</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">k</span><span class="p">);</span> <span class="c1">// 指向等于 k 的第一个元素
 </span><span class="c1"></span><span class="n">c</span><span class="p">.</span><span class="n">count</span><span class="p">(</span><span class="n">k</span><span class="p">);</span>
 <span class="n">c</span><span class="p">.</span><span class="n">lower_bound</span><span class="p">(</span><span class="n">k</span><span class="p">);</span>
 <span class="n">c</span><span class="p">.</span><span class="n">upper_bound</span><span class="p">(</span><span class="n">k</span><span class="p">);</span>
@@ -186,7 +186,7 @@
 </span></code></pre></div><h3 id="114-无序容器">11.4 无序容器</h3>
 <p>无序关联容器不适用比较算符，使用哈希函数 <code>hash function</code> 和关键字类型的 <code>==</code> 算符。</p>
 <h5 id="桶管理">桶管理</h5>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">c</span><span class="p">.</span><span class="n">bucket_count</span><span class="p">();</span>     <span class="c1">// 正在使用的桶的数目
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">c</span><span class="p">.</span><span class="n">bucket_count</span><span class="p">();</span>     <span class="c1">// 正在使用的桶的数目
 </span><span class="c1"></span><span class="n">c</span><span class="p">.</span><span class="n">max_bucket_count</span><span class="p">();</span> <span class="c1">// 容器能容纳的最多的桶的数量
 </span><span class="c1"></span><span class="n">c</span><span class="p">.</span><span class="n">bucket_size</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>     <span class="c1">// 第 n 个桶中有多少个元素
 </span><span class="c1"></span><span class="n">c</span><span class="p">.</span><span class="n">bucket</span><span class="p">(</span><span class="n">k</span><span class="p">);</span>          <span class="c1">// 关键字为 k 的元素在哪个桶中
@@ -201,7 +201,7 @@
 </span><span class="c1"></span><span class="n">c</span><span class="p">.</span><span class="n">rehash</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>          <span class="c1">// 使 bucket_count &gt;= n
 </span><span class="c1"></span><span class="n">c</span><span class="p">.</span><span class="n">reserve</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>         <span class="c1">// 使 c 可以保存 n 个元素且不必 rehash
 </span></code></pre></div><h5 id="无序容器对关键字类型的要求">无序容器对关键字类型的要求</h5>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">size_t</span> <span class="nf">hasher</span><span class="p">(</span><span class="k">const</span> <span class="n">A</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">size_t</span> <span class="nf">hasher</span><span class="p">(</span><span class="k">const</span> <span class="n">A</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
 <span class="kt">bool</span> <span class="nf">eq_op</span><span class="p">(</span><span class="k">const</span> <span class="n">A</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">A</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
 <span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">A</span><span class="p">,</span> <span class="k">decltype</span><span class="p">(</span><span class="n">hasher</span><span class="p">)</span><span class="o">*</span><span class="p">,</span> <span class="k">decltype</span><span class="p">(</span><span class="n">eq_op</span><span class="p">)</span><span class="o">*&gt;</span> <span class="n">ma</span><span class="p">;</span>
 </code></pre></div>

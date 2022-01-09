@@ -121,7 +121,7 @@
     <div class="float-md-right">
       <span title="Lastmod: 2020-09-17. Published at: 2020-09-17.">
         
-          Published: 2020-09-17 Thu 14:07:57
+          Published: 2020-09-17 周四 14:07:57
         
       </span>
     </div>
@@ -136,12 +136,12 @@
 <h4 id="查看程序返回值">查看程序返回值</h4>
 <p>当一个程序运行结束时，我们想知道 main 函数的返回值可以使用以下命令。</p>
 <p>Win</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span> echo <span class="nv">%ERRORLEVEL%</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span> echo <span class="nv">%ERRORLEVEL%</span>
 </code></pre></div><p>Unix</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ <span class="nb">echo</span> <span class="nv">$?</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ <span class="nb">echo</span> <span class="nv">$?</span>
 </code></pre></div><h3 id="12">1.2</h3>
 <p>标准库有四个输入输出对象</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">cin</span> <span class="c1">// 标准输入
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">cin</span> <span class="c1">// 标准输入
 </span><span class="c1"></span><span class="n">cout</span> <span class="c1">// 标准输出
 </span><span class="c1"></span><span class="n">cerr</span> <span class="c1">// 标准错误
 </span><span class="c1"></span><span class="n">clog</span> <span class="c1">// 输出程序运行时的一般信息
@@ -153,16 +153,16 @@
 <h3 id="14">1.4</h3>
 <h4 id="输入文件尾巴">输入文件尾巴</h4>
 <p>Win</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span> Ctrl+Z
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span> Ctrl+Z
 </code></pre></div><p>Unix</p>
-<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">$ Ctrl+D
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ Ctrl+D
 </code></pre></div><h3 id="15">1.5</h3>
 <h4 id="文件重定向">文件重定向</h4>
 <p><code>std::cout</code> corresponds to <code>stdout</code></p>
 <p><code>std::cerr</code> and <code>std::clog</code> corresponds to <code>stderr</code></p>
 <p><code>std::cerr</code> is non-buffered</p>
 <p>redirect.cpp</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
@@ -175,7 +175,7 @@
         <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><p><code>std::out</code> 输出到文件</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span>redirect <span class="p">&gt;</span> out.txt
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span>redirect <span class="p">&gt;</span> out.txt
 cerr output
 clog output
 cerr output
@@ -185,7 +185,7 @@ clog output
 cout output
 cout output
 </code></pre></div><p><code>std::out</code> 输出追加到文件</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span>redirect <span class="p">&gt;&gt;</span> out.txt
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span>redirect <span class="p">&gt;&gt;</span> out.txt
 cerr output
 clog output
 cerr output
@@ -197,7 +197,7 @@ cout output
 cout output
 cout output
 </code></pre></div><p>标准错误流重定向</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span>redirect <span class="mi">2</span><span class="p">&gt;</span> out.txt
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span>redirect <span class="mi">2</span><span class="p">&gt;</span> out.txt
 cout output
 cout output
 
@@ -207,7 +207,7 @@ clog output
 cerr output
 clog output
 </code></pre></div><p>重定向到不同文件</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span>redirect <span class="mi">1</span><span class="p">&gt;</span> out.txt <span class="mi">2</span><span class="p">&gt;</span>out2.txt
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span>redirect <span class="mi">1</span><span class="p">&gt;</span> out.txt <span class="mi">2</span><span class="p">&gt;</span>out2.txt
 
 <span class="p">&gt;</span>type out.txt
 cout output
@@ -219,7 +219,7 @@ clog output
 cerr output
 clog output
 </code></pre></div><p>重定向到同一文件</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span>redirect <span class="p">&gt;</span> out.txt <span class="mi">2</span><span class="p">&gt;&amp;</span><span class="mi">1</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span>redirect <span class="p">&gt;</span> out.txt <span class="mi">2</span><span class="p">&gt;&amp;</span><span class="mi">1</span>
 
 <span class="p">&gt;</span>type out.txt
 cout output

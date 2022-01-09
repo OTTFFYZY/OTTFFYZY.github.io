@@ -121,7 +121,7 @@
     <div class="float-md-right">
       <span title="Lastmod: 2021-06-17. Published at: 2021-06-17.">
         
-          Published: 2021-06-17 Thu 22:49:43
+          Published: 2021-06-17 周四 22:49:43
         
       </span>
     </div>
@@ -197,7 +197,7 @@
 <p>两个容器大小不同，但元素少的是元素多的前缀，则元素少的容器较小。</p>
 <p>如果前缀不同则第一个不同元素的大小关系决定元素大小。</p>
 <h3 id="93-顺序容器操作">9.3 顺序容器操作</h3>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
 </span><span class="cp">#include</span> <span class="cpf">&lt;set&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -229,16 +229,16 @@
 	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><h4 id="932-访问元素">9.3.2 访问元素</h4>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">c</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">c</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
 <span class="n">c</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 </code></pre></div><p>如果 n 是一个范围外的值则，两种取元素的方式是行为是不同的，前者行为是未定义的，后者则会抛出 out_of_range 异常</p>
 <p>以上两种访问方式和 back() front() 都是返回元素的引用。</p>
 <h4 id="933-删除元素">9.3.3 删除元素</h4>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">c</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">it</span><span class="p">)</span> <span class="c1">// 删除迭代器位置的元素，返回删除元素之后元素的迭代器。如果 it 是尾后迭代器则行为未定义
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">c</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">it</span><span class="p">)</span> <span class="c1">// 删除迭代器位置的元素，返回删除元素之后元素的迭代器。如果 it 是尾后迭代器则行为未定义
 </span><span class="c1"></span><span class="n">c</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">it_begin</span><span class="p">,</span> <span class="n">it_end</span><span class="p">)</span> <span class="c1">// 删除迭代器中间的元素 [it_begin, it_end) 中间的元素，
 </span><span class="c1"></span>                          <span class="c1">// 返回最后一个被删元素的下一个元素的迭代器
 </span><span class="c1"></span>                          <span class="c1">// 如果 it_end 是尾后迭代器，则也会返回尾后迭代器
-</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp">#include</span> <span class="cpf">&lt;set&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
@@ -257,7 +257,7 @@
 </span><span class="c1"></span>	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><h4 id="934-特殊的-forward_list">9.3.4 特殊的 forward_list</h4>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">lst</span><span class="p">.</span><span class="n">before_begin</span><span class="p">();</span>    <span class="c1">// 首前迭代器 off-the-beginning 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">lst</span><span class="p">.</span><span class="n">before_begin</span><span class="p">();</span>    <span class="c1">// 首前迭代器 off-the-beginning 
 </span><span class="c1"></span><span class="n">lst</span><span class="p">.</span><span class="n">insert_after</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">t</span><span class="p">);</span> <span class="c1">// 迭代器 p 之后插入 t
 </span><span class="c1"></span><span class="n">lst</span><span class="p">.</span><span class="n">erase_after</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>    <span class="c1">// 删除 p 之后的元素
 </span></code></pre></div><h4 id="935-改变容器大小">9.3.5 改变容器大小</h4>
@@ -274,7 +274,7 @@
 <p>对 vector 和 string。指向被删元素之前元素的迭代器、引用和指针有效。尾后迭代器总会失效。</p>
 <p>注意在迭代删除元素时，不要使用提前保存的尾后迭代器。</p>
 <h3 id="94-vector-对象时如何增长的">9.4 vector 对象时如何增长的</h3>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">c</span><span class="p">.</span><span class="n">shrink_to_fit</span><span class="p">();</span>   <span class="c1">// 将 capacity 减少为与 size() 相同大小
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">c</span><span class="p">.</span><span class="n">shrink_to_fit</span><span class="p">();</span>   <span class="c1">// 将 capacity 减少为与 size() 相同大小
 </span><span class="c1"></span><span class="n">c</span><span class="p">.</span><span class="n">capacity</span><span class="p">();</span>        <span class="c1">// 不重新分配内存空间的话，c 可以保存多少元素
 </span><span class="c1"></span><span class="n">c</span><span class="p">.</span><span class="n">reserve</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>        <span class="c1">// 分配至少能容纳 n 个元素的内存空间
 </span></code></pre></div><p>shrink_to_fit() 只是一个请求，并不保证退还内存。</p>
@@ -282,7 +282,7 @@
 <h3 id="95-额外的-string-操作">9.5 额外的 string 操作</h3>
 <h4 id="951-构造-string-的其他方法">9.5.1 构造 string 的其他方法</h4>
 <p>从其他 string 构造 string</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">string</span> <span class="nf">s</span><span class="p">(</span><span class="n">cp</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span> <span class="c1">// s 是 cp 指向的数组中前 n 个字符的拷贝。
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">string</span> <span class="nf">s</span><span class="p">(</span><span class="n">cp</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span> <span class="c1">// s 是 cp 指向的数组中前 n 个字符的拷贝。
 </span><span class="c1"></span>                 <span class="c1">// 数组应至少包含 n 个字符。
 </span><span class="c1"></span><span class="n">string</span> <span class="nf">s</span><span class="p">(</span><span class="n">s2</span><span class="p">,</span> <span class="n">pos2</span><span class="p">);</span> <span class="c1">// s 是 string s2 从下标 pos2 开始的字符串的拷贝。
 </span><span class="c1"></span>                    <span class="c1">// 若 pos2 &gt; s2.size() 则行为未定义
@@ -292,34 +292,34 @@
 </span><span class="c1"></span>                          <span class="c1">// 无论 len2 值是多少，最多只能拷贝 
 </span><span class="c1"></span>                          <span class="c1">// s2.size() - pos2 个字符
 </span></code></pre></div><h5 id="substr-操作">substr 操作</h5>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">len</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">pos</span><span class="p">,</span> <span class="n">len</span><span class="p">);</span>
 </code></pre></div><h4 id="952-改变-string-的其他方法">9.5.2 改变 string 的其他方法</h4>
 <p>string 除了能使用接受迭代器版本的 insert 和 erase 也能使用接受下标版本的 insert 和 erase。</p>
 <p>string 还提供了 append 和 replace 函数</p>
 <h4 id="953-string-搜索操作">9.5.3 string 搜索操作</h4>
 <p>string 的搜索函数会返回一个 string::size_type 的值，成功时返回匹配位置的下标，失败时返回 string::npos。标准库将 string::npos 初始化为 -1，由于它是 unsigned 类型，因此实际上是任何 string 最大的可能大小。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">s</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">s</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
 <span class="n">s</span><span class="p">.</span><span class="n">rfind</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
 <span class="n">s</span><span class="p">.</span><span class="n">find_first_of</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
 <span class="n">s</span><span class="p">.</span><span class="n">find_last_of</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
 <span class="n">s</span><span class="p">.</span><span class="n">find_first_not_of</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
 <span class="n">s</span><span class="p">.</span><span class="n">find_last_not_of</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
 </code></pre></div><p>其中 args 可以是</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">c, pos          // 从 pos 开始查找字符 c。pos 默认为 0 
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">c, pos          // 从 pos 开始查找字符 c。pos 默认为 0 
 s2, pos         // 从 pos 开始查找字符 s2。pos 默认为 0 
 cp, pos         // 从 pos 开始查找 cp 指向的空字符结尾的 C 风格字符串
                 // pos 默认为 0
 cp, pos, n      // 从 pos 开始查找指针 cp 指向的数组的前 n 个字符。
                 // pos 和 n 无默认值
 </code></pre></div><h4 id="954-compare-函数">9.5.4 compare 函数</h4>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">s</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="n">s2</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">s</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="n">s2</span><span class="p">);</span>
 <span class="n">s</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="n">pos1</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">s2</span><span class="p">);</span>
 <span class="n">s</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="n">pos1</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">pos2</span><span class="p">,</span> <span class="n">n2</span><span class="p">);</span>
 <span class="n">s</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="n">cp</span><span class="p">);</span>
 <span class="n">s</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="n">pos1</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">cp</span><span class="p">);</span>
 <span class="n">s</span><span class="p">.</span><span class="n">compare</span><span class="p">(</span><span class="n">pos1</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">cp</span><span class="p">,</span> <span class="n">n2</span><span class="p">);</span>
 </code></pre></div><h4 id="955-数值转换">9.5.5 数值转换</h4>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">to_string</span><span class="p">(</span><span class="n">val</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">to_string</span><span class="p">(</span><span class="n">val</span><span class="p">);</span>
 <span class="n">stoi</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>  <span class="c1">// b 是进制，默认为 10
 </span><span class="c1"></span><span class="n">stol</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>  <span class="c1">// 从下标 p 位置开始，默认为 0
 </span><span class="c1"></span><span class="n">stoul</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
@@ -332,7 +332,7 @@ cp, pos, n      // 从 pos 开始查找指针 cp 指向的数组的前 n 个字�
 <p>适配器 <code>adaptor</code> 是一种机制，使得某种事物行为看起来像另一种不同的类型。</p>
 <p>容器、迭代器和函数都有适配器。</p>
 <p>所有容器适配器支持的操作和类型</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">size_type</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">size_type</span><span class="p">;</span>
 <span class="n">value_type</span><span class="p">;</span>
 <span class="n">container_type</span><span class="p">;</span>
 <span class="n">A</span> <span class="n">a</span><span class="p">;</span>    <span class="c1">// 创建空适配器

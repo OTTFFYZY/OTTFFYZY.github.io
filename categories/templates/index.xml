@@ -6,18 +6,14 @@
     <description>Recent content in Templates on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 31 Jul 2021 19:22:06 -0700</lastBuildDate>
-    
-	<atom:link href="https://ottffyzy.github.io/categories/templates/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 31 Jul 2021 19:22:06 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/categories/templates/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[模板][数据结构] 下标池 IdPool</title>
       <link>https://ottffyzy.github.io/tpls/ds/idpool/</link>
       <pubDate>Sat, 31 Jul 2021 19:22:06 -0700</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/ds/idpool/</guid>
-      <description>下标池 IdPool template&amp;lt;typename T&amp;gt; struct IdPool { map&amp;lt;T, int&amp;gt; idmap; vector&amp;lt;T&amp;gt; ett; void clear() { idmap.clear(); ett.clear(); } int getid(const T &amp;amp;t) { auto it = idmap.find(t); if (it != idmap.end()) return it-&amp;gt;second; int ans = ett.size(); ett.push_back(t); idmap[t] = ans; return ans; } T gett(int i) { return ett[i]; } int size() { return ett.size(); } }; IdPool&amp;lt;int&amp;gt; idp;</description>
+      <description>下标池 IdPool template&amp;lt;typename T&amp;gt; struct IdPool { map&amp;lt;T, int&amp;gt; idmap; vector&amp;lt;T&amp;gt; items; void clear() { idmap.clear(); items.clear(); } int getid(const T &amp;amp;t) { auto it = idmap.find(t); if (it != idmap.end()) return it-&amp;gt;second; int ans = items.size(); items.push_back(t); idmap[t] = ans; return ans; } T&amp;amp; operator[](int i) { return items[i]; } int size() { return items.size(); } }; IdPool&amp;lt;int&amp;gt; idp;</description>
     </item>
     
     <item>
@@ -35,7 +31,7 @@
       <pubDate>Sun, 25 Apr 2021 18:19:08 -0700</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/others/rnd/</guid>
-      <description>随机数 Random #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long LL; struct FastIO { FastIO() { ios::sync_with_stdio(false); cin.tie(nullptr); } }fastio; mt19937 rnd(chrono::system_clock::now().time_since_epoch().count()); mt19937_64 rnd_64(chrono::system_clock::now().time_since_epoch().count()); // [0,r) int rndi(int r) { return rnd()%r; } // [l,r] r-l+1&amp;lt;=INT_MAX int rndi(int l,int r) { return rnd()%(r-l+1)+l; } LL rndll(LL l,LL r) { return rnd_64()%(r-l+1)+l; } char rndc() { return rndi(-128,127); } char rndc(const string &amp;amp;s) { return s[rndi(s.length())]; } char rnd_lower() { return rndi(26)+&amp;#39;a&amp;#39;; } char rnd_upper() { return rndi(26)+&amp;#39;A&amp;#39;; } char rnd_digit() { return rndi(10)+&amp;#39;0&amp;#39;; } char rnd_alpha() { int r=rndi(52); return r&amp;lt;26?(r+&amp;#39;a&amp;#39;):(r-26+&amp;#39;A&amp;#39;); } char rnd_alphadigit() { int r=rndi(62); if(r&amp;lt;10)</description>
+      <description>随机数 Random #include &amp;lt;bits/stdc++.h&amp;gt;using namespace std; typedef long long LL; struct FastIO { FastIO() { ios::sync_with_stdio(false); cin.tie(nullptr); } }fastio; mt19937 rnd(chrono::system_clock::now().time_since_epoch().count()); mt19937_64 rnd_64(chrono::system_clock::now().time_since_epoch().count()); // [0,r) int rndi(int r) { return rnd()%r; } // [l,r] r-l+1&amp;lt;=INT_MAX int rndi(int l,int r) { return rnd()%(r-l+1)+l; } LL rndll(LL l,LL r) { return rnd_64()%(r-l+1)+l; } char rndc() { return rndi(-128,127); } char rndc(const string &amp;amp;s) { return s[rndi(s.length())]; } char rnd_lower() { return rndi(26)+&amp;#39;a&amp;#39;; } char rnd_upper() { return rndi(26)+&amp;#39;A&amp;#39;; } char rnd_digit() { return rndi(10)+&amp;#39;0&amp;#39;; } char rnd_alpha() { int r=rndi(52); return r&amp;lt;26?(r+&amp;#39;a&amp;#39;):(r-26+&amp;#39;A&amp;#39;); } char rnd_alphadigit() { int r=rndi(62); if(r&amp;lt;10) return</description>
     </item>
     
     <item>
@@ -44,7 +40,7 @@
       <pubDate>Wed, 20 Jan 2021 11:39:32 -0800</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/ds/discretization/</guid>
-      <description>离散化 Discretization template&amp;lt;typename T, int IdFrom=0, typename OpLs=less&amp;lt;T&amp;gt;, typename OpEq=equal_to&amp;lt;T&amp;gt;&amp;gt; struct Dctz { static OpLs ls; static OpEq eq; vector&amp;lt;T&amp;gt; x; void clear() { x.clear(); } void add(T v) { x.push_back(v); } void init() { sort(x.begin(),x.end(),ls); x.erase(unique(x.begin(),x.end(),eq),x.end()); } int size() { return x.size(); } int id(const T &amp;amp;v) { return lower_bound(x.begin(),x.end(),v,ls)-x.begin()+IdFrom; } }; Dctz&amp;lt;&amp;gt; dc;</description>
+      <description>离散化 Discretization template&amp;lt;typename T, int IdFrom=0, typename OpLs=less&amp;lt;T&amp;gt;, typename OpEq=equal_to&amp;lt;T&amp;gt;&amp;gt; struct Dctz { static OpLs ls; static OpEq eq; vector&amp;lt;T&amp;gt; x; void clear() { x.clear(); } void add(T v) { x.push_back(v); } void init() { sort(x.begin(),x.end(),ls); x.erase(unique(x.begin(),x.end(),eq),x.end()); } int size() { return x.size(); } int id(const T &amp;amp;v) { return lower_bound(x.begin(),x.end(),v,ls)-x.begin()+IdFrom; } T&amp;amp; operator[](int id) { return x[id-IdFrom]; }; }; Dctz&amp;lt;&amp;gt; dc;</description>
     </item>
     
     <item>
@@ -57,21 +53,12 @@
     </item>
     
     <item>
-      <title>[模板] bitset &amp; 位图</title>
-      <link>https://ottffyzy.github.io/tpls/ds/bitset/</link>
-      <pubDate>Thu, 22 Oct 2020 18:03:19 -0400</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tpls/ds/bitset/</guid>
-      <description>std::bitset #include &amp;lt;bitset&amp;gt; bitset&amp;lt;M&amp;gt; bs; bs[i]; // access bs.test(i); // access bs.count(i); // count 1 bs.size(); bs.any(); bs.none(); bs.all(); // cpp11 bs.set(); bs.set(i); // set i-th bit to 1 bs.reset(); bs.reset(i); bs.flip(); bs.flip(i); bs.to_string(); bs.to_ulong(); bs.to_ullong(); // cpp11 cout&amp;lt;&amp;lt;bs&amp;lt;&amp;lt;endl; 手写位图 Bitmap template&amp;lt;size_t M&amp;gt; struct BitMap { typedef unsigned int UI; UI map[M/32+1]; void reset() { memset(map,0,sizeof(map)); } void set() { memset(map,0xff,sizeof(map)); } void set(int i) { map[i&amp;gt;&amp;gt;5]|=1U&amp;lt;&amp;lt;(i&amp;amp;31); } void reset(int i) { map[i&amp;gt;&amp;gt;5]&amp;amp;=~(1U&amp;lt;&amp;lt;(i&amp;amp;31)); } void flip(int i) { map[i&amp;gt;&amp;gt;5]^=1U&amp;lt;&amp;lt;(i&amp;amp;31); } bool test(int i) { return map[i&amp;gt;&amp;gt;5]&amp;amp;(1U&amp;lt;&amp;lt;(i&amp;amp;31)); } };</description>
-    </item>
-    
-    <item>
       <title>[模板] 对拍程序</title>
       <link>https://ottffyzy.github.io/tpls/others/checker/</link>
       <pubDate>Tue, 20 Oct 2020 00:10:35 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/others/checker/</guid>
-      <description>对拍程序 from os import system tc=0 while True: system(&amp;#34;python data.py &amp;gt; data.in&amp;#34;) system(&amp;#34;std.exe &amp;lt; data.in &amp;gt; std.out&amp;#34;) system(&amp;#34;my.exe &amp;lt; data.in &amp;gt; my.out&amp;#34;) # system(&amp;#34;diff std.out my.out &amp;gt; diff.out&amp;#34;): if system(&amp;#34;fc std.out my.out &amp;gt; diff.out&amp;#34;): print(&amp;#34;WA&amp;#34;) break else: tc += 1 print(&amp;#34;AC #%d&amp;#34;%tc) print(&amp;#34;-------------------- data.in --------------------&amp;#34;) # system(&amp;#34;cat data.in&amp;#34;) system(&amp;#34;type data.in&amp;#34;) print(&amp;#34;-------------------- std.out --------------------&amp;#34;) system(&amp;#34;type std.out&amp;#34;) print(&amp;#34;-------------------- my.out ---------------------&amp;#34;) system(&amp;#34;type my.out&amp;#34;) #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; int main() { int tc=0; while(1) { system(&amp;#34;data.exe &amp;gt; data.in&amp;#34;); // system(&amp;#34;python data.py &amp;gt; data.in&amp;#34;); system(&amp;#34;std.exe &amp;lt; data.in &amp;gt; std.out&amp;#34;); system(&amp;#34;my.exe &amp;lt; data.in &amp;gt; my.out&amp;#34;); // system(&amp;#34;diff std.out my.out &amp;gt; diff.out&amp;#34;): if(system(&amp;#34;fc</description>
+      <description>对拍程序 from os import system tc=0 while True: system(&amp;#34;python data.py &amp;gt; data.in&amp;#34;) system(&amp;#34;std.exe &amp;lt; data.in &amp;gt; std.out&amp;#34;) system(&amp;#34;my.exe &amp;lt; data.in &amp;gt; my.out&amp;#34;) # system(&amp;#34;diff std.out my.out &amp;gt; diff.out&amp;#34;): if system(&amp;#34;fc std.out my.out &amp;gt; diff.out&amp;#34;): print(&amp;#34;WA&amp;#34;) break else: tc += 1 print(&amp;#34;AC #%d&amp;#34;%tc) print(&amp;#34;-------------------- data.in --------------------&amp;#34;) # system(&amp;#34;cat data.in&amp;#34;) system(&amp;#34;type data.in&amp;#34;) print(&amp;#34;-------------------- std.out --------------------&amp;#34;) system(&amp;#34;type std.out&amp;#34;) print(&amp;#34;-------------------- my.out ---------------------&amp;#34;) system(&amp;#34;type my.out&amp;#34;) #include &amp;lt;bits/stdc++.h&amp;gt;using namespace std; int main() { int tc=0; while(1) { system(&amp;#34;data.exe &amp;gt; data.in&amp;#34;); // system(&amp;#34;python data.py &amp;gt; data.in&amp;#34;); system(&amp;#34;std.exe &amp;lt; data.in &amp;gt; std.out&amp;#34;); system(&amp;#34;my.exe &amp;lt; data.in &amp;gt; my.out&amp;#34;); // system(&amp;#34;diff std.out my.out &amp;gt; diff.out&amp;#34;): if(system(&amp;#34;fc std.out</description>
     </item>
     
     <item>
@@ -80,7 +67,7 @@
       <pubDate>Thu, 01 Oct 2020 12:09:44 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/ds/bit/</guid>
-      <description>树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // T must + - // id 1~n template&amp;lt;typename T,size_t M,typename OpPlus=plus&amp;lt;T&amp;gt;,typename OpMinus=minus&amp;lt;T&amp;gt;&amp;gt; struct BIT { static int lowbit(int x) { return x&amp;amp;(-x); } static OpPlus opp; static OpMinus opm; static T tmp[M+1]; T tree[M+1]; // tree[i] -&amp;gt; sum of [i-lowbit(i)+1,i] int n; void init(int n_) { n=n_; for(int i=1;i&amp;lt;=n;i++) tree[i]=T(0); } void init(int n_,T v[]) // v[0 ~ n_-1] { n=n_; tmp[0]=T(0); for(int i=1;i&amp;lt;=n;i++) tmp[i]=opp(tmp[i-1],v[i]); for(int i=1;i&amp;lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&amp;lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(;p&amp;lt;=n;p+=lowbit(p)) tree[p]=opp(tree[p],V); }</description>
+      <description>树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // T must + - // id 1~n template&amp;lt;typename T,size_t M,typename OpPlus=plus&amp;lt;T&amp;gt;,typename OpMinus=minus&amp;lt;T&amp;gt;&amp;gt; struct BIT { static int lowbit(int x) { return x&amp;amp;(-x); } constexpr static OpPlus opp{}; constexpr static OpMinus opm{}; static T tmp[M+1]; T tree[M+1]; // tree[i] -&amp;gt; sum of [i-lowbit(i)+1,i] int n; void init(int n_) { n=n_; for(int i=1;i&amp;lt;=n;i++) tree[i]=T(0); } void init(int n_,T v[]) // v[0 ~ n_-1] { n=n_; tmp[0]=T(0); for(int i=1;i&amp;lt;=n;i++) tmp[i]=opp(tmp[i-1],v[i]); for(int i=1;i&amp;lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&amp;lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(;p&amp;lt;=n;p+=lowbit(p))</description>
     </item>
     
     <item>
@@ -93,12 +80,21 @@
     </item>
     
     <item>
-      <title>[模板] C&#43;&#43; 日常使用</title>
-      <link>https://ottffyzy.github.io/tpls/others/cppmain/</link>
+      <title>[模板] C&#43;&#43; Debug</title>
+      <link>https://ottffyzy.github.io/tpls/a/debug/</link>
       <pubDate>Tue, 29 Sep 2020 14:34:12 -0400</pubDate>
       
-      <guid>https://ottffyzy.github.io/tpls/others/cppmain/</guid>
-      <description>C++ 日常使用 // #include &amp;lt;bits/stdc++.h&amp;gt; #include &amp;lt;cstdio&amp;gt; #include &amp;lt;cstring&amp;gt; #include &amp;lt;cstdlib&amp;gt; #include &amp;lt;climits&amp;gt; #include &amp;lt;cmath&amp;gt; #include &amp;lt;iostream&amp;gt; #include &amp;lt;iomanip&amp;gt; #include &amp;lt;string&amp;gt; #include &amp;lt;algorithm&amp;gt; #include &amp;lt;numeric&amp;gt; #include &amp;lt;utility&amp;gt; #include &amp;lt;functional&amp;gt; #include &amp;lt;vector&amp;gt; #include &amp;lt;list&amp;gt; #include &amp;lt;stack&amp;gt; #include &amp;lt;queue&amp;gt; #include &amp;lt;deque&amp;gt; #include &amp;lt;set&amp;gt; #include &amp;lt;map&amp;gt; #include &amp;lt;bitset&amp;gt; #include &amp;lt;complex&amp;gt; #include &amp;lt;random&amp;gt; #include &amp;lt;chrono&amp;gt; #include &amp;lt;array&amp;gt; #include &amp;lt;unordered_set&amp;gt; #include &amp;lt;unordered_map&amp;gt; #include &amp;lt;tuple&amp;gt; using namespace std; using LL = long long; using ULL = unsigned long long; using LD = long double; using PII = pair&amp;lt;int,int&amp;gt;; using VI = vector&amp;lt;int&amp;gt;; using MII = map&amp;lt;int,int&amp;gt;; template&amp;lt;typename T&amp;gt; void cmin(T &amp;amp;x,const T &amp;amp;y)</description>
+      <guid>https://ottffyzy.github.io/tpls/a/debug/</guid>
+      <description>C++ 日常使用 template &amp;lt;typename A, typename B&amp;gt; string to_string(pair&amp;lt;A, B&amp;gt; p); template &amp;lt;typename A, typename B, typename C&amp;gt; string to_string(tuple&amp;lt;A, B, C&amp;gt; p); template &amp;lt;typename A, typename B, typename C, typename D&amp;gt; string to_string(tuple&amp;lt;A, B, C, D&amp;gt; p); string to_string(const string&amp;amp; s) { return &amp;#39;&amp;#34;&amp;#39; + s + &amp;#39;&amp;#34;&amp;#39;; } string to_string(const char* s) { return to_string((string) s); } string to_string(bool b) { return (b ? &amp;#34;true&amp;#34; : &amp;#34;false&amp;#34;); } string to_string(vector&amp;lt;bool&amp;gt; v) { string res = &amp;#34;{&amp;#34;; for (int i = 0; i &amp;lt; static_cast&amp;lt;int&amp;gt;(v.size()); i++) { if (i) { res += &amp;#34;, &amp;#34;; } res</description>
+    </item>
+    
+    <item>
+      <title>[模板] C&#43;&#43; 日常使用</title>
+      <link>https://ottffyzy.github.io/tpls/a/cpp/</link>
+      <pubDate>Tue, 29 Sep 2020 14:34:12 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tpls/a/cpp/</guid>
+      <description>C++ 日常使用 #include &amp;lt;bits/stdc++.h&amp;gt;using namespace std; int io_=[](){ ios::sync_with_stdio(false); cin.tie(nullptr); return 0; }(); using LL = long long; using ULL = unsigned long long; using LD = long double; using PII = pair&amp;lt;int, int&amp;gt;; using VI = vector&amp;lt;int&amp;gt;; using MII = map&amp;lt;int, int&amp;gt;; template&amp;lt;typename T&amp;gt; void cmin(T &amp;amp;x,const T &amp;amp;y) { if(y&amp;lt;x) x=y; } template&amp;lt;typename T&amp;gt; void cmax(T &amp;amp;x,const T &amp;amp;y) { if(x&amp;lt;y) x=y; } template&amp;lt;typename T&amp;gt; void cmin(T &amp;amp;x,T &amp;amp;y,const T &amp;amp;z) {// x&amp;lt;=y&amp;lt;=z if(z&amp;lt;x) { y=x; x=z; } else if(z&amp;lt;y) y=z; } template&amp;lt;typename T&amp;gt; void cmax(T &amp;amp;x,T &amp;amp;y,const T &amp;amp;z) {// x&amp;gt;=y&amp;gt;=z if(x&amp;lt;z) { y=x;</description>
     </item>
     
     <item>
@@ -152,7 +148,7 @@
       <pubDate>Thu, 24 Sep 2020 23:18:06 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tpls/ds/unionfind/</guid>
-      <description>并查集 Union Find / Disjoint Set Union 路径压缩和按 size 合并 Union by Size // M: max number of set // id is in [0~M-1] template&amp;lt;size_t M&amp;gt; struct UF { int uf[M],sz[M]; int n; int ns; // number of set void init(int n_) { n=ns=n_; for(int i=0;i&amp;lt;n;i++) uf[i]=i,sz[i]=1; } int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } bool same(int x,int y) { return find(x)==find(y); } bool merge(int x,int y) { x=find(x); y=find(y); if(x==y) return false; if(sz[x]&amp;gt;sz[y]) swap(x,y); sz[y]+=sz[x]; uf[x]=y; ns--; return true; } }; Debug: void show() { cout&amp;lt;&amp;lt;&amp;#34;UnionFind:----------------------\n&amp;#34;; cout&amp;lt;&amp;lt;&amp;#34;id:&amp;#34;; for(int i=0;i&amp;lt;n;i++) cout&amp;lt;&amp;lt;&amp;#39;\t&amp;#39;&amp;lt;&amp;lt;i; cout&amp;lt;&amp;lt;&amp;#39;\n&amp;#39;;</description>
+      <description>并查集 Union Find / Disjoint Set Union 路径压缩和按 size 合并 Union by Size // M: max number of set // id is in [0~M-1] template&amp;lt;size_t M&amp;gt; struct UF { int uf[M],sz[M]; int n; int ns; // number of set void init(int n_) { n=ns=n_; for(int i=0;i&amp;lt;n;i++) uf[i]=i,sz[i]=1; } int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } bool same(int x,int y) { return find(x)==find(y); } bool merge(int x,int y) { x=find(x); y=find(y); if(x==y) return false; if(sz[x]&amp;gt;sz[y]) swap(x,y); sz[y]+=sz[x]; uf[x]=y; ns--; return true; } }; Debug: void show() { cerr&amp;lt;&amp;lt;&amp;#34;UnionFind:----------------------\n&amp;#34;; cerr&amp;lt;&amp;lt;&amp;#34;id:&amp;#34;; for(int i=0;i&amp;lt;n;i++) cerr&amp;lt;&amp;lt;&amp;#39;\t&amp;#39;&amp;lt;&amp;lt;i; cerr&amp;lt;&amp;lt;&amp;#39;\n&amp;#39;;</description>
     </item>
     
     <item>

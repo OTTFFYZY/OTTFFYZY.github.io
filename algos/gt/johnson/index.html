@@ -125,7 +125,7 @@
     <div class="float-md-right">
       <span title="Lastmod: 2020-11-18. Published at: 2020-11-18.">
         
-          Published: 2020-11-18 Wed 13:33:50
+          Published: 2020-11-18 周三 13:33:50
         
       </span>
     </div>
@@ -146,7 +146,7 @@
 <p>所以我们还得想办法让 Dijkstra 能用，或者是发明新算法。</p>
 <h3 id="修改边权赐予-dijkstra-战胜负权图的力量">修改边权赐予 Dijkstra 战胜负权图的力量</h3>
 <p>Johnson 算法的一个核心就是对所有边权重新标记。新标号的边权是非负的从而使得 Dijkstra 在新图上可用。</p>
-<p>首先我们知道，简单的给所有的边加上最小权重的相反数这个肯定是行不通的，这样我们会引入边数这个新的影响因素，例如以前最短路可能是一条边数很多但边权和很小的路径，比如权重和为 $sum_0$ 边数为 $n_0$，考虑另一路径，权重和为 $sum_1$ 边数为 $n_1$，且 $sum_1 \ge sum_0$，$n_1 \le n_2$。在权重都增加 $\delta &gt; 0$ 后有 $sum_0&rsquo; = sum_0 + n_0\delta$， $sum_1&rsquo; = sum_1 + n_1\delta$，此时我们发现 $sum_0'$ 和 $sum_1'$ 的大小关系是不确定的，也就是原图的最短路未必对应新图的最短路，也就是说这样的标号方案是不正确的。</p>
+<p>首先我们知道，简单的给所有的边加上最小权重的相反数这个肯定是行不通的，这样我们会引入边数这个新的影响因素，例如以前最短路可能是一条边数很多但边权和很小的路径，比如权重和为 $sum_0$ 边数为 $n_0$，考虑另一路径，权重和为 $sum_1$ 边数为 $n_1$，且 $sum_1 \ge sum_0$，$n_1 \le n_2$。在权重都增加 $\delta &gt; 0$ 后有 $sum_0' = sum_0 + n_0\delta$， $sum_1' = sum_1 + n_1\delta$，此时我们发现 $sum_0'$ 和 $sum_1'$ 的大小关系是不确定的，也就是原图的最短路未必对应新图的最短路，也就是说这样的标号方案是不正确的。</p>
 <p>那么如何修改边权能不改变原图的最短路呢？</p>
 <p>这里我们引入一个类似势能和每个点绑定的值 $h[i]$。</p>
 <p>考虑边 $&lt;u,v&gt;$ 权重为 $w(u,v)$，重新标记边权为</p>
@@ -165,10 +165,10 @@ sum&#39; =&amp; w&#39;(v_0,v_1) &#43; w&#39;(v_1,v_2) &#43; \cdots &#43; w&#39;(
 $$
 
 <p>我们发现原图与新图路径长度的差值其实只与起止位置有关，与路径无关。此时我们发现原图最短路和新图的最短路的选择是等价的。</p>
-<p>假设原图上 $v_0$ 到 $v_n$ 的最短路之一是路径 $v_0, v_1, v_2, \cdots,v_n$ 其权值和是 $sum_0$，此时新图上显然也可以选取这一路径得到 $sum_0&rsquo; = sum_0 + h[v_0] - h[v_n]$。我们只需证明这个在新图上也是最短路即可。假设这条路径在新图上并非最短路，新图有一条更短的路径 $v_0, u_1, u_2, \cdots, v_n$ 其权重为 $sum_1&rsquo; &lt; sum_0'$ 这时我们发现，必然在原图上这条路径可以得到</p>
+<p>假设原图上 $v_0$ 到 $v_n$ 的最短路之一是路径 $v_0, v_1, v_2, \cdots,v_n$ 其权值和是 $sum_0$，此时新图上显然也可以选取这一路径得到 $sum_0' = sum_0 + h[v_0] - h[v_n]$。我们只需证明这个在新图上也是最短路即可。假设这条路径在新图上并非最短路，新图有一条更短的路径 $v_0, u_1, u_2, \cdots, v_n$ 其权重为 $sum_1' &lt; sum_0'$ 这时我们发现，必然在原图上这条路径可以得到</p>
 $$sum_1 = sum_1&#39;-(h[v_0]-h[v_n]) &lt; sum_0&#39; - (h[v_0]-h[v_n]) = sum_0$$
 <p>也就是说我们在原图上得到了一条比最短路更短的路径，这显然与假设是相违背的。</p>
-<p>现在的问题就变成了，我们怎么能推算一套 $h[i]$ 使得所有的 $w&rsquo;(u,v) \ge 0$。</p>
+<p>现在的问题就变成了，我们怎么能推算一套 $h[i]$ 使得所有的 $w'(u,v) \ge 0$。</p>
 <p>这相当于我们要</p>
 $$w&#39;(u,v) = w(u,v) &#43; h[u] - h[v] \ge 0$$
 <p>即</p>
@@ -199,7 +199,7 @@ $$w(u,v) \ge dis[v] - dis[u]$$
 <p>时间复杂度：Bellman-Ford 为 $O(VE)$ 。如果使用 std::priority_queue 优化的 Dijkstra 则总复杂度为 $O(V(E+V)\log E)$。</p>
 <h3 id="例题及代码">例题及代码</h3>
 <p>Luogu P5905</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">LL</span><span class="p">;</span>

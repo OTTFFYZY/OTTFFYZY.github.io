@@ -11,7 +11,7 @@
     </title>
     
     
-    <meta name="description" property="og:description" content="比赛简述 ABC 中比较简单的一场，题目也都比较常规 AtCoder Beginner Contest 177 A - Don&amp;rsquo;t be late 代码实现 #include &amp;lt;bits/stdc&#43;&#43;.h&amp;gt; using namespace std; int main() { int d,t,s; scanf(&amp;#34;%d%d%d&amp;#34;,&amp;amp;d,&amp;amp;t,&amp;amp;s); printf(&amp;#34;%s\n&amp;#34;,t*s&amp;gt;=d ? &amp;#34;Yes&amp;#34; : &amp;#34;No&amp;#34;); return 0; } B - Substring 题目大意 给出两个串 $S$ 和 $T$，问 $S$ 至少替换多少字符可以使 $T$ 是 $S$ 的子串。 Tag: 暴力 简要题解 $S$|OTTFF&#39;s Blog">
+    <meta name="description" property="og:description" content="比赛简述 ABC 中比较简单的一场，题目也都比较常规 AtCoder Beginner Contest 177 A - Don&amp;rsquo;t be late 代码实现 #include &amp;lt;bits/stdc&#43;&#43;.h&amp;gt;using namespace std; int main() { int d,t,s; scanf(&amp;#34;%d%d%d&amp;#34;,&amp;amp;d,&amp;amp;t,&amp;amp;s); printf(&amp;#34;%s\n&amp;#34;,t*s&amp;gt;=d ? &amp;#34;Yes&amp;#34; : &amp;#34;No&amp;#34;); return 0; } B - Substring 题目大意 给出两个串 $S$ 和 $T$，问 $S$ 至少替换多少字符可以使 $T$ 是 $S$ 的子串。 Tag: 暴力 简要题解 $S$ $T$|OTTFF&#39;s Blog">
     
 
     <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
@@ -133,7 +133,7 @@
     <div class="float-md-right">
       <span title="Lastmod: 2020-09-05. Published at: 2020-09-05.">
         
-          Published: 2020-09-05 Sat 01:26:32
+          Published: 2020-09-05 周六 01:26:32
         
       </span>
     </div>
@@ -148,7 +148,7 @@
 <p><a href="https://atcoder.jp/contests/abc177">AtCoder Beginner Contest 177</a></p>
 <h2 id="a---dont-be-late">A - Don&rsquo;t be late</h2>
 <p><strong>代码实现</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
@@ -165,7 +165,7 @@
 <p><strong>简要题解</strong></p>
 <p>$S$ $T$ 长度都只有 1000，直接枚举 $T$ 的所有匹配位置即可。</p>
 <p><strong>代码实现</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="k">const</span> <span class="kt">int</span> <span class="n">M</span><span class="o">=</span><span class="mi">1005</span><span class="p">;</span>
@@ -192,7 +192,7 @@
 <p>求 $ \sum_{i=1}^{n-1} \sum_{j=i+1}^{n} A_{i} A_{j} $ 模 $(10^9 + 7)$</p>
 <p><strong>Tag:</strong> 前缀和</p>
 <p><strong>代码实现</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="k">const</span> <span class="kt">int</span> <span class="n">M</span><span class="o">=</span><span class="mi">1005</span><span class="p">;</span>
@@ -220,7 +220,7 @@
 <p><strong>简要题解</strong></p>
 <p>显然可以用并查集维护各个朋友圈子的大小，答案最终为最大的圈子。</p>
 <p><strong>代码实现</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="k">const</span> <span class="kt">int</span> <span class="n">M</span><span class="o">=</span><span class="mi">1005</span><span class="p">;</span>

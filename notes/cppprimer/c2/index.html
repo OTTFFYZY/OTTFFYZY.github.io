@@ -121,7 +121,7 @@
     <div class="float-md-right">
       <span title="Lastmod: 2021-05-17. Published at: 2021-05-17.">
         
-          Published: 2021-05-17 Mon 21:07:47
+          Published: 2021-05-17 周一 21:07:47
         
       </span>
     </div>
@@ -223,25 +223,25 @@
 <p>有符号类型被赋予超出范围的值则结果是 undefined。</p>
 <h4 id="213-字面值常量">2.1.3 字面值常量</h4>
 <p>整型</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="mi">10</span>   <span class="c1">// 10 进制
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="mi">10</span>   <span class="c1">// 10 进制
 </span><span class="c1"></span><span class="mo">020</span>  <span class="c1">// 8  进制
 </span><span class="c1"></span><span class="mh">0x3f</span> <span class="c1">// 16 进制
 </span></code></pre></div><p>严格来说 10 进制字面值不会出现负数，<code>-</code>不属于字面值。</p>
 <p>10 进制字面值的类型是 int，long，long long 中尺寸最小的。</p>
 <p>8、16 进制字面值的类型是 int，unsigned int，long，unsigned long，long long，unsigned long long 中尺寸最小的。</p>
 <p>浮点数字面值默认是 double 类型</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="mf">3.1415</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="mf">3.1415</span>
 <span class="mf">3.1415E0</span>
 <span class="mf">0.</span>
 <span class="mf">.33</span>
 <span class="mf">0e0</span>
 </code></pre></div><p>char 型字面值</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="sc">&#39;a&#39;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="sc">&#39;a&#39;</span>
 </code></pre></div><p>字符串字面值其实是一个常量字符构成的数组</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="s">&#34;Hello, World!&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="s">&#34;Hello, World!&#34;</span>
 </code></pre></div><p>编译器会在每个字符串结尾增加 <code>'\0'</code> 因此字符串字面值的实际长度要比内容多 1。</p>
 <p>两个字符串字面值紧邻且仅由空格、缩进或换行符分隔则视为一个整体。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;abc&#34;</span> <span class="s">&#34;def&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;abc&#34;</span> <span class="s">&#34;def&#34;</span>
         <span class="s">&#34;hhhhhhhhhhhh&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 </code></pre></div><h5 id="转义">转义</h5>
 <p>不可打印字符 <code>nonprintable</code> 字符和 C++ 中有特殊含义的字符不能直接使用，此时需要用到转义序列 <code>escape sequence</code>。转义序列均以反斜线开始。</p>
@@ -303,12 +303,12 @@
 <p><code>\x</code> 后面跟 1 个或多个 16 进制数，<code>\</code> 后跟 1 到 3 个 8 进制数。8 进制数超过 3 个后续部分视作下一个数，16进制数则是 <code>\x</code> 后的所有数字一起处理，过长则可能会报错。</p>
 <h5 id="指定字面值类型">指定字面值类型</h5>
 <p>字符和字符串字面值</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">u</span><span class="err">&#39;&#39;</span>    <span class="c1">// char16_t
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">u</span><span class="err">&#39;&#39;</span>    <span class="c1">// char16_t
 </span><span class="c1"></span><span class="n">U</span><span class="err">&#39;&#39;</span>    <span class="c1">// char32_t
 </span><span class="c1"></span><span class="n">L</span><span class="err">&#39;&#39;</span>    <span class="c1">// wchar_t
 </span><span class="c1"></span><span class="sa">u8</span><span class="s">&#34;&#34;</span>   <span class="c1">// char UTF-8 只用于字符串字面常量 
 </span></code></pre></div><p>整形</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="mi">1u</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="mi">1u</span>
 <span class="mi">1U</span> <span class="c1">// unsigned
 </span><span class="c1"></span><span class="mi">1l</span>
 <span class="mi">1L</span> <span class="c1">// long
@@ -316,7 +316,7 @@
 <span class="mi">1LL</span> <span class="c1">// long long
 </span><span class="c1"></span><span class="mi">1ULL</span> <span class="c1">// unsigned long long
 </span></code></pre></div><p>浮点</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="mf">1.5f</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="mf">1.5f</span>
 <span class="mf">1.5F</span> <span class="c1">// float
 </span><span class="c1"></span><span class="mf">1.5</span><span class="n">L</span>
 <span class="mf">1e5L</span> <span class="c1">// long double
@@ -329,13 +329,13 @@
 <p>类型说明符 <code>type specifier</code></p>
 <p>注意变量的初始化和赋值时完全不同的。</p>
 <p>注意 C++11 我们可以使用以下 4 种方式初始化</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 <span class="kt">int</span> <span class="n">c</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
 <span class="kt">int</span> <span class="nf">d</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </code></pre></div><p>这里使用花括号进行初始化的方式成为列表初始化。</p>
 <p>使用列表初始化的方式初始化内置类型变量时，如果初始值存在丢失信息的风险，则编译器会报错。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
@@ -347,7 +347,7 @@
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span>g++ list_init.cpp -o list_init
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span>g++ list_init.cpp -o list_init
 list_init.cpp: In function &#39;int main()&#39;:
 list_init.cpp:8:8: warning: narrowing conversion of &#39;db&#39; from &#39;double&#39; to &#39;int&#39; [-Wnarrowing]
     8 <span class="p">|</span>  int c{db};
@@ -364,15 +364,15 @@ list_init.cpp:9:9: warning: narrowing conversion of &#39;db&#39; from &#39;doubl
 <p>为了支持分离式编译，C++ 将声明 <code>declaration</code> 和定义 <code>definition</code> 分开。</p>
 <p>声明使得名字为程序所致，一个程序想使用别处定义的名字必须包含其声明。定义负责创建与名字关联的实体。</p>
 <p>如果只想声明而不是定义一个变量则需要 extern 关键字，且不要显示的初始化变量。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">extern</span> <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">extern</span> <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
 </code></pre></div><p>举个例子</p>
 <p>A.h</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">extern</span> <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">extern</span> <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
 </code></pre></div><p>A.cpp</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&#34;A.h&#34;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&#34;A.h&#34;</span><span class="cp">
 </span><span class="cp"></span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 </code></pre></div><p>B.cpp</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp">#include</span> <span class="cpf">&#34;A.h&#34;</span><span class="cp">
 </span><span class="cp"></span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
@@ -380,7 +380,7 @@ list_init.cpp:9:9: warning: narrowing conversion of &#39;db&#39; from &#39;doubl
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><p>则</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span> g++ A.cpp B.cpp -o B
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span> g++ A.cpp B.cpp -o B
 <span class="p">&gt;</span> B
 <span class="p">&gt;</span> 10
 </code></pre></div><p>C++ 是一种静态类型 <code>statically typed</code> 语言。在编译阶段会进行类型检查 <code>type checking</code>。</p>
@@ -388,7 +388,7 @@ list_init.cpp:9:9: warning: narrowing conversion of &#39;db&#39; from &#39;doubl
 <p>标识符 <code>identifier</code></p>
 <p>C++ 关键字和操作符替代名不能作为标识符。</p>
 <p>用户自定义的标识符种不能连续出现 2 个下划线，不能以下划线紧邻大写字母开头，函数体外的标识符不能以下划线开头。（g++ 如下文件编译并未报错？）</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">_a</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">_a</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">_A</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
@@ -398,13 +398,13 @@ list_init.cpp:9:9: warning: narrowing conversion of &#39;db&#39; from &#39;doubl
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><h5 id="关键字">关键字</h5>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">alignas</span> <span class="k">alignof</span> <span class="k">asm</span> <span class="k">auto</span> <span class="kt">bool</span> <span class="k">break</span> <span class="k">case</span> <span class="k">catch</span> <span class="kt">char</span> <span class="kt">char16_t</span> <span class="kt">char32_t</span> <span class="k">class</span> <span class="nc">const</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">alignas</span> <span class="k">alignof</span> <span class="k">asm</span> <span class="k">auto</span> <span class="kt">bool</span> <span class="k">break</span> <span class="k">case</span> <span class="k">catch</span> <span class="kt">char</span> <span class="kt">char16_t</span> <span class="kt">char32_t</span> <span class="k">class</span> <span class="nc">const</span>
 <span class="k">constexpr</span> <span class="k">const_cast</span> <span class="k">continue</span> <span class="k">decltype</span> <span class="k">default</span> <span class="k">delete</span> <span class="k">do</span> <span class="kt">double</span> <span class="k">dynamic_cast</span> <span class="k">else</span> 
 <span class="k">enum</span>  <span class="nc">explicit</span> <span class="k">export</span> <span class="k">extern</span> <span class="nb">false</span> <span class="kt">float</span> <span class="k">for</span> <span class="k">friend</span> <span class="k">goto</span> <span class="k">if</span> <span class="kr">inline</span> <span class="kt">int</span> <span class="kt">long</span> 
 <span class="k">mutable</span> <span class="k">namespace</span> <span class="k">new</span> <span class="k">noexcept</span> <span class="k">nullptr</span> <span class="k">operator</span> <span class="k">private</span> <span class="k">protected</span> <span class="k">public</span> <span class="k">register</span>
 <span class="k">reinterpret_cast</span> <span class="k">return</span> <span class="kt">short</span> <span class="kt">signed</span> <span class="k">sizeof</span> <span class="k">static</span> <span class="k">static_assert</span> <span class="k">static_cast</span> <span class="k">struct</span> <span class="nc">switch</span> <span class="k">template</span> <span class="k">this</span> <span class="k">thread_local</span> <span class="k">throw</span> <span class="nb">true</span> <span class="k">try</span> <span class="k">typedef</span> <span class="k">typeid</span> <span class="k">typename</span> <span class="k">union</span> <span class="nc">unsigned</span> <span class="k">using</span> <span class="k">virtual</span> <span class="kt">void</span> <span class="k">volatile</span> <span class="kt">wchar_t</span> <span class="k">while</span>
 </code></pre></div><h5 id="操作符替代名">操作符替代名</h5>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">and</span> <span class="n">bitand</span> <span class="n">compl</span> <span class="n">not_eq</span> <span class="n">or_eq</span> <span class="n">xor_eq</span> <span class="n">and_eq</span> <span class="n">bitor</span> <span class="n">not</span> <span class="n">or</span> <span class="n">xor</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">and</span> <span class="n">bitand</span> <span class="n">compl</span> <span class="n">not_eq</span> <span class="n">or_eq</span> <span class="n">xor_eq</span> <span class="n">and_eq</span> <span class="n">bitor</span> <span class="n">not</span> <span class="n">or</span> <span class="n">xor</span>
 </code></pre></div><h4 id="224-名字的作用域">2.2.4 名字的作用域</h4>
 <p>作用域 <code>scope</code> C++ 大多数作用域都以花括号分隔。</p>
 <p>同一名字在不同作用域可能指向不同的实体。名字的有效区域始于名字的声明语句，到声明语句所在作用域结束为止。</p>
@@ -428,22 +428,22 @@ list_init.cpp:9:9: warning: narrowing conversion of &#39;db&#39; from &#39;doubl
 <p><code>void*</code> 是一个特殊指针，可以用于存放任意对象地址。不能直接操作 void* 指针所指的对象。</p>
 <h5 id="指针的引用">指针的引用</h5>
 <p>引用不是对象，因此不存在指向引用的指针。但是指针是对象，因此可以有指针的引用。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>
 <span class="kt">int</span> <span class="o">*&amp;</span><span class="n">r</span> <span class="o">=</span> <span class="n">p</span><span class="p">;</span>
 </code></pre></div><p>按照从右向左顺序阅读有助于理解复杂的类型。最接近变量名的造成最直接的影响。</p>
 <h3 id="24-const-限定符">2.4 const 限定符</h3>
 <p>非 const 对象可以初始化 const 对象。const 对象必须初始化。</p>
 <p>默认状态下，const 对象仅在文件内有效。</p>
 <p>当以编译时初始化的方式定义一个 const 对象时，编译器将在编译过程中把用到该变量的地方都替换成对应的值。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">const</span> <span class="kt">int</span> <span class="n">M</span> <span class="o">=</span> <span class="mi">1005</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">const</span> <span class="kt">int</span> <span class="n">M</span> <span class="o">=</span> <span class="mi">1005</span><span class="p">;</span>
 </code></pre></div><p>可以在声明与定义前都加上 <code>extern</code> 使其可以在其他文件访问。（实测声明加就可以了？）</p>
 <p>A.h</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">extern</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">extern</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
 </code></pre></div><p>A.cpp</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&#34;A.h&#34;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&#34;A.h&#34;</span><span class="cp">
 </span><span class="cp"></span><span class="k">const</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 </code></pre></div><p>B.cpp</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp">#include</span> <span class="cpf">&#34;A.h&#34;</span><span class="cp">
 </span><span class="cp"></span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
@@ -451,16 +451,16 @@ list_init.cpp:9:9: warning: narrowing conversion of &#39;db&#39; from &#39;doubl
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><p>则</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span> g++ A.cpp B.cpp -o B
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span> g++ A.cpp B.cpp -o B
 <span class="p">&gt;</span> B
 <span class="p">&gt;</span> 10
 </code></pre></div><h4 id="241-const-的引用">2.4.1 const 的引用</h4>
 <p>我们常说的常量引用其实应该被称作对 const 的引用，因为引用本身不是对象，所以不存在让其恒定不变的说法。另一个角度引用绑定的对象是不能变化的，因此又可以视所有引用为常量。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">const</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">const</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">ra</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// 对 const 的引用
 </span><span class="c1">// int &amp;r = a;     // 错误 不能用非常量引用绑定 const 对象 
 </span></code></pre></div><p>注意当常量引用绑定到非常量，其他形式是可以修改常量引用绑定的值的</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
   <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
   <span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">crb</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
   <span class="c1">// crb *= 3; // 直接修改是不行的
@@ -469,10 +469,10 @@ list_init.cpp:9:9: warning: narrowing conversion of &#39;db&#39; from &#39;doubl
   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;b = &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">crb</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span> a = 15
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span> a = 15
 <span class="p">&gt;</span> b = 15
 </code></pre></div><p>但当常量引用绑定到非常量对象或字面值，可能会生成临时量 <code>temporary</code>。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
   <span class="kt">double</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">5.5</span><span class="p">;</span>
   <span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">crb</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// crb 绑定到了一个临时对象
 </span><span class="c1"></span>  <span class="n">a</span> <span class="o">*=</span> <span class="mi">3</span><span class="p">;</span>
@@ -480,11 +480,11 @@ list_init.cpp:9:9: warning: narrowing conversion of &#39;db&#39; from &#39;doubl
   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;b = &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">crb</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span> a = 16.5
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span> a = 16.5
 <span class="p">&gt;</span> b = 5
 </code></pre></div><h4 id="242-指针和-const">2.4.2 指针和 const</h4>
 <p>指向常量的指针 <code>pointer to const</code> 不能用于改变其所指对象的值，但可以改变指向的对象。注意指向常量的指针指向的对象可以是非常量，行为将和常量引用类似。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
   <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
   <span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="n">cpa</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">;</span>
   <span class="n">a</span> <span class="o">*=</span> <span class="mi">3</span><span class="p">;</span>
@@ -494,14 +494,14 @@ list_init.cpp:9:9: warning: narrowing conversion of &#39;db&#39; from &#39;doubl
   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;cpa = &#34;</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">cpa</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">a = 15
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd">a = 15
 cpa = 15
 cpa = 10
 </code></pre></div><p>常量指针 <code>const pointer</code> 不能改变指向的对象，必须初始化，但可以改变所指向的内容。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 <span class="kt">int</span> <span class="o">*</span><span class="k">const</span> <span class="n">b</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">;</span>
 </code></pre></div><p>当然也存在指向常量的常量指针</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="k">const</span> <span class="n">b</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="k">const</span> <span class="n">b</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">;</span>
 </code></pre></div><h4 id="243-顶层-const">2.4.3 顶层 const</h4>
 <p>顶层 const <code>top-level const</code> 表示指针本身是个常量。</p>
 <p>底层 const <code>low-level const</code> 表示指针所指对象是常量。</p>
@@ -512,15 +512,15 @@ cpa = 10
 <p>字面值属于常量表达式，常量表达式初始化的 const 对象也是常量表达式。</p>
 <p>一个对象是不是常量表达式由其数据类型和初始值共同决定。</p>
 <p>C++ 11 引入 constexpr 让编译器验证一个变量的值是否是常量表达式。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">f</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">5</span><span class="p">;</span> <span class="p">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">f</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">5</span><span class="p">;</span> <span class="p">}</span>
 <span class="k">constexpr</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 <span class="k">constexpr</span> <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">f</span><span class="p">();</span>
 </code></pre></div><p>这种情况编译器会给出错误</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span> error: <span class="k">call</span> to non-&#39;constexpr&#39; function &#39;int f()&#39;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span> error: <span class="k">call</span> to non-&#39;constexpr&#39; function &#39;int f()&#39;
     8 <span class="p">|</span> constexpr int b = f();
       <span class="p">|</span>                   ~<span class="se">^~</span>
 </code></pre></div><p>需要将 f 也增加 constexpr 则可通过编译。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">constexpr</span> <span class="kt">int</span> <span class="nf">f</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">5</span><span class="p">;</span> <span class="p">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">constexpr</span> <span class="kt">int</span> <span class="nf">f</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">5</span><span class="p">;</span> <span class="p">}</span>
 <span class="k">constexpr</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 <span class="k">constexpr</span> <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">f</span><span class="p">();</span>
 </code></pre></div><h5 id="字面值类型">字面值类型</h5>
@@ -528,18 +528,18 @@ cpa = 10
 <p>尽管指针和引用能定义成 constexpr 但初值受严格限制。一个 constexpr 的指针的初值必须是 nullptr、0 或者某个固定地址中的对象（函数体中定义的变量一般不是存放于固定地址，而所有定义在函数体外的变量地址固定不变）。</p>
 <h5 id="指针和-constexpr">指针和 constexpr</h5>
 <p>constexpr 声明中定义的指针，限定符只与指针本身有效，与所指对象无关。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">constexpr</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">constexpr</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="k">constexpr</span> <span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="n">pi</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span> <span class="c1">// 指向常量的常量指针
 </span><span class="c1"></span><span class="k">constexpr</span> <span class="kt">int</span> <span class="o">*</span><span class="n">pj</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">j</span><span class="p">;</span>       <span class="c1">// 常量指针
 </span></code></pre></div><h3 id="25-处理类型">2.5 处理类型</h3>
 <h4 id="251-类型别名">2.5.1 类型别名</h4>
 <p>类型别名 <code>type alias</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">typedef</span> <span class="kt">double</span> <span class="n">db</span><span class="p">;</span>       <span class="c1">// db 是 double 的别名
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">typedef</span> <span class="kt">double</span> <span class="n">db</span><span class="p">;</span>       <span class="c1">// db 是 double 的别名
 </span><span class="c1"></span><span class="k">typedef</span> <span class="kt">double</span> <span class="n">db</span><span class="p">,</span> <span class="o">*</span><span class="n">pdb</span><span class="p">;</span> <span class="c1">// pdb 是 double* 的别名
 </span></code></pre></div><p>别名声明 <code>alias declaration</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">using</span> <span class="n">db</span> <span class="o">=</span> <span class="kt">double</span><span class="p">;</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">using</span> <span class="n">db</span> <span class="o">=</span> <span class="kt">double</span><span class="p">;</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">;</span>
 <span class="k">using</span> <span class="n">pi</span> <span class="o">=</span> <span class="kt">int</span><span class="o">*</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
@@ -550,7 +550,7 @@ cpa = 10
 <span class="p">}</span>
 </code></pre></div><h4 id="指针常量和类型别名">指针、常量和类型别名</h4>
 <p>注意尽量不要用类型别名指代符合类型或者常量。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">typedef</span> <span class="kt">char</span> <span class="o">*</span><span class="n">pc</span><span class="p">;</span> <span class="c1">// 指向 char 的指针
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">typedef</span> <span class="kt">char</span> <span class="o">*</span><span class="n">pc</span><span class="p">;</span> <span class="c1">// 指向 char 的指针
 </span><span class="c1"></span><span class="k">const</span> <span class="n">pc</span> <span class="n">cstr</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="c1">// 指向 char 的常量指针，并非指向常量字符的指针！
 </span><span class="c1"></span>                  <span class="c1">// 不能在这里直接将别名展开为 const char *cstr
 </span><span class="c1"></span>                  <span class="c1">// 类型别名的部分需要视作一个整体
@@ -558,14 +558,14 @@ cpa = 10
 </span></code></pre></div><h4 id="252-auto-类型说明符">2.5.2 auto 类型说明符</h4>
 <p><code>auto</code> 可以通过变量的初始值推算变量的类型。</p>
 <p>一条 auto 语句可以声明多个变量，但其基础数据类型必须一致。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">auto</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">auto</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
 <span class="c1">// auto sz = 0, pi = 3.1415; // 类型不同，错误
 </span></code></pre></div><p>auto 推断的值可能和初始值类型不同。</p>
 <p>auto 一般会忽略顶层 const 而保留底层 const。</p>
 <p>所以需要顶层 const 时需要</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">const</span> <span class="k">auto</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">const</span> <span class="k">auto</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
 </code></pre></div><p>auto 引用会保留顶层 const</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 <span class="k">const</span> <span class="kt">int</span> <span class="n">ca</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 <span class="k">auto</span> <span class="n">aa</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
 <span class="k">auto</span> <span class="n">aca</span> <span class="o">=</span> <span class="n">ca</span><span class="p">;</span>
@@ -584,19 +584,19 @@ cpa = 10
 <span class="p">}</span>
 </code></pre></div><h4 id="253-decltype-类型指示符">2.5.3 decltype 类型指示符</h4>
 <p>有时我们希望从表达式推断出要定义变量的类型，但又不想用表达式的值初始化变量此时可以用 decltype。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">decltype</span><span class="p">(</span><span class="n">f</span><span class="p">())</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span> <span class="c1">// sum 的类型就是 f 的返回类型
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">decltype</span><span class="p">(</span><span class="n">f</span><span class="p">())</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span> <span class="c1">// sum 的类型就是 f 的返回类型
 </span></code></pre></div><p>编译器并不调用 f 而是使用假如调用发生时的返回类型。</p>
 <p>decltype 会保留顶层 const 和引用。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">const</span> <span class="kt">int</span> <span class="n">ca</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">cb</span> <span class="o">=</span> <span class="n">ca</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">const</span> <span class="kt">int</span> <span class="n">ca</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">cb</span> <span class="o">=</span> <span class="n">ca</span><span class="p">;</span>
 <span class="k">decltype</span><span class="p">(</span><span class="n">ca</span><span class="p">)</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// x 是 const int
 </span><span class="c1"></span><span class="k">decltype</span><span class="p">(</span><span class="n">cb</span><span class="p">)</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span> <span class="c1">// y 是 const int&amp;
 </span></code></pre></div><h5 id="decltype-和引用">decltype 和引用</h5>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">r</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
 <span class="k">decltype</span><span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="mi">0</span><span class="p">)</span> <span class="n">b</span><span class="p">;</span>  <span class="c1">// b 是 int
 </span><span class="c1"></span><span class="k">decltype</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="n">c</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="c1">// 这里 c 是 int&amp; 因此必须初始化
 </span></code></pre></div><p>注意表达式内容是解引用操作时，decltype 会得到引用类型。</p>
 <p>注意多加一层括号 decltype 可能会得到不同的结果。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 <span class="k">decltype</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="n">a</span><span class="p">;</span> <span class="c1">// int
 </span><span class="c1"></span><span class="k">decltype</span><span class="p">((</span><span class="n">i</span><span class="p">))</span> <span class="n">b</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="c1">// int&amp;
 </span></code></pre></div><p>多加括号会将变量视作表达式。因为变量是一种可以作为左值的特殊表达式，因此会得到引用类型。</p>
@@ -609,7 +609,7 @@ cpa = 10
 <p>预处理器 <code>preprocessor</code> 是在编译之前执行的程序，其中一项功能就是将 <code>#include</code> 标记指定的文件内容替换 <code>#include</code>。</p>
 <p>另一项功能是头文件保护符 <code>header guard</code>。</p>
 <p>A.h</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#ifndef A_H
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#ifndef A_H
 </span><span class="cp">#define A_H
 </span><span class="cp"></span>
 <span class="p">...</span>

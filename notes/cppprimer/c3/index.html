@@ -121,7 +121,7 @@
     <div class="float-md-right">
       <span title="Lastmod: 2021-05-20. Published at: 2021-05-20.">
         
-          Published: 2021-05-20 Thu 23:32:08
+          Published: 2021-05-20 周四 23:32:08
         
       </span>
     </div>
@@ -134,11 +134,11 @@
       <h2 id="第-3-章-字符串向量和数组">第 3 章 字符串、向量和数组</h2>
 <h3 id="31-命名空间的-using-声明">3.1 命名空间的 using 声明</h3>
 <p>using 声明 <code>using declaration</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">using</span> <span class="n">namesapce</span><span class="o">::</span><span class="n">name</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">using</span> <span class="n">namesapce</span><span class="o">::</span><span class="n">name</span><span class="p">;</span>
 </code></pre></div><p>头文件不应包含 using 声明。因为头文件会被包含到其他文件中去，使用 using 声明则可能带来名字冲突。</p>
 <h3 id="32-标准库类型-string">3.2 标准库类型 string</h3>
 <h4 id="321-定义和初始化-string-对象">3.2.1 定义和初始化 string 对象</h4>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp">#include</span> <span class="cpf">&lt;cassert&gt;</span><span class="cp">
 </span><span class="cp">#include</span> <span class="cpf">&lt;iterator&gt;</span><span class="cp">
 </span><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
@@ -217,7 +217,7 @@
     <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span> <span class="c1">// &#34;AAA&#34;
 </span><span class="c1"></span>  <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-txt" data-lang="txt">====
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt">====
 Exemplar
 Mutandis
 C-style
@@ -228,7 +228,7 @@ C++ by example
 C-style
 AAA
 </code></pre></div><p>拷贝构造与直接构造</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">A</span> <span class="p">{</span>
@@ -274,7 +274,7 @@ AAA
 
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-txt" data-lang="txt">normal init
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt">normal init
 --------------------------------------------------
 copy init
 --------------------------------------------------
@@ -288,7 +288,7 @@ normal init
 --------------------------------------------------
 </code></pre></div><h4 id="322-string-对象上的操作">3.2.2 string 对象上的操作</h4>
 <h4 id="323-处理-string-对象中的字符">3.2.3 处理 string 对象中的字符</h4>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;cctype&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;cctype&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="n">isalnum</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c1">// 字母或数字
 </span><span class="c1"></span><span class="n">isalpha</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c1">// 字母
 </span><span class="c1"></span><span class="n">iscntrl</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c1">// 控制字符
@@ -315,7 +315,7 @@ normal init
 <h3 id="35-数组">3.5 数组</h3>
 <p>定义数组不能使用 auto 关键字推断基本类型。</p>
 <p>关于数组的维度</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 <span class="c1">// int a[i]; 
 </span><span class="c1">// array bound is not an integer constant before &#39;]&#39; token
 </span><span class="c1"></span><span class="k">const</span> <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
@@ -324,13 +324,13 @@ normal init
 <span class="c1">// int c[k]; 
 </span><span class="c1">// size of array &#39;c&#39; is not an integral constant-expression
 </span></code></pre></div><p>指向数组的指针和数组的引用</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
 <span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">arr</span><span class="p">;</span>
 <span class="kt">int</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">r</span><span class="p">)[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">;</span>
 </code></pre></div><p>数组大小一般可以使用无符号 size_t 类型，它定义在 cstddef 中。</p>
 <h4 id="353-指针和数组">3.5.3 指针和数组</h4>
 <p>很多时候编译器会自动将数组名替换为指向数组首元素的指针。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">arr</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">};</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">arr</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">};</span>
 <span class="k">auto</span> <span class="n">pa</span> <span class="o">=</span> <span class="n">arr</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
@@ -338,15 +338,15 @@ normal init
 </span><span class="c1"></span>	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><p>但是 decltype 行为会不同，会得到数组类型。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">arr</span><span class="p">[]</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">};</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">arr</span><span class="p">[]</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">};</span>
 <span class="k">decltype</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="n">brr</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">};</span>
 </code></pre></div><p>可以用 begin 和 end 得到数组的头指针和尾后指针。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">arr</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">};</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">arr</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">};</span>
 <span class="kt">int</span> <span class="o">*</span><span class="n">ih</span> <span class="o">=</span> <span class="n">begin</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
 <span class="kt">int</span> <span class="o">*</span><span class="n">it</span> <span class="o">=</span> <span class="n">end</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
 </code></pre></div><p>两个指针相减的结果类型是 ptrdiff_t，这个类型同样定义在 cstddef 头文件中。</p>
 <p>注意内置的下标运算符可以支持负值</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="k">const</span> <span class="kt">int</span> <span class="n">M</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span>
@@ -361,12 +361,12 @@ normal init
 </span><span class="c1"></span>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><h4 id="355-与旧代码的接口">3.5.5 与旧代码的接口</h4>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">string</span> <span class="n">s</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">string</span> <span class="n">s</span><span class="p">;</span>
 <span class="n">s</span><span class="p">.</span><span class="n">c_str</span><span class="p">();</span> <span class="c1">// 注意这个函数的返回值，当 s 变化时可能会变化
 </span></code></pre></div><h3 id="36-多维数组">3.6 多维数组</h3>
 <p>严格来说 C++ 没有多维数组，只有数组的数组。</p>
 <p>范围 for 可以用于多维数组</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">];</span>
@@ -387,7 +387,7 @@ normal init
 <span class="p">}</span>
 </code></pre></div><p>注意 row 必须是引用，否则将被视为一个指针<code>int*</code>，从而内层循环不合法。</p>
 <p>或者也可以写作</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++">  <span class="k">for</span> <span class="p">(</span><span class="k">decltype</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="nl">row</span> <span class="p">:</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++">  <span class="k">for</span> <span class="p">(</span><span class="k">decltype</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="nl">row</span> <span class="p">:</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
   	<span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">item</span> <span class="p">:</span> <span class="n">row</span><span class="p">)</span> 
   	  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">item</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39; &#39;</span><span class="p">;</span>
   	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>

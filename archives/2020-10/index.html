@@ -149,56 +149,6 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
-      <a href="/tpls/ds/bitset/">
-        <div class="h2 mt-1 mb-1">[模板] bitset &amp; 位图</div>
-      </a>
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/templates' class="muted-link">
-  <span class="Label Label--gray-darker">Templates</span>
-</a>
-
-
-
-<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
-  <span class="Label Label--gray-darker">数据结构</span>
-</a>
-
-<a href='/templates/stl' class="muted-link">
-  <span class="Label Label--gray-darker">STL</span>
-</a>
-
-
-
-
-
-<a href='/tags/bitset' class="muted-link">
-  <span class="Label Label--gray">bitset</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        <span>2020-10-22</span>
-      </div>
-    </div>
-  </div>
-  <div class="text-gray">
-    
-    std::bitset #include &lt;bitset&gt; bitset&lt;M&gt; bs; bs[i]; // access bs.test(i); // access bs.count(i); // count 1 bs.size(); bs.any(); bs.none(); bs.all(); // cpp11 bs.set(); bs.set(i); // set i-th bit to 1 bs.reset(); bs.reset(i); bs.flip(); bs.flip(i); bs.to_string(); bs.to_ulong(); bs.to_ullong(); // cpp11 cout&lt;&lt;bs&lt;&lt;endl; 手写位图 Bitmap template&lt;size_t M&gt; struct BitMap { typedef unsigned int UI; UI map[M/32+1]; void reset() { memset(map,0,sizeof(map)); } void set() { memset(map,0xff,sizeof(map)); } void set(int i) { map[i&gt;&gt;5]|=1U&lt;&lt;(i&amp;31); } void reset(int i) { map[i&gt;&gt;5]&amp;=~(1U&lt;&lt;(i&amp;31)); } void flip(int i) { map[i&gt;&gt;5]^=1U&lt;&lt;(i&amp;31); } bool test(int i) { return map[i&gt;&gt;5]&amp;(1U&lt;&lt;(i&amp;31)); } };
-    <a class="muted-link" href="/tpls/ds/bitset/">…</a>
-  </div>
-</div>
-
-  
-    
-    
-<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
-  <div class="Subhead mb-2">
-    <div class="Subhead-heading">
       <a href="/tpls/others/checker/">
         <div class="h2 mt-1 mb-1">[模板] 对拍程序</div>
       </a>
@@ -230,7 +180,7 @@
   </div>
   <div class="text-gray">
     
-    对拍程序 from os import system tc=0 while True: system(&#34;python data.py &gt; data.in&#34;) system(&#34;std.exe &lt; data.in &gt; std.out&#34;) system(&#34;my.exe &lt; data.in &gt; my.out&#34;) # system(&#34;diff std.out my.out &gt; diff.out&#34;): if system(&#34;fc std.out my.out &gt; diff.out&#34;): print(&#34;WA&#34;) break else: tc += 1 print(&#34;AC #%d&#34;%tc) print(&#34;-------------------- data.in --------------------&#34;) # system(&#34;cat data.in&#34;) system(&#34;type data.in&#34;) print(&#34;-------------------- std.out --------------------&#34;) system(&#34;type std.out&#34;) print(&#34;-------------------- my.out ---------------------&#34;) system(&#34;type my.out&#34;) #include &lt;bits/stdc++.h&gt; using namespace std; int main() { int tc=0; while(1) { system(&#34;data.exe &gt; data.in&#34;); // system(&#34;python data.py &gt; data.in&#34;); system(&#34;std.exe &lt; data.in &gt; std.out&#34;); system(&#34;my.exe &lt; data.in &gt; my.out&#34;); // system(&#34;diff std.out my.out &gt; diff.out&#34;): if(system(&#34;fc
+    对拍程序 from os import system tc=0 while True: system(&#34;python data.py &gt; data.in&#34;) system(&#34;std.exe &lt; data.in &gt; std.out&#34;) system(&#34;my.exe &lt; data.in &gt; my.out&#34;) # system(&#34;diff std.out my.out &gt; diff.out&#34;): if system(&#34;fc std.out my.out &gt; diff.out&#34;): print(&#34;WA&#34;) break else: tc += 1 print(&#34;AC #%d&#34;%tc) print(&#34;-------------------- data.in --------------------&#34;) # system(&#34;cat data.in&#34;) system(&#34;type data.in&#34;) print(&#34;-------------------- std.out --------------------&#34;) system(&#34;type std.out&#34;) print(&#34;-------------------- my.out ---------------------&#34;) system(&#34;type my.out&#34;) #include &lt;bits/stdc++.h&gt;using namespace std; int main() { int tc=0; while(1) { system(&#34;data.exe &gt; data.in&#34;); // system(&#34;python data.py &gt; data.in&#34;); system(&#34;std.exe &lt; data.in &gt; std.out&#34;); system(&#34;my.exe &lt; data.in &gt; my.out&#34;); // system(&#34;diff std.out my.out &gt; diff.out&#34;): if(system(&#34;fc std.out
     <a class="muted-link" href="/tpls/others/checker/">…</a>
   </div>
 </div>
@@ -276,7 +226,7 @@
   </div>
   <div class="text-gray">
     
-    树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // T must + - // id 1~n template&lt;typename T,size_t M,typename OpPlus=plus&lt;T&gt;,typename OpMinus=minus&lt;T&gt;&gt; struct BIT { static int lowbit(int x) { return x&amp;(-x); } static OpPlus opp; static OpMinus opm; static T tmp[M+1]; T tree[M+1]; // tree[i] -&gt; sum of [i-lowbit(i)+1,i] int n; void init(int n_) { n=n_; for(int i=1;i&lt;=n;i++) tree[i]=T(0); } void init(int n_,T v[]) // v[0 ~ n_-1] { n=n_; tmp[0]=T(0); for(int i=1;i&lt;=n;i++) tmp[i]=opp(tmp[i-1],v[i]); for(int i=1;i&lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(;p&lt;=n;p+=lowbit(p)) tree[p]=opp(tree[p],V); }
+    树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // T must + - // id 1~n template&lt;typename T,size_t M,typename OpPlus=plus&lt;T&gt;,typename OpMinus=minus&lt;T&gt;&gt; struct BIT { static int lowbit(int x) { return x&amp;(-x); } constexpr static OpPlus opp{}; constexpr static OpMinus opm{}; static T tmp[M+1]; T tree[M+1]; // tree[i] -&gt; sum of [i-lowbit(i)+1,i] int n; void init(int n_) { n=n_; for(int i=1;i&lt;=n;i++) tree[i]=T(0); } void init(int n_,T v[]) // v[0 ~ n_-1] { n=n_; tmp[0]=T(0); for(int i=1;i&lt;=n;i++) tmp[i]=opp(tmp[i-1],v[i]); for(int i=1;i&lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(;p&lt;=n;p+=lowbit(p))
     <a class="muted-link" href="/tpls/ds/bit/">…</a>
   </div>
 </div>
@@ -353,7 +303,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/notes" class="link-gray text-emphasized css-truncate-target"><span class="">Notes</span></a>
-      <span class="text-right Counter">19</span>
+      <span class="text-right Counter">20</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -392,18 +342,18 @@
     </a>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/templates/a" class="link-gray text-emphasized css-truncate-target"><span class="">A</span></a>
+      <span class="text-right Counter">2</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/hash" class="link-gray text-emphasized css-truncate-target"><span class="">Hash</span></a>
       <span class="text-right Counter">1</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
-      <a href="/templates/stl" class="link-gray text-emphasized css-truncate-target"><span class="">Stl</span></a>
-      <span class="text-right Counter">1</span>
-    </span>
-    
-    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e5%85%b6%e4%bb%96" class="link-gray text-emphasized css-truncate-target"><span class="">其他</span></a>
-      <span class="text-right Counter">4</span>
+      <span class="text-right Counter">3</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -413,7 +363,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/templates/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" class="link-gray text-emphasized css-truncate-target"><span class="">数据结构</span></a>
-      <span class="text-right Counter">7</span>
+      <span class="text-right Counter">6</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -468,11 +418,6 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/bit" class="link-gray text-emphasized css-truncate-target"><span class="">Bit</span></a>
-      <span class="text-right Counter">1</span>
-    </span>
-    
-    <span class="css-truncate no-wrap m-1 pl-1">
-      <a href="/tags/bitset" class="link-gray text-emphasized css-truncate-target"><span class="">Bitset</span></a>
       <span class="text-right Counter">1</span>
     </span>
     
@@ -603,7 +548,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/series/cpp-primer" class="link-gray text-emphasized css-truncate-target"><span class="">Cpp primer</span></a>
-      <span class="text-right Counter">13</span>
+      <span class="text-right Counter">14</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -638,12 +583,12 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-09" class="link-gray text-emphasized css-truncate-target"><span class="">2020 09</span></a>
-      <span class="text-right Counter">25</span>
+      <span class="text-right Counter">26</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2020-10" class="link-gray text-emphasized css-truncate-target"><span class="">2020 10</span></a>
-      <span class="text-right Counter">5</span>
+      <span class="text-right Counter">4</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -674,6 +619,11 @@
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2021-07" class="link-gray text-emphasized css-truncate-target"><span class="">2021 07</span></a>
       <span class="text-right Counter">5</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2021-08" class="link-gray text-emphasized css-truncate-target"><span class="">2021 08</span></a>
+      <span class="text-right Counter">1</span>
     </span>
     
   </div>

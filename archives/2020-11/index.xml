@@ -6,11 +6,7 @@
     <description>Recent content in 2020-11 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 18 Nov 2020 13:33:50 -0500</lastBuildDate>
-    
-	<atom:link href="https://ottffyzy.github.io/archives/2020-11/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 18 Nov 2020 13:33:50 -0500</lastBuildDate><atom:link href="https://ottffyzy.github.io/archives/2020-11/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[算法][图论] 约翰逊 Johnson 算法 全源最短路</title>
       <link>https://ottffyzy.github.io/algos/gt/johnson/</link>

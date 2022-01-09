@@ -121,7 +121,7 @@
     <div class="float-md-right">
       <span title="Lastmod: 2021-05-28. Published at: 2021-05-28.">
         
-          Published: 2021-05-28 Fri 11:50:51
+          Published: 2021-05-28 周五 11:50:51
         
       </span>
     </div>
@@ -139,7 +139,7 @@
 <p>主调函数 <code>calling function</code></p>
 <p>被调函数 <code>called function</code></p>
 <p>空形参列表可以是空的括号，或是 void</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f1</span><span class="p">()</span> <span class="p">{}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f1</span><span class="p">()</span> <span class="p">{}</span>
 <span class="kt">void</span> <span class="nf">f2</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{}</span>
 </code></pre></div><h4 id="611-局部对象">6.1.1 局部对象</h4>
 <p>C++ 中名字有作用域，对象有声明周期 <code>lifetime</code>。</p>
@@ -160,29 +160,29 @@
 <p>实参值被拷贝给形参时，实参被值传递 <code>passed by value</code> 或者函数被传值调用 <code>called by value</code>。</p>
 <h4 id="623-const-形参和实参">6.2.3 const 形参和实参</h4>
 <p>注意实参初始化形参时会忽略掉顶层 const，因此这时需要注意下列重载是不行的。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">i</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">i</span><span class="p">);</span>
 <span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">);</span>
 </code></pre></div><h4 id="624-数组形参">6.2.4 数组形参</h4>
 <p>注意因为数组不能拷贝，因此我们不能以值传递的方式使用数组参数，因为数组会被转换成指针，所以当我们为函数传递一个数组时，实际上传递的是指向数组首元素的指针。</p>
 <p>尽管不能以值传递的方式传递数组，但我们可以把参数形式写成类似数组的形式，下面三个形式是等价的。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span><span class="o">*</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span><span class="o">*</span><span class="p">);</span>
 <span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span><span class="p">[]);</span>
 <span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span><span class="p">[</span><span class="mi">10</span><span class="p">]);</span> <span class="c1">// 注意这个 10 只是期望大小，实际并不一定
 </span></code></pre></div><p>当我期待更改数组内容时使用下面的形式</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">);</span>
 </code></pre></div><h5 id="数组引用形参">数组引用形参</h5>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="kt">int</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">arr</span><span class="p">)[</span><span class="mi">10</span><span class="p">]);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="kt">int</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">arr</span><span class="p">)[</span><span class="mi">10</span><span class="p">]);</span>
 </code></pre></div><p>但注意，这种写法数组的维度是被限制死的。</p>
 <h5 id="传递多维数组">传递多维数组</h5>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">matrix</span><span class="p">)[</span><span class="mi">10</span><span class="p">],</span> <span class="kt">int</span> <span class="n">row</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">matrix</span><span class="p">)[</span><span class="mi">10</span><span class="p">],</span> <span class="kt">int</span> <span class="n">row</span><span class="p">);</span>
 <span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="kt">int</span> <span class="n">matrix</span><span class="p">[][</span><span class="mi">10</span><span class="p">],</span> <span class="kt">int</span> <span class="n">row</span><span class="p">);</span>
 </code></pre></div><h4 id="625-main处理命令行选项">6.2.5 main：处理命令行选项</h4>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="p">{}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span> <span class="p">{}</span>
 </code></pre></div><p>其中 argc 是程序接受到的参数个数</p>
 <p><code>argv[0]</code> 是程序名字或空字符串。</p>
 <h4 id="626-含有可变形参的函数">6.2.6 含有可变形参的函数</h4>
 <p>对于不定数量的参数，参数类型相同可以使用 initializer_list ，否则可以使用变长参数模板。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">initializer_list</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">lst</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">initializer_list</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">lst</span><span class="p">;</span>
 <span class="n">initializer_list</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">lst</span><span class="p">{</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">};</span>
 <span class="n">lst2</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
 <span class="n">lst2</span> <span class="o">=</span> <span class="n">lst</span>
@@ -191,13 +191,13 @@
 <span class="n">lst</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
 </code></pre></div><p>注意 initializer_list 中的元素是常量值。</p>
 <h5 id="省略符形参">省略符形参</h5>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">foo</span><span class="p">(</span><span class="n">parm_list</span><span class="p">,</span> <span class="p">...);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">foo</span><span class="p">(</span><span class="n">parm_list</span><span class="p">,</span> <span class="p">...);</span>
 <span class="kt">void</span> <span class="nf">foo</span><span class="p">(...);</span>
 </code></pre></div><p>这是为了 C++ 代码便于访问 C 代码设置的，这些代码使用了 varargs 的 C 标准库的功能。</p>
 <h3 id="63-返回类型和-return-语句">6.3 返回类型和 return 语句</h3>
 <h4 id="631-无返回值的函数">6.3.1 无返回值的函数</h4>
 <p>返回类型的是 void 的函数也可以使用带有表达式的 return 的语句，这时表达式必须是另一个返回 void 的函数。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f1</span><span class="p">()</span> <span class="p">{}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f1</span><span class="p">()</span> <span class="p">{}</span>
 
 <span class="kt">void</span> <span class="nf">f2</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">return</span> <span class="n">f1</span><span class="p">();</span>
@@ -218,22 +218,22 @@
 <p>可以使用列表初始化初始化返回值，与其他情况使用列表初始化相同。</p>
 <h5 id="主函数-main-的返回值">主函数 main 的返回值</h5>
 <p>为了使返回值与机器无关 cstdlib 中定义了</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">EXIT_FAILURE</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">EXIT_FAILURE</span><span class="p">;</span>
 <span class="n">EXIT_SUCCESS</span><span class="p">;</span>
 </code></pre></div><h4 id="633-返回数组指针">6.3.3 返回数组指针</h4>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">typedef</span> <span class="kt">int</span> <span class="n">arrT</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">typedef</span> <span class="kt">int</span> <span class="n">arrT</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
 <span class="c1">// 或
 </span><span class="c1"></span><span class="k">using</span> <span class="n">arrT</span> <span class="o">=</span> <span class="kt">int</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
 <span class="n">arrT</span><span class="o">*</span> <span class="nf">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">);</span>
 </code></pre></div><p>上述写法会好写一点</p>
 <p>也可以用下面的写法</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">))[</span><span class="mi">10</span><span class="p">];</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">))[</span><span class="mi">10</span><span class="p">];</span>
 </code></pre></div><h5 id="使用尾置返回类型">使用尾置返回类型</h5>
 <p>尾置返回类型 <code>trailing return type</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">auto</span> <span class="nf">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="p">)[</span><span class="mi">10</span><span class="p">];</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">auto</span> <span class="nf">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="p">)[</span><span class="mi">10</span><span class="p">];</span>
 </code></pre></div><h5 id="使用-decltype">使用 decltype</h5>
 <p>当我们知道函数返回的指针指向哪个数组时可以使用</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">odd</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">};</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">int</span> <span class="n">odd</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">};</span>
 <span class="kt">int</span> <span class="n">even</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">};</span>
 <span class="k">decltype</span><span class="p">(</span><span class="n">odd</span><span class="p">)</span> <span class="o">*</span><span class="n">arrPtr</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">?</span> <span class="o">&amp;</span><span class="nl">odd</span> <span class="p">:</span> <span class="o">&amp;</span><span class="n">even</span><span class="p">;</span>
@@ -242,23 +242,23 @@
 <p>同一作用域内几个函数名字相同但形参列表不同，我们称之为重载 <code>overloaded</code> 函数。</p>
 <p>main 函数不能重载。</p>
 <p>注意有时候形参看起来不一样，但实际是相同的。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">typedef</span> <span class="n">A</span> <span class="n">B</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">typedef</span> <span class="n">A</span> <span class="n">B</span><span class="p">;</span>
 <span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="n">A</span> <span class="n">a</span><span class="p">);</span>
 <span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="n">B</span> <span class="n">b</span><span class="p">);</span>
 </code></pre></div><p>注意不能重载参数只有顶层 const 的不同的函数</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="n">A</span> <span class="n">a</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="n">A</span> <span class="n">a</span><span class="p">);</span>
 <span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="k">const</span> <span class="n">A</span> <span class="n">a</span><span class="p">);</span>
 
 <span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="n">P</span><span class="o">*</span><span class="p">);</span>
 <span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="n">P</span><span class="o">*</span> <span class="k">const</span><span class="p">);</span>
 </code></pre></div><p>如下是正确的重载</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="n">A</span><span class="o">&amp;</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="n">A</span><span class="o">&amp;</span><span class="p">);</span>
 <span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="k">const</span> <span class="n">A</span><span class="o">&amp;</span><span class="p">);</span>
 <span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="n">A</span><span class="o">*</span><span class="p">);</span>
 <span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="k">const</span> <span class="n">A</span><span class="o">*</span><span class="p">);</span>
 </code></pre></div><p>编译器将通过实参是否是常量来判断调用哪个函数。</p>
 <p>const_cast 和重载</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">shorterString</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">s1</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">s2</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">shorterString</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">s1</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">s2</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="n">s1</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="n">s2</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">?</span> <span class="nl">s1</span> <span class="p">:</span> <span class="n">s2</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="n">string</span> <span class="o">&amp;</span><span class="n">shorterString</span><span class="p">(</span><span class="n">string</span> <span class="o">&amp;</span><span class="n">s1</span><span class="p">,</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">s2</span><span class="p">)</span> <span class="p">{</span>
@@ -280,7 +280,7 @@
 <p><code>default argument</code></p>
 <h5 id="默认实参声明">默认实参声明</h5>
 <p>注意多次声明同一函数是合法的，但在某给定作用域中，形参只能被赋予一次默认实参。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">,</span><span class="kt">int</span> <span class="n">c</span><span class="o">=</span><span class="mi">10</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">,</span><span class="kt">int</span> <span class="n">c</span><span class="o">=</span><span class="mi">10</span><span class="p">);</span>
 <span class="c1">// void f(int a,int b,int c=100); // 错误
 </span><span class="c1"></span><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="kt">int</span><span class="p">);</span> <span class="c1">// 正确
 </span></code></pre></div><p>注意局部变量不能作为默认实参，表达式能转换成形参类型则也可以作为默认实参。</p>
@@ -295,7 +295,7 @@
 <p>assert 是一个定义在 cassert 中的预处理宏。</p>
 <p>当定义了 <code>NDEBUG</code> 预处理变量时，cassert 什么都不会做，否则会检查表达式是否为真，如果为假则输出信息并终止程序执行。</p>
 <p>可以使用</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">__func__</span> <span class="c1">// 输出当前函数名字
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">__func__</span> <span class="c1">// 输出当前函数名字
 </span><span class="c1"></span><span class="n">__FILE__</span> <span class="c1">// 当前文件名
 </span><span class="c1"></span><span class="n">__LINE__</span> <span class="c1">// 当前行号
 </span><span class="c1"></span><span class="n">__TIME__</span> <span class="c1">// 文件编译时间
@@ -318,16 +318,16 @@
 <p>不同类型的函数指针之间不能转换。</p>
 <p>可以将 nullptr 或 0 赋值给函数指针。</p>
 <p>以下形式赋值函数指针是相同的。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">();</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">();</span>
 <span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">fp</span><span class="p">)()</span> <span class="o">=</span> <span class="n">f</span><span class="p">;</span>
 <span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">fp</span><span class="p">)()</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">f</span><span class="p">;</span>
 </code></pre></div><p>使用函数指针和使用函数名是类似的。</p>
 <h5 id="函数指针形参">函数指针形参</h5>
 <p>和数组类似，虽然不能定义函数类型的形参，但是可以定义指向函数的指针。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">,</span><span class="kt">bool</span> <span class="n">pf</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">,</span><span class="kt">int</span> <span class="n">d</span><span class="p">));</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">,</span><span class="kt">bool</span> <span class="n">pf</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">,</span><span class="kt">int</span> <span class="n">d</span><span class="p">));</span>
 <span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">,</span><span class="kt">bool</span> <span class="p">(</span><span class="o">*</span><span class="n">pf</span><span class="p">)(</span><span class="kt">int</span> <span class="n">c</span><span class="p">,</span><span class="kt">int</span> <span class="n">d</span><span class="p">));</span>
 </code></pre></div><p>也可以使用 decltype 得到函数类型，但是这时需要注意 decltype 得到的函数类型不会自动转换成指针类型。不过使用上看起来好像没什么问题，如下 4 种写法都是可以通过编译并运行的。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp"></span>
 <span class="kt">void</span> <span class="nf">fvoid</span><span class="p">()</span> <span class="p">{</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;do something</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span> <span class="p">}</span>
 
@@ -357,7 +357,7 @@
 <span class="p">}</span>
 </code></pre></div><h5 id="返回指向函数的指针">返回指向函数的指针</h5>
 <p>这里最好还是使用类型别名或者尾置返回类型。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp"></span>
 <span class="k">using</span> <span class="n">F</span> <span class="o">=</span> <span class="kt">void</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 <span class="k">using</span> <span class="n">PF</span> <span class="o">=</span> <span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="kt">void</span><span class="p">);</span>

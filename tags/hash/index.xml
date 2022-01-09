@@ -6,11 +6,7 @@
     <description>Recent content in Hash on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 28 Sep 2020 22:00:50 -0400</lastBuildDate>
-    
-	<atom:link href="https://ottffyzy.github.io/tags/hash/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 28 Sep 2020 22:00:50 -0400</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/hash/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[模板][Hash] 安全哈希函数</title>
       <link>https://ottffyzy.github.io/tpls/hash/safehash/</link>

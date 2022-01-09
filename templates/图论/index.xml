@@ -6,11 +6,7 @@
     <description>Recent content in 图论 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 25 Sep 2020 16:25:48 -0400</lastBuildDate>
-    
-	<atom:link href="https://ottffyzy.github.io/templates/%E5%9B%BE%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 25 Sep 2020 16:25:48 -0400</lastBuildDate><atom:link href="https://ottffyzy.github.io/templates/%E5%9B%BE%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[模板][图论] 克鲁斯卡尔 Kruskal</title>
       <link>https://ottffyzy.github.io/tpls/gt/kruskal/</link>

@@ -121,7 +121,7 @@
     <div class="float-md-right">
       <span title="Lastmod: 2021-06-21. Published at: 2021-06-21.">
         
-          Published: 2021-06-21 Mon 20:52:05
+          Published: 2021-06-21 周一 20:52:05
         
       </span>
     </div>
@@ -138,23 +138,23 @@
 <p>一般来说这些算法并不直接操作容器，二十遍历由两个迭代器指定的一个元素范围来进行操作。</p>
 <h3 id="102-初识泛型算法">10.2 初识泛型算法</h3>
 <h4 id="1021-只读算法">10.2.1 只读算法</h4>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">accumulate</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">cbegin</span><span class="p">(),</span> <span class="n">c</span><span class="p">.</span><span class="n">cend</span><span class="p">(),</span> <span class="n">init</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">accumulate</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">cbegin</span><span class="p">(),</span> <span class="n">c</span><span class="p">.</span><span class="n">cend</span><span class="p">(),</span> <span class="n">init</span><span class="p">);</span>
 </code></pre></div><h5 id="操作两个序列的算法">操作两个序列的算法</h5>
 <p>一般操作两个序列的算法，第二个序列只接受一个迭代器时，都假定第二个序列至少和第一个一样长。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">equal</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">cbegin</span><span class="p">(),</span> <span class="n">vec</span><span class="p">.</span><span class="n">cend</span><span class="p">(),</span> <span class="n">vec2</span><span class="p">.</span><span class="n">cbegin</span><span class="p">());</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">equal</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">cbegin</span><span class="p">(),</span> <span class="n">vec</span><span class="p">.</span><span class="n">cend</span><span class="p">(),</span> <span class="n">vec2</span><span class="p">.</span><span class="n">cbegin</span><span class="p">());</span>
 </code></pre></div><h4 id="1022-写容器元素的算法">10.2.2 写容器元素的算法</h4>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">fill</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">c</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">val</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">fill</span><span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">c</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">val</span><span class="p">);</span>
 </code></pre></div><h5 id="算法不检查写操作">算法不检查写操作</h5>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vec</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vec</span><span class="p">;</span>
 <span class="n">fill_n</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 </code></pre></div><p>如上例，fill_n 并不检查是否有足够空间写入 10 个元素，应当由程序员来保证。</p>
 <h5 id="介绍-back_inserter">介绍 back_inserter</h5>
 <p>可以使用插入迭代器 <code>insert iterator</code> 来保证有足够空间插入元素。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">fill_n</span><span class="p">(</span><span class="n">back_inserter</span><span class="p">(</span><span class="n">vec</span><span class="p">),</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">fill_n</span><span class="p">(</span><span class="n">back_inserter</span><span class="p">(</span><span class="n">vec</span><span class="p">),</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 </code></pre></div><h5 id="拷贝算法">拷贝算法</h5>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">auto</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">copy</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">vec2</span><span class="p">.</span><span class="n">begin</span><span class="p">());</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">auto</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">copy</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">vec2</span><span class="p">.</span><span class="n">begin</span><span class="p">());</span>
 </code></pre></div><p>返回递增之后的迭代器。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">replace</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">oldVal</span><span class="p">,</span> <span class="n">newVal</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">replace</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">oldVal</span><span class="p">,</span> <span class="n">newVal</span><span class="p">);</span>
 <span class="n">replace</span><span class="p">(</span><span class="n">vec</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">vec</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">back_inserter</span><span class="p">(</span><span class="n">vec2</span><span class="p">),</span> <span class="n">oldVal</span><span class="p">,</span> <span class="n">mewVal</span><span class="p">);</span>
 </code></pre></div><h4 id="1023-重排容器元素的算法">10.2.3 重排容器元素的算法</h4>
 <p>sort</p>
@@ -166,13 +166,13 @@
 <h4 id="1032-lambda-表达式">10.3.2 lambda 表达式</h4>
 <p>可以向一个算法传递任何类别的可调用对象 <code>callable object</code>。</p>
 <p>lambda 表达式 <code>lambda expression</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="p">[</span><span class="n">capture</span> <span class="n">list</span><span class="p">](</span><span class="n">parameter</span> <span class="n">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">return</span> <span class="n">type</span> <span class="p">{</span> <span class="n">function</span> <span class="n">body</span> <span class="p">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="p">[</span><span class="n">capture</span> <span class="n">list</span><span class="p">](</span><span class="n">parameter</span> <span class="n">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">return</span> <span class="n">type</span> <span class="p">{</span> <span class="n">function</span> <span class="n">body</span> <span class="p">}</span>
 </code></pre></div><h4 id="1033-lambda-捕获和返回">10.3.3 lambda 捕获和返回</h4>
 <h5 id="值捕获">值捕获</h5>
 <p>注意捕获发生在 lambda 创建时，而传入参数是调用时。</p>
 <h5 id="引用捕获">引用捕获</h5>
 <p>引用捕获的变量必须保证 lambda 被调用时还是存在的。</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">[]      // 空捕获列表
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">[]      // 空捕获列表
 [names] // 逗号分隔的捕获列表，名字前使用 &amp; 的是引用捕获
 [&amp;]     // 隐式捕获列表，所有变量采用引用捕获
 [=]     // 隐式值捕获
@@ -186,18 +186,18 @@
 <h5 id="指定-lambda-返回类型">指定 lambda 返回类型</h5>
 <p>当 lambda 只有一个返回值时，由于返回值类型是可推断的，可以不指定。</p>
 <p>当 lambda 不能推断返回值类型时可以指定返回值类型。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="p">[](</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="p">{</span> <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="n">i</span><span class="p">;</span> <span class="k">else</span> <span class="k">return</span> <span class="n">i</span><span class="p">;</span> <span class="p">}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="p">[](</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="p">{</span> <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="n">i</span><span class="p">;</span> <span class="k">else</span> <span class="k">return</span> <span class="n">i</span><span class="p">;</span> <span class="p">}</span>
 </code></pre></div><h4 id="1034-参数绑定">10.3.4 参数绑定</h4>
 <p>如果 lambda 的捕获列表为空，则通常可以用函数代替它。对于有捕获的 lambda 我们可以利用 bind</p>
 <h5 id="标准库-bind-函数">标准库 bind 函数</h5>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">auto</span> <span class="n">newCallable</span> <span class="o">=</span> <span class="n">bind</span><span class="p">(</span><span class="n">callable</span><span class="p">,</span> <span class="n">arg_list</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">auto</span> <span class="n">newCallable</span> <span class="o">=</span> <span class="n">bind</span><span class="p">(</span><span class="n">callable</span><span class="p">,</span> <span class="n">arg_list</span><span class="p">);</span>
 </code></pre></div><p>其中 arg list 可能包含形如 <code>_n</code> 的占位符，<code>n</code> 是某个整数，代表 newCallable 的第 n 个参数，下标从 1 开始。因此 newCallable 参数顺序与 callable 无关。</p>
 <p>将使用 arg_list 里面的参数调用 callable。</p>
 <p>要使用这些占位符需要</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="o">::</span><span class="n">placeholders</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="o">::</span><span class="n">placeholders</span><span class="p">;</span>
 </code></pre></div><h5 id="绑定引用参数">绑定引用参数</h5>
 <p>bind 会拷贝它的参数，但是如果我们希望以引用方式传递则需要 ref() 。</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="kt">void</span> <span class="nf">f</span><span class="p">(</span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
 <span class="kt">int</span> <span class="n">b</span><span class="p">;</span>
 <span class="k">auto</span> <span class="n">ff</span> <span class="o">=</span> <span class="n">bind</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">ref</span><span class="p">(</span><span class="n">b</span><span class="p">));</span>
 </code></pre></div><p>ref 返回一个对象，包含给定的引用。此外 cref 函数，生成一个保存 const 引用的类。与 bind 一样，这些函数定义在头文件 functional 中。</p>
@@ -209,7 +209,7 @@
 <p>反向迭代器 <code>reverse iterator</code> 与一般的迭代器移动方向相反</p>
 <p>移动迭代器 <code>move iterator</code> 这些迭代器不拷贝其中元素而是移动它们</p>
 <h4 id="1041-插入迭代器">10.4.1 插入迭代器</h4>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">it</span> <span class="o">=</span> <span class="n">t</span><span class="p">;</span> <span class="c1">// 向 it 指定的当前位置插入值 t。
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">it</span> <span class="o">=</span> <span class="n">t</span><span class="p">;</span> <span class="c1">// 向 it 指定的当前位置插入值 t。
 </span><span class="c1"></span><span class="o">*</span><span class="n">it</span><span class="p">;</span> <span class="o">++</span><span class="n">it</span><span class="p">;</span> <span class="n">it</span><span class="o">++</span><span class="p">;</span> <span class="c1">// 操作存在但不会对 it 做任何事。返回 it。
 </span><span class="c1"></span><span class="n">back_inserter</span><span class="p">;</span> <span class="c1">// 使用 push_back
 </span><span class="c1"></span><span class="n">front_inserter</span><span class="p">;</span> <span class="c1">// 使用 push_front
@@ -218,7 +218,7 @@
 </span></code></pre></div><h4 id="1042-iostream-迭代器">10.4.2 iostream 迭代器</h4>
 <h5 id="istream_iterator-操作">istream_iterator 操作</h5>
 <p>对于 <code>istream_iterator&lt;T&gt;</code> 需要类型 T 定义 <code>&gt;&gt;</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp">#include</span> <span class="cpf">&lt;iterator&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
@@ -229,7 +229,7 @@
    <span class="p">}</span>
    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">istream_iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">in</span><span class="p">(</span><span class="n">is</span><span class="p">);</span> <span class="c1">// in 从输入流 is 读取 T 的值
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">istream_iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">in</span><span class="p">(</span><span class="n">is</span><span class="p">);</span> <span class="c1">// in 从输入流 is 读取 T 的值
 </span><span class="c1"></span><span class="n">istream_iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">end</span><span class="p">;</span>    <span class="c1">// 尾后迭代器
 </span><span class="c1"></span><span class="n">in1</span> <span class="o">==</span> <span class="n">in2</span><span class="p">;</span>                 <span class="c1">// 读取相同类型且
 </span><span class="c1"></span>                            <span class="c1">// 同为尾后迭代器或绑定到相同输入
@@ -238,12 +238,12 @@
 </span><span class="c1"></span><span class="n">in</span><span class="o">-&gt;</span><span class="n">mem</span>                     <span class="c1">// (*in).mem
 </span><span class="c1"></span><span class="o">++</span><span class="n">in</span><span class="p">,</span> <span class="n">in</span><span class="o">++</span><span class="p">;</span>                 <span class="c1">// 读取流中的下一个值
 </span></code></pre></div><p>当然我们也可以像使用其他迭代器一样使用流迭代器</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">accumulate</span><span class="p">(</span><span class="n">in</span><span class="p">,</span> <span class="n">eof</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">accumulate</span><span class="p">(</span><span class="n">in</span><span class="p">,</span> <span class="n">eof</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </code></pre></div><h5 id="istream_iterator-允许使用懒惰求值">istream_iterator 允许使用懒惰求值</h5>
 <p>istream_iterator 绑定到流时，标准库并不保证迭代器立即从流读取数据，直到我们使用迭代器时才真正读取。标准库的实现保证的是，第一次解引用迭代器之前，从流中读取数据的操作已经完成了。</p>
 <h5 id="ostream_iterator-操作">ostream_iterator 操作</h5>
 <p>对于 <code>ostream_iterator&lt;T&gt;</code> 需要类型 T 定义 <code>&lt;&lt;</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">ostream_iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">out</span><span class="p">(</span><span class="n">os</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">ostream_iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">out</span><span class="p">(</span><span class="n">os</span><span class="p">);</span>
 <span class="n">ostream_iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">out</span><span class="p">(</span><span class="n">os</span><span class="p">,</span><span class="n">d</span><span class="p">);</span> <span class="c1">// d 是一个 C 风格字符串
 </span><span class="c1"></span>                               <span class="c1">// 每次输出都会追加一个 d
 </span><span class="c1"></span><span class="n">out</span> <span class="o">=</span> <span class="n">val</span><span class="p">;</span>                     <span class="c1">// val 写入绑定的流
@@ -253,7 +253,7 @@
 <p>反向迭代器需要支持递减运算符，因此不能从 forward_list 和流迭代器创建反向迭代器。</p>
 <h5 id="反向迭代器和其他迭代器的关系">反向迭代器和其他迭代器的关系</h5>
 <p>注意我们不能混用普通迭代器和反向迭代器，我们可以使用 base 函数将反向迭代器转换为普通迭代器</p>
-<div class="highlight"><pre class="chroma"><code class="language-txt" data-lang="txt">           rcomma
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt">           rcomma
             v
 FIRST,SECOND,THIRD
              ^
@@ -314,7 +314,7 @@ FIRST,SECOND,THIRD
 <p>下标运算符 <code>iter[n]</code></p>
 <h4 id="1052-算法形参模式">10.5.2 算法形参模式</h4>
 <p>大多数算法有如下 4 种形式之一</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">alg</span><span class="p">(</span><span class="n">beg</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">other</span> <span class="n">args</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">alg</span><span class="p">(</span><span class="n">beg</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">other</span> <span class="n">args</span><span class="p">);</span>
 <span class="n">alg</span><span class="p">(</span><span class="n">beg</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="n">other</span> <span class="n">args</span><span class="p">);</span>
 <span class="n">alg</span><span class="p">(</span><span class="n">beg</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">beg2</span><span class="p">,</span> <span class="n">other</span> <span class="n">args</span><span class="p">);</span>
 <span class="n">alg</span><span class="p">(</span><span class="n">beg</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">beg2</span><span class="p">,</span> <span class="n">end2</span><span class="p">,</span> <span class="n">other</span> <span class="n">args</span><span class="p">);</span>
@@ -322,19 +322,19 @@ FIRST,SECOND,THIRD
 <p>只有 beg2 （没有 end2）作为输入的算法假定 beg2 开始的范围与 beg end 的范围至少一样大。</p>
 <h4 id="1053-算法命名规范">10.5.3 算法命名规范</h4>
 <p>一些算法采用重载形式传递谓词来代替 <code>&lt;</code> 或 <code>==</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">unique</span><span class="p">(</span><span class="n">beg</span><span class="p">,</span> <span class="n">end</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">unique</span><span class="p">(</span><span class="n">beg</span><span class="p">,</span> <span class="n">end</span><span class="p">);</span>
 <span class="n">unique</span><span class="p">(</span><span class="n">beg</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">comp</span><span class="p">);</span>
 </code></pre></div><p>有些算法本身会接受一个 val 因此使用谓词的版本会加上 <code>_if</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">find</span><span class="p">(</span><span class="n">beg</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">val</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">find</span><span class="p">(</span><span class="n">beg</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">val</span><span class="p">);</span>
 <span class="n">find_if</span><span class="p">(</span><span class="n">beg</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">pred</span><span class="p">);</span>
 </code></pre></div><p>有些算法需要区分写回原序列和写到新序列，使用 <code>_copy</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">reverse</span><span class="p">(</span><span class="n">beg</span><span class="p">,</span> <span class="n">end</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">reverse</span><span class="p">(</span><span class="n">beg</span><span class="p">,</span> <span class="n">end</span><span class="p">);</span>
 <span class="n">reverse_copy</span><span class="p">(</span><span class="n">beg</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">dest</span><span class="p">);</span>
 
 <span class="n">remove_copy_if</span><span class="p">(</span><span class="n">beg</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="n">pred</span><span class="p">);</span>
 </code></pre></div><h3 id="106-特定容器算法">10.6 特定容器算法</h3>
 <p>对于 list 和 forward_list</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="n">lst</span><span class="p">.</span><span class="n">merge</span><span class="p">(</span><span class="n">lst2</span><span class="p">);</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="n">lst</span><span class="p">.</span><span class="n">merge</span><span class="p">(</span><span class="n">lst2</span><span class="p">);</span>
 <span class="n">lst</span><span class="p">.</span><span class="n">merge</span><span class="p">(</span><span class="n">lst2</span><span class="p">,</span> <span class="n">comp</span><span class="p">);</span> <span class="c1">// 要求两个链表有序
 </span><span class="c1"></span><span class="n">lst</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">val</span><span class="p">);</span>
 <span class="n">lst</span><span class="p">.</span><span class="n">remove_if</span><span class="p">(</span><span class="n">pred</span><span class="p">);</span>
@@ -345,7 +345,7 @@ FIRST,SECOND,THIRD
 <span class="n">lst</span><span class="p">.</span><span class="n">unique</span><span class="p">(</span><span class="n">pred</span><span class="p">);</span>
 </code></pre></div><h5 id="splice-成员">splice 成员</h5>
 <p>lst.splice 和 flst.splice_after</p>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">lst2</span><span class="p">)</span> <span class="c1">// p 是 lst 的迭代器或 flst 的首前迭代器。将 lst2 元素插入到对应位置。将元素从 lst2 中删除。
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">lst2</span><span class="p">)</span> <span class="c1">// p 是 lst 的迭代器或 flst 的首前迭代器。将 lst2 元素插入到对应位置。将元素从 lst2 中删除。
 </span><span class="c1"></span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">lst2</span><span class="p">,</span> <span class="n">p2</span><span class="p">)</span> <span class="c1">// 将 p2 之后的元素移动插入到 p
 </span><span class="c1"></span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">lst2</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="c1">// 将 [b, e) 中元素移动插入到 p
 </span></code></pre></div>

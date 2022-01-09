@@ -11,7 +11,7 @@
     </title>
     
     
-    <meta name="description" property="og:description" content="下标池 IdPool template&amp;lt;typename T&amp;gt; struct IdPool { map&amp;lt;T, int&amp;gt; idmap; vector&amp;lt;T&amp;gt; ett; void clear() { idmap.clear(); ett.clear(); } int getid(const T &amp;amp;t) { auto it = idmap.find(t); if (it != idmap.end()) return it-&amp;gt;second; int ans = ett.size(); ett.push_back(t); idmap[t] = ans; return ans; } T gett(int i) { return ett[i]; } int size() { return ett.size(); } }; IdPool&amp;lt;int&amp;gt; idp;|OTTFF&#39;s Blog">
+    <meta name="description" property="og:description" content="下标池 IdPool template&amp;lt;typename T&amp;gt; struct IdPool { map&amp;lt;T, int&amp;gt; idmap; vector&amp;lt;T&amp;gt; items; void clear() { idmap.clear(); items.clear(); } int getid(const T &amp;amp;t) { auto it = idmap.find(t); if (it != idmap.end()) return it-&amp;gt;second; int ans = items.size(); items.push_back(t); idmap[t] = ans; return ans; } T&amp;amp; operator[](int i) { return items[i]; } int size() { return items.size(); } }; IdPool&amp;lt;int&amp;gt; idp;|OTTFF&#39;s Blog">
     
 
     <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
@@ -121,7 +121,7 @@
     <div class="float-md-right">
       <span title="Lastmod: 2021-07-31. Published at: 2021-07-31.">
         
-          Published: 2021-07-31 Sat 19:22:06
+          Published: 2021-07-31 周六 19:22:06
         
       </span>
     </div>
@@ -132,18 +132,18 @@
   
   <section class="pb-6 mb-3 border-bottom markdown">
       <h2 id="下标池-idpool">下标池 IdPool</h2>
-<div class="highlight"><pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
 <span class="k">struct</span> <span class="nc">IdPool</span> <span class="p">{</span>
     <span class="n">map</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">idmap</span><span class="p">;</span>
-    <span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">ett</span><span class="p">;</span>
-    <span class="kt">void</span> <span class="nf">clear</span><span class="p">()</span> <span class="p">{</span> <span class="n">idmap</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span> <span class="n">ett</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span> <span class="p">}</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">items</span><span class="p">;</span>
+    <span class="kt">void</span> <span class="nf">clear</span><span class="p">()</span> <span class="p">{</span> <span class="n">idmap</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span> <span class="n">items</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span> <span class="p">}</span>
     <span class="kt">int</span> <span class="nf">getid</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">t</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">auto</span> <span class="n">it</span> <span class="o">=</span> <span class="n">idmap</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">it</span> <span class="o">!=</span> <span class="n">idmap</span><span class="p">.</span><span class="n">end</span><span class="p">())</span> <span class="k">return</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">ett</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">ett</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">t</span><span class="p">);</span> <span class="n">idmap</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">ans</span><span class="p">;</span> <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">items</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">items</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">t</span><span class="p">);</span> <span class="n">idmap</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">ans</span><span class="p">;</span> <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="n">T</span> <span class="nf">gett</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">ett</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> <span class="p">}</span>
-    <span class="kt">int</span> <span class="nf">size</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">ett</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="p">}</span>
+    <span class="n">T</span><span class="o">&amp;</span> <span class="k">operator</span><span class="p">[](</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">items</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> <span class="p">}</span>
+    <span class="kt">int</span> <span class="nf">size</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">items</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="p">}</span>
 <span class="p">};</span>
 <span class="n">IdPool</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">idp</span><span class="p">;</span>
 </code></pre></div>
@@ -153,7 +153,9 @@
     
         <a href="/notes/cppprimer/c13/" class="previous_page">Prev: 《C&#43;&#43; Primer》 拾遗 第 13 章 拷贝控制 </a>
     
+     <br> 
     
+        <a href="/notes/cppprimer/c14/" class="next_page">Next: 《C&#43;&#43; Primer》 拾遗 第 14 章 重载运算与类型转换 </a>
     
   </section>
 

@@ -6,11 +6,7 @@
     <description>Recent content in Tags on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 03 Jul 2021 12:42:06 -0700</lastBuildDate>
-    
-	<atom:link href="https://ottffyzy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 03 Jul 2021 12:42:06 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>计算几何</title>
       <link>https://ottffyzy.github.io/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/</link>
@@ -86,18 +82,9 @@
     <item>
       <title>BIT</title>
       <link>https://ottffyzy.github.io/tags/bit/</link>
-      <pubDate>Thu, 22 Oct 2020 18:03:19 -0400</pubDate>
+      <pubDate>Thu, 01 Oct 2020 12:09:44 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tags/bit/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>bitset</title>
-      <link>https://ottffyzy.github.io/tags/bitset/</link>
-      <pubDate>Thu, 22 Oct 2020 18:03:19 -0400</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/bitset/</guid>
       <description></description>
     </item>
     

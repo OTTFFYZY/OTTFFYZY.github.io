@@ -121,7 +121,7 @@
     <div class="float-md-right">
       <span title="Lastmod: 2020-09-03. Published at: 2020-09-03.">
         
-          Published: 2020-09-03 Thu 21:53:13
+          Published: 2020-09-03 周四 21:53:13
         
       </span>
     </div>
@@ -145,20 +145,20 @@
 <h2 id="1-标题"><strong>1 标题</strong></h2>
 <p>使用 1-6 个 #，在一行的开头，将此行转化成1-6级标题</p>
 <p>如本文大标题，即一级标题《使用 Typora 写 Markdown》就是 Typora 中输入如下内容，回车后的结果</p>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="gh"># 使用 Typora 写 Markdown
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="gh"># 使用 Typora 写 Markdown
 </span></code></pre></div><p>而下方的的二级标题则在开头输入两个##即可</p>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="gu">## 0 简介 Markdown 与 Typora
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="gu">## 0 简介 Markdown 与 Typora
 </span></code></pre></div><h2 id="2-文字"><strong>2 文字</strong></h2>
 <p>Markdown 并不支持复杂的文字颜色及文字字体。但需要重点突出某部分文字的时候，可以使用以下的方式。输入及效果如下</p>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">普通文字，我最正常啦
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">普通文字，我最正常啦
 </code></pre></div><p>普通文字，我最正常啦</p>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">*都说身正不怕影子斜，可是我本来就是歪的*
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">*都说身正不怕影子斜，可是我本来就是歪的*
 </code></pre></div><p><em>都说身正不怕影子斜，可是我本来就是歪的</em></p>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">**我叫加粗**
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">**我叫加粗**
 </code></pre></div><p><strong>我叫加粗</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">***谁说粗了就不能歪***
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">***谁说粗了就不能歪***
 </code></pre></div><p><em><strong>谁说粗了就不能歪</strong></em></p>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">~~多嘴被划掉了~~
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">~~多嘴被划掉了~~
 </code></pre></div><p><del>多嘴被划掉了</del></p>
 <p>使用划掉和加粗变斜的组合也可以搞出下面的效果。</p>
 <p><del><em>歪了所以划掉</em></del></p>
@@ -170,14 +170,14 @@
 <p>如果要使用行间公式则直接在两个 $$ 中间输入公式内容</p>
 <p>之后用 Latex 的方式输入数学公式及符号，以下为两个示例</p>
 <p>先来个质能方程</p>
-<div class="highlight"><pre class="chroma"><code class="language-latex" data-lang="latex">E=mc<span class="nb">^</span>2
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex">E=mc<span class="nb">^</span>2
 </code></pre></div><p>整行公式
 $$
 E=mc^2
 $$
 行间公式 $E=mc^c$</p>
 <p>来个复杂的黎曼 $\zeta$ 函数</p>
-<div class="highlight"><pre class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\zeta</span>(s)=<span class="k">\sum</span><span class="nb">_{</span>n=1<span class="nb">}^{</span><span class="k">\infty</span><span class="nb">}</span><span class="k">\frac</span><span class="nb">{</span>1<span class="nb">}{</span>n<span class="nb">^</span>s<span class="nb">}</span><span class="k">\quad</span> (Re(s)&gt;1,n <span class="k">\in</span> N<span class="nb">^</span>+)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="k">\zeta</span>(s)=<span class="k">\sum</span><span class="nb">_{</span>n=1<span class="nb">}^{</span><span class="k">\infty</span><span class="nb">}</span><span class="k">\frac</span><span class="nb">{</span>1<span class="nb">}{</span>n<span class="nb">^</span>s<span class="nb">}</span><span class="k">\quad</span> (Re(s)&gt;1,n <span class="k">\in</span> N<span class="nb">^</span>+)
 </code></pre></div><p>$$
 \zeta(s)=\sum_{n=1}^{\infty}\frac{1}{n^s}\quad (Re(s)&gt;1,n \in N^+)
 $$</p>
@@ -188,10 +188,10 @@ $$</p>
 <h2 id="4-插入图片">4 插入图片</h2>
 <p>将想插入的图片拖到就行了</p>
 <p>这里有一个问题就是这样拖动插入的图片只是记录了文件的绝对路径。因此图片如果移动了或者重命名了，这个拖入的图片在 .md 文件可能就会无法打开。可以输入图片的相对路径来插入图片</p>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">![<span class="nt">图片名称</span>](<span class="na">/图片相对路径</span>)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">![<span class="nt">图片名称</span>](<span class="na">/图片相对路径</span>)
 </code></pre></div><h2 id="5-表格">5 表格</h2>
 <p>可以输入如下，创建一个简单表格，注意Typora并不支持复杂的表格</p>
-<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">| 姓名 | 性别 | 年龄 |
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">| 姓名 | 性别 | 年龄 |
 | ----- | ---- | ---- |
 | OTTFF | 爷们 | 未知 |
 </code></pre></div><table>
@@ -212,7 +212,7 @@ $$</p>
 </table>
 <h2 id="6-插入代码">6 插入代码</h2>
 <p>输入```即会跳出代码输入框，贴入代码即可，右下角语言选好，即可产生对应的高亮</p>
-<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
@@ -220,7 +220,7 @@ $$</p>
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><h2 id="7-任务列表">7 任务列表</h2>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="k">-</span> 1 刷题
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="k">-</span> 1 刷题
 <span class="k">-</span> 2 刷题
 <span class="k">-</span> 3 刷题
 </code></pre></div><ul>
@@ -231,26 +231,26 @@ $$</p>
 <p>还有其他的任务列表显示方式，这里只是简介一下</p>
 <h2 id="8-生成目录"><strong>8 生成目录</strong></h2>
 <p>空行输入</p>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">[toc]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">[toc]
 </code></pre></div><p>后回车即可在这个位置生成全文目录</p>
 <h2 id="9-其他"><strong>9 其他</strong></h2>
 <h3 id="需要下标角标">需要下标角标？</h3>
 <p>当前网页上无法正常渲染这个</p>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">我是正文~我在下面~我是正文^我在上面^我是正文[^我是脚注]我是正文
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">我是正文~我在下面~我是正文^我在上面^我是正文[^我是脚注]我是正文
 </code></pre></div><p>注意这个功能需要在 Typora 设置中打开上标下标</p>
 <h3 id="分界线">分界线</h3>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">---
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">---
 </code></pre></div><hr>
 <h3 id="我要打">我要打#,~,*,$,\</h3>
 <p>显示上面用过的一些特殊意义的符号需要转义字符\</p>
 <p>如#,~,*,$,\需要这样输</p>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">\# \~ \* \$ \\
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown">\# \~ \* \$ \\
 </code></pre></div><h3 id="给别人看导出为-pdf-或者-html">给别人看？导出为 PDF 或者 HTML</h3>
 <p>想用 Markdown 可是别人没有 Markdown 编辑器怎么办，甚至用了 Typora 自己的特性（如生成 toc）其他 Markdown 编辑器不能兼容怎么办？</p>
 <p>此时可以通过 “文章” -&gt; “导出” 导出为 PDF</p>
 <h3 id="分页符">分页符</h3>
 <p>导出时可能需要分页，此时可以在分页的位置加入如下代码</p>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">&lt;div STYLE=&#34;page-break-after: always;&#34;&gt;&lt;/div&gt;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">STYLE</span><span class="o">=</span><span class="s">&#34;page-break-after: always;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="10-后记">10 后记</h2>
 <p>本文中介绍了使用 Typora 编写 Markdown 格式的 .md 文件的一般姿势。</p>
 <p>这些姿势对于一般的帮助文档，日常规划等等任务已然足够。如需更多的更深入的操作方式可以通过网络查找。</p>

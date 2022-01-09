@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>A on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/templates/a/</link>
+    <description>Recent content in A on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 29 Sep 2020 14:34:12 -0400</lastBuildDate><atom:link href="https://ottffyzy.github.io/templates/a/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[模板] C&#43;&#43; Debug</title>
+      <link>https://ottffyzy.github.io/tpls/a/debug/</link>
+      <pubDate>Tue, 29 Sep 2020 14:34:12 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tpls/a/debug/</guid>
+      <description>C++ 日常使用 template &amp;lt;typename A, typename B&amp;gt; string to_string(pair&amp;lt;A, B&amp;gt; p); template &amp;lt;typename A, typename B, typename C&amp;gt; string to_string(tuple&amp;lt;A, B, C&amp;gt; p); template &amp;lt;typename A, typename B, typename C, typename D&amp;gt; string to_string(tuple&amp;lt;A, B, C, D&amp;gt; p); string to_string(const string&amp;amp; s) { return &amp;#39;&amp;#34;&amp;#39; + s + &amp;#39;&amp;#34;&amp;#39;; } string to_string(const char* s) { return to_string((string) s); } string to_string(bool b) { return (b ? &amp;#34;true&amp;#34; : &amp;#34;false&amp;#34;); } string to_string(vector&amp;lt;bool&amp;gt; v) { string res = &amp;#34;{&amp;#34;; for (int i = 0; i &amp;lt; static_cast&amp;lt;int&amp;gt;(v.size()); i++) { if (i) { res += &amp;#34;, &amp;#34;; } res</description>
+    </item>
+    
+    <item>
+      <title>[模板] C&#43;&#43; 日常使用</title>
+      <link>https://ottffyzy.github.io/tpls/a/cpp/</link>
+      <pubDate>Tue, 29 Sep 2020 14:34:12 -0400</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tpls/a/cpp/</guid>
+      <description>C++ 日常使用 #include &amp;lt;bits/stdc++.h&amp;gt;using namespace std; int io_=[](){ ios::sync_with_stdio(false); cin.tie(nullptr); return 0; }(); using LL = long long; using ULL = unsigned long long; using LD = long double; using PII = pair&amp;lt;int, int&amp;gt;; using VI = vector&amp;lt;int&amp;gt;; using MII = map&amp;lt;int, int&amp;gt;; template&amp;lt;typename T&amp;gt; void cmin(T &amp;amp;x,const T &amp;amp;y) { if(y&amp;lt;x) x=y; } template&amp;lt;typename T&amp;gt; void cmax(T &amp;amp;x,const T &amp;amp;y) { if(x&amp;lt;y) x=y; } template&amp;lt;typename T&amp;gt; void cmin(T &amp;amp;x,T &amp;amp;y,const T &amp;amp;z) {// x&amp;lt;=y&amp;lt;=z if(z&amp;lt;x) { y=x; x=z; } else if(z&amp;lt;y) y=z; } template&amp;lt;typename T&amp;gt; void cmax(T &amp;amp;x,T &amp;amp;y,const T &amp;amp;z) {// x&amp;gt;=y&amp;gt;=z if(x&amp;lt;z) { y=x;</description>
+    </item>
+    
+  </channel>
+</rss>
