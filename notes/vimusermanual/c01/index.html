@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  [Vim] usr_01 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="usr_01 检查是否是 vi 兼容模式 :set compatible?查找配置文件 :scriptnames运行 vim tutor &amp;gt;vimtutor vimtutor 笔记 移动 ^ k&amp;lt; h l &amp;gt; j v不保存退出 :q!&amp;lt;ENTER&amp;gt;保存退出 :wq&amp;lt;ENTER&amp;gt; 普通模式 删除光标位置的字符 x普通|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/sols">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">[Vim] usr_01</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/vim-user-manual' class="muted-link">
+  <span class="Label Label--gray">Vim User Manual</span>
+</a>
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2022-01-10. Published at: 2022-01-10.">
+        
+          Published: 2022-01-10 周一 21:03:05
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="usr_01">usr_01</h2>
+<p>检查是否是 vi 兼容模式</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">set</span> <span class="nx">compatible</span>?<span class="err">
+</span></code></pre></div><p>查找配置文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">scriptnames</span><span class="err">
+</span></code></pre></div><p>运行 vim tutor</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span>vimtutor
+</code></pre></div><h3 id="vimtutor-笔记">vimtutor 笔记</h3>
+<p>移动</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim">     ^ <span class="err">
+</span><span class="err"></span>     <span class="nx">k</span><span class="err">
+</span><span class="err"></span><span class="p">&lt;</span> <span class="nx">h</span>     <span class="nx">l</span> <span class="p">&gt;</span><span class="err">
+</span><span class="err"></span>     <span class="nx">j</span><span class="err">
+</span><span class="err"></span>     <span class="nx">v</span><span class="err">
+</span></code></pre></div><p>不保存退出</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">q</span><span class="p">!&lt;</span><span class="nx">ENTER</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>保存退出</p>
+<pre tabindex="0"><code>:wq&lt;ENTER&gt;
+</code></pre><p>普通模式 删除光标位置的字符</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">x</span><span class="err">
+</span></code></pre></div><p>普通模式-》插入模式 光标位置插入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">i</span><span class="err">
+</span></code></pre></div><p>普通模式-》插入模式 行尾插入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">A</span><span class="err">
+</span></code></pre></div><p>普通模式 删除光标位置开始的单词</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">dw</span><span class="err">
+</span></code></pre></div><p>普通模式 删除光标位置到结尾</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">d</span>$<span class="err">
+</span></code></pre></div><p>许多改变文本的命令由一个操作符和一个动作组成</p>
+<p>如删除操作符 d 后面可以跟一个 motion</p>
+<p>例如</p>
+<p><code>w</code> 从当前光标位置到下一个单词的起始处，不包含它第一个字符</p>
+<p><code>e</code> 从当前光标到单词末尾，包含最后一个字符</p>
+<p><code>$</code> 从当前位置到行末</p>
+<p>动作前输入数字会使动作执行数字次</p>
+<p><code>2w</code> 向右移动 两个单词</p>
+<p><code>3e</code> 向右移动三个单词</p>
+<p><code>0</code> 移动到行首</p>
+<p>于是可以使用</p>
+<p><code>d number motion</code> 一次删除多项内容</p>
+<p>删除整行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">dd</span><span class="err">
+</span></code></pre></div><p>删除多行可以是类似</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="m">2</span>dd<span class="err">
+</span></code></pre></div><p>也可以是</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">d2d</span><span class="err">
+</span></code></pre></div><p>撤销类</p>
+<p>撤销一步</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">u</span><span class="err">
+</span></code></pre></div><p>撤销整行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">U</span><span class="err">
+</span></code></pre></div><p>重做</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">R</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>置入类</p>
+<p>使用 d 删除的内容会保存在 vim 的寄存器中。使用 p 命令会把寄存器中的内容贴到光标位置后面。</p>
+<p>dd 删除的内容，使用 p 贴到当前光标位置的下一行。</p>
+<p>替换类命令</p>
+<p>使用 <code>r</code> 和要替换的字符，替换当前光标位置的字符。</p>
+<p>使用 <code>R</code> 可以连续替换多个字符，使用 <code>&lt;ESC&gt;</code> 退出替换。</p>
+<p>更改类命令</p>
+<p><code>ce</code> 或者 <code>cw</code> 可以将单词光标到结尾删掉并进入插入模式。</p>
+<p><code>c</code> 的行为和 <code>d</code> 是类似的，后面也可以跟数字和命令。</p>
+<p>定位及文件状态</p>
+<p>显示当前编辑文件中光标位置及文件状态</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">G</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>跳转到文件最后一行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">G</span><span class="err">
+</span></code></pre></div><p>跳转到第一行</p>
+<pre tabindex="0"><code>gg
+</code></pre><p>跳转到某一行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">&lt;</span><span class="nx">NUMBER</span><span class="p">&gt;</span><span class="nx">G</span><span class="err">
+</span></code></pre></div><p>搜索类命令</p>
+<p>普通模式输入 <code>/</code> 和字符串即可查找对应字符串</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim">/<span class="p">&lt;</span><span class="nx">STRING</span><span class="p">&gt;&lt;</span><span class="nx">ENTER</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>之后使用 <code>n</code> 正向查找，<code>N</code> 反向查找</p>
+<p>或者使用 <code>?</code> 替换 <code>/</code> 可以直接开始反向查找</p>
+<p>可以使用 <code>&lt;CTRL-O&gt;</code> 跳到之前的位置或者使用 <code>&lt;CTRL-I&gt;</code> 跳到较新的位置。</p>
+<p>搜索忽略大小写</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">set</span> <span class="nx">ic</span><span class="err">
+</span></code></pre></div><p>大小写敏感</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">set</span> <span class="nx">noic</span><span class="err">
+</span></code></pre></div><p>如果只想在某一次搜索忽略大小写则可以使用 <code>\c</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim">/<span class="nx">ignore</span>\<span class="nx">c</span><span class="p">&lt;</span><span class="nx">ENTER</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>查找时显示部分匹配 incsearch</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">set</span> <span class="nx">is</span><span class="err">
+</span></code></pre></div><p>查找时高亮 hlsearch</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">set</span> <span class="nx">hls</span><span class="err">
+</span></code></pre></div><p>移除匹配项的高亮显示</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">nohlsearch</span><span class="err">
+</span></code></pre></div><p>::</p>
+<p>搜索光标位置括号配对的括号</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim">%<span class="err">
+</span></code></pre></div><p>替换命令</p>
+<p>将本行第一个 <code>old</code> 替换成 <code>new</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">s</span><span class="sr">/&lt;old&gt;/</span><span class="p">&lt;</span><span class="nx">new</span><span class="p">&gt;&lt;</span><span class="nx">ENTER</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>将本行所有 <code>old</code> 替换成 <code>new</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">s</span><span class="sr">/&lt;old&gt;/</span><span class="p">&lt;</span><span class="nx">new</span><span class="p">&gt;</span>/<span class="nx">g</span><span class="p">&lt;</span><span class="nx">ENTER</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>替换 <code>a</code> 行到 <code>b</code> 行的所有匹配</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:&lt;</span><span class="nx">a</span><span class="p">&gt;,&lt;</span><span class="nx">b</span><span class="p">&gt;</span><span class="nx">s</span><span class="sr">/&lt;old&gt;/</span><span class="p">&lt;</span><span class="nx">new</span><span class="p">&gt;</span>/<span class="nx">g</span><span class="p">&lt;</span><span class="nx">ENTER</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>替换整个文件所有匹配</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span>%<span class="nx">s</span><span class="sr">/&lt;old&gt;/</span><span class="p">&lt;</span><span class="nx">new</span><span class="p">&gt;</span>/<span class="nx">g</span><span class="p">&lt;</span><span class="nx">ENTER</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>替换整个文件所有匹配，并对每个匹配串提示是否进行替换</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span>%<span class="nx">s</span><span class="sr">/&lt;old&gt;/</span><span class="p">&lt;</span><span class="nx">new</span><span class="p">&gt;</span>/<span class="nx">gc</span><span class="p">&lt;</span><span class="nx">ENTER</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>执行外部命令</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:!&lt;</span><span class="nx">SHELL</span>/<span class="nx">CMD</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>注意所有 <code>:</code> 开始的命令都需要 <code>&lt;ENTER&gt;</code> 结尾。</p>
+<p>保存文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">w</span> <span class="p">&lt;</span><span class="nx">FILENAME</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>把当前文件保存为 filename。</p>
+<p>利用可视模式 <code>v</code> 选中某个范围，然后输入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">w</span> <span class="p">&lt;</span><span class="nx">FILENAME</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>将保存选中的部分</p>
+<p>注意实际显示的是</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="s1">&#39;&lt;,&#39;</span><span class="p">&gt;</span><span class="nx">w</span><span class="err">
+</span></code></pre></div><p>插入其他文件的内容</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">r</span> <span class="p">&lt;</span><span class="nx">FILENAME</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>注意 <code>:r</code> 也可以读取外部命令的输出如</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">r</span> <span class="p">!</span><span class="nx">ls</span><span class="err">
+</span></code></pre></div><p>下方插入新行并且进入插入模式</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">o</span><span class="err">
+</span></code></pre></div><p>上方插入新行并且进入插入模式</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">O</span><span class="err">
+</span></code></pre></div><p>光标后插入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">a</span><span class="err">
+</span></code></pre></div><p>可以使用 <code>y</code> 命令复制某些字符或整行，行为与 <code>d</code> 和 <code>c</code> 类似。</p>
+<p>使用 HELP</p>
+<p>按 <code>&lt;F1&gt;</code> 或者 <code>:help</code></p>
+<p>创建启动脚本</p>
+<p>Unix</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">edit</span> <span class="p">~</span>/.<span class="nx">vimrc</span><span class="err">
+</span></code></pre></div><p>Windows</p>
+<pre tabindex="0"><code>:edit $VIM/_vimrc
+</code></pre><p>读取 vimrc 示例文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">r</span> $<span class="nx">VIMRUNTIME</span>/<span class="nx">vimrc_example</span>.<span class="nx">vim</span><span class="err">
+</span></code></pre></div><p>输入命令时使用 <code>&lt;CTRL-D&gt;</code> 可以查看补全的命令。</p>
+
+  </section>
+
+  <section>
+    
+        <a href="/notes/cppprimer/c14/" class="previous_page">Prev: 《C&#43;&#43; Primer》 拾遗 第 14 章 重载运算与类型转换 </a>
+    
+    
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>[Vim] usr_01</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#usr_01">usr_01</a>
+      <ul>
+        <li><a href="#vimtutor-笔记">vimtutor 笔记</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>

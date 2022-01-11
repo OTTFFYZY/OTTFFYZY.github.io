@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2022-01 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/archives/2022-01/</link>
+    <description>Recent content in 2022-01 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 10 Jan 2022 21:03:05 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/archives/2022-01/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Vim] usr_01</title>
+      <link>https://ottffyzy.github.io/notes/vimusermanual/c01/</link>
+      <pubDate>Mon, 10 Jan 2022 21:03:05 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/vimusermanual/c01/</guid>
+      <description>usr_01 检查是否是 vi 兼容模式 :set compatible?查找配置文件 :scriptnames运行 vim tutor &amp;gt;vimtutor vimtutor 笔记 移动 ^ k&amp;lt; h l &amp;gt; j v不保存退出 :q!&amp;lt;ENTER&amp;gt;保存退出 :wq&amp;lt;ENTER&amp;gt; 普通模式 删除光标位置的字符 x普通</description>
+    </item>
+    
+  </channel>
+</rss>

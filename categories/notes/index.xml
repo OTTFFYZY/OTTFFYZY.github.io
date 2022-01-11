@@ -6,7 +6,16 @@
     <description>Recent content in Notes on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 01 Aug 2021 00:46:07 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Jan 2022 21:03:05 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Vim] usr_01</title>
+      <link>https://ottffyzy.github.io/notes/vimusermanual/c01/</link>
+      <pubDate>Mon, 10 Jan 2022 21:03:05 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/vimusermanual/c01/</guid>
+      <description>usr_01 检查是否是 vi 兼容模式 :set compatible?查找配置文件 :scriptnames运行 vim tutor &amp;gt;vimtutor vimtutor 笔记 移动 ^ k&amp;lt; h l &amp;gt; j v不保存退出 :q!&amp;lt;ENTER&amp;gt;保存退出 :wq&amp;lt;ENTER&amp;gt; 普通模式 删除光标位置的字符 x普通</description>
+    </item>
+    
     <item>
       <title>《C&#43;&#43; Primer》 拾遗 第 14 章 重载运算与类型转换</title>
       <link>https://ottffyzy.github.io/notes/cppprimer/c14/</link>

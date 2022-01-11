@@ -101,6 +101,42 @@
   
   <div>
     <div>
+      <a href="/notes/vimusermanual/c01/">
+        <h3>[Vim] usr_01</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/vim-user-manual' class="muted-link">
+  <span class="Label Label--gray">Vim User Manual</span>
+</a>
+
+
+      <div class="float-md-right">
+        
+        2022-01-10
+      </div>
+    </div>
+    usr_01 检查是否是 vi 兼容模式 :set compatible?查找配置文件 :scriptnames运行 vim tutor &gt;vimtutor vimtutor 笔记 移动 ^ k&lt; h l &gt; j v不保存退出 :q!&lt;ENTER&gt;保存退出 :wq&lt;ENTER&gt; 普通模式 删除光标位置的字符 x普通
+  </div>
+  
+  <div>
+    <div>
       <a href="/notes/cppprimer/c14/">
         <h3>《C&#43;&#43; Primer》 拾遗 第 14 章 重载运算与类型转换</h3>
       </a>
@@ -807,46 +843,6 @@
     扩展欧几里得算法（ExGCD） // ax+by=gcd(a,b)=g // check a&gt;0 b&gt;0 // if a != b, |x|&lt;b, |y|&lt;a template&lt;typename T&gt; void exgcd(T a,T b,T &amp;g,T &amp;x,T &amp;y) { if(!b) { g=a; x=1; y=0; } else { exgcd(b,a%b,g,y,x); y-=a/b*x; } } 求逆元 template&lt;typename T&gt; void exgcd(T a,T b,T &amp;g,T &amp;x,T &amp;y) { if(!b) { g=a; x=1; y=0; } else { exgcd(b,a%b,g,y,x); y-=a/b*x; } } template&lt;typename T&gt; T inv(T a,T m) { T g,x,y; exgcd(a,m,g,x,y); if(g!=1) return -1; // no inverse element if(x&lt;0) x+=m; return x; } 不定方
   </div>
   
-  <div>
-    <div>
-      <a href="/algos/nt/exgcd/">
-        <h3>[算法][数论] 扩展欧几里得算法</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/%E7%AE%97%E6%B3%95' class="muted-link">
-  <span class="Label Label--gray-darker">算法</span>
-</a>
-
-
-
-
-
-
-
-<a href='/tags/%E6%95%B0%E8%AE%BA' class="muted-link">
-  <span class="Label Label--gray">数论</span>
-</a>
-
-<a href='/tags/exgcd' class="muted-link">
-  <span class="Label Label--gray">ExGCD</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-11-01
-      </div>
-    </div>
-    扩展欧几里得算法 有时我们需要求解类似于 $ax+by=m$ 的不定方程（丢番图方程），扩展欧几里得算法就是求解这样方程的利器。 除此以外我们可以通过简单地变形处理模逆元和线性同余方程。 裴蜀定理/贝祖定理（Bezout&rs
-  </div>
-  
 
   
   <nav class="paginate-container">
@@ -901,7 +897,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/notes" class="link-gray text-emphasized css-truncate-target"><span class="">Notes</span></a>
-      <span class="text-right Counter">20</span>
+      <span class="text-right Counter">21</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -1160,6 +1156,11 @@
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/series/vim-user-manual" class="link-gray text-emphasized css-truncate-target"><span class="">Vim user manual</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/series/%e6%a6%82%e7%8e%87%e8%ae%ba" class="link-gray text-emphasized css-truncate-target"><span class="">概率论</span></a>
       <span class="text-right Counter">1</span>
     </span>
@@ -1221,6 +1222,11 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2021-08" class="link-gray text-emphasized css-truncate-target"><span class="">2021 08</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2022-01" class="link-gray text-emphasized css-truncate-target"><span class="">2022 01</span></a>
       <span class="text-right Counter">1</span>
     </span>
     
