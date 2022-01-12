@@ -6,7 +6,25 @@
     <description>Recent content on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 10 Jan 2022 21:03:05 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Jan 2022 22:38:05 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Vim] usr_03</title>
+      <link>https://ottffyzy.github.io/notes/vimusermanual/c03/</link>
+      <pubDate>Tue, 11 Jan 2022 22:38:05 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/vimusermanual/c03/</guid>
+      <description>usr_03 移动 03.1 词移动 移动到下一个词开头位置 w移动到上一个词开头 b移动到下一个 单词末尾 e移动到前一个 单词末尾 ge一个单词以非单词字符（. - ( 等）结尾，要改变那些是单词字符详见 iskeyword 复位 iskeyword :set iskeyword$如果</description>
+    </item>
+    
+    <item>
+      <title>[Vim] usr_02</title>
+      <link>https://ottffyzy.github.io/notes/vimusermanual/c02/</link>
+      <pubDate>Tue, 11 Jan 2022 00:23:08 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/vimusermanual/c02/</guid>
+      <description>usr_02 Vim 初步 02.1 第一次运行 Vim &amp;gt;gvim file.txt &amp;gt;vim file.txt 02.2 插入文本 普通模式 -&amp;gt; 插入模式 Insert。 i插入模式 -&amp;gt; 普通模式 &amp;lt;ESC&amp;gt;显示当前模式 :set showmode02.3 光标移动 kh l j02.4 删除字符 删除光标处的字符 x删除整行 dd删除两行（与下行）</description>
+    </item>
+    
     <item>
       <title>[Vim] usr_01</title>
       <link>https://ottffyzy.github.io/notes/vimusermanual/c01/</link>

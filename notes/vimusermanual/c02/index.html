@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  [Vim] usr_02 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="usr_02 Vim 初步 02.1 第一次运行 Vim &amp;gt;gvim file.txt &amp;gt;vim file.txt 02.2 插入文本 普通模式 -&amp;gt; 插入模式 Insert。 i插入模式 -&amp;gt; 普通模式 &amp;lt;ESC&amp;gt;显示当前模式 :set showmode02.3 光标移动 kh l j02.4 删除字符 删除光标处的字符 x删除整行 dd删除两行（与下行）|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/sols">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">[Vim] usr_02</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/vim-user-manual' class="muted-link">
+  <span class="Label Label--gray">Vim User Manual</span>
+</a>
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2022-01-11. Published at: 2022-01-11.">
+        
+          Published: 2022-01-11 周二 00:23:08
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="usr_02-vim-初步">usr_02 Vim 初步</h2>
+<h3 id="021-第一次运行-vim">02.1 第一次运行 Vim</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span>gvim file.txt
+<span class="p">&gt;</span>vim file.txt
+</code></pre></div><h3 id="022-插入文本">02.2 插入文本</h3>
+<p>普通模式 -&gt; 插入模式 Insert。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">i</span><span class="err">
+</span></code></pre></div><p>插入模式 -&gt; 普通模式</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">&lt;</span><span class="nx">ESC</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>显示当前模式</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">set</span> <span class="nx">showmode</span><span class="err">
+</span></code></pre></div><h3 id="023-光标移动">02.3 光标移动</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim">    <span class="nx">k</span><span class="err">
+</span><span class="err"></span><span class="nx">h</span>     <span class="nx">l</span><span class="err">
+</span><span class="err"></span>  <span class="nx">j</span><span class="err">
+</span></code></pre></div><h3 id="024-删除字符">02.4 删除字符</h3>
+<p>删除光标处的字符</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">x</span><span class="err">
+</span></code></pre></div><p>删除整行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">dd</span><span class="err">
+</span></code></pre></div><p>删除两行（与下行）之间的换行符</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">J</span><span class="err">
+</span></code></pre></div><h3 id="025-撤销与重做">02.5 撤销与重做</h3>
+<p>撤销上一个编辑操作</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">u</span><span class="err">
+</span></code></pre></div><p>撤销在最近编辑行上的操作（可以用 <code>u</code> 撤销）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">U</span><span class="err">
+</span></code></pre></div><p>重做上一次 <code>u</code> 撤销的内容</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">R</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><h3 id="026-其他编辑命令">02.6 其他编辑命令</h3>
+<p>在光标后插入 apend</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">a</span><span class="err">
+</span></code></pre></div><p>在当前行下方开启一个新行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">o</span><span class="err">
+</span></code></pre></div><p>在当前行上方开启一个新行</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">O</span><span class="err">
+</span></code></pre></div><h4 id="指定计数">指定计数</h4>
+<p>可以在很多命令前增加数字 <code>&lt;NUMBER&gt;</code> ，表示重复执行该命令 <code>&lt;NUMBER&gt;</code> 次。</p>
+<h3 id="027-退出">02.7 退出</h3>
+<p>保存并退出</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">ZZ</span><span class="err">
+</span></code></pre></div><p>放弃修改</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">q</span><span class="p">!</span><span class="err">
+</span></code></pre></div><p>放弃修改重新编辑</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">e</span><span class="p">!</span><span class="err">
+</span></code></pre></div><h3 id="028-寻求帮助">02.8 寻求帮助</h3>
+<p>打开帮助</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">&lt;</span><span class="nx">F1</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>或者</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">help</span><span class="err">
+</span></code></pre></div><p>退出帮助</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">ZZ</span><span class="err">
+</span></code></pre></div><p>或者</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">q</span><span class="err">
+</span></code></pre></div><p>跳转到帮助中的超链接</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span>]<span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>标签退栈（返回到跳转前的页面）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">T</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>或跳转到前一个位置</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">O</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p><code>:help</code> 后面可以跟各种想查找帮助的内容。</p>
+
+  </section>
+
+  <section>
+    
+        <a href="/notes/vimusermanual/c01/" class="previous_page">Prev: [Vim] usr_01 </a>
+    
+     <br> 
+    
+        <a href="/notes/vimusermanual/c03/" class="next_page">Next: [Vim] usr_03 </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>[Vim] usr_02</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#usr_02-vim-初步">usr_02 Vim 初步</a>
+      <ul>
+        <li><a href="#021-第一次运行-vim">02.1 第一次运行 Vim</a></li>
+        <li><a href="#022-插入文本">02.2 插入文本</a></li>
+        <li><a href="#023-光标移动">02.3 光标移动</a></li>
+        <li><a href="#024-删除字符">02.4 删除字符</a></li>
+        <li><a href="#025-撤销与重做">02.5 撤销与重做</a></li>
+        <li><a href="#026-其他编辑命令">02.6 其他编辑命令</a></li>
+        <li><a href="#027-退出">02.7 退出</a></li>
+        <li><a href="#028-寻求帮助">02.8 寻求帮助</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>

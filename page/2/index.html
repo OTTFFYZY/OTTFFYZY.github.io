@@ -101,6 +101,90 @@
   
   <div>
     <div>
+      <a href="/algos/gt/johnson/">
+        <h3>[算法][图论] 约翰逊 Johnson 算法 全源最短路</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/%E7%AE%97%E6%B3%95' class="muted-link">
+  <span class="Label Label--gray-darker">算法</span>
+</a>
+
+
+
+
+
+
+
+<a href='/tags/%E5%9B%BE%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray">图论</span>
+</a>
+
+<a href='/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF' class="muted-link">
+  <span class="Label Label--gray">最短路</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-11-18
+      </div>
+    </div>
+    约翰逊 Johnson 算法 全源最短路 对于最短路问题，我们的常用算法是 Dijkstra 算法或 Bellman-Ford 算法。但这两个算法经常解决的是单源最短路问题。 对于多源（全源）最短路问题，我们有一个基于动态规划的优秀算法，Floyd-Warshall
+  </div>
+  
+  <div>
+    <div>
+      <a href="/tpls/nt/exgcd/">
+        <h3>[模板][数论] 扩展欧几里得算法（ExGCD）</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray-darker">数论</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E6%95%B0%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray">数论</span>
+</a>
+
+<a href='/tags/exgcd' class="muted-link">
+  <span class="Label Label--gray">ExGCD</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-11-01
+      </div>
+    </div>
+    扩展欧几里得算法（ExGCD） // ax+by=gcd(a,b)=g // check a&gt;0 b&gt;0 // if a != b, |x|&lt;b, |y|&lt;a template&lt;typename T&gt; void exgcd(T a,T b,T &amp;g,T &amp;x,T &amp;y) { if(!b) { g=a; x=1; y=0; } else { exgcd(b,a%b,g,y,x); y-=a/b*x; } } 求逆元 template&lt;typename T&gt; void exgcd(T a,T b,T &amp;g,T &amp;x,T &amp;y) { if(!b) { g=a; x=1; y=0; } else { exgcd(b,a%b,g,y,x); y-=a/b*x; } } template&lt;typename T&gt; T inv(T a,T m) { T g,x,y; exgcd(a,m,g,x,y); if(g!=1) return -1; // no inverse element if(x&lt;0) x+=m; return x; } 不定方
+  </div>
+  
+  <div>
+    <div>
       <a href="/algos/nt/exgcd/">
         <h3>[算法][数论] 扩展欧几里得算法</h3>
       </a>
@@ -803,78 +887,6 @@
     第 1 章 开始 1.1 查看程序返回值 当一个程序运行结束时，我们想知道 main 函数的返回值可以使用以下命令。 Win &gt; echo %ERRORLEVEL% Unix $ echo $? 1.2 标准库有四个输入输出对象 cin // 标准输入 cout // 标准输出 cerr // 标准错误 clog // 输出程序运行时的一般信息 字面
   </div>
   
-  <div>
-    <div>
-      <a href="/notes/probabilitysrp4e/c1/">
-        <h3>《概率、统计与随机过程》 笔记 第 1 章 概率论导论</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/notes' class="muted-link">
-  <span class="Label Label--gray-darker">Notes</span>
-</a>
-
-
-
-
-
-
-
-
-
-<a href='/series/%E6%A6%82%E7%8E%87%E8%AE%BA' class="muted-link">
-  <span class="Label Label--gray">概率论</span>
-</a>
-
-
-      <div class="float-md-right">
-        
-        2020-09-15
-      </div>
-    </div>
-    第 1 章 概率论导论 1.2 概率的不同类型 直观概率：基于直观来处理判断 古典概率：事件概率不是实验性的，通过预先计算事件 $E$ 可能发生的次数 $n_E$ 形成一个比值 $n_E / n$ 其中 $n$ 是所有可能的结果。此时需要所有的结果是等可能的。 古
-  </div>
-  
-  <div>
-    <div>
-      <a href="/notes/effectivecpp/c1/">
-        <h3>《Effective C&#43;&#43;》 笔记 1. 让自己习惯 C&#43;&#43;</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/notes' class="muted-link">
-  <span class="Label Label--gray-darker">Notes</span>
-</a>
-
-
-
-
-
-
-
-
-
-<a href='/series/effective-cpp' class="muted-link">
-  <span class="Label Label--gray">Effective Cpp</span>
-</a>
-
-
-      <div class="float-md-right">
-        
-        2020-09-13
-      </div>
-    </div>
-    1. 让自己习惯 C++ 条款 01：视 C++ 为一个语言联邦 C++ 是一个多重泛型编程语言（multiparadigm programming language）。 C++ 同时支持过程（procedural）形式、面向对象（object-oriented
-  </div>
-  
 
   
   <nav class="paginate-container">
@@ -929,7 +941,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/notes" class="link-gray text-emphasized css-truncate-target"><span class="">Notes</span></a>
-      <span class="text-right Counter">21</span>
+      <span class="text-right Counter">23</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -1189,7 +1201,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/series/vim-user-manual" class="link-gray text-emphasized css-truncate-target"><span class="">Vim user manual</span></a>
-      <span class="text-right Counter">1</span>
+      <span class="text-right Counter">3</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -1259,7 +1271,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2022-01" class="link-gray text-emphasized css-truncate-target"><span class="">2022 01</span></a>
-      <span class="text-right Counter">1</span>
+      <span class="text-right Counter">3</span>
     </span>
     
   </div>
