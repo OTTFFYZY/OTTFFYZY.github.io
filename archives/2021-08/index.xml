@@ -6,7 +6,16 @@
     <description>Recent content in 2021-08 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 01 Aug 2021 00:46:07 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/archives/2021-08/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Aug 2021 22:26:25 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/archives/2021-08/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>《C&#43;&#43; Primer》 拾遗 第 16 章 模板与泛型编程</title>
+      <link>https://ottffyzy.github.io/notes/cppprimer/c16/</link>
+      <pubDate>Thu, 19 Aug 2021 22:26:25 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/cppprimer/c16/</guid>
+      <description>第 16 章 模板与泛型编程 本章内容随便记记，应该后续会跟进专门的书籍仔细学习。 16.1 定义模板 16.1.1 函数模板 函数模板 function template 模板参数 template parameter 模板参数列表 template parameter list 模板定义中，模板参数列表不能为空？ 使用模板时，我们隐式或显示的指定</description>
+    </item>
+    
     <item>
       <title>《C&#43;&#43; Primer》 拾遗 第 14 章 重载运算与类型转换</title>
       <link>https://ottffyzy.github.io/notes/cppprimer/c14/</link>

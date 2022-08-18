@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  [Vim] usr_08 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="usr_08 分割窗口 08.1 分割窗口 增加一个水平的分割线 :split要在窗口间跳转可以使用 &amp;lt;CTRL-W&amp;gt;w或 &amp;lt;CTRL-W&amp;gt;&amp;lt;CTRL-W&amp;gt;关闭当前窗口 :close多数时候类似于|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/sols">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">[Vim] usr_08</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/vim-user-manual' class="muted-link">
+  <span class="Label Label--gray">Vim User Manual</span>
+</a>
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2022-01-17. Published at: 2022-01-17.">
+        
+          Published: 2022-01-17 周一 18:42:42
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="usr_08-分割窗口">usr_08 分割窗口</h2>
+<h3 id="081-分割窗口">08.1 分割窗口</h3>
+<p>增加一个水平的分割线</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">split</span><span class="err">
+</span></code></pre></div><p>要在窗口间跳转可以使用</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">W</span><span class="p">&gt;</span><span class="nx">w</span><span class="err">
+</span></code></pre></div><p>或</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">W</span><span class="p">&gt;&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">W</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>关闭当前窗口</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">close</span><span class="err">
+</span></code></pre></div><p>多数时候类似于 <code>quit</code>，但只有一个窗口时 <code>:close</code> 不会退出 <code>vim</code>。</p>
+<p>关闭其他窗口</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">only</span><span class="err">
+</span></code></pre></div><h3 id="082-用另一个文件分割窗口">08.2 用另一个文件分割窗口</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">split</span> <span class="p">&lt;</span><span class="nx">FILENAME</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>或分屏并编辑一个新文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">new</span><span class="err">
+</span></code></pre></div><h3 id="083-窗口大小">08.3 窗口大小</h3>
+<p><code>:split</code> 也支持计数前缀</p>
+<p>要扩大窗口</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">W</span><span class="p">&gt;+</span><span class="err">
+</span></code></pre></div><p>缩小</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">W</span><span class="p">&gt;-</span><span class="err">
+</span></code></pre></div><p>这两个命令也支持计数前缀。</p>
+<p>或者设置窗口高度为 <code>&lt;HEIGHT&gt;</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">&lt;</span><span class="nx">HEIGHT</span><span class="p">&gt;&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">W</span><span class="p">&gt;</span><span class="nx">_</span><span class="err">
+</span></code></pre></div><p>去掉前缀则会把当前窗口变得尽可能大。</p>
+<p>最小期望窗口大小在 <code>winheight</code> 和 <code>winwidth</code> 设置。 最小窗口大小在 <code>winminheight</code> 和 <code>winminwidth</code> 设置。</p>
+<h3 id="084-垂直分割">08.4 垂直分割</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">vsplit</span><span class="err">
+</span></code></pre></div><p>或者</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">vnew</span><span class="err">
+</span></code></pre></div><p>窗口间跳转</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">W</span><span class="p">&gt;</span><span class="nx">h</span><span class="err">
+</span><span class="err"></span><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">W</span><span class="p">&gt;</span><span class="nx">j</span><span class="err">
+</span><span class="err"></span><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">W</span><span class="p">&gt;</span><span class="nx">k</span><span class="err">
+</span><span class="err"></span><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">W</span><span class="p">&gt;</span><span class="nx">l</span><span class="err">
+</span><span class="err"></span><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">W</span><span class="p">&gt;</span><span class="nx">t</span><span class="err">
+</span><span class="err"></span><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">W</span><span class="p">&gt;</span><span class="nx">b</span><span class="err">
+</span></code></pre></div><p><code>hjkl</code> 对应左下上右。<code>tb</code> 对应最上和最下。</p>
+<h3 id="085-移动窗口">08.5 移动窗口</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">W</span><span class="p">&gt;</span><span class="nx">H</span><span class="err">
+</span><span class="err"></span><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">W</span><span class="p">&gt;</span><span class="nx">J</span><span class="err">
+</span><span class="err"></span><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">W</span><span class="p">&gt;</span><span class="nx">K</span><span class="err">
+</span><span class="err"></span><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">W</span><span class="p">&gt;</span><span class="nx">L</span><span class="err">
+</span></code></pre></div><p>分别对应把窗口移动到最左下上右。</p>
+<h3 id="086-对所有窗口执行命令">08.6 对所有窗口执行命令</h3>
+<p>退出所有窗口</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">qall</span><span class="err">
+</span></code></pre></div><p>光标会跳转到没保存的文件。</p>
+<p>全部保存</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">wall</span><span class="err">
+</span></code></pre></div><p>全部保存退出</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">wqall</span><span class="err">
+</span></code></pre></div><p>打开 vim 时为每一个文件打开窗口</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd">vim -o one.txt two.txt three.txt
+</code></pre></div><p>使用 <code>-O</code> 则会垂直分割。</p>
+<p>vim 已经启动了，也可以使用</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">all</span><span class="err">
+</span></code></pre></div><p>来为每一个打开的文件打开窗口。</p>
+<p>或者</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">vertical</span> <span class="nx">all</span><span class="err">
+</span></code></pre></div><h3 id="087-用-vimdiff-显示文件差异">08.7 用 vimdiff 显示文件差异</h3>
+<p>命令行中</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd">vimdiff one.txt two.txt
+</code></pre></div><p>vim 会显示不同的部分，用 <code>--------</code> 标记删除的行，折叠重复的部分</p>
+<p>使用 <code>zo</code> 和 <code>zc</code> 可以打开或者关闭一个折叠。</p>
+<p>或者在 Vim 内部</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">vertical</span> <span class="nx">diffspllit</span> <span class="p">&lt;</span><span class="nx">ANOTHER</span><span class="p">-</span><span class="nx">FILE</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>Vim 会在滚屏时尽量保证两个文件对齐。可以设置不对齐</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">set</span> <span class="nx">noscrollbind</span><span class="err">
+</span></code></pre></div><p>跳转到下一个修改点</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim">]<span class="nx">c</span><span class="err">
+</span></code></pre></div><p>到上一个修改点</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim">[<span class="nx">c</span><span class="err">
+</span></code></pre></div><h4 id="消除差异">消除差异</h4>
+<p>修改之后恢复高亮</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">diffupdate</span><span class="err">
+</span></code></pre></div><p>可以通过如下命令消除两边的差异</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">dp</span><span class="err">
+</span></code></pre></div><p>(diff put)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">do</span><span class="err">
+</span></code></pre></div><p>(diff obtain)</p>
+<h3 id="088-杂项">08.8 杂项</h3>
+<p><code>laststatus</code> 选项用于指定什么时候对最后一个串口显示状态条</p>
+<p>0 永远不</p>
+<p>1 只有分割窗口时</p>
+<p>2 永远有</p>
+<p>很多编辑另一个文件的命令都有分割窗口的变体，通过前面加一个 <code>s</code>，如 <code>tag</code> 命令可以 <code>:stag</code> 跳转并分屏。普通模式前置 <code>&lt;CTRL-W&gt;</code> 也可以实现这个功能，如 <code>&lt;CTRL-W&gt;&lt;CTRL-^&gt;</code></p>
+<p><code>splitbelow</code> 可以让分屏出现在下面，<code>splitright</code> 可以让分屏出现在右边。</p>
+<p>打开新窗口时可以在命令前加上一个修饰符说明出现的位置</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">leftabove</span> {<span class="nx">cmd</span>}<span class="err">
+</span><span class="err"></span><span class="p">:</span><span class="nx">aboveleft</span> {<span class="nx">cmd</span>}<span class="err">
+</span><span class="err"></span><span class="p">:</span><span class="nx">rightbelow</span> {<span class="nx">cmd</span>}<span class="err">
+</span><span class="err"></span><span class="p">:</span><span class="nx">belowright</span> {<span class="nx">cmd</span>}<span class="err">
+</span><span class="err"></span><span class="p">:</span><span class="nx">topleft</span> {<span class="nx">cmd</span>}<span class="err">
+</span><span class="err"></span><span class="p">:</span><span class="nx">botright</span> {<span class="nx">cmd</span>}<span class="err">
+</span></code></pre></div><h3 id="089-标签页">08.9 标签页</h3>
+<p>创建新的标签页</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">tabedit</span> <span class="p">&lt;</span><span class="nx">FILENAME</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>在标签页间切换</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">gt</span><span class="err">
+</span></code></pre></div><p>在标签页显示 <code>gt</code> 的帮助内容</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">tab</span> <span class="nx">help</span> <span class="nx">gt</span><span class="err">
+</span></code></pre></div><p>关闭当前以外的其他标签页</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">tabonly</span><span class="err">
+</span></code></pre></div>
+  </section>
+
+  <section>
+    
+        <a href="/notes/learningpython/c01/" class="previous_page">Prev: 《Learning Python》 笔记 第 1 章 问答环节 </a>
+    
+     <br> 
+    
+        <a href="/notes/vimusermanual/c09/" class="next_page">Next: [Vim] usr_09 </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>[Vim] usr_08</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#usr_08-分割窗口">usr_08 分割窗口</a>
+      <ul>
+        <li><a href="#081-分割窗口">08.1 分割窗口</a></li>
+        <li><a href="#082-用另一个文件分割窗口">08.2 用另一个文件分割窗口</a></li>
+        <li><a href="#083-窗口大小">08.3 窗口大小</a></li>
+        <li><a href="#084-垂直分割">08.4 垂直分割</a></li>
+        <li><a href="#085-移动窗口">08.5 移动窗口</a></li>
+        <li><a href="#086-对所有窗口执行命令">08.6 对所有窗口执行命令</a></li>
+        <li><a href="#087-用-vimdiff-显示文件差异">08.7 用 vimdiff 显示文件差异</a>
+          <ul>
+            <li><a href="#消除差异">消除差异</a></li>
+          </ul>
+        </li>
+        <li><a href="#088-杂项">08.8 杂项</a></li>
+        <li><a href="#089-标签页">08.9 标签页</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>

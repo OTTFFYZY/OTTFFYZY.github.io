@@ -6,11 +6,20 @@
     <description>Recent content in Series on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 11 Jan 2022 22:38:05 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Jan 2022 00:57:41 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learning Python</title>
+      <link>https://ottffyzy.github.io/series/learning-python/</link>
+      <pubDate>Thu, 27 Jan 2022 00:57:41 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/series/learning-python/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Vim User Manual</title>
       <link>https://ottffyzy.github.io/series/vim-user-manual/</link>
-      <pubDate>Tue, 11 Jan 2022 22:38:05 -0800</pubDate>
+      <pubDate>Wed, 19 Jan 2022 21:13:07 -0800</pubDate>
       
       <guid>https://ottffyzy.github.io/series/vim-user-manual/</guid>
       <description></description>
@@ -19,7 +28,7 @@
     <item>
       <title>Cpp Primer</title>
       <link>https://ottffyzy.github.io/series/cpp-primer/</link>
-      <pubDate>Sun, 01 Aug 2021 00:46:07 -0700</pubDate>
+      <pubDate>Thu, 19 Aug 2021 22:26:25 -0700</pubDate>
       
       <guid>https://ottffyzy.github.io/series/cpp-primer/</guid>
       <description></description>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>染色 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E6%9F%93%E8%89%B2/</link>
+    <description>Recent content in 染色 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 17 Aug 2022 22:27:03 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%9F%93%E8%89%B2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[算法][图论] Vizing 定理</title>
+      <link>https://ottffyzy.github.io/algos/gt/vizing/</link>
+      <pubDate>Wed, 17 Aug 2022 22:27:03 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/algos/gt/vizing/</guid>
+      <description>Vizing 定理 对于简单图 $G$: $$\chi&amp;#39;(G) \le \Delta (G) &amp;#43; 1$$ 其中 $\chi&#39;(G)$ 为图 $G$ 的边色数，即最少使用多少颜色可以为 $G$ 的边染色，使得相邻边彼此颜色不同。$\Delta (G)$ 是图的最大点度数。 二分图 Vizing 定理 特别的对于二分图我们有 $$\chi&amp;#39;(G) = \Delta (G) $$ 我们可以构</description>
+    </item>
+    
+  </channel>
+</rss>

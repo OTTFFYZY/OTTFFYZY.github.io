@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  [Vim] usr_06 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="usr_06 使用语法高亮 06.1 功能激活 :syntax enable只在支持色彩的终端中生效，在 vimrc 中加入 if &amp;amp;t_Co &amp;gt; 1 syntax enableendif只在 Gui 版本生效则在 gvimrc 加入 syntax enable06.2 颜色显示不出来或者显示出错误的颜色怎么办？ 终端不支持彩色，这时 vim 会|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/sols">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">[Vim] usr_06</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/vim-user-manual' class="muted-link">
+  <span class="Label Label--gray">Vim User Manual</span>
+</a>
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2022-01-17. Published at: 2022-01-17.">
+        
+          Published: 2022-01-17 周一 00:09:44
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="usr_06-使用语法高亮">usr_06 使用语法高亮</h2>
+<h3 id="061-功能激活">06.1 功能激活</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">syntax</span> <span class="nx">enable</span><span class="err">
+</span></code></pre></div><p>只在支持色彩的终端中生效，在 vimrc 中加入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="k">if</span> &amp;<span class="nx">t_Co</span> <span class="p">&gt;</span> <span class="m">1</span><span class="err">
+</span><span class="err"></span>  <span class="nx">syntax</span> <span class="nx">enable</span><span class="err">
+</span><span class="err"></span><span class="k">endif</span><span class="err">
+</span></code></pre></div><p>只在 Gui 版本生效则在 gvimrc 加入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">syntax</span> <span class="nx">enable</span><span class="err">
+</span></code></pre></div><h3 id="062-颜色显示不出来或者显示出错误的颜色怎么办">06.2 颜色显示不出来或者显示出错误的颜色怎么办？</h3>
+<ul>
+<li>
+<p>终端不支持彩色，这时 vim 会用不同字体显示。</p>
+</li>
+<li>
+<p>终端支持但 vim 不知道，确保 <code>$TERM</code> 设置正确。参考 <code>xterm-color</code></p>
+</li>
+<li>
+<p>文件类型无法识别，可以用如下命令检查</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">set</span> <span class="nx">filetype</span><span class="err">
+</span></code></pre></div><p>如果得到</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">filetype</span><span class="p">=</span><span class="err">
+</span></code></pre></div><p>则说明没识别，可以手工设置文件类型</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">set</span> <span class="nx">filetype</span><span class="p">=&lt;</span><span class="nx">FILETYPE</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>可以查看 <code>$VIMRUNTIME/syntax</code> 查看 vim 支持的类型。</p>
+<ul>
+<li>彩色文字难以辨认，可能是因为 vim 推断错了背景颜色造成的，这时可以设置背景色</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">set</span> <span class="nx">background</span><span class="p">=</span><span class="nb">dark</span><span class="err">
+</span></code></pre></div><p>该命令需要在</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">syntax</span> <span class="nx">enable</span><span class="err">
+</span></code></pre></div><p>前调用，或者使用</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">syntax</span> <span class="nx">reset</span><span class="err">
+</span></code></pre></div><ul>
+<li>滚屏时颜色显示错误，可以使用</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">L</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>或者滚一下再滚回来。（vim 只分析文件显示的部分）</p>
+<h3 id="063-使用不同颜色">06.3 使用不同颜色</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">colorscheme</span> <span class="nx">evening</span><span class="err">
+</span></code></pre></div><p>可以自己编写色彩方案。</p>
+<h3 id="064-是否使用色彩">06.4 是否使用色彩</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim">“ <span class="nx">暂时不显示</span><span class="err">
+</span><span class="err"></span><span class="p">:</span><span class="nx">syntax</span> <span class="nx">clear</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span>” <span class="nx">完全关闭</span><span class="err">
+</span><span class="err"></span><span class="p">:</span><span class="nx">syntax</span> <span class="nx">iff</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span>“ <span class="nx">对特定文件高亮</span><span class="err">
+</span><span class="err"></span><span class="p">:</span><span class="nx">syntax</span> <span class="nx">manual</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; 当前缓冲区高亮</span><span class="err">
+</span><span class="err"></span><span class="p">:</span><span class="nx">set</span> <span class="nx">syntax</span><span class="p">=</span><span class="nx">ON</span><span class="err">
+</span></code></pre></div><h3 id="065-带颜色打印">06.5 带颜色打印</h3>
+<p>在 MS-Windows</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">hardcopy</span><span class="err">
+</span></code></pre></div><p>转为 HTML</p>
+<pre tabindex="0"><code>:TOhtml
+</code></pre><p>如果不行则</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">source</span> $<span class="nx">VIMRUNTIME</span><span class="sr">/syntax/</span><span class="m">2</span>html.<span class="nx">vim</span><span class="err">
+</span></code></pre></div>
+  </section>
+
+  <section>
+    
+        <a href="/notes/vimusermanual/c05/" class="previous_page">Prev: [Vim] usr_05 </a>
+    
+     <br> 
+    
+        <a href="/notes/vimusermanual/c07/" class="next_page">Next: [Vim] usr_07 </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>[Vim] usr_06</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#usr_06-使用语法高亮">usr_06 使用语法高亮</a>
+      <ul>
+        <li><a href="#061-功能激活">06.1 功能激活</a></li>
+        <li><a href="#062-颜色显示不出来或者显示出错误的颜色怎么办">06.2 颜色显示不出来或者显示出错误的颜色怎么办？</a></li>
+        <li><a href="#063-使用不同颜色">06.3 使用不同颜色</a></li>
+        <li><a href="#064-是否使用色彩">06.4 是否使用色彩</a></li>
+        <li><a href="#065-带颜色打印">06.5 带颜色打印</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  《Learning Python》 笔记 第 2 章 Python 如何运行程序 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="《Learning Python》 笔记 第 2 章 Python 如何运行程序 Python 解释器简介 Python 是一门编程语言，同时是一个名为解释器的软件包。 解释器是让其他程序运行起来的程序，是代码与机器的计算机硬件之间的软件逻辑层。 Python 包安装|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/sols">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">《Learning Python》 笔记 第 2 章 Python 如何运行程序</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/learning-python' class="muted-link">
+  <span class="Label Label--gray">Learning Python</span>
+</a>
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2022-01-17. Published at: 2022-01-17.">
+        
+          Published: 2022-01-17 周一 23:47:31
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="learning-python-笔记-第-2-章-python-如何运行程序">《Learning Python》 笔记 第 2 章 Python 如何运行程序</h2>
+<h3 id="python-解释器简介">Python 解释器简介</h3>
+<p>Python 是一门编程语言，同时是一个名为解释器的软件包。</p>
+<p>解释器是让其他程序运行起来的程序，是代码与机器的计算机硬件之间的软件逻辑层。</p>
+<p>Python 包安装后会得到至少一个解释器和一套支持库。</p>
+<h3 id="程序执行">程序执行</h3>
+<h4 id="程序员的视角">程序员的视角</h4>
+<p>一般 Python 文件以 <code>.py</code> 结尾。</p>
+<p>可以通过如下方式运行一段 Python 脚本</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span>python script.py
+</code></pre></div><h4 id="python-的视角">Python 的视角</h4>
+<h5 id="字节码编译">字节码编译</h5>
+<p>执行程序时，Python 内部会先将源代码编译成所谓的字节码形式。字节码是一种低级的与平台无关的表现形式。</p>
+<p>Python 进程在机器上拥有写入权限时，他将会把字节码保存在一个 <code>.pyc</code> 后缀的文件里。（Python 3.2 以前的版本会保存在同名 <code>.py</code> 文件的目录下，Python 3.2 及之后的版本会保存到 <code>__pycache__</code> 的子目录中，同时在扩展名中会带有编译它们的 Python 的版本信息）。</p>
+<p>保存字节码是对启动速度的一种优化，如果保存字节码后没有修改代码，并且运行的是同一个 Python 版本，则会跳过编译步骤直接加载对应的 <code>.pyc</code> 文件。</p>
+<p>如果 Python 不具有写入权限，则字节码只会在内存中生成，并在运行结束时被丢弃。</p>
+<p>可以通过发布字节码，实现发布 Python 程序。 Python 如果找到 <code>.pyc</code> 文件而没有找到 <code>.py</code> 文件，一样可以运行程序。</p>
+<p>字节码只会针对被导入的文件生成而不是顶层的执行脚本。</p>
+<h5 id="python-虚拟机pvm">Python 虚拟机（PVM）</h5>
+<p>字节码会发送到 Python 虚拟机 <code>Python Virtual Machine</code> 上执行。它不是一个独立程序，不需要安装。本质上它是一个迭代运行字节码指令的一个大循环。PVM 是 Python 的运行时引擎，时常表现为 Python 系统的一部分，技术上它只是，Python 解释器的最后一步。</p>
+<h5 id="性能的含义">性能的含义</h5>
+<p>没有类似于 C++ make 的过程。字节码不是二进制代码，因此在 PVM 还需要进一步解释字节码，因此它无法像 C++ 一样快。但因为其内部有编译过程，不需要反复的重新分析重新分解，因此会比其他的经典解释语言快。</p>
+<h5 id="开发的含义">开发的含义</h5>
+<p>开发与执行环境相同。Python 代码可以动态的被修改。Python 中只有运行时。</p>
+<h3 id="执行模型的变体">执行模型的变体</h3>
+<p>上面的内部执行模型是 Python 的标准实现形式，但并不是语言必须的。</p>
+<h4 id="python-的各种实现">Python 的各种实现</h4>
+<p>CPython 标准的 Python 实现。因为它由 ANSI C 编写而成。通常都会得到和使用这个版本。</p>
+<p>Jython 基于 Java 的 Python。目的是与 Java 集成。字节码运行在 Java 虚拟机。</p>
+<p>IronPython 基于 .NET 的 Python。</p>
+<p>Stackless 注重并发的 Python。</p>
+<p>PyPy 注重速度的 Python。提供了带有即时编译器（just-in-time, JIT）的 Python 快速实现。能够运行绝代多大多数的 CPython 代码。</p>
+<h4 id="执行优化工具">执行优化工具</h4>
+<p>其他系统则尝试优化执行模块</p>
+<p>Cython 是 Python 与 C 的混合体。</p>
+<p>Shed Skin 是 Python 到 C++ 的转换器</p>
+<p>Psyco 是一个可以让 Python 运行更快的执行组件，往往被视为 JIT。</p>
+<h4 id="冻结二进制文件">冻结二进制文件</h4>
+<p>有时需要 Python 能够生成二进制可执行文件。</p>
+<p>py2exe Windows</p>
+<p>PyInstaller Linux 和 Mac OS</p>
+<p>py2app Mac OS</p>
+<h3 id="未来的可能性">未来的可能性</h3>
+<p>Parrot 提供一种包括 Python 在内的多语言通用字节码格式、虚拟机及优化技术。</p>
+<p>Unladen Swallow 添加 JIT 来提升兼容性和速度。</p>
+
+  </section>
+
+  <section>
+    
+        <a href="/notes/vimusermanual/c09/" class="previous_page">Prev: [Vim] usr_09 </a>
+    
+     <br> 
+    
+        <a href="/notes/learningpython/c03/" class="next_page">Next: 《Learning Python》 笔记 第 3 章 你应如何运行程序 </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>《Learning Python》 笔记 第 2 章 Python 如何运行程序</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#learning-python-笔记-第-2-章-python-如何运行程序">《Learning Python》 笔记 第 2 章 Python 如何运行程序</a>
+      <ul>
+        <li><a href="#python-解释器简介">Python 解释器简介</a></li>
+        <li><a href="#程序执行">程序执行</a>
+          <ul>
+            <li><a href="#程序员的视角">程序员的视角</a></li>
+            <li><a href="#python-的视角">Python 的视角</a></li>
+          </ul>
+        </li>
+        <li><a href="#执行模型的变体">执行模型的变体</a>
+          <ul>
+            <li><a href="#python-的各种实现">Python 的各种实现</a></li>
+            <li><a href="#执行优化工具">执行优化工具</a></li>
+            <li><a href="#冻结二进制文件">冻结二进制文件</a></li>
+          </ul>
+        </li>
+        <li><a href="#未来的可能性">未来的可能性</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>

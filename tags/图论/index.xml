@@ -6,7 +6,16 @@
     <description>Recent content in 图论 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 18 Nov 2020 13:33:50 -0500</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%9B%BE%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Aug 2022 22:27:03 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%9B%BE%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[算法][图论] Vizing 定理</title>
+      <link>https://ottffyzy.github.io/algos/gt/vizing/</link>
+      <pubDate>Wed, 17 Aug 2022 22:27:03 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/algos/gt/vizing/</guid>
+      <description>Vizing 定理 对于简单图 $G$: $$\chi&amp;#39;(G) \le \Delta (G) &amp;#43; 1$$ 其中 $\chi&#39;(G)$ 为图 $G$ 的边色数，即最少使用多少颜色可以为 $G$ 的边染色，使得相邻边彼此颜色不同。$\Delta (G)$ 是图的最大点度数。 二分图 Vizing 定理 特别的对于二分图我们有 $$\chi&amp;#39;(G) = \Delta (G) $$ 我们可以构</description>
+    </item>
+    
     <item>
       <title>[算法][图论] 约翰逊 Johnson 算法 全源最短路</title>
       <link>https://ottffyzy.github.io/algos/gt/johnson/</link>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  [Vim] usr_11 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="usr_11 从崩溃中恢复 11.1 基本恢复 一般来说如果硬盘没坏，崩溃了之后，文件的大部分内容可以恢复。 vim -r &amp;lt;FILENAME&amp;gt;这时 Vim 会读取 .swp 文件。为安全起见可以另存这个新文件。 可以用 vimdiff 比较新旧文件。 如果编辑|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/sols">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">[Vim] usr_11</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/vim-user-manual' class="muted-link">
+  <span class="Label Label--gray">Vim User Manual</span>
+</a>
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2022-01-19. Published at: 2022-01-19.">
+        
+          Published: 2022-01-19 周三 21:13:07
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="usr_11-从崩溃中恢复">usr_11 从崩溃中恢复</h2>
+<h3 id="111-基本恢复">11.1 基本恢复</h3>
+<p>一般来说如果硬盘没坏，崩溃了之后，文件的大部分内容可以恢复。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">vim</span> <span class="p">-</span><span class="nx">r</span> <span class="p">&lt;</span><span class="nx">FILENAME</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>这时 Vim 会读取 <code>.swp</code> 文件。为安全起见可以另存这个新文件。</p>
+<p>可以用 vimdiff 比较新旧文件。</p>
+<p>如果编辑的时候没有文件名，可以进入对应的目录，然后</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">vim</span> <span class="p">-</span><span class="nx">r</span> <span class="s2">&#34;&#34;</span><span class="err">
+</span></code></pre></div><h3 id="112-交换文件在哪">11.2 交换文件在哪</h3>
+<p>Vim 可以把交换文件放在不同的地方，通常是原文件所在的目录。</p>
+<p>可以进入目录，然后使用</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">vim</span> <span class="p">-</span><span class="nx">r</span><span class="err">
+</span></code></pre></div><p>列出所有的交换文件。</p>
+<h3 id="113-是不是崩溃了">11.3 是不是崩溃了？</h3>
+<p>有时不是崩溃，比如其他进程也在编辑文件，则在打开文件时，Vim 也会弹出警告。</p>
+
+  </section>
+
+  <section>
+    
+        <a href="/notes/learningpython/c03/" class="previous_page">Prev: 《Learning Python》 笔记 第 3 章 你应如何运行程序 </a>
+    
+     <br> 
+    
+        <a href="/algos/dp/sosdp/" class="next_page">Next: [算法][DP] 高维前缀和 SOS DP </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>[Vim] usr_11</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#usr_11-从崩溃中恢复">usr_11 从崩溃中恢复</a>
+      <ul>
+        <li><a href="#111-基本恢复">11.1 基本恢复</a></li>
+        <li><a href="#112-交换文件在哪">11.2 交换文件在哪</a></li>
+        <li><a href="#113-是不是崩溃了">11.3 是不是崩溃了？</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>

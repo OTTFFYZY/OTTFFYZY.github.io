@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  《Learning Python》 笔记 第 4 章 介绍 Python 对象类型 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="第 4 章 介绍 Python 对象类型 Python 知识结构 程序由模块构成 模块包含语句 语句包含表达式 表达式创建并处理对象 为什么要使用内置类型 容易编写，可扩展，往往效率高，是语言标准的一部分。 Python 核心数据类型 数字、字符串、列表、字典、|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/sols">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">《Learning Python》 笔记 第 4 章 介绍 Python 对象类型</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/learning-python' class="muted-link">
+  <span class="Label Label--gray">Learning Python</span>
+</a>
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2022-01-27. Published at: 2022-01-27.">
+        
+          Published: 2022-01-27 周四 00:57:41
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="第-4-章-介绍-python-对象类型">第 4 章 介绍 Python 对象类型</h2>
+<h3 id="python-知识结构">Python 知识结构</h3>
+<p>程序由模块构成</p>
+<p>模块包含语句</p>
+<p>语句包含表达式</p>
+<p>表达式创建并处理对象</p>
+<h3 id="为什么要使用内置类型">为什么要使用内置类型</h3>
+<p>容易编写，可扩展，往往效率高，是语言标准的一部分。</p>
+<h3 id="python-核心数据类型">Python 核心数据类型</h3>
+<p>数字、字符串、列表、字典、元组、文件、集合</p>
+<p>其他核心类型：类型、None、布尔型</p>
+<p>程序单元类型：函数、模块、类</p>
+<p>Python 实现相关类型：已编译代码、调用栈跟踪</p>
+<p>Python 是动态类型的强类型语言。</p>
+<h3 id="数字">数字</h3>
+<p>整数</p>
+<p>浮点数</p>
+<p>复数</p>
+<p>固定精度的十进制数</p>
+<p>有理分数</p>
+<p>Python 中 <code>**</code> 表示幂。Python 的整数类型会在需要时自动提升精度。</p>
+<h3 id="字符串">字符串</h3>
+<p>字符串用来记录文本信息和任意的字节集合。</p>
+<p>字符串是由单字符组成的序列。</p>
+<h4 id="序列操作">序列操作</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;spam&#39;</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="c1"># 长度 4</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>   <span class="c1"># &#39;s&#39;</span>
+<span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># 反向索引 &#39;m&#39; 一般来说相当于 s[len(s) - 1]</span>
+</code></pre></div><p>分片操作</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># &#39;pa&#39;</span>
+</code></pre></div><p><code>s[l:r]</code> 相当于取出下标为 <code>[l, r)</code> 的内容。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>  <span class="c1"># &#39;pam&#39;</span>
+<span class="n">s</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>  <span class="c1"># &#39;spa&#39;</span>
+<span class="n">s</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># &#39;spa&#39;</span>
+<span class="n">s</span><span class="p">[:]</span>   <span class="c1"># &#39;spam&#39; 一个 s 的 top-level copy</span>
+</code></pre></div><p>字符串支持使用 <code>+</code> 进行拼接和使用 <code>*</code> 进行重复</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">s</span> <span class="o">+</span> <span class="s1">&#39;xyz&#39;</span> <span class="c1"># &#39;spamxyz&#39;</span>
+<span class="n">s</span> <span class="o">*</span> <span class="mi">3</span>     <span class="c1"># &#39;spamspamspam&#39;</span>
+</code></pre></div><h4 id="不可变性">不可变性</h4>
+<p>注意 Python 中的字符串具有不可变性，每个操作的结果都会创建新的字符串。</p>
+<p>我们可以把字符串转化为 list 或 bytearray。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">L</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;c&#39;</span>
+<span class="n">S</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+
+<span class="n">B</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;spam&#39;</span><span class="p">)</span> <span class="c1"># 只适用于至多 8 位宽的文本</span>
+<span class="n">B</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;eggs&#39;</span><span class="p">)</span>
+<span class="n">B</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span> <span class="c1"># 转化为字符串</span>
+</code></pre></div><h4 id="特定类型的方法">特定类型的方法</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;pa&#39;</span><span class="p">)</span> <span class="c1"># 1</span>
+<span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ss&#39;</span><span class="p">)</span> <span class="c1"># -1 找不到</span>
+
+<span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;pa&#39;</span><span class="p">,</span> <span class="s1">&#39;XYZ&#39;</span><span class="p">)</span> <span class="c1"># &#39;sXYZm&#39; 会生成新对象</span>
+</code></pre></div><p>拆分字符串</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">line</span> <span class="o">=</span> <span class="s1">&#39;aa,bbb,cc&#39;</span>
+<span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span> <span class="c1"># [&#39;aa&#39;, &#39;bbb&#39;, &#39;cc&#39;]</span>
+<span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="c1"># &#39;SPAM&#39;</span>
+<span class="n">s</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="c1"># True</span>
+
+<span class="n">line</span> <span class="o">=</span> <span class="s1">&#39;aa</span><span class="se">\n</span><span class="s1">&#39;</span>
+<span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="c1"># &#39;aa&#39;</span>
+
+<span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+</code></pre></div><p>注意最后一个语句，Python 遵循从左到右的执行顺序。</p>
+<h5 id="格式化替换">格式化替换</h5>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">, </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span> <span class="c1"># &#39;a, b&#39; formatting expression</span>
+<span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">, </span><span class="si">{1}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span> <span class="c1"># formatting method</span>
+<span class="s1">&#39;</span><span class="si">{}</span><span class="s1">, </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
+</code></pre></div><p>后面会介绍更复杂的格式化方式。</p>
+<h4 id="寻求帮助">寻求帮助</h4>
+<p>可以用 <code>dir</code> 列出所有支持的操作，再用 <code>help</code> 查询文档</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="nb">dir</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">help</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">)</span>
+</code></pre></div><h4 id="字符串编程的其他方式">字符串编程的其他方式</h4>
+<p>Python 字符串可以包裹在单引号或双引号，并让另一种可以作为字符串内容出现。也允许三引号（三个单引号或双引号）中包括多行字符串字面量。</p>
+<p>交互中不可打印字符会输出为转义的形式。</p>
+<p>Python 也支持原始（raw）字符串字面量，在引号前加 <code>r</code>。</p>
+<h4 id="unicode-字符串">Unicode 字符串</h4>
+<p>3.X 版本后普通字符串是 Unicode</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="sa">b</span><span class="s1">&#39;aaa&#39;</span> <span class="c1"># bytes string</span>
+<span class="sa">u</span><span class="s1">&#39;aaa&#39;</span> <span class="c1"># Unicode</span>
+
+<span class="n">s</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf16&#39;</span><span class="p">)</span>
+</code></pre></div><h4 id="模式匹配">模式匹配</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">re</span>
+</code></pre></div><h3 id="列表">列表</h3>
+<h4 id="序列操作-1">序列操作</h4>
+<p>支持所有之前字符串上的序列操作</p>
+<h4 id="特定的操作">特定的操作</h4>
+<p>列表元素没有特定类型约束。</p>
+<pre tabindex="0"><code class="language-pyt" data-lang="pyt">L.append('a')
+
+L.pop(idx) # 会返回 idx 上的元素并从列表中删掉
+
+L.sort() # 列表排序，inplace
+L.reverse() # 翻转 inplace
+</code></pre><h4 id="边界检查">边界检查</h4>
+<p>Python 有边界检查</p>
+<h4 id="嵌套">嵌套</h4>
+<p>Python 核心数据类型支持任意嵌套，即 list 中可以嵌套任意层 list。</p>
+<h4 id="推导">推导</h4>
+<p>列表推导表达式 <code>list comprehension expression</code></p>
+<p>取出矩阵第二列</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">M</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">],</span> <span class="p">[</span><span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">],</span> <span class="p">[</span><span class="mi">31</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">33</span><span class="p">]]</span>
+<span class="n">col2</span> <span class="o">=</span> <span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">M</span><span class="p">]</span>
+</code></pre></div><p>更复杂的操作见后。</p>
+<p>列表推导也会被用于集合、字典、生成器。</p>
+<h3 id="字典">字典</h3>
+<p>字典是一种映射 <code>mapping</code>。</p>
+<h4 id="映射操作">映射操作</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">D</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span> <span class="p">:</span> <span class="s1">&#39;bbb&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="s1">&#39;s&#39;</span><span class="p">}</span>
+
+<span class="n">D</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># 空字典</span>
+<span class="n">D</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;hhh&#39;</span> <span class="c1"># create keys by assign</span>
+
+<span class="n">D</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="n">job</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span> <span class="c1"># 相当于 {&#39;name&#39;: &#39;Bob&#39;, &#39;job&#39;: &#39;dev&#39;, &#39;age&#39;:40}</span>
+<span class="n">D</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;job&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;dev&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">]))</span>
+</code></pre></div><p>字典中的元素是无序的。</p>
+<h4 id="重访嵌套">重访嵌套</h4>
+<p>字典值也可以嵌套字典或其他数据类型。</p>
+<p>Python 会自动管理内存，具有垃圾回收机制。</p>
+<h4 id="不存在的键if-测试">不存在的键：if 测试</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">if</span> <span class="n">some_key</span> <span class="ow">in</span> <span class="n">D</span><span class="p">:</span>
+  <span class="c1"># do some thing</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">some_key</span> <span class="ow">in</span> <span class="n">D</span><span class="p">:</span>
+  <span class="c1"># do some thing</span>
+</code></pre></div><p>我们也可以使用带初始值的 get</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">value</span> <span class="o">=</span> <span class="n">D</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="n">default_val</span><span class="p">)</span>
+</code></pre></div><h4 id="键的排序for-循环">键的排序：for 循环</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">D</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="n">keys</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s1">&#39;=&gt;&#39;</span><span class="p">,</span> <span class="n">D</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+</code></pre></div><p>或者</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">D</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s1">&#39;=&gt;&#39;</span><span class="p">,</span> <span class="n">D</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+</code></pre></div><h4 id="迭代和优化">迭代和优化</h4>
+<p>for 循环看起来很像列表推导表达式，他们都是通用迭代工具。他们能工作于任何的遵守迭代协议的任意可迭代对象。</p>
+<p>列表推导和相关的函数编程工具，在某些代码运行得比 for 循环更快。</p>
+<h3 id="元组">元组</h3>
+<p><code>tuple</code>。</p>
+<p>元组是一个不可变的序列。</p>
+<p>特有的方法</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">t</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="c1"># 查找 item 出现的下标</span>
+<span class="n">t</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="c1"># 查找 item 出现的次数</span>
+</code></pre></div><p>只有一个元素</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,)</span>
+</code></pre></div><h3 id="文件">文件</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/file/path/file.txt&#39;</span><span class="p">)</span> <span class="c1"># 默认以读 &#39;r&#39; 模式打开文件</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="c1"># 读整个文件到 text</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/file/path/file.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="c1"># 写模式打开文件</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Hello, world</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div><p>使用迭代器</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</code></pre></div><h4 id="二进制字节文件">二进制字节文件</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">struct</span>
+<span class="n">packed</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;&gt;i4sh&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;spam&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.bin&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">packed</span><span class="p">)</span> <span class="c1"># 10</span>
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.bin&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;&gt;i4sh&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">))</span> <span class="c1"># (7, b&#39;spam&#39;, 8)</span>
+</code></pre></div><h4 id="unicode-文本文件">Unicode 文本文件</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">S</span> <span class="o">=</span> <span class="s1">&#39;sp</span><span class="se">\xc4</span><span class="s1">m&#39;</span>
+<span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;unidata.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">S</span><span class="p">)</span> <span class="c1"># 4 characters written</span>
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">text</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;unidata.txt&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">))</span> <span class="c1"># 4</span>
+
+<span class="n">raw</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;unidata.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">))</span> <span class="c1"># 5 </span>
+</code></pre></div><h4 id="其他类文件工具">其他类文件工具</h4>
+<p>Python 还有一些类文件工具：管道，FIFO，套接字，按键值访问的文件，持久化对象 shelve，基于描述符的文件，关系型数据库接口和面向对象数据库接口等。</p>
+<h3 id="其他核心类型">其他核心类型</h3>
+<p>集合 set</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">X</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;spam&#39;</span><span class="p">)</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">}</span>
+
+<span class="n">X</span> <span class="o">&amp;</span> <span class="n">Y</span> <span class="c1"># intersection</span>
+<span class="n">X</span> <span class="o">|</span> <span class="n">Y</span> <span class="c1"># union</span>
+<span class="n">X</span> <span class="o">-</span> <span class="n">Y</span> <span class="c1"># difference</span>
+<span class="n">X</span> <span class="o">&gt;</span> <span class="n">Y</span> <span class="c1"># super set</span>
+
+<span class="n">ps</span> <span class="o">=</span> <span class="p">{</span><span class="n">n</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]}</span>
+
+<span class="s1">&#39;p&#39;</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;spam&#39;</span><span class="p">)</span>
+</code></pre></div><p>十进制数（固定精度浮点数）和分数</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">decimal</span>
+<span class="kn">from</span> <span class="nn">fractions</span> <span class="kn">import</span> <span class="n">Fraction</span>
+</code></pre></div><p>布尔值</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kc">True</span>
+<span class="kc">False</span>
+</code></pre></div><p>特殊的占位符对象</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kc">None</span>
+</code></pre></div><h4 id="如何破坏代码的灵活性">如何破坏代码的灵活性</h4>
+<p>内置函数 type 可以返回对象类型。在 Python 3.X 中类型已经完全和类合并起来了。</p>
+<p>检查类型</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">L</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">==</span> <span class="nb">type</span><span class="p">([]):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;yes&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;yes&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;yes&#39;</span><span class="p">)</span>
+</code></pre></div><h4 id="用户定义的类">用户定义的类</h4>
+<p>后面章节详细展开。</p>
+<h4 id="剩余的内容">剩余的内容</h4>
+<p>Python 的每一样东西都是对象，但这不意味着一定要做面向对象的编程。</p>
+
+  </section>
+
+  <section>
+    
+        <a href="/algos/dp/sosdp/" class="previous_page">Prev: [算法][DP] 高维前缀和 SOS DP </a>
+    
+     <br> 
+    
+        <a href="/algos/gt/vizing/" class="next_page">Next: [算法][图论] Vizing 定理 </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>《Learning Python》 笔记 第 4 章 介绍 Python 对象类型</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#第-4-章-介绍-python-对象类型">第 4 章 介绍 Python 对象类型</a>
+      <ul>
+        <li><a href="#python-知识结构">Python 知识结构</a></li>
+        <li><a href="#为什么要使用内置类型">为什么要使用内置类型</a></li>
+        <li><a href="#python-核心数据类型">Python 核心数据类型</a></li>
+        <li><a href="#数字">数字</a></li>
+        <li><a href="#字符串">字符串</a>
+          <ul>
+            <li><a href="#序列操作">序列操作</a></li>
+            <li><a href="#不可变性">不可变性</a></li>
+            <li><a href="#特定类型的方法">特定类型的方法</a></li>
+            <li><a href="#寻求帮助">寻求帮助</a></li>
+            <li><a href="#字符串编程的其他方式">字符串编程的其他方式</a></li>
+            <li><a href="#unicode-字符串">Unicode 字符串</a></li>
+            <li><a href="#模式匹配">模式匹配</a></li>
+          </ul>
+        </li>
+        <li><a href="#列表">列表</a>
+          <ul>
+            <li><a href="#序列操作-1">序列操作</a></li>
+            <li><a href="#特定的操作">特定的操作</a></li>
+            <li><a href="#边界检查">边界检查</a></li>
+            <li><a href="#嵌套">嵌套</a></li>
+            <li><a href="#推导">推导</a></li>
+          </ul>
+        </li>
+        <li><a href="#字典">字典</a>
+          <ul>
+            <li><a href="#映射操作">映射操作</a></li>
+            <li><a href="#重访嵌套">重访嵌套</a></li>
+            <li><a href="#不存在的键if-测试">不存在的键：if 测试</a></li>
+            <li><a href="#键的排序for-循环">键的排序：for 循环</a></li>
+            <li><a href="#迭代和优化">迭代和优化</a></li>
+          </ul>
+        </li>
+        <li><a href="#元组">元组</a></li>
+        <li><a href="#文件">文件</a>
+          <ul>
+            <li><a href="#二进制字节文件">二进制字节文件</a></li>
+            <li><a href="#unicode-文本文件">Unicode 文本文件</a></li>
+            <li><a href="#其他类文件工具">其他类文件工具</a></li>
+          </ul>
+        </li>
+        <li><a href="#其他核心类型">其他核心类型</a>
+          <ul>
+            <li><a href="#如何破坏代码的灵活性">如何破坏代码的灵活性</a></li>
+            <li><a href="#用户定义的类">用户定义的类</a></li>
+            <li><a href="#剩余的内容">剩余的内容</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>

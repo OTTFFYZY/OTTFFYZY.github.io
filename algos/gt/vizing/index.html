@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  [算法][图论] Vizing 定理 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="Vizing 定理 对于简单图 $G$: $$\chi&amp;#39;(G) \le \Delta (G) &amp;#43; 1$$ 其中 $\chi&#39;(G)$ 为图 $G$ 的边色数，即最少使用多少颜色可以为 $G$ 的边染色，使得相邻边彼此颜色不同。$\Delta (G)$ 是图的最大点度数。 二分图 Vizing 定理 特别的对于二分图我们有 $$\chi&amp;#39;(G) = \Delta (G) $$ 我们可以构|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/sols">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">[算法][图论] Vizing 定理</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/%E7%AE%97%E6%B3%95' class="muted-link">
+  <span class="Label Label--gray-darker">算法</span>
+</a>
+
+
+
+
+
+
+
+<a href='/tags/%E5%9B%BE%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray">图论</span>
+</a>
+
+<a href='/tags/%E4%BA%8C%E5%88%86%E5%9B%BE' class="muted-link">
+  <span class="Label Label--gray">二分图</span>
+</a>
+
+<a href='/tags/%E6%9F%93%E8%89%B2' class="muted-link">
+  <span class="Label Label--gray">染色</span>
+</a>
+
+<a href='/tags/vizing-%E5%AE%9A%E7%90%86' class="muted-link">
+  <span class="Label Label--gray">Vizing 定理</span>
+</a>
+
+
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2022-08-17. Published at: 2022-08-17.">
+        
+          Published: 2022-08-17 周三 22:27:03
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="vizing-定理">Vizing 定理</h2>
+<p>对于简单图 $G$:</p>
+$$\chi&#39;(G) \le \Delta (G) &#43; 1$$
+<p>其中 $\chi'(G)$ 为图 $G$ 的边色数，即最少使用多少颜色可以为 $G$ 的边染色，使得相邻边彼此颜色不同。$\Delta (G)$ 是图的最大点度数。</p>
+<h3 id="二分图-vizing-定理">二分图 Vizing 定理</h3>
+<p>特别的对于二分图我们有</p>
+$$\chi&#39;(G) = \Delta (G) $$
+<p>我们可以构造性的证明这个结论：</p>
+<p>我们按顺序考虑每一条边 $&lt;u, v&gt;$，</p>
+<p>令 $c_u$ 为 $u$ 作为端点的边没用用过的最小颜色编号（$1$ 开始），令 $c_v$ 为 $v$ 作为端点的边没用用过的最小颜色编号。</p>
+<p>如果 $c_u = c_v$ 则我们直接将该颜色赋给边 $&lt;u, v&gt;$，否则我们假设 $c_u &lt; c_v$ 然后把进行如下操作，</p>
+<p>我们寻找一条以 $v$ 为起点的颜色按照 $c_u, c_v, c_u, c_v, \cdots$ 交替的增广路（这不会是一颗树，因为每个节点相邻的边彼此颜色不同），注意到此增广路一定不会过 $u$。因为图 $G$ 是一个二分图，则增广过程必然经过一条 $c_u$ 的边才能到达 $u$ 一侧的点，而如果到达 $u$ 这将与假设**$c_u$ 为 $u$ 作为端点的边没用用过的最小颜色编号**不符。</p>
+<p>此时我们将整个增广路上的颜色 $c_u$ 与 $c_v$ 翻转，于是 $v$ 点的为端点的边也没有 $c_u$ 颜色的了。从而我们可以将新边染色为 $c_u$。</p>
+<p>这里我们注意到 $c_u \le deg(u)$ 与 $c_v \le deg(v)$ 因此可以得到，所有用到的颜色都是少于 $\Delta (G)$ 的。</p>
+<p><strong>时间复杂度</strong> ： 增广路上最多会有 $O(V)$ 个点，因此总复杂度为 $O(EV)$。</p>
+<h4 id="例题及代码">例题及代码</h4>
+<p>Educational Codeforces Round 2F</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">io_</span><span class="o">=</span><span class="p">[](){</span> <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span> <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="k">nullptr</span><span class="p">);</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}();</span>
+
+<span class="k">using</span> <span class="n">LL</span> <span class="o">=</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">ULL</span> <span class="o">=</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">LD</span> <span class="o">=</span> <span class="kt">long</span> <span class="kt">double</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">PII</span> <span class="o">=</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">VI</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">MII</span> <span class="o">=</span> <span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">cmin</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span><span class="p">(</span><span class="n">y</span><span class="o">&lt;</span><span class="n">x</span><span class="p">)</span> <span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">cmax</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="n">y</span><span class="p">)</span> <span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">bool</span> <span class="n">ckmin</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="k">return</span> <span class="n">y</span><span class="o">&lt;</span><span class="n">x</span> <span class="o">?</span> <span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="nb">true</span><span class="p">)</span> <span class="o">:</span> <span class="nb">false</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">bool</span> <span class="n">ckmax</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="k">return</span> <span class="n">x</span><span class="o">&lt;</span><span class="n">y</span> <span class="o">?</span> <span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="nb">true</span><span class="p">)</span> <span class="o">:</span> <span class="nb">false</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">cmin</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">z</span><span class="p">)</span> <span class="p">{</span><span class="c1">// x&lt;=y&lt;=z 
+</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">z</span><span class="o">&lt;</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="n">y</span><span class="o">=</span><span class="n">x</span><span class="p">;</span> <span class="n">x</span><span class="o">=</span><span class="n">z</span><span class="p">;</span> <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span><span class="p">(</span><span class="n">z</span><span class="o">&lt;</span><span class="n">y</span><span class="p">)</span> <span class="n">y</span><span class="o">=</span><span class="n">z</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">cmax</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">z</span><span class="p">)</span> <span class="p">{</span><span class="c1">// x&gt;=y&gt;=z
+</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="n">z</span><span class="p">)</span> <span class="p">{</span> <span class="n">y</span><span class="o">=</span><span class="n">x</span><span class="p">;</span> <span class="n">x</span><span class="o">=</span><span class="n">z</span><span class="p">;</span> <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span><span class="p">(</span><span class="n">y</span><span class="o">&lt;</span><span class="n">z</span><span class="p">)</span> <span class="n">y</span><span class="o">=</span><span class="n">z</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="k">const</span> <span class="kt">int</span> <span class="n">MV</span> <span class="o">=</span> <span class="mi">1005</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">ME</span> <span class="o">=</span> <span class="mf">1e5</span> <span class="o">+</span> <span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">col</span><span class="p">[</span><span class="n">MV</span> <span class="o">+</span> <span class="n">MV</span><span class="p">][</span><span class="n">MV</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">id</span><span class="p">[</span><span class="n">MV</span> <span class="o">+</span> <span class="n">MV</span><span class="p">][</span><span class="n">MV</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">ans</span><span class="p">[</span><span class="n">ME</span><span class="p">];</span>
+
+<span class="kt">void</span> <span class="nf">setcol</span><span class="p">(</span><span class="kt">int</span> <span class="n">u</span><span class="p">,</span> <span class="kt">int</span> <span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">,</span> <span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">col</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span><span class="p">;</span>
+  <span class="n">col</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">u</span><span class="p">;</span>
+  <span class="n">id</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+  <span class="n">id</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+  <span class="n">ans</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">aug</span><span class="p">(</span><span class="kt">int</span> <span class="n">u</span><span class="p">,</span> <span class="kt">int</span> <span class="n">lu</span><span class="p">,</span> <span class="kt">int</span> <span class="n">lv</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">col</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">lu</span><span class="p">])</span> <span class="p">{</span>
+    <span class="n">col</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">lv</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="kt">int</span> <span class="n">v</span> <span class="o">=</span> <span class="n">col</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">lu</span><span class="p">];</span>
+  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">id</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">lu</span><span class="p">];</span>
+  <span class="n">aug</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">lv</span><span class="p">,</span> <span class="n">lu</span><span class="p">);</span>
+  <span class="n">col</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">lu</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">setcol</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">lv</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">b</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+
+  <span class="kt">int</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">u</span> <span class="o">&gt;&gt;</span> <span class="n">v</span><span class="p">;</span>
+    <span class="n">v</span> <span class="o">+=</span> <span class="n">a</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">lu</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">lv</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> 
+    <span class="k">while</span> <span class="p">(</span><span class="n">col</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">lu</span><span class="p">])</span> <span class="n">lu</span><span class="o">++</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">col</span><span class="p">[</span><span class="n">v</span><span class="p">][</span><span class="n">lv</span><span class="p">])</span> <span class="n">lv</span><span class="o">++</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">lu</span> <span class="o">==</span> <span class="n">lv</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">setcol</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">lu</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+      <span class="k">continue</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">lu</span> <span class="o">&gt;</span> <span class="n">lv</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">swap</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">);</span>
+      <span class="n">swap</span><span class="p">(</span><span class="n">lu</span><span class="p">,</span> <span class="n">lv</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">// lu &lt; lv
+</span><span class="c1"></span>
+    <span class="n">aug</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">lu</span><span class="p">,</span> <span class="n">lv</span><span class="p">);</span>
+    <span class="n">setcol</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">lu</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="kt">int</span> <span class="n">mx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cmax</span><span class="p">(</span><span class="n">mx</span><span class="p">,</span> <span class="n">ans</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+  <span class="p">}</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">mx</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="s">&#34; </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">[</span><span class="n">i</span> <span class="o">==</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> 
+  <span class="c1">// cin &gt;&gt; t;
+</span><span class="c1"></span>  <span class="k">while</span> <span class="p">(</span><span class="n">t</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">solve</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+  </section>
+
+  <section>
+    
+        <a href="/notes/learningpython/c04/" class="previous_page">Prev: 《Learning Python》 笔记 第 4 章 介绍 Python 对象类型 </a>
+    
+    
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>[算法][图论] Vizing 定理</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#vizing-定理">Vizing 定理</a>
+      <ul>
+        <li><a href="#二分图-vizing-定理">二分图 Vizing 定理</a>
+          <ul>
+            <li><a href="#例题及代码">例题及代码</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>

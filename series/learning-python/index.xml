@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learning Python on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/series/learning-python/</link>
+    <description>Recent content in Learning Python on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 27 Jan 2022 00:57:41 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/series/learning-python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>《Learning Python》 笔记 第 4 章 介绍 Python 对象类型</title>
+      <link>https://ottffyzy.github.io/notes/learningpython/c04/</link>
+      <pubDate>Thu, 27 Jan 2022 00:57:41 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/learningpython/c04/</guid>
+      <description>第 4 章 介绍 Python 对象类型 Python 知识结构 程序由模块构成 模块包含语句 语句包含表达式 表达式创建并处理对象 为什么要使用内置类型 容易编写，可扩展，往往效率高，是语言标准的一部分。 Python 核心数据类型 数字、字符串、列表、字典、</description>
+    </item>
+    
+    <item>
+      <title>《Learning Python》 笔记 第 3 章 你应如何运行程序</title>
+      <link>https://ottffyzy.github.io/notes/learningpython/c03/</link>
+      <pubDate>Wed, 19 Jan 2022 15:54:54 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/learningpython/c03/</guid>
+      <description>第 3 章 你应如何运行程序 交互式命令行模式 开始一个交互式会话 &amp;gt;python Windows （cmd）上使用 &amp;lt;CTRL-Z&amp;gt; UNIX/PowerShell 上使用 &amp;lt;CTRL-D&amp;gt; 结束会话。 Python 3.3 中的新 Windows 选项：PATH 和 启动器 启动器用户可以输入 py 代替 python 并避免一些配置步骤。启动器可以更好的显式掌</description>
+    </item>
+    
+    <item>
+      <title>《Learning Python》 笔记 第 2 章 Python 如何运行程序</title>
+      <link>https://ottffyzy.github.io/notes/learningpython/c02/</link>
+      <pubDate>Mon, 17 Jan 2022 23:47:31 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/learningpython/c02/</guid>
+      <description>《Learning Python》 笔记 第 2 章 Python 如何运行程序 Python 解释器简介 Python 是一门编程语言，同时是一个名为解释器的软件包。 解释器是让其他程序运行起来的程序，是代码与机器的计算机硬件之间的软件逻辑层。 Python 包安装</description>
+    </item>
+    
+    <item>
+      <title>《Learning Python》 笔记 第 1 章 问答环节</title>
+      <link>https://ottffyzy.github.io/notes/learningpython/c01/</link>
+      <pubDate>Mon, 17 Jan 2022 16:47:13 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/learningpython/c01/</guid>
+      <description>《Learning Python》 笔记 第 1 章 问答环节 Python 是一门脚本语言吗 Python 是通用型编程语言，时常扮演脚本语言的角色。 Python 的缺点 比起完全编译并比较底层的语言，执行速度不够快。 使用 Python 可以做什么 系统编程、GUI、</description>
+    </item>
+    
+  </channel>
+</rss>

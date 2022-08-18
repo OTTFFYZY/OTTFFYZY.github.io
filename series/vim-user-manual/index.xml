@@ -6,7 +6,70 @@
     <description>Recent content in Vim User Manual on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 11 Jan 2022 22:38:05 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/series/vim-user-manual/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Jan 2022 21:13:07 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/series/vim-user-manual/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Vim] usr_11</title>
+      <link>https://ottffyzy.github.io/notes/vimusermanual/c11/</link>
+      <pubDate>Wed, 19 Jan 2022 21:13:07 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/vimusermanual/c11/</guid>
+      <description>usr_11 从崩溃中恢复 11.1 基本恢复 一般来说如果硬盘没坏，崩溃了之后，文件的大部分内容可以恢复。 vim -r &amp;lt;FILENAME&amp;gt;这时 Vim 会读取 .swp 文件。为安全起见可以另存这个新文件。 可以用 vimdiff 比较新旧文件。 如果编辑</description>
+    </item>
+    
+    <item>
+      <title>[Vim] usr_09</title>
+      <link>https://ottffyzy.github.io/notes/vimusermanual/c09/</link>
+      <pubDate>Mon, 17 Jan 2022 22:14:37 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/vimusermanual/c09/</guid>
+      <description>usr_09 使用 GUI 版本 09.1 GUI 版本的组件 gvim &amp;lt;FILENAME&amp;gt; vim -g &amp;lt;FILENAME&amp;gt; 标题栏文件名后可能会跟一个符号 - 文件不能被修改 + 已经被修改过 = 文件只读 =+ 只读但被修改过 没有标记则是一个普通的打开但没修改过的文件。 09.2 使用鼠标 使用鼠标可以移动光标和选</description>
+    </item>
+    
+    <item>
+      <title>[Vim] usr_08</title>
+      <link>https://ottffyzy.github.io/notes/vimusermanual/c08/</link>
+      <pubDate>Mon, 17 Jan 2022 18:42:42 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/vimusermanual/c08/</guid>
+      <description>usr_08 分割窗口 08.1 分割窗口 增加一个水平的分割线 :split要在窗口间跳转可以使用 &amp;lt;CTRL-W&amp;gt;w或 &amp;lt;CTRL-W&amp;gt;&amp;lt;CTRL-W&amp;gt;关闭当前窗口 :close多数时候类似于</description>
+    </item>
+    
+    <item>
+      <title>[Vim] usr_07</title>
+      <link>https://ottffyzy.github.io/notes/vimusermanual/c07/</link>
+      <pubDate>Mon, 17 Jan 2022 00:30:44 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/vimusermanual/c07/</guid>
+      <description>usr_07 编辑多个文件 07.1 编辑另一个文件 :edit &amp;lt;FILENAME&amp;gt;需要先保存当前文件的修改，或者使用 :edit! &amp;lt;FILENAME&amp;gt;放弃当前文件修改并打开另一个文件。 想编辑其他文件又不保存当前文件则可</description>
+    </item>
+    
+    <item>
+      <title>[Vim] usr_06</title>
+      <link>https://ottffyzy.github.io/notes/vimusermanual/c06/</link>
+      <pubDate>Mon, 17 Jan 2022 00:09:44 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/vimusermanual/c06/</guid>
+      <description>usr_06 使用语法高亮 06.1 功能激活 :syntax enable只在支持色彩的终端中生效，在 vimrc 中加入 if &amp;amp;t_Co &amp;gt; 1 syntax enableendif只在 Gui 版本生效则在 gvimrc 加入 syntax enable06.2 颜色显示不出来或者显示出错误的颜色怎么办？ 终端不支持彩色，这时 vim 会</description>
+    </item>
+    
+    <item>
+      <title>[Vim] usr_05</title>
+      <link>https://ottffyzy.github.io/notes/vimusermanual/c05/</link>
+      <pubDate>Sat, 15 Jan 2022 17:10:30 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/vimusermanual/c05/</guid>
+      <description>usr_05 选项设置 05.1 vimrc 文件 可以使用如下命令打开 Vim 配置文件 :edit $MYVIMRC可以在开头放上 source $VIMRUNTIME/defaults.vim来导入默认配置。vimrc 文件可以包含任何冒号命令。 05.2 vimrc 示例解释 if has(&amp;#34;vms&amp;#34;) set</description>
+    </item>
+    
+    <item>
+      <title>[Vim] usr_04</title>
+      <link>https://ottffyzy.github.io/notes/vimusermanual/c04/</link>
+      <pubDate>Thu, 13 Jan 2022 23:52:19 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/vimusermanual/c04/</guid>
+      <description>usr_04 作小改动 04.1 操作符与动作 Vim 只删除从当前位置到”动作“把光标移动到的位置的前一个位置。是否包括光标所在的字符取决于你使用的移动命令。包括当前字符在参考手册中称为 inclusive、否则成为 exclusi</description>
+    </item>
+    
     <item>
       <title>[Vim] usr_03</title>
       <link>https://ottffyzy.github.io/notes/vimusermanual/c03/</link>

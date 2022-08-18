@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  [Vim] usr_05 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="usr_05 选项设置 05.1 vimrc 文件 可以使用如下命令打开 Vim 配置文件 :edit $MYVIMRC可以在开头放上 source $VIMRUNTIME/defaults.vim来导入默认配置。vimrc 文件可以包含任何冒号命令。 05.2 vimrc 示例解释 if has(&amp;#34;vms&amp;#34;) set|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/sols">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">[Vim] usr_05</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/vim-user-manual' class="muted-link">
+  <span class="Label Label--gray">Vim User Manual</span>
+</a>
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2022-01-15. Published at: 2022-01-15.">
+        
+          Published: 2022-01-15 周六 17:10:30
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="usr_05-选项设置">usr_05 选项设置</h2>
+<h3 id="051-vimrc-文件">05.1 vimrc 文件</h3>
+<p>可以使用如下命令打开 Vim 配置文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">edit</span> $<span class="nx">MYVIMRC</span><span class="err">
+</span></code></pre></div><p>可以在开头放上</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">source</span> $<span class="nx">VIMRUNTIME</span>/<span class="nx">defaults</span>.<span class="nx">vim</span><span class="err">
+</span></code></pre></div><p>来导入默认配置。vimrc 文件可以包含任何冒号命令。</p>
+<h3 id="052-vimrc-示例解释">05.2 vimrc 示例解释</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="k">if</span> <span class="nx">has</span><span class="p">(</span><span class="s2">&#34;vms&#34;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>  <span class="nx">set</span> <span class="nx">nobackup</span>		<span class="c">&#34; do not keep a backup file, use versions instead</span><span class="err">
+</span><span class="err"></span><span class="k">else</span><span class="err">
+</span><span class="err"></span>  <span class="nx">set</span> <span class="nx">backup</span>		<span class="c">&#34; keep a backup file (restore to previous version)</span><span class="err">
+</span><span class="err"></span>  <span class="k">if</span> <span class="nx">has</span><span class="p">(</span><span class="s1">&#39;persistent_undo&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>    <span class="nx">set</span> <span class="nx">undofile</span>	<span class="c">&#34; keep an undo file (undo changes after closing)</span><span class="err">
+</span><span class="err"></span>  <span class="k">endif</span><span class="err">
+</span><span class="err"></span><span class="k">endif</span><span class="err">
+</span></code></pre></div><p>有关覆盖保存生成备份文件，和可持久化撤销。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="k">if</span> &amp;<span class="nx">t_Co</span> <span class="p">&gt;</span> <span class="m">2</span> <span class="p">||</span> <span class="nx">has</span><span class="p">(</span><span class="s2">&#34;gui_running&#34;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="c">  &#34; Switch on highlighting the last used search pattern.</span><span class="err">
+</span><span class="err"></span>  <span class="nx">set</span> <span class="nx">hlsearch</span><span class="err">
+</span><span class="err"></span><span class="k">endif</span><span class="err">
+</span></code></pre></div><p>高亮上次搜索</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="c">&#34; Put these in an autocmd group, so that we can delete them easily.</span><span class="err">
+</span><span class="err"></span><span class="nx">augroup</span> <span class="nx">vimrcEx</span><span class="err">
+</span><span class="err"></span>  <span class="nx">au</span><span class="p">!</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">  &#34; For all text files set &#39;textwidth&#39; to 78 characters.</span><span class="err">
+</span><span class="err"></span>  <span class="nx">autocmd</span> <span class="nx">FileType</span> <span class="nx">text</span> <span class="nx">setlocal</span> <span class="nx">textwidth</span><span class="p">=</span><span class="m">78</span><span class="err">
+</span><span class="err"></span><span class="nx">augroup</span> <span class="nx">END</span><span class="err">
+</span></code></pre></div><p>text 文件行长度超过 78 自动换行。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="c">&#34; Add optional packages.</span><span class="err">
+</span><span class="err"></span><span class="c">&#34;</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; The matchit plugin makes the % command work better, but it is not backwards</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; compatible.</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; The ! means the package won&#39;t be loaded right away but when plugins are</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; loaded during initialization.</span><span class="err">
+</span><span class="err"></span><span class="k">if</span> <span class="nx">has</span><span class="p">(</span><span class="s1">&#39;syntax&#39;</span><span class="p">)</span> &amp;&amp; <span class="nx">has</span><span class="p">(</span><span class="s1">&#39;eval&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>  <span class="nx">packadd</span><span class="p">!</span> <span class="nx">matchit</span><span class="err">
+</span><span class="err"></span><span class="k">endif</span><span class="err">
+</span></code></pre></div><p>载入 matchit 插件增强 <code>%</code> 命令。</p>
+<h3 id="053-defaultsvim-文件解释">05.3 defaults.vim 文件解释</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="c">&#34; Bail out if something that ran earlier, e.g. a system wide vimrc, does not</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; want Vim to use these default values.</span><span class="err">
+</span><span class="err"></span><span class="k">if</span> <span class="nx">exists</span><span class="p">(</span><span class="s1">&#39;skip_defaults_vim&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>  <span class="nx">finish</span><span class="err">
+</span><span class="err"></span><span class="k">endif</span><span class="err">
+</span></code></pre></div><p>该文件的载入可以使用</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="k">let</span> <span class="nx">skip_defaults_vim</span> <span class="p">=</span> <span class="m">1</span><span class="err">
+</span></code></pre></div><p>跳过。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="c">&#34; Use Vim settings, rather than Vi settings (much better!).</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; This must be first, because it changes other options as a side effect.</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; Avoid side effects when it was already reset.</span><span class="err">
+</span><span class="err"></span><span class="k">if</span> &amp;<span class="nx">compatible</span><span class="err">
+</span><span class="err"></span>  <span class="nx">set</span> <span class="nx">nocompatible</span><span class="err">
+</span><span class="err"></span><span class="k">endif</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; When the +eval feature is missing, the set command above will be skipped.</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; Use a trick to reset compatible only when the +eval feature is missing.</span><span class="err">
+</span><span class="err"></span><span class="nx">silent</span><span class="p">!</span> <span class="nx">while</span> <span class="m">0</span><span class="err">
+</span><span class="err"></span>  <span class="nx">set</span> <span class="nx">nocompatible</span><span class="err">
+</span><span class="err"></span><span class="nx">silent</span><span class="p">!</span> <span class="nx">endwhile</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; Allow backspacing over everything in insert mode.</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">backspace</span><span class="p">=</span><span class="nx">indent</span><span class="p">,</span><span class="nx">eol</span><span class="p">,</span><span class="nx">start</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">history</span><span class="p">=</span><span class="m">200</span>		<span class="c">&#34; keep 200 lines of command line history</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">ruler</span>		<span class="c">&#34; show the cursor position all the time</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">showcmd</span>		<span class="c">&#34; display incomplete commands</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">wildmenu</span>		<span class="c">&#34; display completion matches in a status line</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">ttimeout</span>		<span class="c">&#34; time out for key codes</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">ttimeoutlen</span><span class="p">=</span><span class="m">100</span>	<span class="c">&#34; wait up to 100ms after Esc for special key</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; Show @@@ in the last line if it is truncated.</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">display</span><span class="p">=</span><span class="nx">truncate</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; Show a few lines of context around the cursor.  Note that this makes the</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; text scroll if you mouse-click near the start or end of the window.</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">scrolloff</span><span class="p">=</span><span class="m">5</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; Do incremental searching when it&#39;s possible to timeout.</span><span class="err">
+</span><span class="err"></span><span class="k">if</span> <span class="nx">has</span><span class="p">(</span><span class="s1">&#39;reltime&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>  <span class="nx">set</span> <span class="nx">incsearch</span><span class="err">
+</span><span class="err"></span><span class="k">endif</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; Do not recognize octal numbers for Ctrl-A and Ctrl-X, most users find it</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; confusing.</span><span class="err">
+</span><span class="err"></span><span class="nx">set</span> <span class="nx">nrformats</span><span class="p">-=</span><span class="nx">octal</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; For Win32 GUI: remove &#39;t&#39; flag from &#39;guioptions&#39;: no tearoff menu entries.</span><span class="err">
+</span><span class="err"></span><span class="k">if</span> <span class="nx">has</span><span class="p">(</span><span class="s1">&#39;win32&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>  <span class="nx">set</span> <span class="nx">guioptions</span><span class="p">-=</span><span class="nx">t</span><span class="err">
+</span><span class="err"></span><span class="k">endif</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; Don&#39;t use Ex mode, use Q for formatting.</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; Revert with &#34;:unmap Q&#34;.</span><span class="err">
+</span><span class="err"></span><span class="nx">map</span> <span class="nx">Q</span> <span class="nx">gq</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; so that you can undo CTRL-U after inserting a line break.</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; Revert with &#34;:iunmap &lt;C-U&gt;&#34;.</span><span class="err">
+</span><span class="err"></span><span class="nx">inoremap</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">U</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">G</span><span class="p">&gt;</span><span class="nx">u</span><span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">U</span><span class="p">&gt;</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; In many terminal emulators the mouse works just fine.  By enabling it you</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; can position the cursor, Visually select and scroll with the mouse.</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; Only xterm can grab the mouse events when using the shift key, for other</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; terminals use &#34;:&#34;, select text and press Esc.</span><span class="err">
+</span><span class="err"></span><span class="k">if</span> <span class="nx">has</span><span class="p">(</span><span class="s1">&#39;mouse&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>  <span class="k">if</span> &amp;<span class="nx">term</span> <span class="p">=~</span> <span class="s1">&#39;xterm&#39;</span><span class="err">
+</span><span class="err"></span>    <span class="nx">set</span> <span class="nx">mouse</span><span class="p">=</span><span class="nx">a</span><span class="err">
+</span><span class="err"></span>  <span class="k">else</span><span class="err">
+</span><span class="err"></span>    <span class="nx">set</span> <span class="nx">mouse</span><span class="p">=</span><span class="nx">nvi</span><span class="err">
+</span><span class="err"></span>  <span class="k">endif</span><span class="err">
+</span><span class="err"></span><span class="k">endif</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; Only do this part when Vim was compiled with the +eval feature.</span><span class="err">
+</span><span class="err"></span><span class="k">if</span> <span class="m">1</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">  &#34; Enable file type detection.</span><span class="err">
+</span><span class="err"></span><span class="c">  &#34; Use the default filetype settings, so that mail gets &#39;tw&#39; set to 72,</span><span class="err">
+</span><span class="err"></span><span class="c">  &#34; &#39;cindent&#39; is on in C files, etc.</span><span class="err">
+</span><span class="err"></span><span class="c">  &#34; Also load indent files, to automatically do language-dependent indenting.</span><span class="err">
+</span><span class="err"></span><span class="c">  &#34; Revert with &#34;:filetype off&#34;.</span><span class="err">
+</span><span class="err"></span>  <span class="nx">filetype</span> <span class="nx">plugin</span> <span class="nx">indent</span> <span class="nx">on</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">  &#34; Put these in an autocmd group, so that you can revert them with:</span><span class="err">
+</span><span class="err"></span><span class="c">  &#34; &#34;:augroup vimStartup | au! | augroup END&#34;</span><span class="err">
+</span><span class="err"></span>  <span class="nx">augroup</span> <span class="nx">vimStartup</span><span class="err">
+</span><span class="err"></span>    <span class="nx">au</span><span class="p">!</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">    &#34; When editing a file, always jump to the last known cursor position.</span><span class="err">
+</span><span class="err"></span><span class="c">    &#34; Don&#39;t do it when the position is invalid, when inside an event handler</span><span class="err">
+</span><span class="err"></span><span class="c">    &#34; (happens when dropping a file on gvim) and for a commit message (it&#39;s</span><span class="err">
+</span><span class="err"></span><span class="c">    &#34; likely a different one than last time).</span><span class="err">
+</span><span class="err"></span>    <span class="nx">autocmd</span> <span class="nx">BufReadPost</span> *<span class="err">
+</span><span class="err"></span>      \ <span class="k">if</span> <span class="nx">line</span><span class="p">(</span><span class="s2">&#34;&#39;\&#34;&#34;</span><span class="p">)</span> <span class="p">&gt;=</span> <span class="m">1</span> &amp;&amp; <span class="nx">line</span><span class="p">(</span><span class="s2">&#34;&#39;\&#34;&#34;</span><span class="p">)</span> <span class="p">&lt;=</span> <span class="nx">line</span><span class="p">(</span><span class="s2">&#34;$&#34;</span><span class="p">)</span> &amp;&amp; &amp;<span class="nx">ft</span> <span class="p">!~</span># <span class="s1">&#39;commit&#39;</span><span class="err">
+</span><span class="err"></span>      \ <span class="p">|</span>   <span class="nx">exe</span> <span class="s2">&#34;normal! g`\&#34;&#34;</span><span class="err">
+</span><span class="err"></span>      \ <span class="p">|</span> <span class="k">endif</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span>  <span class="nx">augroup</span> <span class="nx">END</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="k">endif</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; Switch syntax highlighting on when the terminal has colors or when using the</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; GUI (which always has colors).</span><span class="err">
+</span><span class="err"></span><span class="k">if</span> &amp;<span class="nx">t_Co</span> <span class="p">&gt;</span> <span class="m">2</span> <span class="p">||</span> <span class="nx">has</span><span class="p">(</span><span class="s2">&#34;gui_running&#34;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="c">  &#34; Revert with &#34;:syntax off&#34;.</span><span class="err">
+</span><span class="err"></span>  <span class="nx">syntax</span> <span class="nx">on</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">  &#34; I like highlighting strings inside C comments.</span><span class="err">
+</span><span class="err"></span><span class="c">  &#34; Revert with &#34;:unlet c_comment_strings&#34;.</span><span class="err">
+</span><span class="err"></span>  <span class="k">let</span> <span class="nx">c_comment_strings</span><span class="p">=</span><span class="m">1</span><span class="err">
+</span><span class="err"></span><span class="k">endif</span><span class="err">
+</span><span class="err"></span><span class="c">
+</span><span class="c">&#34; Convenient command to see the difference between the current buffer and the</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; file it was loaded from, thus the changes you made.</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; Only define it when not defined already.</span><span class="err">
+</span><span class="err"></span><span class="c">&#34; Revert with: &#34;:delcommand DiffOrig&#34;.</span><span class="err">
+</span><span class="err"></span><span class="k">if</span> <span class="p">!</span><span class="nx">exists</span><span class="p">(</span><span class="s2">&#34;:DiffOrig&#34;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span>  <span class="nx">command</span> <span class="nx">DiffOrig</span> <span class="nx">vert</span> <span class="nx">new</span> <span class="p">|</span> <span class="nx">set</span> <span class="nx">bt</span><span class="p">=</span><span class="nx">nofile</span> <span class="p">|</span> <span class="nx">r</span> <span class="p">++</span><span class="nx">edit</span> # <span class="p">|</span> <span class="m">0</span>d_ <span class="p">|</span> <span class="nx">diffthis</span><span class="err">
+</span><span class="err"></span>		  \ <span class="p">|</span> <span class="nx">wincmd</span> <span class="nx">p</span> <span class="p">|</span> <span class="nx">diffthis</span><span class="err">
+</span><span class="err"></span><span class="k">endif</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="k">if</span> <span class="nx">has</span><span class="p">(</span><span class="s1">&#39;langmap&#39;</span><span class="p">)</span> &amp;&amp; <span class="nx">exists</span><span class="p">(</span><span class="s1">&#39;+langremap&#39;</span><span class="p">)</span><span class="err">
+</span><span class="err"></span><span class="c">  &#34; Prevent that the langmap option applies to characters that result from a</span><span class="err">
+</span><span class="err"></span><span class="c">  &#34; mapping.  If set (default), this may break plugins (but it&#39;s backward</span><span class="err">
+</span><span class="err"></span><span class="c">  &#34; compatible).</span><span class="err">
+</span><span class="err"></span>  <span class="nx">set</span> <span class="nx">nolangremap</span><span class="err">
+</span><span class="err"></span><span class="k">endif</span><span class="err">
+</span></code></pre></div><h3 id="054-简单键盘映射">05.4 简单键盘映射</h3>
+<p>映射可以把一系列命令映射到一个单独的按键，例如用 <code>&lt;F5&gt;</code> 给一个单词加括号</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">map</span> <span class="p">&lt;</span><span class="nx">F5</span><span class="p">&gt;</span> <span class="nx">i</span>{<span class="p">&lt;</span><span class="nx">ESC</span><span class="p">&gt;</span><span class="nx">ea</span>}<span class="p">&lt;</span><span class="nx">ESC</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>可以给 <code>\&lt;CHAR&gt;</code> 绑定命令</p>
+<p>使用</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">map</span><span class="err">
+</span></code></pre></div><p>可以列出当前已经定义的映射。</p>
+<h3 id="055-添加软件包">05.5 添加软件包</h3>
+<h3 id="056-添加插件">05.6 添加插件</h3>
+<h3 id="057-添加帮助">05.7 添加帮助</h3>
+<h3 id="058-选项窗口">05.8 选项窗口</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">options</span><span class="err">
+</span></code></pre></div><p>会打开一个新的窗口更改选项。</p>
+<p>可以使用 <code>&lt;ENTER&gt;</code> 更改其中选项打开关闭。或者修改后使用 <code>&lt;ENTER&gt;</code> 使选项生效。</p>
+<h3 id="059-常用选项">05.9 常用选项</h3>
+<p>查询某个选项 <code>&lt;OP&gt;</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">help</span> <span class="s1">&#39;&lt;OP&gt;&#39;</span><span class="err">
+</span></code></pre></div><p>恢复某个选项默认值</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">set</span> <span class="p">&lt;</span><span class="nx">OP</span><span class="p">&gt;</span>&amp;<span class="err">
+</span></code></pre></div><h4 id="长行不回绕">长行不回绕</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">set</span> <span class="nx">nowrap</span><span class="err">
+</span></code></pre></div><p>不回绕一次滚动的字符数</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">set</span> <span class="nx">sidescroll</span><span class="p">=</span><span class="m">10</span><span class="err">
+</span></code></pre></div><h4 id="移动命令换行">移动命令换行</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">set</span> <span class="nx">whichwrap</span><span class="p">=</span><span class="nx">b</span><span class="p">,</span><span class="nx">s</span><span class="p">,&lt;,&gt;,</span>[<span class="p">,</span>]<span class="err">
+</span></code></pre></div><p>这样 <code>&lt;BS&gt;</code>，<code>&lt;SPACE&gt;</code>，<code>&lt;LEFT&gt;</code>，<code>&lt;RIGHT&gt;</code> （<code>&lt;,&gt;</code> 针对普通模式方向键，<code>[,]</code> 针对插入模式方向键）将都可以跨行使用。</p>
+<h4 id="显示-tab">显示 TAB</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">set</span> <span class="nx">list</span><span class="err">
+</span></code></pre></div><p>或者</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">set</span> <span class="nx">listchars</span><span class="p">=</span><span class="nx">tab</span>:<span class="p">&gt;-,</span><span class="nx">trail</span>:<span class="p">-</span><span class="err">
+</span></code></pre></div><h4 id="关键字">关键字</h4>
+<p>查看那些字母可以出现在字母中</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">set</span> <span class="nx">iskeyword</span><span class="err">
+</span></code></pre></div><p>显示</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"> <span class="nx">iskeyword</span><span class="p">=</span>@<span class="p">,</span><span class="m">48-57</span><span class="p">,</span><span class="nx">_</span><span class="p">,</span><span class="m">128-167</span><span class="p">,</span><span class="m">224-235</span> <span class="err">
+</span></code></pre></div><p>其中数字是字符的 ASCII 码。</p>
+<p>可以加入或者删除某些新字符。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">set</span> <span class="nx">iskeyword</span><span class="p">+=-</span><span class="err">
+</span><span class="err"></span><span class="p">:</span><span class="nx">set</span> <span class="nx">iskeyword</span><span class="p">-=-</span><span class="err">
+</span></code></pre></div><h4 id="显示消息的空间">显示消息的空间</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">:</span><span class="nx">set</span> <span class="nx">cmdheight</span><span class="p">=</span><span class="m">3</span><span class="err">
+</span></code></pre></div>
+  </section>
+
+  <section>
+    
+        <a href="/notes/vimusermanual/c04/" class="previous_page">Prev: [Vim] usr_04 </a>
+    
+     <br> 
+    
+        <a href="/notes/vimusermanual/c06/" class="next_page">Next: [Vim] usr_06 </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>[Vim] usr_05</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#usr_05-选项设置">usr_05 选项设置</a>
+      <ul>
+        <li><a href="#051-vimrc-文件">05.1 vimrc 文件</a></li>
+        <li><a href="#052-vimrc-示例解释">05.2 vimrc 示例解释</a></li>
+        <li><a href="#053-defaultsvim-文件解释">05.3 defaults.vim 文件解释</a></li>
+        <li><a href="#054-简单键盘映射">05.4 简单键盘映射</a></li>
+        <li><a href="#055-添加软件包">05.5 添加软件包</a></li>
+        <li><a href="#056-添加插件">05.6 添加插件</a></li>
+        <li><a href="#057-添加帮助">05.7 添加帮助</a></li>
+        <li><a href="#058-选项窗口">05.8 选项窗口</a></li>
+        <li><a href="#059-常用选项">05.9 常用选项</a>
+          <ul>
+            <li><a href="#长行不回绕">长行不回绕</a></li>
+            <li><a href="#移动命令换行">移动命令换行</a></li>
+            <li><a href="#显示-tab">显示 TAB</a></li>
+            <li><a href="#关键字">关键字</a></li>
+            <li><a href="#显示消息的空间">显示消息的空间</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>

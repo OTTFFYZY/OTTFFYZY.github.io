@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  [Vim] usr_04 &ndash; OTTFF&#39;s Blog
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="usr_04 作小改动 04.1 操作符与动作 Vim 只删除从当前位置到”动作“把光标移动到的位置的前一个位置。是否包括光标所在的字符取决于你使用的移动命令。包括当前字符在参考手册中称为 inclusive、否则成为 exclusi|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/github-gist.css">
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/sols">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">[Vim] usr_04</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/vim-user-manual' class="muted-link">
+  <span class="Label Label--gray">Vim User Manual</span>
+</a>
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2022-01-13. Published at: 2022-01-13.">
+        
+          Published: 2022-01-13 周四 23:52:19
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <h2 id="usr_04-作小改动">usr_04 作小改动</h2>
+<h3 id="041-操作符与动作">04.1 操作符与动作</h3>
+<p>Vim 只删除从当前位置到”动作“把光标移动到的位置的前一个位置。是否包括光标所在的字符取决于你使用的移动命令。包括当前字符在参考手册中称为 <code>inclusive</code>、否则成为 <code>exclusive</code>。</p>
+<h3 id="042-修改文本">04.2 修改文本</h3>
+<p>修改 change</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">c</span><span class="p">&lt;</span><span class="nx">MOTION</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>但这里 <code>cw</code> 的行为会与 <code>dw</code> 不同，它会保留下个单词前面的空格。</p>
+<p><code>cc</code> 会修改整行，但是会保留前面的缩进。</p>
+<h4 id="快捷键">快捷键</h4>
+<p>有些操作符命令组合很常用于是就有了单字符的命令</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">x</span> <span class="p">-&gt;</span> <span class="nx">dl</span><span class="err">
+</span><span class="err"></span><span class="nx">X</span> <span class="p">-&gt;</span> <span class="nx">dh</span><span class="err">
+</span><span class="err"></span><span class="nx">D</span> <span class="p">-&gt;</span> <span class="nx">d</span>$<span class="err">
+</span><span class="err"></span><span class="nx">C</span> <span class="p">-&gt;</span> <span class="nx">c</span>$<span class="err">
+</span><span class="err"></span><span class="nx">s</span> <span class="p">-&gt;</span> <span class="nx">cl</span><span class="err">
+</span><span class="err"></span><span class="nx">S</span> <span class="p">-&gt;</span> <span class="nx">cc</span><span class="err">
+</span></code></pre></div><p>计数前缀可以放在这个命令前或者动作前。</p>
+<h4 id="替换单个字符">替换单个字符</h4>
+<p>把光标位置替换成字符 <code>&lt;C&gt;</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">r</span><span class="p">&lt;</span><span class="nx">C</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>但注意这个命令不会改变模式。同时 <code>r</code> 不是操作符，但我们可以通过在命令前加入计数前缀同时将多个字符改为单个字符。</p>
+<p>特别的对于</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">&lt;</span><span class="nx">NUM</span><span class="p">&gt;</span><span class="nx">r</span><span class="p">&lt;</span><span class="nx">ENTER</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>会把 <code>&lt;NUM&gt;</code> 个空格替换成一个 <code>&lt;ENTER&gt;</code>。</p>
+<h3 id="043-重复一个修改">04.3 重复一个修改</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim">.<span class="err">
+</span></code></pre></div><p>是 Vim 中的重要命令，它可以重复最后一次的”修改“操作。它可以重复任何除 <code>u</code>，<code>&lt;CTRL-R&gt;</code> 和冒号命令外的修改。</p>
+<h3 id="044-可视模式">04.4 可视模式</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">v</span><span class="err">
+</span></code></pre></div><p>可以进入可视模式框选一些内容，然后后面加入某些命令。</p>
+<h4 id="按行选择">按行选择</h4>
+<p>如果希望按整行选择</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">V</span><span class="err">
+</span></code></pre></div><h4 id="列块选择">列块选择</h4>
+<p>对于一个表格形式的文档，可以用</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">&lt;</span><span class="nx">CTRL</span><span class="p">-</span><span class="nx">V</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>选择一些列块。</p>
+<h4 id="移动到另一端">移动到另一端</h4>
+<p>在可视模式下使用</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">o</span><span class="err">
+</span></code></pre></div><p>可以将光标移动到选择文字的另一端 (other end)。</p>
+<p>当使用列块模式，选择区域会有四个角，<code>o</code> 将移动到对角，而 <code>O</code> 可以移动到同一行的另一个角。</p>
+<h3 id="045-移动文本">04.5 移动文本</h3>
+<p><code>d</code> 或 <code>x</code> 删除文本时，这些删除的文本 Vim 会保存起来。可以使用 (put)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">p</span><span class="err">
+</span></code></pre></div><p>命令插入这些保存的内容</p>
+<p>可以使用 <code>x</code> 命令配合 <code>p</code> 命令微调一些 typo。</p>
+<h3 id="046-拷贝文本">04.6 拷贝文本</h3>
+<p>可以使用</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">y</span><span class="err">
+</span></code></pre></div><p>(抽出 <code>yank</code>) 来拷贝内容，行为类似于删除命令 <code>d</code>。</p>
+<p>这里注意 <code>yw</code> 是附带了单词后的空格的，不要空格则要使用 <code>ye</code>。</p>
+<p>一个小区别是 <code>D</code> 删除到行尾，而 <code>Y</code> 复制整行，<code>y$</code> 则是复制到行尾 。</p>
+<h3 id="047-使用剪贴板">04.7 使用剪贴板</h3>
+<p>在 gvim 中可以在 Edit 菜单中找到 Copy 和 Paste。这样可以在 vim 和其他程序之间拷贝。</p>
+<p>如果不是 GUI 版本，则拷贝到剪贴板</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim">”*<span class="nx">y</span><span class="p">&lt;</span><span class="nx">MOTION</span><span class="p">&gt;</span><span class="err">
+</span></code></pre></div><p>从剪贴板粘贴</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim">“*<span class="nx">p</span><span class="err">
+</span></code></pre></div><p>需要 Vim 版本支持剪贴板 （clipboard）。</p>
+<h3 id="048-文本对象">04.8 文本对象</h3>
+<p>除了 <code>&lt;操作符&gt;&lt;动作&gt;</code> 方法还有 <code>&lt;操作符&gt;&lt;文本对象&gt;</code>。</p>
+<p>例如删除一个单词可以</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">daw</span><span class="err">
+</span></code></pre></div><p>其中 aw 就是一个文本对象表示一个单词（a word）。</p>
+<p>完整的文本对象见 <code>text-objects</code>。</p>
+<h3 id="049-替换模式">04.9 替换模式</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">R</span><span class="err">
+</span></code></pre></div><p>命令会启动替换模式直到 <code>&lt;ESC&gt;</code>。</p>
+<p>注意替换模式下，如果超出行范围，会自动进行行扩展而不是替换到下一行。</p>
+<p>替换模式下 <code>&lt;BS&gt;</code> 会还原替换前的字符。</p>
+<p>可以通过 <code>&lt;INSERT&gt;</code> 在插入模式和替换模式之间切换。</p>
+<h3 id="0410-结论">04.10 结论</h3>
+<p>操作符列表见 <code>operator</code>。</p>
+<p>一些其他修改命令</p>
+<p>修改光标下字符的大小写，并移动到下个位置</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="p">~</span><span class="err">
+</span></code></pre></div><p>注意这不是一个操作符，除非设置了 <code>tildeop</code>。在可视模式会改变被选中所有文本的大小写。</p>
+<p>移动到当前行第一个非空白字符并进入插入模式</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">I</span><span class="err">
+</span></code></pre></div><p>移动到行尾并启动插入模式</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">A</span><span class="err">
+</span></code></pre></div>
+  </section>
+
+  <section>
+    
+        <a href="/notes/vimusermanual/c03/" class="previous_page">Prev: [Vim] usr_03 </a>
+    
+     <br> 
+    
+        <a href="/notes/vimusermanual/c05/" class="next_page">Next: [Vim] usr_05 </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>[Vim] usr_04</b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#usr_04-作小改动">usr_04 作小改动</a>
+      <ul>
+        <li><a href="#041-操作符与动作">04.1 操作符与动作</a></li>
+        <li><a href="#042-修改文本">04.2 修改文本</a>
+          <ul>
+            <li><a href="#快捷键">快捷键</a></li>
+            <li><a href="#替换单个字符">替换单个字符</a></li>
+          </ul>
+        </li>
+        <li><a href="#043-重复一个修改">04.3 重复一个修改</a></li>
+        <li><a href="#044-可视模式">04.4 可视模式</a>
+          <ul>
+            <li><a href="#按行选择">按行选择</a></li>
+            <li><a href="#列块选择">列块选择</a></li>
+            <li><a href="#移动到另一端">移动到另一端</a></li>
+          </ul>
+        </li>
+        <li><a href="#045-移动文本">04.5 移动文本</a></li>
+        <li><a href="#046-拷贝文本">04.6 拷贝文本</a></li>
+        <li><a href="#047-使用剪贴板">04.7 使用剪贴板</a></li>
+        <li><a href="#048-文本对象">04.8 文本对象</a></li>
+        <li><a href="#049-替换模式">04.9 替换模式</a></li>
+        <li><a href="#0410-结论">04.10 结论</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    <script>
+      hljs.initHighlightingOnLoad();
+      
+      hljs.configure({tabReplace: '    '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+  </body>
+</html>
