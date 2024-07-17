@@ -20,12 +20,13 @@
     
     
 
-
-    <link rel="stylesheet" href="/assets/syntax.css">
-    <link rel="stylesheet" href="/assets/primer-build.css">
     <link rel="stylesheet" href="/assets/style.css">
-    <link rel="stylesheet" href="/assets/github-gist.css">
+    
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    
     <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/vs.min.css">
+    
     
   </head>
 
@@ -119,9 +120,10 @@
 
     
     <div class="float-md-right">
-      <span title="Lastmod: 2022-01-27. Published at: 2022-01-27.">
+      
+      <span title="Lastmod: 2024-07-14. Published at: 2022-01-27.">
         
-          Published: 2022-01-27 周四 00:57:41
+          Lastmod: 2024-07-14 周日 22:44:06
         
       </span>
     </div>
@@ -223,13 +225,13 @@
 <p>支持所有之前字符串上的序列操作</p>
 <h4 id="特定的操作">特定的操作</h4>
 <p>列表元素没有特定类型约束。</p>
-<pre tabindex="0"><code class="language-pyt" data-lang="pyt">L.append('a')
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
 
-L.pop(idx) # 会返回 idx 上的元素并从列表中删掉
+<span class="n">L</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span> <span class="c1"># 会返回 idx 上的元素并从列表中删掉</span>
 
-L.sort() # 列表排序，inplace
-L.reverse() # 翻转 inplace
-</code></pre><h4 id="边界检查">边界检查</h4>
+<span class="n">L</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span> <span class="c1"># 列表排序，inplace</span>
+<span class="n">L</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span> <span class="c1"># 翻转 inplace</span>
+</code></pre></div><h4 id="边界检查">边界检查</h4>
 <p>Python 有边界检查</p>
 <h4 id="嵌套">嵌套</h4>
 <p>Python 核心数据类型支持任意嵌套，即 list 中可以嵌套任意层 list。</p>
@@ -501,12 +503,37 @@ L.reverse() # 翻转 inplace
     
     <script src="/assets/highlight.pack.js"></script>
     
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
     <script>
       hljs.initHighlightingOnLoad();
-      
-      hljs.configure({tabReplace: '    '});
+      hljs.initLineNumbersOnLoad({
+        singleLine: true
+      });
+      hljs.configure({tabReplace: '  '});
     </script>
 
     <script src="/assets/copy-to-clipboard.js"></script>
+
+    <script src="/assets/tagcanvas.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        TagCanvas.weight = true;
+        TagCanvas.weightFrom = 'data-weight';
+        TagCanvas.weightMode = 'both';
+        
+        TagCanvas.weightSizeMin = 10;
+        TagCanvas.weightSizeMax = 50;
+        TagCanvas.minSpeed = 0.05;
+        try {
+          TagCanvas.Start('myCanvas', 'tags');
+          TagCanvas.SetSpeed('myCanvas', [0.05, 0]);
+          
+        } catch(e) {
+          
+          document.getElementById('myCanvasContainer').style.display = 'none';
+        }
+      };
+    </script>
   </body>
 </html>
