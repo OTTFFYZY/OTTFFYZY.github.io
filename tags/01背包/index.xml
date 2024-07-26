@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>01背包 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/01%E8%83%8C%E5%8C%85/</link>
+    <description>Recent content in 01背包 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 22 Jul 2024 22:18:26 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/01%E8%83%8C%E5%8C%85/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Codeforces Round 360 (Div.1) - C. The Values You Can Make</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/687/c/</link>
+      <pubDate>Mon, 22 Jul 2024 22:18:26 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/687/c/</guid>
+      <description>题目链接 题目大意 给定 $n \le 500$ 个值的集合（值分别为 $a_i \le 500$）和一个值 $k \le 500$。 保证某个子集的和为 $k$。问对于子集和为 $k$ 的所有子集，有多少种不同的子集和，并输出这些可能得子集和。 简要题解 最初的想法</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -102,6 +102,82 @@
   
   <div>
     <div>
+      <a href="/tpls/others/checker/">
+        <h3>[模板] 对拍程序</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E5%85%B6%E4%BB%96' class="muted-link">
+  <span class="Label Label--gray-darker">其他</span>
+</a>
+
+
+
+
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-10-20
+      </div>
+    </div>
+    对拍程序 from os import system tc=0 while True: system(&#34;python data.py &gt; data.in&#34;) system(&#34;std.exe &lt; data.in &gt; std.out&#34;) system(&#34;my.exe &lt; data.in &gt; my.out&#34;) # system(&#34;diff std.out my.out &gt; diff.out&#34;): if system(&#34;fc std.out my.out &gt; diff.out&#34;): print(&#34;WA&#34;) break else: tc += 1 print(&#34;AC #%d&#34;%tc) print(&#34;-------------------- data.in --------------------&#34;) # system(&#34;cat data.in&#34;) system(&#34;type data.in&#34;) print(&#34;-------------------- std.out --------------------&#34;) system(&#34;type std.out&#34;) print(&#34;-------------------- my.out ---------------------&#34;) system(&#34;type my.out&#34;) Powershell #include &lt;bits/stdc++.h&gt;using namespace std; int main() { int tc=0; while(1) { system(&#34;./E_data &gt; data.in&#34;); system(&#34;cat data.in | ./E_std.exe &gt; std.txt&#34;); system(&#34;cat data.in | ./E.exe &gt; my.txt&#34;); if(system(&#34;diff std.txt my.txt &gt; diff.txt&#34;)) { cout&lt;&lt;&#34;WA&#34;&lt;&lt;endl; break; } else
+  </div>
+  
+  <div>
+    <div>
+      <a href="/tpls/ds/bit/">
+        <h3>[模板][数据结构] 树状数组 Binary Index Tree/Fenwick Tree</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
+  <span class="Label Label--gray-darker">数据结构</span>
+</a>
+
+
+
+
+
+<a href='/tags/bit' class="muted-link">
+  <span class="Label Label--gray">BIT</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-10-01
+      </div>
+    </div>
+    树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // T must + - // id 1~n template&lt;typename T,size_t M,typename OpPlus=plus&lt;T&gt;,typename OpMinus=minus&lt;T&gt;&gt; struct BIT { static int lowbit(int x) { return x&amp;(-x); } constexpr static OpPlus opp{}; constexpr static OpMinus opm{}; static T tmp[M+1]; T tree[M+1]; // tree[i] -&gt; sum of [i-lowbit(i)+1,i] int n; void init(int n_) { n=n_; for(int i=1;i&lt;=n;i++) tree[i]=T(0); } void init(int n_,T v[]) // v[0 ~ n_-1] { n=n_; tmp[0]=T(0); for(int i=1;i&lt;=n;i++) tmp[i]=opp(tmp[i-1],v[i]); for(int i=1;i&lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(;p&lt;=n;p+=lowbit(p))
+  </div>
+  
+  <div>
+    <div>
       <a href="/tpls/others/timing/">
         <h3>[模板] 计时 Timing</h3>
       </a>
@@ -796,78 +872,6 @@
     P4588 [TJOI2018]数学计算 题目大意 给定 $x = 1$ 和某个模数 $MO$，有两种操作（共 $Q \le 10^5$ 次） 操作 $1$：把 $x = x*v % MO$ 操作 $2$：取消第 $k$ 次操作（取消的必为操作 $1$，且某个操作 $1$ 只会最多被取消一次） 每
   </div>
   
-  <div>
-    <div>
-      <a href="/notes/assemblylanguage/c2/">
-        <h3>《汇编语言》 笔记 第 2 章 寄存器</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/notes' class="muted-link">
-  <span class="Label Label--gray-darker">Notes</span>
-</a>
-
-
-
-
-
-
-
-
-
-<a href='/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80' class="muted-link">
-  <span class="Label Label--gray">汇编语言</span>
-</a>
-
-
-      <div class="float-md-right">
-        
-        2020-09-08
-      </div>
-    </div>
-    第 2 章 寄存器 在 CPU 中： 运算器处理信息 寄存器储存信息 控制器控制各种器件 内部总线连接各种器件，在他们之间传输数据 对汇编程序员最重要的部件就是寄存器，寄存器是程序员可以用指令读写的部件，程序员通过改变寄存器中
-  </div>
-  
-  <div>
-    <div>
-      <a href="/notes/assemblylanguage/c1/">
-        <h3>《汇编语言》 笔记 第 1 章 基础知识</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/notes' class="muted-link">
-  <span class="Label Label--gray-darker">Notes</span>
-</a>
-
-
-
-
-
-
-
-
-
-<a href='/series/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80' class="muted-link">
-  <span class="Label Label--gray">汇编语言</span>
-</a>
-
-
-      <div class="float-md-right">
-        
-        2020-09-08
-      </div>
-    </div>
-    第 1 章 基础知识 1.1 机器语言 CPU 提供机器指令集也就是机器语言。 早期卡片打孔就是使用的机器语言。 机器语言难于书写阅读查错于是产生了汇编语言 1.2 汇编语言的产生 汇编语言的主题是汇编指令。汇编指令采用了更便于人类书写
-  </div>
-  
 
   
   <nav class="paginate-container">
@@ -936,7 +940,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/solutions" class="link-gray text-emphasized css-truncate-target"><span class="">Solutions</span></a>
-      <span class="text-right Counter">6</span>
+      <span class="text-right Counter">8</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -969,6 +973,8 @@
       </canvas>
       <div id="tags">
         
+            <a href="/tags/01%e8%83%8c%e5%8c%85" data-weight="1">01背包</a>
+        
             <a href="/tags/bfs" data-weight="1">Bfs</a>
         
             <a href="/tags/bit" data-weight="1">Bit</a>
@@ -995,7 +1001,11 @@
         
             <a href="/tags/%e4%ba%8c%e5%8f%89%e5%a0%86" data-weight="1">二叉堆</a>
         
+            <a href="/tags/%e4%bd%8d%e8%bf%90%e7%ae%97" data-weight="1">位运算</a>
+        
             <a href="/tags/%e5%89%8d%e7%bc%80%e5%92%8c" data-weight="1">前缀和</a>
+        
+            <a href="/tags/%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92" data-weight="1">动态规划</a>
         
             <a href="/tags/%e5%9b%be%e8%ae%ba" data-weight="2">图论</a>
         
@@ -1013,6 +1023,8 @@
         
             <a href="/tags/%e6%9f%93%e8%89%b2" data-weight="1">染色</a>
         
+            <a href="/tags/%e6%a0%91" data-weight="1">树</a>
+        
             <a href="/tags/%e7%8a%b6%e6%80%81%e5%8e%8b%e7%bc%a9" data-weight="1">状态压缩</a>
         
             <a href="/tags/%e7%a6%bb%e6%95%a3%e5%8c%96" data-weight="1">离散化</a>
@@ -1025,7 +1037,7 @@
         
             <a href="/tags/%e8%b4%a8%e5%9b%a0%e6%95%b0%e5%88%86%e8%a7%a3" data-weight="1">质因数分解</a>
         
-            <a href="/tags/%e8%b4%aa%e5%bf%83" data-weight="1">贪心</a>
+            <a href="/tags/%e8%b4%aa%e5%bf%83" data-weight="2">贪心</a>
         
             <a href="/tags/%e9%ab%98%e7%bb%b4%e5%89%8d%e7%bc%80%e5%92%8c" data-weight="1">高维前缀和</a>
         
@@ -1048,6 +1060,11 @@
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/ojs/atcoder" class="link-gray text-emphasized css-truncate-target"><span class="">Atcoder</span></a>
       <span class="text-right Counter">4</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/ojs/codeforces" class="link-gray text-emphasized css-truncate-target"><span class="">Codeforces</span></a>
+      <span class="text-right Counter">2</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -1171,6 +1188,11 @@
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2022-08" class="link-gray text-emphasized css-truncate-target"><span class="">2022 08</span></a>
       <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2024-07" class="link-gray text-emphasized css-truncate-target"><span class="">2024 07</span></a>
+      <span class="text-right Counter">2</span>
     </span>
     
   </div>

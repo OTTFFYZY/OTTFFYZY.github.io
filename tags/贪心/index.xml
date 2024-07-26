@@ -6,7 +6,16 @@
     <description>Recent content in 贪心 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 08 Sep 2020 00:36:26 -0400</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E8%B4%AA%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Jul 2024 21:17:11 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E8%B4%AA%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Codeforces Round 959 (Div.1&#43;2) - E. Wooden Game</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1994/e/</link>
+      <pubDate>Sun, 21 Jul 2024 21:17:11 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1994/e/</guid>
+      <description>题目链接 题目大意 给 $k$ 棵有根树，每棵大小为 $n_i$，根为 $1$，形态以每个非根点的父亲 $f_i$ 的形式给出。 一种操作可以去掉任意的子树并把子树的节点树“或”到答案 $ans$ 上。 求最大的 $ans$。 简要题解 这样的题一般</description>
+    </item>
+    
     <item>
       <title>[AtCoder] Beginner Contest 176 E - Bomber</title>
       <link>https://ottffyzy.github.io/sols/atcoder/abc176/e/</link>

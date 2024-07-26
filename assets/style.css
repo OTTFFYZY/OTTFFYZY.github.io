@@ -99,25 +99,25 @@ pre code .hljs-ln {
 
 .markdown-body .hljs-ln tr {
   border-top: 0px;
+  background-color: #f6f8fa;
 }
-
 pre code td.hljs-ln-numbers {
   text-align: right;
   color: #1c427c;
-  border-right: 0.5px solid #dfe2e5;
+  border-right: 1px solid #dfe2e5;
   border-left: 0px;
   border-top: 0px;
   border-bottom: 0px;
   vertical-align: top;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 0.3rem;
+  padding-right: 0.6rem;
   padding-top: 0px;
   padding-bottom: 0px;
 }
 /* for block of code */
 pre code th.hljs-ln-code,
 pre code td.hljs-ln-code {
-  padding: 0px 0.5rem;
+  padding: 0px 0.6rem;
   border: none;
   width: 100%;
 }

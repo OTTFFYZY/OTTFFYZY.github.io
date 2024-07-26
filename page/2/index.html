@@ -102,6 +102,78 @@
   
   <div>
     <div>
+      <a href="/tpls/ds/idpool/">
+        <h3>[模板][数据结构] 下标池 IdPool</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
+  <span class="Label Label--gray-darker">数据结构</span>
+</a>
+
+
+
+
+
+
+
+
+      <div class="float-md-right">
+        
+        2021-07-31
+      </div>
+    </div>
+    下标池 IdPool template&lt;typename T&gt; struct IdPool { map&lt;T, int&gt; idmap; vector&lt;T&gt; items; void clear() { idmap.clear(); items.clear(); } int getid(const T &amp;t) { auto it = idmap.find(t); if (it != idmap.end()) return it-&gt;second; int ans = items.size(); items.push_back(t); idmap[t] = ans; return ans; } T&amp; operator[](int i) { return items[i]; } int size() { return items.size(); } }; IdPool&lt;int&gt; idp;
+  </div>
+  
+  <div>
+    <div>
+      <a href="/notes/cppprimer/c13/">
+        <h3>《C&#43;&#43; Primer》 拾遗 第 13 章 拷贝控制</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/cpp-primer' class="muted-link">
+  <span class="Label Label--gray">Cpp Primer</span>
+</a>
+
+
+      <div class="float-md-right">
+        
+        2021-07-21
+      </div>
+    </div>
+    第 13 章 拷贝控制 拷贝控制 copy control 操作包括： 拷贝构造函数 copy constructor 拷贝赋值运算符 copy-assignment operator 移动构造函数 move constructor 移动赋值运算符 move-assignment operator 析构函数 destructor 13.1 拷贝、赋值与销毁 合成拷贝构造函数 synthesized copy constructor #include &lt;iostream&gt;#include &lt;string&gt;using namespace std; class A { public: string name; A() : name(&#34;&#34;) { cout &lt;&lt; &#34;default ctor&#34; &lt;&lt; endl; } A(string
+  </div>
+  
+  <div>
+    <div>
       <a href="/notes/cppprimer/c12/">
         <h3>《C&#43;&#43; Primer》 拾遗 第 12 章 动态内存</h3>
       </a>
@@ -780,82 +852,6 @@
     最大公约数（GCD）与欧几里得算法 最大公约数（Greatest Common Divisor，GCD） 两个数最大公约数顾名思义，两个数的所有公约数中最大的。 若正整数 $a,b$ 的质因数分解为 $$a = \prod_{i} p_i ^ {e_{a,i}}$$ $$b = \prod_{i} p_i ^ {e_{b,i}}$$ 则其最大公
   </div>
   
-  <div>
-    <div>
-      <a href="/tpls/others/checker/">
-        <h3>[模板] 对拍程序</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/templates' class="muted-link">
-  <span class="Label Label--gray-darker">Templates</span>
-</a>
-
-
-
-<a href='/templates/%E5%85%B6%E4%BB%96' class="muted-link">
-  <span class="Label Label--gray-darker">其他</span>
-</a>
-
-
-
-
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-10-20
-      </div>
-    </div>
-    对拍程序 from os import system tc=0 while True: system(&#34;python data.py &gt; data.in&#34;) system(&#34;std.exe &lt; data.in &gt; std.out&#34;) system(&#34;my.exe &lt; data.in &gt; my.out&#34;) # system(&#34;diff std.out my.out &gt; diff.out&#34;): if system(&#34;fc std.out my.out &gt; diff.out&#34;): print(&#34;WA&#34;) break else: tc += 1 print(&#34;AC #%d&#34;%tc) print(&#34;-------------------- data.in --------------------&#34;) # system(&#34;cat data.in&#34;) system(&#34;type data.in&#34;) print(&#34;-------------------- std.out --------------------&#34;) system(&#34;type std.out&#34;) print(&#34;-------------------- my.out ---------------------&#34;) system(&#34;type my.out&#34;) Powershell #include &lt;bits/stdc++.h&gt;using namespace std; int main() { int tc=0; while(1) { system(&#34;./E_data &gt; data.in&#34;); system(&#34;cat data.in | ./E_std.exe &gt; std.txt&#34;); system(&#34;cat data.in | ./E.exe &gt; my.txt&#34;); if(system(&#34;diff std.txt my.txt &gt; diff.txt&#34;)) { cout&lt;&lt;&#34;WA&#34;&lt;&lt;endl; break; } else
-  </div>
-  
-  <div>
-    <div>
-      <a href="/tpls/ds/bit/">
-        <h3>[模板][数据结构] 树状数组 Binary Index Tree/Fenwick Tree</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/templates' class="muted-link">
-  <span class="Label Label--gray-darker">Templates</span>
-</a>
-
-
-
-<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
-  <span class="Label Label--gray-darker">数据结构</span>
-</a>
-
-
-
-
-
-<a href='/tags/bit' class="muted-link">
-  <span class="Label Label--gray">BIT</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-10-01
-      </div>
-    </div>
-    树状数组 Binary Index Tree/Fenwick Tree 1d 单点修改，区间询问 // T must + - // id 1~n template&lt;typename T,size_t M,typename OpPlus=plus&lt;T&gt;,typename OpMinus=minus&lt;T&gt;&gt; struct BIT { static int lowbit(int x) { return x&amp;(-x); } constexpr static OpPlus opp{}; constexpr static OpMinus opm{}; static T tmp[M+1]; T tree[M+1]; // tree[i] -&gt; sum of [i-lowbit(i)+1,i] int n; void init(int n_) { n=n_; for(int i=1;i&lt;=n;i++) tree[i]=T(0); } void init(int n_,T v[]) // v[0 ~ n_-1] { n=n_; tmp[0]=T(0); for(int i=1;i&lt;=n;i++) tmp[i]=opp(tmp[i-1],v[i]); for(int i=1;i&lt;=n;i++) tree[i]=opm(tmp[i],tmp[i-lowbit(i)]); // for(int i=0;i&lt;n;i++) add(i,v[i]); } void add(int p,T V) { for(;p&lt;=n;p+=lowbit(p))
-  </div>
-  
 
   
   <nav class="paginate-container">
@@ -924,7 +920,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/solutions" class="link-gray text-emphasized css-truncate-target"><span class="">Solutions</span></a>
-      <span class="text-right Counter">6</span>
+      <span class="text-right Counter">8</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -957,6 +953,8 @@
       </canvas>
       <div id="tags">
         
+            <a href="/tags/01%e8%83%8c%e5%8c%85" data-weight="1">01背包</a>
+        
             <a href="/tags/bfs" data-weight="1">Bfs</a>
         
             <a href="/tags/bit" data-weight="1">Bit</a>
@@ -983,7 +981,11 @@
         
             <a href="/tags/%e4%ba%8c%e5%8f%89%e5%a0%86" data-weight="1">二叉堆</a>
         
+            <a href="/tags/%e4%bd%8d%e8%bf%90%e7%ae%97" data-weight="1">位运算</a>
+        
             <a href="/tags/%e5%89%8d%e7%bc%80%e5%92%8c" data-weight="1">前缀和</a>
+        
+            <a href="/tags/%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92" data-weight="1">动态规划</a>
         
             <a href="/tags/%e5%9b%be%e8%ae%ba" data-weight="2">图论</a>
         
@@ -1001,6 +1003,8 @@
         
             <a href="/tags/%e6%9f%93%e8%89%b2" data-weight="1">染色</a>
         
+            <a href="/tags/%e6%a0%91" data-weight="1">树</a>
+        
             <a href="/tags/%e7%8a%b6%e6%80%81%e5%8e%8b%e7%bc%a9" data-weight="1">状态压缩</a>
         
             <a href="/tags/%e7%a6%bb%e6%95%a3%e5%8c%96" data-weight="1">离散化</a>
@@ -1013,7 +1017,7 @@
         
             <a href="/tags/%e8%b4%a8%e5%9b%a0%e6%95%b0%e5%88%86%e8%a7%a3" data-weight="1">质因数分解</a>
         
-            <a href="/tags/%e8%b4%aa%e5%bf%83" data-weight="1">贪心</a>
+            <a href="/tags/%e8%b4%aa%e5%bf%83" data-weight="2">贪心</a>
         
             <a href="/tags/%e9%ab%98%e7%bb%b4%e5%89%8d%e7%bc%80%e5%92%8c" data-weight="1">高维前缀和</a>
         
@@ -1036,6 +1040,11 @@
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/ojs/atcoder" class="link-gray text-emphasized css-truncate-target"><span class="">Atcoder</span></a>
       <span class="text-right Counter">4</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/ojs/codeforces" class="link-gray text-emphasized css-truncate-target"><span class="">Codeforces</span></a>
+      <span class="text-right Counter">2</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -1159,6 +1168,11 @@
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2022-08" class="link-gray text-emphasized css-truncate-target"><span class="">2022 08</span></a>
       <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2024-07" class="link-gray text-emphasized css-truncate-target"><span class="">2024 07</span></a>
+      <span class="text-right Counter">2</span>
     </span>
     
   </div>

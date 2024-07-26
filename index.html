@@ -102,6 +102,98 @@
   
   <div>
     <div>
+      <a href="/sols/codeforces/687/c/">
+        <h3>Codeforces Round 360 (Div.1) - C. The Values You Can Make</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/solutions' class="muted-link">
+  <span class="Label Label--gray-darker">Solutions</span>
+</a>
+
+
+
+
+
+<a href='/ojs/codeforces' class="muted-link">
+  <span class="Label Label--gray-darker">Codeforces</span>
+</a>
+
+
+
+<a href='/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92' class="muted-link">
+  <span class="Label Label--gray">动态规划</span>
+</a>
+
+<a href='/tags/01%E8%83%8C%E5%8C%85' class="muted-link">
+  <span class="Label Label--gray">01背包</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2024-07-22
+      </div>
+    </div>
+    题目链接 题目大意 给定 $n \le 500$ 个值的集合（值分别为 $a_i \le 500$）和一个值 $k \le 500$。 保证某个子集的和为 $k$。问对于子集和为 $k$ 的所有子集，有多少种不同的子集和，并输出这些可能得子集和。 简要题解 最初的想法
+  </div>
+  
+  <div>
+    <div>
+      <a href="/sols/codeforces/1994/e/">
+        <h3>Codeforces Round 959 (Div.1&#43;2) - E. Wooden Game</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/solutions' class="muted-link">
+  <span class="Label Label--gray-darker">Solutions</span>
+</a>
+
+
+
+
+
+<a href='/ojs/codeforces' class="muted-link">
+  <span class="Label Label--gray-darker">Codeforces</span>
+</a>
+
+
+
+<a href='/tags/%E8%B4%AA%E5%BF%83' class="muted-link">
+  <span class="Label Label--gray">贪心</span>
+</a>
+
+<a href='/tags/%E4%BD%8D%E8%BF%90%E7%AE%97' class="muted-link">
+  <span class="Label Label--gray">位运算</span>
+</a>
+
+<a href='/tags/%E6%A0%91' class="muted-link">
+  <span class="Label Label--gray">树</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2024-07-21
+      </div>
+    </div>
+    题目链接 题目大意 给 $k$ 棵有根树，每棵大小为 $n_i$，根为 $1$，形态以每个非根点的父亲 $f_i$ 的形式给出。 一种操作可以去掉任意的子树并把子树的节点树“或”到答案 $ans$ 上。 求最大的 $ans$。 简要题解 这样的题一般
+  </div>
+  
+  <div>
+    <div>
       <a href="/algos/gt/vizing/">
         <h3>[算法][图论] Vizing 定理</h3>
       </a>
@@ -764,78 +856,6 @@
     第 14 章 重载运算与类型转换 14.1 基本概念 重载的运算符是具有特殊名字的函数。 重载运算符的参数数量与该运算符作用的运算对象数量一样多。除了重载的函数调用运算符 operator() 之外其他重载运算符不能含有默认实参。 一个重载运算符
   </div>
   
-  <div>
-    <div>
-      <a href="/tpls/ds/idpool/">
-        <h3>[模板][数据结构] 下标池 IdPool</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/templates' class="muted-link">
-  <span class="Label Label--gray-darker">Templates</span>
-</a>
-
-
-
-<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
-  <span class="Label Label--gray-darker">数据结构</span>
-</a>
-
-
-
-
-
-
-
-
-      <div class="float-md-right">
-        
-        2021-07-31
-      </div>
-    </div>
-    下标池 IdPool template&lt;typename T&gt; struct IdPool { map&lt;T, int&gt; idmap; vector&lt;T&gt; items; void clear() { idmap.clear(); items.clear(); } int getid(const T &amp;t) { auto it = idmap.find(t); if (it != idmap.end()) return it-&gt;second; int ans = items.size(); items.push_back(t); idmap[t] = ans; return ans; } T&amp; operator[](int i) { return items[i]; } int size() { return items.size(); } }; IdPool&lt;int&gt; idp;
-  </div>
-  
-  <div>
-    <div>
-      <a href="/notes/cppprimer/c13/">
-        <h3>《C&#43;&#43; Primer》 拾遗 第 13 章 拷贝控制</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/notes' class="muted-link">
-  <span class="Label Label--gray-darker">Notes</span>
-</a>
-
-
-
-
-
-
-
-
-
-<a href='/series/cpp-primer' class="muted-link">
-  <span class="Label Label--gray">Cpp Primer</span>
-</a>
-
-
-      <div class="float-md-right">
-        
-        2021-07-21
-      </div>
-    </div>
-    第 13 章 拷贝控制 拷贝控制 copy control 操作包括： 拷贝构造函数 copy constructor 拷贝赋值运算符 copy-assignment operator 移动构造函数 move constructor 移动赋值运算符 move-assignment operator 析构函数 destructor 13.1 拷贝、赋值与销毁 合成拷贝构造函数 synthesized copy constructor #include &lt;iostream&gt;#include &lt;string&gt;using namespace std; class A { public: string name; A() : name(&#34;&#34;) { cout &lt;&lt; &#34;default ctor&#34; &lt;&lt; endl; } A(string
-  </div>
-  
 
   
   <nav class="paginate-container">
@@ -904,7 +924,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/solutions" class="link-gray text-emphasized css-truncate-target"><span class="">Solutions</span></a>
-      <span class="text-right Counter">6</span>
+      <span class="text-right Counter">8</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -937,6 +957,8 @@
       </canvas>
       <div id="tags">
         
+            <a href="/tags/01%e8%83%8c%e5%8c%85" data-weight="1">01背包</a>
+        
             <a href="/tags/bfs" data-weight="1">Bfs</a>
         
             <a href="/tags/bit" data-weight="1">Bit</a>
@@ -963,7 +985,11 @@
         
             <a href="/tags/%e4%ba%8c%e5%8f%89%e5%a0%86" data-weight="1">二叉堆</a>
         
+            <a href="/tags/%e4%bd%8d%e8%bf%90%e7%ae%97" data-weight="1">位运算</a>
+        
             <a href="/tags/%e5%89%8d%e7%bc%80%e5%92%8c" data-weight="1">前缀和</a>
+        
+            <a href="/tags/%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92" data-weight="1">动态规划</a>
         
             <a href="/tags/%e5%9b%be%e8%ae%ba" data-weight="2">图论</a>
         
@@ -981,6 +1007,8 @@
         
             <a href="/tags/%e6%9f%93%e8%89%b2" data-weight="1">染色</a>
         
+            <a href="/tags/%e6%a0%91" data-weight="1">树</a>
+        
             <a href="/tags/%e7%8a%b6%e6%80%81%e5%8e%8b%e7%bc%a9" data-weight="1">状态压缩</a>
         
             <a href="/tags/%e7%a6%bb%e6%95%a3%e5%8c%96" data-weight="1">离散化</a>
@@ -993,7 +1021,7 @@
         
             <a href="/tags/%e8%b4%a8%e5%9b%a0%e6%95%b0%e5%88%86%e8%a7%a3" data-weight="1">质因数分解</a>
         
-            <a href="/tags/%e8%b4%aa%e5%bf%83" data-weight="1">贪心</a>
+            <a href="/tags/%e8%b4%aa%e5%bf%83" data-weight="2">贪心</a>
         
             <a href="/tags/%e9%ab%98%e7%bb%b4%e5%89%8d%e7%bc%80%e5%92%8c" data-weight="1">高维前缀和</a>
         
@@ -1016,6 +1044,11 @@
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/ojs/atcoder" class="link-gray text-emphasized css-truncate-target"><span class="">Atcoder</span></a>
       <span class="text-right Counter">4</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/ojs/codeforces" class="link-gray text-emphasized css-truncate-target"><span class="">Codeforces</span></a>
+      <span class="text-right Counter">2</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -1139,6 +1172,11 @@
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2022-08" class="link-gray text-emphasized css-truncate-target"><span class="">2022 08</span></a>
       <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2024-07" class="link-gray text-emphasized css-truncate-target"><span class="">2024 07</span></a>
+      <span class="text-right Counter">2</span>
     </span>
     
   </div>
