@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
       
-  《概率、统计与随机过程》 笔记 第 1 章 概率论导论 &ndash; OTTFF&#39;s Blog
+  《概率、统计与随机过程》 笔记 第 1 章 概率论导论 &ndash; OTTFF&#39;s Blog &lt;a id="topofpage">&lt;/a>
 
     </title>
     
@@ -309,7 +309,7 @@ $$b(k;n,p) \approx \frac{1}{\sqrt{npq}} f_{SN} \left(\frac{k-np}{\sqrt{npq}} \ri
           
   
     <div id="toc" class="Box Box--blue mb-3">
-      <b>《概率、统计与随机过程》 笔记 第 1 章 概率论导论</b><nav id="TableOfContents">
+      <a herf="#topofpage" id="backtotop" onclick="scrollToTop(event)">《概率、统计与随机过程》 笔记 第 1 章 概率论导论</a><nav id="TableOfContents">
   <ul>
     <li><a href="#第-1-章-概率论导论">第 1 章 概率论导论</a></li>
     <li><a href="#12-概率的不同类型">1.2 概率的不同类型</a></li>
@@ -401,6 +401,15 @@ $$b(k;n,p) \approx \frac{1}{\sqrt{npq}} f_{SN} \left(\frac{k-np}{\sqrt{npq}} \ri
           
           document.getElementById('myCanvasContainer').style.display = 'none';
         }
+      };
+    </script>
+    <script type="text/javascript">
+      function scrollToTop(event) {
+        event.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
       };
     </script>
   </body>

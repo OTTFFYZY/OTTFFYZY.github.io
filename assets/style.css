@@ -80,9 +80,13 @@ aside {
   padding: 0.7rem;
 }
 #toc * {
+  word-wrap: break-word; /* 允许长单词换行 */
+  word-break: break-all; /* 允许在任意字符处换行 */
+  white-space: normal; /* 允许多行显示 */
+  max-width: 100%; /* 限制最大宽度 */
   list-style: none;
   display: block;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -138,6 +142,27 @@ pre code td.hljs-ln-code {
   height: 100%;
   border: 0;
 }
+
+/* #myCanvasContainer {
+  width: 250px;
+  height: 250px;
+} */
+/* #myCanvas {
+  max-width: 1000px;
+  max-width: 262px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto 250;
+} */
+
+#backtotop {
+  cursor: pointer;
+  /* overflow: hidden; */
+}
+
+/* #toc a {
+  scroll-behavior: smooth;
+} */
 
 @media screen and (max-width: 1012px) {
   #holy {

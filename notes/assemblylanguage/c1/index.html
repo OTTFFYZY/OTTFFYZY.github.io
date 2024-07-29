@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
       
-  《汇编语言》 笔记 第 1 章 基础知识 &ndash; OTTFF&#39;s Blog
+  《汇编语言》 笔记 第 1 章 基础知识 &ndash; OTTFF&#39;s Blog &lt;a id="topofpage">&lt;/a>
 
     </title>
     
@@ -242,7 +242,7 @@
           
   
     <div id="toc" class="Box Box--blue mb-3">
-      <b>《汇编语言》 笔记 第 1 章 基础知识</b><nav id="TableOfContents">
+      <a herf="#topofpage" id="backtotop" onclick="scrollToTop(event)">《汇编语言》 笔记 第 1 章 基础知识</a><nav id="TableOfContents">
   <ul>
     <li><a href="#第-1-章-基础知识">第 1 章 基础知识</a></li>
     <li><a href="#11-机器语言">1.1 机器语言</a></li>
@@ -338,6 +338,15 @@
           
           document.getElementById('myCanvasContainer').style.display = 'none';
         }
+      };
+    </script>
+    <script type="text/javascript">
+      function scrollToTop(event) {
+        event.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
       };
     </script>
   </body>

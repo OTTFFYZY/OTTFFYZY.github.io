@@ -6,7 +6,34 @@
     <description>Recent content in Sols on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 22 Jul 2024 22:18:26 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/sols/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Jul 2024 23:42:01 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/sols/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intel Code Challenge Final Round - D. Dense Subsequence</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/724/d/</link>
+      <pubDate>Sun, 28 Jul 2024 23:42:01 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/724/d/</guid>
+      <description>https://codeforces.com/problemset/problem/724/D 题目大意 给定一个字符串 $S$ 串长 $\le 10^5$ 给定 $m \le |S|$。选择一些下标，使得所有长度为 $m$ 的子串都至少包含一个备选的下标。找出一组符合规定的下标，使其字符任意重排之后字典序最小，输出这个最小字典序的串。 简要题</description>
+    </item>
+    
+    <item>
+      <title>Codeforces Round 371 (Div.1) - C. Sonya and Problem Wihtout a Legend</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/713/c/</link>
+      <pubDate>Sat, 27 Jul 2024 22:59:08 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/713/c/</guid>
+      <description>https://codeforces.com/contest/713/problem/C 题目大意 给定 $n \le 3000$ 的数组 $a$。每次操作可以使数组中的某个位置的值 $+1$ 或 $-1$。 问最少得操作次数使得数组严格单调递增。 简要题解 重要的 trick： $a_i &amp;lt; a_{i + 1} \iff a_i + 1 \le a_{i + 1} \iff a_i + 1 - i \le a_{i + 1} - i \iff a_i</description>
+    </item>
+    
+    <item>
+      <title>Codeforces Round 371 (Div.1) - B. Searching Rectangles</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/713/b/</link>
+      <pubDate>Fri, 26 Jul 2024 23:40:44 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/713/b/</guid>
+      <description>https://codeforces.com/contest/713/problem/B 题目大意 给定 $n \times n \ (n \le 2^16)$ 个方格区域，上面有两个未知的，不相交的，平行于坐标轴的矩形。 可以给出不超过 $200$ 次平行于坐标轴的矩形的询问（左上右下坐标），每次会给出完全包含在询问区域中的矩形个数。 最后需要回</description>
+    </item>
+    
     <item>
       <title>Codeforces Round 360 (Div.1) - C. The Values You Can Make</title>
       <link>https://ottffyzy.github.io/sols/codeforces/687/c/</link>

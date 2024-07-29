@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
       
-  《Effective C&#43;&#43;》 笔记 1. 让自己习惯 C&#43;&#43; &ndash; OTTFF&#39;s Blog
+  《Effective C&#43;&#43;》 笔记 1. 让自己习惯 C&#43;&#43; &ndash; OTTFF&#39;s Blog &lt;a id="topofpage">&lt;/a>
 
     </title>
     
@@ -442,7 +442,7 @@
           
   
     <div id="toc" class="Box Box--blue mb-3">
-      <b>《Effective C&#43;&#43;》 笔记 1. 让自己习惯 C&#43;&#43;</b><nav id="TableOfContents">
+      <a herf="#topofpage" id="backtotop" onclick="scrollToTop(event)">《Effective C&#43;&#43;》 笔记 1. 让自己习惯 C&#43;&#43;</a><nav id="TableOfContents">
   <ul>
     <li><a href="#1-让自己习惯-c">1. 让自己习惯 C++</a></li>
     <li><a href="#条款-01视-c-为一个语言联邦">条款 01：视 C++ 为一个语言联邦</a></li>
@@ -550,6 +550,15 @@
           
           document.getElementById('myCanvasContainer').style.display = 'none';
         }
+      };
+    </script>
+    <script type="text/javascript">
+      function scrollToTop(event) {
+        event.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
       };
     </script>
   </body>

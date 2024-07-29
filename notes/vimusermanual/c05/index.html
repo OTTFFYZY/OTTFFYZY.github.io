@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
       
-  [Vim] usr_05 &ndash; OTTFF&#39;s Blog
+  [Vim] usr_05 &ndash; OTTFF&#39;s Blog &lt;a id="topofpage">&lt;/a>
 
     </title>
     
@@ -393,7 +393,7 @@
           
   
     <div id="toc" class="Box Box--blue mb-3">
-      <b>[Vim] usr_05</b><nav id="TableOfContents">
+      <a herf="#topofpage" id="backtotop" onclick="scrollToTop(event)">[Vim] usr_05</a><nav id="TableOfContents">
   <ul>
     <li><a href="#usr_05-选项设置">usr_05 选项设置</a>
       <ul>
@@ -496,6 +496,15 @@
           
           document.getElementById('myCanvasContainer').style.display = 'none';
         }
+      };
+    </script>
+    <script type="text/javascript">
+      function scrollToTop(event) {
+        event.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
       };
     </script>
   </body>

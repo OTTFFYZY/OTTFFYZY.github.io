@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
       
-  [算法][DP] 高维前缀和 SOS DP &ndash; OTTFF&#39;s Blog
+  [算法][DP] 高维前缀和 SOS DP &ndash; OTTFF&#39;s Blog &lt;a id="topofpage">&lt;/a>
 
     </title>
     
@@ -315,7 +315,7 @@ $$ sum[i] = \sum_{j \subseteq i} a[j] $$
           
   
     <div id="toc" class="Box Box--blue mb-3">
-      <b>[算法][DP] 高维前缀和 SOS DP</b><nav id="TableOfContents">
+      <a herf="#topofpage" id="backtotop" onclick="scrollToTop(event)">[算法][DP] 高维前缀和 SOS DP</a><nav id="TableOfContents">
   <ul>
     <li><a href="#高维前缀和-sos-dp">高维前缀和 SOS DP</a>
       <ul>
@@ -407,6 +407,15 @@ $$ sum[i] = \sum_{j \subseteq i} a[j] $$
           
           document.getElementById('myCanvasContainer').style.display = 'none';
         }
+      };
+    </script>
+    <script type="text/javascript">
+      function scrollToTop(event) {
+        event.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
       };
     </script>
   </body>

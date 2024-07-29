@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>双指针 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/</link>
+    <description>Recent content in 双指针 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 28 Jul 2024 23:42:01 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intel Code Challenge Final Round - D. Dense Subsequence</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/724/d/</link>
+      <pubDate>Sun, 28 Jul 2024 23:42:01 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/724/d/</guid>
+      <description>https://codeforces.com/problemset/problem/724/D 题目大意 给定一个字符串 $S$ 串长 $\le 10^5$ 给定 $m \le |S|$。选择一些下标，使得所有长度为 $m$ 的子串都至少包含一个备选的下标。找出一组符合规定的下标，使其字符任意重排之后字典序最小，输出这个最小字典序的串。 简要题</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
       
-  OTTFF 的新 Blog &ndash; OTTFF&#39;s Blog
+  OTTFF 的新 Blog &ndash; OTTFF&#39;s Blog &lt;a id="topofpage">&lt;/a>
 
     </title>
     
@@ -192,7 +192,7 @@
           
   
     <div id="toc" class="Box Box--blue mb-3">
-      <b>OTTFF 的新 Blog</b><nav id="TableOfContents">
+      <a herf="#topofpage" id="backtotop" onclick="scrollToTop(event)">OTTFF 的新 Blog</a><nav id="TableOfContents">
   <ul>
     <li><a href="#ottff-的新-blog">OTTFF 的新 Blog</a></li>
   </ul>
@@ -275,6 +275,15 @@
           
           document.getElementById('myCanvasContainer').style.display = 'none';
         }
+      };
+    </script>
+    <script type="text/javascript">
+      function scrollToTop(event) {
+        event.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
       };
     </script>
   </body>

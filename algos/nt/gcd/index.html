@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
       
-  [算法][数论] 最大公约数（GCD）与欧几里得算法 &ndash; OTTFF&#39;s Blog
+  [算法][数论] 最大公约数（GCD）与欧几里得算法 &ndash; OTTFF&#39;s Blog &lt;a id="topofpage">&lt;/a>
 
     </title>
     
@@ -282,7 +282,7 @@ $$F_{k&#43;1} = F_{k}&#43;F_{k-1} \le A_k &#43; A_{k-1} \le A_{k&#43;1}$$
           
   
     <div id="toc" class="Box Box--blue mb-3">
-      <b>[算法][数论] 最大公约数（GCD）与欧几里得算法</b><nav id="TableOfContents">
+      <a herf="#topofpage" id="backtotop" onclick="scrollToTop(event)">[算法][数论] 最大公约数（GCD）与欧几里得算法</a><nav id="TableOfContents">
   <ul>
     <li><a href="#最大公约数gcd与欧几里得算法">最大公约数（GCD）与欧几里得算法</a></li>
     <li><a href="#最大公约数greatest-common-divisorgcd">最大公约数（Greatest Common Divisor，GCD）</a></li>
@@ -374,6 +374,15 @@ $$F_{k&#43;1} = F_{k}&#43;F_{k-1} \le A_k &#43; A_{k-1} \le A_{k&#43;1}$$
           
           document.getElementById('myCanvasContainer').style.display = 'none';
         }
+      };
+    </script>
+    <script type="text/javascript">
+      function scrollToTop(event) {
+        event.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
       };
     </script>
   </body>
