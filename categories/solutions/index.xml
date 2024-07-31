@@ -6,7 +6,43 @@
     <description>Recent content in Solutions on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 28 Jul 2024 23:42:01 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/categories/solutions/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Jul 2024 23:14:15 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/categories/solutions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>D. Maximize the Root - Educational Codeforces Round 168</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1997/d/</link>
+      <pubDate>Tue, 30 Jul 2024 23:14:15 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1997/d/</guid>
+      <description>https://codeforces.com/contest/1997/problem/D 题目大意 给以棵 $1$ 为根的有根树，节点数 $n \ (2 \le n \le 2 \times 10^5)$。每个节点上有权重 $a_i \ (1 \le a_i \le 10^9)$。每次操作可以选择给节点 $i$ 的权值 $+1$ 给其子树中所有其他节点权值 $-1$。任意时刻结点权值不能为</description>
+    </item>
+    
+    <item>
+      <title>G. Penacony - Codeforces Round 962 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1996/g/</link>
+      <pubDate>Tue, 30 Jul 2024 00:30:20 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1996/g/</guid>
+      <description>https://codeforces.com/contest/1996/problem/G 题目大意 给出 $n \le 2 \cdot 10^5$ 个点的一个简单环，给出 $m \le 2 \cdot 10^5$ 组点。要求选最少的边，使得 $m$ 组点之间，都可以通过选的边连通。给的每组点 $u &amp;lt; v$。 简要题解 一般环形问题先想直线问题，再想断开环。 直线问题非常好解决</description>
+    </item>
+    
+    <item>
+      <title>F. Bomb - Codeforces Round 962 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1996/f/</link>
+      <pubDate>Tue, 30 Jul 2024 00:30:18 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1996/f/</guid>
+      <description>https://codeforces.com/contest/1996/problem/F 题目大意 给定 $n \le 2 \cdot 10^5$ 的两个数组 $a$ 和 $b$。可以执行 $k \le 10^9$ 次操作，每次操作选择某个 $i$ 然后 $ans += a[i]$，之后 $a[i] = max(0, a[i] - b[i])$。问最大的 $ans$ 是多少。 简要题解 题目贪心的策略是显然的，只需要选当前最大</description>
+    </item>
+    
+    <item>
+      <title>E. Decode - Codeforces Round 962 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1996/e/</link>
+      <pubDate>Tue, 30 Jul 2024 00:19:04 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1996/e/</guid>
+      <description>https://codeforces.com/contest/1996/problem/E 题目大意 给出 $01$ 串 $S$，长度 $\le 2 \cdot 10^5$。求其所有子串的 $01$ 个数相同的子串的个数。 简要题解 题目求 $\sum_l \sum_r \sum_x \sum_y [cnt0(x, y) == cnt1(x, y)] ,\ (1 \le l \le x \le y \le r \le n)$。 如果只有所有子串 $S(x, y)$ 的个数，那将非常好求。遇到 $0$ 就 $</description>
+    </item>
+    
     <item>
       <title>Intel Code Challenge Final Round - D. Dense Subsequence</title>
       <link>https://ottffyzy.github.io/sols/codeforces/724/d/</link>

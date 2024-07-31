@@ -6,7 +6,16 @@
     <description>Recent content in 线段树 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 09 Sep 2020 01:48:20 -0400</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Jul 2024 00:30:20 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>G. Penacony - Codeforces Round 962 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1996/g/</link>
+      <pubDate>Tue, 30 Jul 2024 00:30:20 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1996/g/</guid>
+      <description>https://codeforces.com/contest/1996/problem/G 题目大意 给出 $n \le 2 \cdot 10^5$ 个点的一个简单环，给出 $m \le 2 \cdot 10^5$ 组点。要求选最少的边，使得 $m$ 组点之间，都可以通过选的边连通。给的每组点 $u &amp;lt; v$。 简要题解 一般环形问题先想直线问题，再想断开环。 直线问题非常好解决</description>
+    </item>
+    
     <item>
       <title>[Luogu] P4588 [TJOI2018]数学计算</title>
       <link>https://ottffyzy.github.io/sols/luogu/p4588/</link>

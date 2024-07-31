@@ -6,7 +6,88 @@
     <description>Recent content in Tags on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 28 Jul 2024 23:42:01 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Jul 2024 23:14:15 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>二分</title>
+      <link>https://ottffyzy.github.io/tags/%E4%BA%8C%E5%88%86/</link>
+      <pubDate>Tue, 30 Jul 2024 23:14:15 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E4%BA%8C%E5%88%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>树</title>
+      <link>https://ottffyzy.github.io/tags/%E6%A0%91/</link>
+      <pubDate>Tue, 30 Jul 2024 23:14:15 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E6%A0%91/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>贪心</title>
+      <link>https://ottffyzy.github.io/tags/%E8%B4%AA%E5%BF%83/</link>
+      <pubDate>Tue, 30 Jul 2024 23:14:15 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E8%B4%AA%E5%BF%83/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hash</title>
+      <link>https://ottffyzy.github.io/tags/hash/</link>
+      <pubDate>Tue, 30 Jul 2024 00:30:20 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/hash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>环形</title>
+      <link>https://ottffyzy.github.io/tags/%E7%8E%AF%E5%BD%A2/</link>
+      <pubDate>Tue, 30 Jul 2024 00:30:20 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E7%8E%AF%E5%BD%A2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>线段树</title>
+      <link>https://ottffyzy.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/</link>
+      <pubDate>Tue, 30 Jul 2024 00:30:20 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>随机</title>
+      <link>https://ottffyzy.github.io/tags/%E9%9A%8F%E6%9C%BA/</link>
+      <pubDate>Tue, 30 Jul 2024 00:30:20 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E9%9A%8F%E6%9C%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>算贡献</title>
+      <link>https://ottffyzy.github.io/tags/%E7%AE%97%E8%B4%A1%E7%8C%AE/</link>
+      <pubDate>Tue, 30 Jul 2024 00:19:04 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E7%AE%97%E8%B4%A1%E7%8C%AE/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>组合数学</title>
+      <link>https://ottffyzy.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/</link>
+      <pubDate>Tue, 30 Jul 2024 00:19:04 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>双指针</title>
       <link>https://ottffyzy.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/</link>
@@ -17,29 +98,11 @@
     </item>
     
     <item>
-      <title>贪心</title>
-      <link>https://ottffyzy.github.io/tags/%E8%B4%AA%E5%BF%83/</link>
-      <pubDate>Sun, 28 Jul 2024 23:42:01 -0700</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E8%B4%AA%E5%BF%83/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>动态规划</title>
       <link>https://ottffyzy.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
       <pubDate>Sat, 27 Jul 2024 22:59:08 -0700</pubDate>
       
       <guid>https://ottffyzy.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>二分</title>
-      <link>https://ottffyzy.github.io/tags/%E4%BA%8C%E5%88%86/</link>
-      <pubDate>Fri, 26 Jul 2024 23:40:44 -0700</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E4%BA%8C%E5%88%86/</guid>
       <description></description>
     </item>
     
@@ -67,15 +130,6 @@
       <pubDate>Sun, 21 Jul 2024 21:17:11 -0700</pubDate>
       
       <guid>https://ottffyzy.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>树</title>
-      <link>https://ottffyzy.github.io/tags/%E6%A0%91/</link>
-      <pubDate>Sun, 21 Jul 2024 21:17:11 -0700</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E6%A0%91/</guid>
       <description></description>
     </item>
     
@@ -206,15 +260,6 @@
     </item>
     
     <item>
-      <title>Hash</title>
-      <link>https://ottffyzy.github.io/tags/hash/</link>
-      <pubDate>Mon, 28 Sep 2020 22:00:50 -0400</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/hash/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>左偏树</title>
       <link>https://ottffyzy.github.io/tags/%E5%B7%A6%E5%81%8F%E6%A0%91/</link>
       <pubDate>Sun, 27 Sep 2020 19:07:04 -0400</pubDate>
@@ -274,15 +319,6 @@
       <pubDate>Fri, 18 Sep 2020 22:10:05 -0400</pubDate>
       
       <guid>https://ottffyzy.github.io/tags/%E5%9F%BA%E7%8E%AF%E6%A0%91/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>线段树</title>
-      <link>https://ottffyzy.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/</link>
-      <pubDate>Wed, 09 Sep 2020 01:48:20 -0400</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/</guid>
       <description></description>
     </item>
     

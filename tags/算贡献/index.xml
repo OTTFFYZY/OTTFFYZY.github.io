@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>算贡献 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E7%AE%97%E8%B4%A1%E7%8C%AE/</link>
+    <description>Recent content in 算贡献 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 30 Jul 2024 00:19:04 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E7%AE%97%E8%B4%A1%E7%8C%AE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>E. Decode - Codeforces Round 962 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1996/e/</link>
+      <pubDate>Tue, 30 Jul 2024 00:19:04 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1996/e/</guid>
+      <description>https://codeforces.com/contest/1996/problem/E 题目大意 给出 $01$ 串 $S$，长度 $\le 2 \cdot 10^5$。求其所有子串的 $01$ 个数相同的子串的个数。 简要题解 题目求 $\sum_l \sum_r \sum_x \sum_y [cnt0(x, y) == cnt1(x, y)] ,\ (1 \le l \le x \le y \le r \le n)$。 如果只有所有子串 $S(x, y)$ 的个数，那将非常好求。遇到 $0$ 就 $</description>
+    </item>
+    
+  </channel>
+</rss>

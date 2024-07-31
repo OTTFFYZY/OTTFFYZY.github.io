@@ -6,7 +6,16 @@
     <description>Recent content in 树 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 21 Jul 2024 21:17:11 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%A0%91/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Jul 2024 23:14:15 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%A0%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>D. Maximize the Root - Educational Codeforces Round 168</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1997/d/</link>
+      <pubDate>Tue, 30 Jul 2024 23:14:15 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1997/d/</guid>
+      <description>https://codeforces.com/contest/1997/problem/D 题目大意 给以棵 $1$ 为根的有根树，节点数 $n \ (2 \le n \le 2 \times 10^5)$。每个节点上有权重 $a_i \ (1 \le a_i \le 10^9)$。每次操作可以选择给节点 $i$ 的权值 $+1$ 给其子树中所有其他节点权值 $-1$。任意时刻结点权值不能为</description>
+    </item>
+    
     <item>
       <title>Codeforces Round 959 (Div.1&#43;2) - E. Wooden Game</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1994/e/</link>

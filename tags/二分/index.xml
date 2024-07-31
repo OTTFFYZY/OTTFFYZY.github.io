@@ -6,7 +6,25 @@
     <description>Recent content in 二分 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 26 Jul 2024 23:40:44 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E4%BA%8C%E5%88%86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Jul 2024 23:14:15 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E4%BA%8C%E5%88%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>D. Maximize the Root - Educational Codeforces Round 168</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1997/d/</link>
+      <pubDate>Tue, 30 Jul 2024 23:14:15 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1997/d/</guid>
+      <description>https://codeforces.com/contest/1997/problem/D 题目大意 给以棵 $1$ 为根的有根树，节点数 $n \ (2 \le n \le 2 \times 10^5)$。每个节点上有权重 $a_i \ (1 \le a_i \le 10^9)$。每次操作可以选择给节点 $i$ 的权值 $+1$ 给其子树中所有其他节点权值 $-1$。任意时刻结点权值不能为</description>
+    </item>
+    
+    <item>
+      <title>F. Bomb - Codeforces Round 962 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1996/f/</link>
+      <pubDate>Tue, 30 Jul 2024 00:30:18 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1996/f/</guid>
+      <description>https://codeforces.com/contest/1996/problem/F 题目大意 给定 $n \le 2 \cdot 10^5$ 的两个数组 $a$ 和 $b$。可以执行 $k \le 10^9$ 次操作，每次操作选择某个 $i$ 然后 $ans += a[i]$，之后 $a[i] = max(0, a[i] - b[i])$。问最大的 $ans$ 是多少。 简要题解 题目贪心的策略是显然的，只需要选当前最大</description>
+    </item>
+    
     <item>
       <title>Codeforces Round 371 (Div.1) - B. Searching Rectangles</title>
       <link>https://ottffyzy.github.io/sols/codeforces/713/b/</link>

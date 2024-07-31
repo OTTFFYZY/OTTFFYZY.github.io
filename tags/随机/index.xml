@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>随机 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E9%9A%8F%E6%9C%BA/</link>
+    <description>Recent content in 随机 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 30 Jul 2024 00:30:20 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E9%9A%8F%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>G. Penacony - Codeforces Round 962 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1996/g/</link>
+      <pubDate>Tue, 30 Jul 2024 00:30:20 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1996/g/</guid>
+      <description>https://codeforces.com/contest/1996/problem/G 题目大意 给出 $n \le 2 \cdot 10^5$ 个点的一个简单环，给出 $m \le 2 \cdot 10^5$ 组点。要求选最少的边，使得 $m$ 组点之间，都可以通过选的边连通。给的每组点 $u &amp;lt; v$。 简要题解 一般环形问题先想直线问题，再想断开环。 直线问题非常好解决</description>
+    </item>
+    
+  </channel>
+</rss>
