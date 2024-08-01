@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>log on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/log/</link>
+    <description>Recent content in log on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 31 Jul 2024 21:09:09 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/log/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>E. Level Up - Educational Codeforces Round 168</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1997/e/</link>
+      <pubDate>Wed, 31 Jul 2024 21:09:09 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1997/e/</guid>
+      <description>https://codeforces.com/contest/1997/problem/E 题目大意 给定 $n\ (\le 2 \cdot 10^5)$ 长的数组和 $q\ (\le 2 \cdot 10^5)$ 个询问。数组中元素 $a_i\ (\le 2 \cdot 10^5)$。对于参数 $k$，我们依次在数组中标记 $k$ 个不超过 $1$ 的数，之后从最后标记的下标开始，再标记 $k$ 个不超过 $2$ 的数，以此类推。 每</description>
+    </item>
+    
+  </channel>
+</rss>

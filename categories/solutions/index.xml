@@ -6,7 +6,16 @@
     <description>Recent content in Solutions on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 30 Jul 2024 23:14:15 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/categories/solutions/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Jul 2024 21:09:09 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/categories/solutions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>E. Level Up - Educational Codeforces Round 168</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1997/e/</link>
+      <pubDate>Wed, 31 Jul 2024 21:09:09 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1997/e/</guid>
+      <description>https://codeforces.com/contest/1997/problem/E 题目大意 给定 $n\ (\le 2 \cdot 10^5)$ 长的数组和 $q\ (\le 2 \cdot 10^5)$ 个询问。数组中元素 $a_i\ (\le 2 \cdot 10^5)$。对于参数 $k$，我们依次在数组中标记 $k$ 个不超过 $1$ 的数，之后从最后标记的下标开始，再标记 $k$ 个不超过 $2$ 的数，以此类推。 每</description>
+    </item>
+    
     <item>
       <title>D. Maximize the Root - Educational Codeforces Round 168</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1997/d/</link>
@@ -44,7 +53,7 @@
     </item>
     
     <item>
-      <title>Intel Code Challenge Final Round - D. Dense Subsequence</title>
+      <title>D. Dense Subsequence - Intel Code Challenge Final Round</title>
       <link>https://ottffyzy.github.io/sols/codeforces/724/d/</link>
       <pubDate>Sun, 28 Jul 2024 23:42:01 -0700</pubDate>
       
@@ -53,7 +62,7 @@
     </item>
     
     <item>
-      <title>Codeforces Round 371 (Div.1) - C. Sonya and Problem Wihtout a Legend</title>
+      <title>C. Sonya and Problem Wihtout a Legend - Codeforces Round 371 (Div. 1)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/713/c/</link>
       <pubDate>Sat, 27 Jul 2024 22:59:08 -0700</pubDate>
       
@@ -62,7 +71,7 @@
     </item>
     
     <item>
-      <title>Codeforces Round 371 (Div.1) - B. Searching Rectangles</title>
+      <title>B. Searching Rectangles - Codeforces Round 371 (Div. 1)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/713/b/</link>
       <pubDate>Fri, 26 Jul 2024 23:40:44 -0700</pubDate>
       
@@ -71,7 +80,7 @@
     </item>
     
     <item>
-      <title>Codeforces Round 360 (Div.1) - C. The Values You Can Make</title>
+      <title>C. The Values You Can Make - Codeforces Round 360 (Div.1)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/687/c/</link>
       <pubDate>Mon, 22 Jul 2024 22:18:26 -0700</pubDate>
       
@@ -80,12 +89,12 @@
     </item>
     
     <item>
-      <title>Codeforces Round 959 (Div.1&#43;2) - E. Wooden Game</title>
+      <title>E. Wooden Game - Codeforces Round 959 sponsored by NEAR (Div. 1 &#43; Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1994/e/</link>
       <pubDate>Sun, 21 Jul 2024 21:17:11 -0700</pubDate>
       
       <guid>https://ottffyzy.github.io/sols/codeforces/1994/e/</guid>
-      <description>题目链接 题目大意 给 $k$ 棵有根树，每棵大小为 $n_i$，根为 $1$，形态以每个非根点的父亲 $f_i$ 的形式给出。 一种操作可以去掉任意的子树并把子树的节点树“或”到答案 $ans$ 上。 求最大的 $ans$。 简要题解 这样的题一般</description>
+      <description>https://codeforces.com/problemset/problem/1994/E 题目大意 给 $k$ 棵有根树，每棵大小为 $n_i$，根为 $1$，形态以每个非根点的父亲 $f_i$ 的形式给出。 一种操作可以去掉任意的子树并把子树的节点树“或”到答案 $ans$ 上。 求最大的 $ans$。 简要题解 这样的题一般的是考</description>
     </item>
     
     <item>
