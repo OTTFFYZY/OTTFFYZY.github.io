@@ -6,7 +6,25 @@
     <description>Recent content on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 31 Jul 2024 21:09:09 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Aug 2024 22:40:48 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C. Light Switches - Codeforces Round 963 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1993/c/</link>
+      <pubDate>Mon, 05 Aug 2024 22:40:48 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1993/c/</guid>
+      <description>https://codeforces.com/contest/1993/problem/C 题目大意 给定 $n$ 盏灯和 $n$ 长数组 $a_i (1 \le a_i \le 10^9)$ 和 $k$，$1 \le k \le n \le 2 \cdot 10^5$。 起初 $n$ 盏灯都不亮。$i$ 位置的灯在 $a_i$ 时刻第一次点亮，之后每过 $k$ 单位时间点亮熄灭状态反转一次。问最早什么时刻，所有灯都亮</description>
+    </item>
+    
+    <item>
+      <title>D. Med-imize - Codeforces Round 963 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1993/d/</link>
+      <pubDate>Mon, 05 Aug 2024 22:40:40 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1993/d/</guid>
+      <description>https://codeforces.com/contest/1993/problem/D 题目大意 给出一个 $n \ (le 5 \cdot 10^5)$ 长的数组 $a$ 其中 $a_i \le 10^9$。给定一个 $k \ (\le 5 \cdot 10^5)$。 不断地从数组中删去一些长为 $k$ 的子数组（删除后把数组接起来），使得最后的数组长度 $\le k$。 问此时剩余元素的中位数</description>
+    </item>
+    
     <item>
       <title>E. Level Up - Educational Codeforces Round 168</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1997/e/</link>
@@ -139,7 +157,7 @@
       <pubDate>Wed, 19 Jan 2022 15:54:54 -0800</pubDate>
       
       <guid>https://ottffyzy.github.io/notes/learningpython/c03/</guid>
-      <description>第 3 章 你应如何运行程序 交互式命令行模式 开始一个交互式会话 &amp;gt;python Windows （cmd）上使用 &amp;lt;CTRL-Z&amp;gt; UNIX/PowerShell 上使用 &amp;lt;CTRL-D&amp;gt; 结束会话。 Python 3.3 中的新 Windows 选项：PATH 和 启动器 启动器用户可以输入 py 代替 python 并避免一些配置步骤。启动器可以更好的显式掌</description>
+      <description>第 3 章 你应如何运行程序 交互式命令行模式 开始一个交互式会话 &amp;gt; python Windows （cmd）上使用 &amp;lt;CTRL-Z&amp;gt; UNIX/PowerShell 上使用 &amp;lt;CTRL-D&amp;gt; 结束会话。 Python 3.3 中的新 Windows 选项：PATH 和 启动器 启动器用户可以输入 py 代替 python 并避免一些配置步骤。启动器可以更好的显式</description>
     </item>
     
     <item>

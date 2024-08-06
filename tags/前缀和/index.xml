@@ -6,7 +6,16 @@
     <description>Recent content in 前缀和 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 05 Sep 2020 01:26:32 -0400</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Aug 2024 22:40:48 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C. Light Switches - Codeforces Round 963 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1993/c/</link>
+      <pubDate>Mon, 05 Aug 2024 22:40:48 -0700</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1993/c/</guid>
+      <description>https://codeforces.com/contest/1993/problem/C 题目大意 给定 $n$ 盏灯和 $n$ 长数组 $a_i (1 \le a_i \le 10^9)$ 和 $k$，$1 \le k \le n \le 2 \cdot 10^5$。 起初 $n$ 盏灯都不亮。$i$ 位置的灯在 $a_i$ 时刻第一次点亮，之后每过 $k$ 单位时间点亮熄灭状态反转一次。问最早什么时刻，所有灯都亮</description>
+    </item>
+    
     <item>
       <title>[AtCoder] Beginner Contest 177</title>
       <link>https://ottffyzy.github.io/contests/atcoder/abc177/</link>

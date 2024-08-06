@@ -11,7 +11,7 @@
     </title>
     
     
-    <meta name="description" property="og:description" content="第 3 章 你应如何运行程序 交互式命令行模式 开始一个交互式会话 &amp;gt;python Windows （cmd）上使用 &amp;lt;CTRL-Z&amp;gt; UNIX/PowerShell 上使用 &amp;lt;CTRL-D&amp;gt; 结束会话。 Python 3.3 中的新 Windows 选项：PATH 和 启动器 启动器用户可以输入 py 代替 python 并避免一些配置步骤。启动器可以更好的显式掌|OTTFF&#39;s Blog">
+    <meta name="description" property="og:description" content="第 3 章 你应如何运行程序 交互式命令行模式 开始一个交互式会话 &amp;gt; python Windows （cmd）上使用 &amp;lt;CTRL-Z&amp;gt; UNIX/PowerShell 上使用 &amp;lt;CTRL-D&amp;gt; 结束会话。 Python 3.3 中的新 Windows 选项：PATH 和 启动器 启动器用户可以输入 py 代替 python 并避免一些配置步骤。启动器可以更好的显式|OTTFF&#39;s Blog">
     
 
     <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
@@ -121,9 +121,9 @@
     
     <div class="float-md-right">
       
-      <span title="Lastmod: 2022-01-27. Published at: 2022-01-19.">
+      <span title="Lastmod: 2024-08-03. Published at: 2022-01-19.">
         
-          Lastmod: 2022-01-27 周四 00:58:40
+          Lastmod: 2024-08-03 周六 19:22:06
         
       </span>
     </div>
@@ -136,24 +136,24 @@
       <h2 id="第-3-章-你应如何运行程序">第 3 章 你应如何运行程序</h2>
 <h3 id="交互式命令行模式">交互式命令行模式</h3>
 <h4 id="开始一个交互式会话">开始一个交互式会话</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span>python
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext">&gt; python
 </code></pre></div><p>Windows （cmd）上使用</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&lt;</span>CTRL-Z&gt;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext">&lt;CTRL-Z&gt;
 </code></pre></div><p>UNIX/PowerShell 上使用</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&lt;</span>CTRL-D&gt;
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext">&lt;CTRL-D&gt;
 </code></pre></div><p>结束会话。</p>
 <h4 id="python-33-中的新-windows-选项path-和-启动器">Python 3.3 中的新 Windows 选项：PATH 和 启动器</h4>
 <p>启动器用户可以输入 <code>py</code> 代替 <code>python</code> 并避免一些配置步骤。启动器可以更好的显式掌控运行代码的 Python 版本。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;</span>py -2
-<span class="p">&gt;</span>py -3.1
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext">&gt; py -2
+&gt; py -3.1
 </code></pre></div><h4 id="交互式地运行代码">交互式地运行代码</h4>
 <p>交互式对话会自动打印输入的表达式的结果。</p>
 <p>注意在交互模式只能输入 Python 代码，而要输入系统命令。需要使用系统命令则需要 <code>os.system</code>。</p>
 <p>复合语句时，交互提示符会在第二行及后面由 <code>&gt;&gt;&gt;</code> 变成 <code>...</code> 并自动缩进。在该模式需要用一个空行结束复合语句。</p>
 <p>交互命令行模式一次运行一条语句（多行构成的复合语句是一条语句）。</p>
 <h4 id="使用命令行运行文件">使用命令行运行文件</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd">python script.py
-python script.py <span class="p">&gt;</span> out.txt
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext">python script.py
+python script.py &gt; out.txt
 </code></pre></div><h3 id="unix-风格可执行脚本">Unix 风格可执行脚本：#!</h3>
 <p>在 Unix 或类 Unix 系统上，可以将 Python 代码编程为可执行程序。一般这样的文件有两个特殊属性：</p>
 <p>第一行是特定的 <code>#!</code> 开头，后面跟着 Python 解释器的路径。</p>
@@ -188,10 +188,10 @@ python script.py <span class="p">&gt;</span> out.txt
 <span class="n">c</span> <span class="o">=</span> <span class="mi">2</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
-</code></pre></div><p>cmd</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="p">&gt;&gt;</span>&gt; from test import a
+</code></pre></div><p>powershell</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext">&gt;&gt;&gt; from test import a
 0 1 2
-<span class="p">&gt;&gt;</span>&gt; a
+&gt;&gt;&gt; a
 0
 </code></pre></div><p>可以使用内置的 dir 查看所有可用的变量名</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">test</span>
