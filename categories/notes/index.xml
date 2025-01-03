@@ -6,7 +6,16 @@
     <description>Recent content in Notes on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 27 Jan 2022 00:57:41 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Dec 2024 12:19:01 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[数学] 判断数字能否被 x 整除</title>
+      <link>https://ottffyzy.github.io/notes/math/div/</link>
+      <pubDate>Mon, 30 Dec 2024 12:19:01 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/math/div/</guid>
+      <description>关于 2, 5, 4, 25 这一类比较显然。对于 $x = 2, 5$ 只需数字最后 $1$ 位能被被 $x$ 整除即可。 对于 $x = 4, 25$ 只需数字最后 $2$ 位能被整除即可。 之所以我们可以进行截断，是因为 $10 \equiv 0 \ (\bmod 2\ )$, $10 \equiv 0 \ (\bmod 5\ )$ 而 $100 \equiv 0 \ (\bmod 4\ )$, $100 \equiv 0 \ (\bmod</description>
+    </item>
+    
     <item>
       <title>《Learning Python》 笔记 第 4 章 介绍 Python 对象类型</title>
       <link>https://ottffyzy.github.io/notes/learningpython/c04/</link>

@@ -6,7 +6,16 @@
     <description>Recent content in Codeforces on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 05 Aug 2024 22:40:48 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/ojs/codeforces/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Jan 2025 23:01:39 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/ojs/codeforces/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Water Taps - Educational Codeforces Round 40</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/954/e/</link>
+      <pubDate>Thu, 02 Jan 2025 23:01:39 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/954/e/</guid>
+      <description>https://codeforces.com/contest/954/problem/E 题目大意 给出 $N (\le 2 \times 10 ^ 5)$ 个水龙头的水量 $a_i (\le 10 ^ 6)$ 和温度 $t_i (\le 10 ^ 6)$，每个水龙头可以取 $0 \sim a_i$ 的实数单位水量，问可以混合出 $T (\le 10 ^ 6)$ 温度的水最多多少。 若每个龙头取 $c_i$ 单位水，则混合水的温度为 $\frac{\sum c_i t_i)}{\sum c_i}$ 简</description>
+    </item>
+    
     <item>
       <title>C. Light Switches - Codeforces Round 963 (Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1993/c/</link>

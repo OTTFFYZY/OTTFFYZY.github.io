@@ -102,6 +102,86 @@
   
   <div>
     <div>
+      <a href="/tpls/ds/leftist/">
+        <h3>[模板][数据结构] 左偏树 Leftist Tree</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
+  <span class="Label Label--gray-darker">数据结构</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E5%B7%A6%E5%81%8F%E6%A0%91' class="muted-link">
+  <span class="Label Label--gray">左偏树</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-09-27
+      </div>
+    </div>
+    左偏树 Leftist Tree // min leftist tree // T must define &lt; // M: the size of the heap template&lt;typename T,size_t M,typename Cmp=less&lt;T&gt;&gt; struct Leftist { static Cmp cmp; T val[M]; int l[M],r[M],d[M]; int nn; // number of node void init() { nn=0; } // using val to build a leftist tree // return the id of the root int build(int n,T val_[]) { queue&lt;int&gt; qu; for(int i=1;i&lt;=n;i++) qu.push(i); int u,v; while(qu.size()&gt;1) { u=qu.front(); qu.pop(); v=qu.front(); qu.pop(); merge(u,v); qu.push(u); } return qu.front(); } int newtree(T v) { val[++nn]=v; r[nn]=l[nn]=d[nn]=0; return nn; } void merge(int &amp;x,int y) // merge
+  </div>
+  
+  <div>
+    <div>
+      <a href="/tpls/gt/kruskal/">
+        <h3>[模板][图论] 克鲁斯卡尔 Kruskal</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E5%9B%BE%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray-darker">图论</span>
+</a>
+
+
+
+
+
+<a href='/tags/mst' class="muted-link">
+  <span class="Label Label--gray">MST</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2020-09-25
+      </div>
+    </div>
+    克鲁斯卡尔 Kruskal template&lt;typename T,size_t V,size_t E&gt; struct Kruskal { typedef tuple&lt;T,int,int&gt; Edge; typedef pair&lt;T,int&gt; PTI; Edge edges[E]; int inmst[E]; int n; // number of vertex int m; // number of edge int uf[V]; int find(int x) { return x==uf[x]?x:uf[x]=find(uf[x]); } void init(int n_) { n=n_; m=0; } void addedge(int u,int v,T w) { edges[m++]={w,u,v}; } PTI solve() { int cnt=n; // number of connected component T sum=0; int u,v; T w; for(int i=0;i&lt;n;i++) uf[i]=i; sort(edges,edges+m); for(int i=0;i&lt;m&amp;&amp;cnt&gt;1;i++) { tie(w,u,v)=edges[i]; u=find(u); v=find(v); if(u==v) continue; inmst[i]=1; sum=sum+w; cnt--; uf[u]=v; } return {sum,cnt==1}; // {totval in mst, ismst} }
+  </div>
+  
+  <div>
+    <div>
       <a href="/tpls/gt/floyd/">
         <h3>[模板][图论] 弗洛伊德 Floyd</h3>
       </a>
@@ -824,38 +904,6 @@
     0 简介 Markdown 与 Typora 什么是 Markdown？ Markdown 是一种轻量级标记语言，可以通过格式标记把普通文本变成带有格式的富文本。 什么是 Typora？ Typora 是使用 Markdown 语言的一个编辑器。与其他 Markdown 编辑器不同的是，Markdown 的效
   </div>
   
-  <div>
-    <div>
-      <a href="/others/helloworld/">
-        <h3>OTTFF 的新 Blog</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/others' class="muted-link">
-  <span class="Label Label--gray-darker">Others</span>
-</a>
-
-
-
-
-
-
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-09-03
-      </div>
-    </div>
-    OTTFF 的新 Blog 很久之前我有一个 xxdn 的 Blog，但是随着自己越来越懒其广告等不重要的信息越来越多，于是弃坑多年。 读到一些大牛自建的博客之后，也萌生了自己搭建一个界面简单干净而又功能强大的 Blog 的想法。 经过研究，大概
-  </div>
-  
 
   
   <nav class="paginate-container">
@@ -882,9 +930,13 @@
             4
           </a>
         
+          <a href="/page/5/">
+            5
+          </a>
+        
 
         
-        <span class="next_page disabled">Next</span>
+        <a href="/page/5/" class="next_page">Next</a>
         
       </ul>
     </div>
@@ -914,7 +966,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/notes" class="link-gray text-emphasized css-truncate-target"><span class="">notes</span></a>
-      <span class="text-right Counter">35</span>
+      <span class="text-right Counter">36</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -924,7 +976,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/solutions" class="link-gray text-emphasized css-truncate-target"><span class="">solutions</span></a>
-      <span class="text-right Counter">18</span>
+      <span class="text-right Counter">19</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -1015,6 +1067,8 @@
         
             <a href="/tags/%e6%95%b0%e8%ae%ba" data-weight="6">数论</a>
         
+            <a href="/tags/%e6%95%b4%e9%99%a4" data-weight="1">整除</a>
+        
             <a href="/tags/%e6%9a%b4%e5%8a%9b" data-weight="1">暴力</a>
         
             <a href="/tags/%e6%9c%80%e7%9f%ad%e8%b7%af" data-weight="3">最短路</a>
@@ -1043,7 +1097,7 @@
         
             <a href="/tags/%e8%b4%a8%e5%9b%a0%e6%95%b0%e5%88%86%e8%a7%a3" data-weight="1">质因数分解</a>
         
-            <a href="/tags/%e8%b4%aa%e5%bf%83" data-weight="7">贪心</a>
+            <a href="/tags/%e8%b4%aa%e5%bf%83" data-weight="8">贪心</a>
         
             <a href="/tags/%e9%9a%8f%e6%9c%ba" data-weight="1">随机</a>
         
@@ -1072,7 +1126,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/ojs/codeforces" class="link-gray text-emphasized css-truncate-target"><span class="">codeforces</span></a>
-      <span class="text-right Counter">12</span>
+      <span class="text-right Counter">13</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -1206,6 +1260,16 @@
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2024-08" class="link-gray text-emphasized css-truncate-target"><span class="">2024 08</span></a>
       <span class="text-right Counter">2</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2024-12" class="link-gray text-emphasized css-truncate-target"><span class="">2024 12</span></a>
+      <span class="text-right Counter">1</span>
+    </span>
+    
+    <span class="css-truncate no-wrap m-1 pl-1">
+      <a href="/archives/2025-01" class="link-gray text-emphasized css-truncate-target"><span class="">2025 01</span></a>
+      <span class="text-right Counter">1</span>
     </span>
     
   </div>

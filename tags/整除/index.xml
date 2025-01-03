@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>整除 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E6%95%B4%E9%99%A4/</link>
+    <description>Recent content in 整除 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 30 Dec 2024 12:19:01 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%95%B4%E9%99%A4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[数学] 判断数字能否被 x 整除</title>
+      <link>https://ottffyzy.github.io/notes/math/div/</link>
+      <pubDate>Mon, 30 Dec 2024 12:19:01 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/notes/math/div/</guid>
+      <description>关于 2, 5, 4, 25 这一类比较显然。对于 $x = 2, 5$ 只需数字最后 $1$ 位能被被 $x$ 整除即可。 对于 $x = 4, 25$ 只需数字最后 $2$ 位能被整除即可。 之所以我们可以进行截断，是因为 $10 \equiv 0 \ (\bmod 2\ )$, $10 \equiv 0 \ (\bmod 5\ )$ 而 $100 \equiv 0 \ (\bmod 4\ )$, $100 \equiv 0 \ (\bmod</description>
+    </item>
+    
+  </channel>
+</rss>

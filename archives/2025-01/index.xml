@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2025-01 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/archives/2025-01/</link>
+    <description>Recent content in 2025-01 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 02 Jan 2025 23:01:39 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/archives/2025-01/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Water Taps - Educational Codeforces Round 40</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/954/e/</link>
+      <pubDate>Thu, 02 Jan 2025 23:01:39 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/954/e/</guid>
+      <description>https://codeforces.com/contest/954/problem/E 题目大意 给出 $N (\le 2 \times 10 ^ 5)$ 个水龙头的水量 $a_i (\le 10 ^ 6)$ 和温度 $t_i (\le 10 ^ 6)$，每个水龙头可以取 $0 \sim a_i$ 的实数单位水量，问可以混合出 $T (\le 10 ^ 6)$ 温度的水最多多少。 若每个龙头取 $c_i$ 单位水，则混合水的温度为 $\frac{\sum c_i t_i)}{\sum c_i}$ 简</description>
+    </item>
+    
+  </channel>
+</rss>
