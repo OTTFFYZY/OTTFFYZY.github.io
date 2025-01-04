@@ -6,9 +6,45 @@
     <description>Recent content in 2025-01 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 02 Jan 2025 23:01:39 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/archives/2025-01/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Jan 2025 18:48:48 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/archives/2025-01/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[CF] E. Water Taps - Educational Codeforces Round 40</title>
+      <title>B. Our Tanya is Crying Out Loud - Codeforces Round 466 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/940/b/</link>
+      <pubDate>Fri, 03 Jan 2025 18:48:48 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/940/b/</guid>
+      <description>https://codeforces.com/contest/940/problem/B 题目大意 给定数字 $n, k, a, b (1 \le n, k, a, b \le 2 \times 10^9)$，使用两种操作将 $n$ 变为 $1$， 花费 $a$ 使 $n$ 减 $1$。 花费 $b$ 使 $n$ 变为 $n / k$ （仅在 $k | n$ 时可用）。 简要题解 显然贪心即可，对于每次先将 $n$ 减到 $k$ 的某个倍数</description>
+    </item>
+    
+    <item>
+      <title>C. Phone Numbers - Codeforces Round 466 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/940/c/</link>
+      <pubDate>Fri, 03 Jan 2025 18:48:46 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/940/c/</guid>
+      <description>https://codeforces.com/contest/940/problem/C 题目大意 给出字符串 $S$ 以及长度 $k$, $(|S|,k \le 10^5)$。要求用 $S$ 相同的字符集，构造字典序最小的且字典序大于 $S$ 的，长度为 $k$ 的串 $T$ 。题目保证有解。 简要题解 注意到这里是字符串，和数字的比较大小是不同的。 对于 $k &amp;gt; n$</description>
+    </item>
+    
+    <item>
+      <title>D. Alena And The Heater - Codeforces Round 466 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/940/d/</link>
+      <pubDate>Fri, 03 Jan 2025 18:48:45 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/940/d/</guid>
+      <description>https://codeforces.com/contest/940/problem/D 题目大意 给出序列 $n(\le 10^5)$ 长的序列 $a$ 和 $b$。 $b_1 = b_2 = b_3 = b_4 = 0$。对于 $i \ge 5$ $b_i = 0$，如果 $a_{i - 4}, a_{i - 3}, a_{i - 2},a_{i - 1}, a_{i} &amp;gt; r$ 且 $b_{i - 4} = b_{i - 3} = b_{i - 2} = b_{i - 1} = 1$。 $b_i = 1$，如果 $a_{i - 4}, a_{i - 3}, a_{i - 2},a_{i - 1}, a_{i} &amp;lt; l$ 且</description>
+    </item>
+    
+    <item>
+      <title>E. Cashback - Codeforces Round 466 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/940/e/</link>
+      <pubDate>Fri, 03 Jan 2025 18:48:28 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/940/e/</guid>
+      <description>https://codeforces.com/contest/940/problem/E 题目大意 给出 $n \le 10 ^ 5$ 长的数组 $a (1 \le a_i \le 10 ^ 9)$ 和常数 $c \le 10^5$ ，可以将数组分为一些连续的子数组。对于每个子数组，可以将其最小的 $\lfloor \frac{len}{c} \rfloor$ 个元素的权值减去。问剩余权值的和的最小值是多少。 简要题解 重要观察：最终</description>
+    </item>
+    
+    <item>
+      <title>E. Water Taps - Educational Codeforces Round 40</title>
       <link>https://ottffyzy.github.io/sols/codeforces/954/e/</link>
       <pubDate>Thu, 02 Jan 2025 23:01:39 -0800</pubDate>
       

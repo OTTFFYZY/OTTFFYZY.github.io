@@ -102,6 +102,154 @@
   
   <div>
     <div>
+      <a href="/tpls/cg/nearestpair/">
+        <h3>[模板][计算几何] 平面最近点对</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/templates' class="muted-link">
+  <span class="Label Label--gray-darker">Templates</span>
+</a>
+
+
+
+<a href='/templates/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95' class="muted-link">
+  <span class="Label Label--gray-darker">计算几何</span>
+</a>
+
+
+
+
+
+<a href='/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95' class="muted-link">
+  <span class="Label Label--gray">计算几何</span>
+</a>
+
+
+
+
+      <div class="float-md-right">
+        
+        2021-07-03
+      </div>
+    </div>
+    Title typedef long long LL; typedef vector&lt;int&gt; VI; typedef vector&lt;VI&gt; VVI; const LL INF=0x3f3f3f3f3f3f3f3f; inline LL sqr(LL x){ return x*x; } inline LL dis(const VI &amp;a,const VI &amp;b) { return sqr(a[0]-b[0])+sqr(a[1]-b[1]); } bool cmp(const VI &amp;a, const VI &amp;b) { return a[1]&lt;b[1]; } VVI tmp; LL help(VVI &amp;ps,int l,int r) { int n=r-l+1; if(n&lt;=3) { LL ans=INF; for(int i=l;i&lt;=r;i++) { for(int j=i+1;j&lt;=r;j++) ans=min(ans,dis(ps[i],ps[j])); } sort(ps.begin()+l, ps.begin()+r+1, cmp); return ans; } int m=(l+r)&gt;&gt;1; int mp=ps[m][0]; LL ans=min(help(ps,l,m),help(ps,m+1,r)); int i=l,j=m+1,p=l; while(i&lt;=m || j&lt;=r) { if(i&gt;m || j&lt;=r&amp;&amp;cmp(ps[j],ps[i])) { tmp[p++]=ps[j++]; } else { tmp[p++]=ps[i++]; } } copy(tmp.begin()+l, tmp.begin()+r+1,ps.begin()+l); p=0; for(int i=l;i&lt;=r;i++) { if(sqr(ps[i][0]-mp)
+  </div>
+  
+  <div>
+    <div>
+      <a href="/notes/cppprimer/c10/">
+        <h3>《C&#43;&#43; Primer》 拾遗 第 10 章 泛型算法</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/cpp-primer' class="muted-link">
+  <span class="Label Label--gray">Cpp Primer</span>
+</a>
+
+
+      <div class="float-md-right">
+        
+        2021-06-21
+      </div>
+    </div>
+    第 10 章 泛型算法 泛型算法 generic algorithm 10.1 概述 大多数算法定义在头文件 algorithm 中。另外在 numeric 种定义了一组数值泛型算法。 一般来说这些算法并不直接操作容器，二十遍历由两个迭代器指定的一个元素范围来进行操作。 10.2 初识泛型算法 10.2.1 只读算
+  </div>
+  
+  <div>
+    <div>
+      <a href="/notes/cppprimer/c9/">
+        <h3>《C&#43;&#43; Primer》 拾遗 第 9 章 顺序容器</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/cpp-primer' class="muted-link">
+  <span class="Label Label--gray">Cpp Primer</span>
+</a>
+
+
+      <div class="float-md-right">
+        
+        2021-06-17
+      </div>
+    </div>
+    第 9 章 顺序容器 sequential container 9.1 顺序容器概述 vector deque list forward_list array string 9.2 容器库概览 类型别名 意义 iterator 迭代器类型 const_iterator 不能修改元素的迭代器类型 size_type 容器类型最大可能的大小 difference_type 两个迭代器间的距离 value_type 元素类型 reference 元素的左值类型与 value_type&amp; 相同 const_reference 元素的 const 左值类
+  </div>
+  
+  <div>
+    <div>
+      <a href="/notes/cppprimer/c8/">
+        <h3>《C&#43;&#43; Primer》 拾遗 第 8 章 IO 库</h3>
+      </a>
+      
+      
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/notes' class="muted-link">
+  <span class="Label Label--gray-darker">Notes</span>
+</a>
+
+
+
+
+
+
+
+
+
+<a href='/series/cpp-primer' class="muted-link">
+  <span class="Label Label--gray">Cpp Primer</span>
+</a>
+
+
+      <div class="float-md-right">
+        
+        2021-06-14
+      </div>
+    </div>
+    第 8 章 IO 库 8.1 IO 类 头文件 类型 作用 iostream istream, wistream 从流读 ostream, wostream 向流写 iostream,wiostream 读写流 fstream ifstream, wifstream 从文件读 ofstream, wofstream 向文件写 fstream, wfstream 读写文件 sstream istringstream, wistringstream 从 string 读 ostringstream, wostringstream 向 string 写 stringstream, wstringstream 读写 string ifstream 和 istringstream 继承自 istream ofstream 和 ostringstream 继承自 ostream IO 对象没有拷贝和赋值操作。 8.1.2 条件状态 IO 类定
+  </div>
+  
+  <div>
+    <div>
       <a href="/notes/cppprimer/c7/">
         <h3>《C&#43;&#43; Primer》 拾遗 第 7 章 类</h3>
       </a>
@@ -708,158 +856,6 @@
     C++ 日常使用 template &lt;typename A, typename B&gt; string to_string(pair&lt;A, B&gt; p); template &lt;typename A, typename B, typename C&gt; string to_string(tuple&lt;A, B, C&gt; p); template &lt;typename A, typename B, typename C, typename D&gt; string to_string(tuple&lt;A, B, C, D&gt; p); string to_string(const string&amp; s) { return &#39;&#34;&#39; + s + &#39;&#34;&#39;; } string to_string(const char* s) { return to_string((string) s); } string to_string(bool b) { return (b ? &#34;true&#34; : &#34;false&#34;); } string to_string(vector&lt;bool&gt; v) { string res = &#34;{&#34;; for (int i = 0; i &lt; static_cast&lt;int&gt;(v.size()); i++) { if (i) { res += &#34;, &#34;; } res
   </div>
   
-  <div>
-    <div>
-      <a href="/tpls/a/cpp/">
-        <h3>[模板] C&#43;&#43; 日常使用</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/templates' class="muted-link">
-  <span class="Label Label--gray-darker">Templates</span>
-</a>
-
-
-
-<a href='/templates/a' class="muted-link">
-  <span class="Label Label--gray-darker">A</span>
-</a>
-
-
-
-
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-09-29
-      </div>
-    </div>
-    C++ 日常使用 #include &lt;bits/stdc++.h&gt;using namespace std; int io_=[](){ ios::sync_with_stdio(false); cin.tie(nullptr); return 0; }(); using LL = long long; using ULL = unsigned long long; using LD = long double; using PII = pair&lt;int, int&gt;; using VI = vector&lt;int&gt;; using MII = map&lt;int, int&gt;; template&lt;typename T&gt; void cmin(T &amp;x,const T &amp;y) { if(y&lt;x) x=y; } template&lt;typename T&gt; void cmax(T &amp;x,const T &amp;y) { if(x&lt;y) x=y; } template&lt;typename T&gt; void cmin(T &amp;x,T &amp;y,const T &amp;z) {// x&lt;=y&lt;=z if(z&lt;x) { y=x; x=z; } else if(z&lt;y) y=z; } template&lt;typename T&gt; void cmax(T &amp;x,T &amp;y,const T &amp;z) {// x&gt;=y&gt;=z if(x&lt;z) { y=x;
-  </div>
-  
-  <div>
-    <div>
-      <a href="/summaries/lcgoodproblem/">
-        <h3>[LeetCode] 值得一做的题目列表</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/summaries' class="muted-link">
-  <span class="Label Label--gray-darker">Summaries</span>
-</a>
-
-
-
-
-
-<a href='/ojs/leetcode' class="muted-link">
-  <span class="Label Label--gray-darker">LeetCode</span>
-</a>
-
-
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-09-29
-      </div>
-    </div>
-    前 总结一下 LeetCode 上比较好的题目（部分题可能并不是很好，但是实现细节复杂，面试需要特别注意也囊括进来了）。 推荐指数 $1-5$ 是按照可能已经掌握的知识层次进行排序的，竞赛选手推荐刷推荐指数 $3$ 以上的题目。推荐指数和难度
-  </div>
-  
-  <div>
-    <div>
-      <a href="/tpls/hash/safehash/">
-        <h3>[模板][Hash] 安全哈希函数</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/templates' class="muted-link">
-  <span class="Label Label--gray-darker">Templates</span>
-</a>
-
-
-
-<a href='/templates/hash' class="muted-link">
-  <span class="Label Label--gray-darker">Hash</span>
-</a>
-
-
-
-
-
-<a href='/tags/hash' class="muted-link">
-  <span class="Label Label--gray">Hash</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-09-28
-      </div>
-    </div>
-    安全哈希函数 struct custom_hash { static uint64_t splitmix64(uint64_t x) { // http://xorshift.di.unimi.it/splitmix64.c x += 0x9e3779b97f4a7c15; x = (x ^ (x &gt;&gt; 30)) * 0xbf58476d1ce4e5b9; x = (x ^ (x &gt;&gt; 27)) * 0x94d049bb133111eb; return x ^ (x &gt;&gt; 31); } size_t operator()(uint64_t x) const { static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count(); return splitmix64(x + FIXED_RANDOM); } }; 用这个函数作为 unordered_set 的第二个参数或 unordered_map 的第三个参数。
-  </div>
-  
-  <div>
-    <div>
-      <a href="/tpls/nt/mod/">
-        <h3>[模板][数论] 模下计算</h3>
-      </a>
-      
-      
-    </div>
-    <div class="Subhead-description">
-      
-
-<a href='/categories/templates' class="muted-link">
-  <span class="Label Label--gray-darker">Templates</span>
-</a>
-
-
-
-<a href='/templates/%E6%95%B0%E8%AE%BA' class="muted-link">
-  <span class="Label Label--gray-darker">数论</span>
-</a>
-
-
-
-
-
-<a href='/tags/%E6%95%B0%E8%AE%BA' class="muted-link">
-  <span class="Label Label--gray">数论</span>
-</a>
-
-
-
-
-      <div class="float-md-right">
-        
-        2020-09-27
-      </div>
-    </div>
-    模下计算 普通 const int MO=1e9+7; inline int add(int x,int y) { x+=y; if(x&gt;=MO) x-=MO; return x; } inline int sub(int x,int y) { x-=y; if(x&lt;0) x+=MO; return x; } inline int mul(int x,int y) { return 1LL*x*y%MO; } inline void addv(int &amp;x,int y) { x+=y; if(x&gt;=MO) x-=MO; } inline void subv(int &amp;x,int y) { x-=y; if(x&lt;0) x+=MO; } inline void mulv(int &amp;x,int y) { x=1LL*x*y%MO; } int qp(int x,int n) { int ans=1; while(n) { if(n&amp;1) { mulv(ans,x); } mulv(x,x); n&gt;&gt;=1; } return ans; } ModInt template&lt;int MO=1000000007&gt; struct ModInt { int x; ModInt(int x=0):x(x){ norm();
-  </div>
-  
 
   
   <nav class="paginate-container">
@@ -932,7 +928,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/solutions" class="link-gray text-emphasized css-truncate-target"><span class="">solutions</span></a>
-      <span class="text-right Counter">19</span>
+      <span class="text-right Counter">23</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -1005,7 +1001,9 @@
         
             <a href="/tags/%e5%89%8d%e7%bc%80%e5%92%8c" data-weight="2">前缀和</a>
         
-            <a href="/tags/%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92" data-weight="2">动态规划</a>
+            <a href="/tags/%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92" data-weight="3">动态规划</a>
+        
+            <a href="/tags/%e5%8d%95%e8%b0%83%e9%98%9f%e5%88%97" data-weight="1">单调队列</a>
         
             <a href="/tags/%e5%8f%8c%e6%8c%87%e9%92%88" data-weight="1">双指针</a>
         
@@ -1053,7 +1051,7 @@
         
             <a href="/tags/%e8%b4%a8%e5%9b%a0%e6%95%b0%e5%88%86%e8%a7%a3" data-weight="1">质因数分解</a>
         
-            <a href="/tags/%e8%b4%aa%e5%bf%83" data-weight="8">贪心</a>
+            <a href="/tags/%e8%b4%aa%e5%bf%83" data-weight="12">贪心</a>
         
             <a href="/tags/%e9%9a%8f%e6%9c%ba" data-weight="1">随机</a>
         
@@ -1082,7 +1080,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/ojs/codeforces" class="link-gray text-emphasized css-truncate-target"><span class="">codeforces</span></a>
-      <span class="text-right Counter">13</span>
+      <span class="text-right Counter">17</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -1225,7 +1223,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2025-01" class="link-gray text-emphasized css-truncate-target"><span class="">2025 01</span></a>
-      <span class="text-right Counter">1</span>
+      <span class="text-right Counter">5</span>
     </span>
     
   </div>
