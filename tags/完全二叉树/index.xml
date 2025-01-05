@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>“完全二叉树” on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+    <description>Recent content in “完全二叉树” on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 05 Jan 2025 11:15:10 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>D. Paths in a Complete Binary Tree - Educational Codeforces Round 18</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/792/d/</link>
+      <pubDate>Sun, 05 Jan 2025 11:15:10 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/792/d/</guid>
+      <description>https://codeforces.com/contest/792/problem/D 题目大意 给出一棵 $n \ (\le 10^{18})$ 个节点的完全二叉树（$n + 1$ 保证为 $2^k$）。节点标号按照前序遍历顺序。给出 $q$ 个询问，每次询问为起点 $u_i$ 和操作序列 $s_i$，其中 $s_i$ 由 U, L, R 组成，分别表示走到父节点，走进左子</description>
+    </item>
+    
+  </channel>
+</rss>

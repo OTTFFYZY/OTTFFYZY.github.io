@@ -6,7 +6,16 @@
     <description>Recent content in 贪心 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 03 Jan 2025 18:48:48 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E8%B4%AA%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Jan 2025 12:28:50 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E8%B4%AA%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A. Simple Palindrome - Codeforces Round 972 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2005/a/</link>
+      <pubDate>Sat, 04 Jan 2025 12:28:50 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2005/a/</guid>
+      <description>https://codeforces.com/contest/2005/problem/A 题目大意 使用 aeiou，构造 $n \ (\le 100)$ 的串，使得其回文子序列最少。（一样的回文下标不同要重复计算） 简要题解 容易发现，对于同一字母的所有组合，无论字母如何排布都会组成回文，那么需要不同字母组成的回文尽量</description>
+    </item>
+    
     <item>
       <title>B. Our Tanya is Crying Out Loud - Codeforces Round 466 (Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/940/b/</link>

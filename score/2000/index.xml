@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2000 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/score/2000/</link>
+    <description>Recent content in 2000 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 05 Jan 2025 11:15:22 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/2000/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C. Divide by Three - Educational Codeforces Round 18</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/792/c/</link>
+      <pubDate>Sun, 05 Jan 2025 11:15:22 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/792/c/</guid>
+      <description>https://codeforces.com/contest/792/problem/C 题目大意 用字符串给出一个十进制大整数 $S \ (|S| \le 10^5)$。问最少删掉多少位可以得到一个没有前导零的能被 $3$ 整除的数。输出这个数。 简要题解 允许前导零的话这题非常水，直接 $dp[i][j]$ 表示到第 $i$ 位 $\mod 3$ 为 $j$ 的最多选数数</description>
+    </item>
+    
+  </channel>
+</rss>

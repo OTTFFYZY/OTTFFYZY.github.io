@@ -6,7 +6,52 @@
     <description>Recent content in Solutions on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 03 Jan 2025 18:48:48 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/categories/solutions/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Jan 2025 11:15:24 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/categories/solutions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>B. Counting-out Rhyme - Educational Codeforces Round 18</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/792/b/</link>
+      <pubDate>Sun, 05 Jan 2025 11:15:24 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/792/b/</guid>
+      <description>https://codeforces.com/contest/792/problem/B 题目大意 给出 $n \ (\le 100)$ 个点的环，顺时针标号 $1 \sim n$，以及 $k \ (\le n - 1)$ 次操作 $a_i \ (\le 10^9)$。最初位置为 $1$。每次操作顺时针数 $a_i$ 个位置，之后把这个点删掉，位置变为删掉的下一个。输出删掉标号的序列。 简</description>
+    </item>
+    
+    <item>
+      <title>C. Divide by Three - Educational Codeforces Round 18</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/792/c/</link>
+      <pubDate>Sun, 05 Jan 2025 11:15:22 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/792/c/</guid>
+      <description>https://codeforces.com/contest/792/problem/C 题目大意 用字符串给出一个十进制大整数 $S \ (|S| \le 10^5)$。问最少删掉多少位可以得到一个没有前导零的能被 $3$ 整除的数。输出这个数。 简要题解 允许前导零的话这题非常水，直接 $dp[i][j]$ 表示到第 $i$ 位 $\mod 3$ 为 $j$ 的最多选数数</description>
+    </item>
+    
+    <item>
+      <title>D. Paths in a Complete Binary Tree - Educational Codeforces Round 18</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/792/d/</link>
+      <pubDate>Sun, 05 Jan 2025 11:15:10 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/792/d/</guid>
+      <description>https://codeforces.com/contest/792/problem/D 题目大意 给出一棵 $n \ (\le 10^{18})$ 个节点的完全二叉树（$n + 1$ 保证为 $2^k$）。节点标号按照前序遍历顺序。给出 $q$ 个询问，每次询问为起点 $u_i$ 和操作序列 $s_i$，其中 $s_i$ 由 U, L, R 组成，分别表示走到父节点，走进左子</description>
+    </item>
+    
+    <item>
+      <title>A. Simple Palindrome - Codeforces Round 972 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2005/a/</link>
+      <pubDate>Sat, 04 Jan 2025 12:28:50 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2005/a/</guid>
+      <description>https://codeforces.com/contest/2005/problem/A 题目大意 使用 aeiou，构造 $n \ (\le 100)$ 的串，使得其回文子序列最少。（一样的回文下标不同要重复计算） 简要题解 容易发现，对于同一字母的所有组合，无论字母如何排布都会组成回文，那么需要不同字母组成的回文尽量</description>
+    </item>
+    
+    <item>
+      <title>A. Points on the line - Codeforces Round 466 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/940/a/</link>
+      <pubDate>Sat, 04 Jan 2025 11:39:24 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/940/a/</guid>
+      <description>https://codeforces.com/contest/940/problem/A 题目大意 给定 $n \ (\le 100)$ 个点 $x_i \ (1 \le x_i \le 100)$ 和一个 $c \ (0 \le c\le 100)$。问至少删掉多少点使得剩余的任意 $i, j$ 满足 $|x_i - x_j| \le c$。 简要题解 范围很小所以可以直接 $n ^ 3$ 或者 $n^2$ 枚举。 当然，如果 $n \le 2 \times 10^5$，$x</description>
+    </item>
+    
     <item>
       <title>B. Our Tanya is Crying Out Loud - Codeforces Round 466 (Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/940/b/</link>

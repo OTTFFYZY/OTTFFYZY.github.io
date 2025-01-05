@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1200 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/score/1200/</link>
+    <description>Recent content in 1200 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 04 Jan 2025 11:39:24 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1200/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A. Points on the line - Codeforces Round 466 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/940/a/</link>
+      <pubDate>Sat, 04 Jan 2025 11:39:24 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/940/a/</guid>
+      <description>https://codeforces.com/contest/940/problem/A 题目大意 给定 $n \ (\le 100)$ 个点 $x_i \ (1 \le x_i \le 100)$ 和一个 $c \ (0 \le c\le 100)$。问至少删掉多少点使得剩余的任意 $i, j$ 满足 $|x_i - x_j| \le c$。 简要题解 范围很小所以可以直接 $n ^ 3$ 或者 $n^2$ 枚举。 当然，如果 $n \le 2 \times 10^5$，$x</description>
+    </item>
+    
+  </channel>
+</rss>
