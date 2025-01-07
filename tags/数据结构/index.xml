@@ -13,7 +13,7 @@
       <pubDate>Wed, 31 Jul 2024 21:09:09 -0700</pubDate>
       
       <guid>https://ottffyzy.github.io/sols/codeforces/1997/e/</guid>
-      <description>https://codeforces.com/contest/1997/problem/E 题目大意 给定 $n\ (\le 2 \cdot 10^5)$ 长的数组和 $q\ (\le 2 \cdot 10^5)$ 个询问。数组中元素 $a_i\ (\le 2 \cdot 10^5)$。对于参数 $k$，我们依次在数组中标记 $k$ 个不超过 $1$ 的数，之后从最后标记的下标开始，再标记 $k$ 个不超过 $2$ 的数，以此类推。 每</description>
+      <description>https://codeforces.com/contest/1997/problem/E 题目大意 给定 $n\ (\le 2 \cdot 10^5)$ 长的数组和 $q\ (\le 2 \cdot 10^5)$ 个询问。数组中元素 $a_i\ (\le 2 \cdot 10^5)$。对于参数 $k$，我们依次在数组中标记 $k$ 个不小于 $1$ 的数，之后从最后标记的下标开始，再标记 $k$ 个不小于 $2$ 的数，以此类推。 每</description>
     </item>
     
   </channel>

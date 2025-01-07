@@ -142,7 +142,7 @@
       
       <span title="Lastmod: 2025-01-05. Published at: 2025-01-05.">
         
-          Lastmod: 2025-01-05 周日 12:40:30
+          Lastmod: 2025-01-05 周日 12:44:41
         
       </span>
     </div>
@@ -163,7 +163,7 @@
 <li>总是以某个非零数字开始</li>
 </ol>
 <p>因此反着进行 dp，算对答案贡献的时候把第一位特判就可以了。</p>
-<p>特别注意，不能直接使用 dp 的值，需要特判第一位，因为 dp 的值可能直接不选的情况！</p>
+<p>特别注意，不能直接使用 $dp[i][0]$ 的值，需要特判第一位，因为 $dp[i][0]$ 的值可能是转移自不选当前位的情况！</p>
 <p>一组数据</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext">20000111
 </code></pre></div><p>错误的代码实现</p>

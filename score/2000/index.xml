@@ -6,7 +6,16 @@
     <description>Recent content in 2000 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 05 Jan 2025 11:15:22 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/2000/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jan 2025 21:03:13 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/2000/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>E. Array Queries - Educational Codeforces Round 19</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/797/e/</link>
+      <pubDate>Mon, 06 Jan 2025 21:03:13 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/797/e/</guid>
+      <description>https://codeforces.com/contest/797/problem/E 题目大意 给出 $n \ (\le 10^5)$ 长的数组 $a \ (1 \le a_i \le n)$。 给出 $q$ 个询问。每个询问给出 $p \ (1 \le p \le n)$ 和 $k \ (1 \le k \le n)$。问要对 $p$ 执行多少次 $p = p + a[p] + k$ 才能使 $p &amp;gt; n$。 简要题解 对于固定的 $k$ 这是一道动态规划题目</description>
+    </item>
+    
     <item>
       <title>C. Divide by Three - Educational Codeforces Round 18</title>
       <link>https://ottffyzy.github.io/sols/codeforces/792/c/</link>

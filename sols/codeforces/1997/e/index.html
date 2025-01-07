@@ -11,7 +11,7 @@
     </title>
     
     
-    <meta name="description" property="og:description" content="https://codeforces.com/contest/1997/problem/E 题目大意 给定 $n\ (\le 2 \cdot 10^5)$ 长的数组和 $q\ (\le 2 \cdot 10^5)$ 个询问。数组中元素 $a_i\ (\le 2 \cdot 10^5)$。对于参数 $k$，我们依次在数组中标记 $k$ 个不超过 $1$ 的数，之后从最后标记的下标开始，再标记 $k$ 个不超过 $2$ 的数，以此类推。 每|OTTFF&#39;s Blog">
+    <meta name="description" property="og:description" content="https://codeforces.com/contest/1997/problem/E 题目大意 给定 $n\ (\le 2 \cdot 10^5)$ 长的数组和 $q\ (\le 2 \cdot 10^5)$ 个询问。数组中元素 $a_i\ (\le 2 \cdot 10^5)$。对于参数 $k$，我们依次在数组中标记 $k$ 个不小于 $1$ 的数，之后从最后标记的下标开始，再标记 $k$ 个不小于 $2$ 的数，以此类推。 每|OTTFF&#39;s Blog">
     
 
     <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
@@ -140,9 +140,9 @@
     
     <div class="float-md-right">
       
-      <span title="Lastmod: 2024-07-31. Published at: 2024-07-31.">
+      <span title="Lastmod: 2025-01-05. Published at: 2024-07-31.">
         
-          Lastmod: 2024-07-31 周三 22:07:39
+          Lastmod: 2025-01-05 周日 13:03:26
         
       </span>
     </div>
@@ -154,7 +154,7 @@
   <section class="pb-6 mb-3 border-bottom markdown">
       <p><a href="https://codeforces.com/contest/1997/problem/E">https://codeforces.com/contest/1997/problem/E</a></p>
 <h2 id="题目大意">题目大意</h2>
-<p>给定 $n\ (\le 2 \cdot 10^5)$ 长的数组和 $q\ (\le 2 \cdot 10^5)$ 个询问。数组中元素 $a_i\ (\le 2 \cdot 10^5)$。对于参数 $k$，我们依次在数组中标记 $k$ 个不超过 $1$ 的数，之后从最后标记的下标开始，再标记 $k$ 个不超过 $2$ 的数，以此类推。</p>
+<p>给定 $n\ (\le 2 \cdot 10^5)$ 长的数组和 $q\ (\le 2 \cdot 10^5)$ 个询问。数组中元素 $a_i\ (\le 2 \cdot 10^5)$。对于参数 $k$，我们依次在数组中标记 $k$ 个不小于 $1$ 的数，之后从最后标记的下标开始，再标记 $k$ 个不小于 $2$ 的数，以此类推。</p>
 <p>每个询问给出 $i\ (1 \le i \le n)$ 和 $x\ (1 \le x \le n)$，问 $i$ 位置在参数 $k = x$ 时是否被标记。</p>
 <h2 id="简要题解">简要题解</h2>
 <p>先考虑如何判断一个位置是否被标记。我们考虑每次标记的 $k$ 个的一段，假设这段是第 $p$ 段，则这一段中 $a_i \ge p$ 的 $i$ 会被标记，而其他的 $i$ 不会。</p>

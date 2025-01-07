@@ -6,7 +6,34 @@
     <description>Recent content in Codeforces on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 05 Jan 2025 11:15:24 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/ojs/codeforces/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jan 2025 21:03:13 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/ojs/codeforces/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>E. Array Queries - Educational Codeforces Round 19</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/797/e/</link>
+      <pubDate>Mon, 06 Jan 2025 21:03:13 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/797/e/</guid>
+      <description>https://codeforces.com/contest/797/problem/E 题目大意 给出 $n \ (\le 10^5)$ 长的数组 $a \ (1 \le a_i \le n)$。 给出 $q$ 个询问。每个询问给出 $p \ (1 \le p \le n)$ 和 $k \ (1 \le k \le n)$。问要对 $p$ 执行多少次 $p = p + a[p] + k$ 才能使 $p &amp;gt; n$。 简要题解 对于固定的 $k$ 这是一道动态规划题目</description>
+    </item>
+    
+    <item>
+      <title>C. Minimal string - Educational Codeforces Round 19</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/797/c/</link>
+      <pubDate>Mon, 06 Jan 2025 20:50:30 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/797/c/</guid>
+      <description>https://codeforces.com/contest/797/problem/C 题目大意 给出小写字母构成的字符串 $A \ (|A| \le 10^5)$，和空串 $B, C$。每次操作可以做以下操作之一： 将 $A$ 开头的字符移动到 $B$ 结尾。 将 $B$ 结尾的字符移动到 $C$ 结尾 重复操作直到 $A, B$ 为空。问能得到字典序最小的 $C$ 是什</description>
+    </item>
+    
+    <item>
+      <title>B. Odd sum - Educational Codeforces Round 19</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/797/b/</link>
+      <pubDate>Mon, 06 Jan 2025 20:45:39 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/797/b/</guid>
+      <description>https://codeforces.com/contest/797/problem/B 题目大意 给出长度 $n \ (\le 10^5)$ 长的数组 $a \ (-10^4 \le a_i \le 10^4)$，保证其有和为奇数的子序列，问和为奇数的子序列最大是多少。 简要题解 显然我们要尽量选所有的正数让和尽量大，但这时如果和是偶数，那我们就需要减掉最</description>
+    </item>
+    
     <item>
       <title>B. Counting-out Rhyme - Educational Codeforces Round 18</title>
       <link>https://ottffyzy.github.io/sols/codeforces/792/b/</link>
@@ -121,7 +148,7 @@
       <pubDate>Wed, 31 Jul 2024 21:09:09 -0700</pubDate>
       
       <guid>https://ottffyzy.github.io/sols/codeforces/1997/e/</guid>
-      <description>https://codeforces.com/contest/1997/problem/E 题目大意 给定 $n\ (\le 2 \cdot 10^5)$ 长的数组和 $q\ (\le 2 \cdot 10^5)$ 个询问。数组中元素 $a_i\ (\le 2 \cdot 10^5)$。对于参数 $k$，我们依次在数组中标记 $k$ 个不超过 $1$ 的数，之后从最后标记的下标开始，再标记 $k$ 个不超过 $2$ 的数，以此类推。 每</description>
+      <description>https://codeforces.com/contest/1997/problem/E 题目大意 给定 $n\ (\le 2 \cdot 10^5)$ 长的数组和 $q\ (\le 2 \cdot 10^5)$ 个询问。数组中元素 $a_i\ (\le 2 \cdot 10^5)$。对于参数 $k$，我们依次在数组中标记 $k$ 个不小于 $1$ 的数，之后从最后标记的下标开始，再标记 $k$ 个不小于 $2$ 的数，以此类推。 每</description>
     </item>
     
     <item>
