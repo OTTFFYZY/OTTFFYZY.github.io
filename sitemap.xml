@@ -2,52 +2,91 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ottffyzy.github.io/score/2000/</loc>
-    <lastmod>2025-01-06T21:24:02-08:00</lastmod>
+    <loc>https://ottffyzy.github.io/score/1300/</loc>
+    <lastmod>2025-01-07T21:04:42-08:00</lastmod>
   </url><url>
     <loc>https://ottffyzy.github.io/archives/2025-01/</loc>
-    <lastmod>2025-01-06T21:24:02-08:00</lastmod>
+    <lastmod>2025-01-07T21:21:09-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/sols/codeforces/628/b/</loc>
+    <lastmod>2025-01-07T21:04:42-08:00</lastmod>
   </url><url>
     <loc>https://ottffyzy.github.io/archives/</loc>
-    <lastmod>2025-01-06T21:24:02-08:00</lastmod>
+    <lastmod>2025-01-07T21:21:09-08:00</lastmod>
   </url><url>
     <loc>https://ottffyzy.github.io/categories/</loc>
-    <lastmod>2025-01-06T21:24:02-08:00</lastmod>
+    <lastmod>2025-01-07T21:21:09-08:00</lastmod>
   </url><url>
     <loc>https://ottffyzy.github.io/ojs/codeforces/</loc>
-    <lastmod>2025-01-06T21:24:02-08:00</lastmod>
+    <lastmod>2025-01-07T21:21:09-08:00</lastmod>
   </url><url>
     <loc>https://ottffyzy.github.io/difficulty/</loc>
+    <lastmod>2025-01-07T21:21:09-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/difficulty/easy/</loc>
+    <lastmod>2025-01-07T21:04:42-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/ojs/</loc>
+    <lastmod>2025-01-07T21:21:09-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/</loc>
+    <lastmod>2025-01-07T21:21:09-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/score/</loc>
+    <lastmod>2025-01-07T21:21:09-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/sols/</loc>
+    <lastmod>2025-01-07T21:21:09-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/categories/solutions/</loc>
+    <lastmod>2025-01-07T21:21:09-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/tags/</loc>
+    <lastmod>2025-01-07T21:21:09-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/tags/%E6%95%B0%E8%AE%BA/</loc>
+    <lastmod>2025-01-07T21:04:42-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/tags/%E6%95%B4%E9%99%A4/</loc>
+    <lastmod>2025-01-07T21:04:42-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/score/2200/</loc>
+    <lastmod>2025-01-07T20:52:18-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/sols/codeforces/628/d/</loc>
+    <lastmod>2025-01-07T20:52:18-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/difficulty/med/</loc>
+    <lastmod>2025-01-07T21:21:09-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
+    <lastmod>2025-01-07T20:52:18-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/tags/%E6%95%B0%E4%BD%8Ddp/</loc>
+    <lastmod>2025-01-07T20:52:18-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/score/2100/</loc>
+    <lastmod>2025-01-07T21:21:09-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/sols/codeforces/797/d/</loc>
+    <lastmod>2025-01-07T21:21:09-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/tags/bst/</loc>
+    <lastmod>2025-01-07T21:21:09-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
+    <lastmod>2025-01-07T21:21:09-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/tags/%E6%A0%91/</loc>
+    <lastmod>2025-01-07T21:21:09-08:00</lastmod>
+  </url><url>
+    <loc>https://ottffyzy.github.io/score/2000/</loc>
     <lastmod>2025-01-06T21:24:02-08:00</lastmod>
   </url><url>
     <loc>https://ottffyzy.github.io/sols/codeforces/797/e/</loc>
     <lastmod>2025-01-06T21:24:02-08:00</lastmod>
   </url><url>
-    <loc>https://ottffyzy.github.io/difficulty/med/</loc>
-    <lastmod>2025-01-06T21:24:02-08:00</lastmod>
-  </url><url>
-    <loc>https://ottffyzy.github.io/ojs/</loc>
-    <lastmod>2025-01-06T21:24:02-08:00</lastmod>
-  </url><url>
-    <loc>https://ottffyzy.github.io/</loc>
-    <lastmod>2025-01-06T21:24:02-08:00</lastmod>
-  </url><url>
-    <loc>https://ottffyzy.github.io/score/</loc>
-    <lastmod>2025-01-06T21:24:02-08:00</lastmod>
-  </url><url>
-    <loc>https://ottffyzy.github.io/sols/</loc>
-    <lastmod>2025-01-06T21:24:02-08:00</lastmod>
-  </url><url>
-    <loc>https://ottffyzy.github.io/categories/solutions/</loc>
-    <lastmod>2025-01-06T21:24:02-08:00</lastmod>
-  </url><url>
     <loc>https://ottffyzy.github.io/tags/sqrt-trick/</loc>
-    <lastmod>2025-01-06T21:24:02-08:00</lastmod>
-  </url><url>
-    <loc>https://ottffyzy.github.io/tags/</loc>
-    <lastmod>2025-01-06T21:24:02-08:00</lastmod>
-  </url><url>
-    <loc>https://ottffyzy.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
     <lastmod>2025-01-06T21:24:02-08:00</lastmod>
   </url><url>
     <loc>https://ottffyzy.github.io/score/1700/</loc>
@@ -68,12 +107,6 @@
     <loc>https://ottffyzy.github.io/sols/codeforces/797/b/</loc>
     <lastmod>2025-01-06T20:50:18-08:00</lastmod>
   </url><url>
-    <loc>https://ottffyzy.github.io/difficulty/easy/</loc>
-    <lastmod>2025-01-06T20:50:18-08:00</lastmod>
-  </url><url>
-    <loc>https://ottffyzy.github.io/score/1300/</loc>
-    <lastmod>2025-01-05T12:40:53-08:00</lastmod>
-  </url><url>
     <loc>https://ottffyzy.github.io/sols/codeforces/792/b/</loc>
     <lastmod>2025-01-05T12:40:53-08:00</lastmod>
   </url><url>
@@ -81,9 +114,6 @@
     <lastmod>2025-01-05T12:40:53-08:00</lastmod>
   </url><url>
     <loc>https://ottffyzy.github.io/sols/codeforces/792/c/</loc>
-    <lastmod>2025-01-05T12:44:41-08:00</lastmod>
-  </url><url>
-    <loc>https://ottffyzy.github.io/tags/%E6%95%B4%E9%99%A4/</loc>
     <lastmod>2025-01-05T12:44:41-08:00</lastmod>
   </url><url>
     <loc>https://ottffyzy.github.io/score/1900/</loc>
@@ -144,16 +174,16 @@
     <lastmod>2025-01-03T19:52:33-08:00</lastmod>
   </url><url>
     <loc>https://ottffyzy.github.io/archives/2024-12/</loc>
-    <lastmod>2024-12-30T23:01:20-08:00</lastmod>
+    <lastmod>2025-01-07T21:00:44-08:00</lastmod>
   </url><url>
     <loc>https://ottffyzy.github.io/notes/math/div/</loc>
-    <lastmod>2024-12-30T23:01:20-08:00</lastmod>
+    <lastmod>2025-01-07T21:00:44-08:00</lastmod>
   </url><url>
     <loc>https://ottffyzy.github.io/categories/notes/</loc>
-    <lastmod>2024-12-30T23:01:20-08:00</lastmod>
+    <lastmod>2025-01-07T21:00:44-08:00</lastmod>
   </url><url>
     <loc>https://ottffyzy.github.io/notes/</loc>
-    <lastmod>2024-12-30T23:01:20-08:00</lastmod>
+    <lastmod>2025-01-07T21:00:44-08:00</lastmod>
   </url><url>
     <loc>https://ottffyzy.github.io/archives/2024-08/</loc>
     <lastmod>2024-08-05T23:28:20-07:00</lastmod>
@@ -165,9 +195,6 @@
     <lastmod>2024-08-05T23:28:20-07:00</lastmod>
   </url><url>
     <loc>https://ottffyzy.github.io/tags/%E5%BE%AA%E7%8E%AF/</loc>
-    <lastmod>2024-08-05T23:28:20-07:00</lastmod>
-  </url><url>
-    <loc>https://ottffyzy.github.io/tags/%E6%95%B0%E8%AE%BA/</loc>
     <lastmod>2024-08-05T23:28:20-07:00</lastmod>
   </url><url>
     <loc>https://ottffyzy.github.io/sols/codeforces/1993/d/</loc>
@@ -202,9 +229,6 @@
   </url><url>
     <loc>https://ottffyzy.github.io/sols/codeforces/1997/d/</loc>
     <lastmod>2024-07-30T23:38:18-07:00</lastmod>
-  </url><url>
-    <loc>https://ottffyzy.github.io/tags/%E6%A0%91/</loc>
-    <lastmod>2024-07-31T22:09:21-07:00</lastmod>
   </url><url>
     <loc>https://ottffyzy.github.io/sols/codeforces/1996/g/</loc>
     <lastmod>2024-07-30T23:44:17-07:00</lastmod>

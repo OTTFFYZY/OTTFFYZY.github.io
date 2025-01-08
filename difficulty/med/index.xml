@@ -6,7 +6,25 @@
     <description>Recent content in Med- on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 06 Jan 2025 21:03:13 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/med/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Jan 2025 20:37:22 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/med/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Magic Numbers - Educational Codeforces Round 8</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/628/d/</link>
+      <pubDate>Tue, 07 Jan 2025 20:37:22 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/628/d/</guid>
+      <description>https://codeforces.com/contest/628/problem/D 题目大意 给出 $m \ (1 \le m \le 2000)$ 和数字 $d \ (0 \le d \le 9)$，给出两个字符串表示的没有前导零的大整数 $a, b \ (1 \le a \le b \le 10^2000)$。 问在区间 $[a, b]$ 中有多少数字 $x$ 符合能被 $m$ 整除，且从高向低数的偶数位（$1-</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Broken BST - Educational Codeforces Round 19</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/797/d/</link>
+      <pubDate>Mon, 06 Jan 2025 21:24:19 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/797/d/</guid>
+      <description>https://codeforces.com/contest/797/problem/D 题目大意 给出一棵 $n \ (\le 10^5)$ 的二叉树。依次给出每个点上的权值 $v \ (0 \le v \le 10^9)$ 和其左右儿子的下标 $l, r$ 如果不存在则为 $-1$。问对于每一个树上存在的值，如果运行如下伪码，会有多少个点返回 $false$。重复数</description>
+    </item>
+    
     <item>
       <title>E. Array Queries - Educational Codeforces Round 19</title>
       <link>https://ottffyzy.github.io/sols/codeforces/797/e/</link>

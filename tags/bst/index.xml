@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BST on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/bst/</link>
+    <description>Recent content in BST on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 06 Jan 2025 21:24:19 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/bst/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Broken BST - Educational Codeforces Round 19</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/797/d/</link>
+      <pubDate>Mon, 06 Jan 2025 21:24:19 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/797/d/</guid>
+      <description>https://codeforces.com/contest/797/problem/D 题目大意 给出一棵 $n \ (\le 10^5)$ 的二叉树。依次给出每个点上的权值 $v \ (0 \le v \le 10^9)$ 和其左右儿子的下标 $l, r$ 如果不存在则为 $-1$。问对于每一个树上存在的值，如果运行如下伪码，会有多少个点返回 $false$。重复数</description>
+    </item>
+    
+  </channel>
+</rss>

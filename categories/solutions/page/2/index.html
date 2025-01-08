@@ -104,6 +104,182 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
+      <a href="/sols/codeforces/1996/g/">
+        <div class="h2 mt-1 mb-1">G. Penacony - Codeforces Round 962 (Div. 3)</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/solutions' class="muted-link">
+  <span class="Label Label--gray-darker">Solutions</span>
+</a>
+
+
+
+
+
+<a href='/ojs/codeforces' class="muted-link">
+  <span class="Label Label--gray-darker">Codeforces</span>
+</a>
+
+
+
+<a href='/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91' class="muted-link">
+  <span class="Label Label--gray">线段树</span>
+</a>
+
+<a href='/tags/%E9%9A%8F%E6%9C%BA' class="muted-link">
+  <span class="Label Label--gray">随机</span>
+</a>
+
+<a href='/tags/hash' class="muted-link">
+  <span class="Label Label--gray">hash</span>
+</a>
+
+<a href='/tags/%E7%8E%AF%E5%BD%A2' class="muted-link">
+  <span class="Label Label--gray">环形</span>
+</a>
+
+
+
+
+
+
+
+      <div class="float-md-right">
+        <span>
+        
+        2024-07-30
+      </span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    https://codeforces.com/contest/1996/problem/G 题目大意 给出 $n \le 2 \cdot 10^5$ 个点的一个简单环，给出 $m \le 2 \cdot 10^5$ 组点。要求选最少的边，使得 $m$ 组点之间，都可以通过选的边连通。给的每组点 $u &lt; v$。 简要题解 一般环形问题先想直线问题，再想断开环。 直线问题非常好解决
+    <a class="muted-link" href="/sols/codeforces/1996/g/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
+      <a href="/sols/codeforces/1996/f/">
+        <div class="h2 mt-1 mb-1">F. Bomb - Codeforces Round 962 (Div. 3)</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/solutions' class="muted-link">
+  <span class="Label Label--gray-darker">Solutions</span>
+</a>
+
+
+
+
+
+<a href='/ojs/codeforces' class="muted-link">
+  <span class="Label Label--gray-darker">Codeforces</span>
+</a>
+
+
+
+<a href='/tags/%E8%B4%AA%E5%BF%83' class="muted-link">
+  <span class="Label Label--gray">贪心</span>
+</a>
+
+<a href='/tags/%E4%BA%8C%E5%88%86' class="muted-link">
+  <span class="Label Label--gray">二分</span>
+</a>
+
+
+
+
+
+
+
+      <div class="float-md-right">
+        <span>
+        
+        2024-07-30
+      </span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    https://codeforces.com/contest/1996/problem/F 题目大意 给定 $n \le 2 \cdot 10^5$ 的两个数组 $a$ 和 $b$。可以执行 $k \le 10^9$ 次操作，每次操作选择某个 $i$ 然后 $ans += a[i]$，之后 $a[i] = max(0, a[i] - b[i])$。问最大的 $ans$ 是多少。 简要题解 题目贪心的策略是显然的，只需要选当前最大
+    <a class="muted-link" href="/sols/codeforces/1996/f/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
+      <a href="/sols/codeforces/1996/e/">
+        <div class="h2 mt-1 mb-1">E. Decode - Codeforces Round 962 (Div. 3)</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+<a href='/categories/solutions' class="muted-link">
+  <span class="Label Label--gray-darker">Solutions</span>
+</a>
+
+
+
+
+
+<a href='/ojs/codeforces' class="muted-link">
+  <span class="Label Label--gray-darker">Codeforces</span>
+</a>
+
+
+
+<a href='/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6' class="muted-link">
+  <span class="Label Label--gray">组合数学</span>
+</a>
+
+<a href='/tags/%E7%AE%97%E8%B4%A1%E7%8C%AE' class="muted-link">
+  <span class="Label Label--gray">算贡献</span>
+</a>
+
+
+
+
+
+
+
+      <div class="float-md-right">
+        <span>
+        
+        2024-07-30
+      </span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    https://codeforces.com/contest/1996/problem/E 题目大意 给出 $01$ 串 $S$，长度 $\le 2 \cdot 10^5$。求其所有子串的 $01$ 个数相同的子串的个数。 简要题解 题目求 $\sum_l \sum_r \sum_x \sum_y [cnt0(x, y) == cnt1(x, y)] ,\ (1 \le l \le x \le y \le r \le n)$。 如果只有所有子串 $S(x, y)$ 的个数，那将非常好求。遇到 $0$ 就 $
+    <a class="muted-link" href="/sols/codeforces/1996/e/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
       <a href="/sols/codeforces/724/d/">
         <div class="h2 mt-1 mb-1">D. Dense Subsequence - Intel Code Challenge Final Round</div>
       </a>
@@ -801,7 +977,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/categories/solutions" class="link-gray text-emphasized css-truncate-target"><span class="">solutions</span></a>
-      <span class="text-right Counter">31</span>
+      <span class="text-right Counter">34</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -840,6 +1016,8 @@
         
             <a href="/tags/bit" data-weight="1">bit</a>
         
+            <a href="/tags/bst" data-weight="1">bst</a>
+        
             <a href="/tags/dfs" data-weight="1">dfs</a>
         
             <a href="/tags/dp" data-weight="3">dp</a>
@@ -870,13 +1048,15 @@
         
             <a href="/tags/%e4%ba%8c%e5%8f%89%e5%a0%86" data-weight="1">二叉堆</a>
         
+            <a href="/tags/%e4%ba%8c%e5%8f%89%e6%a0%91" data-weight="1">二叉树</a>
+        
             <a href="/tags/%e4%ba%a4%e4%ba%92" data-weight="1">交互</a>
         
             <a href="/tags/%e4%bd%8d%e8%bf%90%e7%ae%97" data-weight="2">位运算</a>
         
             <a href="/tags/%e5%89%8d%e7%bc%80%e5%92%8c" data-weight="2">前缀和</a>
         
-            <a href="/tags/%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92" data-weight="5">动态规划</a>
+            <a href="/tags/%e5%8a%a8%e6%80%81%e8%a7%84%e5%88%92" data-weight="6">动态规划</a>
         
             <a href="/tags/%e5%8d%95%e8%b0%83%e9%98%9f%e5%88%97" data-weight="1">单调队列</a>
         
@@ -898,11 +1078,13 @@
         
             <a href="/tags/%e5%be%aa%e7%8e%af" data-weight="1">循环</a>
         
+            <a href="/tags/%e6%95%b0%e4%bd%8ddp" data-weight="1">数位dp</a>
+        
             <a href="/tags/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" data-weight="1">数据结构</a>
         
-            <a href="/tags/%e6%95%b0%e8%ae%ba" data-weight="6">数论</a>
+            <a href="/tags/%e6%95%b0%e8%ae%ba" data-weight="7">数论</a>
         
-            <a href="/tags/%e6%95%b4%e9%99%a4" data-weight="2">整除</a>
+            <a href="/tags/%e6%95%b4%e9%99%a4" data-weight="3">整除</a>
         
             <a href="/tags/%e6%9a%b4%e5%8a%9b" data-weight="1">暴力</a>
         
@@ -914,7 +1096,7 @@
         
             <a href="/tags/%e6%a0%88" data-weight="1">栈</a>
         
-            <a href="/tags/%e6%a0%91" data-weight="2">树</a>
+            <a href="/tags/%e6%a0%91" data-weight="3">树</a>
         
             <a href="/tags/%e6%a8%a1%e6%8b%9f" data-weight="1">模拟</a>
         
@@ -967,7 +1149,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/ojs/codeforces" class="link-gray text-emphasized css-truncate-target"><span class="">codeforces</span></a>
-      <span class="text-right Counter">25</span>
+      <span class="text-right Counter">28</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">
@@ -1110,7 +1292,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/archives/2025-01" class="link-gray text-emphasized css-truncate-target"><span class="">2025 01</span></a>
-      <span class="text-right Counter">13</span>
+      <span class="text-right Counter">16</span>
     </span>
     
   </div>

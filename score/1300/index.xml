@@ -6,7 +6,16 @@
     <description>Recent content in 1300 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 05 Jan 2025 11:15:24 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1300/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Jan 2025 20:53:07 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1300/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. New Skateboard - Educational Codeforces Round 8</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/628/b/</link>
+      <pubDate>Tue, 07 Jan 2025 20:53:07 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/628/b/</guid>
+      <description>https://codeforces.com/contest/628/problem/B 题目大意 给出一个由 $0 \sim 9$ 字符组成的字符串 $S \ (|S| \le 3 \times 10^5)$。问其有多少个子串对应的数字可以被 $4$ 整除（允许前导零）。 简要题解 分为两种情况 $1$ 位，$2$ 位及以上。对于第二种情况只需要判断最后两位能被</description>
+    </item>
+    
     <item>
       <title>B. Counting-out Rhyme - Educational Codeforces Round 18</title>
       <link>https://ottffyzy.github.io/sols/codeforces/792/b/</link>

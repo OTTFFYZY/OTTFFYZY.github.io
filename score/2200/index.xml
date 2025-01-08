@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2200 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/score/2200/</link>
+    <description>Recent content in 2200 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 07 Jan 2025 20:37:22 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/2200/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Magic Numbers - Educational Codeforces Round 8</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/628/d/</link>
+      <pubDate>Tue, 07 Jan 2025 20:37:22 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/628/d/</guid>
+      <description>https://codeforces.com/contest/628/problem/D 题目大意 给出 $m \ (1 \le m \le 2000)$ 和数字 $d \ (0 \le d \le 9)$，给出两个字符串表示的没有前导零的大整数 $a, b \ (1 \le a \le b \le 10^2000)$。 问在区间 $[a, b]$ 中有多少数字 $x$ 符合能被 $m$ 整除，且从高向低数的偶数位（$1-</description>
+    </item>
+    
+  </channel>
+</rss>
