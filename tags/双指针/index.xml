@@ -6,7 +6,16 @@
     <description>Recent content in 双指针 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 04 Jan 2025 11:39:24 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Jan 2025 23:22:53 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] A. Broken Keyboard - Educational Codeforces Round 75 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1251/a/</link>
+      <pubDate>Sun, 12 Jan 2025 23:22:53 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1251/a/</guid>
+      <description>https://codeforces.com/contest/1251/problem/A 题目大意 给出一个小写字母组成的字符串 $S \ (|S| \le 500)$。这是一个测试键盘的打字产生的序列，当一个字母对应的键是坏的时，会连续插入两个对应的字符。问从测试序列能推出那些字符确定是好的，字典序输出。 简要</description>
+    </item>
+    
     <item>
       <title>A. Points on the line - Codeforces Round 466 (Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/940/a/</link>

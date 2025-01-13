@@ -6,7 +6,25 @@
     <description>Recent content in 二分 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 05 Aug 2024 22:40:40 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E4%BA%8C%E5%88%86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Jan 2025 01:17:09 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E4%BA%8C%E5%88%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[LC] 3420. Count Non-Decreasing Subarrays After K Operations - Weekly Contest 432</title>
+      <link>https://ottffyzy.github.io/sols/leetcode/p3420/</link>
+      <pubDate>Mon, 13 Jan 2025 01:17:09 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/leetcode/p3420/</guid>
+      <description>https://leetcode.com/problems/count-non-decreasing-subarrays-after-k-operations/description/ 题目大意 给出 $n \ (n \le 10^5)$ 长的数组 $a$，其中 $1 \le a_i \le 10^9$，给出数字 $k \ (1 \le k \le 10^9)$。问有多少子数组，可以通过不超过 $k$ 次给单个位置 $+1$ 的操作，使得该子数组单调不减。 简要题解 容易发现，对于区间</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Salary Changing - Educational Codeforces Round 75 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1251/d/</link>
+      <pubDate>Sat, 11 Jan 2025 17:43:47 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1251/d/</guid>
+      <description>https://codeforces.com/contest/1251/problem/D 题目大意 给出奇数 $n \ (&amp;lt; 2 \times 10^5)$ 个人的薪资范围，其中第 $i$ 个人的范围为 $[l_i, r_i] (1 \le l_i \le r_i \le 10^9)$，以及薪资和的上限 $\sum l_i \le s \le 2 \times 10^{14}$。问当所有人的薪资 $x_i$ 符合自己的范围，且和不超过 $s$ 时，中位数</description>
+    </item>
+    
     <item>
       <title>D. Med-imize - Codeforces Round 963 (Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1993/d/</link>

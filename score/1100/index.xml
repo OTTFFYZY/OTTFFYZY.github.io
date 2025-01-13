@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1100 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/score/1100/</link>
+    <description>Recent content in 1100 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 12 Jan 2025 23:11:46 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1100/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] A. You Are Given Two Binary Strings... - Educational Codeforces Round 70 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1202/a/</link>
+      <pubDate>Sun, 12 Jan 2025 23:11:46 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1202/a/</guid>
+      <description>https://codeforces.com/contest/1202/problem/A 题目大意 给出两个代表数字的二进制串 $A$ 和 $B$，没有前导零且 $|A|, |B| \le 10^5$。规定 $f(X)$ 为串 $X$ 对应的数字的值，有 $1 \le f(B) \le f(A)$。问取正整数 $k$，使得 $f(A) + f(B) \dot 2 ^ k$ 对应数字字符串的逆序字典序最小。问这</description>
+    </item>
+    
+  </channel>
+</rss>

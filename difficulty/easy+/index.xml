@@ -6,7 +6,25 @@
     <description>Recent content in Easy&#43; on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 04 Jan 2025 12:28:50 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/easy+/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Jan 2025 18:07:21 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/easy+/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Minimize The Integer - Educational Codeforces Round 75 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1251/c/</link>
+      <pubDate>Sat, 11 Jan 2025 18:07:21 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1251/c/</guid>
+      <description>https://codeforces.com/contest/1251/problem/C 题目大意 给出一个数字字符组成的字符串 $S \ (|S| \le 3 \times 10 ^ 5)$，允许任意次交换相邻的奇偶性不同的字符，问最后的得出的可以包含前导零的最小数字是多少。 简要题解 这题挺典，首先同种奇偶性的字符的相对关系是无法</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Three Garlands - Educational Codeforces Round 35 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/911/c/</link>
+      <pubDate>Wed, 08 Jan 2025 23:30:05 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/911/c/</guid>
+      <description>https://codeforces.com/contest/911/problem/C 题目大意 给出 $k_1, k_2, k_3 \ (1 \le k_i \le 1500)$，问是否可以选出一组整数 $x_1, x_2, x_3$ 使得对于任意 $x \ge \max(x_1, x_2, x_3)$ 有整数 $i, j$ 使得 $k_i * j + x_i$ 成立。 简要题解 这题乍一想只要 $k_i$ 都比较大，肯定是无解，但要枚举并证明小的数只有那么多</description>
+    </item>
+    
     <item>
       <title>A. Simple Palindrome - Codeforces Round 972 (Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/2005/a/</link>

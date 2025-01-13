@@ -6,7 +6,16 @@
     <description>Recent content in 最短路 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 18 Nov 2020 13:33:50 -0500</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Jan 2025 00:48:17 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. You Are Given a Decimal String... - Educational Codeforces Round 70 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1202/b/</link>
+      <pubDate>Mon, 13 Jan 2025 00:48:17 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1202/b/</guid>
+      <description>https://codeforces.com/contest/1202/problem/B 题目大意 给出一个 $0 \sim 9$ 字符组成的序列 $S \ (1 \le |S| \le 2 \times 10^6)$ 且 $S$ 总以 $0$ 开始，这个序列是由 $x, y \ (0 \le x, y \le 9)$ 由以下规则生成出来的。 最初数字 $a$ 为 $0$。输出这个数 随机的从 $x, y$ 中选出一个数加到 $a$ 上并输出 $a$ 的个位</description>
+    </item>
+    
     <item>
       <title>[算法][图论] 约翰逊 Johnson 算法 全源最短路</title>
       <link>https://ottffyzy.github.io/algos/gt/johnson/</link>

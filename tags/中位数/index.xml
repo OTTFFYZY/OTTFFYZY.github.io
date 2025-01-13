@@ -6,7 +6,16 @@
     <description>Recent content in 中位数 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 05 Aug 2024 22:40:40 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E4%B8%AD%E4%BD%8D%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Jan 2025 17:43:47 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E4%B8%AD%E4%BD%8D%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Salary Changing - Educational Codeforces Round 75 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1251/d/</link>
+      <pubDate>Sat, 11 Jan 2025 17:43:47 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1251/d/</guid>
+      <description>https://codeforces.com/contest/1251/problem/D 题目大意 给出奇数 $n \ (&amp;lt; 2 \times 10^5)$ 个人的薪资范围，其中第 $i$ 个人的范围为 $[l_i, r_i] (1 \le l_i \le r_i \le 10^9)$，以及薪资和的上限 $\sum l_i \le s \le 2 \times 10^{14}$。问当所有人的薪资 $x_i$ 符合自己的范围，且和不超过 $s$ 时，中位数</description>
+    </item>
+    
     <item>
       <title>D. Med-imize - Codeforces Round 963 (Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1993/d/</link>

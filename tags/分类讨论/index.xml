@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>分类讨论 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E5%88%86%E7%B1%BB%E8%AE%A8%E8%AE%BA/</link>
+    <description>Recent content in 分类讨论 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 08 Jan 2025 23:30:05 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%88%86%E7%B1%BB%E8%AE%A8%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Three Garlands - Educational Codeforces Round 35 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/911/c/</link>
+      <pubDate>Wed, 08 Jan 2025 23:30:05 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/911/c/</guid>
+      <description>https://codeforces.com/contest/911/problem/C 题目大意 给出 $k_1, k_2, k_3 \ (1 \le k_i \le 1500)$，问是否可以选出一组整数 $x_1, x_2, x_3$ 使得对于任意 $x \ge \max(x_1, x_2, x_3)$ 有整数 $i, j$ 使得 $k_i * j + x_i$ 成立。 简要题解 这题乍一想只要 $k_i$ 都比较大，肯定是无解，但要枚举并证明小的数只有那么多</description>
+    </item>
+    
+  </channel>
+</rss>

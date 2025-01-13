@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>奇偶性 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E5%A5%87%E5%81%B6%E6%80%A7/</link>
+    <description>Recent content in 奇偶性 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 11 Jan 2025 18:16:48 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%A5%87%E5%81%B6%E6%80%A7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. Binary Palindromes - Educational Codeforces Round 75 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1251/b/</link>
+      <pubDate>Sat, 11 Jan 2025 18:16:48 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1251/b/</guid>
+      <description>https://codeforces.com/contest/1251/problem/B 题目大意 给出 $n \ (\le 50)$ 个 $01$ 串，每个串 $s_i \ (|s_i| \le 50)$。可以任意交换任意两个串之间的一对字符，问最多能组成多少个回文串。 简要题解 我们最多可以得到 $n$ 个回文，我们尝试尽量达成这件事。 考虑所有串总长 $s = \sum s_i$ 的</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Minimize The Integer - Educational Codeforces Round 75 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1251/c/</link>
+      <pubDate>Sat, 11 Jan 2025 18:07:21 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1251/c/</guid>
+      <description>https://codeforces.com/contest/1251/problem/C 题目大意 给出一个数字字符组成的字符串 $S \ (|S| \le 3 \times 10 ^ 5)$，允许任意次交换相邻的奇偶性不同的字符，问最后的得出的可以包含前导零的最小数字是多少。 简要题解 这题挺典，首先同种奇偶性的字符的相对关系是无法</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Inversion Counting - Educational Codeforces Round 35 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/911/d/</link>
+      <pubDate>Wed, 08 Jan 2025 23:22:17 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/911/d/</guid>
+      <description>https://codeforces.com/contest/911/problem/D 题目大意 给出 $n \ (\le 1500)$ 的排列 $a_i$。 给出 $m \ (\le 2 \times 10^5)$ 次询问，每次询问将区间 $[l, r]$ 左右翻转，并对之后的询问生效。每次操作之后问整个序列的逆序数是奇数还是偶数。 简要题解 其实答案是奇偶已经很大程度上提示了</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>排列 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E6%8E%92%E5%88%97/</link>
+    <description>Recent content in 排列 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 12 Jan 2025 23:27:14 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%8E%92%E5%88%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Array Collapse - Educational Codeforces Round 160 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1913/d/</link>
+      <pubDate>Sun, 12 Jan 2025 23:27:14 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1913/d/</guid>
+      <description>https://codeforces.com/contest/1913/problem/D 题目大意 给出一个 $n \ (1 \le n \le 3 \times 10^5)$ 排列 $p$。可以做如下操作任意次： 选出一个区间 $[l, r]$ 将其中除了最小元素以外的元素全部删掉。 问结果数组共有多少种。结果对 $998244353$ 取模。 简要题解 观察： 注意到 $1$ 永远删不掉。 考虑 $2$</description>
+    </item>
+    
+  </channel>
+</rss>

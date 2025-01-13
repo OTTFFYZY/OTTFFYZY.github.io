@@ -6,7 +6,52 @@
     <description>Recent content in Easy on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 07 Jan 2025 20:53:07 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/easy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Jan 2025 23:42:15 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/easy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Game with Multiset - Educational Codeforces Round 160 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1913/c/</link>
+      <pubDate>Sun, 12 Jan 2025 23:42:15 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1913/c/</guid>
+      <description>https://codeforces.com/contest/1913/problem/C 题目大意 给出 $m \ (m \le 10^5)$ 次操作，每次操作为之下两种之一： 给出 $x \ (0 \le x \le 29)$ 将 $2 ^ x$ 加入可重集。 给出 $y \ (0 \le x \le 10^9)$，问是否可以选出一些可重集中的元素使其和为 $y$。 简要题解 因为 $x$ 很小所以数组 $cnt$</description>
+    </item>
+    
+    <item>
+      <title>[CF] A. Broken Keyboard - Educational Codeforces Round 75 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1251/a/</link>
+      <pubDate>Sun, 12 Jan 2025 23:22:53 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1251/a/</guid>
+      <description>https://codeforces.com/contest/1251/problem/A 题目大意 给出一个小写字母组成的字符串 $S \ (|S| \le 500)$。这是一个测试键盘的打字产生的序列，当一个字母对应的键是坏的时，会连续插入两个对应的字符。问从测试序列能推出那些字符确定是好的，字典序输出。 简要</description>
+    </item>
+    
+    <item>
+      <title>[CF] A. You Are Given Two Binary Strings... - Educational Codeforces Round 70 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1202/a/</link>
+      <pubDate>Sun, 12 Jan 2025 23:11:46 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1202/a/</guid>
+      <description>https://codeforces.com/contest/1202/problem/A 题目大意 给出两个代表数字的二进制串 $A$ 和 $B$，没有前导零且 $|A|, |B| \le 10^5$。规定 $f(X)$ 为串 $X$ 对应的数字的值，有 $1 \le f(B) \le f(A)$。问取正整数 $k$，使得 $f(A) + f(B) \dot 2 ^ k$ 对应数字字符串的逆序字典序最小。问这</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Binary Palindromes - Educational Codeforces Round 75 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1251/b/</link>
+      <pubDate>Sat, 11 Jan 2025 18:16:48 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1251/b/</guid>
+      <description>https://codeforces.com/contest/1251/problem/B 题目大意 给出 $n \ (\le 50)$ 个 $01$ 串，每个串 $s_i \ (|s_i| \le 50)$。可以任意交换任意两个串之间的一对字符，问最多能组成多少个回文串。 简要题解 我们最多可以得到 $n$ 个回文，我们尝试尽量达成这件事。 考虑所有串总长 $s = \sum s_i$ 的</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Two Cakes - Educational Codeforces Round 35 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/911/b/</link>
+      <pubDate>Wed, 08 Jan 2025 23:58:24 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/911/b/</guid>
+      <description>https://codeforces.com/contest/911/problem/B 题目大意 给出 $n, a, b \ (1 \le a, b \le 100, 2 \le n \le a + b)$。 要把 $a$ 块某种蛋糕和 $b$ 块另一种蛋糕分给 $n$ 个人。所有蛋糕必须都分出，而每个人只能收到某一种蛋糕，问收到最少块数的最大值是多少。 简要题解 因为 $a, b$ 都很小，</description>
+    </item>
+    
     <item>
       <title>[CF] B. New Skateboard - Educational Codeforces Round 8</title>
       <link>https://ottffyzy.github.io/sols/codeforces/628/b/</link>

@@ -6,7 +6,25 @@
     <description>Recent content in 1400 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 06 Jan 2025 20:45:39 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1400/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Jan 2025 18:16:48 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1400/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. Binary Palindromes - Educational Codeforces Round 75 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1251/b/</link>
+      <pubDate>Sat, 11 Jan 2025 18:16:48 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1251/b/</guid>
+      <description>https://codeforces.com/contest/1251/problem/B 题目大意 给出 $n \ (\le 50)$ 个 $01$ 串，每个串 $s_i \ (|s_i| \le 50)$。可以任意交换任意两个串之间的一对字符，问最多能组成多少个回文串。 简要题解 我们最多可以得到 $n$ 个回文，我们尝试尽量达成这件事。 考虑所有串总长 $s = \sum s_i$ 的</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Three Garlands - Educational Codeforces Round 35 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/911/c/</link>
+      <pubDate>Wed, 08 Jan 2025 23:30:05 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/911/c/</guid>
+      <description>https://codeforces.com/contest/911/problem/C 题目大意 给出 $k_1, k_2, k_3 \ (1 \le k_i \le 1500)$，问是否可以选出一组整数 $x_1, x_2, x_3$ 使得对于任意 $x \ge \max(x_1, x_2, x_3)$ 有整数 $i, j$ 使得 $k_i * j + x_i$ 成立。 简要题解 这题乍一想只要 $k_i$ 都比较大，肯定是无解，但要枚举并证明小的数只有那么多</description>
+    </item>
+    
     <item>
       <title>B. Odd sum - Educational Codeforces Round 19</title>
       <link>https://ottffyzy.github.io/sols/codeforces/797/b/</link>

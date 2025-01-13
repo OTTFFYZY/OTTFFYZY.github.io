@@ -6,7 +6,25 @@
     <description>Recent content in 1900 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 05 Jan 2025 11:15:10 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1900/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Jan 2025 00:47:37 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1900/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Print a 1337-string... - Educational Codeforces Round 70 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1202/d/</link>
+      <pubDate>Mon, 13 Jan 2025 00:47:37 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1202/d/</guid>
+      <description>https://codeforces.com/contest/1202/problem/D 题目大意 构造一个包含 $1, 3, 7$ 的字符串 $S \ (|S| \le 10^5)$ 使得其中 $1337$ 子序列的个数为 $n \ (1 \le n \le 10^9)$ 个。 简要题解 观察： 如果 $n$ 更小，我们可以直接 $133$ 然后加上 $n$ 个 $7$。或者 $1$ 是同理的。 如果用 $111333777$ 这样的结构，那么结果是 $n_1 n7 C(n3,</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Salary Changing - Educational Codeforces Round 75 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1251/d/</link>
+      <pubDate>Sat, 11 Jan 2025 17:43:47 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1251/d/</guid>
+      <description>https://codeforces.com/contest/1251/problem/D 题目大意 给出奇数 $n \ (&amp;lt; 2 \times 10^5)$ 个人的薪资范围，其中第 $i$ 个人的范围为 $[l_i, r_i] (1 \le l_i \le r_i \le 10^9)$，以及薪资和的上限 $\sum l_i \le s \le 2 \times 10^{14}$。问当所有人的薪资 $x_i$ 符合自己的范围，且和不超过 $s$ 时，中位数</description>
+    </item>
+    
     <item>
       <title>D. Paths in a Complete Binary Tree - Educational Codeforces Round 18</title>
       <link>https://ottffyzy.github.io/sols/codeforces/792/d/</link>

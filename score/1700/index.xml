@@ -6,7 +6,16 @@
     <description>Recent content in 1700 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 06 Jan 2025 20:50:30 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1700/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Jan 2025 00:48:17 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1700/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. You Are Given a Decimal String... - Educational Codeforces Round 70 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1202/b/</link>
+      <pubDate>Mon, 13 Jan 2025 00:48:17 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1202/b/</guid>
+      <description>https://codeforces.com/contest/1202/problem/B 题目大意 给出一个 $0 \sim 9$ 字符组成的序列 $S \ (1 \le |S| \le 2 \times 10^6)$ 且 $S$ 总以 $0$ 开始，这个序列是由 $x, y \ (0 \le x, y \le 9)$ 由以下规则生成出来的。 最初数字 $a$ 为 $0$。输出这个数 随机的从 $x, y$ 中选出一个数加到 $a$ 上并输出 $a$ 的个位</description>
+    </item>
+    
     <item>
       <title>C. Minimal string - Educational Codeforces Round 19</title>
       <link>https://ottffyzy.github.io/sols/codeforces/797/c/</link>

@@ -6,7 +6,25 @@
     <description>Recent content in 2100 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 06 Jan 2025 21:24:19 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/2100/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Jan 2025 00:38:55 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/2100/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. You Are Given a WASD-string... - Educational Codeforces Round 70 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1202/c/</link>
+      <pubDate>Mon, 13 Jan 2025 00:38:55 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1202/c/</guid>
+      <description>https://codeforces.com/contest/1202/problem/C 题目大意 给出一个 $WSAD$ 操作序列 $S \ (|S| \le 2 \times 10^5)$，其中 $W$ 为 $x = x - 1$ $A$ 为 $y = y - 1$ $S$ 为 $x = x + 1$ $D$ 为 $y = y + 1$ 可以在任意位置加入最多一个字符，使得机器人运行这个序列而不移出边界所需的矩形框面积最小</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Array Collapse - Educational Codeforces Round 160 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1913/d/</link>
+      <pubDate>Sun, 12 Jan 2025 23:27:14 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1913/d/</guid>
+      <description>https://codeforces.com/contest/1913/problem/D 题目大意 给出一个 $n \ (1 \le n \le 3 \times 10^5)$ 排列 $p$。可以做如下操作任意次： 选出一个区间 $[l, r]$ 将其中除了最小元素以外的元素全部删掉。 问结果数组共有多少种。结果对 $998244353$ 取模。 简要题解 观察： 注意到 $1$ 永远删不掉。 考虑 $2$</description>
+    </item>
+    
     <item>
       <title>[CF] D. Broken BST - Educational Codeforces Round 19</title>
       <link>https://ottffyzy.github.io/sols/codeforces/797/d/</link>

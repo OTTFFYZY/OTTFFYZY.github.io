@@ -6,7 +6,25 @@
     <description>Recent content in 数论 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 07 Jan 2025 20:53:07 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%95%B0%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Jan 2025 00:48:17 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%95%B0%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. You Are Given a Decimal String... - Educational Codeforces Round 70 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1202/b/</link>
+      <pubDate>Mon, 13 Jan 2025 00:48:17 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1202/b/</guid>
+      <description>https://codeforces.com/contest/1202/problem/B 题目大意 给出一个 $0 \sim 9$ 字符组成的序列 $S \ (1 \le |S| \le 2 \times 10^6)$ 且 $S$ 总以 $0$ 开始，这个序列是由 $x, y \ (0 \le x, y \le 9)$ 由以下规则生成出来的。 最初数字 $a$ 为 $0$。输出这个数 随机的从 $x, y$ 中选出一个数加到 $a$ 上并输出 $a$ 的个位</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Three Garlands - Educational Codeforces Round 35 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/911/c/</link>
+      <pubDate>Wed, 08 Jan 2025 23:30:05 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/911/c/</guid>
+      <description>https://codeforces.com/contest/911/problem/C 题目大意 给出 $k_1, k_2, k_3 \ (1 \le k_i \le 1500)$，问是否可以选出一组整数 $x_1, x_2, x_3$ 使得对于任意 $x \ge \max(x_1, x_2, x_3)$ 有整数 $i, j$ 使得 $k_i * j + x_i$ 成立。 简要题解 这题乍一想只要 $k_i$ 都比较大，肯定是无解，但要枚举并证明小的数只有那么多</description>
+    </item>
+    
     <item>
       <title>[CF] B. New Skateboard - Educational Codeforces Round 8</title>
       <link>https://ottffyzy.github.io/sols/codeforces/628/b/</link>

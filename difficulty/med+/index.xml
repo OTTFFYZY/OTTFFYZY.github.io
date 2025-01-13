@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Med&#43; on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/difficulty/med&#43;/</link>
+    <description>Recent content in Med&#43; on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 13 Jan 2025 01:17:09 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/med+/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[LC] 3420. Count Non-Decreasing Subarrays After K Operations - Weekly Contest 432</title>
+      <link>https://ottffyzy.github.io/sols/leetcode/p3420/</link>
+      <pubDate>Mon, 13 Jan 2025 01:17:09 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/leetcode/p3420/</guid>
+      <description>https://leetcode.com/problems/count-non-decreasing-subarrays-after-k-operations/description/ 题目大意 给出 $n \ (n \le 10^5)$ 长的数组 $a$，其中 $1 \le a_i \le 10^9$，给出数字 $k \ (1 \le k \le 10^9)$。问有多少子数组，可以通过不超过 $k$ 次给单个位置 $+1$ 的操作，使得该子数组单调不减。 简要题解 容易发现，对于区间</description>
+    </item>
+    
+  </channel>
+</rss>

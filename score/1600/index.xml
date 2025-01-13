@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1600 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/score/1600/</link>
+    <description>Recent content in 1600 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 11 Jan 2025 18:07:21 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1600/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Minimize The Integer - Educational Codeforces Round 75 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1251/c/</link>
+      <pubDate>Sat, 11 Jan 2025 18:07:21 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1251/c/</guid>
+      <description>https://codeforces.com/contest/1251/problem/C 题目大意 给出一个数字字符组成的字符串 $S \ (|S| \le 3 \times 10 ^ 5)$，允许任意次交换相邻的奇偶性不同的字符，问最后的得出的可以包含前导零的最小数字是多少。 简要题解 这题挺典，首先同种奇偶性的字符的相对关系是无法</description>
+    </item>
+    
+  </channel>
+</rss>

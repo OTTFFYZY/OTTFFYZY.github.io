@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>前缀后缀 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E5%89%8D%E7%BC%80%E5%90%8E%E7%BC%80/</link>
+    <description>Recent content in 前缀后缀 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 13 Jan 2025 00:38:55 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%89%8D%E7%BC%80%E5%90%8E%E7%BC%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. You Are Given a WASD-string... - Educational Codeforces Round 70 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1202/c/</link>
+      <pubDate>Mon, 13 Jan 2025 00:38:55 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1202/c/</guid>
+      <description>https://codeforces.com/contest/1202/problem/C 题目大意 给出一个 $WSAD$ 操作序列 $S \ (|S| \le 2 \times 10^5)$，其中 $W$ 为 $x = x - 1$ $A$ 为 $y = y - 1$ $S$ 为 $x = x + 1$ $D$ 为 $y = y + 1$ 可以在任意位置加入最多一个字符，使得机器人运行这个序列而不移出边界所需的矩形框面积最小</description>
+    </item>
+    
+  </channel>
+</rss>

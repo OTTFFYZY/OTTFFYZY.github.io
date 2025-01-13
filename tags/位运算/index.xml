@@ -6,7 +6,25 @@
     <description>Recent content in 位运算 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 05 Jan 2025 11:15:10 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Jan 2025 23:42:15 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Game with Multiset - Educational Codeforces Round 160 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1913/c/</link>
+      <pubDate>Sun, 12 Jan 2025 23:42:15 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1913/c/</guid>
+      <description>https://codeforces.com/contest/1913/problem/C 题目大意 给出 $m \ (m \le 10^5)$ 次操作，每次操作为之下两种之一： 给出 $x \ (0 \le x \le 29)$ 将 $2 ^ x$ 加入可重集。 给出 $y \ (0 \le x \le 10^9)$，问是否可以选出一些可重集中的元素使其和为 $y$。 简要题解 因为 $x$ 很小所以数组 $cnt$</description>
+    </item>
+    
+    <item>
+      <title>[CF] A. You Are Given Two Binary Strings... - Educational Codeforces Round 70 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1202/a/</link>
+      <pubDate>Sun, 12 Jan 2025 23:11:46 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1202/a/</guid>
+      <description>https://codeforces.com/contest/1202/problem/A 题目大意 给出两个代表数字的二进制串 $A$ 和 $B$，没有前导零且 $|A|, |B| \le 10^5$。规定 $f(X)$ 为串 $X$ 对应的数字的值，有 $1 \le f(B) \le f(A)$。问取正整数 $k$，使得 $f(A) + f(B) \dot 2 ^ k$ 对应数字字符串的逆序字典序最小。问这</description>
+    </item>
+    
     <item>
       <title>D. Paths in a Complete Binary Tree - Educational Codeforces Round 18</title>
       <link>https://ottffyzy.github.io/sols/codeforces/792/d/</link>
