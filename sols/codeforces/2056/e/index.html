@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  [CF] E. Nested Segments - Codeforces Round 997 (Div. 2) &ndash; OTTFF&#39;s Blog &lt;a id="topofpage">&lt;/a>
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="https://codeforces.com/contest/2056/problem/E 题目大意 给出 $n \ (1 \le n \le 2 \times 10^5)$ 的范围和 $m \ (0 \le m \le 2 \times 10^5)$ 个区间，这些区间满足对于任意的 $i \neq j$： 它们不相同 它们要么不相交（$r_i &amp;lt; l_j$ 或者 $r_j &amp;lt; l_i$）要么一个包含另一个（$l_i \le l_j \le r_j \le r_i$ 或 $l_j \le|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+    <link rel="stylesheet" href="/assets/style.css">
+    
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/vs.min.css">
+    
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/sols">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">[CF] E. Nested Segments - Codeforces Round 997 (Div. 2)</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/solutions' class="muted-link">
+  <span class="Label Label--gray-darker">Solutions</span>
+</a>
+
+
+
+
+
+<a href='/ojs/codeforces' class="muted-link">
+  <span class="Label Label--gray-darker">Codeforces</span>
+</a>
+
+
+
+<a href='/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6' class="muted-link">
+  <span class="Label Label--gray">组合数学</span>
+</a>
+
+<a href='/tags/%E5%8D%A1%E5%A1%94%E5%85%B0%E6%95%B0' class="muted-link">
+  <span class="Label Label--gray">卡塔兰数</span>
+</a>
+
+<a href='/tags/%E6%A0%91' class="muted-link">
+  <span class="Label Label--gray">树</span>
+</a>
+
+<a href='/tags/%E6%89%AB%E6%8F%8F%E7%BA%BF' class="muted-link">
+  <span class="Label Label--gray">扫描线</span>
+</a>
+
+
+
+
+
+
+
+<a href='/difficulty/med&#43;' class="muted-link">
+  <span class="Label Label--gray">Med&#43;</span>
+</a>
+
+
+    
+    <div class="float-md-right">
+      
+      <span title="Lastmod: 2025-01-19. Published at: 2025-01-18.">
+        
+          Lastmod: 2025-01-19 周日 00:03:16
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <p><a href="https://codeforces.com/contest/2056/problem/E">https://codeforces.com/contest/2056/problem/E</a></p>
+<h2 id="题目大意">题目大意</h2>
+<p>给出 $n \ (1 \le n \le 2 \times 10^5)$ 的范围和 $m \ (0 \le m \le 2 \times 10^5)$ 个区间，这些区间满足对于任意的 $i \neq j$：</p>
+<ol>
+<li>它们不相同</li>
+<li>它们要么不相交（$r_i &lt; l_j$ 或者 $r_j &lt; l_i$）要么一个包含另一个（$l_i \le l_j \le r_j \le r_i$ 或 $l_j \le l_i \le r_i \le r_j$）。</li>
+</ol>
+<p>问有多少种方案可以增加尽可能多的 $1 \le l \le r \le n$ 的区间，使得所有区间仍旧满足上述的限制。答案模 $998244353$。</p>
+<h2 id="简要题解">简要题解</h2>
+<p>观察：</p>
+<ol>
+<li>所有给出的区间构成了一个森林</li>
+<li>如果没有 $[1, n]$ 这个区间，则必然会增加 $[1, n]$ 区间，且增加前后的总方案数不会有变化。也就是说我们总可以通过这个方式把给出的图补全成一棵树。</li>
+<li>考虑 $[1, n]$ 的空区间（没有其他已知区间），如果想让结果尽量多，则我们总会选取一个 $1$ 为左边界的区间（否则我们总会加上 $[1, 1]$ 使得最多区间数更多）</li>
+<li>当第一段选了 $[1, x]$ 那么第二段一定是从 $x + 1$ 为左边界，直到把整段选完。以此类推，形象的说最后的区间是选“满”了的。</li>
+<li>所有的选”满“了的方案其实都是最优的。</li>
+<li>某个大区间里，如果某些段被选了，则可以把这些段当成 $1$ 长的段处理。</li>
+<li>不同已经固定的区间的选取方案是独立的。</li>
+</ol>
+<p>有了这些观察其实这个题就可以做了，这里需要证明其中的某些观察，以及数学化的定义“满”这件事。</p>
+<p>1 是经典结论这里就不证明了。</p>
+<p>2 很好证，因为如果某最优解没有 $[1, n]$ 则显然可以加入这个区间使得最优区间数量 $+1$。因为所有情况都要加入这个区间，因此题目条件中有没有加这个区间是没有区别的。</p>
+<p>345 一起看。区间是 $[l, r]$ 还是 $[1, n]$ 在这个问题里是没有区别的。我们不妨只讨论 $[1, n]$。注意到其实这就是合法加法算式的个数！也就是说答案其实就是卡塔兰数 $C_{n - 1}$（计算数是 $n$ 个则括号有 $n - 1$ 个，因为每一组括号消耗掉一个计算数）。</p>
+<p>67 一起看。对于树来说，对于某节点 $[l, r]$ 其有子树 $[x, y]$，则其选出的所有区间要么包含 $[x, y]$，要么与 $[x, y]$ 无关，要么被 $[x, y]$ 包含。显然被 $[x, y]$ 包含的区间与其他两者的选取无关，于是我们可以在子树中再处理。而因为包含或者无关的情况 $[x, y]$ 都被当做整体，因此相当于一个 $1$ 长的段，计算本节点时将其缩起来即可。</p>
+<p>最后就是如何把这些区间转化成树。我们可以使用扫描线，注意这题因为包含可以有边界相等，因此排序需要比较注意。我们用栈维护当前还在开的区间，新加入的区间左边界，一定被包含在栈顶最好的区间，我们连边并将其入栈，遇到右边界则将栈顶出栈即可。注意我们总要让较短的区间在栈上部，因此排序时，同样左边界的，右边界靠右的长，要先进栈。同样右边界的，左边界靠右短，要先出栈。</p>
+<p><strong>复杂度</strong></p>
+<p>$T$：$O(n + m \log m)$</p>
+<p>$S$：$O(n + m)$</p>
+<p><strong>代码实现</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">io_</span><span class="o">=</span><span class="p">[](){</span> <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span> <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="k">nullptr</span><span class="p">);</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}();</span>
+
+<span class="k">using</span> <span class="n">LL</span> <span class="o">=</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">ULL</span> <span class="o">=</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">LD</span> <span class="o">=</span> <span class="kt">long</span> <span class="kt">double</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">PII</span> <span class="o">=</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">VI</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">MII</span> <span class="o">=</span> <span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">cmin</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span><span class="p">(</span><span class="n">y</span><span class="o">&lt;</span><span class="n">x</span><span class="p">)</span> <span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">cmax</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="n">y</span><span class="p">)</span> <span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">bool</span> <span class="n">ckmin</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="k">return</span> <span class="n">y</span><span class="o">&lt;</span><span class="n">x</span> <span class="o">?</span> <span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="nb">true</span><span class="p">)</span> <span class="o">:</span> <span class="nb">false</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">bool</span> <span class="n">ckmax</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="k">return</span> <span class="n">x</span><span class="o">&lt;</span><span class="n">y</span> <span class="o">?</span> <span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="nb">true</span><span class="p">)</span> <span class="o">:</span> <span class="nb">false</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">cmin</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">z</span><span class="p">)</span> <span class="p">{</span><span class="c1">// x&lt;=y&lt;=z 
+</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">z</span><span class="o">&lt;</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="n">y</span><span class="o">=</span><span class="n">x</span><span class="p">;</span> <span class="n">x</span><span class="o">=</span><span class="n">z</span><span class="p">;</span> <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span><span class="p">(</span><span class="n">z</span><span class="o">&lt;</span><span class="n">y</span><span class="p">)</span> <span class="n">y</span><span class="o">=</span><span class="n">z</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">cmax</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">z</span><span class="p">)</span> <span class="p">{</span><span class="c1">// x&gt;=y&gt;=z
+</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="n">z</span><span class="p">)</span> <span class="p">{</span> <span class="n">y</span><span class="o">=</span><span class="n">x</span><span class="p">;</span> <span class="n">x</span><span class="o">=</span><span class="n">z</span><span class="p">;</span> <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span><span class="p">(</span><span class="n">y</span><span class="o">&lt;</span><span class="n">z</span><span class="p">)</span> <span class="n">y</span><span class="o">=</span><span class="n">z</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c1">// mt19937 rnd(chrono::system_clock::now().time_since_epoch().count());
+</span><span class="c1">// mt19937_64 rnd_64(chrono::system_clock::now().time_since_epoch().count());
+</span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="kt">long</span> <span class="kt">long</span> <span class="n">Mo</span><span class="o">=</span><span class="mi">998244353</span><span class="o">&gt;</span> <span class="k">struct</span> <span class="nc">ModInt</span> <span class="p">{</span>
+  <span class="k">static</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">MO</span><span class="p">;</span>
+  <span class="k">static</span> <span class="kt">void</span> <span class="nf">setMo</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span> <span class="n">mo</span><span class="p">)</span> <span class="p">{</span> <span class="n">MO</span> <span class="o">=</span> <span class="n">mo</span><span class="p">;</span> <span class="p">}</span>
+  <span class="kt">long</span> <span class="kt">long</span> <span class="n">x</span><span class="p">;</span>
+  <span class="n">ModInt</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">:</span> <span class="n">x</span><span class="p">(</span><span class="n">x</span><span class="p">){</span> <span class="n">norm</span><span class="p">();</span> <span class="p">}</span>
+  <span class="k">friend</span> <span class="n">istream</span> <span class="o">&amp;</span><span class="k">operator</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">in</span><span class="p">,</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="p">{</span> <span class="n">in</span><span class="o">&gt;&gt;</span><span class="n">B</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="k">return</span> <span class="n">in</span><span class="p">;</span> <span class="p">}</span>
+  <span class="k">friend</span> <span class="n">ostream</span> <span class="o">&amp;</span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">out</span><span class="p">,</span> <span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="n">out</span><span class="o">&lt;&lt;</span><span class="n">B</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="k">return</span> <span class="n">out</span><span class="p">;</span> <span class="p">}</span>
+  <span class="c1">// ModInt operator=(int x_) { x=x_; norm(); return *this; }
+</span><span class="c1"></span>  <span class="kt">void</span> <span class="nf">norm</span><span class="p">()</span> <span class="p">{</span> <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="n">MO</span> <span class="o">+</span> <span class="n">MO</span><span class="p">)</span> <span class="o">%</span> <span class="n">MO</span><span class="p">;</span> <span class="p">}</span>
+  <span class="kt">long</span> <span class="kt">long</span> <span class="nf">get</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span><span class="p">;</span> <span class="p">}</span>
+
+  <span class="n">ModInt</span> <span class="k">operator</span><span class="o">-</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="nf">ModInt</span><span class="p">(</span><span class="n">MO</span> <span class="o">-</span> <span class="n">x</span><span class="p">);</span> <span class="p">}</span>
+  <span class="n">ModInt</span> <span class="k">operator</span><span class="o">+=</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="p">{</span> <span class="n">x</span><span class="o">+=</span><span class="n">B</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;=</span><span class="n">MO</span><span class="p">)</span> <span class="n">x</span><span class="o">-=</span><span class="n">MO</span><span class="p">;</span> <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span> <span class="p">}</span>
+  <span class="n">ModInt</span> <span class="k">operator</span><span class="o">-=</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="p">{</span> <span class="n">x</span><span class="o">-=</span><span class="n">B</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span> <span class="n">x</span><span class="o">+=</span><span class="n">MO</span><span class="p">;</span> <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span> <span class="p">}</span>
+  <span class="n">ModInt</span> <span class="k">operator</span><span class="o">*=</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="p">{</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">*</span><span class="n">B</span><span class="p">.</span><span class="n">x</span><span class="o">%</span><span class="n">MO</span><span class="p">;</span> <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span> <span class="p">}</span>
+  <span class="n">ModInt</span> <span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span> <span class="n">ModInt</span> <span class="n">ans</span><span class="o">=*</span><span class="k">this</span><span class="p">;</span> <span class="k">return</span> <span class="n">ans</span><span class="o">+=</span><span class="n">B</span><span class="p">;</span> <span class="p">}</span>
+  <span class="n">ModInt</span> <span class="k">operator</span><span class="o">-</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span> <span class="n">ModInt</span> <span class="n">ans</span><span class="o">=*</span><span class="k">this</span><span class="p">;</span> <span class="k">return</span> <span class="n">ans</span><span class="o">-=</span><span class="n">B</span><span class="p">;</span> <span class="p">}</span>
+  <span class="n">ModInt</span> <span class="k">operator</span><span class="o">*</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span> <span class="n">ModInt</span> <span class="n">ans</span><span class="o">=*</span><span class="k">this</span><span class="p">;</span> <span class="k">return</span> <span class="n">ans</span><span class="o">*=</span><span class="n">B</span><span class="p">;</span> <span class="p">}</span>
+  <span class="n">ModInt</span> <span class="k">operator</span><span class="o">^</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span> <span class="n">n</span><span class="p">)</span> <span class="k">const</span>  <span class="p">{</span>
+    <span class="n">ModInt</span> <span class="n">a</span><span class="o">=*</span><span class="k">this</span><span class="p">;</span> <span class="n">ModInt</span> <span class="nf">ans</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span> <span class="n">ans</span><span class="o">*=</span><span class="n">a</span><span class="p">;</span> <span class="n">a</span><span class="o">*=</span><span class="n">a</span><span class="p">;</span> <span class="n">n</span><span class="o">&gt;&gt;=</span><span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">ModInt</span> <span class="nf">inv</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">)</span><span class="o">^</span><span class="p">(</span><span class="n">MO</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span> <span class="p">}</span> <span class="c1">// if MO is prime
+</span><span class="c1"></span>  <span class="n">ModInt</span> <span class="k">operator</span><span class="o">/=</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">)</span><span class="o">*=</span><span class="n">B</span><span class="p">.</span><span class="n">inv</span><span class="p">();</span> <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span> <span class="p">}</span>
+  <span class="n">ModInt</span> <span class="k">operator</span><span class="o">/</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span> <span class="n">ModInt</span> <span class="n">ans</span><span class="o">=*</span><span class="k">this</span><span class="p">;</span> <span class="k">return</span> <span class="n">ans</span><span class="o">/=</span><span class="n">B</span><span class="p">;</span> <span class="p">}</span>
+
+  <span class="kt">bool</span> <span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span><span class="o">&lt;</span><span class="n">B</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="p">}</span>
+  <span class="kt">bool</span> <span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span><span class="o">==</span><span class="n">B</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="p">}</span>
+  <span class="kt">bool</span> <span class="k">operator</span><span class="o">!=</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span><span class="o">!=</span><span class="n">B</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">};</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="kt">long</span> <span class="kt">long</span> <span class="n">Mo</span><span class="o">&gt;</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ModInt</span><span class="o">&lt;</span><span class="n">Mo</span><span class="o">&gt;::</span><span class="n">MO</span> <span class="o">=</span> <span class="n">Mo</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">ModInt</span><span class="o">&lt;</span><span class="mi">998244353</span><span class="o">&gt;</span> <span class="n">Mint</span><span class="p">;</span>
+<span class="c1">// typedef ModInt&lt;1&#39;000&#39;000&#39;007&gt; Mint;
+</span><span class="c1"></span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="n">Mint</span><span class="o">&gt;</span> <span class="n">inv</span><span class="p">,</span> <span class="n">fa</span><span class="p">,</span> <span class="n">ifa</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">init_mod</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">inv</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Mint</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+    <span class="n">fa</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Mint</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+    <span class="n">ifa</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Mint</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">fa</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">fa</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">i</span><span class="p">;</span>
+        <span class="n">inv</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Mint</span><span class="p">(</span><span class="n">Mint</span><span class="o">::</span><span class="n">MO</span> <span class="o">-</span> <span class="n">Mint</span><span class="o">::</span><span class="n">MO</span> <span class="o">/</span> <span class="n">i</span><span class="p">)</span> <span class="o">*</span> <span class="n">inv</span><span class="p">[</span><span class="n">Mint</span><span class="o">::</span><span class="n">MO</span> <span class="o">%</span> <span class="n">i</span><span class="p">];</span>
+        <span class="n">ifa</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">inv</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">ifa</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kr">inline</span> <span class="n">Mint</span> <span class="nf">C</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span><span class="kt">int</span> <span class="n">m</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">m</span><span class="o">&lt;</span><span class="mi">0</span> <span class="o">||</span> <span class="n">n</span><span class="o">&lt;</span><span class="n">m</span><span class="p">)</span> <span class="o">?</span> <span class="n">Mint</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">:</span> <span class="n">fa</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">*</span><span class="n">ifa</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="o">*</span><span class="n">ifa</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">m</span><span class="p">];</span> <span class="p">}</span>
+<span class="kr">inline</span> <span class="n">Mint</span> <span class="nf">A</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span><span class="kt">int</span> <span class="n">m</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">fa</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">*</span><span class="n">ifa</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">m</span><span class="p">];</span> <span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">Func</span><span class="o">&gt;</span> <span class="k">struct</span> <span class="nc">YCombinatorResult</span> <span class="p">{</span>
+  <span class="n">Func</span> <span class="n">func</span><span class="p">;</span>
+  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+  <span class="k">explicit</span> <span class="n">YCombinatorResult</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;&amp;</span><span class="n">func</span><span class="p">)</span> <span class="o">:</span> <span class="n">func</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">forward</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">func</span><span class="p">))</span> <span class="p">{}</span>
+  <span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="err">...</span><span class="nc">Args</span><span class="o">&gt;</span> <span class="k">decltype</span><span class="p">(</span><span class="k">auto</span><span class="p">)</span> <span class="k">operator</span><span class="p">()(</span><span class="n">Args</span> <span class="o">&amp;&amp;</span><span class="p">...</span><span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nf">func</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ref</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">),</span> <span class="n">std</span><span class="o">::</span><span class="n">forward</span><span class="o">&lt;</span><span class="n">Args</span><span class="o">&gt;</span><span class="p">(</span><span class="n">args</span><span class="p">)...);</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">Func</span><span class="o">&gt;</span> <span class="k">decltype</span><span class="p">(</span><span class="k">auto</span><span class="p">)</span> <span class="n">y_comb</span><span class="p">(</span><span class="n">Func</span> <span class="o">&amp;&amp;</span><span class="n">fun</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="n">YCombinatorResult</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">decay_t</span><span class="o">&lt;</span><span class="n">Func</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">forward</span><span class="o">&lt;</span><span class="n">Func</span><span class="o">&gt;</span><span class="p">(</span><span class="n">fun</span><span class="p">));</span>
+<span class="p">}</span>
+<span class="cm">/*
+</span><span class="cm">---------1---------2---------3---------4---------5---------6---------7---------
+</span><span class="cm">1234567890123456789012345678901234567890123456789012345678901234567890123456789
+</span><span class="cm">*/</span>
+<span class="cm">/*
+</span><span class="cm">     mx  cnt
+</span><span class="cm">1 -&gt; 1 -&gt; 11
+</span><span class="cm">2 -&gt; 3 -&gt; 12 11 22 -&gt; 1
+</span><span class="cm">3 -&gt; 5 -&gt; 13 11 23 22 33, 13 12 11 22 33 -&gt; 2
+</span><span class="cm">4 -&gt; 7 -&gt; 14 13, 14 24, 14 12 34 -&gt; 5
+</span><span class="cm">*/</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">M</span> <span class="o">=</span> <span class="mf">2e5</span> <span class="o">+</span> <span class="mi">5</span><span class="p">;</span>
+
+<span class="n">vector</span><span class="o">&lt;</span><span class="n">Mint</span><span class="o">&gt;</span> <span class="n">Cata</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">init_cata</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">Cata</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Mint</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Cata</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">C</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="o">*</span> <span class="n">inv</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">init_mod</span><span class="p">(</span><span class="n">M</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
+  <span class="n">init_cata</span><span class="p">(</span><span class="n">M</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">struct</span> <span class="nc">Event</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">id</span><span class="p">;</span>
+  <span class="kt">bool</span> <span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span> <span class="n">Event</span><span class="o">&amp;</span> <span class="n">B</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">!=</span> <span class="n">B</span><span class="p">.</span><span class="n">x</span><span class="p">)</span> <span class="k">return</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">B</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">t</span> <span class="o">!=</span> <span class="n">B</span><span class="p">.</span><span class="n">t</span><span class="p">)</span> <span class="k">return</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">B</span><span class="p">.</span><span class="n">t</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="n">B</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+  
+  <span class="n">vector</span><span class="o">&lt;</span><span class="n">Event</span><span class="o">&gt;</span> <span class="n">evts</span><span class="p">;</span>
+  
+  <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">l</span><span class="p">(</span><span class="n">m</span><span class="p">),</span> <span class="n">r</span><span class="p">(</span><span class="n">m</span><span class="p">);</span>
+  <span class="kt">int</span> <span class="n">rt</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">m</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">r</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">evts</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span><span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="n">r</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">i</span><span class="p">});</span>
+    <span class="n">evts</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span><span class="n">r</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="mi">1</span><span class="p">,</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">i</span><span class="p">});</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">r</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">rt</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">rt</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">l</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">r</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+    <span class="n">evts</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">});</span>
+    <span class="n">evts</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">m</span><span class="p">});</span>
+    <span class="n">rt</span> <span class="o">=</span> <span class="n">m</span><span class="p">;</span>
+    <span class="n">m</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="n">sort</span><span class="p">(</span><span class="n">evts</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">evts</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+
+  <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">g</span><span class="p">(</span><span class="n">m</span><span class="p">);</span>
+  <span class="n">stack</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">st</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">id</span><span class="p">]</span> <span class="o">:</span> <span class="n">evts</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">t</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">id</span> <span class="o">!=</span> <span class="n">rt</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">g</span><span class="p">[</span><span class="n">st</span><span class="p">.</span><span class="n">top</span><span class="p">()].</span><span class="n">push_back</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="n">st</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="c1">// assert(!st.empty());
+</span><span class="c1"></span>      <span class="n">st</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="c1">// for (int i = 0; i &lt; m; i++) {
+</span><span class="c1"></span>  <span class="c1">//   cerr &lt;&lt; i &lt;&lt; &#34; : &#34;;
+</span><span class="c1"></span>  <span class="c1">//   for (int j : g[i]) {
+</span><span class="c1"></span>  <span class="c1">//     cerr &lt;&lt; j &lt;&lt; &#39; &#39;;
+</span><span class="c1"></span>  <span class="c1">//   }
+</span><span class="c1"></span>  <span class="c1">//   cerr &lt;&lt; endl;
+</span><span class="c1"></span>  <span class="c1">// }
+</span><span class="c1"></span>
+  <span class="n">Mint</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">y_comb</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="k">auto</span> <span class="n">dfs</span><span class="p">,</span> <span class="kt">int</span> <span class="n">u</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Mint</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">tot</span> <span class="o">=</span> <span class="n">r</span><span class="p">[</span><span class="n">u</span><span class="p">]</span> <span class="o">-</span> <span class="n">l</span><span class="p">[</span><span class="n">u</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">Mint</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nl">v</span> <span class="p">:</span> <span class="n">g</span><span class="p">[</span><span class="n">u</span><span class="p">])</span> <span class="p">{</span>
+      <span class="n">ans</span> <span class="o">*=</span> <span class="n">dfs</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+      <span class="n">tot</span> <span class="o">-=</span> <span class="n">r</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">-</span> <span class="n">l</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">tot</span> <span class="o">+=</span> <span class="n">g</span><span class="p">[</span><span class="n">u</span><span class="p">].</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="c1">// cerr &lt;&lt; u &lt;&lt; &#39; &#39; &lt;&lt; l[u] &lt;&lt; &#39; &#39; &lt;&lt; r[u] &lt;&lt; &#39; &#39; &lt;&lt; ans &lt;&lt; &#39; &#39; &lt;&lt; tot &lt;&lt; endl;
+</span><span class="c1"></span>    <span class="n">ans</span> <span class="o">*=</span> <span class="n">Cata</span><span class="p">[</span><span class="n">tot</span><span class="p">];</span>
+    <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+  <span class="p">})(</span><span class="n">rt</span><span class="p">);</span>
+
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">init</span><span class="p">();</span>
+  <span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> 
+  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">t</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">t</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">solve</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+  </section>
+
+  <section>
+    
+        <a href="/sols/codeforces/2056/c/" class="previous_page">Prev: [CF] C. Palindromic Subsequences - Codeforces Round 997 (Div. 2) </a>
+    
+     <br> 
+    
+        <a href="/sols/codeforces/1922/a/" class="next_page">Next: [CF] A. Tricky Template - Educational Codeforces Round 161 (Rated for Div. 2) </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <a herf="#topofpage" id="backtotop" onclick="scrollToTop(event)">[CF] E. Nested Segments - Codeforces Round 997 (Div. 2)</a><nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目大意">题目大意</a></li>
+    <li><a href="#简要题解">简要题解</a></li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+      hljs.initLineNumbersOnLoad({
+        singleLine: true
+      });
+      hljs.configure({tabReplace: '  '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+
+    <script src="/assets/tagcanvas.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        TagCanvas.weight = true;
+        TagCanvas.weightFrom = 'data-weight';
+        TagCanvas.weightMode = 'both';
+        
+        TagCanvas.weightSizeMin = 10;
+        TagCanvas.weightSizeMax = 50;
+        TagCanvas.minSpeed = 0.05;
+        try {
+          TagCanvas.Start('myCanvas', 'tags');
+          TagCanvas.SetSpeed('myCanvas', [0.05, 0]);
+          
+        } catch(e) {
+          
+          document.getElementById('myCanvasContainer').style.display = 'none';
+        }
+      };
+    </script>
+    <script type="text/javascript">
+      function scrollToTop(event) {
+        event.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      };
+    </script>
+  </body>
+</html>

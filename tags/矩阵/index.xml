@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>矩阵 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E7%9F%A9%E9%98%B5/</link>
+    <description>Recent content in 矩阵 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 13 Jan 2025 23:39:22 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E7%9F%A9%E9%98%B5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. The Trail - Codeforces Round 996 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2055/c/</link>
+      <pubDate>Mon, 13 Jan 2025 23:39:22 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2055/c/</guid>
+      <description>https://codeforces.com/contest/2055/problem/C 题目大意 题目给出一个 $n \times m \ ( 2 \le n, m \le 1000 )$ 的矩阵，给出一条起点为 $(0, 0)$ 终点为 $(n - 1, m - 1)$ 的由向右向下走出的路径。这条路径由 $n + m - 2$ 个字母 $DR$ 构成的串组成。$D$ 表示向下，$R$ 表示向右。题目给出的矩</description>
+    </item>
+    
+  </channel>
+</rss>

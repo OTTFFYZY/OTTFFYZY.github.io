@@ -6,7 +6,16 @@
     <description>Recent content in 回文 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 04 Jan 2025 12:28:50 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%9B%9E%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Jan 2025 23:06:09 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%9B%9E%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Palindromic Subsequences - Codeforces Round 997 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2056/c/</link>
+      <pubDate>Sat, 18 Jan 2025 23:06:09 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2056/c/</guid>
+      <description>https://codeforces.com/contest/2056/problem/C 题目大意 给出数字 $n \ (6 \le n \le 100)$ 要求用 $[1, n]$ 的数字，构造一个 $n$ 长的，最长回文子序列数量大于 $n$ 的数组。 简要题解 其实很容易想到怎么能得到较多的最长回文子序列。首先两组相同字母之间不能包含，不然最长回文是这两</description>
+    </item>
+    
     <item>
       <title>A. Simple Palindrome - Codeforces Round 972 (Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/2005/a/</link>

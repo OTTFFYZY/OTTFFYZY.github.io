@@ -6,7 +6,16 @@
     <description>Recent content in 1800 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 08 Jan 2025 23:22:17 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1800/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jan 2025 00:51:09 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1800/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Increasing Subsequences - Educational Codeforces Round 161 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1922/e/</link>
+      <pubDate>Sun, 19 Jan 2025 00:51:09 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1922/e/</guid>
+      <description>https://codeforces.com/contest/1922/problem/E 题目大意 给定 $x \ (2 \le x \le 10^{18})$ 构造出一个不超过 $200$ 长的有刚好 $x$ 个严格上升子序列的数组，数组中元素 $a_i$ 满足 $-10^9 \le a_i \le 10^9$。（包括空串） 简要题解 注意到我们很容易构造出两组完全无关的子数组。如我们把 $[x + 1, y]$ 和</description>
+    </item>
+    
     <item>
       <title>[CF] D. Inversion Counting - Educational Codeforces Round 35 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/911/d/</link>

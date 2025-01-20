@@ -6,7 +6,16 @@
     <description>Recent content in 最短路 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 13 Jan 2025 00:48:17 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jan 2025 00:20:58 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%9C%80%E7%9F%AD%E8%B7%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Closest Cities - Educational Codeforces Round 161 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1922/c/</link>
+      <pubDate>Sun, 19 Jan 2025 00:20:58 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1922/c/</guid>
+      <description>https://codeforces.com/contest/1922/problem/C 题目大意 给出数轴上的 $n \ (2 \le n \le 10^5)$ 个点。$0 \le a_1 &amp;lt; a_2 &amp;lt; a_3 &amp;lt; \cdots &amp;lt; a_n \le 10^9$ 从 $i$ 点直接走到另外一个点 $j$ 的花费为 $|a_i - a_j|$ 或当 $j$ 是 $i$ 与所有点之间距离最近的点时花费为 $1$。 给出 $m \ (1 \le m \le 10^5)$ 次询问。每次问从 $x_i$ 到 $y_i$</description>
+    </item>
+    
     <item>
       <title>[CF] B. You Are Given a Decimal String... - Educational Codeforces Round 70 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1202/b/</link>

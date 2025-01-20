@@ -6,7 +6,34 @@
     <description>Recent content in 组合数学 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 13 Jan 2025 00:47:37 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jan 2025 00:12:33 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. Forming Triangles - Educational Codeforces Round 161 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1922/b/</link>
+      <pubDate>Sun, 19 Jan 2025 00:12:33 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1922/b/</guid>
+      <description>https://codeforces.com/contest/1922/problem/B 题目大意 给出 $n \ (\le 3 \times 10^5)$ 个木棍的长度。长度用 $2$ 的幂的指数的形式给出，例如 $a_i \ (0 \le a_i \le n)$ 意味着有一根 $2 ^ {a_i}$ 的木棍，问有多少种选 $3$ 根木棍的选法，可以组成非退化的三角形。（不能折断木棍！） 简要题解 因为长度</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Nested Segments - Codeforces Round 997 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2056/e/</link>
+      <pubDate>Sat, 18 Jan 2025 23:16:24 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2056/e/</guid>
+      <description>https://codeforces.com/contest/2056/problem/E 题目大意 给出 $n \ (1 \le n \le 2 \times 10^5)$ 的范围和 $m \ (0 \le m \le 2 \times 10^5)$ 个区间，这些区间满足对于任意的 $i \neq j$： 它们不相同 它们要么不相交（$r_i &amp;lt; l_j$ 或者 $r_j &amp;lt; l_i$）要么一个包含另一个（$l_i \le l_j \le r_j \le r_i$ 或 $l_j \le</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Almost Identity Permutations - Educational Codeforces Round 32</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/888/d/</link>
+      <pubDate>Thu, 16 Jan 2025 00:31:52 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/888/d/</guid>
+      <description>https://codeforces.com/contest/888/problem/D 题目大意 问至多有 $k \ (1 \le k \le 4)$ 个位置不对的 $n \ (4 \le n \le 1000)$ 长的排列有多少。 简要题解 因为 $k$ 很小，所以我们直接把 $1 \sim 4$ 的错位排列全写出来，然后直接选位置就可以了。 复杂度 $T$：$O(n)$ $S$：$O(1</description>
+    </item>
+    
     <item>
       <title>[CF] D. Print a 1337-string... - Educational Codeforces Round 70 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1202/d/</link>

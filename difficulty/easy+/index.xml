@@ -6,7 +6,25 @@
     <description>Recent content in Easy&#43; on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 11 Jan 2025 18:07:21 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/easy+/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jan 2025 23:58:39 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/easy+/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Graph Composition - Codeforces Round 998 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2060/e/</link>
+      <pubDate>Sun, 19 Jan 2025 23:58:39 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2060/e/</guid>
+      <description>https://codeforces.com/contest/2060/problem/E 题目大意 给出无向图 $F$ 和 $G$。可以对 F 进行操作：增加一条边或删除一条边的操作。 问至少需要多少次使得 $F$ 中任意两点 $u, v$ 有路径当且仅当 $G$ 中对应两点有路径。 给出 $F$ 和 $G$ 的点数 $n \ (\le 2 \times 10^5)$ 和各自的边数 $m_1, m_2 \ (0 \le</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Array Division - Educational Codeforces Round 21</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/808/d/</link>
+      <pubDate>Tue, 14 Jan 2025 21:45:18 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/808/d/</guid>
+      <description>https://codeforces.com/contest/808/problem/D 题目大意 给出 $n \ (n \le 10^5)$ 长的数组，其中元素 $1 \le a_i \le 10^9$ 问是否可以将其中某任意元素移动到其他任意位置，之后使得数组可以分成左右和相等的两部分。 简要题解 因为不增删数字，所以如果整个数组和为奇数无解。否则最后</description>
+    </item>
+    
     <item>
       <title>[CF] C. Minimize The Integer - Educational Codeforces Round 75 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1251/c/</link>

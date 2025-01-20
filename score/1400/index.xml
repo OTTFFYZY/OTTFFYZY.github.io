@@ -6,7 +6,16 @@
     <description>Recent content in 1400 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 11 Jan 2025 18:16:48 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1400/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Jan 2025 00:17:02 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1400/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. K-Dominant Character - Educational Codeforces Round 32</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/888/c/</link>
+      <pubDate>Thu, 16 Jan 2025 00:17:02 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/888/c/</guid>
+      <description>https://codeforces.com/contest/888/problem/C 题目大意 给一个小写字母的字符串 $S \ (|S| \le 10^5)$。定义 $k-Dominant$ 为对于某字符 $c$，所有 $len \ge k$ 长的子序列都含有至少一个 $c$。问对于串 $S$ 最小的 $k$ 是多少。 简要题解 因为每类字符是独立的，因此我们分开考虑即可。</description>
+    </item>
+    
     <item>
       <title>[CF] B. Binary Palindromes - Educational Codeforces Round 75 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1251/b/</link>

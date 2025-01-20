@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>800 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/score/800/</link>
+    <description>Recent content in 800 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 19 Jan 2025 00:03:48 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/800/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] A. Tricky Template - Educational Codeforces Round 161 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1922/a/</link>
+      <pubDate>Sun, 19 Jan 2025 00:03:48 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1922/a/</guid>
+      <description>https://codeforces.com/contest/1922/problem/A 题目大意 给出三个小写字母串 $a, b, c \ (1 \le |a| = |b| = |c| \le 20)$。问是否存在某模式串 $p$ 是 $a, b$ 的匹配但不是 $c$ 的匹配。当一个串的所有位置都是匹配时是匹配，否则不是匹配。匹配规则为如果 $p[i]$ 为小写字母则 $p[i] = t[i]$ 为匹配</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>三角形 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E4%B8%89%E8%A7%92%E5%BD%A2/</link>
+    <description>Recent content in 三角形 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 19 Jan 2025 00:12:33 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E4%B8%89%E8%A7%92%E5%BD%A2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. Forming Triangles - Educational Codeforces Round 161 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1922/b/</link>
+      <pubDate>Sun, 19 Jan 2025 00:12:33 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1922/b/</guid>
+      <description>https://codeforces.com/contest/1922/problem/B 题目大意 给出 $n \ (\le 3 \times 10^5)$ 个木棍的长度。长度用 $2$ 的幂的指数的形式给出，例如 $a_i \ (0 \le a_i \le n)$ 意味着有一根 $2 ^ {a_i}$ 的木棍，问有多少种选 $3$ 根木棍的选法，可以组成非退化的三角形。（不能折断木棍！） 简要题解 因为长度</description>
+    </item>
+    
+  </channel>
+</rss>

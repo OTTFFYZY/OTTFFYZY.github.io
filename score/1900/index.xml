@@ -6,7 +6,25 @@
     <description>Recent content in 1900 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 13 Jan 2025 00:47:37 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1900/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jan 2025 00:36:38 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1900/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Berserk Monsters - Educational Codeforces Round 161 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1922/d/</link>
+      <pubDate>Sun, 19 Jan 2025 00:36:38 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1922/d/</guid>
+      <description>https://codeforces.com/contest/1922/problem/D 题目大意 给出 $n \ (1 \le n \le 3 \times 10^5)$ 长的两个数组 $a, d$，$1 \le a_i, d_i \le 10^9$，代表 $i$ 个怪物的血量和生命值。之后模拟 $n$ 轮，每轮： 活着的每个怪物 $i$ 同时向自己左右还活着的相邻的怪物造成 $a_i$ 点伤害。 本轮 $i$ 如果受到</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Array Division - Educational Codeforces Round 21</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/808/d/</link>
+      <pubDate>Tue, 14 Jan 2025 21:45:18 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/808/d/</guid>
+      <description>https://codeforces.com/contest/808/problem/D 题目大意 给出 $n \ (n \le 10^5)$ 长的数组，其中元素 $1 \le a_i \le 10^9$ 问是否可以将其中某任意元素移动到其他任意位置，之后使得数组可以分成左右和相等的两部分。 简要题解 因为不增删数字，所以如果整个数组和为奇数无解。否则最后</description>
+    </item>
+    
     <item>
       <title>[CF] D. Print a 1337-string... - Educational Codeforces Round 70 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1202/d/</link>

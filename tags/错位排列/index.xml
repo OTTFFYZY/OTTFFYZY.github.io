@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>错位排列 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E9%94%99%E4%BD%8D%E6%8E%92%E5%88%97/</link>
+    <description>Recent content in 错位排列 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 16 Jan 2025 00:31:52 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E9%94%99%E4%BD%8D%E6%8E%92%E5%88%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Almost Identity Permutations - Educational Codeforces Round 32</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/888/d/</link>
+      <pubDate>Thu, 16 Jan 2025 00:31:52 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/888/d/</guid>
+      <description>https://codeforces.com/contest/888/problem/D 题目大意 问至多有 $k \ (1 \le k \le 4)$ 个位置不对的 $n \ (4 \le n \le 1000)$ 长的排列有多少。 简要题解 因为 $k$ 很小，所以我们直接把 $1 \sim 4$ 的错位排列全写出来，然后直接选位置就可以了。 复杂度 $T$：$O(n)$ $S$：$O(1</description>
+    </item>
+    
+  </channel>
+</rss>

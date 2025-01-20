@@ -6,7 +6,106 @@
     <description>Recent content in Easy on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 12 Jan 2025 23:42:15 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/easy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jan 2025 23:50:54 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/easy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Game of Mathletes - Codeforces Round 998 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2060/c/</link>
+      <pubDate>Sun, 19 Jan 2025 23:50:54 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2060/c/</guid>
+      <description>https://codeforces.com/contest/2060/problem/C 题目大意 给出 $n \ (2 \le n \le 2 \times 10^5)$ （且为偶数）和 $k \ (1 \le k \le 2n)$。Alice 和 Bob 轮流选数，每轮 Alice 先选，Bob 后选，如果选到的数的和为 $k$ 则加 $1$ 分。Bob 希望分尽量大，Alice 希望分尽量小。问最后能有</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Farmer John&#39;s Card Game - Codeforces Round 998 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2060/b/</link>
+      <pubDate>Sun, 19 Jan 2025 23:41:14 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2060/b/</guid>
+      <description>https://codeforces.com/contest/2060/problem/B 题目大意 给出 $n$ 个长为 $m$ 的数组，这些数组中的元素为 $[0, nm - 1]$，每个各出现一次。 问是否存在 $n$ 长的排列 $p$ 使得，依次从 $p_1, p_2, p_3 &amp;hellip;$ 数组中取出比刚才大的数，重复直到任一数组无法取出元素。使得最终取出的序列为 $[0, nm</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Closest Cities - Educational Codeforces Round 161 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1922/c/</link>
+      <pubDate>Sun, 19 Jan 2025 00:20:58 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1922/c/</guid>
+      <description>https://codeforces.com/contest/1922/problem/C 题目大意 给出数轴上的 $n \ (2 \le n \le 10^5)$ 个点。$0 \le a_1 &amp;lt; a_2 &amp;lt; a_3 &amp;lt; \cdots &amp;lt; a_n \le 10^9$ 从 $i$ 点直接走到另外一个点 $j$ 的花费为 $|a_i - a_j|$ 或当 $j$ 是 $i$ 与所有点之间距离最近的点时花费为 $1$。 给出 $m \ (1 \le m \le 10^5)$ 次询问。每次问从 $x_i$ 到 $y_i$</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Forming Triangles - Educational Codeforces Round 161 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1922/b/</link>
+      <pubDate>Sun, 19 Jan 2025 00:12:33 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1922/b/</guid>
+      <description>https://codeforces.com/contest/1922/problem/B 题目大意 给出 $n \ (\le 3 \times 10^5)$ 个木棍的长度。长度用 $2$ 的幂的指数的形式给出，例如 $a_i \ (0 \le a_i \le n)$ 意味着有一根 $2 ^ {a_i}$ 的木棍，问有多少种选 $3$ 根木棍的选法，可以组成非退化的三角形。（不能折断木棍！） 简要题解 因为长度</description>
+    </item>
+    
+    <item>
+      <title>[CF] A. Tricky Template - Educational Codeforces Round 161 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1922/a/</link>
+      <pubDate>Sun, 19 Jan 2025 00:03:48 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1922/a/</guid>
+      <description>https://codeforces.com/contest/1922/problem/A 题目大意 给出三个小写字母串 $a, b, c \ (1 \le |a| = |b| = |c| \le 20)$。问是否存在某模式串 $p$ 是 $a, b$ 的匹配但不是 $c$ 的匹配。当一个串的所有位置都是匹配时是匹配，否则不是匹配。匹配规则为如果 $p[i]$ 为小写字母则 $p[i] = t[i]$ 为匹配</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Palindromic Subsequences - Codeforces Round 997 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2056/c/</link>
+      <pubDate>Sat, 18 Jan 2025 23:06:09 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2056/c/</guid>
+      <description>https://codeforces.com/contest/2056/problem/C 题目大意 给出数字 $n \ (6 \le n \le 100)$ 要求用 $[1, n]$ 的数字，构造一个 $n$ 长的，最长回文子序列数量大于 $n$ 的数组。 简要题解 其实很容易想到怎么能得到较多的最长回文子序列。首先两组相同字母之间不能包含，不然最长回文是这两</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Find the Permutation - Codeforces Round 997 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2056/b/</link>
+      <pubDate>Sat, 18 Jan 2025 22:56:18 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2056/b/</guid>
+      <description>https://codeforces.com/contest/2056/problem/B 题目大意 给出一个 $n (n \le 1000)$ 长的未知排列和已知的 $n$ 个点的图，如果在排列中 $1 \le i &amp;lt; j \le n$ 且 $p_i &amp;lt; p_j$，则图上有一条 $&amp;lt;p_i, p_j&amp;gt;$ 的无向边。邻接矩阵的形式给出图，问排列是什么。 简要题解 直接看 $1$ 放在排列的什么位置。因</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Almost Identity Permutations - Educational Codeforces Round 32</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/888/d/</link>
+      <pubDate>Thu, 16 Jan 2025 00:31:52 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/888/d/</guid>
+      <description>https://codeforces.com/contest/888/problem/D 题目大意 问至多有 $k \ (1 \le k \le 4)$ 个位置不对的 $n \ (4 \le n \le 1000)$ 长的排列有多少。 简要题解 因为 $k$ 很小，所以我们直接把 $1 \sim 4$ 的错位排列全写出来，然后直接选位置就可以了。 复杂度 $T$：$O(n)$ $S$：$O(1</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. K-Dominant Character - Educational Codeforces Round 32</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/888/c/</link>
+      <pubDate>Thu, 16 Jan 2025 00:17:02 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/888/c/</guid>
+      <description>https://codeforces.com/contest/888/problem/C 题目大意 给一个小写字母的字符串 $S \ (|S| \le 10^5)$。定义 $k-Dominant$ 为对于某字符 $c$，所有 $len \ge k$ 长的子序列都含有至少一个 $c$。问对于串 $S$ 最小的 $k$ 是多少。 简要题解 因为每类字符是独立的，因此我们分开考虑即可。</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Buggy Robot - Educational Codeforces Round 32</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/888/b/</link>
+      <pubDate>Thu, 16 Jan 2025 00:11:43 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/888/b/</guid>
+      <description>https://codeforces.com/contest/888/problem/B 题目大意 给出机器人 $n \ (n \le 100)$ 长的操作序列。操作序列包含 UDLR 四种字母，分别表示其向四个方向移动一个单位，机器人可能只执行了部分指令，已知它在初始及结束都在 $(0, 0)$ 位置，问其最多执行了多少指令。 简要题解 这是一</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Crafting - Codeforces Round 996 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2055/b/</link>
+      <pubDate>Mon, 13 Jan 2025 23:32:34 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2055/b/</guid>
+      <description>https://codeforces.com/contest/2055/problem/B 题目大意 给出 $n \ (n \le 2 \times 10^5)$ 长的两个数组 $a$ 和 $b$。$0 \le a_i, b_i \le 10^9$。 可以执行如下操作若干次： 将 $a_i$ 加 $1$，将除了 $a_i$ 以外的 $a$ 中元素减 $1$。 问是否可以对于所有的 $i$ 有 $a_i \ge b_i$。 简要题解 注意到，</description>
+    </item>
+    
     <item>
       <title>[CF] C. Game with Multiset - Educational Codeforces Round 160 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1913/c/</link>

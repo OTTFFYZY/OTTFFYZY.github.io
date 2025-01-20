@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>偏序 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E5%81%8F%E5%BA%8F/</link>
+    <description>Recent content in 偏序 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 18 Jan 2025 22:56:18 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%81%8F%E5%BA%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. Find the Permutation - Codeforces Round 997 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2056/b/</link>
+      <pubDate>Sat, 18 Jan 2025 22:56:18 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2056/b/</guid>
+      <description>https://codeforces.com/contest/2056/problem/B 题目大意 给出一个 $n (n \le 1000)$ 长的未知排列和已知的 $n$ 个点的图，如果在排列中 $1 \le i &amp;lt; j \le n$ 且 $p_i &amp;lt; p_j$，则图上有一条 $&amp;lt;p_i, p_j&amp;gt;$ 的无向边。邻接矩阵的形式给出图，问排列是什么。 简要题解 直接看 $1$ 放在排列的什么位置。因</description>
+    </item>
+    
+  </channel>
+</rss>

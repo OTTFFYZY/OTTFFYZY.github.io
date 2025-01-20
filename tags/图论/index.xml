@@ -6,7 +6,16 @@
     <description>Recent content in 图论 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 17 Aug 2022 22:27:03 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%9B%BE%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jan 2025 23:58:39 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%9B%BE%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Graph Composition - Codeforces Round 998 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2060/e/</link>
+      <pubDate>Sun, 19 Jan 2025 23:58:39 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2060/e/</guid>
+      <description>https://codeforces.com/contest/2060/problem/E 题目大意 给出无向图 $F$ 和 $G$。可以对 F 进行操作：增加一条边或删除一条边的操作。 问至少需要多少次使得 $F$ 中任意两点 $u, v$ 有路径当且仅当 $G$ 中对应两点有路径。 给出 $F$ 和 $G$ 的点数 $n \ (\le 2 \times 10^5)$ 和各自的边数 $m_1, m_2 \ (0 \le</description>
+    </item>
+    
     <item>
       <title>[算法][图论] Vizing 定理</title>
       <link>https://ottffyzy.github.io/algos/gt/vizing/</link>

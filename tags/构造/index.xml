@@ -6,7 +6,43 @@
     <description>Recent content in 构造 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 13 Jan 2025 00:47:37 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%9E%84%E9%80%A0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jan 2025 00:51:09 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%9E%84%E9%80%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Increasing Subsequences - Educational Codeforces Round 161 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1922/e/</link>
+      <pubDate>Sun, 19 Jan 2025 00:51:09 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1922/e/</guid>
+      <description>https://codeforces.com/contest/1922/problem/E 题目大意 给定 $x \ (2 \le x \le 10^{18})$ 构造出一个不超过 $200$ 长的有刚好 $x$ 个严格上升子序列的数组，数组中元素 $a_i$ 满足 $-10^9 \le a_i \le 10^9$。（包括空串） 简要题解 注意到我们很容易构造出两组完全无关的子数组。如我们把 $[x + 1, y]$ 和</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Palindromic Subsequences - Codeforces Round 997 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2056/c/</link>
+      <pubDate>Sat, 18 Jan 2025 23:06:09 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2056/c/</guid>
+      <description>https://codeforces.com/contest/2056/problem/C 题目大意 给出数字 $n \ (6 \le n \le 100)$ 要求用 $[1, n]$ 的数字，构造一个 $n$ 长的，最长回文子序列数量大于 $n$ 的数组。 简要题解 其实很容易想到怎么能得到较多的最长回文子序列。首先两组相同字母之间不能包含，不然最长回文是这两</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Find the Permutation - Codeforces Round 997 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2056/b/</link>
+      <pubDate>Sat, 18 Jan 2025 22:56:18 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2056/b/</guid>
+      <description>https://codeforces.com/contest/2056/problem/B 题目大意 给出一个 $n (n \le 1000)$ 长的未知排列和已知的 $n$ 个点的图，如果在排列中 $1 \le i &amp;lt; j \le n$ 且 $p_i &amp;lt; p_j$，则图上有一条 $&amp;lt;p_i, p_j&amp;gt;$ 的无向边。邻接矩阵的形式给出图，问排列是什么。 简要题解 直接看 $1$ 放在排列的什么位置。因</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. The Trail - Codeforces Round 996 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2055/c/</link>
+      <pubDate>Mon, 13 Jan 2025 23:39:22 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2055/c/</guid>
+      <description>https://codeforces.com/contest/2055/problem/C 题目大意 题目给出一个 $n \times m \ ( 2 \le n, m \le 1000 )$ 的矩阵，给出一条起点为 $(0, 0)$ 终点为 $(n - 1, m - 1)$ 的由向右向下走出的路径。这条路径由 $n + m - 2$ 个字母 $DR$ 构成的串组成。$D$ 表示向下，$R$ 表示向右。题目给出的矩</description>
+    </item>
+    
     <item>
       <title>[CF] D. Print a 1337-string... - Educational Codeforces Round 70 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1202/d/</link>

@@ -6,7 +6,196 @@
     <description>Recent content on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 13 Jan 2025 01:17:09 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jan 2025 23:58:39 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Graph Composition - Codeforces Round 998 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2060/e/</link>
+      <pubDate>Sun, 19 Jan 2025 23:58:39 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2060/e/</guid>
+      <description>https://codeforces.com/contest/2060/problem/E 题目大意 给出无向图 $F$ 和 $G$。可以对 F 进行操作：增加一条边或删除一条边的操作。 问至少需要多少次使得 $F$ 中任意两点 $u, v$ 有路径当且仅当 $G$ 中对应两点有路径。 给出 $F$ 和 $G$ 的点数 $n \ (\le 2 \times 10^5)$ 和各自的边数 $m_1, m_2 \ (0 \le</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Game of Mathletes - Codeforces Round 998 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2060/c/</link>
+      <pubDate>Sun, 19 Jan 2025 23:50:54 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2060/c/</guid>
+      <description>https://codeforces.com/contest/2060/problem/C 题目大意 给出 $n \ (2 \le n \le 2 \times 10^5)$ （且为偶数）和 $k \ (1 \le k \le 2n)$。Alice 和 Bob 轮流选数，每轮 Alice 先选，Bob 后选，如果选到的数的和为 $k$ 则加 $1$ 分。Bob 希望分尽量大，Alice 希望分尽量小。问最后能有</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Farmer John&#39;s Card Game - Codeforces Round 998 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2060/b/</link>
+      <pubDate>Sun, 19 Jan 2025 23:41:14 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2060/b/</guid>
+      <description>https://codeforces.com/contest/2060/problem/B 题目大意 给出 $n$ 个长为 $m$ 的数组，这些数组中的元素为 $[0, nm - 1]$，每个各出现一次。 问是否存在 $n$ 长的排列 $p$ 使得，依次从 $p_1, p_2, p_3 &amp;hellip;$ 数组中取出比刚才大的数，重复直到任一数组无法取出元素。使得最终取出的序列为 $[0, nm</description>
+    </item>
+    
+    <item>
+      <title>[CF] F. Replace on Segment - Educational Codeforces Round 161 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1922/f/</link>
+      <pubDate>Sun, 19 Jan 2025 01:10:09 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1922/f/</guid>
+      <description>https://codeforces.com/contest/1922/problem/F 题目大意 给出 $n$ 长的数组和颜色数 $x$，满足 $(1 \le x \le n \le 100)$。数组的值 $a_i \ (1 \le a_i \le x)$ 代表每个位置的颜色。你可以执行以下操作若干次： 选取 $1 \le l \le r \le n$ 和 $1 \le k \le x$，满足 $\all l \le i \le r, a[i] \neq k$。将 $[l,</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Increasing Subsequences - Educational Codeforces Round 161 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1922/e/</link>
+      <pubDate>Sun, 19 Jan 2025 00:51:09 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1922/e/</guid>
+      <description>https://codeforces.com/contest/1922/problem/E 题目大意 给定 $x \ (2 \le x \le 10^{18})$ 构造出一个不超过 $200$ 长的有刚好 $x$ 个严格上升子序列的数组，数组中元素 $a_i$ 满足 $-10^9 \le a_i \le 10^9$。（包括空串） 简要题解 注意到我们很容易构造出两组完全无关的子数组。如我们把 $[x + 1, y]$ 和</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Berserk Monsters - Educational Codeforces Round 161 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1922/d/</link>
+      <pubDate>Sun, 19 Jan 2025 00:36:38 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1922/d/</guid>
+      <description>https://codeforces.com/contest/1922/problem/D 题目大意 给出 $n \ (1 \le n \le 3 \times 10^5)$ 长的两个数组 $a, d$，$1 \le a_i, d_i \le 10^9$，代表 $i$ 个怪物的血量和生命值。之后模拟 $n$ 轮，每轮： 活着的每个怪物 $i$ 同时向自己左右还活着的相邻的怪物造成 $a_i$ 点伤害。 本轮 $i$ 如果受到</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Closest Cities - Educational Codeforces Round 161 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1922/c/</link>
+      <pubDate>Sun, 19 Jan 2025 00:20:58 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1922/c/</guid>
+      <description>https://codeforces.com/contest/1922/problem/C 题目大意 给出数轴上的 $n \ (2 \le n \le 10^5)$ 个点。$0 \le a_1 &amp;lt; a_2 &amp;lt; a_3 &amp;lt; \cdots &amp;lt; a_n \le 10^9$ 从 $i$ 点直接走到另外一个点 $j$ 的花费为 $|a_i - a_j|$ 或当 $j$ 是 $i$ 与所有点之间距离最近的点时花费为 $1$。 给出 $m \ (1 \le m \le 10^5)$ 次询问。每次问从 $x_i$ 到 $y_i$</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Forming Triangles - Educational Codeforces Round 161 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1922/b/</link>
+      <pubDate>Sun, 19 Jan 2025 00:12:33 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1922/b/</guid>
+      <description>https://codeforces.com/contest/1922/problem/B 题目大意 给出 $n \ (\le 3 \times 10^5)$ 个木棍的长度。长度用 $2$ 的幂的指数的形式给出，例如 $a_i \ (0 \le a_i \le n)$ 意味着有一根 $2 ^ {a_i}$ 的木棍，问有多少种选 $3$ 根木棍的选法，可以组成非退化的三角形。（不能折断木棍！） 简要题解 因为长度</description>
+    </item>
+    
+    <item>
+      <title>[CF] A. Tricky Template - Educational Codeforces Round 161 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1922/a/</link>
+      <pubDate>Sun, 19 Jan 2025 00:03:48 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1922/a/</guid>
+      <description>https://codeforces.com/contest/1922/problem/A 题目大意 给出三个小写字母串 $a, b, c \ (1 \le |a| = |b| = |c| \le 20)$。问是否存在某模式串 $p$ 是 $a, b$ 的匹配但不是 $c$ 的匹配。当一个串的所有位置都是匹配时是匹配，否则不是匹配。匹配规则为如果 $p[i]$ 为小写字母则 $p[i] = t[i]$ 为匹配</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Nested Segments - Codeforces Round 997 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2056/e/</link>
+      <pubDate>Sat, 18 Jan 2025 23:16:24 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2056/e/</guid>
+      <description>https://codeforces.com/contest/2056/problem/E 题目大意 给出 $n \ (1 \le n \le 2 \times 10^5)$ 的范围和 $m \ (0 \le m \le 2 \times 10^5)$ 个区间，这些区间满足对于任意的 $i \neq j$： 它们不相同 它们要么不相交（$r_i &amp;lt; l_j$ 或者 $r_j &amp;lt; l_i$）要么一个包含另一个（$l_i \le l_j \le r_j \le r_i$ 或 $l_j \le</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Palindromic Subsequences - Codeforces Round 997 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2056/c/</link>
+      <pubDate>Sat, 18 Jan 2025 23:06:09 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2056/c/</guid>
+      <description>https://codeforces.com/contest/2056/problem/C 题目大意 给出数字 $n \ (6 \le n \le 100)$ 要求用 $[1, n]$ 的数字，构造一个 $n$ 长的，最长回文子序列数量大于 $n$ 的数组。 简要题解 其实很容易想到怎么能得到较多的最长回文子序列。首先两组相同字母之间不能包含，不然最长回文是这两</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Find the Permutation - Codeforces Round 997 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2056/b/</link>
+      <pubDate>Sat, 18 Jan 2025 22:56:18 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2056/b/</guid>
+      <description>https://codeforces.com/contest/2056/problem/B 题目大意 给出一个 $n (n \le 1000)$ 长的未知排列和已知的 $n$ 个点的图，如果在排列中 $1 \le i &amp;lt; j \le n$ 且 $p_i &amp;lt; p_j$，则图上有一条 $&amp;lt;p_i, p_j&amp;gt;$ 的无向边。邻接矩阵的形式给出图，问排列是什么。 简要题解 直接看 $1$ 放在排列的什么位置。因</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Almost Identity Permutations - Educational Codeforces Round 32</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/888/d/</link>
+      <pubDate>Thu, 16 Jan 2025 00:31:52 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/888/d/</guid>
+      <description>https://codeforces.com/contest/888/problem/D 题目大意 问至多有 $k \ (1 \le k \le 4)$ 个位置不对的 $n \ (4 \le n \le 1000)$ 长的排列有多少。 简要题解 因为 $k$ 很小，所以我们直接把 $1 \sim 4$ 的错位排列全写出来，然后直接选位置就可以了。 复杂度 $T$：$O(n)$ $S$：$O(1</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. K-Dominant Character - Educational Codeforces Round 32</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/888/c/</link>
+      <pubDate>Thu, 16 Jan 2025 00:17:02 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/888/c/</guid>
+      <description>https://codeforces.com/contest/888/problem/C 题目大意 给一个小写字母的字符串 $S \ (|S| \le 10^5)$。定义 $k-Dominant$ 为对于某字符 $c$，所有 $len \ge k$ 长的子序列都含有至少一个 $c$。问对于串 $S$ 最小的 $k$ 是多少。 简要题解 因为每类字符是独立的，因此我们分开考虑即可。</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Buggy Robot - Educational Codeforces Round 32</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/888/b/</link>
+      <pubDate>Thu, 16 Jan 2025 00:11:43 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/888/b/</guid>
+      <description>https://codeforces.com/contest/888/problem/B 题目大意 给出机器人 $n \ (n \le 100)$ 长的操作序列。操作序列包含 UDLR 四种字母，分别表示其向四个方向移动一个单位，机器人可能只执行了部分指令，已知它在初始及结束都在 $(0, 0)$ 位置，问其最多执行了多少指令。 简要题解 这是一</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Selling Souvenirs - Educational Codeforces Round 21</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/808/e/</link>
+      <pubDate>Tue, 14 Jan 2025 21:53:36 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/808/e/</guid>
+      <description>https://codeforces.com/contest/808/problem/E 题目大意 给出 $n \ (n \le 10^5)$ 个物品和总容积为 $m \ (m \le 3 \times 10^5)$ 的背包。n 个物品的体积和价值分别为 $w_i \ (1 \le w_i \le 3)$ 和 $c_i \ (1 \le c_i \le 10^9)$。 问可以装入背包的（不超过 $m$ 的）最大价值。 简要题解 显然这是一个 $01$ 背包问题</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Array Division - Educational Codeforces Round 21</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/808/d/</link>
+      <pubDate>Tue, 14 Jan 2025 21:45:18 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/808/d/</guid>
+      <description>https://codeforces.com/contest/808/problem/D 题目大意 给出 $n \ (n \le 10^5)$ 长的数组，其中元素 $1 \le a_i \le 10^9$ 问是否可以将其中某任意元素移动到其他任意位置，之后使得数组可以分成左右和相等的两部分。 简要题解 因为不增删数字，所以如果整个数组和为奇数无解。否则最后</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Mysterious Crime - Codeforces Round 519 by Botan Investments</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1043/d/</link>
+      <pubDate>Tue, 14 Jan 2025 21:38:37 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1043/d/</guid>
+      <description>https://codeforces.com/contest/1043/problem/D 题目大意 给出 $m \ (m \le 10)$ 个 $n \ (n \le 10^5)$ 长的排列，问在所有 $m$ 个数组中都出现的连续子数组有多少个。 简要题解 所有 $1$ 长的显然都符合条件。 对于 $2$ 及以上长度的，其必然在第一个数组中出现。对于 $2$ 长，显然我们只需关注所</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Scarecrow - Codeforces Round 996 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2055/d/</link>
+      <pubDate>Tue, 14 Jan 2025 00:02:10 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2055/d/</guid>
+      <description>https://codeforces.com/contest/2055/problem/d 题目大意 给出 $n \ (n \le 2 \times 10^5)$ 长的序列 $a_i$，给出 $k, l \ (1 \le k \le l)$。序列满足 $0 \le a_1 \le a_1 \le \cdots \le a_n \le l$。 起初 $x = 0$，当存在某 $x - k &amp;lt; a_i &amp;lt;= x$ 时，$x$ 会立即变换到 $a_i + k$。任意时刻，a_i 可以以每</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. The Trail - Codeforces Round 996 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2055/c/</link>
+      <pubDate>Mon, 13 Jan 2025 23:39:22 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2055/c/</guid>
+      <description>https://codeforces.com/contest/2055/problem/C 题目大意 题目给出一个 $n \times m \ ( 2 \le n, m \le 1000 )$ 的矩阵，给出一条起点为 $(0, 0)$ 终点为 $(n - 1, m - 1)$ 的由向右向下走出的路径。这条路径由 $n + m - 2$ 个字母 $DR$ 构成的串组成。$D$ 表示向下，$R$ 表示向右。题目给出的矩</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Crafting - Codeforces Round 996 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2055/b/</link>
+      <pubDate>Mon, 13 Jan 2025 23:32:34 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2055/b/</guid>
+      <description>https://codeforces.com/contest/2055/problem/B 题目大意 给出 $n \ (n \le 2 \times 10^5)$ 长的两个数组 $a$ 和 $b$。$0 \le a_i, b_i \le 10^9$。 可以执行如下操作若干次： 将 $a_i$ 加 $1$，将除了 $a_i$ 以外的 $a$ 中元素减 $1$。 问是否可以对于所有的 $i$ 有 $a_i \ge b_i$。 简要题解 注意到，</description>
+    </item>
+    
     <item>
       <title>[LC] 3420. Count Non-Decreasing Subarrays After K Operations - Weekly Contest 432</title>
       <link>https://ottffyzy.github.io/sols/leetcode/p3420/</link>

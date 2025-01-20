@@ -6,7 +6,16 @@
     <description>Recent content in 1700 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 13 Jan 2025 00:48:17 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1700/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Jan 2025 21:38:37 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1700/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Mysterious Crime - Codeforces Round 519 by Botan Investments</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1043/d/</link>
+      <pubDate>Tue, 14 Jan 2025 21:38:37 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1043/d/</guid>
+      <description>https://codeforces.com/contest/1043/problem/D 题目大意 给出 $m \ (m \le 10)$ 个 $n \ (n \le 10^5)$ 长的排列，问在所有 $m$ 个数组中都出现的连续子数组有多少个。 简要题解 所有 $1$ 长的显然都符合条件。 对于 $2$ 及以上长度的，其必然在第一个数组中出现。对于 $2$ 长，显然我们只需关注所</description>
+    </item>
+    
     <item>
       <title>[CF] B. You Are Given a Decimal String... - Educational Codeforces Round 70 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1202/b/</link>

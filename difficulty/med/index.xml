@@ -1,12 +1,57 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Med on OTTFF&#39;s Blog</title>
+    <title>Med- on OTTFF&#39;s Blog</title>
     <link>https://ottffyzy.github.io/difficulty/med/</link>
-    <description>Recent content in Med on OTTFF&#39;s Blog</description>
+    <description>Recent content in Med- on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 13 Jan 2025 00:48:17 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/med/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jan 2025 00:51:09 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/med/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Increasing Subsequences - Educational Codeforces Round 161 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1922/e/</link>
+      <pubDate>Sun, 19 Jan 2025 00:51:09 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1922/e/</guid>
+      <description>https://codeforces.com/contest/1922/problem/E 题目大意 给定 $x \ (2 \le x \le 10^{18})$ 构造出一个不超过 $200$ 长的有刚好 $x$ 个严格上升子序列的数组，数组中元素 $a_i$ 满足 $-10^9 \le a_i \le 10^9$。（包括空串） 简要题解 注意到我们很容易构造出两组完全无关的子数组。如我们把 $[x + 1, y]$ 和</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Berserk Monsters - Educational Codeforces Round 161 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1922/d/</link>
+      <pubDate>Sun, 19 Jan 2025 00:36:38 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1922/d/</guid>
+      <description>https://codeforces.com/contest/1922/problem/D 题目大意 给出 $n \ (1 \le n \le 3 \times 10^5)$ 长的两个数组 $a, d$，$1 \le a_i, d_i \le 10^9$，代表 $i$ 个怪物的血量和生命值。之后模拟 $n$ 轮，每轮： 活着的每个怪物 $i$ 同时向自己左右还活着的相邻的怪物造成 $a_i$ 点伤害。 本轮 $i$ 如果受到</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Mysterious Crime - Codeforces Round 519 by Botan Investments</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1043/d/</link>
+      <pubDate>Tue, 14 Jan 2025 21:38:37 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1043/d/</guid>
+      <description>https://codeforces.com/contest/1043/problem/D 题目大意 给出 $m \ (m \le 10)$ 个 $n \ (n \le 10^5)$ 长的排列，问在所有 $m$ 个数组中都出现的连续子数组有多少个。 简要题解 所有 $1$ 长的显然都符合条件。 对于 $2$ 及以上长度的，其必然在第一个数组中出现。对于 $2$ 长，显然我们只需关注所</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Scarecrow - Codeforces Round 996 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2055/d/</link>
+      <pubDate>Tue, 14 Jan 2025 00:02:10 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2055/d/</guid>
+      <description>https://codeforces.com/contest/2055/problem/d 题目大意 给出 $n \ (n \le 2 \times 10^5)$ 长的序列 $a_i$，给出 $k, l \ (1 \le k \le l)$。序列满足 $0 \le a_1 \le a_1 \le \cdots \le a_n \le l$。 起初 $x = 0$，当存在某 $x - k &amp;lt; a_i &amp;lt;= x$ 时，$x$ 会立即变换到 $a_i + k$。任意时刻，a_i 可以以每</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. The Trail - Codeforces Round 996 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2055/c/</link>
+      <pubDate>Mon, 13 Jan 2025 23:39:22 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2055/c/</guid>
+      <description>https://codeforces.com/contest/2055/problem/C 题目大意 题目给出一个 $n \times m \ ( 2 \le n, m \le 1000 )$ 的矩阵，给出一条起点为 $(0, 0)$ 终点为 $(n - 1, m - 1)$ 的由向右向下走出的路径。这条路径由 $n + m - 2$ 个字母 $DR$ 构成的串组成。$D$ 表示向下，$R$ 表示向右。题目给出的矩</description>
+    </item>
+    
     <item>
       <title>[CF] B. You Are Given a Decimal String... - Educational Codeforces Round 70 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1202/b/</link>
