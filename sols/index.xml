@@ -6,7 +6,160 @@
     <description>Recent content in Sols on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 19 Jan 2025 23:58:39 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/sols/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Jan 2025 01:03:03 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/sols/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Pythagorean Triples - Educational Codeforces Round 104 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1487/d/</link>
+      <pubDate>Mon, 27 Jan 2025 01:03:03 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1487/d/</guid>
+      <description>https://codeforces.com/contest/1487/problem/D 题目大意 给出一个上界 $n \ (\le 10^9)$，问有多少正整数三元组 $(a, b, c)$ 满足 $(1 \le a \le b \le c \le n)$， $a^2 + b^2 = c^2$ 且满足 $c = a^2 - b$。 简要题解 由 $a^2 + b^2 = c^2$ 和 $c = a^2 - b$ 都包含 $a^2$ 则我们可以将其约去，易得 $c = b + 1</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Minimum Ties - Educational Codeforces Round 104 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1487/c/</link>
+      <pubDate>Mon, 27 Jan 2025 00:58:05 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1487/c/</guid>
+      <description>https://codeforces.com/contest/1487/problem/C 题目大意 给出 $n \ (\le 100)$ 只球队，两两各打一场比赛，输记 $0$ 分，平局记 $1$ 分，赢记 $3$ 分。已知在 $n (n - 1) / 2$ 场比赛后，所有球队比分相同，请构造出一个方案，使得平局尽量少。 简要题解 假设有 $w$ 个非平局和 $t$ 个平局则。$</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Triangle Tree - Codeforces Round 1000 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2063/e/</link>
+      <pubDate>Mon, 27 Jan 2025 00:05:12 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2063/e/</guid>
+      <description>https://codeforces.com/contest/2063/problem/E 题目大意 给出一棵 $n \ (\le 3 \times 10^5)$ 个点的树，根为 $1$，边长全部为 $1$。设 $l = lca(u, v)$，定义 $f(u, v)$ 代表，能和 $dist(u, l)$ 与 $dist(v, l)$ 组成非退化的三角形的第三边的整数值个数。求 $$ \sum_{i = 1}^{n - 1}\sum_{j = i &amp;#43; 1}^{n} f(i, j) $$ 简要题解 首先我们考</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Turtle Tenacity: Continual Mods - Codeforces Round 929 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1933/d/</link>
+      <pubDate>Sat, 25 Jan 2025 00:16:08 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1933/d/</guid>
+      <description>https://codeforces.com/contest/1933/problem/D 题目大意 给出 $n \ (2 \le n \le 10^5)$ 长的数组 $a$ 其中 $1 \le a_i \le 10^9$。 问是否存在某种排列使得 $a_1 \mod a_2 \mod a_3 \cdots \mod a_n \neq 0$。 简要题解 假设 $m = \min(a)$ 容易想到 $x &amp;lt; y$ 时 $x \mod y = x$，则如果数组中的最小数 $m$ 唯一，那么我们按顺序排</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Subtract Min Sort - Codeforces Round 998 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2060/d/</link>
+      <pubDate>Fri, 24 Jan 2025 23:52:06 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2060/d/</guid>
+      <description>https://codeforces.com/contest/2060/problem/D 题目大意 给出 $n \ (2 \le n \le 2 \times 10^5)$ 长的数组 $a$ 其中 $1 \le a_i \le 10^9$。问数组是否可以靠以下操作完成排序。 任选 $i \in [1, n - 1]$，$a_i, a_{i + 1}$ 都减去 $\min(a_i, a_{i + 1})$。 简要题解 这题分不高大概是结论很好猜，但其</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Getting Points - Educational Codeforces Round 159 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1902/b/</link>
+      <pubDate>Fri, 24 Jan 2025 23:39:57 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1902/b/</guid>
+      <description>https://codeforces.com/contest/1902/problem/B 题目大意 有 $n \le 10^{9}$ 天，在第 $1, 8, 15, \cdots$ 天会放出任务，在当天或之后任何天都可以完成这个任务，每天都会有课程。每天可以选择休息，或上课并完成 $0 \sim 2$ 个还未完成的任务。上课获得 $pl \ (\le 10^9)$ 点，完成一个任务获得 $pt \ (\le 10^9)$</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Insert and Equalize - Educational Codeforces Round 159 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1902/c/</link>
+      <pubDate>Fri, 24 Jan 2025 23:14:18 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1902/c/</guid>
+      <description>https://codeforces.com/contest/1902/problem/C 题目大意 给出 $n \ (\le 2 \times 10^5)$ 长的数组 $a$ 其中 $-10^9 \le a_i \le 10^9$，且元素不重复。给 $a$ 添加任意其中未出现的元素 $a_{n + 1}$ 后，对于新数组，可以选定某固定 $x$ 后，对数组执行若干次，选定某 $a_i$ 然后 $a_i \gets a_i + x$。问选取最佳的</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Robot Queries - Educational Codeforces Round 159 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1902/d/</link>
+      <pubDate>Fri, 24 Jan 2025 22:53:40 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1902/d/</guid>
+      <description>https://codeforces.com/contest/1902/problem/D 题目大意 给出某 LRUD 组成的 $n \ (\le 2 \times 10^5)$ 的操作序列 $S$ 以及 $q \ (\le 2 \times 10^5)$ 个询问。询问之间彼此独立。每次问，将原始操作序列 $[l, r]$ 的这一段反转后，整个操作序列以 $(0, 0)$ 为起点会不会通过 $(x, y)$。（$S$ 翻转 $[l, r]$ 之后的序</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Collapsing Strings - Educational Codeforces Round 159 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1902/e/</link>
+      <pubDate>Fri, 24 Jan 2025 22:45:33 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1902/e/</guid>
+      <description>https://codeforces.com/contest/1902/problem/E 题目大意 给出 $n \ (\le 10^6)$ 个字符串，且 $\sum |S_i| \le 10^6$。两个串的运算 $C(a, b)$ 规则如下： $a$ 为空则 $C(a, b) = b$ $b$ 为空则 $C(a, b) = a$ 若 $a[|a| - 1] = b[0]$ 即 $a$ 的末尾字符与 $b$ 的开头字符相同则 $C(a, b) = C(a&#39;, b&#39;)$，$a&#39;$ 为 $a$ 去掉尾字符的串</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Subsequence Update - Codeforces Round 1000 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2063/b/</link>
+      <pubDate>Wed, 22 Jan 2025 22:07:31 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2063/b/</guid>
+      <description>https://codeforces.com/contest/2063/problem/B 题目大意 给定某 $n \ (\le 10^5)$ 长的数组 $a \ (1 \le a_i \le 10^9)$ 以及某一个区间 $1 \le l \le r \le n$。进行如下操作一次： 选择 $a$ 的某个子序列，将其拿出来反转之后再放回原位。 问 $sum(l, r)$ 最小是多少。 简要题解 注意到如果 $k$ 长的操作序列最小</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Remove Exactly Two - Codeforces Round 1000 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2063/c/</link>
+      <pubDate>Wed, 22 Jan 2025 22:01:30 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2063/c/</guid>
+      <description>https://codeforces.com/contest/2063/problem/C 题目大意 给出一棵 $n \ (2 \le n \le 2 \times 10^5)$ 个点的树，从中删掉 $2$ 个不同的点，问删完之后最多有多少个联通分量。 简要题解 首先 $n = 2, 3$ 是平凡的，单独处理就好。 其他情况，我们应该尽量删掉两个度最大的节点。但注意要处理</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Game With Triangles - Codeforces Round 1000 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2063/d/</link>
+      <pubDate>Wed, 22 Jan 2025 21:29:51 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2063/d/</guid>
+      <description>https://codeforces.com/contest/2063/problem/D 题目大意 给出 $n \ (\le 2 \times 10^5)$ 个点坐标为 $(a_i, 0)$ 以及 $m \ (\le 2 \times 10^5)$ 个点坐标为 $(b_i, 2)$。（$a_i, b_i$ 各自没有重复点） 问从这些点中选出非退化的三角形最多多少个（点不能重复选）。记最大数量为 $mx$，对于所有 $i \in [1,</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Kevin and And - IAEPC Preliminary Contest (Codeforces Round 999, Div. 1 &#43; Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2061/e/</link>
+      <pubDate>Mon, 20 Jan 2025 23:47:36 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2061/e/</guid>
+      <description>https://codeforces.com/contest/2061/problem/E 题目大意 给出 $n \ (1 \le n \le 10^5)$ 长的数组 $a$ 和 $m \ (1 \le m \le 10)$ 长的数组 $b$。满足 $0 \le a_i, b_i &amp;lt; 2^{30}$。 可以执行以下操作 $k \ (0 \le k \le nm)$ 次： 选取 $a_i$ 和 $b_j$ 将 $a_i$ 变为 $a_i &amp;amp; b_j$。 问执行完这些操作最小的数组和是多少</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Kevin and Numbers - IAEPC Preliminary Contest (Codeforces Round 999, Div. 1 &#43; Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2061/d/</link>
+      <pubDate>Mon, 20 Jan 2025 23:13:20 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2061/d/</guid>
+      <description>https://codeforces.com/contest/2061/problem/D 题目大意 给出 $n$ 长的数组 $a$ 和 $m$ 长的数组 $b$。满足 $1 \le m \le n \le 2 \times 10^5$ 和 $1 \le a_i, b_i \le 10^9$。 可以执行下述操作若干次： 从 $a$ 中选出 $x, y$ 满足 $|x - y| \le 1$。将其从 $a$ 中删掉，再将 $x + y$ 加入。 问是否可以将 $a$ 转化为</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Kevin and Puzzle - IAEPC Preliminary Contest (Codeforces Round 999, Div. 1 &#43; Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2061/c/</link>
+      <pubDate>Mon, 20 Jan 2025 22:58:48 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2061/c/</guid>
+      <description>https://codeforces.com/contest/2061/problem/C 题目大意 给出 $n \ (1 \le n \le 2 \times 10^5)$ 个人。每个人可以说谎或诚实。诚实的人总说真话，说谎的人可以说真话或者假话。任意两个说谎的人不相邻。每个人 $i$ 做出了如下论断：$i$ 左侧有 $a_i \ (0 \le a_i \le n)$ 个人说谎。问最多有多</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Kevin and Geometry - IAEPC Preliminary Contest (Codeforces Round 999, Div. 1 &#43; Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2061/b/</link>
+      <pubDate>Mon, 20 Jan 2025 22:33:01 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2061/b/</guid>
+      <description>https://codeforces.com/contest/2061/problem/B 题目大意 给出 $n \ (4 \le n \le 2 \times 10^5)$ 条边（$1 \le a_i \le 10^8$）。问是否存在一种选法可以选出四条边，组成一个等腰梯形。正方形或长方形也可以，但不能退化。 简要题解 可以想象，大概就是要枚举一些东西。 法1 赛时写</description>
+    </item>
+    
+    <item>
+      <title>[CF] A. Kevin and Arithmetic - IAEPC Preliminary Contest (Codeforces Round 999, Div. 1 &#43; Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2061/a/</link>
+      <pubDate>Mon, 20 Jan 2025 22:13:51 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2061/a/</guid>
+      <description>https://codeforces.com/contest/2061/problem/A 题目大意 给出 $n \ (n \le 100)$ 个数的数组 $a$，其中 $1 \le a_i \le 10^9$。给定 $s = 0$。可以执行以下操作若干次： 从 $a$ 中选一个还没有选过的 $a_i$ 加到 $s$ 上，如果 $s$ 是偶数则得到一分，并且重复除以 $2$ 直到 $s$ 变为奇数。 问最多</description>
+    </item>
+    
     <item>
       <title>[CF] E. Graph Composition - Codeforces Round 998 (Div. 3)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/2060/e/</link>

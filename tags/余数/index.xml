@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>余数 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E4%BD%99%E6%95%B0/</link>
+    <description>Recent content in 余数 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 27 Jan 2025 00:58:05 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E4%BD%99%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Minimum Ties - Educational Codeforces Round 104 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1487/c/</link>
+      <pubDate>Mon, 27 Jan 2025 00:58:05 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1487/c/</guid>
+      <description>https://codeforces.com/contest/1487/problem/C 题目大意 给出 $n \ (\le 100)$ 只球队，两两各打一场比赛，输记 $0$ 分，平局记 $1$ 分，赢记 $3$ 分。已知在 $n (n - 1) / 2$ 场比赛后，所有球队比分相同，请构造出一个方案，使得平局尽量少。 简要题解 假设有 $w$ 个非平局和 $t$ 个平局则。$</description>
+    </item>
+    
+  </channel>
+</rss>

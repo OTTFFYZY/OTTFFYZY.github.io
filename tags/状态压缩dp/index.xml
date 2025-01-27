@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>状态压缩dp on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9dp/</link>
+    <description>Recent content in 状态压缩dp on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 20 Jan 2025 23:47:36 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9dp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Kevin and And - IAEPC Preliminary Contest (Codeforces Round 999, Div. 1 &#43; Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2061/e/</link>
+      <pubDate>Mon, 20 Jan 2025 23:47:36 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2061/e/</guid>
+      <description>https://codeforces.com/contest/2061/problem/E 题目大意 给出 $n \ (1 \le n \le 10^5)$ 长的数组 $a$ 和 $m \ (1 \le m \le 10)$ 长的数组 $b$。满足 $0 \le a_i, b_i &amp;lt; 2^{30}$。 可以执行以下操作 $k \ (0 \le k \le nm)$ 次： 选取 $a_i$ 和 $b_j$ 将 $a_i$ 变为 $a_i &amp;amp; b_j$。 问执行完这些操作最小的数组和是多少</description>
+    </item>
+    
+  </channel>
+</rss>

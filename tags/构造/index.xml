@@ -6,7 +6,34 @@
     <description>Recent content in 构造 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 19 Jan 2025 00:51:09 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%9E%84%E9%80%A0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Jan 2025 00:58:05 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%9E%84%E9%80%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Minimum Ties - Educational Codeforces Round 104 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1487/c/</link>
+      <pubDate>Mon, 27 Jan 2025 00:58:05 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1487/c/</guid>
+      <description>https://codeforces.com/contest/1487/problem/C 题目大意 给出 $n \ (\le 100)$ 只球队，两两各打一场比赛，输记 $0$ 分，平局记 $1$ 分，赢记 $3$ 分。已知在 $n (n - 1) / 2$ 场比赛后，所有球队比分相同，请构造出一个方案，使得平局尽量少。 简要题解 假设有 $w$ 个非平局和 $t$ 个平局则。$</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Subtract Min Sort - Codeforces Round 998 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2060/d/</link>
+      <pubDate>Fri, 24 Jan 2025 23:52:06 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2060/d/</guid>
+      <description>https://codeforces.com/contest/2060/problem/D 题目大意 给出 $n \ (2 \le n \le 2 \times 10^5)$ 长的数组 $a$ 其中 $1 \le a_i \le 10^9$。问数组是否可以靠以下操作完成排序。 任选 $i \in [1, n - 1]$，$a_i, a_{i + 1}$ 都减去 $\min(a_i, a_{i + 1})$。 简要题解 这题分不高大概是结论很好猜，但其</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Insert and Equalize - Educational Codeforces Round 159 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1902/c/</link>
+      <pubDate>Fri, 24 Jan 2025 23:14:18 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1902/c/</guid>
+      <description>https://codeforces.com/contest/1902/problem/C 题目大意 给出 $n \ (\le 2 \times 10^5)$ 长的数组 $a$ 其中 $-10^9 \le a_i \le 10^9$，且元素不重复。给 $a$ 添加任意其中未出现的元素 $a_{n + 1}$ 后，对于新数组，可以选定某固定 $x$ 后，对数组执行若干次，选定某 $a_i$ 然后 $a_i \gets a_i + x$。问选取最佳的</description>
+    </item>
+    
     <item>
       <title>[CF] E. Increasing Subsequences - Educational Codeforces Round 161 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1922/e/</link>

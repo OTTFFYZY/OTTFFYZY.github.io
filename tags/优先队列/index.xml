@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>优先队列 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/</link>
+    <description>Recent content in 优先队列 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 20 Jan 2025 23:13:20 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Kevin and Numbers - IAEPC Preliminary Contest (Codeforces Round 999, Div. 1 &#43; Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2061/d/</link>
+      <pubDate>Mon, 20 Jan 2025 23:13:20 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2061/d/</guid>
+      <description>https://codeforces.com/contest/2061/problem/D 题目大意 给出 $n$ 长的数组 $a$ 和 $m$ 长的数组 $b$。满足 $1 \le m \le n \le 2 \times 10^5$ 和 $1 \le a_i, b_i \le 10^9$。 可以执行下述操作若干次： 从 $a$ 中选出 $x, y$ 满足 $|x - y| \le 1$。将其从 $a$ 中删掉，再将 $x + y$ 加入。 问是否可以将 $a$ 转化为</description>
+    </item>
+    
+  </channel>
+</rss>

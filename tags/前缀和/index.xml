@@ -6,7 +6,16 @@
     <description>Recent content in 前缀和 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 19 Jan 2025 00:20:58 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Jan 2025 22:07:31 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. Subsequence Update - Codeforces Round 1000 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2063/b/</link>
+      <pubDate>Wed, 22 Jan 2025 22:07:31 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2063/b/</guid>
+      <description>https://codeforces.com/contest/2063/problem/B 题目大意 给定某 $n \ (\le 10^5)$ 长的数组 $a \ (1 \le a_i \le 10^9)$ 以及某一个区间 $1 \le l \le r \le n$。进行如下操作一次： 选择 $a$ 的某个子序列，将其拿出来反转之后再放回原位。 问 $sum(l, r)$ 最小是多少。 简要题解 注意到如果 $k$ 长的操作序列最小</description>
+    </item>
+    
     <item>
       <title>[CF] C. Closest Cities - Educational Codeforces Round 161 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1922/c/</link>

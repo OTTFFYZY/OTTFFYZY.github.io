@@ -6,7 +6,16 @@
     <description>Recent content in 1300 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 19 Jan 2025 00:20:58 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1300/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Jan 2025 23:14:18 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1300/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Insert and Equalize - Educational Codeforces Round 159 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1902/c/</link>
+      <pubDate>Fri, 24 Jan 2025 23:14:18 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1902/c/</guid>
+      <description>https://codeforces.com/contest/1902/problem/C 题目大意 给出 $n \ (\le 2 \times 10^5)$ 长的数组 $a$ 其中 $-10^9 \le a_i \le 10^9$，且元素不重复。给 $a$ 添加任意其中未出现的元素 $a_{n + 1}$ 后，对于新数组，可以选定某固定 $x$ 后，对数组执行若干次，选定某 $a_i$ 然后 $a_i \gets a_i + x$。问选取最佳的</description>
+    </item>
+    
     <item>
       <title>[CF] C. Closest Cities - Educational Codeforces Round 161 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1922/c/</link>

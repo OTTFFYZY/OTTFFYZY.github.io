@@ -6,7 +6,16 @@
     <description>Recent content in 奇偶性 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 11 Jan 2025 18:16:48 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%A5%87%E5%81%B6%E6%80%A7/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jan 2025 22:13:51 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%A5%87%E5%81%B6%E6%80%A7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] A. Kevin and Arithmetic - IAEPC Preliminary Contest (Codeforces Round 999, Div. 1 &#43; Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2061/a/</link>
+      <pubDate>Mon, 20 Jan 2025 22:13:51 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2061/a/</guid>
+      <description>https://codeforces.com/contest/2061/problem/A 题目大意 给出 $n \ (n \le 100)$ 个数的数组 $a$，其中 $1 \le a_i \le 10^9$。给定 $s = 0$。可以执行以下操作若干次： 从 $a$ 中选一个还没有选过的 $a_i$ 加到 $s$ 上，如果 $s$ 是偶数则得到一分，并且重复除以 $2$ 直到 $s$ 变为奇数。 问最多</description>
+    </item>
+    
     <item>
       <title>[CF] B. Binary Palindromes - Educational Codeforces Round 75 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1251/b/</link>

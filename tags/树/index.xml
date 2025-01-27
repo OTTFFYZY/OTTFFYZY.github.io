@@ -6,7 +6,25 @@
     <description>Recent content in 树 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 18 Jan 2025 23:16:24 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%A0%91/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Jan 2025 00:05:12 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%A0%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Triangle Tree - Codeforces Round 1000 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2063/e/</link>
+      <pubDate>Mon, 27 Jan 2025 00:05:12 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2063/e/</guid>
+      <description>https://codeforces.com/contest/2063/problem/E 题目大意 给出一棵 $n \ (\le 3 \times 10^5)$ 个点的树，根为 $1$，边长全部为 $1$。设 $l = lca(u, v)$，定义 $f(u, v)$ 代表，能和 $dist(u, l)$ 与 $dist(v, l)$ 组成非退化的三角形的第三边的整数值个数。求 $$ \sum_{i = 1}^{n - 1}\sum_{j = i &amp;#43; 1}^{n} f(i, j) $$ 简要题解 首先我们考</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Remove Exactly Two - Codeforces Round 1000 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2063/c/</link>
+      <pubDate>Wed, 22 Jan 2025 22:01:30 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2063/c/</guid>
+      <description>https://codeforces.com/contest/2063/problem/C 题目大意 给出一棵 $n \ (2 \le n \le 2 \times 10^5)$ 个点的树，从中删掉 $2$ 个不同的点，问删完之后最多有多少个联通分量。 简要题解 首先 $n = 2, 3$ 是平凡的，单独处理就好。 其他情况，我们应该尽量删掉两个度最大的节点。但注意要处理</description>
+    </item>
+    
     <item>
       <title>[CF] E. Nested Segments - Codeforces Round 997 (Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/2056/e/</link>

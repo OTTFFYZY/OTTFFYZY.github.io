@@ -6,7 +6,34 @@
     <description>Recent content in Med&#43; on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 18 Jan 2025 23:16:24 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/med+/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Jan 2025 23:52:06 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/med+/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Subtract Min Sort - Codeforces Round 998 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2060/d/</link>
+      <pubDate>Fri, 24 Jan 2025 23:52:06 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2060/d/</guid>
+      <description>https://codeforces.com/contest/2060/problem/D 题目大意 给出 $n \ (2 \le n \le 2 \times 10^5)$ 长的数组 $a$ 其中 $1 \le a_i \le 10^9$。问数组是否可以靠以下操作完成排序。 任选 $i \in [1, n - 1]$，$a_i, a_{i + 1}$ 都减去 $\min(a_i, a_{i + 1})$。 简要题解 这题分不高大概是结论很好猜，但其</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Getting Points - Educational Codeforces Round 159 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1902/b/</link>
+      <pubDate>Fri, 24 Jan 2025 23:39:57 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1902/b/</guid>
+      <description>https://codeforces.com/contest/1902/problem/B 题目大意 有 $n \le 10^{9}$ 天，在第 $1, 8, 15, \cdots$ 天会放出任务，在当天或之后任何天都可以完成这个任务，每天都会有课程。每天可以选择休息，或上课并完成 $0 \sim 2$ 个还未完成的任务。上课获得 $pl \ (\le 10^9)$ 点，完成一个任务获得 $pt \ (\le 10^9)$</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Robot Queries - Educational Codeforces Round 159 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1902/d/</link>
+      <pubDate>Fri, 24 Jan 2025 22:53:40 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1902/d/</guid>
+      <description>https://codeforces.com/contest/1902/problem/D 题目大意 给出某 LRUD 组成的 $n \ (\le 2 \times 10^5)$ 的操作序列 $S$ 以及 $q \ (\le 2 \times 10^5)$ 个询问。询问之间彼此独立。每次问，将原始操作序列 $[l, r]$ 的这一段反转后，整个操作序列以 $(0, 0)$ 为起点会不会通过 $(x, y)$。（$S$ 翻转 $[l, r]$ 之后的序</description>
+    </item>
+    
     <item>
       <title>[CF] E. Nested Segments - Codeforces Round 997 (Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/2056/e/</link>

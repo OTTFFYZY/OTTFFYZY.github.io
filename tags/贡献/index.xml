@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>贡献 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E8%B4%A1%E7%8C%AE/</link>
+    <description>Recent content in 贡献 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 24 Jan 2025 22:45:33 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E8%B4%A1%E7%8C%AE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Collapsing Strings - Educational Codeforces Round 159 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1902/e/</link>
+      <pubDate>Fri, 24 Jan 2025 22:45:33 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1902/e/</guid>
+      <description>https://codeforces.com/contest/1902/problem/E 题目大意 给出 $n \ (\le 10^6)$ 个字符串，且 $\sum |S_i| \le 10^6$。两个串的运算 $C(a, b)$ 规则如下： $a$ 为空则 $C(a, b) = b$ $b$ 为空则 $C(a, b) = a$ 若 $a[|a| - 1] = b[0]$ 即 $a$ 的末尾字符与 $b$ 的开头字符相同则 $C(a, b) = C(a&#39;, b&#39;)$，$a&#39;$ 为 $a$ 去掉尾字符的串</description>
+    </item>
+    
+  </channel>
+</rss>

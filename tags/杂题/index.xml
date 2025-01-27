@@ -6,7 +6,25 @@
     <description>Recent content in 杂题 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 19 Jan 2025 23:41:14 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%9D%82%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Jan 2025 22:53:40 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%9D%82%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Robot Queries - Educational Codeforces Round 159 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1902/d/</link>
+      <pubDate>Fri, 24 Jan 2025 22:53:40 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1902/d/</guid>
+      <description>https://codeforces.com/contest/1902/problem/D 题目大意 给出某 LRUD 组成的 $n \ (\le 2 \times 10^5)$ 的操作序列 $S$ 以及 $q \ (\le 2 \times 10^5)$ 个询问。询问之间彼此独立。每次问，将原始操作序列 $[l, r]$ 的这一段反转后，整个操作序列以 $(0, 0)$ 为起点会不会通过 $(x, y)$。（$S$ 翻转 $[l, r]$ 之后的序</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Kevin and Geometry - IAEPC Preliminary Contest (Codeforces Round 999, Div. 1 &#43; Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2061/b/</link>
+      <pubDate>Mon, 20 Jan 2025 22:33:01 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2061/b/</guid>
+      <description>https://codeforces.com/contest/2061/problem/B 题目大意 给出 $n \ (4 \le n \le 2 \times 10^5)$ 条边（$1 \le a_i \le 10^8$）。问是否存在一种选法可以选出四条边，组成一个等腰梯形。正方形或长方形也可以，但不能退化。 简要题解 可以想象，大概就是要枚举一些东西。 法1 赛时写</description>
+    </item>
+    
     <item>
       <title>[CF] B. Farmer John&#39;s Card Game - Codeforces Round 998 (Div. 3)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/2060/b/</link>

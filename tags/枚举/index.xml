@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>枚举 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E6%9E%9A%E4%B8%BE/</link>
+    <description>Recent content in 枚举 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 27 Jan 2025 01:03:03 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%9E%9A%E4%B8%BE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Pythagorean Triples - Educational Codeforces Round 104 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1487/d/</link>
+      <pubDate>Mon, 27 Jan 2025 01:03:03 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1487/d/</guid>
+      <description>https://codeforces.com/contest/1487/problem/D 题目大意 给出一个上界 $n \ (\le 10^9)$，问有多少正整数三元组 $(a, b, c)$ 满足 $(1 \le a \le b \le c \le n)$， $a^2 + b^2 = c^2$ 且满足 $c = a^2 - b$。 简要题解 由 $a^2 + b^2 = c^2$ 和 $c = a^2 - b$ 都包含 $a^2$ 则我们可以将其约去，易得 $c = b + 1</description>
+    </item>
+    
+  </channel>
+</rss>

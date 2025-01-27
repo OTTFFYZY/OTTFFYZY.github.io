@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>对称性 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E5%AF%B9%E7%A7%B0%E6%80%A7/</link>
+    <description>Recent content in 对称性 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 24 Jan 2025 22:53:40 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%AF%B9%E7%A7%B0%E6%80%A7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Robot Queries - Educational Codeforces Round 159 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1902/d/</link>
+      <pubDate>Fri, 24 Jan 2025 22:53:40 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1902/d/</guid>
+      <description>https://codeforces.com/contest/1902/problem/D 题目大意 给出某 LRUD 组成的 $n \ (\le 2 \times 10^5)$ 的操作序列 $S$ 以及 $q \ (\le 2 \times 10^5)$ 个询问。询问之间彼此独立。每次问，将原始操作序列 $[l, r]$ 的这一段反转后，整个操作序列以 $(0, 0)$ 为起点会不会通过 $(x, y)$。（$S$ 翻转 $[l, r]$ 之后的序</description>
+    </item>
+    
+  </channel>
+</rss>

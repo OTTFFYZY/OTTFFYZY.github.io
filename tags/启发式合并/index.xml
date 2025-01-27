@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>启发式合并 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6/</link>
+    <description>Recent content in 启发式合并 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 27 Jan 2025 00:05:12 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Triangle Tree - Codeforces Round 1000 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2063/e/</link>
+      <pubDate>Mon, 27 Jan 2025 00:05:12 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2063/e/</guid>
+      <description>https://codeforces.com/contest/2063/problem/E 题目大意 给出一棵 $n \ (\le 3 \times 10^5)$ 个点的树，根为 $1$，边长全部为 $1$。设 $l = lca(u, v)$，定义 $f(u, v)$ 代表，能和 $dist(u, l)$ 与 $dist(v, l)$ 组成非退化的三角形的第三边的整数值个数。求 $$ \sum_{i = 1}^{n - 1}\sum_{j = i &amp;#43; 1}^{n} f(i, j) $$ 简要题解 首先我们考</description>
+    </item>
+    
+  </channel>
+</rss>

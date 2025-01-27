@@ -6,7 +6,34 @@
     <description>Recent content in 数论 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 13 Jan 2025 00:48:17 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%95%B0%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Jan 2025 00:58:05 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%95%B0%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Minimum Ties - Educational Codeforces Round 104 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1487/c/</link>
+      <pubDate>Mon, 27 Jan 2025 00:58:05 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1487/c/</guid>
+      <description>https://codeforces.com/contest/1487/problem/C 题目大意 给出 $n \ (\le 100)$ 只球队，两两各打一场比赛，输记 $0$ 分，平局记 $1$ 分，赢记 $3$ 分。已知在 $n (n - 1) / 2$ 场比赛后，所有球队比分相同，请构造出一个方案，使得平局尽量少。 简要题解 假设有 $w$ 个非平局和 $t$ 个平局则。$</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Turtle Tenacity: Continual Mods - Codeforces Round 929 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1933/d/</link>
+      <pubDate>Sat, 25 Jan 2025 00:16:08 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1933/d/</guid>
+      <description>https://codeforces.com/contest/1933/problem/D 题目大意 给出 $n \ (2 \le n \le 10^5)$ 长的数组 $a$ 其中 $1 \le a_i \le 10^9$。 问是否存在某种排列使得 $a_1 \mod a_2 \mod a_3 \cdots \mod a_n \neq 0$。 简要题解 假设 $m = \min(a)$ 容易想到 $x &amp;lt; y$ 时 $x \mod y = x$，则如果数组中的最小数 $m$ 唯一，那么我们按顺序排</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Insert and Equalize - Educational Codeforces Round 159 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1902/c/</link>
+      <pubDate>Fri, 24 Jan 2025 23:14:18 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1902/c/</guid>
+      <description>https://codeforces.com/contest/1902/problem/C 题目大意 给出 $n \ (\le 2 \times 10^5)$ 长的数组 $a$ 其中 $-10^9 \le a_i \le 10^9$，且元素不重复。给 $a$ 添加任意其中未出现的元素 $a_{n + 1}$ 后，对于新数组，可以选定某固定 $x$ 后，对数组执行若干次，选定某 $a_i$ 然后 $a_i \gets a_i + x$。问选取最佳的</description>
+    </item>
+    
     <item>
       <title>[CF] B. You Are Given a Decimal String... - Educational Codeforces Round 70 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1202/b/</link>
