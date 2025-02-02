@@ -6,7 +6,16 @@
     <description>Recent content in 算贡献 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 30 Jul 2024 00:19:04 -0700</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E7%AE%97%E8%B4%A1%E7%8C%AE/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Feb 2025 23:09:28 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E7%AE%97%E8%B4%A1%E7%8C%AE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Almost Difference - Educational Codeforces Round 34 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/903/d/</link>
+      <pubDate>Sat, 01 Feb 2025 23:09:28 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/903/d/</guid>
+      <description>https://codeforces.com/contest/903/problem/D 题目大意 给出 $n \ (\le 2 \times 10^5)$ 长的数组 $a$ 其中 $1 \le a_i \le 10^9$。定义函数 $d$ 如下 $$ d(x, y) = \left\{ \begin{align} y - x, \quad &amp;amp; |x - y| &amp;gt; 1, \\ 0, \quad &amp;amp; |x - y| \le 1 \end{align} \right. $$ 求 $$ \sum_i \sum_{j = i}^{n} d(a[i], a[j]) $$ 简要题解 注意到其实特殊的只有 $a[i] = a[j] \pm 1$ （等于虽然是 case</description>
+    </item>
+    
     <item>
       <title>E. Decode - Codeforces Round 962 (Div. 3)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1996/e/</link>

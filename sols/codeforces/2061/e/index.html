@@ -11,7 +11,7 @@
     </title>
     
     
-    <meta name="description" property="og:description" content="https://codeforces.com/contest/2061/problem/E 题目大意 给出 $n \ (1 \le n \le 10^5)$ 长的数组 $a$ 和 $m \ (1 \le m \le 10)$ 长的数组 $b$。满足 $0 \le a_i, b_i &amp;lt; 2^{30}$。 可以执行以下操作 $k \ (0 \le k \le nm)$ 次： 选取 $a_i$ 和 $b_j$ 将 $a_i$ 变为 $a_i &amp;amp; b_j$。 问执行完这些操作最小的数组和是多少|OTTFF&#39;s Blog">
+    <meta name="description" property="og:description" content="https://codeforces.com/contest/2061/problem/E 题目大意 给出 $n \ (1 \le n \le 10^5)$ 长的数组 $a$ 和 $m \ (1 \le m \le 10)$ 长的数组 $b$。满足 $0 \le a_i, b_i &amp;lt; 2^{30}$。 可以执行以下操作 $k \ (0 \le k \le nm)$ 次： 选取 $a_i$ 和 $b_j$ 将 $a_i$ 变为 $a_i \ \text{&amp;amp;} \ b_j$。 问执行完这些操作最小的数组和是|OTTFF&#39;s Blog">
     
 
     <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
@@ -140,9 +140,9 @@
     
     <div class="float-md-right">
       
-      <span title="Lastmod: 2025-01-21. Published at: 2025-01-20.">
+      <span title="Lastmod: 2025-02-02. Published at: 2025-01-20.">
         
-          Lastmod: 2025-01-21 周二 00:42:59
+          Lastmod: 2025-02-02 周日 01:12:19
         
       </span>
     </div>
@@ -156,7 +156,7 @@
 <h2 id="题目大意">题目大意</h2>
 <p>给出 $n \ (1 \le n \le 10^5)$ 长的数组 $a$ 和 $m \ (1 \le m \le 10)$ 长的数组 $b$。满足 $0 \le a_i, b_i &lt; 2^{30}$。</p>
 <p>可以执行以下操作 $k \ (0 \le k \le nm)$ 次：</p>
-<p>选取 $a_i$ 和 $b_j$ 将 $a_i$ 变为 $a_i &amp; b_j$。</p>
+<p>选取 $a_i$ 和 $b_j$ 将 $a_i$ 变为 $a_i \ \text{&amp;} \ b_j$。</p>
 <p>问执行完这些操作最小的数组和是多少。</p>
 <h2 id="题解">题解</h2>
 <p>我们可以求出每个数 $a_i$ 上执行 $j$ 次操作的最小结果。显然这个结果是单调不增的。易证：我们总可以在选 $j$ 个基础上任意选一个没选过的，由于与的性质，这个结果一定不会增大。所以最优解一定小于等于这个特殊解。</p>

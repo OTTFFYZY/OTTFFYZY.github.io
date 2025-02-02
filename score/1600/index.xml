@@ -6,7 +6,25 @@
     <description>Recent content in 1600 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 16 Jan 2025 00:31:52 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1600/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Jan 2025 23:22:40 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1600/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Min Cost String - Educational Codeforces Round 107 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1511/d/</link>
+      <pubDate>Wed, 29 Jan 2025 23:22:40 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1511/d/</guid>
+      <description>https://codeforces.com/contest/1511/problem/D 题目大意 用少于 $k \ (1 \le k \le 26)$ 的字符集，构造一个 $n \ (\le 2 \times 10^5)$ 长的串。使得 $$ \sum_i \sum_{j = i &amp;#43; 1}^{n - 1} [s[i, i &amp;#43; 1] = s[j, j &amp;#43; 1]] $$ 尽量小。 简要题解 假设原串中每种 $2$ 长字符串 $ab$ 出现频率为 $c_{ab}$ 则题目实际上就是要求 $$ \sum c_{ab} * (c_{ab} - 1) /</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Merge Equals - Educational Codeforces Round 42 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/962/d/</link>
+      <pubDate>Tue, 28 Jan 2025 00:32:08 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/962/d/</guid>
+      <description>https://codeforces.com/contest/962/problem/D 题目大意 给出 $n \ (\le 150,000)$ 长的数组 $a$，其中 $1 \le a_i \le 10^9$。执行如下操作，直到不能进行为止： 找到出现两次以上的所有数中最小的数，然后在这个数当前的所有下标里选择最小的两个 $i$ 和 $j$。将 $a[i]$ 删去 $a[j] \gets a[i] +</description>
+    </item>
+    
     <item>
       <title>[CF] D. Almost Identity Permutations - Educational Codeforces Round 32</title>
       <link>https://ottffyzy.github.io/sols/codeforces/888/d/</link>

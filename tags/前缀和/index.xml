@@ -6,7 +6,25 @@
     <description>Recent content in 前缀和 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 22 Jan 2025 22:07:31 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Jan 2025 00:55:51 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. Switches and Lamps - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/b/</link>
+      <pubDate>Thu, 30 Jan 2025 00:55:51 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/b/</guid>
+      <description>https://codeforces.com/contest/985/problem/B 题目大意 给出 $n$ 个开关和 $m$ 盏灯，和每个开关可以点亮哪些灯的 $n \times m$ 的矩阵。其中 $1 \le n, m \le 2000$。灯被多个开关操作时，如果任意开关可以点亮它，则点亮它。 最初所有灯都是熄灭的。问是否可以去掉某一个开关，</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Pencils and Boxes - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/e/</link>
+      <pubDate>Thu, 30 Jan 2025 00:14:16 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/e/</guid>
+      <description>https://codeforces.com/contest/985/problem/E 题目大意 给出 $n \ (\le 5 \times 10^5)$ 根铅笔，要求放入 $k \ (1 \le k \le n)$ 个盒子。每只铅笔有一个属性 $a_i \ (1 \le a_i \le 10^9)$。 要求盒子要么为空，要么有至少 $k$ 只铅笔，且在同一盒子中的任意一对 $a_i, a_j$ 满足 $|a_i - a_j| \le d$ 其中 $0 \le d \le</description>
+    </item>
+    
     <item>
       <title>[CF] B. Subsequence Update - Codeforces Round 1000 (Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/2063/b/</link>

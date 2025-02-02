@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2025-02 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/archives/2025-02/</link>
+    <description>Recent content in 2025-02 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 01 Feb 2025 23:09:30 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/archives/2025-02/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Swapping Characters - Educational Codeforces Round 34 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/903/e/</link>
+      <pubDate>Sat, 01 Feb 2025 23:09:30 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/903/e/</guid>
+      <description>https://codeforces.com/contest/903/problem/E 题目大意 有某未知长为 $n$ 的串 $s$ 和 $k$ 个由串 $s$ 通过交换两个不同下标字符构成的串 $s_i$。其中 $k \le 2500, nk \le 5000$。输入未必合法。问是否有这样的串 $s$，如果没有输出 $-1$，否则给出任意合法的串。 简要题</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Almost Difference - Educational Codeforces Round 34 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/903/d/</link>
+      <pubDate>Sat, 01 Feb 2025 23:09:28 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/903/d/</guid>
+      <description>https://codeforces.com/contest/903/problem/D 题目大意 给出 $n \ (\le 2 \times 10^5)$ 长的数组 $a$ 其中 $1 \le a_i \le 10^9$。定义函数 $d$ 如下 $$ d(x, y) = \left\{ \begin{align} y - x, \quad &amp;amp; |x - y| &amp;gt; 1, \\ 0, \quad &amp;amp; |x - y| \le 1 \end{align} \right. $$ 求 $$ \sum_i \sum_{j = i}^{n} d(a[i], a[j]) $$ 简要题解 注意到其实特殊的只有 $a[i] = a[j] \pm 1$ （等于虽然是 case</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Boxes Packing - Educational Codeforces Round 34 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/903/c/</link>
+      <pubDate>Sat, 01 Feb 2025 23:09:25 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/903/c/</guid>
+      <description>https://codeforces.com/contest/903/problem/C 题目大意 给出 $n \ (\le 5000)$ 个数的数组 $a$ 其中 $1 \le a_i \le 10^9$。问最少可以把它分成多少个集合，使得每个集合都可以重排成一个严格单调递增的链。 简要题解 显然同样数值的数必然属于不同的链，因此最少不少于最大频率 $</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Slay the Dragon - Educational Codeforces Round 114 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1574/c/</link>
+      <pubDate>Sat, 01 Feb 2025 00:11:08 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1574/c/</guid>
+      <description>https://codeforces.com/contest/1574/problem/C 题目大意 给出 $n \ (2 \le n \le 2 \times 10^5)$ 长的数组 $a$ 其中 $1 \le a_i \le 10^{12}$。 给出 $m \ (\le 2 \times 10^5)$ 个询问，每组询问给出 $x \ (1 \le x \le 10^{12}), y \ (1 \le y \le 10^{18})$，问至少需要多少次给某数 $+1$ 的操作才能使，数组选出</description>
+    </item>
+    
+  </channel>
+</rss>

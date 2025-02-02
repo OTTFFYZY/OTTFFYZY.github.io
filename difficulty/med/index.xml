@@ -6,7 +6,52 @@
     <description>Recent content in Med- on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 27 Jan 2025 00:58:05 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/med/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Feb 2025 23:09:30 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/med/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Swapping Characters - Educational Codeforces Round 34 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/903/e/</link>
+      <pubDate>Sat, 01 Feb 2025 23:09:30 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/903/e/</guid>
+      <description>https://codeforces.com/contest/903/problem/E 题目大意 有某未知长为 $n$ 的串 $s$ 和 $k$ 个由串 $s$ 通过交换两个不同下标字符构成的串 $s_i$。其中 $k \le 2500, nk \le 5000$。输入未必合法。问是否有这样的串 $s$，如果没有输出 $-1$，否则给出任意合法的串。 简要题</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Almost Difference - Educational Codeforces Round 34 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/903/d/</link>
+      <pubDate>Sat, 01 Feb 2025 23:09:28 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/903/d/</guid>
+      <description>https://codeforces.com/contest/903/problem/D 题目大意 给出 $n \ (\le 2 \times 10^5)$ 长的数组 $a$ 其中 $1 \le a_i \le 10^9$。定义函数 $d$ 如下 $$ d(x, y) = \left\{ \begin{align} y - x, \quad &amp;amp; |x - y| &amp;gt; 1, \\ 0, \quad &amp;amp; |x - y| \le 1 \end{align} \right. $$ 求 $$ \sum_i \sum_{j = i}^{n} d(a[i], a[j]) $$ 简要题解 注意到其实特殊的只有 $a[i] = a[j] \pm 1$ （等于虽然是 case</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Sand Fortress - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/d/</link>
+      <pubDate>Thu, 30 Jan 2025 00:36:33 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/d/</guid>
+      <description>https://codeforces.com/contest/985/problem/D 题目大意 输出最小的序列 $h$ 的长度 $l$，满足 $h_i \ge 0$ $h_0 \le H$ $h_{l - 1} = 1$ $\sum h = n$ $|h_i - h_{i - 1}| \le 1$ 其中 $1 \le n, H \le 10^{18}$。 简要题解 因为我们想要序列尽量短，因此我们想每个 $h_i$ 尽量大。如果没有 $h$ 的限制，会是这</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Pencils and Boxes - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/e/</link>
+      <pubDate>Thu, 30 Jan 2025 00:14:16 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/e/</guid>
+      <description>https://codeforces.com/contest/985/problem/E 题目大意 给出 $n \ (\le 5 \times 10^5)$ 根铅笔，要求放入 $k \ (1 \le k \le n)$ 个盒子。每只铅笔有一个属性 $a_i \ (1 \le a_i \le 10^9)$。 要求盒子要么为空，要么有至少 $k$ 只铅笔，且在同一盒子中的任意一对 $a_i, a_j$ 满足 $|a_i - a_j| \le d$ 其中 $0 \le d \le</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Edge Deletion - Educational Codeforces Round 54 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1076/d/</link>
+      <pubDate>Wed, 29 Jan 2025 23:15:36 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1076/d/</guid>
+      <description>https://codeforces.com/contest/1076/problem/D 题目大意 给出 $n \ (2 \le n \le 3 \times 10 ^ 5)$ 个点 $m \ (n - 1 \le m \le 3 \times 10^5)$ 条边的无向连通图。问最多保留 $k \ (0 \le k \le m)$ 条边时，最多可以使多少点的从 $1$ 点出发的最短路长度不变，输出任意最好方案下保留边的集合。 简要题解 显</description>
+    </item>
+    
     <item>
       <title>[CF] C. Minimum Ties - Educational Codeforces Round 104 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1487/c/</link>
@@ -23,6 +68,15 @@
       
       <guid>https://ottffyzy.github.io/sols/codeforces/2063/e/</guid>
       <description>https://codeforces.com/contest/2063/problem/E 题目大意 给出一棵 $n \ (\le 3 \times 10^5)$ 个点的树，根为 $1$，边长全部为 $1$。设 $l = lca(u, v)$，定义 $f(u, v)$ 代表，能和 $dist(u, l)$ 与 $dist(v, l)$ 组成非退化的三角形的第三边的整数值个数。求 $$ \sum_{i = 1}^{n - 1}\sum_{j = i &amp;#43; 1}^{n} f(i, j) $$ 简要题解 首先我们考</description>
+    </item>
+    
+    <item>
+      <title>[CF] F. Isomorphic Strings - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/f/</link>
+      <pubDate>Mon, 27 Jan 2025 00:04:05 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/f/</guid>
+      <description>https://codeforces.com/contest/985/problem/F 题目大意 给出字符串 $n \ (n \le 2 \times 10^5)$ 长的字符串 $S$，和 $m \ *(m \le 2 \times 10^5)$ 个询问。 定义串 $S$ 和 $T$ 是 isomorphic 的，当且仅当，$S$ 和 $T$ 的字符集之间能建立一一映射，使得 $S$ 和 $T$ 可以通过这组一一映射互相转化。 每组询问给出 $i, j,</description>
     </item>
     
     <item>

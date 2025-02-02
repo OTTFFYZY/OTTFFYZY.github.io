@@ -6,7 +6,133 @@
     <description>Recent content in Codeforces on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 27 Jan 2025 01:03:03 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/ojs/codeforces/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Feb 2025 23:09:30 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/ojs/codeforces/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Swapping Characters - Educational Codeforces Round 34 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/903/e/</link>
+      <pubDate>Sat, 01 Feb 2025 23:09:30 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/903/e/</guid>
+      <description>https://codeforces.com/contest/903/problem/E 题目大意 有某未知长为 $n$ 的串 $s$ 和 $k$ 个由串 $s$ 通过交换两个不同下标字符构成的串 $s_i$。其中 $k \le 2500, nk \le 5000$。输入未必合法。问是否有这样的串 $s$，如果没有输出 $-1$，否则给出任意合法的串。 简要题</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Almost Difference - Educational Codeforces Round 34 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/903/d/</link>
+      <pubDate>Sat, 01 Feb 2025 23:09:28 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/903/d/</guid>
+      <description>https://codeforces.com/contest/903/problem/D 题目大意 给出 $n \ (\le 2 \times 10^5)$ 长的数组 $a$ 其中 $1 \le a_i \le 10^9$。定义函数 $d$ 如下 $$ d(x, y) = \left\{ \begin{align} y - x, \quad &amp;amp; |x - y| &amp;gt; 1, \\ 0, \quad &amp;amp; |x - y| \le 1 \end{align} \right. $$ 求 $$ \sum_i \sum_{j = i}^{n} d(a[i], a[j]) $$ 简要题解 注意到其实特殊的只有 $a[i] = a[j] \pm 1$ （等于虽然是 case</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Boxes Packing - Educational Codeforces Round 34 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/903/c/</link>
+      <pubDate>Sat, 01 Feb 2025 23:09:25 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/903/c/</guid>
+      <description>https://codeforces.com/contest/903/problem/C 题目大意 给出 $n \ (\le 5000)$ 个数的数组 $a$ 其中 $1 \le a_i \le 10^9$。问最少可以把它分成多少个集合，使得每个集合都可以重排成一个严格单调递增的链。 简要题解 显然同样数值的数必然属于不同的链，因此最少不少于最大频率 $</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Slay the Dragon - Educational Codeforces Round 114 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1574/c/</link>
+      <pubDate>Sat, 01 Feb 2025 00:11:08 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1574/c/</guid>
+      <description>https://codeforces.com/contest/1574/problem/C 题目大意 给出 $n \ (2 \le n \le 2 \times 10^5)$ 长的数组 $a$ 其中 $1 \le a_i \le 10^{12}$。 给出 $m \ (\le 2 \times 10^5)$ 个询问，每组询问给出 $x \ (1 \le x \le 10^{12}), y \ (1 \le y \le 10^{18})$，问至少需要多少次给某数 $+1$ 的操作才能使，数组选出</description>
+    </item>
+    
+    <item>
+      <title>[CF] A. Chess Placing - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/a/</link>
+      <pubDate>Thu, 30 Jan 2025 01:03:01 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/a/</guid>
+      <description>https://codeforces.com/contest/985/problem/A 题目大意 给出 $1 \times n$ 的棋盘且 $n \ (\le 100)$ 为偶数。棋盘格为黑白相间的。给出 $n / 2$ 个棋子的位置，问最小的移动步数使得棋子都在同色格子中。棋子不能占据同样的格或相互跨越，给出最小的移动步数。 简要题解 因为无论移动</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Switches and Lamps - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/b/</link>
+      <pubDate>Thu, 30 Jan 2025 00:55:51 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/b/</guid>
+      <description>https://codeforces.com/contest/985/problem/B 题目大意 给出 $n$ 个开关和 $m$ 盏灯，和每个开关可以点亮哪些灯的 $n \times m$ 的矩阵。其中 $1 \le n, m \le 2000$。灯被多个开关操作时，如果任意开关可以点亮它，则点亮它。 最初所有灯都是熄灭的。问是否可以去掉某一个开关，</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Sand Fortress - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/d/</link>
+      <pubDate>Thu, 30 Jan 2025 00:36:33 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/d/</guid>
+      <description>https://codeforces.com/contest/985/problem/D 题目大意 输出最小的序列 $h$ 的长度 $l$，满足 $h_i \ge 0$ $h_0 \le H$ $h_{l - 1} = 1$ $\sum h = n$ $|h_i - h_{i - 1}| \le 1$ 其中 $1 \le n, H \le 10^{18}$。 简要题解 因为我们想要序列尽量短，因此我们想每个 $h_i$ 尽量大。如果没有 $h$ 的限制，会是这</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Pencils and Boxes - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/e/</link>
+      <pubDate>Thu, 30 Jan 2025 00:14:16 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/e/</guid>
+      <description>https://codeforces.com/contest/985/problem/E 题目大意 给出 $n \ (\le 5 \times 10^5)$ 根铅笔，要求放入 $k \ (1 \le k \le n)$ 个盒子。每只铅笔有一个属性 $a_i \ (1 \le a_i \le 10^9)$。 要求盒子要么为空，要么有至少 $k$ 只铅笔，且在同一盒子中的任意一对 $a_i, a_j$ 满足 $|a_i - a_j| \le d$ 其中 $0 \le d \le</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Yet Another Card Deck - Educational Codeforces Round 107 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1511/c/</link>
+      <pubDate>Wed, 29 Jan 2025 23:37:58 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1511/c/</guid>
+      <description>https://codeforces.com/contest/1511/problem/C 题目大意 给出 $n \ (2 \le n \le 3 \times 10^5)$ 长的数组 $a$ 其中 $1 \le a_i \le 50$。给出 $q$ 个询问，每次问最左侧的值为 $v_i$（保证一定在数组中）的元素的下标，询问后将其挪到数组最左侧。 简要题解 注意到其实每个数字只有最左侧</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Min Cost String - Educational Codeforces Round 107 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1511/d/</link>
+      <pubDate>Wed, 29 Jan 2025 23:22:40 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1511/d/</guid>
+      <description>https://codeforces.com/contest/1511/problem/D 题目大意 用少于 $k \ (1 \le k \le 26)$ 的字符集，构造一个 $n \ (\le 2 \times 10^5)$ 长的串。使得 $$ \sum_i \sum_{j = i &amp;#43; 1}^{n - 1} [s[i, i &amp;#43; 1] = s[j, j &amp;#43; 1]] $$ 尽量小。 简要题解 假设原串中每种 $2$ 长字符串 $ab$ 出现频率为 $c_{ab}$ 则题目实际上就是要求 $$ \sum c_{ab} * (c_{ab} - 1) /</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Edge Deletion - Educational Codeforces Round 54 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1076/d/</link>
+      <pubDate>Wed, 29 Jan 2025 23:15:36 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1076/d/</guid>
+      <description>https://codeforces.com/contest/1076/problem/D 题目大意 给出 $n \ (2 \le n \le 3 \times 10 ^ 5)$ 个点 $m \ (n - 1 \le m \le 3 \times 10^5)$ 条边的无向连通图。问最多保留 $k \ (0 \le k \le m)$ 条边时，最多可以使多少点的从 $1$ 点出发的最短路长度不变，输出任意最好方案下保留边的集合。 简要题解 显</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Merge Equals - Educational Codeforces Round 42 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/962/d/</link>
+      <pubDate>Tue, 28 Jan 2025 00:32:08 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/962/d/</guid>
+      <description>https://codeforces.com/contest/962/problem/D 题目大意 给出 $n \ (\le 150,000)$ 长的数组 $a$，其中 $1 \le a_i \le 10^9$。执行如下操作，直到不能进行为止： 找到出现两次以上的所有数中最小的数，然后在这个数当前的所有下标里选择最小的两个 $i$ 和 $j$。将 $a[i]$ 删去 $a[j] \gets a[i] +</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Make a Square - Educational Codeforces Round 42 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/962/c/</link>
+      <pubDate>Tue, 28 Jan 2025 00:25:28 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/962/c/</guid>
+      <description>https://codeforces.com/contest/962/problem/C 题目大意 给出数字 $n \ (1 \le n \le 2 \times 10^9)$。问能否从 $n$ 中删掉一些数字得到另一个不含前导零的数字（循序不变），使得新数字是一个平方数。不能输出 $-1$，能则输出最少需要删除的数。 简要题解 这里注意到一</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Students in Railway Carriage - Educational Codeforces Round 42 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/962/b/</link>
+      <pubDate>Mon, 27 Jan 2025 23:33:14 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/962/b/</guid>
+      <description>https://codeforces.com/contest/962/problem/B 题目大意 给出 $n$ 个座位，以及一个 $n$ 长的序列给出每个座位是否可用。有 $a$ 个程序员，$b$ 个运动员。程序员不能相邻，运动员不能相邻，问最多可以让多少个人坐下。其中 $n, a, b \le 2 \times 10^5, a + b &amp;gt; 0$。 简要题解 首先对于</description>
+    </item>
+    
     <item>
       <title>[CF] D. Pythagorean Triples - Educational Codeforces Round 104 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1487/d/</link>
@@ -32,6 +158,15 @@
       
       <guid>https://ottffyzy.github.io/sols/codeforces/2063/e/</guid>
       <description>https://codeforces.com/contest/2063/problem/E 题目大意 给出一棵 $n \ (\le 3 \times 10^5)$ 个点的树，根为 $1$，边长全部为 $1$。设 $l = lca(u, v)$，定义 $f(u, v)$ 代表，能和 $dist(u, l)$ 与 $dist(v, l)$ 组成非退化的三角形的第三边的整数值个数。求 $$ \sum_{i = 1}^{n - 1}\sum_{j = i &amp;#43; 1}^{n} f(i, j) $$ 简要题解 首先我们考</description>
+    </item>
+    
+    <item>
+      <title>[CF] F. Isomorphic Strings - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/f/</link>
+      <pubDate>Mon, 27 Jan 2025 00:04:05 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/f/</guid>
+      <description>https://codeforces.com/contest/985/problem/F 题目大意 给出字符串 $n \ (n \le 2 \times 10^5)$ 长的字符串 $S$，和 $m \ *(m \le 2 \times 10^5)$ 个询问。 定义串 $S$ 和 $T$ 是 isomorphic 的，当且仅当，$S$ 和 $T$ 的字符集之间能建立一一映射，使得 $S$ 和 $T$ 可以通过这组一一映射互相转化。 每组询问给出 $i, j,</description>
     </item>
     
     <item>
@@ -121,7 +256,7 @@
       <pubDate>Mon, 20 Jan 2025 23:47:36 -0800</pubDate>
       
       <guid>https://ottffyzy.github.io/sols/codeforces/2061/e/</guid>
-      <description>https://codeforces.com/contest/2061/problem/E 题目大意 给出 $n \ (1 \le n \le 10^5)$ 长的数组 $a$ 和 $m \ (1 \le m \le 10)$ 长的数组 $b$。满足 $0 \le a_i, b_i &amp;lt; 2^{30}$。 可以执行以下操作 $k \ (0 \le k \le nm)$ 次： 选取 $a_i$ 和 $b_j$ 将 $a_i$ 变为 $a_i &amp;amp; b_j$。 问执行完这些操作最小的数组和是多少</description>
+      <description>https://codeforces.com/contest/2061/problem/E 题目大意 给出 $n \ (1 \le n \le 10^5)$ 长的数组 $a$ 和 $m \ (1 \le m \le 10)$ 长的数组 $b$。满足 $0 \le a_i, b_i &amp;lt; 2^{30}$。 可以执行以下操作 $k \ (0 \le k \le nm)$ 次： 选取 $a_i$ 和 $b_j$ 将 $a_i$ 变为 $a_i \ \text{&amp;amp;} \ b_j$。 问执行完这些操作最小的数组和是</description>
     </item>
     
     <item>
@@ -193,7 +328,7 @@
       <pubDate>Sun, 19 Jan 2025 01:10:09 -0800</pubDate>
       
       <guid>https://ottffyzy.github.io/sols/codeforces/1922/f/</guid>
-      <description>https://codeforces.com/contest/1922/problem/F 题目大意 给出 $n$ 长的数组和颜色数 $x$，满足 $(1 \le x \le n \le 100)$。数组的值 $a_i \ (1 \le a_i \le x)$ 代表每个位置的颜色。你可以执行以下操作若干次： 选取 $1 \le l \le r \le n$ 和 $1 \le k \le x$，满足 $\all l \le i \le r, a[i] \neq k$。将 $[l,</description>
+      <description>https://codeforces.com/contest/1922/problem/F 题目大意 给出 $n$ 长的数组和颜色数 $x$，满足 $(1 \le x \le n \le 100)$。数组的值 $a_i \ (1 \le a_i \le x)$ 代表每个位置的颜色。你可以执行以下操作若干次： 选取 $1 \le l \le r \le n$ 和 $1 \le k \le x$，满足 $\forall \ l \le i \le r, a[i] \neq k$。将</description>
     </item>
     
     <item>

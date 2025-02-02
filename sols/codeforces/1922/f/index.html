@@ -11,7 +11,7 @@
     </title>
     
     
-    <meta name="description" property="og:description" content="https://codeforces.com/contest/1922/problem/F 题目大意 给出 $n$ 长的数组和颜色数 $x$，满足 $(1 \le x \le n \le 100)$。数组的值 $a_i \ (1 \le a_i \le x)$ 代表每个位置的颜色。你可以执行以下操作若干次： 选取 $1 \le l \le r \le n$ 和 $1 \le k \le x$，满足 $\all l \le i \le r, a[i] \neq k$。将 $[l,|OTTFF&#39;s Blog">
+    <meta name="description" property="og:description" content="https://codeforces.com/contest/1922/problem/F 题目大意 给出 $n$ 长的数组和颜色数 $x$，满足 $(1 \le x \le n \le 100)$。数组的值 $a_i \ (1 \le a_i \le x)$ 代表每个位置的颜色。你可以执行以下操作若干次： 选取 $1 \le l \le r \le n$ 和 $1 \le k \le x$，满足 $\forall \ l \le i \le r, a[i] \neq k$。将|OTTFF&#39;s Blog">
     
 
     <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
@@ -148,9 +148,9 @@
     
     <div class="float-md-right">
       
-      <span title="Lastmod: 2025-01-25. Published at: 2025-01-19.">
+      <span title="Lastmod: 2025-02-02. Published at: 2025-01-19.">
         
-          Lastmod: 2025-01-25 周六 00:28:47
+          Lastmod: 2025-02-02 周日 01:15:33
         
       </span>
     </div>
@@ -163,7 +163,7 @@
       <p><a href="https://codeforces.com/contest/1922/problem/F">https://codeforces.com/contest/1922/problem/F</a></p>
 <h2 id="题目大意">题目大意</h2>
 <p>给出 $n$ 长的数组和颜色数 $x$，满足 $(1 \le x \le n \le 100)$。数组的值 $a_i \ (1 \le a_i \le x)$ 代表每个位置的颜色。你可以执行以下操作若干次：</p>
-<p>选取 $1 \le l \le r \le n$ 和 $1 \le k \le x$，满足 $\all l \le i \le r, a[i] \neq k$。将 $[l, r]$ 这一段所有颜色变为 $k$。</p>
+<p>选取 $1 \le l \le r \le n$ 和 $1 \le k \le x$，满足 $\forall \ l \le i \le r, a[i] \neq k$。将 $[l, r]$ 这一段所有颜色变为 $k$。</p>
 <p>问最少多少次操作可以使整个区间 $[1, n]$ 变为相同颜色。</p>
 <h2 id="简要题解">简要题解</h2>
 <p>引理：如果某一段 $[l, r]$ 被涂过了，则我们可以将其当做一个整体。</p>

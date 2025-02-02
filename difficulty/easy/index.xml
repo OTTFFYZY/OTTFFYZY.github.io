@@ -6,7 +6,52 @@
     <description>Recent content in Easy on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 27 Jan 2025 01:03:03 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/easy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Feb 2025 23:09:25 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/easy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Boxes Packing - Educational Codeforces Round 34 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/903/c/</link>
+      <pubDate>Sat, 01 Feb 2025 23:09:25 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/903/c/</guid>
+      <description>https://codeforces.com/contest/903/problem/C 题目大意 给出 $n \ (\le 5000)$ 个数的数组 $a$ 其中 $1 \le a_i \le 10^9$。问最少可以把它分成多少个集合，使得每个集合都可以重排成一个严格单调递增的链。 简要题解 显然同样数值的数必然属于不同的链，因此最少不少于最大频率 $</description>
+    </item>
+    
+    <item>
+      <title>[CF] A. Chess Placing - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/a/</link>
+      <pubDate>Thu, 30 Jan 2025 01:03:01 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/a/</guid>
+      <description>https://codeforces.com/contest/985/problem/A 题目大意 给出 $1 \times n$ 的棋盘且 $n \ (\le 100)$ 为偶数。棋盘格为黑白相间的。给出 $n / 2$ 个棋子的位置，问最小的移动步数使得棋子都在同色格子中。棋子不能占据同样的格或相互跨越，给出最小的移动步数。 简要题解 因为无论移动</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Switches and Lamps - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/b/</link>
+      <pubDate>Thu, 30 Jan 2025 00:55:51 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/b/</guid>
+      <description>https://codeforces.com/contest/985/problem/B 题目大意 给出 $n$ 个开关和 $m$ 盏灯，和每个开关可以点亮哪些灯的 $n \times m$ 的矩阵。其中 $1 \le n, m \le 2000$。灯被多个开关操作时，如果任意开关可以点亮它，则点亮它。 最初所有灯都是熄灭的。问是否可以去掉某一个开关，</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Pencils and Boxes - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/e/</link>
+      <pubDate>Thu, 30 Jan 2025 00:14:16 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/e/</guid>
+      <description>https://codeforces.com/contest/985/problem/E 题目大意 给出 $n \ (\le 5 \times 10^5)$ 根铅笔，要求放入 $k \ (1 \le k \le n)$ 个盒子。每只铅笔有一个属性 $a_i \ (1 \le a_i \le 10^9)$。 要求盒子要么为空，要么有至少 $k$ 只铅笔，且在同一盒子中的任意一对 $a_i, a_j$ 满足 $|a_i - a_j| \le d$ 其中 $0 \le d \le</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Students in Railway Carriage - Educational Codeforces Round 42 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/962/b/</link>
+      <pubDate>Mon, 27 Jan 2025 23:33:14 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/962/b/</guid>
+      <description>https://codeforces.com/contest/962/problem/B 题目大意 给出 $n$ 个座位，以及一个 $n$ 长的序列给出每个座位是否可用。有 $a$ 个程序员，$b$ 个运动员。程序员不能相邻，运动员不能相邻，问最多可以让多少个人坐下。其中 $n, a, b \le 2 \times 10^5, a + b &amp;gt; 0$。 简要题解 首先对于</description>
+    </item>
+    
     <item>
       <title>[CF] D. Pythagorean Triples - Educational Codeforces Round 104 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1487/d/</link>

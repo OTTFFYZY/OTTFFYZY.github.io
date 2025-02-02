@@ -6,18 +6,14 @@
     <description>Recent content in bitset on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 22 Oct 2020 18:03:19 -0400</lastBuildDate>
-    
-	<atom:link href="https://ottffyzy.github.io/tags/bitset/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 30 Jan 2025 00:55:51 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/bitset/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[模板] bitset &amp; 位图</title>
-      <link>https://ottffyzy.github.io/tpls/ds/bitset/</link>
-      <pubDate>Thu, 22 Oct 2020 18:03:19 -0400</pubDate>
+      <title>[CF] B. Switches and Lamps - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/b/</link>
+      <pubDate>Thu, 30 Jan 2025 00:55:51 -0800</pubDate>
       
-      <guid>https://ottffyzy.github.io/tpls/ds/bitset/</guid>
-      <description>std::bitset #include &amp;lt;bitset&amp;gt; bitset&amp;lt;M&amp;gt; bs; bs[i]; // access bs.test(i); // access bs.count(i); // count 1 bs.size(); bs.any(); bs.none(); bs.all(); // cpp11 bs.set(); bs.set(i); // set i-th bit to 1 bs.reset(); bs.reset(i); bs.flip(); bs.flip(i); bs.to_string(); bs.to_ulong(); bs.to_ullong(); // cpp11 cout&amp;lt;&amp;lt;bs&amp;lt;&amp;lt;endl; 手写位图 Bitmap template&amp;lt;size_t M&amp;gt; struct BitMap { typedef unsigned int UI; UI map[M/32+1]; void reset() { memset(map,0,sizeof(map)); } void set() { memset(map,0xff,sizeof(map)); } void set(int i) { map[i&amp;gt;&amp;gt;5]|=1U&amp;lt;&amp;lt;(i&amp;amp;31); } void reset(int i) { map[i&amp;gt;&amp;gt;5]&amp;amp;=~(1U&amp;lt;&amp;lt;(i&amp;amp;31)); } void flip(int i) { map[i&amp;gt;&amp;gt;5]^=1U&amp;lt;&amp;lt;(i&amp;amp;31); } bool test(int i) { return map[i&amp;gt;&amp;gt;5]&amp;amp;(1U&amp;lt;&amp;lt;(i&amp;amp;31)); } };</description>
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/b/</guid>
+      <description>https://codeforces.com/contest/985/problem/B 题目大意 给出 $n$ 个开关和 $m$ 盏灯，和每个开关可以点亮哪些灯的 $n \times m$ 的矩阵。其中 $1 \le n, m \le 2000$。灯被多个开关操作时，如果任意开关可以点亮它，则点亮它。 最初所有灯都是熄灭的。问是否可以去掉某一个开关，</description>
     </item>
     
   </channel>

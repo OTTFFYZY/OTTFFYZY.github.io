@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>欧拉回路 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/</link>
+    <description>Recent content in 欧拉回路 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 29 Jan 2025 23:22:40 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%AC%A7%E6%8B%89%E5%9B%9E%E8%B7%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Min Cost String - Educational Codeforces Round 107 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1511/d/</link>
+      <pubDate>Wed, 29 Jan 2025 23:22:40 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1511/d/</guid>
+      <description>https://codeforces.com/contest/1511/problem/D 题目大意 用少于 $k \ (1 \le k \le 26)$ 的字符集，构造一个 $n \ (\le 2 \times 10^5)$ 长的串。使得 $$ \sum_i \sum_{j = i &amp;#43; 1}^{n - 1} [s[i, i &amp;#43; 1] = s[j, j &amp;#43; 1]] $$ 尽量小。 简要题解 假设原串中每种 $2$ 长字符串 $ab$ 出现频率为 $c_{ab}$ 则题目实际上就是要求 $$ \sum c_{ab} * (c_{ab} - 1) /</description>
+    </item>
+    
+  </channel>
+</rss>

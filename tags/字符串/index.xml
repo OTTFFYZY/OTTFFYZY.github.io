@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>字符串 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+    <description>Recent content in 字符串 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 27 Jan 2025 00:04:05 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] F. Isomorphic Strings - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/f/</link>
+      <pubDate>Mon, 27 Jan 2025 00:04:05 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/f/</guid>
+      <description>https://codeforces.com/contest/985/problem/F 题目大意 给出字符串 $n \ (n \le 2 \times 10^5)$ 长的字符串 $S$，和 $m \ *(m \le 2 \times 10^5)$ 个询问。 定义串 $S$ 和 $T$ 是 isomorphic 的，当且仅当，$S$ 和 $T$ 的字符集之间能建立一一映射，使得 $S$ 和 $T$ 可以通过这组一一映射互相转化。 每组询问给出 $i, j,</description>
+    </item>
+    
+  </channel>
+</rss>

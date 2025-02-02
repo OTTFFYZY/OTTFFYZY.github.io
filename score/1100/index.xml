@@ -6,7 +6,25 @@
     <description>Recent content in 1100 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 24 Jan 2025 23:39:57 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1100/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Jan 2025 01:03:01 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1100/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] A. Chess Placing - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/a/</link>
+      <pubDate>Thu, 30 Jan 2025 01:03:01 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/a/</guid>
+      <description>https://codeforces.com/contest/985/problem/A 题目大意 给出 $1 \times n$ 的棋盘且 $n \ (\le 100)$ 为偶数。棋盘格为黑白相间的。给出 $n / 2$ 个棋子的位置，问最小的移动步数使得棋子都在同色格子中。棋子不能占据同样的格或相互跨越，给出最小的移动步数。 简要题解 因为无论移动</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Yet Another Card Deck - Educational Codeforces Round 107 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1511/c/</link>
+      <pubDate>Wed, 29 Jan 2025 23:37:58 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1511/c/</guid>
+      <description>https://codeforces.com/contest/1511/problem/C 题目大意 给出 $n \ (2 \le n \le 3 \times 10^5)$ 长的数组 $a$ 其中 $1 \le a_i \le 50$。给出 $q$ 个询问，每次问最左侧的值为 $v_i$（保证一定在数组中）的元素的下标，询问后将其挪到数组最左侧。 简要题解 注意到其实每个数字只有最左侧</description>
+    </item>
+    
     <item>
       <title>[CF] B. Getting Points - Educational Codeforces Round 159 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1902/b/</link>

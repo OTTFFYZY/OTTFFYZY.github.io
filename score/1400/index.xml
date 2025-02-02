@@ -6,7 +6,16 @@
     <description>Recent content in 1400 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 16 Jan 2025 00:17:02 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1400/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Jan 2025 00:25:28 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1400/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Make a Square - Educational Codeforces Round 42 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/962/c/</link>
+      <pubDate>Tue, 28 Jan 2025 00:25:28 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/962/c/</guid>
+      <description>https://codeforces.com/contest/962/problem/C 题目大意 给出数字 $n \ (1 \le n \le 2 \times 10^9)$。问能否从 $n$ 中删掉一些数字得到另一个不含前导零的数字（循序不变），使得新数字是一个平方数。不能输出 $-1$，能则输出最少需要删除的数。 简要题解 这里注意到一</description>
+    </item>
+    
     <item>
       <title>[CF] C. K-Dominant Character - Educational Codeforces Round 32</title>
       <link>https://ottffyzy.github.io/sols/codeforces/888/c/</link>

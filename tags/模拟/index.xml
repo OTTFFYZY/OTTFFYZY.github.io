@@ -6,7 +6,43 @@
     <description>Recent content in 模拟 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 05 Jan 2025 11:15:24 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%A8%A1%E6%8B%9F/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Jan 2025 01:03:01 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%A8%A1%E6%8B%9F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] A. Chess Placing - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/a/</link>
+      <pubDate>Thu, 30 Jan 2025 01:03:01 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/a/</guid>
+      <description>https://codeforces.com/contest/985/problem/A 题目大意 给出 $1 \times n$ 的棋盘且 $n \ (\le 100)$ 为偶数。棋盘格为黑白相间的。给出 $n / 2$ 个棋子的位置，问最小的移动步数使得棋子都在同色格子中。棋子不能占据同样的格或相互跨越，给出最小的移动步数。 简要题解 因为无论移动</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Switches and Lamps - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/b/</link>
+      <pubDate>Thu, 30 Jan 2025 00:55:51 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/b/</guid>
+      <description>https://codeforces.com/contest/985/problem/B 题目大意 给出 $n$ 个开关和 $m$ 盏灯，和每个开关可以点亮哪些灯的 $n \times m$ 的矩阵。其中 $1 \le n, m \le 2000$。灯被多个开关操作时，如果任意开关可以点亮它，则点亮它。 最初所有灯都是熄灭的。问是否可以去掉某一个开关，</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Yet Another Card Deck - Educational Codeforces Round 107 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1511/c/</link>
+      <pubDate>Wed, 29 Jan 2025 23:37:58 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1511/c/</guid>
+      <description>https://codeforces.com/contest/1511/problem/C 题目大意 给出 $n \ (2 \le n \le 3 \times 10^5)$ 长的数组 $a$ 其中 $1 \le a_i \le 50$。给出 $q$ 个询问，每次问最左侧的值为 $v_i$（保证一定在数组中）的元素的下标，询问后将其挪到数组最左侧。 简要题解 注意到其实每个数字只有最左侧</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Merge Equals - Educational Codeforces Round 42 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/962/d/</link>
+      <pubDate>Tue, 28 Jan 2025 00:32:08 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/962/d/</guid>
+      <description>https://codeforces.com/contest/962/problem/D 题目大意 给出 $n \ (\le 150,000)$ 长的数组 $a$，其中 $1 \le a_i \le 10^9$。执行如下操作，直到不能进行为止： 找到出现两次以上的所有数中最小的数，然后在这个数当前的所有下标里选择最小的两个 $i$ 和 $j$。将 $a[i]$ 删去 $a[j] \gets a[i] +</description>
+    </item>
+    
     <item>
       <title>B. Counting-out Rhyme - Educational Codeforces Round 18</title>
       <link>https://ottffyzy.github.io/sols/codeforces/792/b/</link>

@@ -6,7 +6,70 @@
     <description>Recent content in 贪心 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 24 Jan 2025 23:52:06 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E8%B4%AA%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Feb 2025 23:09:25 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E8%B4%AA%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Boxes Packing - Educational Codeforces Round 34 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/903/c/</link>
+      <pubDate>Sat, 01 Feb 2025 23:09:25 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/903/c/</guid>
+      <description>https://codeforces.com/contest/903/problem/C 题目大意 给出 $n \ (\le 5000)$ 个数的数组 $a$ 其中 $1 \le a_i \le 10^9$。问最少可以把它分成多少个集合，使得每个集合都可以重排成一个严格单调递增的链。 简要题解 显然同样数值的数必然属于不同的链，因此最少不少于最大频率 $</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Slay the Dragon - Educational Codeforces Round 114 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1574/c/</link>
+      <pubDate>Sat, 01 Feb 2025 00:11:08 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1574/c/</guid>
+      <description>https://codeforces.com/contest/1574/problem/C 题目大意 给出 $n \ (2 \le n \le 2 \times 10^5)$ 长的数组 $a$ 其中 $1 \le a_i \le 10^{12}$。 给出 $m \ (\le 2 \times 10^5)$ 个询问，每组询问给出 $x \ (1 \le x \le 10^{12}), y \ (1 \le y \le 10^{18})$，问至少需要多少次给某数 $+1$ 的操作才能使，数组选出</description>
+    </item>
+    
+    <item>
+      <title>[CF] A. Chess Placing - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/a/</link>
+      <pubDate>Thu, 30 Jan 2025 01:03:01 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/a/</guid>
+      <description>https://codeforces.com/contest/985/problem/A 题目大意 给出 $1 \times n$ 的棋盘且 $n \ (\le 100)$ 为偶数。棋盘格为黑白相间的。给出 $n / 2$ 个棋子的位置，问最小的移动步数使得棋子都在同色格子中。棋子不能占据同样的格或相互跨越，给出最小的移动步数。 简要题解 因为无论移动</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Sand Fortress - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/d/</link>
+      <pubDate>Thu, 30 Jan 2025 00:36:33 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/d/</guid>
+      <description>https://codeforces.com/contest/985/problem/D 题目大意 输出最小的序列 $h$ 的长度 $l$，满足 $h_i \ge 0$ $h_0 \le H$ $h_{l - 1} = 1$ $\sum h = n$ $|h_i - h_{i - 1}| \le 1$ 其中 $1 \le n, H \le 10^{18}$。 简要题解 因为我们想要序列尽量短，因此我们想每个 $h_i$ 尽量大。如果没有 $h$ 的限制，会是这</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Pencils and Boxes - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/e/</link>
+      <pubDate>Thu, 30 Jan 2025 00:14:16 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/e/</guid>
+      <description>https://codeforces.com/contest/985/problem/E 题目大意 给出 $n \ (\le 5 \times 10^5)$ 根铅笔，要求放入 $k \ (1 \le k \le n)$ 个盒子。每只铅笔有一个属性 $a_i \ (1 \le a_i \le 10^9)$。 要求盒子要么为空，要么有至少 $k$ 只铅笔，且在同一盒子中的任意一对 $a_i, a_j$ 满足 $|a_i - a_j| \le d$ 其中 $0 \le d \le</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Min Cost String - Educational Codeforces Round 107 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1511/d/</link>
+      <pubDate>Wed, 29 Jan 2025 23:22:40 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1511/d/</guid>
+      <description>https://codeforces.com/contest/1511/problem/D 题目大意 用少于 $k \ (1 \le k \le 26)$ 的字符集，构造一个 $n \ (\le 2 \times 10^5)$ 长的串。使得 $$ \sum_i \sum_{j = i &amp;#43; 1}^{n - 1} [s[i, i &amp;#43; 1] = s[j, j &amp;#43; 1]] $$ 尽量小。 简要题解 假设原串中每种 $2$ 长字符串 $ab$ 出现频率为 $c_{ab}$ 则题目实际上就是要求 $$ \sum c_{ab} * (c_{ab} - 1) /</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Students in Railway Carriage - Educational Codeforces Round 42 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/962/b/</link>
+      <pubDate>Mon, 27 Jan 2025 23:33:14 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/962/b/</guid>
+      <description>https://codeforces.com/contest/962/problem/B 题目大意 给出 $n$ 个座位，以及一个 $n$ 长的序列给出每个座位是否可用。有 $a$ 个程序员，$b$ 个运动员。程序员不能相邻，运动员不能相邻，问最多可以让多少个人坐下。其中 $n, a, b \le 2 \times 10^5, a + b &amp;gt; 0$。 简要题解 首先对于</description>
+    </item>
+    
     <item>
       <title>[CF] D. Subtract Min Sort - Codeforces Round 998 (Div. 3)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/2060/d/</link>
@@ -67,7 +130,7 @@
       <pubDate>Mon, 20 Jan 2025 23:47:36 -0800</pubDate>
       
       <guid>https://ottffyzy.github.io/sols/codeforces/2061/e/</guid>
-      <description>https://codeforces.com/contest/2061/problem/E 题目大意 给出 $n \ (1 \le n \le 10^5)$ 长的数组 $a$ 和 $m \ (1 \le m \le 10)$ 长的数组 $b$。满足 $0 \le a_i, b_i &amp;lt; 2^{30}$。 可以执行以下操作 $k \ (0 \le k \le nm)$ 次： 选取 $a_i$ 和 $b_j$ 将 $a_i$ 变为 $a_i &amp;amp; b_j$。 问执行完这些操作最小的数组和是多少</description>
+      <description>https://codeforces.com/contest/2061/problem/E 题目大意 给出 $n \ (1 \le n \le 10^5)$ 长的数组 $a$ 和 $m \ (1 \le m \le 10)$ 长的数组 $b$。满足 $0 \le a_i, b_i &amp;lt; 2^{30}$。 可以执行以下操作 $k \ (0 \le k \le nm)$ 次： 选取 $a_i$ 和 $b_j$ 将 $a_i$ 变为 $a_i \ \text{&amp;amp;} \ b_j$。 问执行完这些操作最小的数组和是</description>
     </item>
     
     <item>

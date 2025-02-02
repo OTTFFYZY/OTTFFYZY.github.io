@@ -13,7 +13,7 @@
       <pubDate>Sun, 19 Jan 2025 01:10:09 -0800</pubDate>
       
       <guid>https://ottffyzy.github.io/sols/codeforces/1922/f/</guid>
-      <description>https://codeforces.com/contest/1922/problem/F 题目大意 给出 $n$ 长的数组和颜色数 $x$，满足 $(1 \le x \le n \le 100)$。数组的值 $a_i \ (1 \le a_i \le x)$ 代表每个位置的颜色。你可以执行以下操作若干次： 选取 $1 \le l \le r \le n$ 和 $1 \le k \le x$，满足 $\all l \le i \le r, a[i] \neq k$。将 $[l,</description>
+      <description>https://codeforces.com/contest/1922/problem/F 题目大意 给出 $n$ 长的数组和颜色数 $x$，满足 $(1 \le x \le n \le 100)$。数组的值 $a_i \ (1 \le a_i \le x)$ 代表每个位置的颜色。你可以执行以下操作若干次： 选取 $1 \le l \le r \le n$ 和 $1 \le k \le x$，满足 $\forall \ l \le i \le r, a[i] \neq k$。将</description>
     </item>
     
   </channel>

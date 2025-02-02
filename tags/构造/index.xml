@@ -6,7 +6,25 @@
     <description>Recent content in 构造 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 27 Jan 2025 00:58:05 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%9E%84%E9%80%A0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Feb 2025 23:09:30 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%9E%84%E9%80%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Swapping Characters - Educational Codeforces Round 34 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/903/e/</link>
+      <pubDate>Sat, 01 Feb 2025 23:09:30 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/903/e/</guid>
+      <description>https://codeforces.com/contest/903/problem/E 题目大意 有某未知长为 $n$ 的串 $s$ 和 $k$ 个由串 $s$ 通过交换两个不同下标字符构成的串 $s_i$。其中 $k \le 2500, nk \le 5000$。输入未必合法。问是否有这样的串 $s$，如果没有输出 $-1$，否则给出任意合法的串。 简要题</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Min Cost String - Educational Codeforces Round 107 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1511/d/</link>
+      <pubDate>Wed, 29 Jan 2025 23:22:40 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1511/d/</guid>
+      <description>https://codeforces.com/contest/1511/problem/D 题目大意 用少于 $k \ (1 \le k \le 26)$ 的字符集，构造一个 $n \ (\le 2 \times 10^5)$ 长的串。使得 $$ \sum_i \sum_{j = i &amp;#43; 1}^{n - 1} [s[i, i &amp;#43; 1] = s[j, j &amp;#43; 1]] $$ 尽量小。 简要题解 假设原串中每种 $2$ 长字符串 $ab$ 出现频率为 $c_{ab}$ 则题目实际上就是要求 $$ \sum c_{ab} * (c_{ab} - 1) /</description>
+    </item>
+    
     <item>
       <title>[CF] C. Minimum Ties - Educational Codeforces Round 104 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1487/c/</link>

@@ -6,7 +6,52 @@
     <description>Recent content in Easy&#43; on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 24 Jan 2025 23:39:57 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/easy+/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Feb 2025 00:11:08 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/easy+/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Slay the Dragon - Educational Codeforces Round 114 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1574/c/</link>
+      <pubDate>Sat, 01 Feb 2025 00:11:08 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1574/c/</guid>
+      <description>https://codeforces.com/contest/1574/problem/C 题目大意 给出 $n \ (2 \le n \le 2 \times 10^5)$ 长的数组 $a$ 其中 $1 \le a_i \le 10^{12}$。 给出 $m \ (\le 2 \times 10^5)$ 个询问，每组询问给出 $x \ (1 \le x \le 10^{12}), y \ (1 \le y \le 10^{18})$，问至少需要多少次给某数 $+1$ 的操作才能使，数组选出</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Pencils and Boxes - Educational Codeforces Round 44 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/985/e/</link>
+      <pubDate>Thu, 30 Jan 2025 00:14:16 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/985/e/</guid>
+      <description>https://codeforces.com/contest/985/problem/E 题目大意 给出 $n \ (\le 5 \times 10^5)$ 根铅笔，要求放入 $k \ (1 \le k \le n)$ 个盒子。每只铅笔有一个属性 $a_i \ (1 \le a_i \le 10^9)$。 要求盒子要么为空，要么有至少 $k$ 只铅笔，且在同一盒子中的任意一对 $a_i, a_j$ 满足 $|a_i - a_j| \le d$ 其中 $0 \le d \le</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Yet Another Card Deck - Educational Codeforces Round 107 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1511/c/</link>
+      <pubDate>Wed, 29 Jan 2025 23:37:58 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1511/c/</guid>
+      <description>https://codeforces.com/contest/1511/problem/C 题目大意 给出 $n \ (2 \le n \le 3 \times 10^5)$ 长的数组 $a$ 其中 $1 \le a_i \le 50$。给出 $q$ 个询问，每次问最左侧的值为 $v_i$（保证一定在数组中）的元素的下标，询问后将其挪到数组最左侧。 简要题解 注意到其实每个数字只有最左侧</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Merge Equals - Educational Codeforces Round 42 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/962/d/</link>
+      <pubDate>Tue, 28 Jan 2025 00:32:08 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/962/d/</guid>
+      <description>https://codeforces.com/contest/962/problem/D 题目大意 给出 $n \ (\le 150,000)$ 长的数组 $a$，其中 $1 \le a_i \le 10^9$。执行如下操作，直到不能进行为止： 找到出现两次以上的所有数中最小的数，然后在这个数当前的所有下标里选择最小的两个 $i$ 和 $j$。将 $a[i]$ 删去 $a[j] \gets a[i] +</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Make a Square - Educational Codeforces Round 42 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/962/c/</link>
+      <pubDate>Tue, 28 Jan 2025 00:25:28 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/962/c/</guid>
+      <description>https://codeforces.com/contest/962/problem/C 题目大意 给出数字 $n \ (1 \le n \le 2 \times 10^9)$。问能否从 $n$ 中删掉一些数字得到另一个不含前导零的数字（循序不变），使得新数字是一个平方数。不能输出 $-1$，能则输出最少需要删除的数。 简要题解 这里注意到一</description>
+    </item>
+    
     <item>
       <title>[CF] B. Getting Points - Educational Codeforces Round 159 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1902/b/</link>
