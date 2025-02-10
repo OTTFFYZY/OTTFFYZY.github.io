@@ -6,7 +6,16 @@
     <description>Recent content in 状态压缩dp on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 20 Jan 2025 23:47:36 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9dp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Feb 2025 00:01:31 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9dp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] F. Clear The Matrix - Educational Codeforces Round 34 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/903/f/</link>
+      <pubDate>Tue, 04 Feb 2025 00:01:31 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/903/f/</guid>
+      <description>https://codeforces.com/contest/903/problem/F 题目大意 给出 $4 \times n$ 的矩阵 $f$，其中有 &amp;lsquo;.&amp;rsquo; 和 &amp;lsquo;*&#39;。可以用 $a_i$ 点花费将 $i \times i$ 的某个子矩阵中的 &amp;lsquo;*&amp;rsquo; 全部变为 &amp;lsquo;.&#39;，问将整个矩阵都变为 &amp;lsquo;.&amp;rsquo; 的最小花费。 $4 \le n \le 1000$。 $1 \le a_i \le 1000$ 固定给</description>
+    </item>
+    
     <item>
       <title>[CF] E. Kevin and And - IAEPC Preliminary Contest (Codeforces Round 999, Div. 1 &#43; Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/2061/e/</link>

@@ -6,7 +6,25 @@
     <description>Recent content in 1500 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 27 Jan 2025 01:03:03 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1500/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Feb 2025 01:39:14 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1500/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Good String - Educational Codeforces Round 92 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1389/c/</link>
+      <pubDate>Sun, 09 Feb 2025 01:39:14 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1389/c/</guid>
+      <description>https://codeforces.com/contest/1389/problem/C 题目大意 给出字符串 $S$ 问最少删掉其中多少个字符，可以使得它向左循环移动一位和向右循环移动一位的串相同。 $2 \le |S| \le 2 \times 10^5$ 简要题解 观察： $2$ 长的串一定行 同一个字符的串一定行 两种字符交替的偶数长的串一定行 其实这</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Turtle vs. Rabbit Race: Optimal Trainings - Codeforces Round 929 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1933/e/</link>
+      <pubDate>Thu, 06 Feb 2025 21:58:35 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1933/e/</guid>
+      <description>https://codeforces.com/contest/1933/problem/E 题目大意 给出 $n$ 长的数组 $a$。 对于某个 $u$，如果连续训练 $k$ 次则获得收益为，后面的收益可以为负。 $u + (u - 1) + (u - 2) + \cdots + (u + 1 - k)$。 给出 $q$ 个询问，每次询问给出 $l$ 和 $u$。问最佳的 $r &amp;gt;= l$ 使得 $\sum_{i = l}^{r}</description>
+    </item>
+    
     <item>
       <title>[CF] D. Pythagorean Triples - Educational Codeforces Round 104 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1487/d/</link>

@@ -6,7 +6,34 @@
     <description>Recent content in 前缀和 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 30 Jan 2025 00:55:51 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Feb 2025 01:39:12 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. Array Walk - Educational Codeforces Round 92 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1389/b/</link>
+      <pubDate>Sun, 09 Feb 2025 01:39:12 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1389/b/</guid>
+      <description>https://codeforces.com/contest/1389/problem/B 题目大意 给出 $n$ 长的数组 $a$，可以用下述操作走 $k$ 步，其中最多 $z$ 步向左，问最大可以取到的权值。 每次操作可以进行两种中的一种： 向右走。现在在 $x$ 且 $x &amp;lt; n$，权值增加 $a[x + 1]$ 之后走到 $x + 1$。 向左走。现在在 $x$</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Turtle vs. Rabbit Race: Optimal Trainings - Codeforces Round 929 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1933/e/</link>
+      <pubDate>Thu, 06 Feb 2025 21:58:35 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1933/e/</guid>
+      <description>https://codeforces.com/contest/1933/problem/E 题目大意 给出 $n$ 长的数组 $a$。 对于某个 $u$，如果连续训练 $k$ 次则获得收益为，后面的收益可以为负。 $u + (u - 1) + (u - 2) + \cdots + (u + 1 - k)$。 给出 $q$ 个询问，每次询问给出 $l$ 和 $u$。问最佳的 $r &amp;gt;= l$ 使得 $\sum_{i = l}^{r}</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Alice, Bob, Two Teams - Educational Codeforces Round 9</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/632/b/</link>
+      <pubDate>Mon, 03 Feb 2025 23:39:39 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/632/b/</guid>
+      <description>https://codeforces.com/contest/632/problem/B 题目大意 给出 $n \ (\le 5 \times 10^5)$ 长的权重数组 $p$ 其中 $1 \le p_i \le 10^9$，以及 $n$ 长的只包含 AB 的字符串 $S$。可以最多一次，选择 $S$ 的前缀或后缀（题意这里不是特别清楚），将其中的 AB 互换。最大化 B 对应的权重的和。问最</description>
+    </item>
+    
     <item>
       <title>[CF] B. Switches and Lamps - Educational Codeforces Round 44 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/985/b/</link>

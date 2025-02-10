@@ -6,7 +6,160 @@
     <description>Recent content on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 01 Feb 2025 23:09:30 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Feb 2025 01:39:14 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Good String - Educational Codeforces Round 92 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1389/c/</link>
+      <pubDate>Sun, 09 Feb 2025 01:39:14 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1389/c/</guid>
+      <description>https://codeforces.com/contest/1389/problem/C 题目大意 给出字符串 $S$ 问最少删掉其中多少个字符，可以使得它向左循环移动一位和向右循环移动一位的串相同。 $2 \le |S| \le 2 \times 10^5$ 简要题解 观察： $2$ 长的串一定行 同一个字符的串一定行 两种字符交替的偶数长的串一定行 其实这</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Array Walk - Educational Codeforces Round 92 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1389/b/</link>
+      <pubDate>Sun, 09 Feb 2025 01:39:12 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1389/b/</guid>
+      <description>https://codeforces.com/contest/1389/problem/B 题目大意 给出 $n$ 长的数组 $a$，可以用下述操作走 $k$ 步，其中最多 $z$ 步向左，问最大可以取到的权值。 每次操作可以进行两种中的一种： 向右走。现在在 $x$ 且 $x &amp;lt; n$，权值增加 $a[x + 1]$ 之后走到 $x + 1$。 向左走。现在在 $x$</description>
+    </item>
+    
+    <item>
+      <title>[CF] A. LCM Problem - Educational Codeforces Round 92 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1389/a/</link>
+      <pubDate>Sun, 09 Feb 2025 01:39:11 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1389/a/</guid>
+      <description>https://codeforces.com/contest/1389/problem/A 题目大意 给出 $l, r$ 求任意 $x, y$ 使得 $l \le x &amp;lt; y \le r$，$l \le lcm(x, y) \le r$。无解输出 &amp;lsquo;-1 -1&amp;rsquo;。 $1 \le l &amp;lt; r \le 10^9$。 简要题解 考虑较小的 $x$，$lcm$ 一定比它大，而比他大的最小的 $lcm(x, y) = 2x$。</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. AB-string - Educational Codeforces Round 74 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1238/d/</link>
+      <pubDate>Fri, 07 Feb 2025 23:47:41 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1238/d/</guid>
+      <description>https://codeforces.com/contest/1238/problem/D 题目大意 给出 $n$ 长的只包含 &amp;lsquo;AB&amp;rsquo; 的字符串 $S$。 定义一个字符串是好的：字符串中所有字符都可以是某个（不同字符不用是同一个）长度至少为 $2$ 的回文串的一部分。 问 $S$ 有多少个好的子串。 $|S| \le 3 \times 10^5$。 简要题解 观</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Customer Service - Codeforces Round 1002 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2059/c/</link>
+      <pubDate>Thu, 06 Feb 2025 22:24:32 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2059/c/</guid>
+      <description>https://codeforces.com/contest/2059/problem/C 题目大意 给出 $n$ 个 $n$ 长的数组 $a_i$。进行如下操作 $n$ 轮，在第 $i$ 轮，选择某个 $j$，使得 $a_{j,k} = 0 \ (k \le i)$。即把某选择的行的开始一段小于 $i$ 的元素刷成 $0$。 $n$ 轮进行完之后设 $b_i = \sum a_{i, j}$，则问可以任选</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Cost of the Array - Codeforces Round 1002 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2059/b/</link>
+      <pubDate>Thu, 06 Feb 2025 22:16:09 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2059/b/</guid>
+      <description>https://codeforces.com/contest/2059/problem/B 题目大意 给出 $n$ 长的数组 $a$。给出偶数 $k$，要求将 $a$ 分为连续的 $k$ 个非空子段。将第偶数段（$1$-based）按照原来的顺序链接起来并在结尾追加一个 $1$。定义这个新数组 $b$ 的分值为，最小的下标 $i$ 使得</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Turtle vs. Rabbit Race: Optimal Trainings - Codeforces Round 929 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1933/e/</link>
+      <pubDate>Thu, 06 Feb 2025 21:58:35 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1933/e/</guid>
+      <description>https://codeforces.com/contest/1933/problem/E 题目大意 给出 $n$ 长的数组 $a$。 对于某个 $u$，如果连续训练 $k$ 次则获得收益为，后面的收益可以为负。 $u + (u - 1) + (u - 2) + \cdots + (u + 1 - k)$。 给出 $q$ 个询问，每次询问给出 $l$ 和 $u$。问最佳的 $r &amp;gt;= l$ 使得 $\sum_{i = l}^{r}</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Match Points - Educational Codeforces Round 64 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1156/c/</link>
+      <pubDate>Wed, 05 Feb 2025 22:22:33 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1156/c/</guid>
+      <description>https://codeforces.com/contest/1156/problem/C 题目大意 给出 $n$ 个数的数组 $x$ 以及一个数字 $z$，要求找出 $x$ 中尽量多的不相交的对子，使得每对满足 $|x_i - x_j| \ge z$。 $2 \le n \le 2 \times 10^5$。$1 \le z, x_i \le 10^9$。 简要题解 显然答案是可以二分的。下面就来思考如</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. 0-1-Tree - Educational Codeforces Round 64 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1156/d/</link>
+      <pubDate>Wed, 05 Feb 2025 00:07:07 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1156/d/</guid>
+      <description>https://codeforces.com/contest/1156/problem/D 题目大意 给出一棵 $n$ 个点的树，边上有 $0$ 或 $1$ 的权值。问有多少个 $u$ 到 $v$ 的简单路径（$u \neq v$）满足该路径通过任何边权为 $1$ 的边后不再经过边权为 $0$ 的边。 $2 \le n \le 2 \times 10^5$。 简要题解 如果我们固定了某个根，让</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Special Segments of Permutation - Educational Codeforces Round 64 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1156/e/</link>
+      <pubDate>Tue, 04 Feb 2025 23:56:13 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1156/e/</guid>
+      <description>https://codeforces.com/contest/1156/problem/E 题目大意 给出 $n$ 长的排列 $p$。问其中有多少 $l, r$ 子段满足 $p_l + p_r = \max_{i = l}^{r} p_i$。 $3 \le n \le 2 \times 10^5$。$1 \le p_i \le n$ 且不重复。 简要题解 因为涉及到区间最值，想到笛卡尔树。建出最大值为根的笛卡尔树之后相当</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Ugly Pairs - Educational Codeforces Round 64 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1156/b/</link>
+      <pubDate>Tue, 04 Feb 2025 23:56:11 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1156/b/</guid>
+      <description>https://codeforces.com/contest/1156/problem/B 题目大意 给出小写字母组成的字符串 $S$，要求重排字符串使得相邻位置，不能是字典序相邻的字符。（&amp;lsquo;a&amp;rsquo; 与 &amp;lsquo;z&amp;rsquo; 不相邻）。有解时输出任意合法串，否则输出 &amp;lsquo;No answer&amp;rsquo;。</description>
+    </item>
+    
+    <item>
+      <title>[CF] A. Inscribed Figures - Educational Codeforces Round 64 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1156/a/</link>
+      <pubDate>Tue, 04 Feb 2025 23:55:58 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1156/a/</guid>
+      <description>https://codeforces.com/contest/1156/problem/A 题目大意 给出 $n$ 个图形的序列 $a$。图形依次向里内接。 1 代表圆形 2 代表底和高相等的等腰三角形，并且底平行于 $x$ 轴，高位于底的 $y$ 轴正方向 3 代表正方形，四边平行于坐标轴 保证序列里相邻图形不会相同，问图形间的</description>
+    </item>
+    
+    <item>
+      <title>[CF] F. Clear The Matrix - Educational Codeforces Round 34 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/903/f/</link>
+      <pubDate>Tue, 04 Feb 2025 00:01:31 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/903/f/</guid>
+      <description>https://codeforces.com/contest/903/problem/F 题目大意 给出 $4 \times n$ 的矩阵 $f$，其中有 &amp;lsquo;.&amp;rsquo; 和 &amp;lsquo;*&#39;。可以用 $a_i$ 点花费将 $i \times i$ 的某个子矩阵中的 &amp;lsquo;*&amp;rsquo; 全部变为 &amp;lsquo;.&#39;，问将整个矩阵都变为 &amp;lsquo;.&amp;rsquo; 的最小花费。 $4 \le n \le 1000$。 $1 \le a_i \le 1000$ 固定给</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. The Modcrab - Educational Codeforces Round 34 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/903/b/</link>
+      <pubDate>Mon, 03 Feb 2025 23:45:49 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/903/b/</guid>
+      <description>https://codeforces.com/contest/903/problem/B 题目大意 一个回合制游戏，主角血量是 $h_1$ 攻击力 $a_1$ 有无限多的药，每次可以恢复 $c_1$ 的血量（恢复可以超出 $h_1$）。有怪物血量 $h_2$ 攻击力 $a_2$。每个回合： 主角选择攻击或恢复，攻击则 $h_2$ 减少 $a_1$ 否则 $h_1$ 增加 $c_1</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Alice, Bob, Two Teams - Educational Codeforces Round 9</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/632/b/</link>
+      <pubDate>Mon, 03 Feb 2025 23:39:39 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/632/b/</guid>
+      <description>https://codeforces.com/contest/632/problem/B 题目大意 给出 $n \ (\le 5 \times 10^5)$ 长的权重数组 $p$ 其中 $1 \le p_i \le 10^9$，以及 $n$ 长的只包含 AB 的字符串 $S$。可以最多一次，选择 $S$ 的前缀或后缀（题意这里不是特别清楚），将其中的 AB 互换。最大化 B 对应的权重的和。问最</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Cat Cycle - Educational Codeforces Round 104 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1487/b/</link>
+      <pubDate>Sun, 02 Feb 2025 20:27:42 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1487/b/</guid>
+      <description>https://codeforces.com/contest/1487/problem/B 题目大意 有 $n$ 个格子组成一个环，顺时针依次标号为 $1 \sim n$。猫 $A$ 最初在 $n$ 号格，它每单位时间后逆时针移动一个格，猫 $B$ 最初（$1$ 时刻）在 $1$ 号格，每单位时间后顺时针移动一个格。如果某时刻 $A$ 和 $B$ 移动到同一个格</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Cheap Dinner - Educational Codeforces Round 104 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1487/e/</link>
+      <pubDate>Sun, 02 Feb 2025 20:27:40 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1487/e/</guid>
+      <description>https://codeforces.com/contest/1487/problem/E 题目大意 给出 $4$ 个数组分别长 $n_i$。要求各从中选取一个元素，使得选出的和最小，问这个最小和是多少。有一些第 $1, 2$ 数组之间，$2, 3$ 数组 $3, 4$ 数组之间的下标的组是互斥的，各有 $m_i$ 个，互斥的下标不能同时选。</description>
+    </item>
+    
     <item>
       <title>[CF] E. Swapping Characters - Educational Codeforces Round 34 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/903/e/</link>

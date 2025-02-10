@@ -6,7 +6,34 @@
     <description>Recent content in 构造 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 01 Feb 2025 23:09:30 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%9E%84%E9%80%A0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Feb 2025 22:24:32 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%9E%84%E9%80%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Customer Service - Codeforces Round 1002 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2059/c/</link>
+      <pubDate>Thu, 06 Feb 2025 22:24:32 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2059/c/</guid>
+      <description>https://codeforces.com/contest/2059/problem/C 题目大意 给出 $n$ 个 $n$ 长的数组 $a_i$。进行如下操作 $n$ 轮，在第 $i$ 轮，选择某个 $j$，使得 $a_{j,k} = 0 \ (k \le i)$。即把某选择的行的开始一段小于 $i$ 的元素刷成 $0$。 $n$ 轮进行完之后设 $b_i = \sum a_{i, j}$，则问可以任选</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Cost of the Array - Codeforces Round 1002 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2059/b/</link>
+      <pubDate>Thu, 06 Feb 2025 22:16:09 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2059/b/</guid>
+      <description>https://codeforces.com/contest/2059/problem/B 题目大意 给出 $n$ 长的数组 $a$。给出偶数 $k$，要求将 $a$ 分为连续的 $k$ 个非空子段。将第偶数段（$1$-based）按照原来的顺序链接起来并在结尾追加一个 $1$。定义这个新数组 $b$ 的分值为，最小的下标 $i$ 使得</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Ugly Pairs - Educational Codeforces Round 64 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1156/b/</link>
+      <pubDate>Tue, 04 Feb 2025 23:56:11 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1156/b/</guid>
+      <description>https://codeforces.com/contest/1156/problem/B 题目大意 给出小写字母组成的字符串 $S$，要求重排字符串使得相邻位置，不能是字典序相邻的字符。（&amp;lsquo;a&amp;rsquo; 与 &amp;lsquo;z&amp;rsquo; 不相邻）。有解时输出任意合法串，否则输出 &amp;lsquo;No answer&amp;rsquo;。</description>
+    </item>
+    
     <item>
       <title>[CF] E. Swapping Characters - Educational Codeforces Round 34 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/903/e/</link>

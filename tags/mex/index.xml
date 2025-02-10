@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MEX on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/mex/</link>
+    <description>Recent content in MEX on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 06 Feb 2025 22:24:32 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/mex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Customer Service - Codeforces Round 1002 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2059/c/</link>
+      <pubDate>Thu, 06 Feb 2025 22:24:32 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2059/c/</guid>
+      <description>https://codeforces.com/contest/2059/problem/C 题目大意 给出 $n$ 个 $n$ 长的数组 $a_i$。进行如下操作 $n$ 轮，在第 $i$ 轮，选择某个 $j$，使得 $a_{j,k} = 0 \ (k \le i)$。即把某选择的行的开始一段小于 $i$ 的元素刷成 $0$。 $n$ 轮进行完之后设 $b_i = \sum a_{i, j}$，则问可以任选</description>
+    </item>
+    
+  </channel>
+</rss>

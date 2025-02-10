@@ -6,7 +6,16 @@
     <description>Recent content in 1800 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 29 Jan 2025 23:15:36 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1800/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Feb 2025 23:56:11 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1800/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. Ugly Pairs - Educational Codeforces Round 64 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1156/b/</link>
+      <pubDate>Tue, 04 Feb 2025 23:56:11 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1156/b/</guid>
+      <description>https://codeforces.com/contest/1156/problem/B 题目大意 给出小写字母组成的字符串 $S$，要求重排字符串使得相邻位置，不能是字典序相邻的字符。（&amp;lsquo;a&amp;rsquo; 与 &amp;lsquo;z&amp;rsquo; 不相邻）。有解时输出任意合法串，否则输出 &amp;lsquo;No answer&amp;rsquo;。</description>
+    </item>
+    
     <item>
       <title>[CF] D. Edge Deletion - Educational Codeforces Round 54 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1076/d/</link>

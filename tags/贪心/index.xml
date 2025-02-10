@@ -6,7 +6,61 @@
     <description>Recent content in 贪心 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 01 Feb 2025 23:09:25 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E8%B4%AA%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Feb 2025 01:39:12 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E8%B4%AA%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. Array Walk - Educational Codeforces Round 92 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1389/b/</link>
+      <pubDate>Sun, 09 Feb 2025 01:39:12 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1389/b/</guid>
+      <description>https://codeforces.com/contest/1389/problem/B 题目大意 给出 $n$ 长的数组 $a$，可以用下述操作走 $k$ 步，其中最多 $z$ 步向左，问最大可以取到的权值。 每次操作可以进行两种中的一种： 向右走。现在在 $x$ 且 $x &amp;lt; n$，权值增加 $a[x + 1]$ 之后走到 $x + 1$。 向左走。现在在 $x$</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Customer Service - Codeforces Round 1002 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2059/c/</link>
+      <pubDate>Thu, 06 Feb 2025 22:24:32 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2059/c/</guid>
+      <description>https://codeforces.com/contest/2059/problem/C 题目大意 给出 $n$ 个 $n$ 长的数组 $a_i$。进行如下操作 $n$ 轮，在第 $i$ 轮，选择某个 $j$，使得 $a_{j,k} = 0 \ (k \le i)$。即把某选择的行的开始一段小于 $i$ 的元素刷成 $0$。 $n$ 轮进行完之后设 $b_i = \sum a_{i, j}$，则问可以任选</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Cost of the Array - Codeforces Round 1002 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2059/b/</link>
+      <pubDate>Thu, 06 Feb 2025 22:16:09 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2059/b/</guid>
+      <description>https://codeforces.com/contest/2059/problem/B 题目大意 给出 $n$ 长的数组 $a$。给出偶数 $k$，要求将 $a$ 分为连续的 $k$ 个非空子段。将第偶数段（$1$-based）按照原来的顺序链接起来并在结尾追加一个 $1$。定义这个新数组 $b$ 的分值为，最小的下标 $i$ 使得</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Match Points - Educational Codeforces Round 64 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1156/c/</link>
+      <pubDate>Wed, 05 Feb 2025 22:22:33 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1156/c/</guid>
+      <description>https://codeforces.com/contest/1156/problem/C 题目大意 给出 $n$ 个数的数组 $x$ 以及一个数字 $z$，要求找出 $x$ 中尽量多的不相交的对子，使得每对满足 $|x_i - x_j| \ge z$。 $2 \le n \le 2 \times 10^5$。$1 \le z, x_i \le 10^9$。 简要题解 显然答案是可以二分的。下面就来思考如</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. The Modcrab - Educational Codeforces Round 34 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/903/b/</link>
+      <pubDate>Mon, 03 Feb 2025 23:45:49 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/903/b/</guid>
+      <description>https://codeforces.com/contest/903/problem/B 题目大意 一个回合制游戏，主角血量是 $h_1$ 攻击力 $a_1$ 有无限多的药，每次可以恢复 $c_1$ 的血量（恢复可以超出 $h_1$）。有怪物血量 $h_2$ 攻击力 $a_2$。每个回合： 主角选择攻击或恢复，攻击则 $h_2$ 减少 $a_1$ 否则 $h_1$ 增加 $c_1</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Cheap Dinner - Educational Codeforces Round 104 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1487/e/</link>
+      <pubDate>Sun, 02 Feb 2025 20:27:40 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1487/e/</guid>
+      <description>https://codeforces.com/contest/1487/problem/E 题目大意 给出 $4$ 个数组分别长 $n_i$。要求各从中选取一个元素，使得选出的和最小，问这个最小和是多少。有一些第 $1, 2$ 数组之间，$2, 3$ 数组 $3, 4$ 数组之间的下标的组是互斥的，各有 $m_i$ 个，互斥的下标不能同时选。</description>
+    </item>
+    
     <item>
       <title>[CF] C. Boxes Packing - Educational Codeforces Round 34 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/903/c/</link>

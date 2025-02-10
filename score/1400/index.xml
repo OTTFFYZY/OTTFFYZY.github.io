@@ -6,7 +6,25 @@
     <description>Recent content in 1400 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 28 Jan 2025 00:25:28 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1400/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Feb 2025 23:55:58 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1400/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] A. Inscribed Figures - Educational Codeforces Round 64 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1156/a/</link>
+      <pubDate>Tue, 04 Feb 2025 23:55:58 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1156/a/</guid>
+      <description>https://codeforces.com/contest/1156/problem/A 题目大意 给出 $n$ 个图形的序列 $a$。图形依次向里内接。 1 代表圆形 2 代表底和高相等的等腰三角形，并且底平行于 $x$ 轴，高位于底的 $y$ 轴正方向 3 代表正方形，四边平行于坐标轴 保证序列里相邻图形不会相同，问图形间的</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Alice, Bob, Two Teams - Educational Codeforces Round 9</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/632/b/</link>
+      <pubDate>Mon, 03 Feb 2025 23:39:39 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/632/b/</guid>
+      <description>https://codeforces.com/contest/632/problem/B 题目大意 给出 $n \ (\le 5 \times 10^5)$ 长的权重数组 $p$ 其中 $1 \le p_i \le 10^9$，以及 $n$ 长的只包含 AB 的字符串 $S$。可以最多一次，选择 $S$ 的前缀或后缀（题意这里不是特别清楚），将其中的 AB 互换。最大化 B 对应的权重的和。问最</description>
+    </item>
+    
     <item>
       <title>[CF] C. Make a Square - Educational Codeforces Round 42 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/962/c/</link>

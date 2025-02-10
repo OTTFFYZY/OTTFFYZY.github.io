@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>笛卡尔树 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E7%AC%9B%E5%8D%A1%E5%B0%94%E6%A0%91/</link>
+    <description>Recent content in 笛卡尔树 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 04 Feb 2025 23:56:13 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E7%AC%9B%E5%8D%A1%E5%B0%94%E6%A0%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Special Segments of Permutation - Educational Codeforces Round 64 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1156/e/</link>
+      <pubDate>Tue, 04 Feb 2025 23:56:13 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1156/e/</guid>
+      <description>https://codeforces.com/contest/1156/problem/E 题目大意 给出 $n$ 长的排列 $p$。问其中有多少 $l, r$ 子段满足 $p_l + p_r = \max_{i = l}^{r} p_i$。 $3 \le n \le 2 \times 10^5$。$1 \le p_i \le n$ 且不重复。 简要题解 因为涉及到区间最值，想到笛卡尔树。建出最大值为根的笛卡尔树之后相当</description>
+    </item>
+    
+  </channel>
+</rss>

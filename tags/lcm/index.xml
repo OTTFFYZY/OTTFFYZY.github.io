@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LCM on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/lcm/</link>
+    <description>Recent content in LCM on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 09 Feb 2025 01:39:11 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/lcm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] A. LCM Problem - Educational Codeforces Round 92 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1389/a/</link>
+      <pubDate>Sun, 09 Feb 2025 01:39:11 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1389/a/</guid>
+      <description>https://codeforces.com/contest/1389/problem/A 题目大意 给出 $l, r$ 求任意 $x, y$ 使得 $l \le x &amp;lt; y \le r$，$l \le lcm(x, y) \le r$。无解输出 &amp;lsquo;-1 -1&amp;rsquo;。 $1 \le l &amp;lt; r \le 10^9$。 简要题解 考虑较小的 $x$，$lcm$ 一定比它大，而比他大的最小的 $lcm(x, y) = 2x$。</description>
+    </item>
+    
+  </channel>
+</rss>

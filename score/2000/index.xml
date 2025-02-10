@@ -6,7 +6,25 @@
     <description>Recent content in 2000 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 06 Jan 2025 21:03:13 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/2000/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Feb 2025 22:22:33 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/2000/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Match Points - Educational Codeforces Round 64 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1156/c/</link>
+      <pubDate>Wed, 05 Feb 2025 22:22:33 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1156/c/</guid>
+      <description>https://codeforces.com/contest/1156/problem/C 题目大意 给出 $n$ 个数的数组 $x$ 以及一个数字 $z$，要求找出 $x$ 中尽量多的不相交的对子，使得每对满足 $|x_i - x_j| \ge z$。 $2 \le n \le 2 \times 10^5$。$1 \le z, x_i \le 10^9$。 简要题解 显然答案是可以二分的。下面就来思考如</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Cheap Dinner - Educational Codeforces Round 104 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1487/e/</link>
+      <pubDate>Sun, 02 Feb 2025 20:27:40 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1487/e/</guid>
+      <description>https://codeforces.com/contest/1487/problem/E 题目大意 给出 $4$ 个数组分别长 $n_i$。要求各从中选取一个元素，使得选出的和最小，问这个最小和是多少。有一些第 $1, 2$ 数组之间，$2, 3$ 数组 $3, 4$ 数组之间的下标的组是互斥的，各有 $m_i$ 个，互斥的下标不能同时选。</description>
+    </item>
+    
     <item>
       <title>E. Array Queries - Educational Codeforces Round 19</title>
       <link>https://ottffyzy.github.io/sols/codeforces/797/e/</link>

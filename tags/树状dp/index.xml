@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>树状dp on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E6%A0%91%E7%8A%B6dp/</link>
+    <description>Recent content in 树状dp on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 05 Feb 2025 00:07:07 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%A0%91%E7%8A%B6dp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. 0-1-Tree - Educational Codeforces Round 64 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1156/d/</link>
+      <pubDate>Wed, 05 Feb 2025 00:07:07 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1156/d/</guid>
+      <description>https://codeforces.com/contest/1156/problem/D 题目大意 给出一棵 $n$ 个点的树，边上有 $0$ 或 $1$ 的权值。问有多少个 $u$ 到 $v$ 的简单路径（$u \neq v$）满足该路径通过任何边权为 $1$ 的边后不再经过边权为 $0$ 的边。 $2 \le n \le 2 \times 10^5$。 简要题解 如果我们固定了某个根，让</description>
+    </item>
+    
+  </channel>
+</rss>

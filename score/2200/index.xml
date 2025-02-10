@@ -6,7 +6,34 @@
     <description>Recent content in 2200 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 01 Feb 2025 23:09:30 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/2200/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Feb 2025 00:07:07 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/2200/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. 0-1-Tree - Educational Codeforces Round 64 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1156/d/</link>
+      <pubDate>Wed, 05 Feb 2025 00:07:07 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1156/d/</guid>
+      <description>https://codeforces.com/contest/1156/problem/D 题目大意 给出一棵 $n$ 个点的树，边上有 $0$ 或 $1$ 的权值。问有多少个 $u$ 到 $v$ 的简单路径（$u \neq v$）满足该路径通过任何边权为 $1$ 的边后不再经过边权为 $0$ 的边。 $2 \le n \le 2 \times 10^5$。 简要题解 如果我们固定了某个根，让</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Special Segments of Permutation - Educational Codeforces Round 64 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1156/e/</link>
+      <pubDate>Tue, 04 Feb 2025 23:56:13 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1156/e/</guid>
+      <description>https://codeforces.com/contest/1156/problem/E 题目大意 给出 $n$ 长的排列 $p$。问其中有多少 $l, r$ 子段满足 $p_l + p_r = \max_{i = l}^{r} p_i$。 $3 \le n \le 2 \times 10^5$。$1 \le p_i \le n$ 且不重复。 简要题解 因为涉及到区间最值，想到笛卡尔树。建出最大值为根的笛卡尔树之后相当</description>
+    </item>
+    
+    <item>
+      <title>[CF] F. Clear The Matrix - Educational Codeforces Round 34 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/903/f/</link>
+      <pubDate>Tue, 04 Feb 2025 00:01:31 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/903/f/</guid>
+      <description>https://codeforces.com/contest/903/problem/F 题目大意 给出 $4 \times n$ 的矩阵 $f$，其中有 &amp;lsquo;.&amp;rsquo; 和 &amp;lsquo;*&#39;。可以用 $a_i$ 点花费将 $i \times i$ 的某个子矩阵中的 &amp;lsquo;*&amp;rsquo; 全部变为 &amp;lsquo;.&#39;，问将整个矩阵都变为 &amp;lsquo;.&amp;rsquo; 的最小花费。 $4 \le n \le 1000$。 $1 \le a_i \le 1000$ 固定给</description>
+    </item>
+    
     <item>
       <title>[CF] E. Swapping Characters - Educational Codeforces Round 34 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/903/e/</link>

@@ -6,7 +6,25 @@
     <description>Recent content in 二分 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 01 Feb 2025 00:11:08 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E4%BA%8C%E5%88%86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Feb 2025 21:58:35 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E4%BA%8C%E5%88%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Turtle vs. Rabbit Race: Optimal Trainings - Codeforces Round 929 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1933/e/</link>
+      <pubDate>Thu, 06 Feb 2025 21:58:35 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1933/e/</guid>
+      <description>https://codeforces.com/contest/1933/problem/E 题目大意 给出 $n$ 长的数组 $a$。 对于某个 $u$，如果连续训练 $k$ 次则获得收益为，后面的收益可以为负。 $u + (u - 1) + (u - 2) + \cdots + (u + 1 - k)$。 给出 $q$ 个询问，每次询问给出 $l$ 和 $u$。问最佳的 $r &amp;gt;= l$ 使得 $\sum_{i = l}^{r}</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Match Points - Educational Codeforces Round 64 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1156/c/</link>
+      <pubDate>Wed, 05 Feb 2025 22:22:33 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1156/c/</guid>
+      <description>https://codeforces.com/contest/1156/problem/C 题目大意 给出 $n$ 个数的数组 $x$ 以及一个数字 $z$，要求找出 $x$ 中尽量多的不相交的对子，使得每对满足 $|x_i - x_j| \ge z$。 $2 \le n \le 2 \times 10^5$。$1 \le z, x_i \le 10^9$。 简要题解 显然答案是可以二分的。下面就来思考如</description>
+    </item>
+    
     <item>
       <title>[CF] C. Slay the Dragon - Educational Codeforces Round 114 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1574/c/</link>

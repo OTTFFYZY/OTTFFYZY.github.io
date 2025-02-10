@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>鸽巢原理 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E9%B8%BD%E5%B7%A2%E5%8E%9F%E7%90%86/</link>
+    <description>Recent content in 鸽巢原理 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 02 Feb 2025 20:27:40 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E9%B8%BD%E5%B7%A2%E5%8E%9F%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Cheap Dinner - Educational Codeforces Round 104 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1487/e/</link>
+      <pubDate>Sun, 02 Feb 2025 20:27:40 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1487/e/</guid>
+      <description>https://codeforces.com/contest/1487/problem/E 题目大意 给出 $4$ 个数组分别长 $n_i$。要求各从中选取一个元素，使得选出的和最小，问这个最小和是多少。有一些第 $1, 2$ 数组之间，$2, 3$ 数组 $3, 4$ 数组之间的下标的组是互斥的，各有 $m_i$ 个，互斥的下标不能同时选。</description>
+    </item>
+    
+  </channel>
+</rss>

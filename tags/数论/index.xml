@@ -6,7 +6,25 @@
     <description>Recent content in 数论 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 27 Jan 2025 00:58:05 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%95%B0%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Feb 2025 01:39:11 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%95%B0%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] A. LCM Problem - Educational Codeforces Round 92 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1389/a/</link>
+      <pubDate>Sun, 09 Feb 2025 01:39:11 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1389/a/</guid>
+      <description>https://codeforces.com/contest/1389/problem/A 题目大意 给出 $l, r$ 求任意 $x, y$ 使得 $l \le x &amp;lt; y \le r$，$l \le lcm(x, y) \le r$。无解输出 &amp;lsquo;-1 -1&amp;rsquo;。 $1 \le l &amp;lt; r \le 10^9$。 简要题解 考虑较小的 $x$，$lcm$ 一定比它大，而比他大的最小的 $lcm(x, y) = 2x$。</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Cat Cycle - Educational Codeforces Round 104 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1487/b/</link>
+      <pubDate>Sun, 02 Feb 2025 20:27:42 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1487/b/</guid>
+      <description>https://codeforces.com/contest/1487/problem/B 题目大意 有 $n$ 个格子组成一个环，顺时针依次标号为 $1 \sim n$。猫 $A$ 最初在 $n$ 号格，它每单位时间后逆时针移动一个格，猫 $B$ 最初（$1$ 时刻）在 $1$ 号格，每单位时间后顺时针移动一个格。如果某时刻 $A$ 和 $B$ 移动到同一个格</description>
+    </item>
+    
     <item>
       <title>[CF] C. Minimum Ties - Educational Codeforces Round 104 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1487/c/</link>

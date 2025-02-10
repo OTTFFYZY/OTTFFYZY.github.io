@@ -6,7 +6,25 @@
     <description>Recent content in 杂题 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 24 Jan 2025 22:53:40 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%9D%82%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Feb 2025 23:47:41 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%9D%82%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. AB-string - Educational Codeforces Round 74 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1238/d/</link>
+      <pubDate>Fri, 07 Feb 2025 23:47:41 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1238/d/</guid>
+      <description>https://codeforces.com/contest/1238/problem/D 题目大意 给出 $n$ 长的只包含 &amp;lsquo;AB&amp;rsquo; 的字符串 $S$。 定义一个字符串是好的：字符串中所有字符都可以是某个（不同字符不用是同一个）长度至少为 $2$ 的回文串的一部分。 问 $S$ 有多少个好的子串。 $|S| \le 3 \times 10^5$。 简要题解 观</description>
+    </item>
+    
+    <item>
+      <title>[CF] A. Inscribed Figures - Educational Codeforces Round 64 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1156/a/</link>
+      <pubDate>Tue, 04 Feb 2025 23:55:58 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1156/a/</guid>
+      <description>https://codeforces.com/contest/1156/problem/A 题目大意 给出 $n$ 个图形的序列 $a$。图形依次向里内接。 1 代表圆形 2 代表底和高相等的等腰三角形，并且底平行于 $x$ 轴，高位于底的 $y$ 轴正方向 3 代表正方形，四边平行于坐标轴 保证序列里相邻图形不会相同，问图形间的</description>
+    </item>
+    
     <item>
       <title>[CF] D. Robot Queries - Educational Codeforces Round 159 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1902/d/</link>

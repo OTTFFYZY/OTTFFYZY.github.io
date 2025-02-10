@@ -6,7 +6,16 @@
     <description>Recent content in 1600 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 29 Jan 2025 23:22:40 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1600/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Feb 2025 01:39:12 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1600/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. Array Walk - Educational Codeforces Round 92 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1389/b/</link>
+      <pubDate>Sun, 09 Feb 2025 01:39:12 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1389/b/</guid>
+      <description>https://codeforces.com/contest/1389/problem/B 题目大意 给出 $n$ 长的数组 $a$，可以用下述操作走 $k$ 步，其中最多 $z$ 步向左，问最大可以取到的权值。 每次操作可以进行两种中的一种： 向右走。现在在 $x$ 且 $x &amp;lt; n$，权值增加 $a[x + 1]$ 之后走到 $x + 1$。 向左走。现在在 $x$</description>
+    </item>
+    
     <item>
       <title>[CF] D. Min Cost String - Educational Codeforces Round 107 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1511/d/</link>
