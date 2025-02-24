@@ -6,7 +6,16 @@
     <description>Recent content in 并查集 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 19 Jan 2025 23:58:39 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Feb 2025 23:02:44 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Mycraft Sand Sort - Codeforces Round 1005 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2064/e/</link>
+      <pubDate>Sun, 23 Feb 2025 23:02:44 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2064/e/</guid>
+      <description>https://codeforces.com/contest/2064/problem/E 题目大意 给出 $n$ 长的排列 $p$ 和 $n$ 长的颜色数组 $c$。从上到下，从 $i = 1 \sim n$ 将 $p_i$ 个颜色为 $c_i$ 的左侧对齐横向排列，之后让其按照重力规则下落，问有多少个不同的排列和颜色方案的二元组，可以得到和题目给出的排列颜色</description>
+    </item>
+    
     <item>
       <title>[CF] E. Graph Composition - Codeforces Round 998 (Div. 3)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/2060/e/</link>

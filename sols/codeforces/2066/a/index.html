@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  [CF] A. Object Identification - Codeforces Round 1004 (Div. 1) &ndash; OTTFF&#39;s Blog &lt;a id="topofpage">&lt;/a>
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="https://codeforces.com/contest/2066/problem/A 题目大意 给出 $n$ 长的数组 $x$ 和某个隐藏的确定的数组 $y$。保证 $x_i \neq y_i, \forall i$ 且 $(x_i, y_i) \neq (x_j, y_j), \forall i \neq j$ 。对于每组数据，背后有一个隐藏的对象是以下两种之一： Obj A: 一个 $n$ 个点的有向图当且仅当存在有向边 $(x_i, y_i)$ Obj B: $n$ 个点在二|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+    <link rel="stylesheet" href="/assets/style.css">
+    
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/vs.min.css">
+    
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/sols">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">[CF] A. Object Identification - Codeforces Round 1004 (Div. 1)</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/solutions' class="muted-link">
+  <span class="Label Label--gray-darker">Solutions</span>
+</a>
+
+
+
+
+
+<a href='/ojs/codeforces' class="muted-link">
+  <span class="Label Label--gray-darker">Codeforces</span>
+</a>
+
+
+
+<a href='/tags/%E4%BA%A4%E4%BA%92' class="muted-link">
+  <span class="Label Label--gray">交互</span>
+</a>
+
+<a href='/tags/%E6%9D%82%E9%A2%98' class="muted-link">
+  <span class="Label Label--gray">杂题</span>
+</a>
+
+<a href='/tags/%E6%9E%84%E9%80%A0' class="muted-link">
+  <span class="Label Label--gray">构造</span>
+</a>
+
+<a href='/tags/%E5%9B%BE%E8%AE%BA' class="muted-link">
+  <span class="Label Label--gray">图论</span>
+</a>
+
+
+
+
+
+
+
+<a href='/difficulty/med&#43;' class="muted-link">
+  <span class="Label Label--gray">Med&#43;</span>
+</a>
+
+
+    
+    <div class="float-md-right">
+      
+      <span title="Lastmod: 2025-02-18. Published at: 2025-02-17.">
+        
+          Lastmod: 2025-02-18 周二 23:50:52
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <p><a href="https://codeforces.com/contest/2066/problem/A">https://codeforces.com/contest/2066/problem/A</a></p>
+<h2 id="题目大意">题目大意</h2>
+<p>给出 $n$ 长的数组 $x$ 和某个隐藏的确定的数组 $y$。保证 $x_i \neq y_i, \forall i$ 且 $(x_i, y_i) \neq (x_j, y_j), \forall i \neq j$ 。对于每组数据，背后有一个隐藏的对象是以下两种之一：</p>
+<ol>
+<li>Obj A: 一个 $n$ 个点的有向图当且仅当存在有向边 $(x_i, y_i)$</li>
+<li>Obj B: $n$ 个点在二维平面上，每个点坐标为 $(x_i, y_i)$。</li>
+</ol>
+<p>可以最多进行两次询问，每次询问给出 $i, j$：</p>
+<p>如果是 Obj A 则返回 $i -&gt; j$ 的最短路，不存在路径则返回 $0$。</p>
+<p>如果是 Obj B 则返回 $|x_i - x_j| + |y_i - y_j|$。</p>
+<p>两次询问后判断隐藏的对象是哪一种。</p>
+<p>$3 \le n \le 2 \times 10^5$。</p>
+<p>$1 \le x_i, y_i \le n$。</p>
+<h2 id="简要题解">简要题解</h2>
+<p>观察：</p>
+<ol>
+<li>$x$ 不可能所有元素都相同，否则由 $x_i \neq y_i$ 则 $y_i$ 只有 $n - 1$ 个值可以选，根据鸽巢原理必有 $(x, y_i) = (x, y_j)$ 存在。</li>
+<li>如果是 Obj A 则答案不会超过 $n - 1$。</li>
+<li>如果是 Obj B 则答案不会为 $0$（因为点彼此不同，则其曼哈顿距离不会为 $0$）。</li>
+<li>如果是 Obj A 且某值 $a$ 没有出现在 $x_i$ 中，则其到其他所有点没有边，则询问总为 $0$。</li>
+<li>如果是 Obj B 则，对于 $x_i = 1, x_j = n$ 答案不会小于 $n - 1$。</li>
+</ol>
+<p>有了这些观察，我们发现，如果 $x_i$ 有重复值，则必定有没有出现的值 $a$，那么我们只要用 $a$ 和任意其他 $b$ 做一次询问，则我们由观察 $3, 4$ 即可判断出是哪一种情况。</p>
+<p>如果 $x_i$ 没有重复值，则 $x_i$ 是 $1 \sim n$ 的一个排列，则总有 $1$ 和 $n$ 存在，这时我们询问 $(1, n)$ 与 $(n, 1)$ 若任意一个小于 $n - 1$ 则根据观察 $5$ 其是 Obj A，若其大于 $n - 1$ 则其是 Obj B。</p>
+<p>最后如何判断这两个值都是 $n - 1$ 的情况呢？注意到 $n \ge 3$，此时若 $1 -&gt; n$ 和 $n -&gt; 1$ 都有 $n - 1$ 条边，则总有 $2n - 2 &gt; n, \forall n \ge 3$，即这不可能是 Obj A。</p>
+<p>（这题写起来好烦，很容易注意到一些没用的东西，比如观察 1 似乎完全没用到！）</p>
+<p><strong>复杂度</strong></p>
+<p>$T$：$O(n)$</p>
+<p>$S$：$O(n)$</p>
+<p><strong>代码实现</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">io_</span><span class="o">=</span><span class="p">[](){</span> <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span> <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="k">nullptr</span><span class="p">);</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}();</span>
+
+<span class="k">using</span> <span class="n">LL</span> <span class="o">=</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">ULL</span> <span class="o">=</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">LD</span> <span class="o">=</span> <span class="kt">long</span> <span class="kt">double</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">PII</span> <span class="o">=</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">VI</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">MII</span> <span class="o">=</span> <span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">cmin</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span><span class="p">(</span><span class="n">y</span><span class="o">&lt;</span><span class="n">x</span><span class="p">)</span> <span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">cmax</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="n">y</span><span class="p">)</span> <span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">bool</span> <span class="n">ckmin</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="k">return</span> <span class="n">y</span><span class="o">&lt;</span><span class="n">x</span> <span class="o">?</span> <span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="nb">true</span><span class="p">)</span> <span class="o">:</span> <span class="nb">false</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">bool</span> <span class="n">ckmax</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="k">return</span> <span class="n">x</span><span class="o">&lt;</span><span class="n">y</span> <span class="o">?</span> <span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="nb">true</span><span class="p">)</span> <span class="o">:</span> <span class="nb">false</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">cmin</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">z</span><span class="p">)</span> <span class="p">{</span><span class="c1">// x&lt;=y&lt;=z 
+</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">z</span><span class="o">&lt;</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="n">y</span><span class="o">=</span><span class="n">x</span><span class="p">;</span> <span class="n">x</span><span class="o">=</span><span class="n">z</span><span class="p">;</span> <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span><span class="p">(</span><span class="n">z</span><span class="o">&lt;</span><span class="n">y</span><span class="p">)</span> <span class="n">y</span><span class="o">=</span><span class="n">z</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">cmax</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">z</span><span class="p">)</span> <span class="p">{</span><span class="c1">// x&gt;=y&gt;=z
+</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="n">z</span><span class="p">)</span> <span class="p">{</span> <span class="n">y</span><span class="o">=</span><span class="n">x</span><span class="p">;</span> <span class="n">x</span><span class="o">=</span><span class="n">z</span><span class="p">;</span> <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span><span class="p">(</span><span class="n">y</span><span class="o">&lt;</span><span class="n">z</span><span class="p">)</span> <span class="n">y</span><span class="o">=</span><span class="n">z</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c1">// mt19937 rnd(chrono::system_clock::now().time_since_epoch().count());
+</span><span class="c1">// mt19937_64 rnd_64(chrono::system_clock::now().time_since_epoch().count());
+</span><span class="c1"></span>
+<span class="cm">/*
+</span><span class="cm">---------1---------2---------3---------4---------5---------6---------7---------
+</span><span class="cm">1234567890123456789012345678901234567890123456789012345678901234567890123456789
+</span><span class="cm">*/</span>
+
+<span class="kt">int</span> <span class="nf">query</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;? &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39; &#39;</span> <span class="o">&lt;&lt;</span> <span class="n">y</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">ans</span><span class="p">;</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">ans</span><span class="p">;</span>
+  <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">n</span><span class="p">;</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+  <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">a</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span><span class="o">&amp;</span> <span class="nl">i</span> <span class="p">:</span> <span class="n">a</span><span class="p">)</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">i</span><span class="p">;</span>
+
+  <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">pos</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">pos</span><span class="p">[</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]].</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="kt">bool</span> <span class="n">has_two</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">pos</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">has_two</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">has_two</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="n">pos</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">!=</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">query</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">ans</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;! B&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;! A&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">// all different!
+</span><span class="c1"></span>  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">y</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">query</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">||</span> <span class="n">query</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;! A&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;! B&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> 
+  <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">t</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">t</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">solve</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+  </section>
+
+  <section>
+    
+        <a href="/sols/codeforces/571/b/" class="previous_page">Prev: [CF] B. Minimization - Codeforces Round 317 [AimFund Thanks-Round] (Div. 1) </a>
+    
+     <br> 
+    
+        <a href="/sols/codeforces/1107/e/" class="next_page">Next: [CF] E. Vasya and Binary String - Educational Codeforces Round 59 (Rated for Div. 2) </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <a herf="#topofpage" id="backtotop" onclick="scrollToTop(event)">[CF] A. Object Identification - Codeforces Round 1004 (Div. 1)</a><nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目大意">题目大意</a></li>
+    <li><a href="#简要题解">简要题解</a></li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+      hljs.initLineNumbersOnLoad({
+        singleLine: true
+      });
+      hljs.configure({tabReplace: '  '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+
+    <script src="/assets/tagcanvas.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        TagCanvas.weight = true;
+        TagCanvas.weightFrom = 'data-weight';
+        TagCanvas.weightMode = 'both';
+        
+        TagCanvas.weightSizeMin = 10;
+        TagCanvas.weightSizeMax = 50;
+        TagCanvas.minSpeed = 0.05;
+        try {
+          TagCanvas.Start('myCanvas', 'tags');
+          TagCanvas.SetSpeed('myCanvas', [0.05, 0]);
+          
+        } catch(e) {
+          
+          document.getElementById('myCanvasContainer').style.display = 'none';
+        }
+      };
+    </script>
+    <script type="text/javascript">
+      function scrollToTop(event) {
+        event.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>树状数组 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</link>
+    <description>Recent content in 树状数组 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 23 Feb 2025 23:02:44 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Mycraft Sand Sort - Codeforces Round 1005 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2064/e/</link>
+      <pubDate>Sun, 23 Feb 2025 23:02:44 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2064/e/</guid>
+      <description>https://codeforces.com/contest/2064/problem/E 题目大意 给出 $n$ 长的排列 $p$ 和 $n$ 长的颜色数组 $c$。从上到下，从 $i = 1 \sim n$ 将 $p_i$ 个颜色为 $c_i$ 的左侧对齐横向排列，之后让其按照重力规则下落，问有多少个不同的排列和颜色方案的二元组，可以得到和题目给出的排列颜色</description>
+    </item>
+    
+    <item>
+      <title>[CF] H. Bro Thinks He&#39;s Him - Codeforces Round 1003 (Div. 4)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2065/h/</link>
+      <pubDate>Thu, 13 Feb 2025 22:58:38 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2065/h/</guid>
+      <description>https://codeforces.com/contest/2065/problem/H 题目大意 给出一个 $01$ 字符串 $s$ 和 $q$ 次询问，每次询问将 $v_i$ 位置的字符翻转（询问不独立），之后询问这个串由下述函数算出的值是多少。 $f(S)$ 表示 $S$ 由多少个连续的相同字符的段，比如 $00110001$ 有 $00, 11, 000, 1$ 这样的 $4$ 段。 $g(S)$ 表示对于 $S$ 的</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,16 @@
     <description>Recent content in 2000 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 05 Feb 2025 22:22:33 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/2000/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Feb 2025 22:58:49 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/2000/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. Minimization - Codeforces Round 317 [AimFund Thanks-Round] (Div. 1)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/571/b/</link>
+      <pubDate>Thu, 13 Feb 2025 22:58:49 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/571/b/</guid>
+      <description>https://codeforces.com/contest/571/problem/B 题目大意 给出 $n$ 长的数组 $a$，及某数 $k$，可以任意调整 $a$ 中元素位置，需要最小化 $$ \sum_{i = 1}^{n - k} |a[i] - a[i &amp;#43; k]| $$ 。 问这个最小值是多少。 $2 \le n \le 3 \times 10^5$。$1 \le \min(5000, n - 1)$。$-10^9 \le a[i] \le 10^9$</description>
+    </item>
+    
     <item>
       <title>[CF] C. Match Points - Educational Codeforces Round 64 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1156/c/</link>

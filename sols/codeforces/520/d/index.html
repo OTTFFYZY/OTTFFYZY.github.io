@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  [CF] D. Cubes - Codeforces Round 295 (Div. 2) &ndash; OTTFF&#39;s Blog &lt;a id="topofpage">&lt;/a>
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="https://codeforces.com/contest/520/problem/D 题目大意 给出 $n$ 个立方体（其实可能叫正方形更好，因为其实只需要考虑 $2$ 维），考虑 $OX$ 是地面，$OY$ 是向上的方向。每个立方体用 $(x, y)$ 表示其位置。定义某个立方体是稳定的当且仅当： 立方体在地面上（$x = 0$） 其|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+    <link rel="stylesheet" href="/assets/style.css">
+    
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/vs.min.css">
+    
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/sols">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">[CF] D. Cubes - Codeforces Round 295 (Div. 2)</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/solutions' class="muted-link">
+  <span class="Label Label--gray-darker">Solutions</span>
+</a>
+
+
+
+
+
+<a href='/ojs/codeforces' class="muted-link">
+  <span class="Label Label--gray-darker">Codeforces</span>
+</a>
+
+
+
+<a href='/tags/%E8%B4%AA%E5%BF%83' class="muted-link">
+  <span class="Label Label--gray">贪心</span>
+</a>
+
+<a href='/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84' class="muted-link">
+  <span class="Label Label--gray">数据结构</span>
+</a>
+
+<a href='/tags/bfs' class="muted-link">
+  <span class="Label Label--gray">BFS</span>
+</a>
+
+<a href='/tags/%E5%B1%80%E9%83%A8%E7%8A%B6%E6%80%81' class="muted-link">
+  <span class="Label Label--gray">局部状态</span>
+</a>
+
+
+
+
+
+<a href='/score/2100' class="muted-link">
+  <span class="Label Label--gray">2100</span>
+</a>
+
+
+
+<a href='/difficulty/med' class="muted-link">
+  <span class="Label Label--gray">Med-</span>
+</a>
+
+
+    
+    <div class="float-md-right">
+      
+      <span title="Lastmod: 2025-02-13. Published at: 2025-02-13.">
+        
+          Lastmod: 2025-02-13 周四 23:37:15
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <p><a href="https://codeforces.com/contest/520/problem/D">https://codeforces.com/contest/520/problem/D</a></p>
+<h2 id="题目大意">题目大意</h2>
+<p>给出 $n$ 个立方体（其实可能叫正方形更好，因为其实只需要考虑 $2$ 维），考虑 $OX$ 是地面，$OY$ 是向上的方向。每个立方体用 $(x, y)$ 表示其位置。定义某个立方体是稳定的当且仅当：</p>
+<ol>
+<li>立方体在地面上（$x = 0$）</li>
+<li>其下方有某个稳定的立方体且它们有共用的边或角（$(x - 1, y - 1), (x, y - 1), (x + 1, y)$ 中至少一个位置有立方体且其稳定）。</li>
+</ol>
+<p>A 和 B 两个人轮流从中取出某个立方体，使得抽出后图形还是稳定的。将取出的立方体的下标按照取出的顺序排列，A 先取，并且希望这个 $n$ 进制数尽量大。B 希望数尽量小，问最后数字是多少，结果对 $10^9 + 9$ 取模。</p>
+<p>$2 \le n \le 10^5$。$-10^9 \le x_i \le 10^9$。$0 \le y \le 10^9$。最初给出的图形是稳定的。</p>
+<h2 id="简要题解">简要题解</h2>
+<p>容易想到我们可以一直维护当前可以取的集合，每次取完更新这个集合。A 肯定取当前能取最大的，B 反之，因为是个 $n$ 进制数，且最后序列是个排列，因此对于 A 不存在前面取的小，能更好的情况，对 B 同理。</p>
+<p>静态的检查一个块是不是能移出也是容易的，因为只需检查它上面三个位置是否有块，如果有其是否有其他支撑块即可。当我们抽出一个块后，那么其下面的有些块可能因为不需要支撑了，也变得可以抽出了。特别的，其上面的某些块，可能因为这个支撑没了使得其他支撑块变得不可选，比较简单的写法就是直接检查两边上下周围的所有可能有影响的块。（我们注意到其实稍微远一点的块其检查的范围内完全没有变化，因此我们并不需要重新检查）。</p>
+<p>注意这个检查范围要比抽出的 $(x, y)$ 紧邻的一圈大一些，因为有下面这样的情况。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">    --
+   |1 |
+ -- -- --
+|2 |  |0 |
+ --    --
+</code></pre></div><p>最初 $1$ 或 $2$ 都可以被抽出，但 A 抽走 $2$ 后会使得 $0$ 不能在 $1$ 之前抽出。</p>
+<p>Tag 加了 BFS 但其实这不是什么正经的 BFS，只是写法有点像罢了。</p>
+<p>注意模数。</p>
+<p><strong>复杂度</strong></p>
+<p>$T$：$O(n \log n)$</p>
+<p>$S$：$O(n)$</p>
+<p><strong>代码实现</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">io_</span><span class="o">=</span><span class="p">[](){</span> <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span> <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="k">nullptr</span><span class="p">);</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}();</span>
+
+<span class="k">using</span> <span class="n">LL</span> <span class="o">=</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">ULL</span> <span class="o">=</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">LD</span> <span class="o">=</span> <span class="kt">long</span> <span class="kt">double</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">PII</span> <span class="o">=</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">VI</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">MII</span> <span class="o">=</span> <span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">cmin</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span><span class="p">(</span><span class="n">y</span><span class="o">&lt;</span><span class="n">x</span><span class="p">)</span> <span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">cmax</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="n">y</span><span class="p">)</span> <span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">bool</span> <span class="n">ckmin</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="k">return</span> <span class="n">y</span><span class="o">&lt;</span><span class="n">x</span> <span class="o">?</span> <span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="nb">true</span><span class="p">)</span> <span class="o">:</span> <span class="nb">false</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">bool</span> <span class="n">ckmax</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="k">return</span> <span class="n">x</span><span class="o">&lt;</span><span class="n">y</span> <span class="o">?</span> <span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="nb">true</span><span class="p">)</span> <span class="o">:</span> <span class="nb">false</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">cmin</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">z</span><span class="p">)</span> <span class="p">{</span><span class="c1">// x&lt;=y&lt;=z 
+</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">z</span><span class="o">&lt;</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="n">y</span><span class="o">=</span><span class="n">x</span><span class="p">;</span> <span class="n">x</span><span class="o">=</span><span class="n">z</span><span class="p">;</span> <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span><span class="p">(</span><span class="n">z</span><span class="o">&lt;</span><span class="n">y</span><span class="p">)</span> <span class="n">y</span><span class="o">=</span><span class="n">z</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">cmax</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">z</span><span class="p">)</span> <span class="p">{</span><span class="c1">// x&gt;=y&gt;=z
+</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="n">z</span><span class="p">)</span> <span class="p">{</span> <span class="n">y</span><span class="o">=</span><span class="n">x</span><span class="p">;</span> <span class="n">x</span><span class="o">=</span><span class="n">z</span><span class="p">;</span> <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span><span class="p">(</span><span class="n">y</span><span class="o">&lt;</span><span class="n">z</span><span class="p">)</span> <span class="n">y</span><span class="o">=</span><span class="n">z</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c1">// mt19937 rnd(chrono::system_clock::now().time_since_epoch().count());
+</span><span class="c1">// mt19937_64 rnd_64(chrono::system_clock::now().time_since_epoch().count());
+</span><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="kt">long</span> <span class="kt">long</span> <span class="n">Mo</span><span class="o">=</span><span class="mi">998244353</span><span class="o">&gt;</span> <span class="k">struct</span> <span class="nc">ModInt</span> <span class="p">{</span>
+  <span class="k">static</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">MO</span><span class="p">;</span>
+  <span class="k">static</span> <span class="kt">void</span> <span class="nf">setMo</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span> <span class="n">mo</span><span class="p">)</span> <span class="p">{</span> <span class="n">MO</span> <span class="o">=</span> <span class="n">mo</span><span class="p">;</span> <span class="p">}</span>
+  <span class="kt">long</span> <span class="kt">long</span> <span class="n">x</span><span class="p">;</span>
+  <span class="n">ModInt</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">:</span> <span class="n">x</span><span class="p">(</span><span class="n">x</span><span class="p">){</span> <span class="n">norm</span><span class="p">();</span> <span class="p">}</span>
+  <span class="k">friend</span> <span class="n">istream</span> <span class="o">&amp;</span><span class="k">operator</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">istream</span><span class="o">&amp;</span> <span class="n">in</span><span class="p">,</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="p">{</span> <span class="n">in</span><span class="o">&gt;&gt;</span><span class="n">B</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="k">return</span> <span class="n">in</span><span class="p">;</span> <span class="p">}</span>
+  <span class="k">friend</span> <span class="n">ostream</span> <span class="o">&amp;</span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">out</span><span class="p">,</span> <span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="n">out</span><span class="o">&lt;&lt;</span><span class="n">B</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="k">return</span> <span class="n">out</span><span class="p">;</span> <span class="p">}</span>
+  <span class="c1">// ModInt operator=(int x_) { x=x_; norm(); return *this; }
+</span><span class="c1"></span>  <span class="kt">void</span> <span class="nf">norm</span><span class="p">()</span> <span class="p">{</span> <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="n">MO</span> <span class="o">+</span> <span class="n">MO</span><span class="p">)</span> <span class="o">%</span> <span class="n">MO</span><span class="p">;</span> <span class="p">}</span>
+  <span class="kt">long</span> <span class="kt">long</span> <span class="nf">get</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span><span class="p">;</span> <span class="p">}</span>
+
+  <span class="n">ModInt</span> <span class="k">operator</span><span class="o">-</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="nf">ModInt</span><span class="p">(</span><span class="n">MO</span> <span class="o">-</span> <span class="n">x</span><span class="p">);</span> <span class="p">}</span>
+  <span class="n">ModInt</span> <span class="k">operator</span><span class="o">+=</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="p">{</span> <span class="n">x</span><span class="o">+=</span><span class="n">B</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;=</span><span class="n">MO</span><span class="p">)</span> <span class="n">x</span><span class="o">-=</span><span class="n">MO</span><span class="p">;</span> <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span> <span class="p">}</span>
+  <span class="n">ModInt</span> <span class="k">operator</span><span class="o">-=</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="p">{</span> <span class="n">x</span><span class="o">-=</span><span class="n">B</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span> <span class="n">x</span><span class="o">+=</span><span class="n">MO</span><span class="p">;</span> <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span> <span class="p">}</span>
+  <span class="n">ModInt</span> <span class="k">operator</span><span class="o">*=</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="p">{</span> <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">*</span><span class="n">B</span><span class="p">.</span><span class="n">x</span><span class="o">%</span><span class="n">MO</span><span class="p">;</span> <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span> <span class="p">}</span>
+  <span class="n">ModInt</span> <span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span> <span class="n">ModInt</span> <span class="n">ans</span><span class="o">=*</span><span class="k">this</span><span class="p">;</span> <span class="k">return</span> <span class="n">ans</span><span class="o">+=</span><span class="n">B</span><span class="p">;</span> <span class="p">}</span>
+  <span class="n">ModInt</span> <span class="k">operator</span><span class="o">-</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span> <span class="n">ModInt</span> <span class="n">ans</span><span class="o">=*</span><span class="k">this</span><span class="p">;</span> <span class="k">return</span> <span class="n">ans</span><span class="o">-=</span><span class="n">B</span><span class="p">;</span> <span class="p">}</span>
+  <span class="n">ModInt</span> <span class="k">operator</span><span class="o">*</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span> <span class="n">ModInt</span> <span class="n">ans</span><span class="o">=*</span><span class="k">this</span><span class="p">;</span> <span class="k">return</span> <span class="n">ans</span><span class="o">*=</span><span class="n">B</span><span class="p">;</span> <span class="p">}</span>
+  <span class="n">ModInt</span> <span class="k">operator</span><span class="o">^</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span> <span class="n">n</span><span class="p">)</span> <span class="k">const</span>  <span class="p">{</span>
+    <span class="n">ModInt</span> <span class="n">a</span><span class="o">=*</span><span class="k">this</span><span class="p">;</span> <span class="n">ModInt</span> <span class="nf">ans</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span> <span class="n">ans</span><span class="o">*=</span><span class="n">a</span><span class="p">;</span> <span class="n">a</span><span class="o">*=</span><span class="n">a</span><span class="p">;</span> <span class="n">n</span><span class="o">&gt;&gt;=</span><span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">ModInt</span> <span class="nf">inv</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">)</span><span class="o">^</span><span class="p">(</span><span class="n">MO</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span> <span class="p">}</span> <span class="c1">// if MO is prime
+</span><span class="c1"></span>  <span class="n">ModInt</span> <span class="k">operator</span><span class="o">/=</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">)</span><span class="o">*=</span><span class="n">B</span><span class="p">.</span><span class="n">inv</span><span class="p">();</span> <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span> <span class="p">}</span>
+  <span class="n">ModInt</span> <span class="k">operator</span><span class="o">/</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span> <span class="n">ModInt</span> <span class="n">ans</span><span class="o">=*</span><span class="k">this</span><span class="p">;</span> <span class="k">return</span> <span class="n">ans</span><span class="o">/=</span><span class="n">B</span><span class="p">;</span> <span class="p">}</span>
+
+  <span class="kt">bool</span> <span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span><span class="o">&lt;</span><span class="n">B</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="p">}</span>
+  <span class="kt">bool</span> <span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span><span class="o">==</span><span class="n">B</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="p">}</span>
+  <span class="kt">bool</span> <span class="k">operator</span><span class="o">!=</span><span class="p">(</span><span class="k">const</span> <span class="n">ModInt</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">x</span><span class="o">!=</span><span class="n">B</span><span class="p">.</span><span class="n">x</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">};</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="kt">long</span> <span class="kt">long</span> <span class="n">Mo</span><span class="o">&gt;</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ModInt</span><span class="o">&lt;</span><span class="n">Mo</span><span class="o">&gt;::</span><span class="n">MO</span> <span class="o">=</span> <span class="n">Mo</span><span class="p">;</span>
+<span class="c1">// typedef ModInt&lt;998244353&gt; Mint;
+</span><span class="c1">// typedef ModInt&lt;1&#39;000&#39;000&#39;007&gt; Mint;
+</span><span class="c1"></span>
+<span class="cm">/*
+</span><span class="cm">---------1---------2---------3---------4---------5---------6---------7---------
+</span><span class="cm">1234567890123456789012345678901234567890123456789012345678901234567890123456789
+</span><span class="cm">*/</span>
+
+<span class="k">typedef</span> <span class="n">ModInt</span><span class="o">&lt;</span><span class="mi">1&#39;000&#39;000&#39;009</span><span class="o">&gt;</span> <span class="n">Mint</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">n</span><span class="p">;</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+
+  <span class="n">map</span><span class="o">&lt;</span><span class="n">PII</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">pos2id</span><span class="p">;</span>
+  <span class="n">vector</span><span class="o">&lt;</span><span class="n">PII</span><span class="o">&gt;</span> <span class="n">id2pos</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="n">y</span><span class="p">;</span>
+    <span class="n">pos2id</span><span class="p">[{</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">}]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+    <span class="n">id2pos</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">});</span>
+  <span class="p">}</span>
+  
+  <span class="k">auto</span> <span class="n">check</span> <span class="o">=</span> <span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">bool</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">pos2id</span><span class="p">.</span><span class="n">count</span><span class="p">({</span><span class="n">x</span> <span class="o">+</span> <span class="n">i</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}))</span> <span class="k">continue</span><span class="p">;</span>
+      
+      <span class="kt">int</span> <span class="n">f</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="n">j</span> <span class="o">==</span> <span class="n">x</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">pos2id</span><span class="p">.</span><span class="n">count</span><span class="p">({</span><span class="n">x</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="p">,</span> <span class="n">y</span><span class="p">}))</span> <span class="p">{</span>
+          <span class="n">f</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+          <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">f</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">se</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">auto</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="n">id2pos</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">check</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span> <span class="p">{</span>
+      <span class="n">se</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="n">Mint</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// cerr &lt;&lt; &#34;se : &#34;;
+</span><span class="c1"></span>    <span class="c1">// for (int i : se) cerr &lt;&lt; i &lt;&lt; &#39; &#39;;
+</span><span class="c1"></span>    <span class="c1">// cerr &lt;&lt; endl;
+</span><span class="c1"></span>
+    <span class="kt">int</span> <span class="n">id</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">id</span> <span class="o">=</span> <span class="o">*</span><span class="n">se</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="n">id</span> <span class="o">=</span> <span class="o">*</span><span class="n">se</span><span class="p">.</span><span class="n">rbegin</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="n">se</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+    
+    <span class="k">auto</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="n">id2pos</span><span class="p">[</span><span class="n">id</span><span class="p">];</span>
+    <span class="n">pos2id</span><span class="p">.</span><span class="n">erase</span><span class="p">({</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">});</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">nx</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">i</span><span class="p">,</span> <span class="n">ny</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">j</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">auto</span> <span class="n">it</span> <span class="o">=</span> <span class="n">pos2id</span><span class="p">.</span><span class="n">find</span><span class="p">({</span><span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">});</span> <span class="n">it</span> <span class="o">!=</span> <span class="n">pos2id</span><span class="p">.</span><span class="n">end</span><span class="p">())</span> <span class="p">{</span>
+          <span class="kt">int</span> <span class="n">id2</span> <span class="o">=</span> <span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">;</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">check</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">se</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">id2</span><span class="p">);</span>
+          <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="k">auto</span> <span class="n">it2</span> <span class="o">=</span> <span class="n">se</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">id2</span><span class="p">);</span> <span class="n">it2</span> <span class="o">!=</span> <span class="n">se</span><span class="p">.</span><span class="n">end</span><span class="p">())</span> <span class="p">{</span>
+              <span class="n">se</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">it2</span><span class="p">);</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="n">ans</span> <span class="o">*=</span> <span class="n">n</span><span class="p">;</span>
+    <span class="n">ans</span> <span class="o">+=</span> <span class="n">id</span><span class="p">;</span>
+    
+    <span class="c1">// cerr &lt;&lt; i &lt;&lt; &#39; &#39; &lt;&lt; id &lt;&lt; &#39; &#39; &lt;&lt; ans &lt;&lt; endl;
+</span><span class="c1"></span>  <span class="p">}</span>
+  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> 
+  <span class="c1">// cin &gt;&gt; t;
+</span><span class="c1"></span>  <span class="k">while</span> <span class="p">(</span><span class="n">t</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">solve</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+  </section>
+
+  <section>
+    
+        <a href="/sols/codeforces/2065/h/" class="previous_page">Prev: [CF] H. Bro Thinks He&#39;s Him - Codeforces Round 1003 (Div. 4) </a>
+    
+     <br> 
+    
+        <a href="/sols/codeforces/571/b/" class="next_page">Next: [CF] B. Minimization - Codeforces Round 317 [AimFund Thanks-Round] (Div. 1) </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <a herf="#topofpage" id="backtotop" onclick="scrollToTop(event)">[CF] D. Cubes - Codeforces Round 295 (Div. 2)</a><nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目大意">题目大意</a></li>
+    <li><a href="#简要题解">简要题解</a></li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+      hljs.initLineNumbersOnLoad({
+        singleLine: true
+      });
+      hljs.configure({tabReplace: '  '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+
+    <script src="/assets/tagcanvas.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        TagCanvas.weight = true;
+        TagCanvas.weightFrom = 'data-weight';
+        TagCanvas.weightMode = 'both';
+        
+        TagCanvas.weightSizeMin = 10;
+        TagCanvas.weightSizeMax = 50;
+        TagCanvas.minSpeed = 0.05;
+        try {
+          TagCanvas.Start('myCanvas', 'tags');
+          TagCanvas.SetSpeed('myCanvas', [0.05, 0]);
+          
+        } catch(e) {
+          
+          document.getElementById('myCanvasContainer').style.display = 'none';
+        }
+      };
+    </script>
+    <script type="text/javascript">
+      function scrollToTop(event) {
+        event.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      };
+    </script>
+  </body>
+</html>

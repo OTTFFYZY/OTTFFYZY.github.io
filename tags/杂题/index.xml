@@ -6,7 +6,16 @@
     <description>Recent content in 杂题 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 07 Feb 2025 23:47:41 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%9D%82%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Feb 2025 00:44:59 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%9D%82%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] A. Object Identification - Codeforces Round 1004 (Div. 1)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2066/a/</link>
+      <pubDate>Mon, 17 Feb 2025 00:44:59 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2066/a/</guid>
+      <description>https://codeforces.com/contest/2066/problem/A 题目大意 给出 $n$ 长的数组 $x$ 和某个隐藏的确定的数组 $y$。保证 $x_i \neq y_i, \forall i$ 且 $(x_i, y_i) \neq (x_j, y_j), \forall i \neq j$ 。对于每组数据，背后有一个隐藏的对象是以下两种之一： Obj A: 一个 $n$ 个点的有向图当且仅当存在有向边 $(x_i, y_i)$ Obj B: $n$ 个点在二</description>
+    </item>
+    
     <item>
       <title>[CF] D. AB-string - Educational Codeforces Round 74 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1238/d/</link>

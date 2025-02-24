@@ -6,7 +6,34 @@
     <description>Recent content in 双指针 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 27 Jan 2025 23:33:14 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Feb 2025 23:03:04 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. Variety is Discouraged - Codeforces Round 1005 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2064/b/</link>
+      <pubDate>Tue, 18 Feb 2025 23:03:04 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2064/b/</guid>
+      <description>https://codeforces.com/contest/2064/problem/B 题目大意 给出 $n$ 长的不含 $0$ 的数组 $a$。定义一个数组的权值为其长度减去不重复元素个数。 可以最多删除数组中连续的一个非空子段。问怎样删可以使得权值最大。不删最好时返回 $0$，否则返回删除的区间端点。多个</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Remove the Ends - Codeforces Round 1005 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2064/c/</link>
+      <pubDate>Tue, 18 Feb 2025 23:03:00 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2064/c/</guid>
+      <description>https://codeforces.com/contest/2064/problem/C 题目大意 给出 $n$ 长的不含 $0$ 的数组 $a$。每次可以选择当前一个正数 $a_i$ 将其加到答案，并将数组的 $i$ 结束的前缀删掉，或者选择某个负数 $a_i$ 将 $- a_i$ 加到答案，并将 $i$ 开始的后缀删掉。问可以得到的最大答案是多少。 $1 \le n \le</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Brutality - Educational Codeforces Round 59 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1107/c/</link>
+      <pubDate>Tue, 18 Feb 2025 00:11:25 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1107/c/</guid>
+      <description>https://codeforces.com/contest/1107/problem/C 题目大意 给出 $n$ 长的小写字符的串 $S$ 和数组 $a$。给出某个 $k$，需要删掉字符串中的某些字符，使得最终串连续的相同字符个数不会超过 $k$。问最后保留下的字符的下标对应的 $a_i$ 的和最大是多少。 $1 \le k \le n \le 2 \times</description>
+    </item>
+    
     <item>
       <title>[CF] B. Students in Railway Carriage - Educational Codeforces Round 42 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/962/b/</link>

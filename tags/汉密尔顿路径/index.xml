@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>汉密尔顿路径 on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/%E6%B1%89%E5%AF%86%E5%B0%94%E9%A1%BF%E8%B7%AF%E5%BE%84/</link>
+    <description>Recent content in 汉密尔顿路径 on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 23 Feb 2025 22:45:21 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%B1%89%E5%AF%86%E5%B0%94%E9%A1%BF%E8%B7%AF%E5%BE%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Vasya And The Mushrooms - Educational Codeforces Round 48 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1016/c/</link>
+      <pubDate>Sun, 23 Feb 2025 22:45:21 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1016/c/</guid>
+      <description>https://codeforces.com/contest/1016/problem/C 题目大意 给出一个 $2 \times n$ 的矩阵，矩阵上每个位置有一个数字，代表每秒会多出 $a_{i, j}$ 的价值。第 $0s$ 从左上角出发，每次到达一个格子的时刻取到当前的价值，每一秒要强制走到某一个相邻的格子（四联通），问不重复的走完所</description>
+    </item>
+    
+  </channel>
+</rss>

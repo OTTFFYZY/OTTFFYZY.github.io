@@ -6,7 +6,25 @@
     <description>Recent content in 数论 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 09 Feb 2025 01:39:11 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%95%B0%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Feb 2025 00:11:21 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E6%95%B0%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Compression - Educational Codeforces Round 59 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1107/d/</link>
+      <pubDate>Tue, 18 Feb 2025 00:11:21 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1107/d/</guid>
+      <description>https://codeforces.com/contest/1107/problem/D 题目大意 给出一个 $n \times n$ 的 $01$ 矩阵 $A$。规定 $B$ 为 $A$ 的一个 $x$ 压缩矩阵，如果 $x | n$ 以及 $A[i][j] = B[\lceil \frac{i}{x} \rceil][\lceil \frac{j}{x} \rceil]$（$1$-indexed）。 $4 \le n \le 5200$，且 $4 | n$。 $A$ 按照每行每 $4$ 位压缩成一个十六</description>
+    </item>
+    
+    <item>
+      <title>[CF] F. Topforces Strikes Back - Codeforces Round 570 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1183/f/</link>
+      <pubDate>Tue, 11 Feb 2025 23:06:06 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1183/f/</guid>
+      <description>https://codeforces.com/contest/1183/problem/F 题目大意 给出 $n$ 个数最多选出其中 $3$ 个，使得选出的数两两之间不是整数倍，问选出的和最大是多少。 $1 \le n \le 2 \times 10^5$。$2 \le a_i \le 2 \times 10^5$。 简要题解 复杂度 $T$：$O()$ $S$：$O()$ 代码实现</description>
+    </item>
+    
     <item>
       <title>[CF] A. LCM Problem - Educational Codeforces Round 92 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1389/a/</link>

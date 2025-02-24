@@ -6,7 +6,25 @@
     <description>Recent content in 1800 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 04 Feb 2025 23:56:11 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1800/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Feb 2025 22:45:21 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1800/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] C. Vasya And The Mushrooms - Educational Codeforces Round 48 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1016/c/</link>
+      <pubDate>Sun, 23 Feb 2025 22:45:21 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1016/c/</guid>
+      <description>https://codeforces.com/contest/1016/problem/C 题目大意 给出一个 $2 \times n$ 的矩阵，矩阵上每个位置有一个数字，代表每秒会多出 $a_{i, j}$ 的价值。第 $0s$ 从左上角出发，每次到达一个格子的时刻取到当前的价值，每一秒要强制走到某一个相邻的格子（四联通），问不重复的走完所</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Compression - Educational Codeforces Round 59 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1107/d/</link>
+      <pubDate>Tue, 18 Feb 2025 00:11:21 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1107/d/</guid>
+      <description>https://codeforces.com/contest/1107/problem/D 题目大意 给出一个 $n \times n$ 的 $01$ 矩阵 $A$。规定 $B$ 为 $A$ 的一个 $x$ 压缩矩阵，如果 $x | n$ 以及 $A[i][j] = B[\lceil \frac{i}{x} \rceil][\lceil \frac{j}{x} \rceil]$（$1$-indexed）。 $4 \le n \le 5200$，且 $4 | n$。 $A$ 按照每行每 $4$ 位压缩成一个十六</description>
+    </item>
+    
     <item>
       <title>[CF] B. Ugly Pairs - Educational Codeforces Round 64 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1156/b/</link>

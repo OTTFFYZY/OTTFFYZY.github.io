@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>KMP on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/kmp/</link>
+    <description>Recent content in KMP on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 23 Feb 2025 22:45:19 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/kmp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. Segment Occurrences - Educational Codeforces Round 48 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1016/b/</link>
+      <pubDate>Sun, 23 Feb 2025 22:45:19 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1016/b/</guid>
+      <description>https://codeforces.com/contest/1016/problem/B 题目大意 给出 $n$ 长小写字符串 $s$ 和 $m$ 长小写字符串 $t$。给出 $q$ 组询问，每组询问给出 $l_i, r_i$，问 $s[l_i, r_i]$ 子串中 $t$ 出现了几次。 $1 \le n, m \le 1000, 1 \le q \le 10^5$。 简要题解 只要把所有匹配位置的尾巴标记为 $1$，这样</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,79 @@
     <description>Recent content in 贪心 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 09 Feb 2025 01:39:12 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E8%B4%AA%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Feb 2025 23:03:04 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E8%B4%AA%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. Variety is Discouraged - Codeforces Round 1005 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2064/b/</link>
+      <pubDate>Tue, 18 Feb 2025 23:03:04 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2064/b/</guid>
+      <description>https://codeforces.com/contest/2064/problem/B 题目大意 给出 $n$ 长的不含 $0$ 的数组 $a$。定义一个数组的权值为其长度减去不重复元素个数。 可以最多删除数组中连续的一个非空子段。问怎样删可以使得权值最大。不删最好时返回 $0$，否则返回删除的区间端点。多个</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Remove the Ends - Codeforces Round 1005 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2064/c/</link>
+      <pubDate>Tue, 18 Feb 2025 23:03:00 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2064/c/</guid>
+      <description>https://codeforces.com/contest/2064/problem/C 题目大意 给出 $n$ 长的不含 $0$ 的数组 $a$。每次可以选择当前一个正数 $a_i$ 将其加到答案，并将数组的 $i$ 结束的前缀删掉，或者选择某个负数 $a_i$ 将 $- a_i$ 加到答案，并将 $i$ 开始的后缀删掉。问可以得到的最大答案是多少。 $1 \le n \le</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Eating - Codeforces Round 1005 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2064/d/</link>
+      <pubDate>Tue, 18 Feb 2025 22:50:28 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2064/d/</guid>
+      <description>https://codeforces.com/contest/2064/problem/D 题目大意 给出一个 $n$ 长的数组 $a$，和 $q$ 个独立询问（每次询问结束恢复 $a$）。对于某个询问，给出 $x$，然后如果 $x$ 不小于 $a$ 最后的元素 $a_{last}$ 则把 $x$ 变为 $x \ xor a_{last}$ 并删掉 $a_{last}$，问这个操作能进行几次</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Brutality - Educational Codeforces Round 59 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1107/c/</link>
+      <pubDate>Tue, 18 Feb 2025 00:11:25 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1107/c/</guid>
+      <description>https://codeforces.com/contest/1107/problem/C 题目大意 给出 $n$ 长的小写字符的串 $S$ 和数组 $a$。给出某个 $k$，需要删掉字符串中的某些字符，使得最终串连续的相同字符个数不会超过 $k$。问最后保留下的字符的下标对应的 $a_i$ 的和最大是多少。 $1 \le k \le n \le 2 \times</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Vasya and Binary String - Educational Codeforces Round 59 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1107/e/</link>
+      <pubDate>Tue, 18 Feb 2025 00:11:03 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1107/e/</guid>
+      <description>https://codeforces.com/contest/1107/problem/E 题目大意 给出一个 $n$ 长的 $01$ 串 $S$ 和数组 $a$。每次操作可以从中删除一个连续的，相同字符的段，并把剩余的段按顺序连起来。每次删掉 $len$ 长的段的收益为 $a_{len}$，问最大收益是多少。 $1 \le n \le 100$。$1</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Minimization - Codeforces Round 317 [AimFund Thanks-Round] (Div. 1)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/571/b/</link>
+      <pubDate>Thu, 13 Feb 2025 22:58:49 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/571/b/</guid>
+      <description>https://codeforces.com/contest/571/problem/B 题目大意 给出 $n$ 长的数组 $a$，及某数 $k$，可以任意调整 $a$ 中元素位置，需要最小化 $$ \sum_{i = 1}^{n - k} |a[i] - a[i &amp;#43; k]| $$ 。 问这个最小值是多少。 $2 \le n \le 3 \times 10^5$。$1 \le \min(5000, n - 1)$。$-10^9 \le a[i] \le 10^9$</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Cubes - Codeforces Round 295 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/520/d/</link>
+      <pubDate>Thu, 13 Feb 2025 22:58:42 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/520/d/</guid>
+      <description>https://codeforces.com/contest/520/problem/D 题目大意 给出 $n$ 个立方体（其实可能叫正方形更好，因为其实只需要考虑 $2$ 维），考虑 $OX$ 是地面，$OY$ 是向上的方向。每个立方体用 $(x, y)$ 表示其位置。定义某个立方体是稳定的当且仅当： 立方体在地面上（$x = 0$） 其</description>
+    </item>
+    
+    <item>
+      <title>[CF] F. Topforces Strikes Back - Codeforces Round 570 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1183/f/</link>
+      <pubDate>Tue, 11 Feb 2025 23:06:06 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1183/f/</guid>
+      <description>https://codeforces.com/contest/1183/problem/F 题目大意 给出 $n$ 个数最多选出其中 $3$ 个，使得选出的数两两之间不是整数倍，问选出的和最大是多少。 $1 \le n \le 2 \times 10^5$。$2 \le a_i \le 2 \times 10^5$。 简要题解 复杂度 $T$：$O()$ $S$：$O()$ 代码实现</description>
+    </item>
+    
     <item>
       <title>[CF] B. Array Walk - Educational Codeforces Round 92 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1389/b/</link>

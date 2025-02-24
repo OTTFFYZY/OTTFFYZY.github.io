@@ -6,7 +6,25 @@
     <description>Recent content in Easy on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 09 Feb 2025 01:39:11 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/easy/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Feb 2025 22:45:19 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/easy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. Segment Occurrences - Educational Codeforces Round 48 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1016/b/</link>
+      <pubDate>Sun, 23 Feb 2025 22:45:19 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1016/b/</guid>
+      <description>https://codeforces.com/contest/1016/problem/B 题目大意 给出 $n$ 长小写字符串 $s$ 和 $m$ 长小写字符串 $t$。给出 $q$ 组询问，每组询问给出 $l_i, r_i$，问 $s[l_i, r_i]$ 子串中 $t$ 出现了几次。 $1 \le n, m \le 1000, 1 \le q \le 10^5$。 简要题解 只要把所有匹配位置的尾巴标记为 $1$，这样</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Variety is Discouraged - Codeforces Round 1005 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2064/b/</link>
+      <pubDate>Tue, 18 Feb 2025 23:03:04 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2064/b/</guid>
+      <description>https://codeforces.com/contest/2064/problem/B 题目大意 给出 $n$ 长的不含 $0$ 的数组 $a$。定义一个数组的权值为其长度减去不重复元素个数。 可以最多删除数组中连续的一个非空子段。问怎样删可以使得权值最大。不删最好时返回 $0$，否则返回删除的区间端点。多个</description>
+    </item>
+    
     <item>
       <title>[CF] A. LCM Problem - Educational Codeforces Round 92 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1389/a/</link>

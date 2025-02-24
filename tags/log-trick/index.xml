@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>log trick on OTTFF&#39;s Blog</title>
+    <link>https://ottffyzy.github.io/tags/log-trick/</link>
+    <description>Recent content in log trick on OTTFF&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 18 Feb 2025 22:50:28 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/log-trick/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Eating - Codeforces Round 1005 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2064/d/</link>
+      <pubDate>Tue, 18 Feb 2025 22:50:28 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2064/d/</guid>
+      <description>https://codeforces.com/contest/2064/problem/D 题目大意 给出一个 $n$ 长的数组 $a$，和 $q$ 个独立询问（每次询问结束恢复 $a$）。对于某个询问，给出 $x$，然后如果 $x$ 不小于 $a$ 最后的元素 $a_{last}$ 则把 $x$ 变为 $x \ xor a_{last}$ 并删掉 $a_{last}$，问这个操作能进行几次</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,43 @@
     <description>Recent content in Med&#43; on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 04 Feb 2025 23:56:13 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/med+/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Feb 2025 23:02:44 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/difficulty/med+/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Mycraft Sand Sort - Codeforces Round 1005 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2064/e/</link>
+      <pubDate>Sun, 23 Feb 2025 23:02:44 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2064/e/</guid>
+      <description>https://codeforces.com/contest/2064/problem/E 题目大意 给出 $n$ 长的排列 $p$ 和 $n$ 长的颜色数组 $c$。从上到下，从 $i = 1 \sim n$ 将 $p_i$ 个颜色为 $c_i$ 的左侧对齐横向排列，之后让其按照重力规则下落，问有多少个不同的排列和颜色方案的二元组，可以得到和题目给出的排列颜色</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Vasya and Binary String - Educational Codeforces Round 59 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1107/e/</link>
+      <pubDate>Tue, 18 Feb 2025 00:11:03 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1107/e/</guid>
+      <description>https://codeforces.com/contest/1107/problem/E 题目大意 给出一个 $n$ 长的 $01$ 串 $S$ 和数组 $a$。每次操作可以从中删除一个连续的，相同字符的段，并把剩余的段按顺序连起来。每次删掉 $len$ 长的段的收益为 $a_{len}$，问最大收益是多少。 $1 \le n \le 100$。$1</description>
+    </item>
+    
+    <item>
+      <title>[CF] A. Object Identification - Codeforces Round 1004 (Div. 1)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2066/a/</link>
+      <pubDate>Mon, 17 Feb 2025 00:44:59 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2066/a/</guid>
+      <description>https://codeforces.com/contest/2066/problem/A 题目大意 给出 $n$ 长的数组 $x$ 和某个隐藏的确定的数组 $y$。保证 $x_i \neq y_i, \forall i$ 且 $(x_i, y_i) \neq (x_j, y_j), \forall i \neq j$ 。对于每组数据，背后有一个隐藏的对象是以下两种之一： Obj A: 一个 $n$ 个点的有向图当且仅当存在有向边 $(x_i, y_i)$ Obj B: $n$ 个点在二</description>
+    </item>
+    
+    <item>
+      <title>[CF] F. Topforces Strikes Back - Codeforces Round 570 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1183/f/</link>
+      <pubDate>Tue, 11 Feb 2025 23:06:06 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1183/f/</guid>
+      <description>https://codeforces.com/contest/1183/problem/F 题目大意 给出 $n$ 个数最多选出其中 $3$ 个，使得选出的数两两之间不是整数倍，问选出的和最大是多少。 $1 \le n \le 2 \times 10^5$。$2 \le a_i \le 2 \times 10^5$。 简要题解 复杂度 $T$：$O()$ $S$：$O()$ 代码实现</description>
+    </item>
+    
     <item>
       <title>[CF] E. Special Segments of Permutation - Educational Codeforces Round 64 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1156/e/</link>

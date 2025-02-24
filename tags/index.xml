@@ -6,7 +6,277 @@
     <description>Recent content in Tags on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 09 Feb 2025 01:39:14 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Feb 2025 23:02:44 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>并查集</title>
+      <link>https://ottffyzy.github.io/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/</link>
+      <pubDate>Sun, 23 Feb 2025 23:02:44 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>数据结构</title>
+      <link>https://ottffyzy.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Sun, 23 Feb 2025 23:02:44 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>树</title>
+      <link>https://ottffyzy.github.io/tags/%E6%A0%91/</link>
+      <pubDate>Sun, 23 Feb 2025 23:02:44 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E6%A0%91/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>树状数组</title>
+      <link>https://ottffyzy.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Sun, 23 Feb 2025 23:02:44 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>线段树</title>
+      <link>https://ottffyzy.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/</link>
+      <pubDate>Sun, 23 Feb 2025 23:02:44 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>组合数学</title>
+      <link>https://ottffyzy.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/</link>
+      <pubDate>Sun, 23 Feb 2025 23:02:44 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>需要重新思考</title>
+      <link>https://ottffyzy.github.io/tags/%E9%9C%80%E8%A6%81%E9%87%8D%E6%96%B0%E6%80%9D%E8%80%83/</link>
+      <pubDate>Sun, 23 Feb 2025 23:02:44 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E9%9C%80%E8%A6%81%E9%87%8D%E6%96%B0%E6%80%9D%E8%80%83/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>前缀和</title>
+      <link>https://ottffyzy.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/</link>
+      <pubDate>Sun, 23 Feb 2025 22:45:21 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>汉密尔顿路径</title>
+      <link>https://ottffyzy.github.io/tags/%E6%B1%89%E5%AF%86%E5%B0%94%E9%A1%BF%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Sun, 23 Feb 2025 22:45:21 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E6%B1%89%E5%AF%86%E5%B0%94%E9%A1%BF%E8%B7%AF%E5%BE%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>KMP</title>
+      <link>https://ottffyzy.github.io/tags/kmp/</link>
+      <pubDate>Sun, 23 Feb 2025 22:45:19 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/kmp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>双指针</title>
+      <link>https://ottffyzy.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/</link>
+      <pubDate>Tue, 18 Feb 2025 23:03:04 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>贪心</title>
+      <link>https://ottffyzy.github.io/tags/%E8%B4%AA%E5%BF%83/</link>
+      <pubDate>Tue, 18 Feb 2025 23:03:04 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E8%B4%AA%E5%BF%83/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>前后缀</title>
+      <link>https://ottffyzy.github.io/tags/%E5%89%8D%E5%90%8E%E7%BC%80/</link>
+      <pubDate>Tue, 18 Feb 2025 23:03:00 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E5%89%8D%E5%90%8E%E7%BC%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>log trick</title>
+      <link>https://ottffyzy.github.io/tags/log-trick/</link>
+      <pubDate>Tue, 18 Feb 2025 22:50:28 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/log-trick/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>位运算</title>
+      <link>https://ottffyzy.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/</link>
+      <pubDate>Tue, 18 Feb 2025 22:50:28 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>倍增</title>
+      <link>https://ottffyzy.github.io/tags/%E5%80%8D%E5%A2%9E/</link>
+      <pubDate>Tue, 18 Feb 2025 22:50:28 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E5%80%8D%E5%A2%9E/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>异或</title>
+      <link>https://ottffyzy.github.io/tags/%E5%BC%82%E6%88%96/</link>
+      <pubDate>Tue, 18 Feb 2025 22:50:28 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E5%BC%82%E6%88%96/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>数论</title>
+      <link>https://ottffyzy.github.io/tags/%E6%95%B0%E8%AE%BA/</link>
+      <pubDate>Tue, 18 Feb 2025 00:11:21 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E6%95%B0%E8%AE%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>裴蜀定理</title>
+      <link>https://ottffyzy.github.io/tags/%E8%A3%B4%E8%9C%80%E5%AE%9A%E7%90%86/</link>
+      <pubDate>Tue, 18 Feb 2025 00:11:21 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E8%A3%B4%E8%9C%80%E5%AE%9A%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>动态规划</title>
+      <link>https://ottffyzy.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+      <pubDate>Tue, 18 Feb 2025 00:11:03 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>区间dp</title>
+      <link>https://ottffyzy.github.io/tags/%E5%8C%BA%E9%97%B4dp/</link>
+      <pubDate>Tue, 18 Feb 2025 00:11:03 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E5%8C%BA%E9%97%B4dp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>背包dp</title>
+      <link>https://ottffyzy.github.io/tags/%E8%83%8C%E5%8C%85dp/</link>
+      <pubDate>Tue, 18 Feb 2025 00:11:03 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E8%83%8C%E5%8C%85dp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>交互</title>
+      <link>https://ottffyzy.github.io/tags/%E4%BA%A4%E4%BA%92/</link>
+      <pubDate>Mon, 17 Feb 2025 00:44:59 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E4%BA%A4%E4%BA%92/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>图论</title>
+      <link>https://ottffyzy.github.io/tags/%E5%9B%BE%E8%AE%BA/</link>
+      <pubDate>Mon, 17 Feb 2025 00:44:59 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E5%9B%BE%E8%AE%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>杂题</title>
+      <link>https://ottffyzy.github.io/tags/%E6%9D%82%E9%A2%98/</link>
+      <pubDate>Mon, 17 Feb 2025 00:44:59 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E6%9D%82%E9%A2%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>构造</title>
+      <link>https://ottffyzy.github.io/tags/%E6%9E%84%E9%80%A0/</link>
+      <pubDate>Mon, 17 Feb 2025 00:44:59 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E6%9E%84%E9%80%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BFS</title>
+      <link>https://ottffyzy.github.io/tags/bfs/</link>
+      <pubDate>Thu, 13 Feb 2025 22:58:42 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/bfs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>局部状态</title>
+      <link>https://ottffyzy.github.io/tags/%E5%B1%80%E9%83%A8%E7%8A%B6%E6%80%81/</link>
+      <pubDate>Thu, 13 Feb 2025 22:58:42 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E5%B1%80%E9%83%A8%E7%8A%B6%E6%80%81/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>算贡献</title>
+      <link>https://ottffyzy.github.io/tags/%E7%AE%97%E8%B4%A1%E7%8C%AE/</link>
+      <pubDate>Thu, 13 Feb 2025 22:58:38 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E7%AE%97%E8%B4%A1%E7%8C%AE/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>剪枝</title>
+      <link>https://ottffyzy.github.io/tags/%E5%89%AA%E6%9E%9D/</link>
+      <pubDate>Tue, 11 Feb 2025 23:06:06 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/tags/%E5%89%AA%E6%9E%9D/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>boarder</title>
       <link>https://ottffyzy.github.io/tags/boarder/</link>
@@ -35,38 +305,11 @@
     </item>
     
     <item>
-      <title>前缀和</title>
-      <link>https://ottffyzy.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/</link>
-      <pubDate>Sun, 09 Feb 2025 01:39:12 -0800</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>贪心</title>
-      <link>https://ottffyzy.github.io/tags/%E8%B4%AA%E5%BF%83/</link>
-      <pubDate>Sun, 09 Feb 2025 01:39:12 -0800</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E8%B4%AA%E5%BF%83/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>LCM</title>
       <link>https://ottffyzy.github.io/tags/lcm/</link>
       <pubDate>Sun, 09 Feb 2025 01:39:11 -0800</pubDate>
       
       <guid>https://ottffyzy.github.io/tags/lcm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>数论</title>
-      <link>https://ottffyzy.github.io/tags/%E6%95%B0%E8%AE%BA/</link>
-      <pubDate>Sun, 09 Feb 2025 01:39:11 -0800</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E6%95%B0%E8%AE%BA/</guid>
       <description></description>
     </item>
     
@@ -80,15 +323,6 @@
     </item>
     
     <item>
-      <title>杂题</title>
-      <link>https://ottffyzy.github.io/tags/%E6%9D%82%E9%A2%98/</link>
-      <pubDate>Fri, 07 Feb 2025 23:47:41 -0800</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E6%9D%82%E9%A2%98/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>MEX</title>
       <link>https://ottffyzy.github.io/tags/mex/</link>
       <pubDate>Thu, 06 Feb 2025 22:24:32 -0800</pubDate>
@@ -98,29 +332,11 @@
     </item>
     
     <item>
-      <title>构造</title>
-      <link>https://ottffyzy.github.io/tags/%E6%9E%84%E9%80%A0/</link>
-      <pubDate>Thu, 06 Feb 2025 22:24:32 -0800</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E6%9E%84%E9%80%A0/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>二分</title>
       <link>https://ottffyzy.github.io/tags/%E4%BA%8C%E5%88%86/</link>
       <pubDate>Thu, 06 Feb 2025 21:58:35 -0800</pubDate>
       
       <guid>https://ottffyzy.github.io/tags/%E4%BA%8C%E5%88%86/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>动态规划</title>
-      <link>https://ottffyzy.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
-      <pubDate>Wed, 05 Feb 2025 00:07:07 -0800</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
       <description></description>
     </item>
     
@@ -157,15 +373,6 @@
       <pubDate>Tue, 04 Feb 2025 23:56:13 -0800</pubDate>
       
       <guid>https://ottffyzy.github.io/tags/%E6%8E%92%E5%88%97/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>数据结构</title>
-      <link>https://ottffyzy.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
-      <pubDate>Tue, 04 Feb 2025 23:56:13 -0800</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
       <description></description>
     </item>
     
@@ -233,15 +440,6 @@
     </item>
     
     <item>
-      <title>算贡献</title>
-      <link>https://ottffyzy.github.io/tags/%E7%AE%97%E8%B4%A1%E7%8C%AE/</link>
-      <pubDate>Sat, 01 Feb 2025 23:09:28 -0800</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E7%AE%97%E8%B4%A1%E7%8C%AE/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>模拟</title>
       <link>https://ottffyzy.github.io/tags/%E6%A8%A1%E6%8B%9F/</link>
       <pubDate>Thu, 30 Jan 2025 01:03:01 -0800</pubDate>
@@ -256,15 +454,6 @@
       <pubDate>Thu, 30 Jan 2025 00:55:51 -0800</pubDate>
       
       <guid>https://ottffyzy.github.io/tags/bitset/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>前后缀</title>
-      <link>https://ottffyzy.github.io/tags/%E5%89%8D%E5%90%8E%E7%BC%80/</link>
-      <pubDate>Thu, 30 Jan 2025 00:55:51 -0800</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E5%89%8D%E5%90%8E%E7%BC%80/</guid>
       <description></description>
     </item>
     
@@ -292,15 +481,6 @@
       <pubDate>Wed, 29 Jan 2025 23:15:36 -0800</pubDate>
       
       <guid>https://ottffyzy.github.io/tags/dijkstra/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>图论</title>
-      <link>https://ottffyzy.github.io/tags/%E5%9B%BE%E8%AE%BA/</link>
-      <pubDate>Wed, 29 Jan 2025 23:15:36 -0800</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E5%9B%BE%E8%AE%BA/</guid>
       <description></description>
     </item>
     
@@ -341,15 +521,6 @@
     </item>
     
     <item>
-      <title>双指针</title>
-      <link>https://ottffyzy.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/</link>
-      <pubDate>Mon, 27 Jan 2025 23:33:14 -0800</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E5%8F%8C%E6%8C%87%E9%92%88/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>余数</title>
       <link>https://ottffyzy.github.io/tags/%E4%BD%99%E6%95%B0/</link>
       <pubDate>Mon, 27 Jan 2025 00:58:05 -0800</pubDate>
@@ -364,15 +535,6 @@
       <pubDate>Mon, 27 Jan 2025 00:05:12 -0800</pubDate>
       
       <guid>https://ottffyzy.github.io/tags/dfs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>树</title>
-      <link>https://ottffyzy.github.io/tags/%E6%A0%91/</link>
-      <pubDate>Mon, 27 Jan 2025 00:05:12 -0800</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E6%A0%91/</guid>
       <description></description>
     </item>
     
@@ -458,29 +620,11 @@
     </item>
     
     <item>
-      <title>需要重新思考</title>
-      <link>https://ottffyzy.github.io/tags/%E9%9C%80%E8%A6%81%E9%87%8D%E6%96%B0%E6%80%9D%E8%80%83/</link>
-      <pubDate>Mon, 20 Jan 2025 23:13:20 -0800</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E9%9C%80%E8%A6%81%E9%87%8D%E6%96%B0%E6%80%9D%E8%80%83/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>奇偶性</title>
       <link>https://ottffyzy.github.io/tags/%E5%A5%87%E5%81%B6%E6%80%A7/</link>
       <pubDate>Mon, 20 Jan 2025 22:13:51 -0800</pubDate>
       
       <guid>https://ottffyzy.github.io/tags/%E5%A5%87%E5%81%B6%E6%80%A7/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>并查集</title>
-      <link>https://ottffyzy.github.io/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/</link>
-      <pubDate>Sun, 19 Jan 2025 23:58:39 -0800</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/</guid>
       <description></description>
     </item>
     
@@ -503,15 +647,6 @@
     </item>
     
     <item>
-      <title>区间dp</title>
-      <link>https://ottffyzy.github.io/tags/%E5%8C%BA%E9%97%B4dp/</link>
-      <pubDate>Sun, 19 Jan 2025 01:10:09 -0800</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E5%8C%BA%E9%97%B4dp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>带环转移</title>
       <link>https://ottffyzy.github.io/tags/%E5%B8%A6%E7%8E%AF%E8%BD%AC%E7%A7%BB/</link>
       <pubDate>Sun, 19 Jan 2025 01:10:09 -0800</pubDate>
@@ -526,15 +661,6 @@
       <pubDate>Sun, 19 Jan 2025 00:51:09 -0800</pubDate>
       
       <guid>https://ottffyzy.github.io/tags/%E5%AD%90%E5%BA%8F%E5%88%97/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>BFS</title>
-      <link>https://ottffyzy.github.io/tags/bfs/</link>
-      <pubDate>Sun, 19 Jan 2025 00:36:38 -0800</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/bfs/</guid>
       <description></description>
     </item>
     
@@ -580,15 +706,6 @@
       <pubDate>Sun, 19 Jan 2025 00:12:33 -0800</pubDate>
       
       <guid>https://ottffyzy.github.io/tags/%E4%B8%89%E8%A7%92%E5%BD%A2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>组合数学</title>
-      <link>https://ottffyzy.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/</link>
-      <pubDate>Sun, 19 Jan 2025 00:12:33 -0800</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/</guid>
       <description></description>
     </item>
     
@@ -674,15 +791,6 @@
     </item>
     
     <item>
-      <title>线段树</title>
-      <link>https://ottffyzy.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/</link>
-      <pubDate>Mon, 13 Jan 2025 01:17:09 -0800</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>预处理</title>
       <link>https://ottffyzy.github.io/tags/%E9%A2%84%E5%A4%84%E7%90%86/</link>
       <pubDate>Mon, 13 Jan 2025 00:48:17 -0800</pubDate>
@@ -697,15 +805,6 @@
       <pubDate>Mon, 13 Jan 2025 00:38:55 -0800</pubDate>
       
       <guid>https://ottffyzy.github.io/tags/%E5%89%8D%E7%BC%80%E5%90%8E%E7%BC%80/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>位运算</title>
-      <link>https://ottffyzy.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/</link>
-      <pubDate>Sun, 12 Jan 2025 23:42:15 -0800</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/</guid>
       <description></description>
     </item>
     
@@ -868,15 +967,6 @@
       <pubDate>Tue, 30 Jul 2024 00:30:20 -0700</pubDate>
       
       <guid>https://ottffyzy.github.io/tags/%E9%9A%8F%E6%9C%BA/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>交互</title>
-      <link>https://ottffyzy.github.io/tags/%E4%BA%A4%E4%BA%92/</link>
-      <pubDate>Fri, 26 Jul 2024 23:40:44 -0700</pubDate>
-      
-      <guid>https://ottffyzy.github.io/tags/%E4%BA%A4%E4%BA%92/</guid>
       <description></description>
     </item>
     

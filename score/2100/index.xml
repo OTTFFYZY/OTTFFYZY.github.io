@@ -6,7 +6,25 @@
     <description>Recent content in 2100 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 30 Jan 2025 00:36:33 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/2100/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Feb 2025 22:58:42 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/2100/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Cubes - Codeforces Round 295 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/520/d/</link>
+      <pubDate>Thu, 13 Feb 2025 22:58:42 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/520/d/</guid>
+      <description>https://codeforces.com/contest/520/problem/D 题目大意 给出 $n$ 个立方体（其实可能叫正方形更好，因为其实只需要考虑 $2$ 维），考虑 $OX$ 是地面，$OY$ 是向上的方向。每个立方体用 $(x, y)$ 表示其位置。定义某个立方体是稳定的当且仅当： 立方体在地面上（$x = 0$） 其</description>
+    </item>
+    
+    <item>
+      <title>[CF] F. Topforces Strikes Back - Codeforces Round 570 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1183/f/</link>
+      <pubDate>Tue, 11 Feb 2025 23:06:06 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1183/f/</guid>
+      <description>https://codeforces.com/contest/1183/problem/F 题目大意 给出 $n$ 个数最多选出其中 $3$ 个，使得选出的数两两之间不是整数倍，问选出的和最大是多少。 $1 \le n \le 2 \times 10^5$。$2 \le a_i \le 2 \times 10^5$。 简要题解 复杂度 $T$：$O()$ $S$：$O()$ 代码实现</description>
+    </item>
+    
     <item>
       <title>[CF] D. Sand Fortress - Educational Codeforces Round 44 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/985/d/</link>

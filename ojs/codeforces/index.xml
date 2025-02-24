@@ -6,7 +6,133 @@
     <description>Recent content in Codeforces on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 09 Feb 2025 01:39:14 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/ojs/codeforces/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Feb 2025 23:02:44 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/ojs/codeforces/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] E. Mycraft Sand Sort - Codeforces Round 1005 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2064/e/</link>
+      <pubDate>Sun, 23 Feb 2025 23:02:44 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2064/e/</guid>
+      <description>https://codeforces.com/contest/2064/problem/E 题目大意 给出 $n$ 长的排列 $p$ 和 $n$ 长的颜色数组 $c$。从上到下，从 $i = 1 \sim n$ 将 $p_i$ 个颜色为 $c_i$ 的左侧对齐横向排列，之后让其按照重力规则下落，问有多少个不同的排列和颜色方案的二元组，可以得到和题目给出的排列颜色</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Vasya And The Mushrooms - Educational Codeforces Round 48 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1016/c/</link>
+      <pubDate>Sun, 23 Feb 2025 22:45:21 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1016/c/</guid>
+      <description>https://codeforces.com/contest/1016/problem/C 题目大意 给出一个 $2 \times n$ 的矩阵，矩阵上每个位置有一个数字，代表每秒会多出 $a_{i, j}$ 的价值。第 $0s$ 从左上角出发，每次到达一个格子的时刻取到当前的价值，每一秒要强制走到某一个相邻的格子（四联通），问不重复的走完所</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Segment Occurrences - Educational Codeforces Round 48 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1016/b/</link>
+      <pubDate>Sun, 23 Feb 2025 22:45:19 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1016/b/</guid>
+      <description>https://codeforces.com/contest/1016/problem/B 题目大意 给出 $n$ 长小写字符串 $s$ 和 $m$ 长小写字符串 $t$。给出 $q$ 组询问，每组询问给出 $l_i, r_i$，问 $s[l_i, r_i]$ 子串中 $t$ 出现了几次。 $1 \le n, m \le 1000, 1 \le q \le 10^5$。 简要题解 只要把所有匹配位置的尾巴标记为 $1$，这样</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Variety is Discouraged - Codeforces Round 1005 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2064/b/</link>
+      <pubDate>Tue, 18 Feb 2025 23:03:04 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2064/b/</guid>
+      <description>https://codeforces.com/contest/2064/problem/B 题目大意 给出 $n$ 长的不含 $0$ 的数组 $a$。定义一个数组的权值为其长度减去不重复元素个数。 可以最多删除数组中连续的一个非空子段。问怎样删可以使得权值最大。不删最好时返回 $0$，否则返回删除的区间端点。多个</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Remove the Ends - Codeforces Round 1005 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2064/c/</link>
+      <pubDate>Tue, 18 Feb 2025 23:03:00 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2064/c/</guid>
+      <description>https://codeforces.com/contest/2064/problem/C 题目大意 给出 $n$ 长的不含 $0$ 的数组 $a$。每次可以选择当前一个正数 $a_i$ 将其加到答案，并将数组的 $i$ 结束的前缀删掉，或者选择某个负数 $a_i$ 将 $- a_i$ 加到答案，并将 $i$ 开始的后缀删掉。问可以得到的最大答案是多少。 $1 \le n \le</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Eating - Codeforces Round 1005 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2064/d/</link>
+      <pubDate>Tue, 18 Feb 2025 22:50:28 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2064/d/</guid>
+      <description>https://codeforces.com/contest/2064/problem/D 题目大意 给出一个 $n$ 长的数组 $a$，和 $q$ 个独立询问（每次询问结束恢复 $a$）。对于某个询问，给出 $x$，然后如果 $x$ 不小于 $a$ 最后的元素 $a_{last}$ 则把 $x$ 变为 $x \ xor a_{last}$ 并删掉 $a_{last}$，问这个操作能进行几次</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Brutality - Educational Codeforces Round 59 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1107/c/</link>
+      <pubDate>Tue, 18 Feb 2025 00:11:25 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1107/c/</guid>
+      <description>https://codeforces.com/contest/1107/problem/C 题目大意 给出 $n$ 长的小写字符的串 $S$ 和数组 $a$。给出某个 $k$，需要删掉字符串中的某些字符，使得最终串连续的相同字符个数不会超过 $k$。问最后保留下的字符的下标对应的 $a_i$ 的和最大是多少。 $1 \le k \le n \le 2 \times</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Compression - Educational Codeforces Round 59 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1107/d/</link>
+      <pubDate>Tue, 18 Feb 2025 00:11:21 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1107/d/</guid>
+      <description>https://codeforces.com/contest/1107/problem/D 题目大意 给出一个 $n \times n$ 的 $01$ 矩阵 $A$。规定 $B$ 为 $A$ 的一个 $x$ 压缩矩阵，如果 $x | n$ 以及 $A[i][j] = B[\lceil \frac{i}{x} \rceil][\lceil \frac{j}{x} \rceil]$（$1$-indexed）。 $4 \le n \le 5200$，且 $4 | n$。 $A$ 按照每行每 $4$ 位压缩成一个十六</description>
+    </item>
+    
+    <item>
+      <title>[CF] E. Vasya and Binary String - Educational Codeforces Round 59 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1107/e/</link>
+      <pubDate>Tue, 18 Feb 2025 00:11:03 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1107/e/</guid>
+      <description>https://codeforces.com/contest/1107/problem/E 题目大意 给出一个 $n$ 长的 $01$ 串 $S$ 和数组 $a$。每次操作可以从中删除一个连续的，相同字符的段，并把剩余的段按顺序连起来。每次删掉 $len$ 长的段的收益为 $a_{len}$，问最大收益是多少。 $1 \le n \le 100$。$1</description>
+    </item>
+    
+    <item>
+      <title>[CF] A. Object Identification - Codeforces Round 1004 (Div. 1)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2066/a/</link>
+      <pubDate>Mon, 17 Feb 2025 00:44:59 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2066/a/</guid>
+      <description>https://codeforces.com/contest/2066/problem/A 题目大意 给出 $n$ 长的数组 $x$ 和某个隐藏的确定的数组 $y$。保证 $x_i \neq y_i, \forall i$ 且 $(x_i, y_i) \neq (x_j, y_j), \forall i \neq j$ 。对于每组数据，背后有一个隐藏的对象是以下两种之一： Obj A: 一个 $n$ 个点的有向图当且仅当存在有向边 $(x_i, y_i)$ Obj B: $n$ 个点在二</description>
+    </item>
+    
+    <item>
+      <title>[CF] B. Minimization - Codeforces Round 317 [AimFund Thanks-Round] (Div. 1)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/571/b/</link>
+      <pubDate>Thu, 13 Feb 2025 22:58:49 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/571/b/</guid>
+      <description>https://codeforces.com/contest/571/problem/B 题目大意 给出 $n$ 长的数组 $a$，及某数 $k$，可以任意调整 $a$ 中元素位置，需要最小化 $$ \sum_{i = 1}^{n - k} |a[i] - a[i &amp;#43; k]| $$ 。 问这个最小值是多少。 $2 \le n \le 3 \times 10^5$。$1 \le \min(5000, n - 1)$。$-10^9 \le a[i] \le 10^9$</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Cubes - Codeforces Round 295 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/520/d/</link>
+      <pubDate>Thu, 13 Feb 2025 22:58:42 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/520/d/</guid>
+      <description>https://codeforces.com/contest/520/problem/D 题目大意 给出 $n$ 个立方体（其实可能叫正方形更好，因为其实只需要考虑 $2$ 维），考虑 $OX$ 是地面，$OY$ 是向上的方向。每个立方体用 $(x, y)$ 表示其位置。定义某个立方体是稳定的当且仅当： 立方体在地面上（$x = 0$） 其</description>
+    </item>
+    
+    <item>
+      <title>[CF] H. Bro Thinks He&#39;s Him - Codeforces Round 1003 (Div. 4)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2065/h/</link>
+      <pubDate>Thu, 13 Feb 2025 22:58:38 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2065/h/</guid>
+      <description>https://codeforces.com/contest/2065/problem/H 题目大意 给出一个 $01$ 字符串 $s$ 和 $q$ 次询问，每次询问将 $v_i$ 位置的字符翻转（询问不独立），之后询问这个串由下述函数算出的值是多少。 $f(S)$ 表示 $S$ 由多少个连续的相同字符的段，比如 $00110001$ 有 $00, 11, 000, 1$ 这样的 $4$ 段。 $g(S)$ 表示对于 $S$ 的</description>
+    </item>
+    
+    <item>
+      <title>[CF] F. Topforces Strikes Back - Codeforces Round 570 (Div. 3)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1183/f/</link>
+      <pubDate>Tue, 11 Feb 2025 23:06:06 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1183/f/</guid>
+      <description>https://codeforces.com/contest/1183/problem/F 题目大意 给出 $n$ 个数最多选出其中 $3$ 个，使得选出的数两两之间不是整数倍，问选出的和最大是多少。 $1 \le n \le 2 \times 10^5$。$2 \le a_i \le 2 \times 10^5$。 简要题解 复杂度 $T$：$O()$ $S$：$O()$ 代码实现</description>
+    </item>
+    
     <item>
       <title>[CF] C. Good String - Educational Codeforces Round 92 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1389/c/</link>

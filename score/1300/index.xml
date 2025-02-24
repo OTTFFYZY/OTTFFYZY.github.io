@@ -6,7 +6,25 @@
     <description>Recent content in 1300 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 01 Feb 2025 00:11:08 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1300/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Feb 2025 22:45:19 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/score/1300/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] B. Segment Occurrences - Educational Codeforces Round 48 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1016/b/</link>
+      <pubDate>Sun, 23 Feb 2025 22:45:19 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1016/b/</guid>
+      <description>https://codeforces.com/contest/1016/problem/B 题目大意 给出 $n$ 长小写字符串 $s$ 和 $m$ 长小写字符串 $t$。给出 $q$ 组询问，每组询问给出 $l_i, r_i$，问 $s[l_i, r_i]$ 子串中 $t$ 出现了几次。 $1 \le n, m \le 1000, 1 \le q \le 10^5$。 简要题解 只要把所有匹配位置的尾巴标记为 $1$，这样</description>
+    </item>
+    
+    <item>
+      <title>[CF] C. Brutality - Educational Codeforces Round 59 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1107/c/</link>
+      <pubDate>Tue, 18 Feb 2025 00:11:25 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1107/c/</guid>
+      <description>https://codeforces.com/contest/1107/problem/C 题目大意 给出 $n$ 长的小写字符的串 $S$ 和数组 $a$。给出某个 $k$，需要删掉字符串中的某些字符，使得最终串连续的相同字符个数不会超过 $k$。问最后保留下的字符的下标对应的 $a_i$ 的和最大是多少。 $1 \le k \le n \le 2 \times</description>
+    </item>
+    
     <item>
       <title>[CF] C. Slay the Dragon - Educational Codeforces Round 114 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1574/c/</link>

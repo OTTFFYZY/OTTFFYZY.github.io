@@ -6,7 +6,25 @@
     <description>Recent content in 位运算 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 12 Jan 2025 23:42:15 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Feb 2025 22:50:28 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] D. Eating - Codeforces Round 1005 (Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2064/d/</link>
+      <pubDate>Tue, 18 Feb 2025 22:50:28 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2064/d/</guid>
+      <description>https://codeforces.com/contest/2064/problem/D 题目大意 给出一个 $n$ 长的数组 $a$，和 $q$ 个独立询问（每次询问结束恢复 $a$）。对于某个询问，给出 $x$，然后如果 $x$ 不小于 $a$ 最后的元素 $a_{last}$ 则把 $x$ 变为 $x \ xor a_{last}$ 并删掉 $a_{last}$，问这个操作能进行几次</description>
+    </item>
+    
+    <item>
+      <title>[CF] D. Compression - Educational Codeforces Round 59 (Rated for Div. 2)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/1107/d/</link>
+      <pubDate>Tue, 18 Feb 2025 00:11:21 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/1107/d/</guid>
+      <description>https://codeforces.com/contest/1107/problem/D 题目大意 给出一个 $n \times n$ 的 $01$ 矩阵 $A$。规定 $B$ 为 $A$ 的一个 $x$ 压缩矩阵，如果 $x | n$ 以及 $A[i][j] = B[\lceil \frac{i}{x} \rceil][\lceil \frac{j}{x} \rceil]$（$1$-indexed）。 $4 \le n \le 5200$，且 $4 | n$。 $A$ 按照每行每 $4$ 位压缩成一个十六</description>
+    </item>
+    
     <item>
       <title>[CF] C. Game with Multiset - Educational Codeforces Round 160 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/1913/c/</link>

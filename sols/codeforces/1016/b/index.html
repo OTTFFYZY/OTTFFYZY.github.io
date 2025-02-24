@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  [CF] B. Segment Occurrences - Educational Codeforces Round 48 (Rated for Div. 2) &ndash; OTTFF&#39;s Blog &lt;a id="topofpage">&lt;/a>
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="https://codeforces.com/contest/1016/problem/B 题目大意 给出 $n$ 长小写字符串 $s$ 和 $m$ 长小写字符串 $t$。给出 $q$ 组询问，每组询问给出 $l_i, r_i$，问 $s[l_i, r_i]$ 子串中 $t$ 出现了几次。 $1 \le n, m \le 1000, 1 \le q \le 10^5$。 简要题解 只要把所有匹配位置的尾巴标记为 $1$，这样|OTTFF&#39;s Blog">
+    
+
+    <meta name="apple-mobile-web-app-title" content="OTTFF&#39;s Blog">
+    
+    
+    
+    
+
+    <link rel="stylesheet" href="/assets/style.css">
+    
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    
+    <link rel="stylesheet" href="/assets/copy-to-clipboard.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/vs.min.css">
+    
+    
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://ottffyzy.github.io/">
+    OTTFF&#39;s Blog
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+      
+      
+      <a class="UnderlineNav-item " href="/">
+        
+        <span>Home</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/templates">
+        
+        <span>Templates</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/contests">
+        
+        <span>Contests</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/sols">
+        
+        <span>Solutions</span>
+      </a>
+      
+    
+      
+      
+      <a class="UnderlineNav-item " href="/categories/notes">
+        
+        <span>Notes</span>
+      </a>
+      
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">[CF] B. Segment Occurrences - Educational Codeforces Round 48 (Rated for Div. 2)</div>
+  </div>
+  <div class="Subhead-description">
+    
+
+<a href='/categories/solutions' class="muted-link">
+  <span class="Label Label--gray-darker">Solutions</span>
+</a>
+
+
+
+
+
+<a href='/ojs/codeforces' class="muted-link">
+  <span class="Label Label--gray-darker">Codeforces</span>
+</a>
+
+
+
+<a href='/tags/%E5%89%8D%E7%BC%80%E5%92%8C' class="muted-link">
+  <span class="Label Label--gray">前缀和</span>
+</a>
+
+<a href='/tags/kmp' class="muted-link">
+  <span class="Label Label--gray">KMP</span>
+</a>
+
+
+
+
+
+<a href='/score/1300' class="muted-link">
+  <span class="Label Label--gray">1300</span>
+</a>
+
+
+
+<a href='/difficulty/easy' class="muted-link">
+  <span class="Label Label--gray">Easy</span>
+</a>
+
+
+    
+    <div class="float-md-right">
+      
+      <span title="Lastmod: 2025-02-23. Published at: 2025-02-23.">
+        
+          Lastmod: 2025-02-23 周日 22:50:25
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom markdown">
+      <p><a href="https://codeforces.com/contest/1016/problem/B">https://codeforces.com/contest/1016/problem/B</a></p>
+<h2 id="题目大意">题目大意</h2>
+<p>给出 $n$ 长小写字符串 $s$ 和 $m$ 长小写字符串 $t$。给出 $q$ 组询问，每组询问给出 $l_i, r_i$，问 $s[l_i, r_i]$ 子串中 $t$ 出现了几次。</p>
+<p>$1 \le n, m \le 1000, 1 \le q \le 10^5$。</p>
+<h2 id="简要题解">简要题解</h2>
+<p>只要把所有匹配位置的尾巴标记为 $1$，这样就相当于询问 $[l_i + m - 1, r_i]$ 中有多少个 $1$，于是 KMP 处理匹配，然后前缀和处理一下就好了。</p>
+<p>注意这题 $nm$ 的暴力匹配应该也可以因为范围给的很小。</p>
+<p><strong>复杂度</strong></p>
+<p>$T$：$O(n + m + q)$</p>
+<p>$S$：$O(n + m)$</p>
+<p><strong>代码实现</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">io_</span><span class="o">=</span><span class="p">[](){</span> <span class="n">ios</span><span class="o">::</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span> <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="k">nullptr</span><span class="p">);</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}();</span>
+
+<span class="k">using</span> <span class="n">LL</span> <span class="o">=</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">ULL</span> <span class="o">=</span> <span class="kt">unsigned</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">LD</span> <span class="o">=</span> <span class="kt">long</span> <span class="kt">double</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">PII</span> <span class="o">=</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">VI</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">MII</span> <span class="o">=</span> <span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">cmin</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span><span class="p">(</span><span class="n">y</span><span class="o">&lt;</span><span class="n">x</span><span class="p">)</span> <span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">cmax</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="n">y</span><span class="p">)</span> <span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">bool</span> <span class="n">ckmin</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="k">return</span> <span class="n">y</span><span class="o">&lt;</span><span class="n">x</span> <span class="o">?</span> <span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="nb">true</span><span class="p">)</span> <span class="o">:</span> <span class="nb">false</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">bool</span> <span class="n">ckmax</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="k">return</span> <span class="n">x</span><span class="o">&lt;</span><span class="n">y</span> <span class="o">?</span> <span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="nb">true</span><span class="p">)</span> <span class="o">:</span> <span class="nb">false</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">cmin</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">z</span><span class="p">)</span> <span class="p">{</span><span class="c1">// x&lt;=y&lt;=z 
+</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">z</span><span class="o">&lt;</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="n">y</span><span class="o">=</span><span class="n">x</span><span class="p">;</span> <span class="n">x</span><span class="o">=</span><span class="n">z</span><span class="p">;</span> <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span><span class="p">(</span><span class="n">z</span><span class="o">&lt;</span><span class="n">y</span><span class="p">)</span> <span class="n">y</span><span class="o">=</span><span class="n">z</span><span class="p">;</span> <span class="p">}</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">cmax</span><span class="p">(</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="n">T</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">,</span><span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">z</span><span class="p">)</span> <span class="p">{</span><span class="c1">// x&gt;=y&gt;=z
+</span><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="n">z</span><span class="p">)</span> <span class="p">{</span> <span class="n">y</span><span class="o">=</span><span class="n">x</span><span class="p">;</span> <span class="n">x</span><span class="o">=</span><span class="n">z</span><span class="p">;</span> <span class="p">}</span> <span class="k">else</span> <span class="nf">if</span><span class="p">(</span><span class="n">y</span><span class="o">&lt;</span><span class="n">z</span><span class="p">)</span> <span class="n">y</span><span class="o">=</span><span class="n">z</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c1">// mt19937 rnd(chrono::system_clock::now().time_since_epoch().count());
+</span><span class="c1">// mt19937_64 rnd_64(chrono::system_clock::now().time_since_epoch().count());
+</span><span class="c1"></span><span class="k">namespace</span> <span class="n">KMP</span> <span class="p">{</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span> <span class="n">to_vec</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span> <span class="n">ans</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">char</span> <span class="nl">c</span> <span class="p">:</span> <span class="n">s</span><span class="p">)</span> <span class="n">ans</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">get_nxt</span><span class="p">(</span><span class="k">const</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+  <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">nxt</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="n">j</span> <span class="o">=</span> <span class="n">nxt</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+    <span class="n">nxt</span><span class="p">[</span><span class="o">++</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">++</span><span class="n">j</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">nxt</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">get_nxt</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nf">get_nxt</span><span class="p">(</span><span class="n">to_vec</span><span class="p">(</span><span class="n">s</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="cm">/*
+</span><span class="cm">  kmp
+</span><span class="cm">  ans[i] maxlen of the prefix of t matches suffix of s[i]
+</span><span class="cm">*/</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">kmp</span><span class="p">(</span><span class="k">const</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="k">const</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">t</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="n">m</span> <span class="o">=</span> <span class="n">t</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+  <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">nxt</span> <span class="o">=</span> <span class="n">get_nxt</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+  <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">ans</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">j</span> <span class="o">==</span> <span class="n">m</span> <span class="o">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">t</span><span class="p">[</span><span class="n">j</span><span class="p">]))</span> <span class="n">j</span> <span class="o">=</span> <span class="n">nxt</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+    <span class="n">ans</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">++</span><span class="n">j</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/*
+</span><span class="cm">  kmp_cnt
+</span><span class="cm">  ans[i] maxlen of the prefix of t matches suffix of s[i]
+</span><span class="cm">*/</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="kt">int</span> <span class="n">kmp_cnt</span><span class="p">(</span><span class="k">const</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">s</span><span class="p">,</span> <span class="k">const</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">t</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">overlap</span> <span class="o">=</span> <span class="nb">true</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="n">m</span> <span class="o">=</span> <span class="n">t</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+  <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">len</span> <span class="o">=</span> <span class="n">kmp</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="p">);</span>
+  <span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">pre</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">len</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">m</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">overlap</span> <span class="o">||</span> <span class="n">i</span> <span class="o">-</span> <span class="n">pre</span> <span class="o">&gt;=</span> <span class="n">m</span><span class="p">))</span> <span class="p">{</span>
+      <span class="n">ans</span><span class="o">++</span><span class="p">;</span>
+      <span class="n">pre</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">}</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">KMP</span><span class="p">;</span>
+<span class="cm">/*
+</span><span class="cm">---------1---------2---------3---------4---------5---------6---------7---------
+</span><span class="cm">1234567890123456789012345678901234567890123456789012345678901234567890123456789
+</span><span class="cm">*/</span>
+
+<span class="kt">void</span> <span class="nf">solve</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">q</span><span class="p">;</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span> <span class="o">&gt;&gt;</span> <span class="n">q</span><span class="p">;</span>
+  <span class="n">string</span> <span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="p">;</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">s</span> <span class="o">&gt;&gt;</span> <span class="n">t</span><span class="p">;</span>
+
+  <span class="k">auto</span> <span class="n">a</span> <span class="o">=</span> <span class="n">kmp</span><span class="p">(</span><span class="n">to_vec</span><span class="p">(</span><span class="n">s</span><span class="p">),</span> <span class="n">to_vec</span><span class="p">(</span><span class="n">t</span><span class="p">));</span>
+  
+  <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">sum</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">sum</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">sum</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">m</span><span class="p">));</span>
+  <span class="p">}</span>
+
+  <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">q</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">l</span> <span class="o">&gt;&gt;</span> <span class="n">r</span><span class="p">;</span>
+
+    <span class="n">l</span> <span class="o">+=</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">l</span> <span class="o">&gt;</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;0</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">sum</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">-</span> <span class="n">sum</span><span class="p">[</span><span class="n">l</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> 
+  <span class="c1">// cin &gt;&gt; t;
+</span><span class="c1"></span>  <span class="k">while</span> <span class="p">(</span><span class="n">t</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">solve</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+  </section>
+
+  <section>
+    
+        <a href="/sols/codeforces/2064/b/" class="previous_page">Prev: [CF] B. Variety is Discouraged - Codeforces Round 1005 (Div. 2) </a>
+    
+     <br> 
+    
+        <a href="/sols/codeforces/1016/c/" class="next_page">Next: [CF] C. Vasya And The Mushrooms - Educational Codeforces Round 48 (Rated for Div. 2) </a>
+    
+  </section>
+
+  <section>
+    
+      
+      
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'b60070c8fc2c3e5b67f2',
+    clientSecret: '38bd9f39233a4031fcf3ff8fc94ce86241fce24e',
+    repo: 'OTTFFYZY.github.io',
+    owner: 'OTTFFYZY',
+    admin: ['OTTFFYZY'],
+    id: location.pathname, 
+    distractionFreeMode: false 
+  });
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('gitalk-container').innerHTML = 'Gitalk comments not available by default when the website is previewed locally.';
+      return;
+    }
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <a herf="#topofpage" id="backtotop" onclick="scrollToTop(event)">[CF] B. Segment Occurrences - Educational Codeforces Round 48 (Rated for Div. 2)</a><nav id="TableOfContents">
+  <ul>
+    <li><a href="#题目大意">题目大意</a></li>
+    <li><a href="#简要题解">简要题解</a></li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+        
+
+  <span class="text-small text-gray">
+    
+
+    Powered by the
+    <a href="https://github.com/qqhann/hugo-primer" class="link-gray-dark">Hugo-Primer</a> theme for
+    <a href="https://gohugo.io" class="link-gray-dark">Hugo</a>.
+  </span>
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$']],
+          displayMath: [['$$','$$']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" },
+               extensions: ["AMSmath.js", "AMSsymbols.js"] }
+        }
+      });
+      </script>
+      
+      
+    
+    <script src="/assets/highlight.pack.js"></script>
+    
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+      hljs.initLineNumbersOnLoad({
+        singleLine: true
+      });
+      hljs.configure({tabReplace: '  '});
+    </script>
+
+    <script src="/assets/copy-to-clipboard.js"></script>
+
+    <script src="/assets/tagcanvas.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        TagCanvas.weight = true;
+        TagCanvas.weightFrom = 'data-weight';
+        TagCanvas.weightMode = 'both';
+        
+        TagCanvas.weightSizeMin = 10;
+        TagCanvas.weightSizeMax = 50;
+        TagCanvas.minSpeed = 0.05;
+        try {
+          TagCanvas.Start('myCanvas', 'tags');
+          TagCanvas.SetSpeed('myCanvas', [0.05, 0]);
+          
+        } catch(e) {
+          
+          document.getElementById('myCanvasContainer').style.display = 'none';
+        }
+      };
+    </script>
+    <script type="text/javascript">
+      function scrollToTop(event) {
+        event.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      };
+    </script>
+  </body>
+</html>

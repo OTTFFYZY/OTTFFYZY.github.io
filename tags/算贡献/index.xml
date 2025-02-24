@@ -6,7 +6,16 @@
     <description>Recent content in 算贡献 on OTTFF&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 01 Feb 2025 23:09:28 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E7%AE%97%E8%B4%A1%E7%8C%AE/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Feb 2025 22:58:38 -0800</lastBuildDate><atom:link href="https://ottffyzy.github.io/tags/%E7%AE%97%E8%B4%A1%E7%8C%AE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[CF] H. Bro Thinks He&#39;s Him - Codeforces Round 1003 (Div. 4)</title>
+      <link>https://ottffyzy.github.io/sols/codeforces/2065/h/</link>
+      <pubDate>Thu, 13 Feb 2025 22:58:38 -0800</pubDate>
+      
+      <guid>https://ottffyzy.github.io/sols/codeforces/2065/h/</guid>
+      <description>https://codeforces.com/contest/2065/problem/H 题目大意 给出一个 $01$ 字符串 $s$ 和 $q$ 次询问，每次询问将 $v_i$ 位置的字符翻转（询问不独立），之后询问这个串由下述函数算出的值是多少。 $f(S)$ 表示 $S$ 由多少个连续的相同字符的段，比如 $00110001$ 有 $00, 11, 000, 1$ 这样的 $4$ 段。 $g(S)$ 表示对于 $S$ 的</description>
+    </item>
+    
     <item>
       <title>[CF] D. Almost Difference - Educational Codeforces Round 34 (Rated for Div. 2)</title>
       <link>https://ottffyzy.github.io/sols/codeforces/903/d/</link>
